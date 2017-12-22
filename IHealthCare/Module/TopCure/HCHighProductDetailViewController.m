@@ -7,6 +7,7 @@
 //
 
 #import "HCHighProductDetailViewController.h"
+#import "HCProductDetailModel.h"
 
 @interface HCHighProductDetailViewController ()
 
@@ -16,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setBackBarButton];
 }
 
 - (void)didReceiveMemoryWarning {

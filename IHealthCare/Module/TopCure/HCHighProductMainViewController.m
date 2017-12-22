@@ -10,6 +10,7 @@
 #import "HCGetProductsApi.h"
 #import "HCProductDetailModel.h"
 #import "HCHighProductCellView.h"
+#import "HCHighProductDetailViewController.h"
 
 @interface HCHighProductMainViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCHighProductCellViewDelegate>
 {
@@ -165,7 +166,10 @@
 #pragma mark - HCHighProductCellViewDelegate
 -(void)onClickShowProductDetail:(HCProductDetailModel *)itemModel
 {
-    
+    HCHighProductDetailViewController *detailVC = [HCHighProductDetailViewController new];
+    detailVC.detailModel = itemModel;
+    detailVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

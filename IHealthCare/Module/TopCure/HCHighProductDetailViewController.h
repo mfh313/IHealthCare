@@ -8,6 +8,9 @@
 
 #import "MMUIViewController.h"
 
+@class HCProductDetailModel;
 @interface HCHighProductDetailViewController : MMUIViewController
+
+@property (nonatomic,strong) HCProductDetailModel *detailModel;
 
 @end
