@@ -11,3 +11,4 @@
 @interface HCTopCureMainViewController : SPCoverController
 
 @end
+

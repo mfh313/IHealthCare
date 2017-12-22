@@ -12,6 +12,7 @@
 		A511F3551FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A511F3541FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib */; };
 		A511F3581FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A511F3571FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m */; };
 		A511F35A1FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A511F3591FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib */; };
+		A5124EC21FECFB6400F37317 /* HCManagementDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5124EC11FECFB6400F37317 /* HCManagementDetailModel.m */; };
 		A51EACE11FEBE7BB007D4C06 /* WDPullFreshCountLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = A51EACE01FEBE7BB007D4C06 /* WDPullFreshCountLogic.m */; };
 		A51EAD011FEBEBDF007D4C06 /* HCBestNewsCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A51EACED1FEBEBDF007D4C06 /* HCBestNewsCellView.m */; };
 		A51EAD021FEBEBDF007D4C06 /* HCBestNewsCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51EACEE1FEBEBDF007D4C06 /* HCBestNewsCellView.xib */; };
@@ -188,6 +189,8 @@
 		A511F3561FD43E6100AE5D57 /* HealthCareCenterMenuItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthCareCenterMenuItemView.h; sourceTree = "<group>"; };
 		A511F3571FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthCareCenterMenuItemView.m; sourceTree = "<group>"; };
 		A511F3591FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthCareCenterMenuItemView.xib; sourceTree = "<group>"; };
+		A5124EC01FECFB6400F37317 /* HCManagementDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCManagementDetailModel.h; sourceTree = "<group>"; };
+		A5124EC11FECFB6400F37317 /* HCManagementDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCManagementDetailModel.m; sourceTree = "<group>"; };
 		A51EACDF1FEBE7BB007D4C06 /* WDPullFreshCountLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDPullFreshCountLogic.h; sourceTree = "<group>"; };
 		A51EACE01FEBE7BB007D4C06 /* WDPullFreshCountLogic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDPullFreshCountLogic.m; sourceTree = "<group>"; };
 		A51EACEC1FEBEBDF007D4C06 /* HCBestNewsCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBestNewsCellView.h; sourceTree = "<group>"; };
@@ -580,6 +583,8 @@
 		A51EACEB1FEBEBDF007D4C06 /* TopCure */ = {
 			isa = PBXGroup;
 			children = (
+				A51EACFF1FEBEBDF007D4C06 /* HCTopCureMainViewController.h */,
+				A51EAD001FEBEBDF007D4C06 /* HCTopCureMainViewController.m */,
 				A51EACEC1FEBEBDF007D4C06 /* HCBestNewsCellView.h */,
 				A51EACED1FEBEBDF007D4C06 /* HCBestNewsCellView.m */,
 				A51EACEE1FEBEBDF007D4C06 /* HCBestNewsCellView.xib */,
@@ -599,8 +604,6 @@
 				A51EACFC1FEBEBDF007D4C06 /* HCTopCureMainTabView.m */,
 				A51EACFD1FEBEBDF007D4C06 /* HCTopCureMainTagView.h */,
 				A51EACFE1FEBEBDF007D4C06 /* HCTopCureMainTagView.m */,
-				A51EACFF1FEBEBDF007D4C06 /* HCTopCureMainViewController.h */,
-				A51EAD001FEBEBDF007D4C06 /* HCTopCureMainViewController.m */,
 			);
 			path = TopCure;
 			sourceTree = "<group>";
@@ -741,6 +744,8 @@
 		A575874E1FE526C1000FC7CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A5124EC01FECFB6400F37317 /* HCManagementDetailModel.h */,
+				A5124EC11FECFB6400F37317 /* HCManagementDetailModel.m */,
 				A5BDB5031FE65B010052B51B /* HCBestNewsDetailModel.h */,
 				A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */,
 				A575874F1FE52733000FC7CB /* HCProductDetailModel.h */,
@@ -1490,6 +1495,7 @@
 				A57B481B1FCEF9190004C397 /* NSMutableArray+SafeInsert.m in Sources */,
 				A511F3581FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m in Sources */,
 				A57B47E51FCEF9190004C397 /* IQUIWindow+Hierarchy.m in Sources */,
+				A5124EC21FECFB6400F37317 /* HCManagementDetailModel.m in Sources */,
 				A5D9AE3A1FDBC14100B5D4C0 /* HCGetVerifyCodeApi.m in Sources */,
 				A57B48401FCEF9190004C397 /* MMService.m in Sources */,
 				A57B480F1FCEF9190004C397 /* SCLAlertViewResponder.m in Sources */,
