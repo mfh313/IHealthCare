@@ -1,0 +1,21 @@
+//
+//  MFComponent-pch.pch
+//  WeiDeCar
+//
+//  Created by mafanghua on 2017/11/17.
+//  Copyright © 2017年 mafanghua. All rights reserved.
+//
+
+#ifndef MFComponent_pch_pch
+#define MFComponent_pch_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "MMServiceCenter.h"
+#import "MFVendors.h"
+#import "MFUICommonUtil.h"
+#import "NSObject+YYModel.h"
+
+#import "HealthCare_pch.h"
+
+#endif /* MFComponent_pch_pch */
