@@ -28,6 +28,8 @@
 		A51EAD0C1FEBEBDF007D4C06 /* HCTopCureMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A51EAD001FEBEBDF007D4C06 /* HCTopCureMainViewController.m */; };
 		A520E5C51FEE464B00E4EFAD /* HCHighProductDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5C41FEE464B00E4EFAD /* HCHighProductDetailBottomView.m */; };
 		A520E5C71FEE466D00E4EFAD /* HCHighProductDetailBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A520E5C61FEE466D00E4EFAD /* HCHighProductDetailBottomView.xib */; };
+		A520E5CA1FEE50F200E4EFAD /* HCHighProductDetailCustomNavbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5C91FEE50F100E4EFAD /* HCHighProductDetailCustomNavbar.m */; };
+		A520E5CC1FEE510200E4EFAD /* HCHighProductDetailCustomNavbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A520E5CB1FEE510200E4EFAD /* HCHighProductDetailCustomNavbar.xib */; };
 		A5268DB01FD3C83B00E2F93C /* HCHealthManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5268DAF1FD3C83B00E2F93C /* HCHealthManagementViewController.m */; };
 		A5268DB31FD3C84F00E2F93C /* HCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5268DB21FD3C84F00E2F93C /* HCMeViewController.m */; };
 		A5268DB61FD3C86300E2F93C /* HCWealthManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5268DB51FD3C86300E2F93C /* HCWealthManagementViewController.m */; };
@@ -219,6 +221,9 @@
 		A520E5C31FEE464B00E4EFAD /* HCHighProductDetailBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHighProductDetailBottomView.h; sourceTree = "<group>"; };
 		A520E5C41FEE464B00E4EFAD /* HCHighProductDetailBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHighProductDetailBottomView.m; sourceTree = "<group>"; };
 		A520E5C61FEE466D00E4EFAD /* HCHighProductDetailBottomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCHighProductDetailBottomView.xib; sourceTree = "<group>"; };
+		A520E5C81FEE50F100E4EFAD /* HCHighProductDetailCustomNavbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHighProductDetailCustomNavbar.h; sourceTree = "<group>"; };
+		A520E5C91FEE50F100E4EFAD /* HCHighProductDetailCustomNavbar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHighProductDetailCustomNavbar.m; sourceTree = "<group>"; };
+		A520E5CB1FEE510200E4EFAD /* HCHighProductDetailCustomNavbar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCHighProductDetailCustomNavbar.xib; sourceTree = "<group>"; };
 		A5268DAE1FD3C83B00E2F93C /* HCHealthManagementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementViewController.h; sourceTree = "<group>"; };
 		A5268DAF1FD3C83B00E2F93C /* HCHealthManagementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementViewController.m; sourceTree = "<group>"; };
 		A5268DB11FD3C84F00E2F93C /* HCMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeViewController.h; sourceTree = "<group>"; };
@@ -596,6 +601,9 @@
 				A51EACF71FEBEBDF007D4C06 /* HCHighProductMainViewController.m */,
 				A51EACF41FEBEBDF007D4C06 /* HCHighProductDetailViewController.h */,
 				A51EACF51FEBEBDF007D4C06 /* HCHighProductDetailViewController.m */,
+				A520E5C81FEE50F100E4EFAD /* HCHighProductDetailCustomNavbar.h */,
+				A520E5C91FEE50F100E4EFAD /* HCHighProductDetailCustomNavbar.m */,
+				A520E5CB1FEE510200E4EFAD /* HCHighProductDetailCustomNavbar.xib */,
 				A520E5C31FEE464B00E4EFAD /* HCHighProductDetailBottomView.h */,
 				A520E5C41FEE464B00E4EFAD /* HCHighProductDetailBottomView.m */,
 				A520E5C61FEE466D00E4EFAD /* HCHighProductDetailBottomView.xib */,
@@ -1366,6 +1374,7 @@
 				A57B47F31FCEF9190004C397 /* chat.proto in Resources */,
 				A56CD78F1FD0424100FFF504 /* commonAssets.xcassets in Resources */,
 				A57B47F51FCEF9190004C397 /* main.proto in Resources */,
+				A520E5CC1FEE510200E4EFAD /* HCHighProductDetailCustomNavbar.xib in Resources */,
 				A57B47F71FCEF9190004C397 /* messagepush.proto in Resources */,
 				A51EAD091FEBEBDF007D4C06 /* HCTopCureMainCustomNavbar.xib in Resources */,
 				A56CD78D1FD033CB00FFF504 /* HCLoginContentView.xib in Resources */,
@@ -1538,6 +1547,7 @@
 				A5D9AE341FDBB87B00B5D4C0 /* MMNetworkRequest.m in Sources */,
 				A57B48051FCEF9190004C397 /* MutableField.m in Sources */,
 				A57B47FD1FCEF9190004C397 /* Descriptor.pb.m in Sources */,
+				A520E5CA1FEE50F200E4EFAD /* HCHighProductDetailCustomNavbar.m in Sources */,
 				A57B482D1FCEF9190004C397 /* MMBaseInfoItem.m in Sources */,
 				A566B4DF1FD2EA55004F6843 /* HCUserRegisterHeaderView.m in Sources */,
 				A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */,
