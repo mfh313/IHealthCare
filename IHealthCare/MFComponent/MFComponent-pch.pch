@@ -15,7 +15,7 @@
 #import "MFVendors.h"
 #import "MFUICommonUtil.h"
 #import "NSObject+YYModel.h"
-
+#import "MMTableViewInfo.h"
 #import "HealthCare_pch.h"
 
 #endif /* MFComponent_pch_pch */
