@@ -48,7 +48,11 @@ _Pragma("clang diagnostic pop") \
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MMTableViewCellInfo *cellInfo = [self getCellAtSection:indexPath.section row:indexPath.row];
-    NSString *identifier = [NSString stringWithFormat:@"MFTableViewInfo_%zd_%f", cellInfo.cellStyle, cellInfo.fCellHeight];
+    NSString *identifier = [cellInfo getUserInfoValueForKey:@"identifier"];
+    if (!identifier) {
+        identifier = [NSString stringWithFormat:@"MFTableViewInfo_%zd_%f", cellInfo.cellStyle, cellInfo.fCellHeight];
+    }
+    
     MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (!cell) {
         cell = [[MFTableViewCell alloc] initWithStyle:cellInfo.cellStyle reuseIdentifier:identifier];
