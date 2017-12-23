@@ -26,5 +26,16 @@
     __weak id<MMTableViewInfoDelegate> _delegate;
 }
 
+@property (nonatomic,weak) id<MMTableViewInfoDelegate> delegate;
+
+- (instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style;
+
+- (UITableView *)getTableView;
+
+- (void)addSection:(MMTableViewSectionInfo *)section;
+
+- (void)clearAllSection;
+
+- (MMTableViewCellInfo *)getCellAtSection:(NSUInteger)section row:(NSUInteger)row;
 
 @end
