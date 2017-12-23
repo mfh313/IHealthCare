@@ -11,6 +11,7 @@
 @protocol HCHighProductDetailBottomViewDelegate <NSObject>
 @optional
 -(void)onClickBuyProduct;
+-(void)onClickCollectionProduct;
 
 @end
 

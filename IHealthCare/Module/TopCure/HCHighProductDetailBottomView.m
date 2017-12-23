@@ -16,4 +16,10 @@
     }
 }
 
+- (IBAction)onClickCollectionButton:(id)sender {
+    if ([self.m_delegate respondsToSelector:@selector(onClickCollectionProduct)]) {
+        [self.m_delegate onClickCollectionProduct];
+    }
+}
+
 @end

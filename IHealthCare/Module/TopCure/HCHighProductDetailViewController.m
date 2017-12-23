@@ -74,6 +74,11 @@
     NSLog(@"onClickBuyProduct");
 }
 
+-(void)onClickCollectionProduct
+{
+    NSLog(@"onClickCollectionProduct");
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

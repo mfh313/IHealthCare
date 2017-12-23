@@ -15,9 +15,8 @@
             <rect key="frame" x="0.0" y="0.0" width="388" height="63"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bB1-nB-SQR">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bB1-nB-SQR">
                     <rect key="frame" x="0.0" y="0.0" width="194" height="63"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.97647058819999999" green="0.76078431369999999" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -29,9 +28,8 @@
                         <action selector="onClickBuyButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="boc-xy-7Mg"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJ3-Pb-dcz">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJ3-Pb-dcz">
                     <rect key="frame" x="194" y="0.0" width="194" height="63"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -39,9 +37,22 @@
                     <state key="normal" title="收藏" image="home_btn_collection_nor">
                         <color key="titleColor" red="0.36470588235294116" green="0.36470588235294116" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="onClickCollectionButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="f0S-x8-nim"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bB1-nB-SQR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="2IO-C4-XhZ"/>
+                <constraint firstItem="UJ3-Pb-dcz" firstAttribute="leading" secondItem="bB1-nB-SQR" secondAttribute="trailing" id="Cjg-YM-icp"/>
+                <constraint firstAttribute="trailing" secondItem="UJ3-Pb-dcz" secondAttribute="trailing" id="L1Q-bt-rHF"/>
+                <constraint firstItem="bB1-nB-SQR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="O8Z-k5-BGB"/>
+                <constraint firstItem="bB1-nB-SQR" firstAttribute="width" secondItem="UJ3-Pb-dcz" secondAttribute="width" id="ToN-tK-wa2"/>
+                <constraint firstItem="UJ3-Pb-dcz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bb2-ZQ-h73"/>
+                <constraint firstItem="bB1-nB-SQR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eRs-0Q-MmU"/>
+                <constraint firstItem="UJ3-Pb-dcz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xKl-8i-Kwq"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
