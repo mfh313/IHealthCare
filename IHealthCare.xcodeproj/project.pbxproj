@@ -152,10 +152,6 @@
 		A57B48381FCEF9190004C397 /* UINavigationBar+MMUINavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B47B21FCEF9180004C397 /* UINavigationBar+MMUINavigationBar.m */; };
 		A57B48391FCEF9190004C397 /* MFModelHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B47B51FCEF9180004C397 /* MFModelHelper.m */; };
 		A57B483A1FCEF9190004C397 /* MFThemeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B47B71FCEF9180004C397 /* MFThemeHelper.m */; };
-		A57B483B1FCEF9190004C397 /* MFTableViewCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B47BF1FCEF9180004C397 /* MFTableViewCellInfo.m */; };
-		A57B483C1FCEF9190004C397 /* MFTableViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B47C11FCEF9180004C397 /* MFTableViewInfo.m */; };
-		A57B483D1FCEF9190004C397 /* MFTableViewSectionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B47C31FCEF9180004C397 /* MFTableViewSectionInfo.m */; };
-		A57B483E1FCEF9190004C397 /* MFTableViewUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B47C51FCEF9180004C397 /* MFTableViewUserInfo.m */; };
 		A57B483F1FCEF9190004C397 /* MMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B47C81FCEF9180004C397 /* MMTabBarController.m */; };
 		A57B48401FCEF9190004C397 /* MMService.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B47CB1FCEF9180004C397 /* MMService.m */; };
 		A57B48411FCEF9190004C397 /* MMServiceCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B47CD1FCEF9180004C397 /* MMServiceCenter.m */; };
@@ -479,14 +475,6 @@
 		A57B47BA1FCEF9180004C397 /* MFFileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFFileUtil.h; sourceTree = "<group>"; };
 		A57B47BB1FCEF9180004C397 /* MFUICommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFUICommonUtil.h; sourceTree = "<group>"; };
 		A57B47BC1FCEF9180004C397 /* MFComponent-pch.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MFComponent-pch.pch"; sourceTree = "<group>"; };
-		A57B47BE1FCEF9180004C397 /* MFTableViewCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFTableViewCellInfo.h; sourceTree = "<group>"; };
-		A57B47BF1FCEF9180004C397 /* MFTableViewCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFTableViewCellInfo.m; sourceTree = "<group>"; };
-		A57B47C01FCEF9180004C397 /* MFTableViewInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFTableViewInfo.h; sourceTree = "<group>"; };
-		A57B47C11FCEF9180004C397 /* MFTableViewInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFTableViewInfo.m; sourceTree = "<group>"; };
-		A57B47C21FCEF9180004C397 /* MFTableViewSectionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFTableViewSectionInfo.h; sourceTree = "<group>"; };
-		A57B47C31FCEF9180004C397 /* MFTableViewSectionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFTableViewSectionInfo.m; sourceTree = "<group>"; };
-		A57B47C41FCEF9180004C397 /* MFTableViewUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFTableViewUserInfo.h; sourceTree = "<group>"; };
-		A57B47C51FCEF9180004C397 /* MFTableViewUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFTableViewUserInfo.m; sourceTree = "<group>"; };
 		A57B47C71FCEF9180004C397 /* MMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTabBarController.h; sourceTree = "<group>"; };
 		A57B47C81FCEF9180004C397 /* MMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTabBarController.m; sourceTree = "<group>"; };
 		A57B47CA1FCEF9180004C397 /* MMService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMService.h; sourceTree = "<group>"; };
@@ -622,6 +610,13 @@
 				A51EACFE1FEBEBDF007D4C06 /* HCTopCureMainTagView.m */,
 			);
 			path = TopCure;
+			sourceTree = "<group>";
+		};
+		A520E5CD1FEE6EEC00E4EFAD /* MMTableViewInfo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MMTableViewInfo;
 			sourceTree = "<group>";
 		};
 		A5268DA81FD3C7E500E2F93C /* HealthManagement */ = {
@@ -1047,11 +1042,11 @@
 			isa = PBXGroup;
 			children = (
 				A57B47BC1FCEF9180004C397 /* MFComponent-pch.pch */,
+				A520E5CD1FEE6EEC00E4EFAD /* MMTableViewInfo */,
 				A57B476D1FCEF9180004C397 /* Category */,
 				A57B478D1FCEF9180004C397 /* Class */,
 				A57B47B31FCEF9180004C397 /* Helper */,
 				A57B47B81FCEF9180004C397 /* Macro */,
-				A57B47BD1FCEF9180004C397 /* MFTableView */,
 				A57B47C61FCEF9180004C397 /* MMTabBarController */,
 				A57B47C91FCEF9180004C397 /* Service */,
 				A57B47CE1FCEF9180004C397 /* Util */,
@@ -1168,21 +1163,6 @@
 				A57B47BB1FCEF9180004C397 /* MFUICommonUtil.h */,
 			);
 			path = Macro;
-			sourceTree = "<group>";
-		};
-		A57B47BD1FCEF9180004C397 /* MFTableView */ = {
-			isa = PBXGroup;
-			children = (
-				A57B47BE1FCEF9180004C397 /* MFTableViewCellInfo.h */,
-				A57B47BF1FCEF9180004C397 /* MFTableViewCellInfo.m */,
-				A57B47C01FCEF9180004C397 /* MFTableViewInfo.h */,
-				A57B47C11FCEF9180004C397 /* MFTableViewInfo.m */,
-				A57B47C21FCEF9180004C397 /* MFTableViewSectionInfo.h */,
-				A57B47C31FCEF9180004C397 /* MFTableViewSectionInfo.m */,
-				A57B47C41FCEF9180004C397 /* MFTableViewUserInfo.h */,
-				A57B47C51FCEF9180004C397 /* MFTableViewUserInfo.m */,
-			);
-			path = MFTableView;
 			sourceTree = "<group>";
 		};
 		A57B47C61FCEF9180004C397 /* MMTabBarController */ = {
@@ -1484,7 +1464,6 @@
 				A57B481D1FCEF9190004C397 /* NSMutableSet+SafeInsert.m in Sources */,
 				A57B48161FCEF9190004C397 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				A5D9AE321FDBB87B00B5D4C0 /* YTKChainRequest+AnimatingAccessory.m in Sources */,
-				A57B483D1FCEF9190004C397 /* MFTableViewSectionInfo.m in Sources */,
 				A57B483F1FCEF9190004C397 /* MMTabBarController.m in Sources */,
 				A57B480D1FCEF9190004C397 /* WireFormat.m in Sources */,
 				A57B47F61FCEF9190004C397 /* Messagepush.pb.m in Sources */,
@@ -1527,7 +1506,6 @@
 				A57B48111FCEF9190004C397 /* SCLButton.m in Sources */,
 				A57B482B1FCEF9190004C397 /* MFUICollectionView.m in Sources */,
 				A57B48101FCEF9190004C397 /* SCLAlertViewStyleKit.m in Sources */,
-				A57B483B1FCEF9190004C397 /* MFTableViewCellInfo.m in Sources */,
 				A51EAD011FEBEBDF007D4C06 /* HCBestNewsCellView.m in Sources */,
 				A57B47FF1FCEF9190004C397 /* ExtendableMessageBuilder.m in Sources */,
 				A5D9AE3D1FDBCADB00B5D4C0 /* HCUserLoginApi.m in Sources */,
@@ -1551,7 +1529,6 @@
 				A57B482D1FCEF9190004C397 /* MMBaseInfoItem.m in Sources */,
 				A566B4DF1FD2EA55004F6843 /* HCUserRegisterHeaderView.m in Sources */,
 				A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */,
-				A57B483C1FCEF9190004C397 /* MFTableViewInfo.m in Sources */,
 				A57B482F1FCEF9190004C397 /* MMNavigationController.m in Sources */,
 				A57B47E41FCEF9190004C397 /* IQUIViewController+Additions.m in Sources */,
 				A57B47F01FCEF9190004C397 /* MBProgressHUD.m in Sources */,
@@ -1575,7 +1552,6 @@
 				A57B47E91FCEF9190004C397 /* IQBarButtonItem.m in Sources */,
 				A57B48061FCEF9190004C397 /* ObjectivecDescriptor.pb.m in Sources */,
 				A57B481A1FCEF9190004C397 /* NSDictionary+Unicode.m in Sources */,
-				A57B483E1FCEF9190004C397 /* MFTableViewUserInfo.m in Sources */,
 				A566B4D61FD297FE004F6843 /* UINavigationItem+margin.m in Sources */,
 				A57B480A1FCEF9190004C397 /* UnknownFieldSet.m in Sources */,
 				A57B47E31FCEF9190004C397 /* IQUIView+Hierarchy.m in Sources */,

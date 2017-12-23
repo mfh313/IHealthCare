@@ -88,7 +88,7 @@
 {
     MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
     NSString *identifier = cellInfo.cellReuseIdentifier;
-    if ([identifier isEqualToString:@"highProducts"])
+    if ([identifier isEqualToString:@"productImage"])
     {
 //        return [self tableView:tableView highProductsCellForIndexPath:indexPath];
     }
