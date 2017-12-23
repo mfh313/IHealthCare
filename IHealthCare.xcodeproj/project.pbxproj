@@ -34,6 +34,8 @@
 		A520E5FF1FEE734F00E4EFAD /* MMTableViewCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5FE1FEE734F00E4EFAD /* MMTableViewCellInfo.m */; };
 		A520E6021FEE755A00E4EFAD /* MMTableViewSectionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E6011FEE755A00E4EFAD /* MMTableViewSectionInfo.m */; };
 		A520E6051FEE76A200E4EFAD /* MMTableViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E6041FEE76A200E4EFAD /* MMTableViewInfo.m */; };
+		A520E6081FEE909500E4EFAD /* HCMeProfileCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E6071FEE909500E4EFAD /* HCMeProfileCellView.m */; };
+		A520E60A1FEE919800E4EFAD /* HCMeProfileCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A520E6091FEE919800E4EFAD /* HCMeProfileCellView.xib */; };
 		A5268DB01FD3C83B00E2F93C /* HCHealthManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5268DAF1FD3C83B00E2F93C /* HCHealthManagementViewController.m */; };
 		A5268DB31FD3C84F00E2F93C /* HCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5268DB21FD3C84F00E2F93C /* HCMeViewController.m */; };
 		A5268DB61FD3C86300E2F93C /* HCWealthManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5268DB51FD3C86300E2F93C /* HCWealthManagementViewController.m */; };
@@ -232,6 +234,9 @@
 		A520E6011FEE755A00E4EFAD /* MMTableViewSectionInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTableViewSectionInfo.m; sourceTree = "<group>"; };
 		A520E6031FEE76A200E4EFAD /* MMTableViewInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTableViewInfo.h; sourceTree = "<group>"; };
 		A520E6041FEE76A200E4EFAD /* MMTableViewInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTableViewInfo.m; sourceTree = "<group>"; };
+		A520E6061FEE909500E4EFAD /* HCMeProfileCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeProfileCellView.h; sourceTree = "<group>"; };
+		A520E6071FEE909500E4EFAD /* HCMeProfileCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMeProfileCellView.m; sourceTree = "<group>"; };
+		A520E6091FEE919800E4EFAD /* HCMeProfileCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMeProfileCellView.xib; sourceTree = "<group>"; };
 		A5268DAE1FD3C83B00E2F93C /* HCHealthManagementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementViewController.h; sourceTree = "<group>"; };
 		A5268DAF1FD3C83B00E2F93C /* HCHealthManagementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementViewController.m; sourceTree = "<group>"; };
 		A5268DB11FD3C84F00E2F93C /* HCMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeViewController.h; sourceTree = "<group>"; };
@@ -662,6 +667,9 @@
 			children = (
 				A5268DB11FD3C84F00E2F93C /* HCMeViewController.h */,
 				A5268DB21FD3C84F00E2F93C /* HCMeViewController.m */,
+				A520E6061FEE909500E4EFAD /* HCMeProfileCellView.h */,
+				A520E6071FEE909500E4EFAD /* HCMeProfileCellView.m */,
+				A520E6091FEE919800E4EFAD /* HCMeProfileCellView.xib */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -1382,6 +1390,7 @@
 				A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */,
 				A56CD7841FD0306C00FFF504 /* LoginAssets.xcassets in Resources */,
 				A57B47EE1FCEF9190004C397 /* IQKeyboardManager.bundle in Resources */,
+				A520E60A1FEE919800E4EFAD /* HCMeProfileCellView.xib in Resources */,
 				A520E5EB1FEE6FEA00E4EFAD /* HCBestNewsCellView.xib in Resources */,
 				A566B4E11FD2EA6F004F6843 /* HCUserRegisterHeaderView.xib in Resources */,
 				A56CD7881FD0315000FFF504 /* MeAssets.xcassets in Resources */,
@@ -1536,6 +1545,7 @@
 				A5BDB5081FE660700052B51B /* HCGetBestNewsApi.m in Sources */,
 				A520E5F31FEE6FEA00E4EFAD /* HCHighProductDetailViewController.m in Sources */,
 				A57B483A1FCEF9190004C397 /* MFThemeHelper.m in Sources */,
+				A520E6081FEE909500E4EFAD /* HCMeProfileCellView.m in Sources */,
 				A57B48201FCEF9190004C397 /* UIView+Extend.m in Sources */,
 				A57B47E71FCEF9190004C397 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				A53695AE1FD59769007CC67C /* SPCoverController.m in Sources */,

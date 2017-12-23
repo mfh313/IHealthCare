@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HCMeProfileCellView">
+            <rect key="frame" x="0.0" y="0.0" width="531" height="158"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_img_default_head_nor" translatesAutoresizingMaskIntoConstraints="NO" id="Yji-mW-kUh">
+                    <rect key="frame" x="30" y="39" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="7MH-vg-SXl"/>
+                        <constraint firstAttribute="width" constant="80" id="t00-aA-Sbw"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JjT-GY-jQ8">
+                    <rect key="frame" x="143" y="72" width="49.5" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.6470588235294118" green="0.6470588235294118" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JjT-GY-jQ8" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="1Ot-EF-xVo"/>
+                <constraint firstItem="Yji-mW-kUh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="3w2-Nq-lHa"/>
+                <constraint firstItem="JjT-GY-jQ8" firstAttribute="leading" secondItem="Yji-mW-kUh" secondAttribute="trailing" constant="33" id="YaQ-So-hoh"/>
+                <constraint firstItem="Yji-mW-kUh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ZvH-By-3eW"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="103.5" y="307"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="my_img_default_head_nor" width="80" height="80"/>
+    </resources>
+</document>

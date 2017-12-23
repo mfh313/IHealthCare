@@ -7,6 +7,7 @@
 //
 
 #import "HCMeViewController.h"
+#import "HCMeProfileCellView.h"
 
 @interface HCMeViewController () <MMTableViewInfoDelegate>
 {
@@ -38,9 +39,9 @@
 {
     [m_tableViewInfo clearAllSection];
     
-//    [self addProfileSection];
+    [self addProfileSection];
 //    [self addFrozenEmployeeSection];
-//    
+//
 //    if ([self needAddressBookCell])
 //    {
 //        [self getAddressBookAuthor];
@@ -57,6 +58,41 @@
 //    }
 //
 //    [self addFunctionSection];
+}
+
+-(void)addProfileSection
+{
+    MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
+    MMTableViewCellInfo *cellInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeProfileCell:)
+                                                             makeTarget:self
+                                                              actionSel:nil
+                                                           actionTarget:self
+                                                                 height:130.0f
+                                                               userInfo:nil];
+    [sectionInfo addCell:cellInfo];
+    [m_tableViewInfo addSection:sectionInfo];
+}
+
+- (void)makeProfileCell:(MFTableViewCell *)cell
+{
+    if (!cell.m_subContentView) {
+        HCMeProfileCellView *cellView = [HCMeProfileCellView nibView];
+        cell.m_subContentView = cellView;
+    }
+    else
+    {
+        [cell.contentView addSubview:cell.m_subContentView];
+    }
+
+    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+
+    HCMeProfileCellView *cellView = (HCMeProfileCellView *)cell.m_subContentView;
+    cellView.frame = cell.contentView.bounds;
+
+//    m_loginService = [[MMServiceCenter defaultCenter] getService:[MShopLoginService class]];
+//    MShopLoginUserInfo *loginInfo = [m_loginService currentLoginUserInfo];
+//
+//    [cellView setProfileCellInfo:loginInfo];
 }
 
 - (void)didReceiveMemoryWarning {
