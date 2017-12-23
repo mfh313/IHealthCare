@@ -30,6 +30,10 @@
 		A520E5F71FEE6FEA00E4EFAD /* HCTopCureMainTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5E51FEE6FEA00E4EFAD /* HCTopCureMainTabView.m */; };
 		A520E5F81FEE6FEA00E4EFAD /* HCTopCureMainTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5E71FEE6FEA00E4EFAD /* HCTopCureMainTagView.m */; };
 		A520E5F91FEE6FEA00E4EFAD /* HCTopCureMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5E91FEE6FEA00E4EFAD /* HCTopCureMainViewController.m */; };
+		A520E5FC1FEE72AA00E4EFAD /* MMTableViewUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5FB1FEE72AA00E4EFAD /* MMTableViewUserInfo.m */; };
+		A520E5FF1FEE734F00E4EFAD /* MMTableViewCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5FE1FEE734F00E4EFAD /* MMTableViewCellInfo.m */; };
+		A520E6021FEE755A00E4EFAD /* MMTableViewSectionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E6011FEE755A00E4EFAD /* MMTableViewSectionInfo.m */; };
+		A520E6051FEE76A200E4EFAD /* MMTableViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E6041FEE76A200E4EFAD /* MMTableViewInfo.m */; };
 		A5268DB01FD3C83B00E2F93C /* HCHealthManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5268DAF1FD3C83B00E2F93C /* HCHealthManagementViewController.m */; };
 		A5268DB31FD3C84F00E2F93C /* HCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5268DB21FD3C84F00E2F93C /* HCMeViewController.m */; };
 		A5268DB61FD3C86300E2F93C /* HCWealthManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5268DB51FD3C86300E2F93C /* HCWealthManagementViewController.m */; };
@@ -220,6 +224,14 @@
 		A520E5E71FEE6FEA00E4EFAD /* HCTopCureMainTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTopCureMainTagView.m; sourceTree = "<group>"; };
 		A520E5E81FEE6FEA00E4EFAD /* HCTopCureMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTopCureMainViewController.h; sourceTree = "<group>"; };
 		A520E5E91FEE6FEA00E4EFAD /* HCTopCureMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTopCureMainViewController.m; sourceTree = "<group>"; };
+		A520E5FA1FEE72AA00E4EFAD /* MMTableViewUserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTableViewUserInfo.h; sourceTree = "<group>"; };
+		A520E5FB1FEE72AA00E4EFAD /* MMTableViewUserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTableViewUserInfo.m; sourceTree = "<group>"; };
+		A520E5FD1FEE734F00E4EFAD /* MMTableViewCellInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTableViewCellInfo.h; sourceTree = "<group>"; };
+		A520E5FE1FEE734F00E4EFAD /* MMTableViewCellInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTableViewCellInfo.m; sourceTree = "<group>"; };
+		A520E6001FEE755A00E4EFAD /* MMTableViewSectionInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTableViewSectionInfo.h; sourceTree = "<group>"; };
+		A520E6011FEE755A00E4EFAD /* MMTableViewSectionInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTableViewSectionInfo.m; sourceTree = "<group>"; };
+		A520E6031FEE76A200E4EFAD /* MMTableViewInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTableViewInfo.h; sourceTree = "<group>"; };
+		A520E6041FEE76A200E4EFAD /* MMTableViewInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTableViewInfo.m; sourceTree = "<group>"; };
 		A5268DAE1FD3C83B00E2F93C /* HCHealthManagementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementViewController.h; sourceTree = "<group>"; };
 		A5268DAF1FD3C83B00E2F93C /* HCHealthManagementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementViewController.m; sourceTree = "<group>"; };
 		A5268DB11FD3C84F00E2F93C /* HCMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeViewController.h; sourceTree = "<group>"; };
@@ -581,6 +593,14 @@
 		A520E5CD1FEE6EEC00E4EFAD /* MMTableViewInfo */ = {
 			isa = PBXGroup;
 			children = (
+				A520E5FA1FEE72AA00E4EFAD /* MMTableViewUserInfo.h */,
+				A520E5FB1FEE72AA00E4EFAD /* MMTableViewUserInfo.m */,
+				A520E5FD1FEE734F00E4EFAD /* MMTableViewCellInfo.h */,
+				A520E5FE1FEE734F00E4EFAD /* MMTableViewCellInfo.m */,
+				A520E6001FEE755A00E4EFAD /* MMTableViewSectionInfo.h */,
+				A520E6011FEE755A00E4EFAD /* MMTableViewSectionInfo.m */,
+				A520E6031FEE76A200E4EFAD /* MMTableViewInfo.h */,
+				A520E6041FEE76A200E4EFAD /* MMTableViewInfo.m */,
 			);
 			path = MMTableViewInfo;
 			sourceTree = "<group>";
@@ -1526,6 +1546,8 @@
 				A57B47FD1FCEF9190004C397 /* Descriptor.pb.m in Sources */,
 				A57B482D1FCEF9190004C397 /* MMBaseInfoItem.m in Sources */,
 				A520E5EC1FEE6FEA00E4EFAD /* HCBestNewsMainViewController.m in Sources */,
+				A520E5FF1FEE734F00E4EFAD /* MMTableViewCellInfo.m in Sources */,
+				A520E6021FEE755A00E4EFAD /* MMTableViewSectionInfo.m in Sources */,
 				A566B4DF1FD2EA55004F6843 /* HCUserRegisterHeaderView.m in Sources */,
 				A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */,
 				A57B482F1FCEF9190004C397 /* MMNavigationController.m in Sources */,
@@ -1550,6 +1572,7 @@
 				A57B481C1FCEF9190004C397 /* NSMutableDictionary+SafeInsert.m in Sources */,
 				A57B47F81FCEF9190004C397 /* AbstractMessage.m in Sources */,
 				A57B47E91FCEF9190004C397 /* IQBarButtonItem.m in Sources */,
+				A520E6051FEE76A200E4EFAD /* MMTableViewInfo.m in Sources */,
 				A57B48061FCEF9190004C397 /* ObjectivecDescriptor.pb.m in Sources */,
 				A57B481A1FCEF9190004C397 /* NSDictionary+Unicode.m in Sources */,
 				A566B4D61FD297FE004F6843 /* UINavigationItem+margin.m in Sources */,
@@ -1566,6 +1589,7 @@
 				A57B47FA1FCEF9190004C397 /* CodedInputStream.m in Sources */,
 				A57B47ED1FCEF9190004C397 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				A5D9AE301FDBB87B00B5D4C0 /* YTKBaseRequest+AnimatingAccessory.m in Sources */,
+				A520E5FC1FEE72AA00E4EFAD /* MMTableViewUserInfo.m in Sources */,
 				A575874D1FE519A0000FC7CB /* HCGetProductsApi.m in Sources */,
 				A57B47E81FCEF9190004C397 /* IQTextView.m in Sources */,
 				A57B480B1FCEF9190004C397 /* UnknownFieldSetBuilder.m in Sources */,
