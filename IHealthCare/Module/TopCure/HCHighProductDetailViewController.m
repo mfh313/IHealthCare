@@ -28,7 +28,7 @@
     m_navBar.m_delegate = self;
     [self.view addSubview:m_navBar];
     [m_navBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(self.view);
+        make.centerX.equalTo(self.view);
         make.height.mas_equalTo(@(44));
         make.top.equalTo(self.view).offset(20);
         make.left.equalTo(self.view);
