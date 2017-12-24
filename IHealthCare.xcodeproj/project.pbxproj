@@ -668,12 +668,12 @@
 			children = (
 				A5268DB11FD3C84F00E2F93C /* HCMeViewController.h */,
 				A5268DB21FD3C84F00E2F93C /* HCMeViewController.m */,
-				A55464EF1FEF528100A7E3C7 /* HCMeFooterView.h */,
-				A55464F01FEF528100A7E3C7 /* HCMeFooterView.m */,
-				A55464F21FEF529300A7E3C7 /* HCMeFooterView.xib */,
 				A520E6061FEE909500E4EFAD /* HCMeProfileCellView.h */,
 				A520E6071FEE909500E4EFAD /* HCMeProfileCellView.m */,
 				A520E6091FEE919800E4EFAD /* HCMeProfileCellView.xib */,
+				A55464EF1FEF528100A7E3C7 /* HCMeFooterView.h */,
+				A55464F01FEF528100A7E3C7 /* HCMeFooterView.m */,
+				A55464F21FEF529300A7E3C7 /* HCMeFooterView.xib */,
 			);
 			path = Me;
 			sourceTree = "<group>";

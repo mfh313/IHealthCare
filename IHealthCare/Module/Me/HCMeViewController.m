@@ -11,7 +11,7 @@
 #import "HCNormalGroupCellView.h"
 #import "HCMeFooterView.h"
 
-@interface HCMeViewController () <MMTableViewInfoDelegate>
+@interface HCMeViewController () <MMTableViewInfoDelegate,HCMeProfileCellViewDelegate>
 {
     MMTableViewInfo *m_tableViewInfo;
     
@@ -45,6 +45,7 @@
     contentTableView.tableHeaderView = tableHeaderView;
     
     HCMeProfileCellView *profileView = [HCMeProfileCellView nibView];
+    profileView.m_delegate = self;
     [tableHeaderView addSubview:profileView];
     [profileView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(contentTableView);
@@ -68,6 +69,17 @@
     }];
     
     [self reloadMeView];
+}
+
+#pragma mark - HCMeProfileCellViewDelegate
+-(void)onClickToAuth:(HCMeProfileCellView *)view
+{
+    
+}
+
+-(void)onClickProfileCell:(HCMeProfileCellView *)view
+{
+    
 }
 
 -(void)reloadMeView
