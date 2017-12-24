@@ -52,6 +52,8 @@
 		A55464F11FEF528100A7E3C7 /* HCMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464F01FEF528100A7E3C7 /* HCMeFooterView.m */; };
 		A55464F31FEF529300A7E3C7 /* HCMeFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55464F21FEF529300A7E3C7 /* HCMeFooterView.xib */; };
 		A55464F61FEF9BA100A7E3C7 /* HCAuthIDCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464F51FEF9BA100A7E3C7 /* HCAuthIDCardViewController.m */; };
+		A55464F91FEFA3ED00A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464F81FEFA3ED00A7E3C7 /* HCAuthIDCardFacadeInputView.m */; };
+		A55464FB1FEFA44B00A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55464FA1FEFA44B00A7E3C7 /* HCAuthIDCardFacadeInputView.xib */; };
 		A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */; };
 		A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5623CA71FCDB851001A6B5D /* Assets.xcassets */; };
 		A5623CAE1FCDB851001A6B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623CAD1FCDB851001A6B5D /* main.m */; };
@@ -276,6 +278,9 @@
 		A55464F21FEF529300A7E3C7 /* HCMeFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMeFooterView.xib; sourceTree = "<group>"; };
 		A55464F41FEF9BA100A7E3C7 /* HCAuthIDCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAuthIDCardViewController.h; sourceTree = "<group>"; };
 		A55464F51FEF9BA100A7E3C7 /* HCAuthIDCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCAuthIDCardViewController.m; sourceTree = "<group>"; };
+		A55464F71FEFA3ED00A7E3C7 /* HCAuthIDCardFacadeInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAuthIDCardFacadeInputView.h; sourceTree = "<group>"; };
+		A55464F81FEFA3ED00A7E3C7 /* HCAuthIDCardFacadeInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCAuthIDCardFacadeInputView.m; sourceTree = "<group>"; };
+		A55464FA1FEFA44B00A7E3C7 /* HCAuthIDCardFacadeInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCAuthIDCardFacadeInputView.xib; sourceTree = "<group>"; };
 		A5623C9B1FCDB851001A6B5D /* IHealthCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHealthCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5623C9E1FCDB851001A6B5D /* HealthCareAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthCareAppDelegate.h; sourceTree = "<group>"; };
 		A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthCareAppDelegate.m; sourceTree = "<group>"; };
@@ -673,6 +678,9 @@
 				A5268DB21FD3C84F00E2F93C /* HCMeViewController.m */,
 				A55464F41FEF9BA100A7E3C7 /* HCAuthIDCardViewController.h */,
 				A55464F51FEF9BA100A7E3C7 /* HCAuthIDCardViewController.m */,
+				A55464F71FEFA3ED00A7E3C7 /* HCAuthIDCardFacadeInputView.h */,
+				A55464F81FEFA3ED00A7E3C7 /* HCAuthIDCardFacadeInputView.m */,
+				A55464FA1FEFA44B00A7E3C7 /* HCAuthIDCardFacadeInputView.xib */,
 				A520E6061FEE909500E4EFAD /* HCMeProfileCellView.h */,
 				A520E6071FEE909500E4EFAD /* HCMeProfileCellView.m */,
 				A520E6091FEE919800E4EFAD /* HCMeProfileCellView.xib */,
@@ -1416,6 +1424,7 @@
 				A520E60A1FEE919800E4EFAD /* HCMeProfileCellView.xib in Resources */,
 				A520E5EB1FEE6FEA00E4EFAD /* HCBestNewsCellView.xib in Resources */,
 				A566B4E11FD2EA6F004F6843 /* HCUserRegisterHeaderView.xib in Resources */,
+				A55464FB1FEFA44B00A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */,
 				A56CD7881FD0315000FFF504 /* MeAssets.xcassets in Resources */,
 				A511F35A1FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib in Resources */,
 				A511F3551FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib in Resources */,
@@ -1527,6 +1536,7 @@
 				A57B48301FCEF9190004C397 /* MMObject.m in Sources */,
 				A57B480E1FCEF9190004C397 /* SCLAlertView.m in Sources */,
 				A57B48181FCEF9190004C397 /* NSArray+SafeInsert.m in Sources */,
+				A55464F91FEFA3ED00A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */,
 				A57B47E11FCEF9190004C397 /* IQUIScrollView+Additions.m in Sources */,
 				A57B48231FCEF9190004C397 /* UIViewController+FixBackIndicatorImage.m in Sources */,
 				A57B47EF1FCEF9190004C397 /* LYSideslipCell.m in Sources */,
