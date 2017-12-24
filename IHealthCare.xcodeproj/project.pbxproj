@@ -33,10 +33,7 @@
 		A520E5FF1FEE734F00E4EFAD /* MMTableViewCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5FE1FEE734F00E4EFAD /* MMTableViewCellInfo.m */; };
 		A520E6021FEE755A00E4EFAD /* MMTableViewSectionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E6011FEE755A00E4EFAD /* MMTableViewSectionInfo.m */; };
 		A520E6051FEE76A200E4EFAD /* MMTableViewInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E6041FEE76A200E4EFAD /* MMTableViewInfo.m */; };
-		A520E6081FEE909500E4EFAD /* HCMeProfileCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E6071FEE909500E4EFAD /* HCMeProfileCellView.m */; };
-		A520E60A1FEE919800E4EFAD /* HCMeProfileCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A520E6091FEE919800E4EFAD /* HCMeProfileCellView.xib */; };
 		A5268DB01FD3C83B00E2F93C /* HCHealthManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5268DAF1FD3C83B00E2F93C /* HCHealthManagementViewController.m */; };
-		A5268DB31FD3C84F00E2F93C /* HCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5268DB21FD3C84F00E2F93C /* HCMeViewController.m */; };
 		A5268DB61FD3C86300E2F93C /* HCWealthManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5268DB51FD3C86300E2F93C /* HCWealthManagementViewController.m */; };
 		A5268DBA1FD3CB2600E2F93C /* HCHappinessManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5268DB91FD3CB2600E2F93C /* HCHappinessManagementViewController.m */; };
 		A5268DBF1FD3FBAC00E2F93C /* HealthCareTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5268DBE1FD3FBAC00E2F93C /* HealthCareTabBarController.m */; };
@@ -46,14 +43,17 @@
 		A53695B11FD59769007CC67C /* SPPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695A91FD59769007CC67C /* SPPageContentView.m */; };
 		A53695B21FD59769007CC67C /* SPPageTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695AB1FD59769007CC67C /* SPPageTagView.m */; };
 		A53695B31FD59769007CC67C /* SPTagBarScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695AD1FD59769007CC67C /* SPTagBarScrollView.m */; };
-		A55464E91FEF424300A7E3C7 /* HCPullFreshCountLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464E81FEF424300A7E3C7 /* HCPullFreshCountLogic.m */; };
-		A55464EC1FEF459800A7E3C7 /* HCNormalGroupCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464EB1FEF459800A7E3C7 /* HCNormalGroupCellView.m */; };
-		A55464EE1FEF45B200A7E3C7 /* HCNormalGroupCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55464ED1FEF45B200A7E3C7 /* HCNormalGroupCellView.xib */; };
-		A55464F11FEF528100A7E3C7 /* HCMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464F01FEF528100A7E3C7 /* HCMeFooterView.m */; };
-		A55464F31FEF529300A7E3C7 /* HCMeFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55464F21FEF529300A7E3C7 /* HCMeFooterView.xib */; };
-		A55464F61FEF9BA100A7E3C7 /* HCAuthIDCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464F51FEF9BA100A7E3C7 /* HCAuthIDCardViewController.m */; };
-		A55464F91FEFA3ED00A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464F81FEFA3ED00A7E3C7 /* HCAuthIDCardFacadeInputView.m */; };
-		A55464FB1FEFA44B00A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55464FA1FEFA44B00A7E3C7 /* HCAuthIDCardFacadeInputView.xib */; };
+		A554650A1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464FE1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m */; };
+		A554650B1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55464FF1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib */; };
+		A554650C1FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465011FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m */; };
+		A554650D1FEFAD3100A7E3C7 /* HCMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465031FEFAD3100A7E3C7 /* HCMeFooterView.m */; };
+		A554650E1FEFAD3100A7E3C7 /* HCMeFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55465041FEFAD3100A7E3C7 /* HCMeFooterView.xib */; };
+		A554650F1FEFAD3100A7E3C7 /* HCMeProfileCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465061FEFAD3100A7E3C7 /* HCMeProfileCellView.m */; };
+		A55465101FEFAD3100A7E3C7 /* HCMeProfileCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55465071FEFAD3100A7E3C7 /* HCMeProfileCellView.xib */; };
+		A55465111FEFAD3100A7E3C7 /* HCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465091FEFAD3100A7E3C7 /* HCMeViewController.m */; };
+		A55465181FEFAD5700A7E3C7 /* HCNormalGroupCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465141FEFAD5700A7E3C7 /* HCNormalGroupCellView.m */; };
+		A55465191FEFAD5700A7E3C7 /* HCNormalGroupCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55465151FEFAD5700A7E3C7 /* HCNormalGroupCellView.xib */; };
+		A554651A1FEFAD5700A7E3C7 /* HCPullFreshCountLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465171FEFAD5700A7E3C7 /* HCPullFreshCountLogic.m */; };
 		A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */; };
 		A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5623CA71FCDB851001A6B5D /* Assets.xcassets */; };
 		A5623CAE1FCDB851001A6B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623CAD1FCDB851001A6B5D /* main.m */; };
@@ -239,13 +239,8 @@
 		A520E6011FEE755A00E4EFAD /* MMTableViewSectionInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTableViewSectionInfo.m; sourceTree = "<group>"; };
 		A520E6031FEE76A200E4EFAD /* MMTableViewInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTableViewInfo.h; sourceTree = "<group>"; };
 		A520E6041FEE76A200E4EFAD /* MMTableViewInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTableViewInfo.m; sourceTree = "<group>"; };
-		A520E6061FEE909500E4EFAD /* HCMeProfileCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeProfileCellView.h; sourceTree = "<group>"; };
-		A520E6071FEE909500E4EFAD /* HCMeProfileCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMeProfileCellView.m; sourceTree = "<group>"; };
-		A520E6091FEE919800E4EFAD /* HCMeProfileCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMeProfileCellView.xib; sourceTree = "<group>"; };
 		A5268DAE1FD3C83B00E2F93C /* HCHealthManagementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementViewController.h; sourceTree = "<group>"; };
 		A5268DAF1FD3C83B00E2F93C /* HCHealthManagementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementViewController.m; sourceTree = "<group>"; };
-		A5268DB11FD3C84F00E2F93C /* HCMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeViewController.h; sourceTree = "<group>"; };
-		A5268DB21FD3C84F00E2F93C /* HCMeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMeViewController.m; sourceTree = "<group>"; };
 		A5268DB41FD3C86300E2F93C /* HCWealthManagementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCWealthManagementViewController.h; sourceTree = "<group>"; };
 		A5268DB51FD3C86300E2F93C /* HCWealthManagementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCWealthManagementViewController.m; sourceTree = "<group>"; };
 		A5268DB81FD3CB2600E2F93C /* HCHappinessManagementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHappinessManagementViewController.h; sourceTree = "<group>"; };
@@ -268,19 +263,24 @@
 		A53695AB1FD59769007CC67C /* SPPageTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPageTagView.m; sourceTree = "<group>"; };
 		A53695AC1FD59769007CC67C /* SPTagBarScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTagBarScrollView.h; sourceTree = "<group>"; };
 		A53695AD1FD59769007CC67C /* SPTagBarScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTagBarScrollView.m; sourceTree = "<group>"; };
-		A55464E71FEF424300A7E3C7 /* HCPullFreshCountLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPullFreshCountLogic.h; sourceTree = "<group>"; };
-		A55464E81FEF424300A7E3C7 /* HCPullFreshCountLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPullFreshCountLogic.m; sourceTree = "<group>"; };
-		A55464EA1FEF459800A7E3C7 /* HCNormalGroupCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCNormalGroupCellView.h; sourceTree = "<group>"; };
-		A55464EB1FEF459800A7E3C7 /* HCNormalGroupCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCNormalGroupCellView.m; sourceTree = "<group>"; };
-		A55464ED1FEF45B200A7E3C7 /* HCNormalGroupCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCNormalGroupCellView.xib; sourceTree = "<group>"; };
-		A55464EF1FEF528100A7E3C7 /* HCMeFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeFooterView.h; sourceTree = "<group>"; };
-		A55464F01FEF528100A7E3C7 /* HCMeFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMeFooterView.m; sourceTree = "<group>"; };
-		A55464F21FEF529300A7E3C7 /* HCMeFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMeFooterView.xib; sourceTree = "<group>"; };
-		A55464F41FEF9BA100A7E3C7 /* HCAuthIDCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAuthIDCardViewController.h; sourceTree = "<group>"; };
-		A55464F51FEF9BA100A7E3C7 /* HCAuthIDCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCAuthIDCardViewController.m; sourceTree = "<group>"; };
-		A55464F71FEFA3ED00A7E3C7 /* HCAuthIDCardFacadeInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAuthIDCardFacadeInputView.h; sourceTree = "<group>"; };
-		A55464F81FEFA3ED00A7E3C7 /* HCAuthIDCardFacadeInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCAuthIDCardFacadeInputView.m; sourceTree = "<group>"; };
-		A55464FA1FEFA44B00A7E3C7 /* HCAuthIDCardFacadeInputView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCAuthIDCardFacadeInputView.xib; sourceTree = "<group>"; };
+		A55464FD1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAuthIDCardFacadeInputView.h; sourceTree = "<group>"; };
+		A55464FE1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAuthIDCardFacadeInputView.m; sourceTree = "<group>"; };
+		A55464FF1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCAuthIDCardFacadeInputView.xib; sourceTree = "<group>"; };
+		A55465001FEFAD3100A7E3C7 /* HCAuthIDCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAuthIDCardViewController.h; sourceTree = "<group>"; };
+		A55465011FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAuthIDCardViewController.m; sourceTree = "<group>"; };
+		A55465021FEFAD3100A7E3C7 /* HCMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMeFooterView.h; sourceTree = "<group>"; };
+		A55465031FEFAD3100A7E3C7 /* HCMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMeFooterView.m; sourceTree = "<group>"; };
+		A55465041FEFAD3100A7E3C7 /* HCMeFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCMeFooterView.xib; sourceTree = "<group>"; };
+		A55465051FEFAD3100A7E3C7 /* HCMeProfileCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMeProfileCellView.h; sourceTree = "<group>"; };
+		A55465061FEFAD3100A7E3C7 /* HCMeProfileCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMeProfileCellView.m; sourceTree = "<group>"; };
+		A55465071FEFAD3100A7E3C7 /* HCMeProfileCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCMeProfileCellView.xib; sourceTree = "<group>"; };
+		A55465081FEFAD3100A7E3C7 /* HCMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMeViewController.h; sourceTree = "<group>"; };
+		A55465091FEFAD3100A7E3C7 /* HCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMeViewController.m; sourceTree = "<group>"; };
+		A55465131FEFAD5700A7E3C7 /* HCNormalGroupCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCNormalGroupCellView.h; sourceTree = "<group>"; };
+		A55465141FEFAD5700A7E3C7 /* HCNormalGroupCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCNormalGroupCellView.m; sourceTree = "<group>"; };
+		A55465151FEFAD5700A7E3C7 /* HCNormalGroupCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCNormalGroupCellView.xib; sourceTree = "<group>"; };
+		A55465161FEFAD5700A7E3C7 /* HCPullFreshCountLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPullFreshCountLogic.h; sourceTree = "<group>"; };
+		A55465171FEFAD5700A7E3C7 /* HCPullFreshCountLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPullFreshCountLogic.m; sourceTree = "<group>"; };
 		A5623C9B1FCDB851001A6B5D /* IHealthCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHealthCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5623C9E1FCDB851001A6B5D /* HealthCareAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthCareAppDelegate.h; sourceTree = "<group>"; };
 		A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthCareAppDelegate.m; sourceTree = "<group>"; };
@@ -671,26 +671,6 @@
 			path = WealthManagement;
 			sourceTree = "<group>";
 		};
-		A5268DAA1FD3C7E500E2F93C /* Me */ = {
-			isa = PBXGroup;
-			children = (
-				A5268DB11FD3C84F00E2F93C /* HCMeViewController.h */,
-				A5268DB21FD3C84F00E2F93C /* HCMeViewController.m */,
-				A55464F41FEF9BA100A7E3C7 /* HCAuthIDCardViewController.h */,
-				A55464F51FEF9BA100A7E3C7 /* HCAuthIDCardViewController.m */,
-				A55464F71FEFA3ED00A7E3C7 /* HCAuthIDCardFacadeInputView.h */,
-				A55464F81FEFA3ED00A7E3C7 /* HCAuthIDCardFacadeInputView.m */,
-				A55464FA1FEFA44B00A7E3C7 /* HCAuthIDCardFacadeInputView.xib */,
-				A520E6061FEE909500E4EFAD /* HCMeProfileCellView.h */,
-				A520E6071FEE909500E4EFAD /* HCMeProfileCellView.m */,
-				A520E6091FEE919800E4EFAD /* HCMeProfileCellView.xib */,
-				A55464EF1FEF528100A7E3C7 /* HCMeFooterView.h */,
-				A55464F01FEF528100A7E3C7 /* HCMeFooterView.m */,
-				A55464F21FEF529300A7E3C7 /* HCMeFooterView.xib */,
-			);
-			path = Me;
-			sourceTree = "<group>";
-		};
 		A5268DB71FD3CB0800E2F93C /* HappinessManagement */ = {
 			isa = PBXGroup;
 			children = (
@@ -755,14 +735,34 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A55464E61FEF424300A7E3C7 /* HCComponent */ = {
+		A55464FC1FEFAD3100A7E3C7 /* Me */ = {
 			isa = PBXGroup;
 			children = (
-				A55464E71FEF424300A7E3C7 /* HCPullFreshCountLogic.h */,
-				A55464E81FEF424300A7E3C7 /* HCPullFreshCountLogic.m */,
-				A55464EA1FEF459800A7E3C7 /* HCNormalGroupCellView.h */,
-				A55464EB1FEF459800A7E3C7 /* HCNormalGroupCellView.m */,
-				A55464ED1FEF45B200A7E3C7 /* HCNormalGroupCellView.xib */,
+				A55464FD1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.h */,
+				A55464FE1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m */,
+				A55464FF1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib */,
+				A55465001FEFAD3100A7E3C7 /* HCAuthIDCardViewController.h */,
+				A55465011FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m */,
+				A55465021FEFAD3100A7E3C7 /* HCMeFooterView.h */,
+				A55465031FEFAD3100A7E3C7 /* HCMeFooterView.m */,
+				A55465041FEFAD3100A7E3C7 /* HCMeFooterView.xib */,
+				A55465051FEFAD3100A7E3C7 /* HCMeProfileCellView.h */,
+				A55465061FEFAD3100A7E3C7 /* HCMeProfileCellView.m */,
+				A55465071FEFAD3100A7E3C7 /* HCMeProfileCellView.xib */,
+				A55465081FEFAD3100A7E3C7 /* HCMeViewController.h */,
+				A55465091FEFAD3100A7E3C7 /* HCMeViewController.m */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		A55465121FEFAD5700A7E3C7 /* HCComponent */ = {
+			isa = PBXGroup;
+			children = (
+				A55465131FEFAD5700A7E3C7 /* HCNormalGroupCellView.h */,
+				A55465141FEFAD5700A7E3C7 /* HCNormalGroupCellView.m */,
+				A55465151FEFAD5700A7E3C7 /* HCNormalGroupCellView.xib */,
+				A55465161FEFAD5700A7E3C7 /* HCPullFreshCountLogic.h */,
+				A55465171FEFAD5700A7E3C7 /* HCPullFreshCountLogic.m */,
 			);
 			path = HCComponent;
 			sourceTree = "<group>";
@@ -794,8 +794,8 @@
 				A56CD77E1FD028AD00FFF504 /* HealthCareViewControllerManager.m */,
 				A5268DBB1FD3CC8F00E2F93C /* HealthCare_pch.h */,
 				A57B476A1FCEF9180004C397 /* Module */,
-				A55464E61FEF424300A7E3C7 /* HCComponent */,
 				A5D9AE151FDBB87B00B5D4C0 /* MFFramework */,
+				A55465121FEFAD5700A7E3C7 /* HCComponent */,
 				A57B476C1FCEF9180004C397 /* MFComponent */,
 				A57B46DE1FCEF9180004C397 /* Vendors */,
 				A5623CA71FCDB851001A6B5D /* Assets.xcassets */,
@@ -1070,7 +1070,7 @@
 				A5268DA81FD3C7E500E2F93C /* HealthManagement */,
 				A5268DA91FD3C7E500E2F93C /* WealthManagement */,
 				A5268DB71FD3CB0800E2F93C /* HappinessManagement */,
-				A5268DAA1FD3C7E500E2F93C /* Me */,
+				A55464FC1FEFAD3100A7E3C7 /* Me */,
 				A57B476B1FCEF9180004C397 /* Login */,
 				A511F34D1FD4188000AE5D57 /* CenterMenu */,
 				A5268DBC1FD3FB7300E2F93C /* TabBarController */,
@@ -1415,20 +1415,20 @@
 				A57B47F51FCEF9190004C397 /* main.proto in Resources */,
 				A57B47F71FCEF9190004C397 /* messagepush.proto in Resources */,
 				A520E5F21FEE6FEA00E4EFAD /* HCHighProductDetailCustomNavbar.xib in Resources */,
-				A55464F31FEF529300A7E3C7 /* HCMeFooterView.xib in Resources */,
+				A554650E1FEFAD3100A7E3C7 /* HCMeFooterView.xib in Resources */,
 				A56CD78D1FD033CB00FFF504 /* HCLoginContentView.xib in Resources */,
+				A55465191FEFAD5700A7E3C7 /* HCNormalGroupCellView.xib in Resources */,
 				A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */,
-				A55464EE1FEF45B200A7E3C7 /* HCNormalGroupCellView.xib in Resources */,
 				A56CD7841FD0306C00FFF504 /* LoginAssets.xcassets in Resources */,
 				A57B47EE1FCEF9190004C397 /* IQKeyboardManager.bundle in Resources */,
-				A520E60A1FEE919800E4EFAD /* HCMeProfileCellView.xib in Resources */,
 				A520E5EB1FEE6FEA00E4EFAD /* HCBestNewsCellView.xib in Resources */,
 				A566B4E11FD2EA6F004F6843 /* HCUserRegisterHeaderView.xib in Resources */,
-				A55464FB1FEFA44B00A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */,
 				A56CD7881FD0315000FFF504 /* MeAssets.xcassets in Resources */,
 				A511F35A1FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib in Resources */,
 				A511F3551FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib in Resources */,
+				A55465101FEFAD3100A7E3C7 /* HCMeProfileCellView.xib in Resources */,
 				A56CD7861FD0312000FFF504 /* MainFrameAssets.xcassets in Resources */,
+				A554650B1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1507,9 +1507,8 @@
 				A57B48131FCEF9190004C397 /* SCLTextView.m in Sources */,
 				A57B48191FCEF9190004C397 /* NSCache+SafeInsert.m in Sources */,
 				A53695AF1FD59769007CC67C /* SPPageController.m in Sources */,
-				A55464F11FEF528100A7E3C7 /* HCMeFooterView.m in Sources */,
+				A554650D1FEFAD3100A7E3C7 /* HCMeFooterView.m in Sources */,
 				A57B480C1FCEF9190004C397 /* Utilities.m in Sources */,
-				A55464EC1FEF459800A7E3C7 /* HCNormalGroupCellView.m in Sources */,
 				A5268DB01FD3C83B00E2F93C /* HCHealthManagementViewController.m in Sources */,
 				A57B482C1FCEF9190004C397 /* MFUITableView.m in Sources */,
 				A56CD7821FD02E9B00FFF504 /* HCLoginViewController.m in Sources */,
@@ -1521,6 +1520,7 @@
 				A57B48321FCEF9190004C397 /* MMSelectButton.m in Sources */,
 				A57B47FB1FCEF9190004C397 /* CodedOutputStream.m in Sources */,
 				A57B481D1FCEF9190004C397 /* NSMutableSet+SafeInsert.m in Sources */,
+				A554650F1FEFAD3100A7E3C7 /* HCMeProfileCellView.m in Sources */,
 				A57B48161FCEF9190004C397 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				A5D9AE321FDBB87B00B5D4C0 /* YTKChainRequest+AnimatingAccessory.m in Sources */,
 				A57B483F1FCEF9190004C397 /* MMTabBarController.m in Sources */,
@@ -1529,6 +1529,7 @@
 				A56CD77F1FD028AD00FFF504 /* HealthCareViewControllerManager.m in Sources */,
 				A57B47E01FCEF9190004C397 /* IQNSArray+Sort.m in Sources */,
 				A57B48411FCEF9190004C397 /* MMServiceCenter.m in Sources */,
+				A554650C1FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m in Sources */,
 				A5268DBF1FD3FBAC00E2F93C /* HealthCareTabBarController.m in Sources */,
 				A5268DB61FD3C86300E2F93C /* HCWealthManagementViewController.m in Sources */,
 				A57B48441FCEF9190004C397 /* XXNibBridge.m in Sources */,
@@ -1536,13 +1537,13 @@
 				A57B48301FCEF9190004C397 /* MMObject.m in Sources */,
 				A57B480E1FCEF9190004C397 /* SCLAlertView.m in Sources */,
 				A57B48181FCEF9190004C397 /* NSArray+SafeInsert.m in Sources */,
-				A55464F91FEFA3ED00A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */,
 				A57B47E11FCEF9190004C397 /* IQUIScrollView+Additions.m in Sources */,
 				A57B48231FCEF9190004C397 /* UIViewController+FixBackIndicatorImage.m in Sources */,
 				A57B47EF1FCEF9190004C397 /* LYSideslipCell.m in Sources */,
 				A57B47EC1FCEF9190004C397 /* IQToolbar.m in Sources */,
 				A57B48071FCEF9190004C397 /* PBArray.m in Sources */,
 				A57B48381FCEF9190004C397 /* UINavigationBar+MMUINavigationBar.m in Sources */,
+				A55465111FEFAD3100A7E3C7 /* HCMeViewController.m in Sources */,
 				A53695B21FD59769007CC67C /* SPPageTagView.m in Sources */,
 				A57B482E1FCEF9190004C397 /* MMBaseTextFieldItem.m in Sources */,
 				A57B48451FCEF9190004C397 /* XXNibConvention.m in Sources */,
@@ -1571,6 +1572,7 @@
 				A5D9AE3D1FDBCADB00B5D4C0 /* HCUserLoginApi.m in Sources */,
 				A57B48291FCEF9190004C397 /* MFTableViewCellObject.m in Sources */,
 				A57B48211FCEF9190004C397 /* UIView+threadHook.m in Sources */,
+				A55465181FEFAD5700A7E3C7 /* HCNormalGroupCellView.m in Sources */,
 				A520E5ED1FEE6FEA00E4EFAD /* HCHighProductCellView.m in Sources */,
 				A57B48141FCEF9190004C397 /* SCLTimerDisplay.m in Sources */,
 				A57B47FE1FCEF9190004C397 /* ExtendableMessage.m in Sources */,
@@ -1579,9 +1581,7 @@
 				A5BDB5081FE660700052B51B /* HCGetBestNewsApi.m in Sources */,
 				A520E5F31FEE6FEA00E4EFAD /* HCHighProductDetailViewController.m in Sources */,
 				A57B483A1FCEF9190004C397 /* MFThemeHelper.m in Sources */,
-				A520E6081FEE909500E4EFAD /* HCMeProfileCellView.m in Sources */,
 				A57B48201FCEF9190004C397 /* UIView+Extend.m in Sources */,
-				A55464E91FEF424300A7E3C7 /* HCPullFreshCountLogic.m in Sources */,
 				A57B47E71FCEF9190004C397 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				A53695AE1FD59769007CC67C /* SPCoverController.m in Sources */,
 				A520E5EA1FEE6FEA00E4EFAD /* HCBestNewsCellView.m in Sources */,
@@ -1610,7 +1610,6 @@
 				A57B48371FCEF9190004C397 /* MMUIViewController.m in Sources */,
 				A57B47F21FCEF9190004C397 /* Chat.pb.m in Sources */,
 				A520E5F11FEE6FEA00E4EFAD /* HCHighProductDetailCustomNavbar.m in Sources */,
-				A5268DB31FD3C84F00E2F93C /* HCMeViewController.m in Sources */,
 				A57B48251FCEF9190004C397 /* UIViewController+pregress.m in Sources */,
 				A520E5F81FEE6FEA00E4EFAD /* HCTopCureMainTagView.m in Sources */,
 				A57B48341FCEF9190004C397 /* MMUINavigationBar.m in Sources */,
@@ -1634,6 +1633,7 @@
 				A57B47FA1FCEF9190004C397 /* CodedInputStream.m in Sources */,
 				A57B47ED1FCEF9190004C397 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				A5D9AE301FDBB87B00B5D4C0 /* YTKBaseRequest+AnimatingAccessory.m in Sources */,
+				A554651A1FEFAD5700A7E3C7 /* HCPullFreshCountLogic.m in Sources */,
 				A520E5FC1FEE72AA00E4EFAD /* MMTableViewUserInfo.m in Sources */,
 				A575874D1FE519A0000FC7CB /* HCGetProductsApi.m in Sources */,
 				A57B47E81FCEF9190004C397 /* IQTextView.m in Sources */,
@@ -1647,8 +1647,8 @@
 				A5D9AE2F1FDBB87B00B5D4C0 /* YTKAnimatingRequestAccessory.m in Sources */,
 				A566B4D01FD24ABF004F6843 /* MMBarButtonItem.m in Sources */,
 				A566B4D31FD24BB7004F6843 /* MMBarButton.m in Sources */,
-				A55464F61FEF9BA100A7E3C7 /* HCAuthIDCardViewController.m in Sources */,
 				A566B4D91FD298B7004F6843 /* HCUserRegisterViewController.m in Sources */,
+				A554650A1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
