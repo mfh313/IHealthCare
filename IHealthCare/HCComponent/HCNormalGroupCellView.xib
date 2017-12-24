@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HCNormalGroupCellView">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="69"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hJX-lG-RIm">
+                    <rect key="frame" x="20" y="23" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="Ixj-rv-UM8"/>
+                        <constraint firstAttribute="width" constant="22" id="s3U-ja-Sqm"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gR-9O-wAM">
+                    <rect key="frame" x="63" y="26" width="29" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_btn_next_nor" translatesAutoresizingMaskIntoConstraints="NO" id="6Nx-KB-kCK">
+                    <rect key="frame" x="443" y="23" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="6KZ-db-JNM"/>
+                        <constraint firstAttribute="height" constant="22" id="XUR-gt-019"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6Nx-KB-kCK" secondAttribute="trailing" constant="15" id="HKy-8x-r3x"/>
+                <constraint firstItem="0gR-9O-wAM" firstAttribute="leading" secondItem="hJX-lG-RIm" secondAttribute="trailing" constant="21" id="OZY-fB-4nP"/>
+                <constraint firstItem="hJX-lG-RIm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="eOZ-cX-rgC"/>
+                <constraint firstItem="6Nx-KB-kCK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="icB-ns-juz"/>
+                <constraint firstItem="hJX-lG-RIm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uz3-wu-Z6x"/>
+                <constraint firstItem="0gR-9O-wAM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="yEG-nj-doQ"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="m_leftImageView" destination="hJX-lG-RIm" id="DMa-ca-Sys"/>
+                <outlet property="m_titleLabel" destination="0gR-9O-wAM" id="sxm-sj-WTx"/>
+            </connections>
+            <point key="canvasLocation" x="78" y="350.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common_btn_next_nor" width="22" height="22"/>
+    </resources>
+</document>

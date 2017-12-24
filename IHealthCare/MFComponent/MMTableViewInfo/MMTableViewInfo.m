@@ -27,8 +27,8 @@ _Pragma("clang diagnostic pop") \
         _arrSections = @[].mutableCopy;
         
         if (style == UITableViewStyleGrouped) {
-            _tableView.sectionHeaderHeight = 10.0f;
-            _tableView.sectionFooterHeight = 10.0f;
+            _tableView.sectionHeaderHeight = 5.0f;
+            _tableView.sectionFooterHeight = 5.0f;
         }
     }
     return self;
