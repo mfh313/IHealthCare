@@ -1,5 +1,5 @@
 //
-//  WDPullFreshCountLogic.h
+//  HCPullFreshCountLogic.h
 //  IHealthCare
 //
 //  Created by mafanghua on 2017/12/21.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WDPullFreshCountLogic : NSObject
+@interface HCPullFreshCountLogic : NSObject
 
 @end

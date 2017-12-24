@@ -13,7 +13,6 @@
 		A511F3581FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A511F3571FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m */; };
 		A511F35A1FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A511F3591FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib */; };
 		A5124EC21FECFB6400F37317 /* HCManagementDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5124EC11FECFB6400F37317 /* HCManagementDetailModel.m */; };
-		A51EACE11FEBE7BB007D4C06 /* WDPullFreshCountLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = A51EACE01FEBE7BB007D4C06 /* WDPullFreshCountLogic.m */; };
 		A520E5EA1FEE6FEA00E4EFAD /* HCBestNewsCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5D01FEE6FEA00E4EFAD /* HCBestNewsCellView.m */; };
 		A520E5EB1FEE6FEA00E4EFAD /* HCBestNewsCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A520E5D11FEE6FEA00E4EFAD /* HCBestNewsCellView.xib */; };
 		A520E5EC1FEE6FEA00E4EFAD /* HCBestNewsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5D31FEE6FEA00E4EFAD /* HCBestNewsMainViewController.m */; };
@@ -47,6 +46,7 @@
 		A53695B11FD59769007CC67C /* SPPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695A91FD59769007CC67C /* SPPageContentView.m */; };
 		A53695B21FD59769007CC67C /* SPPageTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695AB1FD59769007CC67C /* SPPageTagView.m */; };
 		A53695B31FD59769007CC67C /* SPTagBarScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695AD1FD59769007CC67C /* SPTagBarScrollView.m */; };
+		A55464E91FEF424300A7E3C7 /* HCPullFreshCountLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464E81FEF424300A7E3C7 /* HCPullFreshCountLogic.m */; };
 		A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */; };
 		A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5623CA71FCDB851001A6B5D /* Assets.xcassets */; };
 		A5623CAE1FCDB851001A6B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623CAD1FCDB851001A6B5D /* main.m */; };
@@ -197,8 +197,6 @@
 		A511F3591FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthCareCenterMenuItemView.xib; sourceTree = "<group>"; };
 		A5124EC01FECFB6400F37317 /* HCManagementDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCManagementDetailModel.h; sourceTree = "<group>"; };
 		A5124EC11FECFB6400F37317 /* HCManagementDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCManagementDetailModel.m; sourceTree = "<group>"; };
-		A51EACDF1FEBE7BB007D4C06 /* WDPullFreshCountLogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WDPullFreshCountLogic.h; sourceTree = "<group>"; };
-		A51EACE01FEBE7BB007D4C06 /* WDPullFreshCountLogic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WDPullFreshCountLogic.m; sourceTree = "<group>"; };
 		A520E5CF1FEE6FEA00E4EFAD /* HCBestNewsCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBestNewsCellView.h; sourceTree = "<group>"; };
 		A520E5D01FEE6FEA00E4EFAD /* HCBestNewsCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsCellView.m; sourceTree = "<group>"; };
 		A520E5D11FEE6FEA00E4EFAD /* HCBestNewsCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCBestNewsCellView.xib; sourceTree = "<group>"; };
@@ -263,6 +261,8 @@
 		A53695AB1FD59769007CC67C /* SPPageTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPageTagView.m; sourceTree = "<group>"; };
 		A53695AC1FD59769007CC67C /* SPTagBarScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTagBarScrollView.h; sourceTree = "<group>"; };
 		A53695AD1FD59769007CC67C /* SPTagBarScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTagBarScrollView.m; sourceTree = "<group>"; };
+		A55464E71FEF424300A7E3C7 /* HCPullFreshCountLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPullFreshCountLogic.h; sourceTree = "<group>"; };
+		A55464E81FEF424300A7E3C7 /* HCPullFreshCountLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPullFreshCountLogic.m; sourceTree = "<group>"; };
 		A5623C9B1FCDB851001A6B5D /* IHealthCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHealthCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5623C9E1FCDB851001A6B5D /* HealthCareAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthCareAppDelegate.h; sourceTree = "<group>"; };
 		A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthCareAppDelegate.m; sourceTree = "<group>"; };
@@ -586,15 +586,6 @@
 			path = CenterMenu;
 			sourceTree = "<group>";
 		};
-		A51EACDE1FEBE77B007D4C06 /* WDComponent */ = {
-			isa = PBXGroup;
-			children = (
-				A51EACDF1FEBE7BB007D4C06 /* WDPullFreshCountLogic.h */,
-				A51EACE01FEBE7BB007D4C06 /* WDPullFreshCountLogic.m */,
-			);
-			path = WDComponent;
-			sourceTree = "<group>";
-		};
 		A520E5CD1FEE6EEC00E4EFAD /* MMTableViewInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -738,6 +729,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A55464E61FEF424300A7E3C7 /* HCComponent */ = {
+			isa = PBXGroup;
+			children = (
+				A55464E71FEF424300A7E3C7 /* HCPullFreshCountLogic.h */,
+				A55464E81FEF424300A7E3C7 /* HCPullFreshCountLogic.m */,
+			);
+			path = HCComponent;
+			sourceTree = "<group>";
+		};
 		A5623C921FCDB851001A6B5D = {
 			isa = PBXGroup;
 			children = (
@@ -765,8 +765,8 @@
 				A56CD77E1FD028AD00FFF504 /* HealthCareViewControllerManager.m */,
 				A5268DBB1FD3CC8F00E2F93C /* HealthCare_pch.h */,
 				A57B476A1FCEF9180004C397 /* Module */,
+				A55464E61FEF424300A7E3C7 /* HCComponent */,
 				A5D9AE151FDBB87B00B5D4C0 /* MFFramework */,
-				A51EACDE1FEBE77B007D4C06 /* WDComponent */,
 				A57B476C1FCEF9180004C397 /* MFComponent */,
 				A57B46DE1FCEF9180004C397 /* Vendors */,
 				A5623CA71FCDB851001A6B5D /* Assets.xcassets */,
@@ -1493,7 +1493,6 @@
 				A57B480D1FCEF9190004C397 /* WireFormat.m in Sources */,
 				A57B47F61FCEF9190004C397 /* Messagepush.pb.m in Sources */,
 				A56CD77F1FD028AD00FFF504 /* HealthCareViewControllerManager.m in Sources */,
-				A51EACE11FEBE7BB007D4C06 /* WDPullFreshCountLogic.m in Sources */,
 				A57B47E01FCEF9190004C397 /* IQNSArray+Sort.m in Sources */,
 				A57B48411FCEF9190004C397 /* MMServiceCenter.m in Sources */,
 				A5268DBF1FD3FBAC00E2F93C /* HealthCareTabBarController.m in Sources */,
@@ -1547,6 +1546,7 @@
 				A57B483A1FCEF9190004C397 /* MFThemeHelper.m in Sources */,
 				A520E6081FEE909500E4EFAD /* HCMeProfileCellView.m in Sources */,
 				A57B48201FCEF9190004C397 /* UIView+Extend.m in Sources */,
+				A55464E91FEF424300A7E3C7 /* HCPullFreshCountLogic.m in Sources */,
 				A57B47E71FCEF9190004C397 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				A53695AE1FD59769007CC67C /* SPCoverController.m in Sources */,
 				A520E5EA1FEE6FEA00E4EFAD /* HCBestNewsCellView.m in Sources */,
