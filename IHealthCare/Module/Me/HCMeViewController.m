@@ -12,6 +12,8 @@
 @interface HCMeViewController () <MMTableViewInfoDelegate>
 {
     MMTableViewInfo *m_tableViewInfo;
+    
+    NSMutableArray<NSMutableArray *> *m_tableSources;
 }
 
 @end
@@ -24,75 +26,139 @@
     self.title = @"个人中心";
     [self setBackBarButton];
     
+    [self addTableSources];
+    
     m_tableViewInfo = [[MMTableViewInfo alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     m_tableViewInfo.delegate = self;
     
     UITableView *contentTableView = [m_tableViewInfo getTableView];
-    contentTableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
-    contentTableView.backgroundColor = [UIColor whiteColor];
+    contentTableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    contentTableView.backgroundColor = [UIColor hx_colorWithHexString:@"EFEFF4"];
+    contentTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     [self.view addSubview:contentTableView];
     
+    HCMeProfileCellView *tableHeaderView = [HCMeProfileCellView nibView];
+    contentTableView.tableHeaderView = tableHeaderView;
+    [tableHeaderView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(contentTableView);
+        make.height.mas_equalTo(@(130));
+    }];
+    [contentTableView layoutIfNeeded];
+    [contentTableView setTableHeaderView:tableHeaderView];
+    
     [self reloadMeView];
+}
+
+-(void)addTableSources
+{
+    m_tableSources = [NSMutableArray array];
+    
+    NSMutableArray *section1 = [NSMutableArray array];
+    NSMutableDictionary *records = [NSMutableDictionary dictionary];
+    records[@"image"] = @"my_icon_health_records";
+    records[@"title"] = @"我的健康档案";
+    
+    NSMutableDictionary *service = [NSMutableDictionary dictionary];
+    service[@"image"] = @"my_icon_service";
+    service[@"title"] = @"我的服务";
+    
+    [section1 addObject:records];
+    [section1 addObject:service];
+    
+    NSMutableArray *section2 = [NSMutableArray array];
+    NSMutableDictionary *focus = [NSMutableDictionary dictionary];
+    focus[@"image"] = @"my_icon_focus";
+    focus[@"title"] = @"我的关注";
+    
+    NSMutableDictionary *collection = [NSMutableDictionary dictionary];
+    collection[@"image"] = @"my_icon_collection";
+    collection[@"title"] = @"我的收藏";
+    
+    [section2 addObject:focus];
+    [section2 addObject:collection];
+    
+    NSMutableArray *section3 = [NSMutableArray array];
+    NSMutableDictionary *circle = [NSMutableDictionary dictionary];
+    circle[@"image"] = @"my_icon_circle";
+    circle[@"title"] = @"我的圈子";
+    
+    NSMutableDictionary *invitation = [NSMutableDictionary dictionary];
+    invitation[@"image"] = @"my_icon_invitation";
+    invitation[@"title"] = @"邀请好友";
+    
+    NSMutableDictionary *program = [NSMutableDictionary dictionary];
+    program[@"image"] = @"my_icon_program";
+    program[@"title"] = @"我的小程序";
+    
+    [section3 addObject:circle];
+    [section3 addObject:invitation];
+    [section3 addObject:program];
+    
+    NSMutableArray *section4 = [NSMutableArray array];
+    NSMutableDictionary *setting = [NSMutableDictionary dictionary];
+    setting[@"image"] = @"my_icon_setting";
+    setting[@"title"] = @"设置";
+    [section4 addObject:setting];
+
+    [m_tableSources addObject:section1];
+    [m_tableSources addObject:section2];
+    [m_tableSources addObject:section3];
+    [m_tableSources addObject:section4];
 }
 
 -(void)reloadMeView
 {
     [m_tableViewInfo clearAllSection];
     
-    [self addProfileSection];
-//    [self addFrozenEmployeeSection];
-//
-//    if ([self needAddressBookCell])
+    for (int i = 0; i < m_tableSources.count; i++)
+    {
+        MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
+        
+        NSMutableArray *sectionItem = m_tableSources[i];
+        for (int j = 0; j < sectionItem.count; j++)
+        {
+            NSMutableDictionary *itemInfo = sectionItem[j];
+            
+            MMTableViewCellInfo *cellInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeNormalGroupCell:cellInfo:)
+                                                                          makeTarget:self
+                                                                      actionSel:@selector(onClickSectionCell:)
+                                                                        actionTarget:self
+                                                                              height:50.0
+                                                                            userInfo:nil];
+            [cellInfo addUserInfoValue:itemInfo forKey:@"cellData"];
+            
+            [sectionInfo addCell:cellInfo];
+        }
+        
+        [m_tableViewInfo addSection:sectionInfo];
+    }
+}
+
+- (void)makeNormalGroupCell:(MFTableViewCell *)cell cellInfo:(MMTableViewCellInfo *)cellInfo
+{
+//    if (!cell.m_subContentView) {
+//        HCMeProfileCellView *cellView = [HCMeProfileCellView nibView];
+//        cell.m_subContentView = cellView;
+//    }
+//    else
 //    {
-//        [self getAddressBookAuthor];
-//
-//        MFTableViewSectionInfo *addressSectionInfo = [MFTableViewSectionInfo sectionInfoDefault];
-//        MFTableViewCellInfo *cellInfo = [MFTableViewCellInfo cellForMakeSel:@selector(makeAddressBookCell:)
-//                                                                 makeTarget:self
-//                                                                  actionSel:@selector(synMemberInfo)
-//                                                               actionTarget:self
-//                                                                     height:90.0f
-//                                                                   userInfo:nil];
-//        [addressSectionInfo addCell:cellInfo];
-//        [m_tableViewInfo addSection:addressSectionInfo];
+//        [cell.contentView addSubview:cell.m_subContentView];
 //    }
 //
-//    [self addFunctionSection];
-}
-
--(void)addProfileSection
-{
-    MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
-    MMTableViewCellInfo *cellInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeProfileCell:)
-                                                             makeTarget:self
-                                                              actionSel:nil
-                                                           actionTarget:self
-                                                                 height:130.0f
-                                                               userInfo:nil];
-    [sectionInfo addCell:cellInfo];
-    [m_tableViewInfo addSection:sectionInfo];
-}
-
-- (void)makeProfileCell:(MFTableViewCell *)cell
-{
-    if (!cell.m_subContentView) {
-        HCMeProfileCellView *cellView = [HCMeProfileCellView nibView];
-        cell.m_subContentView = cellView;
-    }
-    else
-    {
-        [cell.contentView addSubview:cell.m_subContentView];
-    }
-
-    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-
-    HCMeProfileCellView *cellView = (HCMeProfileCellView *)cell.m_subContentView;
-    cellView.frame = cell.contentView.bounds;
-
-//    m_loginService = [[MMServiceCenter defaultCenter] getService:[MShopLoginService class]];
-//    MShopLoginUserInfo *loginInfo = [m_loginService currentLoginUserInfo];
+//    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
 //
-//    [cellView setProfileCellInfo:loginInfo];
+//    HCMeProfileCellView *cellView = (HCMeProfileCellView *)cell.m_subContentView;
+//    cellView.frame = cell.contentView.bounds;
+//
+////    m_loginService = [[MMServiceCenter defaultCenter] getService:[MShopLoginService class]];
+////    MShopLoginUserInfo *loginInfo = [m_loginService currentLoginUserInfo];
+////
+////    [cellView setProfileCellInfo:loginInfo];
+}
+
+-(void)onClickSectionCell:(MMTableViewCellInfo *)cellInfo
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {
