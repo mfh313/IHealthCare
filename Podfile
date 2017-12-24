@@ -3,6 +3,7 @@
 
 target 'IHealthCare' do
 
+pod 'Qiniu', '~> 7.2'
 pod 'WechatOpenSDK'
 pod 'MZFormSheetPresentationController'
 pod 'WCDB'
