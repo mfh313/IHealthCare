@@ -9,6 +9,7 @@
 #import "HCMeViewController.h"
 #import "HCMeProfileCellView.h"
 #import "HCNormalGroupCellView.h"
+#import "HCMeFooterView.h"
 
 @interface HCMeViewController () <MMTableViewInfoDelegate>
 {
@@ -34,17 +35,14 @@
     
     UITableView *contentTableView = [m_tableViewInfo getTableView];
     contentTableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    contentTableView.backgroundColor = [UIColor hx_colorWithHexString:@"EFEFF4"];
+    contentTableView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
     contentTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     [self.view addSubview:contentTableView];
     
     UIView *tableHeaderView = [UIView new];
-    tableHeaderView.backgroundColor = [UIColor hx_colorWithHexString:@"EFEFF4"];
+    tableHeaderView.frame = CGRectMake(0, 0, CGRectGetWidth(contentTableView.frame), 140);
+    tableHeaderView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
     contentTableView.tableHeaderView = tableHeaderView;
-    [tableHeaderView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(contentTableView);
-        make.height.mas_equalTo(@(140));
-    }];
     
     HCMeProfileCellView *profileView = [HCMeProfileCellView nibView];
     [tableHeaderView addSubview:profileView];
@@ -55,8 +53,19 @@
         make.top.mas_equalTo(@(0));
     }];
     
-    [contentTableView layoutIfNeeded];
-    [contentTableView setTableHeaderView:tableHeaderView];
+    UIView *tableFooterView = [UIView new];
+    tableFooterView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
+    tableFooterView.frame = CGRectMake(0, 0, CGRectGetWidth(contentTableView.frame), 260);
+    contentTableView.tableFooterView = tableFooterView;
+
+    HCMeFooterView *footerView = [HCMeFooterView nibView];
+    [tableFooterView addSubview:footerView];
+    [footerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(contentTableView);
+        make.height.mas_equalTo(@(260));
+        make.left.mas_equalTo(@(0));
+        make.top.mas_equalTo(@(0));
+    }];
     
     [self reloadMeView];
 }

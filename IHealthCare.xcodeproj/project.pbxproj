@@ -49,6 +49,8 @@
 		A55464E91FEF424300A7E3C7 /* HCPullFreshCountLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464E81FEF424300A7E3C7 /* HCPullFreshCountLogic.m */; };
 		A55464EC1FEF459800A7E3C7 /* HCNormalGroupCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464EB1FEF459800A7E3C7 /* HCNormalGroupCellView.m */; };
 		A55464EE1FEF45B200A7E3C7 /* HCNormalGroupCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55464ED1FEF45B200A7E3C7 /* HCNormalGroupCellView.xib */; };
+		A55464F11FEF528100A7E3C7 /* HCMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464F01FEF528100A7E3C7 /* HCMeFooterView.m */; };
+		A55464F31FEF529300A7E3C7 /* HCMeFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55464F21FEF529300A7E3C7 /* HCMeFooterView.xib */; };
 		A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */; };
 		A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5623CA71FCDB851001A6B5D /* Assets.xcassets */; };
 		A5623CAE1FCDB851001A6B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623CAD1FCDB851001A6B5D /* main.m */; };
@@ -268,6 +270,9 @@
 		A55464EA1FEF459800A7E3C7 /* HCNormalGroupCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCNormalGroupCellView.h; sourceTree = "<group>"; };
 		A55464EB1FEF459800A7E3C7 /* HCNormalGroupCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCNormalGroupCellView.m; sourceTree = "<group>"; };
 		A55464ED1FEF45B200A7E3C7 /* HCNormalGroupCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCNormalGroupCellView.xib; sourceTree = "<group>"; };
+		A55464EF1FEF528100A7E3C7 /* HCMeFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeFooterView.h; sourceTree = "<group>"; };
+		A55464F01FEF528100A7E3C7 /* HCMeFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMeFooterView.m; sourceTree = "<group>"; };
+		A55464F21FEF529300A7E3C7 /* HCMeFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMeFooterView.xib; sourceTree = "<group>"; };
 		A5623C9B1FCDB851001A6B5D /* IHealthCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHealthCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5623C9E1FCDB851001A6B5D /* HealthCareAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthCareAppDelegate.h; sourceTree = "<group>"; };
 		A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthCareAppDelegate.m; sourceTree = "<group>"; };
@@ -663,6 +668,9 @@
 			children = (
 				A5268DB11FD3C84F00E2F93C /* HCMeViewController.h */,
 				A5268DB21FD3C84F00E2F93C /* HCMeViewController.m */,
+				A55464EF1FEF528100A7E3C7 /* HCMeFooterView.h */,
+				A55464F01FEF528100A7E3C7 /* HCMeFooterView.m */,
+				A55464F21FEF529300A7E3C7 /* HCMeFooterView.xib */,
 				A520E6061FEE909500E4EFAD /* HCMeProfileCellView.h */,
 				A520E6071FEE909500E4EFAD /* HCMeProfileCellView.m */,
 				A520E6091FEE919800E4EFAD /* HCMeProfileCellView.xib */,
@@ -1394,6 +1402,7 @@
 				A57B47F51FCEF9190004C397 /* main.proto in Resources */,
 				A57B47F71FCEF9190004C397 /* messagepush.proto in Resources */,
 				A520E5F21FEE6FEA00E4EFAD /* HCHighProductDetailCustomNavbar.xib in Resources */,
+				A55464F31FEF529300A7E3C7 /* HCMeFooterView.xib in Resources */,
 				A56CD78D1FD033CB00FFF504 /* HCLoginContentView.xib in Resources */,
 				A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */,
 				A55464EE1FEF45B200A7E3C7 /* HCNormalGroupCellView.xib in Resources */,
@@ -1484,6 +1493,7 @@
 				A57B48131FCEF9190004C397 /* SCLTextView.m in Sources */,
 				A57B48191FCEF9190004C397 /* NSCache+SafeInsert.m in Sources */,
 				A53695AF1FD59769007CC67C /* SPPageController.m in Sources */,
+				A55464F11FEF528100A7E3C7 /* HCMeFooterView.m in Sources */,
 				A57B480C1FCEF9190004C397 /* Utilities.m in Sources */,
 				A55464EC1FEF459800A7E3C7 /* HCNormalGroupCellView.m in Sources */,
 				A5268DB01FD3C83B00E2F93C /* HCHealthManagementViewController.m in Sources */,
