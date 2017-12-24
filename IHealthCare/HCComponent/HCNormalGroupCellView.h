@@ -10,4 +10,7 @@
 
 @interface HCNormalGroupCellView : MMUIBridgeView
 
+-(void)setLeftImage:(UIImage *)leftImage;
+-(void)setTitle:(NSString *)title;
+
 @end

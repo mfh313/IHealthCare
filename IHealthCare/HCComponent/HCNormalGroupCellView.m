@@ -19,11 +19,14 @@
 
 @implementation HCNormalGroupCellView
 
--(void)awakeFromNib
+-(void)setLeftImage:(UIImage *)leftImage
 {
-    [super awakeFromNib];
-    
+    m_leftImageView.image = leftImage;
 }
 
+-(void)setTitle:(NSString *)title
+{
+    m_titleLabel.text = title;
+}
 
 @end

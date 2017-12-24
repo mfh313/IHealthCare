@@ -23,7 +23,7 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gR-9O-wAM">
-                    <rect key="frame" x="63" y="26" width="29" height="17"/>
+                    <rect key="frame" x="48" y="26" width="29" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -39,7 +39,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="6Nx-KB-kCK" secondAttribute="trailing" constant="15" id="HKy-8x-r3x"/>
-                <constraint firstItem="0gR-9O-wAM" firstAttribute="leading" secondItem="hJX-lG-RIm" secondAttribute="trailing" constant="21" id="OZY-fB-4nP"/>
+                <constraint firstItem="0gR-9O-wAM" firstAttribute="leading" secondItem="hJX-lG-RIm" secondAttribute="trailing" constant="6" id="OZY-fB-4nP"/>
                 <constraint firstItem="hJX-lG-RIm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="eOZ-cX-rgC"/>
                 <constraint firstItem="6Nx-KB-kCK" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="icB-ns-juz"/>
                 <constraint firstItem="hJX-lG-RIm" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uz3-wu-Z6x"/>

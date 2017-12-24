@@ -8,6 +8,7 @@
 
 #import "HCMeViewController.h"
 #import "HCMeProfileCellView.h"
+#import "HCNormalGroupCellView.h"
 
 @interface HCMeViewController () <MMTableViewInfoDelegate>
 {
@@ -37,16 +38,88 @@
     contentTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     [self.view addSubview:contentTableView];
     
-    HCMeProfileCellView *tableHeaderView = [HCMeProfileCellView nibView];
+    UIView *tableHeaderView = [UIView new];
+    tableHeaderView.backgroundColor = [UIColor hx_colorWithHexString:@"EFEFF4"];
     contentTableView.tableHeaderView = tableHeaderView;
     [tableHeaderView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(contentTableView);
-        make.height.mas_equalTo(@(130));
+        make.height.mas_equalTo(@(140));
     }];
+    
+    HCMeProfileCellView *profileView = [HCMeProfileCellView nibView];
+    [tableHeaderView addSubview:profileView];
+    [profileView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(contentTableView);
+        make.height.mas_equalTo(@(130));
+        make.left.mas_equalTo(@(0));
+        make.top.mas_equalTo(@(0));
+    }];
+    
     [contentTableView layoutIfNeeded];
     [contentTableView setTableHeaderView:tableHeaderView];
     
     [self reloadMeView];
+}
+
+-(void)reloadMeView
+{
+    [m_tableViewInfo clearAllSection];
+    
+    for (int i = 0; i < m_tableSources.count; i++)
+    {
+        MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
+        
+        NSMutableArray *sectionItem = m_tableSources[i];
+        for (int j = 0; j < sectionItem.count; j++)
+        {
+            NSMutableDictionary *itemInfo = sectionItem[j];
+            
+            MMTableViewCellInfo *cellInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeNormalGroupCell:cellInfo:)
+                                                                          makeTarget:self
+                                                                      actionSel:@selector(onClickSectionCell:)
+                                                                        actionTarget:self
+                                                                              height:50.0
+                                                                            userInfo:nil];
+            [cellInfo addUserInfoValue:itemInfo forKey:@"cellData"];
+            
+            [sectionInfo addCell:cellInfo];
+        }
+        
+        [m_tableViewInfo addSection:sectionInfo];
+    }
+}
+
+- (void)makeNormalGroupCell:(MFTableViewCell *)cell cellInfo:(MMTableViewCellInfo *)cellInfo
+{
+    if (!cell.m_subContentView) {
+        HCNormalGroupCellView *cellView = [HCNormalGroupCellView nibView];
+        cell.m_subContentView = cellView;
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+    }
+    else
+    {
+        [cell.contentView addSubview:cell.m_subContentView];
+    }
+
+    HCNormalGroupCellView *cellView = (HCNormalGroupCellView *)cell.m_subContentView;
+    cellView.frame = cell.contentView.bounds;
+
+    NSMutableDictionary *itemInfo =  [cellInfo getUserInfoValueForKey:@"cellData"];
+    NSString *imageName = itemInfo[@"image"];
+    NSString *title = itemInfo[@"title"];
+    
+    [cellView setLeftImage:MFImage(imageName)];
+    [cellView setTitle:title];
+}
+
+-(void)onClickSectionCell:(MMTableViewCellInfo *)cellInfo
+{
+    NSMutableDictionary *itemInfo =  [cellInfo getUserInfoValueForKey:@"cellData"];
+    NSString *key = itemInfo[@"key"];
+    if ([key isEqualToString:@"setting"]) {
+        NSLog(@"setting");
+    }
 }
 
 -(void)addTableSources
@@ -98,67 +171,13 @@
     NSMutableDictionary *setting = [NSMutableDictionary dictionary];
     setting[@"image"] = @"my_icon_setting";
     setting[@"title"] = @"设置";
+    setting[@"key"] = @"setting";
     [section4 addObject:setting];
-
+    
     [m_tableSources addObject:section1];
     [m_tableSources addObject:section2];
     [m_tableSources addObject:section3];
     [m_tableSources addObject:section4];
-}
-
--(void)reloadMeView
-{
-    [m_tableViewInfo clearAllSection];
-    
-    for (int i = 0; i < m_tableSources.count; i++)
-    {
-        MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
-        
-        NSMutableArray *sectionItem = m_tableSources[i];
-        for (int j = 0; j < sectionItem.count; j++)
-        {
-            NSMutableDictionary *itemInfo = sectionItem[j];
-            
-            MMTableViewCellInfo *cellInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeNormalGroupCell:cellInfo:)
-                                                                          makeTarget:self
-                                                                      actionSel:@selector(onClickSectionCell:)
-                                                                        actionTarget:self
-                                                                              height:50.0
-                                                                            userInfo:nil];
-            [cellInfo addUserInfoValue:itemInfo forKey:@"cellData"];
-            
-            [sectionInfo addCell:cellInfo];
-        }
-        
-        [m_tableViewInfo addSection:sectionInfo];
-    }
-}
-
-- (void)makeNormalGroupCell:(MFTableViewCell *)cell cellInfo:(MMTableViewCellInfo *)cellInfo
-{
-//    if (!cell.m_subContentView) {
-//        HCMeProfileCellView *cellView = [HCMeProfileCellView nibView];
-//        cell.m_subContentView = cellView;
-//    }
-//    else
-//    {
-//        [cell.contentView addSubview:cell.m_subContentView];
-//    }
-//
-//    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-//
-//    HCMeProfileCellView *cellView = (HCMeProfileCellView *)cell.m_subContentView;
-//    cellView.frame = cell.contentView.bounds;
-//
-////    m_loginService = [[MMServiceCenter defaultCenter] getService:[MShopLoginService class]];
-////    MShopLoginUserInfo *loginInfo = [m_loginService currentLoginUserInfo];
-////
-////    [cellView setProfileCellInfo:loginInfo];
-}
-
--(void)onClickSectionCell:(MMTableViewCellInfo *)cellInfo
-{
-    
 }
 
 - (void)didReceiveMemoryWarning {
