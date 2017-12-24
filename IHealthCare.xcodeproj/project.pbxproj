@@ -51,6 +51,7 @@
 		A55464EE1FEF45B200A7E3C7 /* HCNormalGroupCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55464ED1FEF45B200A7E3C7 /* HCNormalGroupCellView.xib */; };
 		A55464F11FEF528100A7E3C7 /* HCMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464F01FEF528100A7E3C7 /* HCMeFooterView.m */; };
 		A55464F31FEF529300A7E3C7 /* HCMeFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55464F21FEF529300A7E3C7 /* HCMeFooterView.xib */; };
+		A55464F61FEF9BA100A7E3C7 /* HCAuthIDCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464F51FEF9BA100A7E3C7 /* HCAuthIDCardViewController.m */; };
 		A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */; };
 		A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5623CA71FCDB851001A6B5D /* Assets.xcassets */; };
 		A5623CAE1FCDB851001A6B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623CAD1FCDB851001A6B5D /* main.m */; };
@@ -273,6 +274,8 @@
 		A55464EF1FEF528100A7E3C7 /* HCMeFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeFooterView.h; sourceTree = "<group>"; };
 		A55464F01FEF528100A7E3C7 /* HCMeFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMeFooterView.m; sourceTree = "<group>"; };
 		A55464F21FEF529300A7E3C7 /* HCMeFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMeFooterView.xib; sourceTree = "<group>"; };
+		A55464F41FEF9BA100A7E3C7 /* HCAuthIDCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAuthIDCardViewController.h; sourceTree = "<group>"; };
+		A55464F51FEF9BA100A7E3C7 /* HCAuthIDCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCAuthIDCardViewController.m; sourceTree = "<group>"; };
 		A5623C9B1FCDB851001A6B5D /* IHealthCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHealthCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5623C9E1FCDB851001A6B5D /* HealthCareAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthCareAppDelegate.h; sourceTree = "<group>"; };
 		A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthCareAppDelegate.m; sourceTree = "<group>"; };
@@ -668,6 +671,8 @@
 			children = (
 				A5268DB11FD3C84F00E2F93C /* HCMeViewController.h */,
 				A5268DB21FD3C84F00E2F93C /* HCMeViewController.m */,
+				A55464F41FEF9BA100A7E3C7 /* HCAuthIDCardViewController.h */,
+				A55464F51FEF9BA100A7E3C7 /* HCAuthIDCardViewController.m */,
 				A520E6061FEE909500E4EFAD /* HCMeProfileCellView.h */,
 				A520E6071FEE909500E4EFAD /* HCMeProfileCellView.m */,
 				A520E6091FEE919800E4EFAD /* HCMeProfileCellView.xib */,
@@ -1632,6 +1637,7 @@
 				A5D9AE2F1FDBB87B00B5D4C0 /* YTKAnimatingRequestAccessory.m in Sources */,
 				A566B4D01FD24ABF004F6843 /* MMBarButtonItem.m in Sources */,
 				A566B4D31FD24BB7004F6843 /* MMBarButton.m in Sources */,
+				A55464F61FEF9BA100A7E3C7 /* HCAuthIDCardViewController.m in Sources */,
 				A566B4D91FD298B7004F6843 /* HCUserRegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,7 @@
 #import "HCMeProfileCellView.h"
 #import "HCNormalGroupCellView.h"
 #import "HCMeFooterView.h"
+#import "HCAuthIDCardViewController.h"
 
 @interface HCMeViewController () <MMTableViewInfoDelegate,HCMeProfileCellViewDelegate>
 {
@@ -74,7 +75,8 @@
 #pragma mark - HCMeProfileCellViewDelegate
 -(void)onClickToAuth:(HCMeProfileCellView *)view
 {
-    
+    HCAuthIDCardViewController *IDAuthVC = [HCAuthIDCardViewController new];
+    [self.navigationController pushViewController:IDAuthVC animated:YES];
 }
 
 -(void)onClickProfileCell:(HCMeProfileCellView *)view
