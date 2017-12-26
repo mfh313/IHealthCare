@@ -37,7 +37,6 @@
     m_tableView.dataSource = self;
     m_tableView.delegate = self;
     m_tableView.m_delegate = self;
-//    m_tableView.contentInset = UIEdgeInsetsMake(0, 0, 50, 0);
     [self.view addSubview:m_tableView];
     
     [self getHealthControls];
