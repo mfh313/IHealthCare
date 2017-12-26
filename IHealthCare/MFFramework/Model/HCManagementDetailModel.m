@@ -8,9 +8,9 @@
 
 #import "HCManagementDetailModel.h"
 
-NSInteger const CONTROL_HEALTH = 1;
-NSInteger const CONTROL_WEALTH = 2;
-NSInteger const CONTROL_HAPPINESS = 3;
+NSInteger const CONTROL_HEALTH = 3;  //健康管理
+NSInteger const CONTROL_WEALTH = 4;  //财富管理
+NSInteger const CONTROL_HAPPINESS = 5; //幸福管理
 
 @implementation HCManagementDetailModel
 

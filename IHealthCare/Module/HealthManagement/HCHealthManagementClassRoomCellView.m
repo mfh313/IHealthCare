@@ -1,15 +1,15 @@
 //
-//  HCHealthManagementCellView.m
+//  HCHealthManagementClassRoomCellView.m
 //  IHealthCare
 //
-//  Created by mafanghua on 2017/12/26.
+//  Created by mafanghua on 2017/12/27.
 //  Copyright © 2017年 mafanghua. All rights reserved.
 //
 
-#import "HCHealthManagementCellView.h"
-#import "HCManagementDetailModel.h"
+#import "HCHealthManagementClassRoomCellView.h"
+#import "HCClassRoomDetailModel.h"
 
-@interface HCHealthManagementCellView ()
+@interface HCHealthManagementClassRoomCellView ()
 {
     __weak IBOutlet UILabel *m_thumUpLabel;
     __weak IBOutlet UILabel *m_eyeLabel;
@@ -18,12 +18,12 @@
     __weak IBOutlet UIImageView *m_contentImageView;
     __weak IBOutlet UIView *m_contentView;
     
-    HCManagementDetailModel *m_detailModel;
+    HCClassRoomDetailModel *m_detailModel;
 }
 
 @end
 
-@implementation HCHealthManagementCellView
+@implementation HCHealthManagementClassRoomCellView
 
 -(void)awakeFromNib
 {
@@ -37,21 +37,21 @@
     m_contentImageView.contentMode = UIViewContentModeScaleToFill;
 }
 
--(void)setManagementDetail:(HCManagementDetailModel *)itemModel
+-(void)setClassRoomDetail:(HCClassRoomDetailModel *)itemModel
 {
     m_detailModel = itemModel;
     
     [m_contentImageView sd_setImageWithURL:[NSURL URLWithString:itemModel.imageUrl]];
     
     m_nameLabel.text = itemModel.name;
-    m_detailLabel.text = itemModel.managerDescription;
+    m_detailLabel.text = itemModel.classRoomDescription;
     m_eyeLabel.text = [NSString stringWithFormat:@"%@",@(itemModel.follow)];
     m_thumUpLabel.text = [NSString stringWithFormat:@"%@",@(itemModel.thumbUp)];
 }
 
 - (IBAction)onClickContentButton:(id)sender {
-    if ([self.m_delegate respondsToSelector:@selector(onClickShowManagementDetail:)]) {
-        [self.m_delegate onClickShowManagementDetail:m_detailModel];
+    if ([self.m_delegate respondsToSelector:@selector(onClickClassRoomDetail:)]) {
+        [self.m_delegate onClickClassRoomDetail:m_detailModel];
     }
 }
 

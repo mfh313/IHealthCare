@@ -26,8 +26,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.title = @"健康管理";
-    
     m_cellInfos = [NSMutableArray array];
     
     m_tableView = [[MFUITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
@@ -40,7 +38,6 @@
     [self.view addSubview:m_tableView];
     
     [self getHealthControls];
-    
     __weak typeof(self) weakSelf = self;
     [m_tableView addPullToRefreshWithActionHandler:^{
         __strong typeof(weakSelf) strongSelf = weakSelf;

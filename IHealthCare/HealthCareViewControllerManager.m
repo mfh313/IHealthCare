@@ -9,7 +9,7 @@
 #import "HealthCareViewControllerManager.h"
 #import "HCLoginViewController.h"
 #import "HCTopCureMainViewController.h"
-#import "HCHealthManagementViewController.h"
+#import "HCHealthManagementMainViewController.h"
 #import "HCWealthManagementViewController.h"
 #import "HCHappinessManagementViewController.h"
 #import "HCMeViewController.h"
@@ -125,7 +125,7 @@
 
 -(UIViewController *)healthManagementMainVC
 {
-    HCHealthManagementViewController *mainVC = [HCHealthManagementViewController new];
+    HCHealthManagementMainViewController *mainVC = [HCHealthManagementMainViewController new];
     MMNavigationController *rootNav = [[MMNavigationController alloc] initWithRootViewController:mainVC];
     UITabBarItem *tabItem = [[UITabBarItem alloc] initWithTitle:@"健康管理"
                                                               image:[MFImage(@"common_tab_health_nor") imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]

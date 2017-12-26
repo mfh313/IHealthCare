@@ -10,11 +10,11 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
-//七牛上传图像token
-+ (NSString *)upImageToken;
++ (NSString *)classRoomPage:(NSInteger)page;  //大讲堂
++ (NSString *)hospitals:(NSInteger )type page:(NSInteger)page;
++ (NSString *)upImageToken; //七牛上传图像token
 + (NSString *)healthControls:(NSInteger )type page:(NSInteger)page;
-//查询所有前沿资讯
-+ (NSString *)bestNews:(NSInteger )type page:(NSInteger)page;
++ (NSString *)bestNews:(NSInteger )type page:(NSInteger)page; //查询所有前沿资讯
 + (NSString *)products:(NSInteger )cid page:(NSInteger)page;
 + (NSString *)getVerifycode:(NSString *)telephone;
 + (NSString *)userLogin;

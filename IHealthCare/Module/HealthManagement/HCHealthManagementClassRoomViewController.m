@@ -1,28 +1,27 @@
 //
-//  HCHighProductMainViewController.m
+//  HCHealthManagementClassRoomViewController.m
 //  IHealthCare
 //
-//  Created by mafanghua on 2017/12/16.
+//  Created by mafanghua on 2017/12/26.
 //  Copyright © 2017年 mafanghua. All rights reserved.
 //
 
-#import "HCHighProductMainViewController.h"
-#import "HCGetProductsApi.h"
-#import "HCProductDetailModel.h"
-#import "HCHighProductCellView.h"
-#import "HCHighProductDetailViewController.h"
+#import "HCHealthManagementClassRoomViewController.h"
+#import "HCGetClassRoomApi.h"
+#import "HCClassRoomDetailModel.h"
+#import "HCHealthManagementClassRoomCellView.h"
 
-@interface HCHighProductMainViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCHighProductCellViewDelegate>
+@interface HCHealthManagementClassRoomViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCHealthManagementClassRoomCellViewDelegate>
 {
     MFUITableView *m_tableView;
     NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
     
-    NSMutableArray *m_highProducts;
+    NSMutableArray<HCClassRoomDetailModel *> *m_classRooms;
 }
 
 @end
 
-@implementation HCHighProductMainViewController
+@implementation HCHealthManagementClassRoomViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -38,14 +37,12 @@
     m_tableView.m_delegate = self;
     [self.view addSubview:m_tableView];
     
-    [self getHighProducts];
-    
+    [self getClassRoom];
     __weak typeof(self) weakSelf = self;
     [m_tableView addPullToRefreshWithActionHandler:^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        [strongSelf getHighProducts];
+        [strongSelf getClassRoom];
     }];
-    
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -62,9 +59,9 @@
 {
     MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
     NSString *identifier = cellInfo.cellReuseIdentifier;
-    if ([identifier isEqualToString:@"highProducts"])
+    if ([identifier isEqualToString:@"classRoom"])
     {
-        return [self tableView:tableView highProductsCellForIndexPath:indexPath];
+        return [self tableView:tableView classRoomCellForIndexPath:indexPath];
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
@@ -78,7 +75,7 @@
     return cell;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView highProductsCellForIndexPath:(NSIndexPath *)indexPath
+-(UITableViewCell *)tableView:(UITableView *)tableView classRoomCellForIndexPath:(NSIndexPath *)indexPath
 {
     MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
     NSString *identifier = cellInfo.cellReuseIdentifier;
@@ -87,17 +84,16 @@
     if (cell == nil) {
         cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         
-        HCHighProductCellView *cellView = [HCHighProductCellView nibView];
+        HCHealthManagementClassRoomCellView *cellView = [HCHealthManagementClassRoomCellView nibView];
         cellView.m_delegate = self;
         cell.m_subContentView = cellView;
     }
     
     NSInteger attachIndex = cellInfo.attachIndex;
-    HCProductDetailModel *itemModel = m_highProducts[attachIndex];
-
-    HCHighProductCellView *cellView = (HCHighProductCellView *)cell.m_subContentView;
-    [cellView setProductDetail:itemModel];
+    HCClassRoomDetailModel *itemModel = m_classRooms[attachIndex];
     
+    HCHealthManagementClassRoomCellView *cellView = (HCHealthManagementClassRoomCellView *)cell.m_subContentView;
+    [cellView setClassRoomDetail:itemModel];
     return cell;
 }
 
@@ -107,11 +103,10 @@
     return cellInfo.cellHeight;
 }
 
--(void)getHighProducts
+-(void)getClassRoom
 {
     __weak typeof(self) weakSelf = self;
-    HCGetProductsApi *mfApi = [HCGetProductsApi new];
-    mfApi.cid = PRODUCT_HIGHT_SERVICE;
+    HCGetClassRoomApi *mfApi = [HCGetClassRoomApi new];
     mfApi.page = 0;
     
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
@@ -123,14 +118,14 @@
             return;
         }
         
-        NSArray *highProducts = mfApi.responseNetworkData;
-        NSMutableArray *products = [NSMutableArray array];
-        for (int i = 0; i < highProducts.count; i++) {
-            HCProductDetailModel *itemModel = [HCProductDetailModel yy_modelWithDictionary:highProducts[i]];
-            [products addObject:itemModel];
+        NSMutableArray *classRoomsArray = [NSMutableArray array];
+        NSArray *classRooms = mfApi.responseNetworkData;
+        for (int i = 0; i < classRooms.count; i++) {
+            HCClassRoomDetailModel *itemModel = [HCClassRoomDetailModel yy_modelWithDictionary:classRooms[i]];
+            [classRoomsArray addObject:itemModel];
         }
-        m_highProducts = products;
-
+        m_classRooms = classRoomsArray;
+        
         [strongSelf reloadTableView];
         
     } failure:^(YTKBaseRequest * request) {
@@ -151,29 +146,25 @@
 {
     [m_cellInfos removeAllObjects];
     
-    for (int i = 0; i < m_highProducts.count; i++) {
-        HCProductDetailModel *itemModel  = m_highProducts[i];
+    for (int i = 0; i < m_classRooms.count; i++) {
+        HCClassRoomDetailModel *itemModel  = m_classRooms[i];
         
-        MFTableViewCellObject *highProducts = [MFTableViewCellObject new];
-        highProducts.cellHeight = 230.0f;
-        highProducts.cellReuseIdentifier = @"highProducts";
-        highProducts.attachIndex = i;
-        [m_cellInfos addObject:highProducts];
+        MFTableViewCellObject *classRoom = [MFTableViewCellObject new];
+        classRoom.cellHeight = 230.0f;
+        classRoom.cellReuseIdentifier = @"classRoom";
+        classRoom.attachIndex = i;
+        [m_cellInfos addObject:classRoom];
     }
 }
 
-#pragma mark - HCHighProductCellViewDelegate
--(void)onClickShowProductDetail:(HCProductDetailModel *)itemModel
+#pragma mark - HCHealthManagementClassRoomCellViewDelegate
+-(void)onClickClassRoomDetail:(HCClassRoomDetailModel *)itemModel
 {
-    HCHighProductDetailViewController *detailVC = [HCHighProductDetailViewController new];
-    detailVC.detailModel = itemModel;
-    detailVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:detailVC animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 @end
