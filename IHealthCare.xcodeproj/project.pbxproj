@@ -74,6 +74,7 @@
 		A56CD78F1FD0424100FFF504 /* commonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56CD78E1FD0424100FFF504 /* commonAssets.xcassets */; };
 		A575874D1FE519A0000FC7CB /* HCGetProductsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A575874C1FE519A0000FC7CB /* HCGetProductsApi.m */; };
 		A57587511FE52733000FC7CB /* HCProductDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A57587501FE52733000FC7CB /* HCProductDetailModel.m */; };
+		A57A90C11FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A57A90C01FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m */; };
 		A57B47DF1FCEF9190004C397 /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B46E41FCEF9180004C397 /* HexColors.m */; };
 		A57B47E01FCEF9190004C397 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B46E81FCEF9180004C397 /* IQNSArray+Sort.m */; };
 		A57B47E11FCEF9190004C397 /* IQUIScrollView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B46EA1FCEF9180004C397 /* IQUIScrollView+Additions.m */; };
@@ -315,6 +316,8 @@
 		A575874C1FE519A0000FC7CB /* HCGetProductsApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetProductsApi.m; sourceTree = "<group>"; };
 		A575874F1FE52733000FC7CB /* HCProductDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCProductDetailModel.h; sourceTree = "<group>"; };
 		A57587501FE52733000FC7CB /* HCProductDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCProductDetailModel.m; sourceTree = "<group>"; };
+		A57A90BF1FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetQiniuUpImageTokenApi.h; sourceTree = "<group>"; };
+		A57A90C01FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetQiniuUpImageTokenApi.m; sourceTree = "<group>"; };
 		A57B46E31FCEF9180004C397 /* HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColors.h; sourceTree = "<group>"; };
 		A57B46E41FCEF9180004C397 /* HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColors.m; sourceTree = "<group>"; };
 		A57B46E71FCEF9180004C397 /* IQNSArray+Sort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQNSArray+Sort.h"; sourceTree = "<group>"; };
@@ -1305,6 +1308,8 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A57A90BF1FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.h */,
+				A57A90C01FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m */,
 				A5BDB5061FE660700052B51B /* HCGetBestNewsApi.h */,
 				A5BDB5071FE660700052B51B /* HCGetBestNewsApi.m */,
 				A575874B1FE519A0000FC7CB /* HCGetProductsApi.h */,
@@ -1576,6 +1581,7 @@
 				A520E5ED1FEE6FEA00E4EFAD /* HCHighProductCellView.m in Sources */,
 				A57B48141FCEF9190004C397 /* SCLTimerDisplay.m in Sources */,
 				A57B47FE1FCEF9190004C397 /* ExtendableMessage.m in Sources */,
+				A57A90C11FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m in Sources */,
 				A57B48271FCEF9190004C397 /* MFMultiMenuTableViewCell.m in Sources */,
 				A57B48221FCEF9190004C397 /* UIView+viewController.m in Sources */,
 				A5BDB5081FE660700052B51B /* HCGetBestNewsApi.m in Sources */,

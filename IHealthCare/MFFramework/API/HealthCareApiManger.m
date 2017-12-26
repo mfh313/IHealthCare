@@ -22,6 +22,11 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
     return test_ServerUrl;
 }
 
++ (NSString *)upImageToken
+{
+    return MFURLWithPara(@"api/users/upToken");
+}
+
 + (NSString *)bestNews:(NSInteger )type page:(NSInteger)page
 {
     NSString *parmUrl = [NSString stringWithFormat:@"api/bestNews/%@/%@",@(type),@(page)];
