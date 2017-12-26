@@ -12,6 +12,7 @@
 
 //七牛上传图像token
 + (NSString *)upImageToken;
++ (NSString *)healthControls:(NSInteger )type page:(NSInteger)page;
 //查询所有前沿资讯
 + (NSString *)bestNews:(NSInteger )type page:(NSInteger)page;
 + (NSString *)products:(NSInteger )cid page:(NSInteger)page;

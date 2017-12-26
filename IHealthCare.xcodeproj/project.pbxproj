@@ -57,6 +57,9 @@
 		A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */; };
 		A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5623CA71FCDB851001A6B5D /* Assets.xcassets */; };
 		A5623CAE1FCDB851001A6B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623CAD1FCDB851001A6B5D /* main.m */; };
+		A5648D2E1FF2684F00EF956B /* HCGetHealthControlsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5648D2D1FF2684F00EF956B /* HCGetHealthControlsApi.m */; };
+		A5648D311FF26B5000EF956B /* HCHealthManagementCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5648D301FF26B5000EF956B /* HCHealthManagementCellView.m */; };
+		A5648D331FF26BCC00EF956B /* HCHealthManagementCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5648D321FF26BCC00EF956B /* HCHealthManagementCellView.xib */; };
 		A566B4D01FD24ABF004F6843 /* MMBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A566B4CF1FD24ABF004F6843 /* MMBarButtonItem.m */; };
 		A566B4D31FD24BB7004F6843 /* MMBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A566B4D21FD24BB7004F6843 /* MMBarButton.m */; };
 		A566B4D61FD297FE004F6843 /* UINavigationItem+margin.m in Sources */ = {isa = PBXBuildFile; fileRef = A566B4D51FD297FE004F6843 /* UINavigationItem+margin.m */; };
@@ -288,6 +291,11 @@
 		A5623CA71FCDB851001A6B5D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5623CAC1FCDB851001A6B5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5623CAD1FCDB851001A6B5D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5648D2C1FF2684E00EF956B /* HCGetHealthControlsApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetHealthControlsApi.h; sourceTree = "<group>"; };
+		A5648D2D1FF2684F00EF956B /* HCGetHealthControlsApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetHealthControlsApi.m; sourceTree = "<group>"; };
+		A5648D2F1FF26B5000EF956B /* HCHealthManagementCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementCellView.h; sourceTree = "<group>"; };
+		A5648D301FF26B5000EF956B /* HCHealthManagementCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementCellView.m; sourceTree = "<group>"; };
+		A5648D321FF26BCC00EF956B /* HCHealthManagementCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCHealthManagementCellView.xib; sourceTree = "<group>"; };
 		A566B4CE1FD24ABF004F6843 /* MMBarButtonItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMBarButtonItem.h; sourceTree = "<group>"; };
 		A566B4CF1FD24ABF004F6843 /* MMBarButtonItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMBarButtonItem.m; sourceTree = "<group>"; };
 		A566B4D11FD24BB7004F6843 /* MMBarButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMBarButton.h; sourceTree = "<group>"; };
@@ -661,6 +669,9 @@
 			children = (
 				A5268DAE1FD3C83B00E2F93C /* HCHealthManagementViewController.h */,
 				A5268DAF1FD3C83B00E2F93C /* HCHealthManagementViewController.m */,
+				A5648D2F1FF26B5000EF956B /* HCHealthManagementCellView.h */,
+				A5648D301FF26B5000EF956B /* HCHealthManagementCellView.m */,
+				A5648D321FF26BCC00EF956B /* HCHealthManagementCellView.xib */,
 			);
 			path = HealthManagement;
 			sourceTree = "<group>";
@@ -1312,6 +1323,8 @@
 				A57A90C01FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m */,
 				A5BDB5061FE660700052B51B /* HCGetBestNewsApi.h */,
 				A5BDB5071FE660700052B51B /* HCGetBestNewsApi.m */,
+				A5648D2C1FF2684E00EF956B /* HCGetHealthControlsApi.h */,
+				A5648D2D1FF2684F00EF956B /* HCGetHealthControlsApi.m */,
 				A575874B1FE519A0000FC7CB /* HCGetProductsApi.h */,
 				A575874C1FE519A0000FC7CB /* HCGetProductsApi.m */,
 				A5D9AE3B1FDBCADB00B5D4C0 /* HCUserLoginApi.h */,
@@ -1425,6 +1438,7 @@
 				A55465191FEFAD5700A7E3C7 /* HCNormalGroupCellView.xib in Resources */,
 				A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */,
 				A56CD7841FD0306C00FFF504 /* LoginAssets.xcassets in Resources */,
+				A5648D331FF26BCC00EF956B /* HCHealthManagementCellView.xib in Resources */,
 				A57B47EE1FCEF9190004C397 /* IQKeyboardManager.bundle in Resources */,
 				A520E5EB1FEE6FEA00E4EFAD /* HCBestNewsCellView.xib in Resources */,
 				A566B4E11FD2EA6F004F6843 /* HCUserRegisterHeaderView.xib in Resources */,
@@ -1532,6 +1546,7 @@
 				A57B480D1FCEF9190004C397 /* WireFormat.m in Sources */,
 				A57B47F61FCEF9190004C397 /* Messagepush.pb.m in Sources */,
 				A56CD77F1FD028AD00FFF504 /* HealthCareViewControllerManager.m in Sources */,
+				A5648D2E1FF2684F00EF956B /* HCGetHealthControlsApi.m in Sources */,
 				A57B47E01FCEF9190004C397 /* IQNSArray+Sort.m in Sources */,
 				A57B48411FCEF9190004C397 /* MMServiceCenter.m in Sources */,
 				A554650C1FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m in Sources */,
@@ -1642,6 +1657,7 @@
 				A554651A1FEFAD5700A7E3C7 /* HCPullFreshCountLogic.m in Sources */,
 				A520E5FC1FEE72AA00E4EFAD /* MMTableViewUserInfo.m in Sources */,
 				A575874D1FE519A0000FC7CB /* HCGetProductsApi.m in Sources */,
+				A5648D311FF26B5000EF956B /* HCHealthManagementCellView.m in Sources */,
 				A57B47E81FCEF9190004C397 /* IQTextView.m in Sources */,
 				A57B480B1FCEF9190004C397 /* UnknownFieldSetBuilder.m in Sources */,
 				A53695B11FD59769007CC67C /* SPPageContentView.m in Sources */,
