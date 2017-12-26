@@ -31,8 +31,13 @@
     
     m_appViewControllerMgr = [HealthCareViewControllerManager getAppViewControllerManager];
     [m_appViewControllerMgr setRootMainWindow:self.window];
-//    [m_appViewControllerMgr launchLoginViewController];
+    
+#ifdef DEBUG
     [m_appViewControllerMgr launchMainTabViewController];
+#else
+    [m_appViewControllerMgr launchLoginViewController];
+#endif
+    
     
     [MFThemeHelper setDefaultThemeColor];
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
