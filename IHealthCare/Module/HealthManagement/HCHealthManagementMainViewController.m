@@ -143,8 +143,7 @@
         }
         else if ([key isEqualToString:@"classRoom"])
         {
-            UIViewController *classRoomVC = [UIViewController new];
-            classRoomVC.view.backgroundColor = [UIColor grayColor];
+            HCHealthManagementClassRoomViewController *classRoomVC = [HCHealthManagementClassRoomViewController new];
             
             controller = classRoomVC;
         }
