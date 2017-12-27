@@ -10,6 +10,8 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
++ (NSString *)healthAnalysis:(NSInteger)page; //精准分析
++ (NSString *)healthMedicalService:(NSInteger)page; //专业服务
 + (NSString *)classRoomPage:(NSInteger)page;  //大讲堂
 + (NSString *)hospitals:(NSInteger )type page:(NSInteger)page;
 + (NSString *)upImageToken; //七牛上传图像token
@@ -20,3 +22,5 @@
 + (NSString *)userLogin;
 
 @end
+
+

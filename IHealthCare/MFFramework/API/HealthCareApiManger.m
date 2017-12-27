@@ -22,6 +22,18 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
     return test_ServerUrl;
 }
 
++ (NSString *)healthAnalysis:(NSInteger)page
+{
+    NSString *parmUrl = [NSString stringWithFormat:@"api/medicalService/1/%@",@(page)];
+    return MFURLWithPara(parmUrl);
+}
+
++ (NSString *)healthMedicalService:(NSInteger)page
+{
+    NSString *parmUrl = [NSString stringWithFormat:@"api/medicalService/2/%@",@(page)];
+    return MFURLWithPara(parmUrl);
+}
+
 + (NSString *)classRoomPage:(NSInteger)page
 {
     NSString *parmUrl = [NSString stringWithFormat:@"api/classes/2/%@",@(page)];
