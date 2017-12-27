@@ -1,5 +1,5 @@
 //
-//  HCGetClassRoomApi.h
+//  HCGetHealthMedicalServiceApi.h
 //  IHealthCare
 //
 //  Created by mafanghua on 2017/12/27.
@@ -8,11 +8,10 @@
 
 #import "MMNetworkRequest.h"
 
-@interface HCGetClassRoomApi : MMNetworkRequest
+@interface HCGetHealthMedicalServiceApi : MMNetworkRequest
 
 @property (nonatomic,assign) NSInteger page;
 
 @end
-
 
 

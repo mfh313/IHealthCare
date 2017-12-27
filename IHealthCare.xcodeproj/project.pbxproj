@@ -39,6 +39,10 @@
 		A526F4131FF3DFFD00092ADD /* HCMedicalServiceDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A526F4121FF3DFFD00092ADD /* HCMedicalServiceDetailModel.m */; };
 		A526F4161FF3E80000092ADD /* HCHealthManagementAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A526F4151FF3E80000092ADD /* HCHealthManagementAnalysisViewController.m */; };
 		A526F4191FF3E82800092ADD /* HCHealthManagementMedicalServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A526F4181FF3E82800092ADD /* HCHealthManagementMedicalServiceViewController.m */; };
+		A526F41C1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A526F41B1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.m */; };
+		A526F41F1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A526F41E1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m */; };
+		A526F4221FF3EABB00092ADD /* HCHealthMedicalServiceCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A526F4211FF3EABB00092ADD /* HCHealthMedicalServiceCellView.m */; };
+		A526F4241FF3EAD900092ADD /* HCHealthMedicalServiceCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A526F4231FF3EAD900092ADD /* HCHealthMedicalServiceCellView.xib */; };
 		A53695AE1FD59769007CC67C /* SPCoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = A536959E1FD59769007CC67C /* SPCoverController.m */; };
 		A53695AF1FD59769007CC67C /* SPPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695A01FD59769007CC67C /* SPPageController.m */; };
 		A53695B01FD59769007CC67C /* SPTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695A21FD59769007CC67C /* SPTabController.m */; };
@@ -265,6 +269,13 @@
 		A526F4151FF3E80000092ADD /* HCHealthManagementAnalysisViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementAnalysisViewController.m; sourceTree = "<group>"; };
 		A526F4171FF3E82800092ADD /* HCHealthManagementMedicalServiceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementMedicalServiceViewController.h; sourceTree = "<group>"; };
 		A526F4181FF3E82800092ADD /* HCHealthManagementMedicalServiceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementMedicalServiceViewController.m; sourceTree = "<group>"; };
+		A526F41A1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetHealthManagementAnalysisApi.h; sourceTree = "<group>"; };
+		A526F41B1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetHealthManagementAnalysisApi.m; sourceTree = "<group>"; };
+		A526F41D1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetHealthMedicalServiceApi.h; sourceTree = "<group>"; };
+		A526F41E1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetHealthMedicalServiceApi.m; sourceTree = "<group>"; };
+		A526F4201FF3EABB00092ADD /* HCHealthMedicalServiceCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthMedicalServiceCellView.h; sourceTree = "<group>"; };
+		A526F4211FF3EABB00092ADD /* HCHealthMedicalServiceCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthMedicalServiceCellView.m; sourceTree = "<group>"; };
+		A526F4231FF3EAD900092ADD /* HCHealthMedicalServiceCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCHealthMedicalServiceCellView.xib; sourceTree = "<group>"; };
 		A536959D1FD59769007CC67C /* SPCoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPCoverController.h; sourceTree = "<group>"; };
 		A536959E1FD59769007CC67C /* SPCoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPCoverController.m; sourceTree = "<group>"; };
 		A536959F1FD59769007CC67C /* SPPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPageController.h; sourceTree = "<group>"; };
@@ -854,6 +865,9 @@
 				A526F4151FF3E80000092ADD /* HCHealthManagementAnalysisViewController.m */,
 				A526F4171FF3E82800092ADD /* HCHealthManagementMedicalServiceViewController.h */,
 				A526F4181FF3E82800092ADD /* HCHealthManagementMedicalServiceViewController.m */,
+				A526F4201FF3EABB00092ADD /* HCHealthMedicalServiceCellView.h */,
+				A526F4211FF3EABB00092ADD /* HCHealthMedicalServiceCellView.m */,
+				A526F4231FF3EAD900092ADD /* HCHealthMedicalServiceCellView.xib */,
 				A5648D551FF2B82D00EF956B /* HCHealthManagementClassRoomViewController.h */,
 				A5648D561FF2B82D00EF956B /* HCHealthManagementClassRoomViewController.m */,
 			);
@@ -1360,10 +1374,14 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				A57A90BF1FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.h */,
-				A57A90C01FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m */,
+				A526F41A1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.h */,
+				A526F41B1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.m */,
+				A526F41D1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.h */,
+				A526F41E1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m */,
 				A5648D431FF2ACEE00EF956B /* HCGetClassRoomApi.h */,
 				A5648D441FF2ACEE00EF956B /* HCGetClassRoomApi.m */,
+				A57A90BF1FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.h */,
+				A57A90C01FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m */,
 				A5BDB5061FE660700052B51B /* HCGetBestNewsApi.h */,
 				A5BDB5071FE660700052B51B /* HCGetBestNewsApi.m */,
 				A5648D2C1FF2684E00EF956B /* HCGetHealthControlsApi.h */,
@@ -1482,6 +1500,7 @@
 				A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */,
 				A56CD7841FD0306C00FFF504 /* LoginAssets.xcassets in Resources */,
 				A5648D5C1FF2B82D00EF956B /* HCHealthManagementCellView.xib in Resources */,
+				A526F4241FF3EAD900092ADD /* HCHealthMedicalServiceCellView.xib in Resources */,
 				A57B47EE1FCEF9190004C397 /* IQKeyboardManager.bundle in Resources */,
 				A520E5EB1FEE6FEA00E4EFAD /* HCBestNewsCellView.xib in Resources */,
 				A566B4E11FD2EA6F004F6843 /* HCUserRegisterHeaderView.xib in Resources */,
@@ -1557,6 +1576,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A526F41C1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.m in Sources */,
 				A57B47EA1FCEF9190004C397 /* IQPreviousNextView.m in Sources */,
 				A57B48121FCEF9190004C397 /* SCLSwitchView.m in Sources */,
 				A566B4DC1FD2AC70004F6843 /* MMTitleView.m in Sources */,
@@ -1635,6 +1655,7 @@
 				A520E5F91FEE6FEA00E4EFAD /* HCTopCureMainViewController.m in Sources */,
 				A57B48101FCEF9190004C397 /* SCLAlertViewStyleKit.m in Sources */,
 				A57B47FF1FCEF9190004C397 /* ExtendableMessageBuilder.m in Sources */,
+				A526F4221FF3EABB00092ADD /* HCHealthMedicalServiceCellView.m in Sources */,
 				A5D9AE3D1FDBCADB00B5D4C0 /* HCUserLoginApi.m in Sources */,
 				A57B48291FCEF9190004C397 /* MFTableViewCellObject.m in Sources */,
 				A57B48211FCEF9190004C397 /* UIView+threadHook.m in Sources */,
@@ -1720,6 +1741,7 @@
 				A57B48331FCEF9190004C397 /* MMUIBridgeView.m in Sources */,
 				A5D9AE2F1FDBB87B00B5D4C0 /* YTKAnimatingRequestAccessory.m in Sources */,
 				A566B4D01FD24ABF004F6843 /* MMBarButtonItem.m in Sources */,
+				A526F41F1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m in Sources */,
 				A566B4D31FD24BB7004F6843 /* MMBarButton.m in Sources */,
 				A566B4D91FD298B7004F6843 /* HCUserRegisterViewController.m in Sources */,
 				A554650A1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */,

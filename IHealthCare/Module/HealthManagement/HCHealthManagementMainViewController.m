@@ -10,6 +10,8 @@
 #import "SPPageController.h"
 #import "HCHealthManagementViewController.h"
 #import "HCHealthManagementClassRoomViewController.h"
+#import "HCHealthManagementAnalysisViewController.h"
+#import "HCHealthManagementMedicalServiceViewController.h"
 
 @interface HCHealthManagementMainViewController ()
 {
@@ -58,9 +60,6 @@
     [m_tabInfo addObject:service];
     [m_tabInfo addObject:classRoom];
 }
-
-//精准检测当做产品，使用健康管理接口
-//精准分析和专业服务只做展示，同医疗机构接口
 
 - (NSString *)titleForIndex:(NSInteger)index
 {
@@ -129,15 +128,13 @@
         }
         else if ([key isEqualToString:@"analysis"])
         {
-            UIViewController *analysisVC = [UIViewController new];
-            analysisVC.view.backgroundColor = [UIColor redColor];
+            HCHealthManagementAnalysisViewController *analysisVC = [HCHealthManagementAnalysisViewController new];
             
             controller = analysisVC;
         }
         else if ([key isEqualToString:@"service"])
         {
-            UIViewController *serviceVC = [UIViewController new];
-            serviceVC.view.backgroundColor = [UIColor blueColor];
+            HCHealthManagementMedicalServiceViewController *serviceVC = [HCHealthManagementMedicalServiceViewController new];
             
             controller = serviceVC;
         }
