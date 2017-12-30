@@ -77,12 +77,6 @@
     [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
-}
-
 - (NSString *)titleForIndex:(NSInteger)index
 {
     NSMutableDictionary *tabItem = m_tabInfo[index];

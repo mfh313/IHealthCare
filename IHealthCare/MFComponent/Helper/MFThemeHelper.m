@@ -19,6 +19,7 @@
     [[UINavigationBar appearance] setTintColor:MFCustomNavBarColor];
     [[UINavigationBar appearance] setBackgroundImage:MFImageStretchCenter(@"title_bg") forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[UIImage new]];
+    [[UINavigationBar appearance] setTranslucent:YES];
 
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor hx_colorWithHexString:@"5D5D5D"]} forState:UIControlStateNormal];
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor hx_colorWithHexString:@"E0C079"]} forState:UIControlStateSelected];

@@ -43,7 +43,7 @@
     m_navBar.m_delegate = self;
     [self.view addSubview:m_navBar];
     [m_navBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.equalTo(self.view);
+        make.width.mas_equalTo(self.view);
         make.height.mas_equalTo(@(44));
         make.top.equalTo(self.view).offset(20);
         make.left.equalTo(self.view);
@@ -60,18 +60,6 @@
     }];
     
     [self reloadTableView];
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
-}
-
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

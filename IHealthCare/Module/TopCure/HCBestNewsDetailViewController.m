@@ -17,6 +17,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"BestNewsDetail";
+    [self setBackBarButton];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)didReceiveMemoryWarning {
