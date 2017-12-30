@@ -670,6 +670,8 @@
 		A520E5CE1FEE6FEA00E4EFAD /* TopCure */ = {
 			isa = PBXGroup;
 			children = (
+				A520E5E81FEE6FEA00E4EFAD /* HCTopCureMainViewController.h */,
+				A520E5E91FEE6FEA00E4EFAD /* HCTopCureMainViewController.m */,
 				A520E5CF1FEE6FEA00E4EFAD /* HCBestNewsCellView.h */,
 				A520E5D01FEE6FEA00E4EFAD /* HCBestNewsCellView.m */,
 				A520E5D11FEE6FEA00E4EFAD /* HCBestNewsCellView.xib */,
@@ -695,8 +697,6 @@
 				A520E5E51FEE6FEA00E4EFAD /* HCTopCureMainTabView.m */,
 				A520E5E61FEE6FEA00E4EFAD /* HCTopCureMainTagView.h */,
 				A520E5E71FEE6FEA00E4EFAD /* HCTopCureMainTagView.m */,
-				A520E5E81FEE6FEA00E4EFAD /* HCTopCureMainViewController.h */,
-				A520E5E91FEE6FEA00E4EFAD /* HCTopCureMainViewController.m */,
 			);
 			path = TopCure;
 			sourceTree = "<group>";
