@@ -109,7 +109,7 @@
 
 - (CGRect)preferPageFrame
 {
-    return CGRectMake(0, 44, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 44);
+    return CGRectMake(0, 44, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 44 - 50);
 }
 
 - (UIViewController *)controllerAtIndex:(NSInteger)index

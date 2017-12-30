@@ -34,6 +34,7 @@
     
     self.minYPullUp = KNAVIGATIONANDSTATUSBARHEIGHT;
     self.automaticallyAdjustsScrollViewInsets = NO;
+    self.extendedLayoutIncludesOpaqueBars = NO;
     
     UIView *statusBGView = [UIView new];
     statusBGView.backgroundColor = [UIColor whiteColor];
@@ -125,7 +126,7 @@
 
 - (CGRect)preferPageFrame
 {
-    return CGRectMake(0, 108, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 108);
+    return CGRectMake(0, 108, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - 108 - 50);
 }
 
 - (UIViewController *)controllerAtIndex:(NSInteger)index
