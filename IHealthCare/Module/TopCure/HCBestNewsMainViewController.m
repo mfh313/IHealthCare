@@ -10,6 +10,7 @@
 #import "HCBestNewsDetailModel.h"
 #import "HCGetBestNewsApi.h"
 #import "HCBestNewsCellView.h"
+#import "HCBestNewsDetailViewController.h"
 
 @interface HCBestNewsMainViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCBestNewsCellViewDelegate>
 {
@@ -163,7 +164,10 @@
 #pragma mark - HCBestNewsCellViewDelegate
 -(void)onClickShowNewsDetail:(HCBestNewsDetailModel *)itemModel
 {
-    
+    HCBestNewsDetailViewController *detailVC = [HCBestNewsDetailViewController new];
+    detailVC.detailModel = itemModel;
+    detailVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -29,7 +29,8 @@
     
     m_cellInfos = [NSMutableArray array];
     
-    m_tableView = [[MFUITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    CGRect tableFrame = CGRectMake(0, -20, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) + 20);
+    m_tableView = [[MFUITableView alloc] initWithFrame:tableFrame style:UITableViewStylePlain];
     m_tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     m_tableView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
     m_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;

@@ -88,6 +88,7 @@
 		A56CD78B1FD0330A00FFF504 /* HCLoginContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A56CD78A1FD0330A00FFF504 /* HCLoginContentView.m */; };
 		A56CD78D1FD033CB00FFF504 /* HCLoginContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56CD78C1FD033CB00FFF504 /* HCLoginContentView.xib */; };
 		A56CD78F1FD0424100FFF504 /* commonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56CD78E1FD0424100FFF504 /* commonAssets.xcassets */; };
+		A57004AB1FF776A60007F126 /* HCBestNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004AA1FF776A60007F126 /* HCBestNewsDetailViewController.m */; };
 		A575874D1FE519A0000FC7CB /* HCGetProductsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A575874C1FE519A0000FC7CB /* HCGetProductsApi.m */; };
 		A57587511FE52733000FC7CB /* HCProductDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A57587501FE52733000FC7CB /* HCProductDetailModel.m */; };
 		A57A90C11FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A57A90C01FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m */; };
@@ -357,6 +358,8 @@
 		A56CD78A1FD0330A00FFF504 /* HCLoginContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCLoginContentView.m; sourceTree = "<group>"; };
 		A56CD78C1FD033CB00FFF504 /* HCLoginContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCLoginContentView.xib; sourceTree = "<group>"; };
 		A56CD78E1FD0424100FFF504 /* commonAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = commonAssets.xcassets; sourceTree = "<group>"; };
+		A57004A91FF776A60007F126 /* HCBestNewsDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBestNewsDetailViewController.h; sourceTree = "<group>"; };
+		A57004AA1FF776A60007F126 /* HCBestNewsDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailViewController.m; sourceTree = "<group>"; };
 		A575874B1FE519A0000FC7CB /* HCGetProductsApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetProductsApi.h; sourceTree = "<group>"; };
 		A575874C1FE519A0000FC7CB /* HCGetProductsApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetProductsApi.m; sourceTree = "<group>"; };
 		A575874F1FE52733000FC7CB /* HCProductDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCProductDetailModel.h; sourceTree = "<group>"; };
@@ -677,6 +680,8 @@
 				A520E5D11FEE6FEA00E4EFAD /* HCBestNewsCellView.xib */,
 				A520E5D21FEE6FEA00E4EFAD /* HCBestNewsMainViewController.h */,
 				A520E5D31FEE6FEA00E4EFAD /* HCBestNewsMainViewController.m */,
+				A57004A91FF776A60007F126 /* HCBestNewsDetailViewController.h */,
+				A57004AA1FF776A60007F126 /* HCBestNewsDetailViewController.m */,
 				A520E5D41FEE6FEA00E4EFAD /* HCHighProductCellView.h */,
 				A520E5D51FEE6FEA00E4EFAD /* HCHighProductCellView.m */,
 				A520E5D61FEE6FEA00E4EFAD /* HCHighProductCellView.xib */,
@@ -1682,6 +1687,7 @@
 				A520E5FF1FEE734F00E4EFAD /* MMTableViewCellInfo.m in Sources */,
 				A520E6021FEE755A00E4EFAD /* MMTableViewSectionInfo.m in Sources */,
 				A566B4DF1FD2EA55004F6843 /* HCUserRegisterHeaderView.m in Sources */,
+				A57004AB1FF776A60007F126 /* HCBestNewsDetailViewController.m in Sources */,
 				A5648D451FF2ACEE00EF956B /* HCGetClassRoomApi.m in Sources */,
 				A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */,
 				A57B482F1FCEF9190004C397 /* MMNavigationController.m in Sources */,
