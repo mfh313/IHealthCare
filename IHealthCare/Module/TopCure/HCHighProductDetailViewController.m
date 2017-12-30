@@ -97,6 +97,10 @@
     {
         return [self tableView:tableView productTitleCellForIndexPath:indexPath];
     }
+    else if ([identifier isEqualToString:@"productDetail"])
+    {
+        return [self tableView:tableView productDetailCellForIndexPath:indexPath];
+    }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil)
@@ -147,6 +151,28 @@
     return cell;
 }
 
+-(UITableViewCell *)tableView:(UITableView *)tableView productDetailCellForIndexPath:(NSIndexPath *)indexPath
+{
+    MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    NSString *identifier = cellInfo.cellReuseIdentifier;
+    
+    MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+        UITextView *cellView = [[UITextView alloc] initWithFrame:cell.contentView.frame];
+        cellView.font = [UIFont systemFontOfSize:16.0f];
+        cellView.textColor = [UIColor hx_colorWithHexString:@"333333"];
+        cellView.userInteractionEnabled = NO;
+        cell.m_subContentView = cellView;
+    }
+    
+    UITextView *cellView = (UITextView *)cell.m_subContentView;
+    cellView.frame = CGRectMake(20, 0, CGRectGetWidth(cell.contentView.frame) - 45, CGRectGetHeight(cell.contentView.frame) - 0);
+    [cellView setText:self.detailModel.pdesc];
+    return cell;
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
@@ -184,10 +210,15 @@
     productImage.cellReuseIdentifier = @"productImage";
     [m_cellInfos addObject:productImage];
     
-    MFTableViewCellObject *title = [MFTableViewCellObject new];
-    title.cellHeight = 80.0f;
-    title.cellReuseIdentifier = @"productTitle";
-    [m_cellInfos addObject:title];
+    MFTableViewCellObject *productTitle = [MFTableViewCellObject new];
+    productTitle.cellHeight = 80.0f;
+    productTitle.cellReuseIdentifier = @"productTitle";
+    [m_cellInfos addObject:productTitle];
+    
+    MFTableViewCellObject *productDetail = [MFTableViewCellObject new];
+    productDetail.cellHeight = 300.0f;
+    productDetail.cellReuseIdentifier = @"productDetail";
+    [m_cellInfos addObject:productDetail];
 }
 
 -(void)reloadTableView
