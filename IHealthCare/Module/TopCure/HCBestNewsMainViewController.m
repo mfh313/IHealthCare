@@ -27,9 +27,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.automaticallyAdjustsScrollViewInsets = YES;
+    
     m_cellInfos = [NSMutableArray array];
     
-    m_tableView = [[MFUITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    m_tableView = [[MFUITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     m_tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     m_tableView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
     m_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;

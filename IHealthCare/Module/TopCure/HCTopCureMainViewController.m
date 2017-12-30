@@ -163,7 +163,7 @@
 }
 
 -(NSInteger)preferPageFirstAtIndex {
-    return 0;
+    return 1;
 }
 
 -(BOOL)isSubPageCanScrollForIndex:(NSInteger)index

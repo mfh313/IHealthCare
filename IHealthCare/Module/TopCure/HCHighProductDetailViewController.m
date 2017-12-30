@@ -10,6 +10,7 @@
 #import "HCProductDetailModel.h"
 #import "HCHighProductDetailCustomNavbar.h"
 #import "HCHighProductDetailBottomView.h"
+#import "HCProductDetailHeaderTitleView.h"
 
 @interface HCHighProductDetailViewController () <HCHighProductDetailCustomNavbarDelegate,HCHighProductDetailBottomViewDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -29,15 +30,13 @@
     
     m_cellInfos = [NSMutableArray array];
     
-    CGRect tableFrame = CGRectMake(0, -20, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) + 20);
-    m_tableView = [[MFUITableView alloc] initWithFrame:tableFrame style:UITableViewStylePlain];
+    m_tableView = [[MFUITableView alloc] initWithFrame:CGRectMake(0, -20, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)) style:UITableViewStylePlain];
     m_tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     m_tableView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
     m_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     m_tableView.dataSource = self;
     m_tableView.delegate = self;
     m_tableView.m_delegate = self;
-    m_tableView.contentInset = UIEdgeInsetsMake(0, 0, 60, 0);
     [self.view addSubview:m_tableView];
     
     m_navBar = [HCHighProductDetailCustomNavbar nibView];
@@ -89,9 +88,14 @@
 {
     MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
     NSString *identifier = cellInfo.cellReuseIdentifier;
+    
     if ([identifier isEqualToString:@"productImage"])
     {
-//        return [self tableView:tableView highProductsCellForIndexPath:indexPath];
+        return [self tableView:tableView productImageCellForIndexPath:indexPath];
+    }
+    else if ([identifier isEqualToString:@"productTitle"])
+    {
+        return [self tableView:tableView productTitleCellForIndexPath:indexPath];
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
@@ -102,6 +106,44 @@
     }
     
     cell.textLabel.text = identifier;
+    return cell;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView productImageCellForIndexPath:(NSIndexPath *)indexPath
+{
+    MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    NSString *identifier = cellInfo.cellReuseIdentifier;
+    
+    MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+        UIImageView *cellView = [[UIImageView alloc] initWithFrame:cell.contentView.frame];
+        cellView.contentMode = UIViewContentModeScaleAspectFill;
+        cell.m_subContentView = cellView;
+    }
+    
+    UIImageView *cellView = (UIImageView *)cell.m_subContentView;
+    [cellView sd_setImageWithURL:[NSURL URLWithString:self.detailModel.image]];
+    return cell;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView productTitleCellForIndexPath:(NSIndexPath *)indexPath
+{
+    MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    NSString *identifier = cellInfo.cellReuseIdentifier;
+    
+    MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+        HCProductDetailHeaderTitleView *cellView = [HCProductDetailHeaderTitleView nibView];
+        cell.m_subContentView = cellView;
+    }
+    
+    HCProductDetailHeaderTitleView *cellView = (HCProductDetailHeaderTitleView *)cell.m_subContentView;
+    [cellView setProductDetail:self.detailModel];
+    
     return cell;
 }
 
@@ -119,7 +161,7 @@
 
 -(void)onClickForwordButton:(HCHighProductDetailCustomNavbar *)navBar
 {
-    
+    NSLog(@"onClickForwordButton");
 }
 
 #pragma mark - HCHighProductDetailBottomViewDelegate
@@ -133,12 +175,6 @@
     NSLog(@"onClickCollectionProduct");
 }
 
--(void)reloadTableView
-{
-    [self makeCellObjects];
-    [m_tableView reloadData];
-}
-
 -(void)makeCellObjects
 {
     [m_cellInfos removeAllObjects];
@@ -147,6 +183,18 @@
     productImage.cellHeight = 200.0f;
     productImage.cellReuseIdentifier = @"productImage";
     [m_cellInfos addObject:productImage];
+    
+    MFTableViewCellObject *title = [MFTableViewCellObject new];
+    title.cellHeight = 80.0f;
+    title.cellReuseIdentifier = @"productTitle";
+    [m_cellInfos addObject:title];
+}
+
+-(void)reloadTableView
+{
+    [self makeCellObjects];
+    
+    [m_tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
