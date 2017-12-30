@@ -123,7 +123,7 @@
         cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         
         UIImageView *cellView = [[UIImageView alloc] initWithFrame:cell.contentView.frame];
-        cellView.contentMode = UIViewContentModeScaleAspectFill;
+        cellView.contentMode = UIViewContentModeScaleToFill;
         cell.m_subContentView = cellView;
     }
     
