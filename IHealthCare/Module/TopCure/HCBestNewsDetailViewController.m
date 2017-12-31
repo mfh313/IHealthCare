@@ -9,6 +9,7 @@
 #import "HCBestNewsDetailViewController.h"
 #import "HCBestNewsDetailModel.h"
 #import "HCHighProductDetailCustomNavbar.h"
+#import "HCBestNewsDetailTitleView.h"
 
 @interface HCBestNewsDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -128,13 +129,13 @@
     if (cell == nil) {
         cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         
-//        HCProductDetailHeaderTitleView *cellView = [HCProductDetailHeaderTitleView nibView];
-//        cellView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
-//        cell.m_subContentView = cellView;
+        HCBestNewsDetailTitleView *cellView = [HCBestNewsDetailTitleView nibView];
+        cellView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
+        cell.m_subContentView = cellView;
     }
     
-//    HCProductDetailHeaderTitleView *cellView = (HCProductDetailHeaderTitleView *)cell.m_subContentView;
-//    [cellView setProductDetail:self.detailModel];
+    HCBestNewsDetailTitleView *cellView = (HCBestNewsDetailTitleView *)cell.m_subContentView;
+    [cellView setNewsDetail:self.detailModel];
     
     return cell;
 }
