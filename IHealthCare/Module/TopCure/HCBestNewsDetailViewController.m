@@ -10,10 +10,12 @@
 #import "HCBestNewsDetailModel.h"
 #import "HCHighProductDetailCustomNavbar.h"
 #import "HCBestNewsDetailTitleView.h"
+#import "HCBestNewsDetailToolBar.h"
 
-@interface HCBestNewsDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface HCBestNewsDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCBestNewsDetailToolBarDelegate>
 {
     HCHighProductDetailCustomNavbar *m_navBar;
+    HCBestNewsDetailToolBar *m_toolBar;
     
     MFUITableView *m_tableView;
     NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
@@ -35,6 +37,7 @@
     m_tableView.dataSource = self;
     m_tableView.delegate = self;
     m_tableView.m_delegate = self;
+    m_tableView.contentInset = UIEdgeInsetsMake(0, 0, 60, 0);
     [self.view addSubview:m_tableView];
     
     m_navBar = [HCHighProductDetailCustomNavbar nibView];
@@ -44,6 +47,16 @@
         make.width.mas_equalTo(self.view);
         make.height.mas_equalTo(@(44));
         make.top.equalTo(self.view).offset(20);
+        make.left.equalTo(self.view);
+    }];
+    
+    m_toolBar = [HCBestNewsDetailToolBar nibView];
+    m_toolBar.m_delegate = self;
+    [self.view addSubview:m_toolBar];
+    [m_toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(self.view);
+        make.height.mas_equalTo(@(60));
+        make.bottom.equalTo(self.view).offset(0);
         make.left.equalTo(self.view);
     }];
     
@@ -200,6 +213,27 @@
 -(void)onClickForwordButton:(HCHighProductDetailCustomNavbar *)navBar
 {
     NSLog(@"onClickForwordButton");
+}
+
+#pragma mark - HCBestNewsDetailToolBarDelegate
+-(void)onClickMessageButton:(HCBestNewsDetailToolBar *)toolBar
+{
+    NSLog(@"onClickMessageButton");
+}
+
+-(void)onClickPraiseButton:(HCBestNewsDetailToolBar *)toolBar
+{
+    NSLog(@"onClickPraiseButton");
+}
+
+-(void)onClickCollectionButton:(HCBestNewsDetailToolBar *)toolBar
+{
+    NSLog(@"onClickCollectionButton");
+}
+
+-(void)onClickWriteButton:(HCBestNewsDetailToolBar *)toolBar
+{
+    NSLog(@"onClickWriteButton");
 }
 
 - (void)didReceiveMemoryWarning {

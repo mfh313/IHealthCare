@@ -10,6 +10,8 @@
 		58B5C84FF304ABEEE42AA899 /* libPods-IHealthCare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */; };
 		A50F83D31FF885A900459B57 /* HCBestNewsDetailTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A50F83D21FF885A900459B57 /* HCBestNewsDetailTitleView.m */; };
 		A50F83D51FF8870900459B57 /* HCBestNewsDetailTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50F83D41FF8870900459B57 /* HCBestNewsDetailTitleView.xib */; };
+		A50F83D81FF8DA5100459B57 /* HCBestNewsDetailToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A50F83D71FF8DA5100459B57 /* HCBestNewsDetailToolBar.m */; };
+		A50F83DA1FF8ECC500459B57 /* HCBestNewsDetailToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50F83D91FF8ECC500459B57 /* HCBestNewsDetailToolBar.xib */; };
 		A511F3531FD425B700AE5D57 /* HealthCareCenterMenuMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = A511F3521FD425B700AE5D57 /* HealthCareCenterMenuMainView.m */; };
 		A511F3551FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A511F3541FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib */; };
 		A511F3581FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A511F3571FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m */; };
@@ -221,6 +223,9 @@
 		A50F83D11FF885A900459B57 /* HCBestNewsDetailTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBestNewsDetailTitleView.h; sourceTree = "<group>"; };
 		A50F83D21FF885A900459B57 /* HCBestNewsDetailTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailTitleView.m; sourceTree = "<group>"; };
 		A50F83D41FF8870900459B57 /* HCBestNewsDetailTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCBestNewsDetailTitleView.xib; sourceTree = "<group>"; };
+		A50F83D61FF8DA5100459B57 /* HCBestNewsDetailToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBestNewsDetailToolBar.h; sourceTree = "<group>"; };
+		A50F83D71FF8DA5100459B57 /* HCBestNewsDetailToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailToolBar.m; sourceTree = "<group>"; };
+		A50F83D91FF8ECC500459B57 /* HCBestNewsDetailToolBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCBestNewsDetailToolBar.xib; sourceTree = "<group>"; };
 		A511F3511FD425B700AE5D57 /* HealthCareCenterMenuMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthCareCenterMenuMainView.h; sourceTree = "<group>"; };
 		A511F3521FD425B700AE5D57 /* HealthCareCenterMenuMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthCareCenterMenuMainView.m; sourceTree = "<group>"; };
 		A511F3541FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthCareCenterMenuMainView.xib; sourceTree = "<group>"; };
@@ -865,6 +870,9 @@
 				A57004CC1FF787C80007F126 /* HCBestNewsMainViewController.m */,
 				A57004C91FF787C80007F126 /* HCBestNewsDetailViewController.h */,
 				A57004CA1FF787C80007F126 /* HCBestNewsDetailViewController.m */,
+				A50F83D61FF8DA5100459B57 /* HCBestNewsDetailToolBar.h */,
+				A50F83D71FF8DA5100459B57 /* HCBestNewsDetailToolBar.m */,
+				A50F83D91FF8ECC500459B57 /* HCBestNewsDetailToolBar.xib */,
 				A50F83D11FF885A900459B57 /* HCBestNewsDetailTitleView.h */,
 				A50F83D21FF885A900459B57 /* HCBestNewsDetailTitleView.m */,
 				A50F83D41FF8870900459B57 /* HCBestNewsDetailTitleView.xib */,
@@ -1527,6 +1535,7 @@
 				A566B4E11FD2EA6F004F6843 /* HCUserRegisterHeaderView.xib in Resources */,
 				A56CD7881FD0315000FFF504 /* MeAssets.xcassets in Resources */,
 				A57004FA1FF787C80007F126 /* HCHighProductDetailCustomNavbar.xib in Resources */,
+				A50F83DA1FF8ECC500459B57 /* HCBestNewsDetailToolBar.xib in Resources */,
 				A511F35A1FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib in Resources */,
 				A511F3551FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib in Resources */,
 				A55465101FEFAD3100A7E3C7 /* HCMeProfileCellView.xib in Resources */,
@@ -1708,6 +1717,7 @@
 				A57B482D1FCEF9190004C397 /* MMBaseInfoItem.m in Sources */,
 				A520E5FF1FEE734F00E4EFAD /* MMTableViewCellInfo.m in Sources */,
 				A520E6021FEE755A00E4EFAD /* MMTableViewSectionInfo.m in Sources */,
+				A50F83D81FF8DA5100459B57 /* HCBestNewsDetailToolBar.m in Sources */,
 				A566B4DF1FD2EA55004F6843 /* HCUserRegisterHeaderView.m in Sources */,
 				A5648D451FF2ACEE00EF956B /* HCGetClassRoomApi.m in Sources */,
 				A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */,

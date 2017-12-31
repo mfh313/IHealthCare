@@ -26,7 +26,7 @@
     m_titleLabel.text = itemModel.name;
     m_authorLabel.text = itemModel.author;
     m_organizationLabel.text = itemModel.organization;
-    m_createTimeLabel.text = itemModel.createTime;
+    m_createTimeLabel.text = itemModel.publishTime;
 }
 
 @end
