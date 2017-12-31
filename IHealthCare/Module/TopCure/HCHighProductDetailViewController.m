@@ -130,6 +130,7 @@
         cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         
         HCProductDetailHeaderTitleView *cellView = [HCProductDetailHeaderTitleView nibView];
+        cellView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
         cell.m_subContentView = cellView;
     }
     
@@ -147,8 +148,10 @@
     MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
         cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
         
         UITextView *cellView = [[UITextView alloc] initWithFrame:cell.contentView.frame];
+        cellView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
         cellView.font = [UIFont systemFontOfSize:16.0f];
         cellView.textColor = [UIColor hx_colorWithHexString:@"333333"];
         cellView.userInteractionEnabled = NO;
