@@ -158,7 +158,7 @@
 }
 
 -(NSInteger)preferPageFirstAtIndex {
-    return 1;
+    return 0;
 }
 
 -(BOOL)isSubPageCanScrollForIndex:(NSInteger)index
