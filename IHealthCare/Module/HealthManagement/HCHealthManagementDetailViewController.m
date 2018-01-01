@@ -10,10 +10,12 @@
 #import "HCManagementDetailModel.h"
 #import "HCHighProductDetailCustomNavbar.h"
 #import "HCHealthManageDetailHeaderTitleView.h"
+#import "HCHealthManagementDetailToolBar.h"
 
-@interface HCHealthManagementDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCHealthManageDetailHeaderTitleViewDelegate>
+@interface HCHealthManagementDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCHealthManageDetailHeaderTitleViewDelegate,HCHealthManagementDetailToolBarDelegate>
 {
     HCHighProductDetailCustomNavbar *m_navBar;
+    HCHealthManagementDetailToolBar *m_toolBar;
     
     MFUITableView *m_tableView;
     NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
@@ -47,15 +49,15 @@
         make.left.equalTo(self.view);
     }];
     
-//    m_bottomView = [HCHighProductDetailBottomView nibView];
-//    m_bottomView.m_delegate = self;
-//    [self.view addSubview:m_bottomView];
-//    [m_bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.width.mas_equalTo(self.view);
-//        make.height.mas_equalTo(@(60));
-//        make.bottom.equalTo(self.view).offset(0);
-//        make.left.equalTo(self.view);
-//    }];
+    m_toolBar = [HCHealthManagementDetailToolBar nibView];
+    m_toolBar.m_delegate = self;
+    [self.view addSubview:m_toolBar];
+    [m_toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(self.view);
+        make.height.mas_equalTo(@(60));
+        make.bottom.equalTo(self.view).offset(0);
+        make.left.equalTo(self.view);
+    }];
     
     [self reloadTableView];
 }
@@ -186,16 +188,21 @@
     NSLog(@"onClickForwordButton");
 }
 
-//#pragma mark - HCHighProductDetailBottomViewDelegate
-//-(void)onClickBuyProduct
-//{
-//    NSLog(@"onClickBuyProduct");
-//}
-//
-//-(void)onClickCollectionProduct
-//{
-//    NSLog(@"onClickCollectionProduct");
-//}
+#pragma mark - HCHealthManagementDetailToolBarDelegate
+-(void)onClickMessageButton:(HCHealthManagementDetailToolBar *)toolBar
+{
+    NSLog(@"onClickMessageButton");
+}
+
+-(void)onClickPraiseButton:(HCHealthManagementDetailToolBar *)toolBar
+{
+    NSLog(@"onClickPraiseButton");
+}
+
+-(void)onClickWriteButton:(HCHealthManagementDetailToolBar *)toolBar
+{
+    NSLog(@"onClickWriteButton");
+}
 
 -(void)makeCellObjects
 {
@@ -227,12 +234,12 @@
 #pragma mark - HCHealthManageDetailHeaderTitleViewDelegate
 -(void)onClickChat:(HCManagementDetailModel *)itemModel
 {
-    
+    NSLog(@"onClickChat");
 }
 
 -(void)onClickFollowUp:(HCManagementDetailModel *)itemModel;
 {
-    
+    NSLog(@"onClickFollowUp");
 }
 
 - (void)didReceiveMemoryWarning {

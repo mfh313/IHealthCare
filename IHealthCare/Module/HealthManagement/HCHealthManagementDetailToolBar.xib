@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HCHealthManagementDetailToolBar">
+            <rect key="frame" x="0.0" y="0.0" width="394" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DMu-nL-Yej">
+                    <rect key="frame" x="10" y="10" width="276" height="40"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_write_nor" translatesAutoresizingMaskIntoConstraints="NO" id="kSZ-YT-1hV">
+                            <rect key="frame" x="20" y="13" width="14" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="14" id="cFt-Wj-gi5"/>
+                                <constraint firstAttribute="height" constant="14" id="ckQ-bP-cD1"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我要写评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqw-QZ-bRL">
+                            <rect key="frame" x="51" y="11.5" width="71.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CP8-0i-2OW">
+                            <rect key="frame" x="0.0" y="0.0" width="276" height="40"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Uqw-QZ-bRL" firstAttribute="leading" secondItem="kSZ-YT-1hV" secondAttribute="trailing" constant="17" id="08I-bn-WtF"/>
+                        <constraint firstAttribute="bottom" secondItem="CP8-0i-2OW" secondAttribute="bottom" id="67q-Pz-3xS"/>
+                        <constraint firstItem="CP8-0i-2OW" firstAttribute="top" secondItem="DMu-nL-Yej" secondAttribute="top" id="ADF-5T-e3e"/>
+                        <constraint firstItem="Uqw-QZ-bRL" firstAttribute="centerY" secondItem="kSZ-YT-1hV" secondAttribute="centerY" id="N5H-JU-twJ"/>
+                        <constraint firstAttribute="trailing" secondItem="CP8-0i-2OW" secondAttribute="trailing" id="Uel-ga-64l"/>
+                        <constraint firstItem="CP8-0i-2OW" firstAttribute="leading" secondItem="DMu-nL-Yej" secondAttribute="leading" id="Vzb-U8-Euh"/>
+                        <constraint firstItem="kSZ-YT-1hV" firstAttribute="leading" secondItem="DMu-nL-Yej" secondAttribute="leading" constant="20" id="eki-vF-n3g"/>
+                        <constraint firstItem="kSZ-YT-1hV" firstAttribute="centerY" secondItem="DMu-nL-Yej" secondAttribute="centerY" id="jI9-Yg-RPa"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3w-9c-AEZ">
+                    <rect key="frame" x="296" y="0.0" width="44" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="CxL-2w-fdA"/>
+                    </constraints>
+                    <state key="normal" image="home_btn_message_nor"/>
+                    <connections>
+                        <action selector="onClickMessageButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="4oR-cJ-yHM"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i4N-ub-wzY">
+                    <rect key="frame" x="340" y="0.0" width="44" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDL-Ih-EGC">
+                            <rect key="frame" x="0.0" y="0.0" width="44" height="60"/>
+                            <state key="normal" image="home_btn_praise_nor"/>
+                            <connections>
+                                <action selector="onClickPraiseButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="v9I-jx-JAN"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="uDL-Ih-EGC" secondAttribute="bottom" id="2fa-aG-ita"/>
+                        <constraint firstAttribute="trailing" secondItem="uDL-Ih-EGC" secondAttribute="trailing" id="35f-DU-yEq"/>
+                        <constraint firstItem="uDL-Ih-EGC" firstAttribute="top" secondItem="i4N-ub-wzY" secondAttribute="top" id="8I2-SR-DG4"/>
+                        <constraint firstItem="uDL-Ih-EGC" firstAttribute="leading" secondItem="i4N-ub-wzY" secondAttribute="leading" id="gdY-Hx-G2R"/>
+                        <constraint firstAttribute="width" constant="44" id="lp0-3F-GI0"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJv-XV-lci" customClass="MMOnePixLine">
+                    <rect key="frame" x="0.0" y="0.0" width="394" height="1"/>
+                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="FUS-qx-dIh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="i4N-ub-wzY" secondAttribute="trailing" constant="10" id="3oE-LE-fCy"/>
+                <constraint firstItem="i4N-ub-wzY" firstAttribute="leading" secondItem="X3w-9c-AEZ" secondAttribute="trailing" id="H1q-XK-sj4"/>
+                <constraint firstAttribute="bottom" secondItem="DMu-nL-Yej" secondAttribute="bottom" constant="10" id="Lyn-Cg-i4u"/>
+                <constraint firstItem="i4N-ub-wzY" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="NVF-64-iVF"/>
+                <constraint firstAttribute="trailing" secondItem="eJv-XV-lci" secondAttribute="trailing" id="NyE-J8-v5K"/>
+                <constraint firstAttribute="bottom" secondItem="i4N-ub-wzY" secondAttribute="bottom" id="bHY-EL-spk"/>
+                <constraint firstItem="DMu-nL-Yej" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="ccR-zL-XFd"/>
+                <constraint firstAttribute="bottom" secondItem="X3w-9c-AEZ" secondAttribute="bottom" id="fKO-Gs-JO4"/>
+                <constraint firstItem="DMu-nL-Yej" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="haf-iG-BaM"/>
+                <constraint firstItem="X3w-9c-AEZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hsr-3S-kg6"/>
+                <constraint firstItem="eJv-XV-lci" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="mE4-ED-nDA"/>
+                <constraint firstItem="eJv-XV-lci" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vIH-FR-1BC"/>
+                <constraint firstItem="i4N-ub-wzY" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xqy-OF-iyH"/>
+                <constraint firstItem="X3w-9c-AEZ" firstAttribute="leading" secondItem="DMu-nL-Yej" secondAttribute="trailing" constant="10" id="yPg-Mh-RUX"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="m_messageButton" destination="X3w-9c-AEZ" id="evp-eL-DQR"/>
+                <outlet property="m_praiseButton" destination="uDL-Ih-EGC" id="OUT-tO-JVN"/>
+                <outlet property="m_writeBgView" destination="DMu-nL-Yej" id="2Ij-Qr-Juq"/>
+            </connections>
+            <point key="canvasLocation" x="35" y="318"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="home_btn_message_nor" width="24" height="24"/>
+        <image name="home_btn_praise_nor" width="24" height="24"/>
+        <image name="home_icon_write_nor" width="14" height="14"/>
+    </resources>
+</document>

@@ -50,6 +50,8 @@
 		A5190E7B1FFA655F00BBF049 /* HCTopCureMainTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E541FFA655F00BBF049 /* HCTopCureMainTabView.m */; };
 		A5190E7C1FFA655F00BBF049 /* HCTopCureMainTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E561FFA655F00BBF049 /* HCTopCureMainTagView.m */; };
 		A5190E7D1FFA655F00BBF049 /* HCTopCureMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E581FFA655F00BBF049 /* HCTopCureMainViewController.m */; };
+		A5190E801FFA736000BBF049 /* HCHealthManagementDetailToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E7F1FFA736000BBF049 /* HCHealthManagementDetailToolBar.m */; };
+		A5190E821FFA737D00BBF049 /* HCHealthManagementDetailToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5190E811FFA737D00BBF049 /* HCHealthManagementDetailToolBar.xib */; };
 		A520E5FC1FEE72AA00E4EFAD /* MMTableViewUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5FB1FEE72AA00E4EFAD /* MMTableViewUserInfo.m */; };
 		A520E5FF1FEE734F00E4EFAD /* MMTableViewCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5FE1FEE734F00E4EFAD /* MMTableViewCellInfo.m */; };
 		A520E6021FEE755A00E4EFAD /* MMTableViewSectionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E6011FEE755A00E4EFAD /* MMTableViewSectionInfo.m */; };
@@ -293,6 +295,9 @@
 		A5190E561FFA655F00BBF049 /* HCTopCureMainTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTopCureMainTagView.m; sourceTree = "<group>"; };
 		A5190E571FFA655F00BBF049 /* HCTopCureMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTopCureMainViewController.h; sourceTree = "<group>"; };
 		A5190E581FFA655F00BBF049 /* HCTopCureMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTopCureMainViewController.m; sourceTree = "<group>"; };
+		A5190E7E1FFA736000BBF049 /* HCHealthManagementDetailToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementDetailToolBar.h; sourceTree = "<group>"; };
+		A5190E7F1FFA736000BBF049 /* HCHealthManagementDetailToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementDetailToolBar.m; sourceTree = "<group>"; };
+		A5190E811FFA737D00BBF049 /* HCHealthManagementDetailToolBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCHealthManagementDetailToolBar.xib; sourceTree = "<group>"; };
 		A520E5FA1FEE72AA00E4EFAD /* MMTableViewUserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTableViewUserInfo.h; sourceTree = "<group>"; };
 		A520E5FB1FEE72AA00E4EFAD /* MMTableViewUserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTableViewUserInfo.m; sourceTree = "<group>"; };
 		A520E5FD1FEE734F00E4EFAD /* MMTableViewCellInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTableViewCellInfo.h; sourceTree = "<group>"; };
@@ -694,6 +699,9 @@
 				A5190E241FFA655F00BBF049 /* HCHealthManagementClassRoomCellView.xib */,
 				A5190E251FFA655F00BBF049 /* HCHealthManagementClassRoomViewController.h */,
 				A5190E261FFA655F00BBF049 /* HCHealthManagementClassRoomViewController.m */,
+				A5190E7E1FFA736000BBF049 /* HCHealthManagementDetailToolBar.h */,
+				A5190E7F1FFA736000BBF049 /* HCHealthManagementDetailToolBar.m */,
+				A5190E811FFA737D00BBF049 /* HCHealthManagementDetailToolBar.xib */,
 				A5190E271FFA655F00BBF049 /* HCHealthManagementDetailViewController.h */,
 				A5190E281FFA655F00BBF049 /* HCHealthManagementDetailViewController.m */,
 				A5190E291FFA655F00BBF049 /* HCHealthManagementMainViewController.h */,
@@ -1544,6 +1552,7 @@
 				A5190E661FFA655F00BBF049 /* HCHealthMedicalServiceCellView.xib in Resources */,
 				A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */,
 				A56CD7841FD0306C00FFF504 /* LoginAssets.xcassets in Resources */,
+				A5190E821FFA737D00BBF049 /* HCHealthManagementDetailToolBar.xib in Resources */,
 				A5190E5A1FFA655F00BBF049 /* HCHealthManageDetailHeaderTitleView.xib in Resources */,
 				A57B47EE1FCEF9190004C397 /* IQKeyboardManager.bundle in Resources */,
 				A566B4E11FD2EA6F004F6843 /* HCUserRegisterHeaderView.xib in Resources */,
@@ -1766,6 +1775,7 @@
 				A566B4D61FD297FE004F6843 /* UINavigationItem+margin.m in Sources */,
 				A57B480A1FCEF9190004C397 /* UnknownFieldSet.m in Sources */,
 				A57B47E31FCEF9190004C397 /* IQUIView+Hierarchy.m in Sources */,
+				A5190E801FFA736000BBF049 /* HCHealthManagementDetailToolBar.m in Sources */,
 				A57B481E1FCEF9190004C397 /* NSMutableString+SafeInsert.m in Sources */,
 				A5BDB5051FE65B010052B51B /* HCBestNewsDetailModel.m in Sources */,
 				A57B48461FCEF9190004C397 /* NSObject+YYModel.m in Sources */,
