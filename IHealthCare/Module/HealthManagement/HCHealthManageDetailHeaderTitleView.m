@@ -24,6 +24,15 @@
 
 @implementation HCHealthManageDetailHeaderTitleView
 
+-(void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    [m_eyeButton setImage:MFImage(@"management_btn_focus_nor") forState:UIControlStateNormal];
+    [m_eyeButton setImage:MFImage(@"management_btn_focus_press") forState:UIControlStateHighlighted];
+    [m_eyeButton setImage:MFImage(@"management_btn_focus_press") forState:UIControlStateSelected];
+}
+
 -(void)setManagementDetail:(HCManagementDetailModel *)itemModel
 {
     m_detailModel = itemModel;

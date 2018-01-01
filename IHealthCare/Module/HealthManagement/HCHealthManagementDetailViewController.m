@@ -207,7 +207,7 @@
     [m_cellInfos addObject:HealthImage];
     
     MFTableViewCellObject *healthTitle = [MFTableViewCellObject new];
-    healthTitle.cellHeight = 80.0f;
+    healthTitle.cellHeight = 96.0f;
     healthTitle.cellReuseIdentifier = @"healthTitle";
     [m_cellInfos addObject:healthTitle];
     
