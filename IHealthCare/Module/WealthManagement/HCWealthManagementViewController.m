@@ -10,6 +10,7 @@
 #import "HCGetHealthControlsApi.h"
 #import "HCHealthManagementCellView.h"
 #import "HCManagementDetailModel.h"
+#import "HCHealthManagementDetailViewController.h"
 
 @interface HCWealthManagementViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCHealthManagementCellViewDelegate>
 {
@@ -46,6 +47,12 @@
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf getHealthControls];
     }];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -164,7 +171,10 @@
 #pragma mark - HCHealthManagementCellViewDelegate
 -(void)onClickShowManagementDetail:(HCManagementDetailModel *)itemModel
 {
-    
+    HCHealthManagementDetailViewController *detailVC = [HCHealthManagementDetailViewController new];
+    detailVC.detailModel = itemModel;
+    detailVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
