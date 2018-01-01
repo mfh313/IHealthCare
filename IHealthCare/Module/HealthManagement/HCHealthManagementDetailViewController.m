@@ -11,7 +11,7 @@
 #import "HCHighProductDetailCustomNavbar.h"
 #import "HCHealthManageDetailHeaderTitleView.h"
 
-@interface HCHealthManagementDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface HCHealthManagementDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCHealthManageDetailHeaderTitleViewDelegate>
 {
     HCHighProductDetailCustomNavbar *m_navBar;
     
@@ -134,6 +134,7 @@
         cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         
         HCHealthManageDetailHeaderTitleView *cellView = [HCHealthManageDetailHeaderTitleView nibView];
+        cellView.m_delegate = self;
         cellView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
         cell.m_subContentView = cellView;
     }
@@ -221,6 +222,17 @@
     [self makeCellObjects];
     
     [m_tableView reloadData];
+}
+
+#pragma mark - HCHealthManageDetailHeaderTitleViewDelegate
+-(void)onClickChat:(HCManagementDetailModel *)itemModel
+{
+    
+}
+
+-(void)onClickFollowUp:(HCManagementDetailModel *)itemModel;
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {

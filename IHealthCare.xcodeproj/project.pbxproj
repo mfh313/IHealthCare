@@ -8,15 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		58B5C84FF304ABEEE42AA899 /* libPods-IHealthCare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */; };
-		A50F83D31FF885A900459B57 /* HCBestNewsDetailTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A50F83D21FF885A900459B57 /* HCBestNewsDetailTitleView.m */; };
-		A50F83D51FF8870900459B57 /* HCBestNewsDetailTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50F83D41FF8870900459B57 /* HCBestNewsDetailTitleView.xib */; };
-		A50F83D81FF8DA5100459B57 /* HCBestNewsDetailToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A50F83D71FF8DA5100459B57 /* HCBestNewsDetailToolBar.m */; };
-		A50F83DA1FF8ECC500459B57 /* HCBestNewsDetailToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50F83D91FF8ECC500459B57 /* HCBestNewsDetailToolBar.xib */; };
 		A511F3531FD425B700AE5D57 /* HealthCareCenterMenuMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = A511F3521FD425B700AE5D57 /* HealthCareCenterMenuMainView.m */; };
 		A511F3551FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A511F3541FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib */; };
 		A511F3581FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A511F3571FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m */; };
 		A511F35A1FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A511F3591FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib */; };
 		A5124EC21FECFB6400F37317 /* HCManagementDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5124EC11FECFB6400F37317 /* HCManagementDetailModel.m */; };
+		A5190E591FFA655F00BBF049 /* HCHealthManageDetailHeaderTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E1B1FFA655F00BBF049 /* HCHealthManageDetailHeaderTitleView.m */; };
+		A5190E5A1FFA655F00BBF049 /* HCHealthManageDetailHeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5190E1C1FFA655F00BBF049 /* HCHealthManageDetailHeaderTitleView.xib */; };
+		A5190E5B1FFA655F00BBF049 /* HCHealthManagementAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E1E1FFA655F00BBF049 /* HCHealthManagementAnalysisViewController.m */; };
+		A5190E5C1FFA655F00BBF049 /* HCHealthManagementCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E201FFA655F00BBF049 /* HCHealthManagementCellView.m */; };
+		A5190E5D1FFA655F00BBF049 /* HCHealthManagementCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5190E211FFA655F00BBF049 /* HCHealthManagementCellView.xib */; };
+		A5190E5E1FFA655F00BBF049 /* HCHealthManagementClassRoomCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E231FFA655F00BBF049 /* HCHealthManagementClassRoomCellView.m */; };
+		A5190E5F1FFA655F00BBF049 /* HCHealthManagementClassRoomCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5190E241FFA655F00BBF049 /* HCHealthManagementClassRoomCellView.xib */; };
+		A5190E601FFA655F00BBF049 /* HCHealthManagementClassRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E261FFA655F00BBF049 /* HCHealthManagementClassRoomViewController.m */; };
+		A5190E611FFA655F00BBF049 /* HCHealthManagementDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E281FFA655F00BBF049 /* HCHealthManagementDetailViewController.m */; };
+		A5190E621FFA655F00BBF049 /* HCHealthManagementMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E2A1FFA655F00BBF049 /* HCHealthManagementMainViewController.m */; };
+		A5190E631FFA655F00BBF049 /* HCHealthManagementMedicalServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E2C1FFA655F00BBF049 /* HCHealthManagementMedicalServiceViewController.m */; };
+		A5190E641FFA655F00BBF049 /* HCHealthManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E2E1FFA655F00BBF049 /* HCHealthManagementViewController.m */; };
+		A5190E651FFA655F00BBF049 /* HCHealthMedicalServiceCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E301FFA655F00BBF049 /* HCHealthMedicalServiceCellView.m */; };
+		A5190E661FFA655F00BBF049 /* HCHealthMedicalServiceCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5190E311FFA655F00BBF049 /* HCHealthMedicalServiceCellView.xib */; };
+		A5190E671FFA655F00BBF049 /* HCBestNewsCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E341FFA655F00BBF049 /* HCBestNewsCellView.m */; };
+		A5190E681FFA655F00BBF049 /* HCBestNewsCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5190E351FFA655F00BBF049 /* HCBestNewsCellView.xib */; };
+		A5190E691FFA655F00BBF049 /* HCBestNewsDetailTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E371FFA655F00BBF049 /* HCBestNewsDetailTitleView.m */; };
+		A5190E6A1FFA655F00BBF049 /* HCBestNewsDetailTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5190E381FFA655F00BBF049 /* HCBestNewsDetailTitleView.xib */; };
+		A5190E6B1FFA655F00BBF049 /* HCBestNewsDetailToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E3A1FFA655F00BBF049 /* HCBestNewsDetailToolBar.m */; };
+		A5190E6C1FFA655F00BBF049 /* HCBestNewsDetailToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5190E3B1FFA655F00BBF049 /* HCBestNewsDetailToolBar.xib */; };
+		A5190E6D1FFA655F00BBF049 /* HCBestNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E3D1FFA655F00BBF049 /* HCBestNewsDetailViewController.m */; };
+		A5190E6E1FFA655F00BBF049 /* HCBestNewsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E3F1FFA655F00BBF049 /* HCBestNewsMainViewController.m */; };
+		A5190E6F1FFA655F00BBF049 /* HCHighProductCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E411FFA655F00BBF049 /* HCHighProductCellView.m */; };
+		A5190E701FFA655F00BBF049 /* HCHighProductCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5190E421FFA655F00BBF049 /* HCHighProductCellView.xib */; };
+		A5190E711FFA655F00BBF049 /* HCHighProductDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E441FFA655F00BBF049 /* HCHighProductDetailBottomView.m */; };
+		A5190E721FFA655F00BBF049 /* HCHighProductDetailBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5190E451FFA655F00BBF049 /* HCHighProductDetailBottomView.xib */; };
+		A5190E731FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E471FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.m */; };
+		A5190E741FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5190E481FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.xib */; };
+		A5190E751FFA655F00BBF049 /* HCHighProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E4A1FFA655F00BBF049 /* HCHighProductDetailViewController.m */; };
+		A5190E761FFA655F00BBF049 /* HCHighProductMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E4C1FFA655F00BBF049 /* HCHighProductMainViewController.m */; };
+		A5190E771FFA655F00BBF049 /* HCProductDetailHeaderTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E4E1FFA655F00BBF049 /* HCProductDetailHeaderTitleView.m */; };
+		A5190E781FFA655F00BBF049 /* HCProductDetailHeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5190E4F1FFA655F00BBF049 /* HCProductDetailHeaderTitleView.xib */; };
+		A5190E791FFA655F00BBF049 /* HCTopCureMainCustomNavbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E511FFA655F00BBF049 /* HCTopCureMainCustomNavbar.m */; };
+		A5190E7A1FFA655F00BBF049 /* HCTopCureMainCustomNavbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5190E521FFA655F00BBF049 /* HCTopCureMainCustomNavbar.xib */; };
+		A5190E7B1FFA655F00BBF049 /* HCTopCureMainTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E541FFA655F00BBF049 /* HCTopCureMainTabView.m */; };
+		A5190E7C1FFA655F00BBF049 /* HCTopCureMainTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E561FFA655F00BBF049 /* HCTopCureMainTagView.m */; };
+		A5190E7D1FFA655F00BBF049 /* HCTopCureMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E581FFA655F00BBF049 /* HCTopCureMainViewController.m */; };
 		A520E5FC1FEE72AA00E4EFAD /* MMTableViewUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5FB1FEE72AA00E4EFAD /* MMTableViewUserInfo.m */; };
 		A520E5FF1FEE734F00E4EFAD /* MMTableViewCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5FE1FEE734F00E4EFAD /* MMTableViewCellInfo.m */; };
 		A520E6021FEE755A00E4EFAD /* MMTableViewSectionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E6011FEE755A00E4EFAD /* MMTableViewSectionInfo.m */; };
@@ -65,36 +98,6 @@
 		A56CD78B1FD0330A00FFF504 /* HCLoginContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A56CD78A1FD0330A00FFF504 /* HCLoginContentView.m */; };
 		A56CD78D1FD033CB00FFF504 /* HCLoginContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A56CD78C1FD033CB00FFF504 /* HCLoginContentView.xib */; };
 		A56CD78F1FD0424100FFF504 /* commonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56CD78E1FD0424100FFF504 /* commonAssets.xcassets */; };
-		A57004E61FF787C80007F126 /* HCHealthManagementAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004B31FF787C80007F126 /* HCHealthManagementAnalysisViewController.m */; };
-		A57004E71FF787C80007F126 /* HCHealthManagementCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004B51FF787C80007F126 /* HCHealthManagementCellView.m */; };
-		A57004E81FF787C80007F126 /* HCHealthManagementCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57004B61FF787C80007F126 /* HCHealthManagementCellView.xib */; };
-		A57004E91FF787C80007F126 /* HCHealthManagementClassRoomCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004B81FF787C80007F126 /* HCHealthManagementClassRoomCellView.m */; };
-		A57004EA1FF787C80007F126 /* HCHealthManagementClassRoomCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57004B91FF787C80007F126 /* HCHealthManagementClassRoomCellView.xib */; };
-		A57004EB1FF787C80007F126 /* HCHealthManagementClassRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004BB1FF787C80007F126 /* HCHealthManagementClassRoomViewController.m */; };
-		A57004EC1FF787C80007F126 /* HCHealthManagementMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004BD1FF787C80007F126 /* HCHealthManagementMainViewController.m */; };
-		A57004ED1FF787C80007F126 /* HCHealthManagementMedicalServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004BF1FF787C80007F126 /* HCHealthManagementMedicalServiceViewController.m */; };
-		A57004EE1FF787C80007F126 /* HCHealthManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004C11FF787C80007F126 /* HCHealthManagementViewController.m */; };
-		A57004EF1FF787C80007F126 /* HCHealthMedicalServiceCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004C31FF787C80007F126 /* HCHealthMedicalServiceCellView.m */; };
-		A57004F01FF787C80007F126 /* HCHealthMedicalServiceCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57004C41FF787C80007F126 /* HCHealthMedicalServiceCellView.xib */; };
-		A57004F11FF787C80007F126 /* HCBestNewsCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004C71FF787C80007F126 /* HCBestNewsCellView.m */; };
-		A57004F21FF787C80007F126 /* HCBestNewsCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57004C81FF787C80007F126 /* HCBestNewsCellView.xib */; };
-		A57004F31FF787C80007F126 /* HCBestNewsDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004CA1FF787C80007F126 /* HCBestNewsDetailViewController.m */; };
-		A57004F41FF787C80007F126 /* HCBestNewsMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004CC1FF787C80007F126 /* HCBestNewsMainViewController.m */; };
-		A57004F51FF787C80007F126 /* HCHighProductCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004CE1FF787C80007F126 /* HCHighProductCellView.m */; };
-		A57004F61FF787C80007F126 /* HCHighProductCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57004CF1FF787C80007F126 /* HCHighProductCellView.xib */; };
-		A57004F71FF787C80007F126 /* HCHighProductDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004D11FF787C80007F126 /* HCHighProductDetailBottomView.m */; };
-		A57004F81FF787C80007F126 /* HCHighProductDetailBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57004D21FF787C80007F126 /* HCHighProductDetailBottomView.xib */; };
-		A57004F91FF787C80007F126 /* HCHighProductDetailCustomNavbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004D41FF787C80007F126 /* HCHighProductDetailCustomNavbar.m */; };
-		A57004FA1FF787C80007F126 /* HCHighProductDetailCustomNavbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57004D51FF787C80007F126 /* HCHighProductDetailCustomNavbar.xib */; };
-		A57004FB1FF787C80007F126 /* HCHighProductDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004D71FF787C80007F126 /* HCHighProductDetailViewController.m */; };
-		A57004FC1FF787C80007F126 /* HCHighProductMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004D91FF787C80007F126 /* HCHighProductMainViewController.m */; };
-		A57004FD1FF787C80007F126 /* HCProductDetailHeaderTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004DB1FF787C80007F126 /* HCProductDetailHeaderTitleView.m */; };
-		A57004FE1FF787C80007F126 /* HCProductDetailHeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57004DC1FF787C80007F126 /* HCProductDetailHeaderTitleView.xib */; };
-		A57004FF1FF787C80007F126 /* HCTopCureMainCustomNavbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004DE1FF787C80007F126 /* HCTopCureMainCustomNavbar.m */; };
-		A57005001FF787C80007F126 /* HCTopCureMainCustomNavbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A57004DF1FF787C80007F126 /* HCTopCureMainCustomNavbar.xib */; };
-		A57005011FF787C80007F126 /* HCTopCureMainTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004E11FF787C80007F126 /* HCTopCureMainTabView.m */; };
-		A57005021FF787C80007F126 /* HCTopCureMainTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004E31FF787C80007F126 /* HCTopCureMainTagView.m */; };
-		A57005031FF787C80007F126 /* HCTopCureMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A57004E51FF787C80007F126 /* HCTopCureMainViewController.m */; };
 		A575874D1FE519A0000FC7CB /* HCGetProductsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A575874C1FE519A0000FC7CB /* HCGetProductsApi.m */; };
 		A57587511FE52733000FC7CB /* HCProductDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A57587501FE52733000FC7CB /* HCProductDetailModel.m */; };
 		A57A90C11FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A57A90C01FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m */; };
@@ -216,19 +219,10 @@
 		A5D9AE371FDBB98100B5D4C0 /* HealthCareApiManger.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE361FDBB98100B5D4C0 /* HealthCareApiManger.m */; };
 		A5D9AE3A1FDBC14100B5D4C0 /* HCGetVerifyCodeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE391FDBC14100B5D4C0 /* HCGetVerifyCodeApi.m */; };
 		A5D9AE3D1FDBCADB00B5D4C0 /* HCUserLoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE3C1FDBCADB00B5D4C0 /* HCUserLoginApi.m */; };
-		A5DDC1C51FF9E10500F084C1 /* HCHealthManagementDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DDC1C41FF9E10500F084C1 /* HCHealthManagementDetailViewController.m */; };
-		A5DDC1C81FFA2DC600F084C1 /* HCHealthManageDetailHeaderTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DDC1C71FFA2DC600F084C1 /* HCHealthManageDetailHeaderTitleView.m */; };
-		A5DDC1CA1FFA2E4000F084C1 /* HCHealthManageDetailHeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DDC1C91FFA2E4000F084C1 /* HCHealthManageDetailHeaderTitleView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A41FACF4AE9BA7E925BD1703 /* Pods-IHealthCare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.debug.xcconfig"; sourceTree = "<group>"; };
-		A50F83D11FF885A900459B57 /* HCBestNewsDetailTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBestNewsDetailTitleView.h; sourceTree = "<group>"; };
-		A50F83D21FF885A900459B57 /* HCBestNewsDetailTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailTitleView.m; sourceTree = "<group>"; };
-		A50F83D41FF8870900459B57 /* HCBestNewsDetailTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCBestNewsDetailTitleView.xib; sourceTree = "<group>"; };
-		A50F83D61FF8DA5100459B57 /* HCBestNewsDetailToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBestNewsDetailToolBar.h; sourceTree = "<group>"; };
-		A50F83D71FF8DA5100459B57 /* HCBestNewsDetailToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailToolBar.m; sourceTree = "<group>"; };
-		A50F83D91FF8ECC500459B57 /* HCBestNewsDetailToolBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCBestNewsDetailToolBar.xib; sourceTree = "<group>"; };
 		A511F3511FD425B700AE5D57 /* HealthCareCenterMenuMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthCareCenterMenuMainView.h; sourceTree = "<group>"; };
 		A511F3521FD425B700AE5D57 /* HealthCareCenterMenuMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthCareCenterMenuMainView.m; sourceTree = "<group>"; };
 		A511F3541FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthCareCenterMenuMainView.xib; sourceTree = "<group>"; };
@@ -237,6 +231,68 @@
 		A511F3591FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthCareCenterMenuItemView.xib; sourceTree = "<group>"; };
 		A5124EC01FECFB6400F37317 /* HCManagementDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCManagementDetailModel.h; sourceTree = "<group>"; };
 		A5124EC11FECFB6400F37317 /* HCManagementDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCManagementDetailModel.m; sourceTree = "<group>"; };
+		A5190E1A1FFA655F00BBF049 /* HCHealthManageDetailHeaderTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManageDetailHeaderTitleView.h; sourceTree = "<group>"; };
+		A5190E1B1FFA655F00BBF049 /* HCHealthManageDetailHeaderTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManageDetailHeaderTitleView.m; sourceTree = "<group>"; };
+		A5190E1C1FFA655F00BBF049 /* HCHealthManageDetailHeaderTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHealthManageDetailHeaderTitleView.xib; sourceTree = "<group>"; };
+		A5190E1D1FFA655F00BBF049 /* HCHealthManagementAnalysisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementAnalysisViewController.h; sourceTree = "<group>"; };
+		A5190E1E1FFA655F00BBF049 /* HCHealthManagementAnalysisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementAnalysisViewController.m; sourceTree = "<group>"; };
+		A5190E1F1FFA655F00BBF049 /* HCHealthManagementCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementCellView.h; sourceTree = "<group>"; };
+		A5190E201FFA655F00BBF049 /* HCHealthManagementCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementCellView.m; sourceTree = "<group>"; };
+		A5190E211FFA655F00BBF049 /* HCHealthManagementCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHealthManagementCellView.xib; sourceTree = "<group>"; };
+		A5190E221FFA655F00BBF049 /* HCHealthManagementClassRoomCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementClassRoomCellView.h; sourceTree = "<group>"; };
+		A5190E231FFA655F00BBF049 /* HCHealthManagementClassRoomCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementClassRoomCellView.m; sourceTree = "<group>"; };
+		A5190E241FFA655F00BBF049 /* HCHealthManagementClassRoomCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHealthManagementClassRoomCellView.xib; sourceTree = "<group>"; };
+		A5190E251FFA655F00BBF049 /* HCHealthManagementClassRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementClassRoomViewController.h; sourceTree = "<group>"; };
+		A5190E261FFA655F00BBF049 /* HCHealthManagementClassRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementClassRoomViewController.m; sourceTree = "<group>"; };
+		A5190E271FFA655F00BBF049 /* HCHealthManagementDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementDetailViewController.h; sourceTree = "<group>"; };
+		A5190E281FFA655F00BBF049 /* HCHealthManagementDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementDetailViewController.m; sourceTree = "<group>"; };
+		A5190E291FFA655F00BBF049 /* HCHealthManagementMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementMainViewController.h; sourceTree = "<group>"; };
+		A5190E2A1FFA655F00BBF049 /* HCHealthManagementMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementMainViewController.m; sourceTree = "<group>"; };
+		A5190E2B1FFA655F00BBF049 /* HCHealthManagementMedicalServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementMedicalServiceViewController.h; sourceTree = "<group>"; };
+		A5190E2C1FFA655F00BBF049 /* HCHealthManagementMedicalServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementMedicalServiceViewController.m; sourceTree = "<group>"; };
+		A5190E2D1FFA655F00BBF049 /* HCHealthManagementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementViewController.h; sourceTree = "<group>"; };
+		A5190E2E1FFA655F00BBF049 /* HCHealthManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementViewController.m; sourceTree = "<group>"; };
+		A5190E2F1FFA655F00BBF049 /* HCHealthMedicalServiceCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthMedicalServiceCellView.h; sourceTree = "<group>"; };
+		A5190E301FFA655F00BBF049 /* HCHealthMedicalServiceCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthMedicalServiceCellView.m; sourceTree = "<group>"; };
+		A5190E311FFA655F00BBF049 /* HCHealthMedicalServiceCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHealthMedicalServiceCellView.xib; sourceTree = "<group>"; };
+		A5190E331FFA655F00BBF049 /* HCBestNewsCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBestNewsCellView.h; sourceTree = "<group>"; };
+		A5190E341FFA655F00BBF049 /* HCBestNewsCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsCellView.m; sourceTree = "<group>"; };
+		A5190E351FFA655F00BBF049 /* HCBestNewsCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCBestNewsCellView.xib; sourceTree = "<group>"; };
+		A5190E361FFA655F00BBF049 /* HCBestNewsDetailTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBestNewsDetailTitleView.h; sourceTree = "<group>"; };
+		A5190E371FFA655F00BBF049 /* HCBestNewsDetailTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailTitleView.m; sourceTree = "<group>"; };
+		A5190E381FFA655F00BBF049 /* HCBestNewsDetailTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCBestNewsDetailTitleView.xib; sourceTree = "<group>"; };
+		A5190E391FFA655F00BBF049 /* HCBestNewsDetailToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBestNewsDetailToolBar.h; sourceTree = "<group>"; };
+		A5190E3A1FFA655F00BBF049 /* HCBestNewsDetailToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailToolBar.m; sourceTree = "<group>"; };
+		A5190E3B1FFA655F00BBF049 /* HCBestNewsDetailToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCBestNewsDetailToolBar.xib; sourceTree = "<group>"; };
+		A5190E3C1FFA655F00BBF049 /* HCBestNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBestNewsDetailViewController.h; sourceTree = "<group>"; };
+		A5190E3D1FFA655F00BBF049 /* HCBestNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailViewController.m; sourceTree = "<group>"; };
+		A5190E3E1FFA655F00BBF049 /* HCBestNewsMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBestNewsMainViewController.h; sourceTree = "<group>"; };
+		A5190E3F1FFA655F00BBF049 /* HCBestNewsMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsMainViewController.m; sourceTree = "<group>"; };
+		A5190E401FFA655F00BBF049 /* HCHighProductCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHighProductCellView.h; sourceTree = "<group>"; };
+		A5190E411FFA655F00BBF049 /* HCHighProductCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHighProductCellView.m; sourceTree = "<group>"; };
+		A5190E421FFA655F00BBF049 /* HCHighProductCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHighProductCellView.xib; sourceTree = "<group>"; };
+		A5190E431FFA655F00BBF049 /* HCHighProductDetailBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHighProductDetailBottomView.h; sourceTree = "<group>"; };
+		A5190E441FFA655F00BBF049 /* HCHighProductDetailBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHighProductDetailBottomView.m; sourceTree = "<group>"; };
+		A5190E451FFA655F00BBF049 /* HCHighProductDetailBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHighProductDetailBottomView.xib; sourceTree = "<group>"; };
+		A5190E461FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHighProductDetailCustomNavbar.h; sourceTree = "<group>"; };
+		A5190E471FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHighProductDetailCustomNavbar.m; sourceTree = "<group>"; };
+		A5190E481FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHighProductDetailCustomNavbar.xib; sourceTree = "<group>"; };
+		A5190E491FFA655F00BBF049 /* HCHighProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHighProductDetailViewController.h; sourceTree = "<group>"; };
+		A5190E4A1FFA655F00BBF049 /* HCHighProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHighProductDetailViewController.m; sourceTree = "<group>"; };
+		A5190E4B1FFA655F00BBF049 /* HCHighProductMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHighProductMainViewController.h; sourceTree = "<group>"; };
+		A5190E4C1FFA655F00BBF049 /* HCHighProductMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHighProductMainViewController.m; sourceTree = "<group>"; };
+		A5190E4D1FFA655F00BBF049 /* HCProductDetailHeaderTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCProductDetailHeaderTitleView.h; sourceTree = "<group>"; };
+		A5190E4E1FFA655F00BBF049 /* HCProductDetailHeaderTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCProductDetailHeaderTitleView.m; sourceTree = "<group>"; };
+		A5190E4F1FFA655F00BBF049 /* HCProductDetailHeaderTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCProductDetailHeaderTitleView.xib; sourceTree = "<group>"; };
+		A5190E501FFA655F00BBF049 /* HCTopCureMainCustomNavbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTopCureMainCustomNavbar.h; sourceTree = "<group>"; };
+		A5190E511FFA655F00BBF049 /* HCTopCureMainCustomNavbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTopCureMainCustomNavbar.m; sourceTree = "<group>"; };
+		A5190E521FFA655F00BBF049 /* HCTopCureMainCustomNavbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCTopCureMainCustomNavbar.xib; sourceTree = "<group>"; };
+		A5190E531FFA655F00BBF049 /* HCTopCureMainTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTopCureMainTabView.h; sourceTree = "<group>"; };
+		A5190E541FFA655F00BBF049 /* HCTopCureMainTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTopCureMainTabView.m; sourceTree = "<group>"; };
+		A5190E551FFA655F00BBF049 /* HCTopCureMainTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTopCureMainTagView.h; sourceTree = "<group>"; };
+		A5190E561FFA655F00BBF049 /* HCTopCureMainTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTopCureMainTagView.m; sourceTree = "<group>"; };
+		A5190E571FFA655F00BBF049 /* HCTopCureMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTopCureMainViewController.h; sourceTree = "<group>"; };
+		A5190E581FFA655F00BBF049 /* HCTopCureMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTopCureMainViewController.m; sourceTree = "<group>"; };
 		A520E5FA1FEE72AA00E4EFAD /* MMTableViewUserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTableViewUserInfo.h; sourceTree = "<group>"; };
 		A520E5FB1FEE72AA00E4EFAD /* MMTableViewUserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTableViewUserInfo.m; sourceTree = "<group>"; };
 		A520E5FD1FEE734F00E4EFAD /* MMTableViewCellInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTableViewCellInfo.h; sourceTree = "<group>"; };
@@ -327,57 +383,6 @@
 		A56CD78A1FD0330A00FFF504 /* HCLoginContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCLoginContentView.m; sourceTree = "<group>"; };
 		A56CD78C1FD033CB00FFF504 /* HCLoginContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCLoginContentView.xib; sourceTree = "<group>"; };
 		A56CD78E1FD0424100FFF504 /* commonAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = commonAssets.xcassets; sourceTree = "<group>"; };
-		A57004B21FF787C80007F126 /* HCHealthManagementAnalysisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementAnalysisViewController.h; sourceTree = "<group>"; };
-		A57004B31FF787C80007F126 /* HCHealthManagementAnalysisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementAnalysisViewController.m; sourceTree = "<group>"; };
-		A57004B41FF787C80007F126 /* HCHealthManagementCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementCellView.h; sourceTree = "<group>"; };
-		A57004B51FF787C80007F126 /* HCHealthManagementCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementCellView.m; sourceTree = "<group>"; };
-		A57004B61FF787C80007F126 /* HCHealthManagementCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHealthManagementCellView.xib; sourceTree = "<group>"; };
-		A57004B71FF787C80007F126 /* HCHealthManagementClassRoomCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementClassRoomCellView.h; sourceTree = "<group>"; };
-		A57004B81FF787C80007F126 /* HCHealthManagementClassRoomCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementClassRoomCellView.m; sourceTree = "<group>"; };
-		A57004B91FF787C80007F126 /* HCHealthManagementClassRoomCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHealthManagementClassRoomCellView.xib; sourceTree = "<group>"; };
-		A57004BA1FF787C80007F126 /* HCHealthManagementClassRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementClassRoomViewController.h; sourceTree = "<group>"; };
-		A57004BB1FF787C80007F126 /* HCHealthManagementClassRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementClassRoomViewController.m; sourceTree = "<group>"; };
-		A57004BC1FF787C80007F126 /* HCHealthManagementMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementMainViewController.h; sourceTree = "<group>"; };
-		A57004BD1FF787C80007F126 /* HCHealthManagementMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementMainViewController.m; sourceTree = "<group>"; };
-		A57004BE1FF787C80007F126 /* HCHealthManagementMedicalServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementMedicalServiceViewController.h; sourceTree = "<group>"; };
-		A57004BF1FF787C80007F126 /* HCHealthManagementMedicalServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementMedicalServiceViewController.m; sourceTree = "<group>"; };
-		A57004C01FF787C80007F126 /* HCHealthManagementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementViewController.h; sourceTree = "<group>"; };
-		A57004C11FF787C80007F126 /* HCHealthManagementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementViewController.m; sourceTree = "<group>"; };
-		A57004C21FF787C80007F126 /* HCHealthMedicalServiceCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthMedicalServiceCellView.h; sourceTree = "<group>"; };
-		A57004C31FF787C80007F126 /* HCHealthMedicalServiceCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthMedicalServiceCellView.m; sourceTree = "<group>"; };
-		A57004C41FF787C80007F126 /* HCHealthMedicalServiceCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHealthMedicalServiceCellView.xib; sourceTree = "<group>"; };
-		A57004C61FF787C80007F126 /* HCBestNewsCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBestNewsCellView.h; sourceTree = "<group>"; };
-		A57004C71FF787C80007F126 /* HCBestNewsCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsCellView.m; sourceTree = "<group>"; };
-		A57004C81FF787C80007F126 /* HCBestNewsCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCBestNewsCellView.xib; sourceTree = "<group>"; };
-		A57004C91FF787C80007F126 /* HCBestNewsDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBestNewsDetailViewController.h; sourceTree = "<group>"; };
-		A57004CA1FF787C80007F126 /* HCBestNewsDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailViewController.m; sourceTree = "<group>"; };
-		A57004CB1FF787C80007F126 /* HCBestNewsMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCBestNewsMainViewController.h; sourceTree = "<group>"; };
-		A57004CC1FF787C80007F126 /* HCBestNewsMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsMainViewController.m; sourceTree = "<group>"; };
-		A57004CD1FF787C80007F126 /* HCHighProductCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHighProductCellView.h; sourceTree = "<group>"; };
-		A57004CE1FF787C80007F126 /* HCHighProductCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHighProductCellView.m; sourceTree = "<group>"; };
-		A57004CF1FF787C80007F126 /* HCHighProductCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHighProductCellView.xib; sourceTree = "<group>"; };
-		A57004D01FF787C80007F126 /* HCHighProductDetailBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHighProductDetailBottomView.h; sourceTree = "<group>"; };
-		A57004D11FF787C80007F126 /* HCHighProductDetailBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHighProductDetailBottomView.m; sourceTree = "<group>"; };
-		A57004D21FF787C80007F126 /* HCHighProductDetailBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHighProductDetailBottomView.xib; sourceTree = "<group>"; };
-		A57004D31FF787C80007F126 /* HCHighProductDetailCustomNavbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHighProductDetailCustomNavbar.h; sourceTree = "<group>"; };
-		A57004D41FF787C80007F126 /* HCHighProductDetailCustomNavbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHighProductDetailCustomNavbar.m; sourceTree = "<group>"; };
-		A57004D51FF787C80007F126 /* HCHighProductDetailCustomNavbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHighProductDetailCustomNavbar.xib; sourceTree = "<group>"; };
-		A57004D61FF787C80007F126 /* HCHighProductDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHighProductDetailViewController.h; sourceTree = "<group>"; };
-		A57004D71FF787C80007F126 /* HCHighProductDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHighProductDetailViewController.m; sourceTree = "<group>"; };
-		A57004D81FF787C80007F126 /* HCHighProductMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHighProductMainViewController.h; sourceTree = "<group>"; };
-		A57004D91FF787C80007F126 /* HCHighProductMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHighProductMainViewController.m; sourceTree = "<group>"; };
-		A57004DA1FF787C80007F126 /* HCProductDetailHeaderTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCProductDetailHeaderTitleView.h; sourceTree = "<group>"; };
-		A57004DB1FF787C80007F126 /* HCProductDetailHeaderTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCProductDetailHeaderTitleView.m; sourceTree = "<group>"; };
-		A57004DC1FF787C80007F126 /* HCProductDetailHeaderTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCProductDetailHeaderTitleView.xib; sourceTree = "<group>"; };
-		A57004DD1FF787C80007F126 /* HCTopCureMainCustomNavbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTopCureMainCustomNavbar.h; sourceTree = "<group>"; };
-		A57004DE1FF787C80007F126 /* HCTopCureMainCustomNavbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTopCureMainCustomNavbar.m; sourceTree = "<group>"; };
-		A57004DF1FF787C80007F126 /* HCTopCureMainCustomNavbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCTopCureMainCustomNavbar.xib; sourceTree = "<group>"; };
-		A57004E01FF787C80007F126 /* HCTopCureMainTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTopCureMainTabView.h; sourceTree = "<group>"; };
-		A57004E11FF787C80007F126 /* HCTopCureMainTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTopCureMainTabView.m; sourceTree = "<group>"; };
-		A57004E21FF787C80007F126 /* HCTopCureMainTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTopCureMainTagView.h; sourceTree = "<group>"; };
-		A57004E31FF787C80007F126 /* HCTopCureMainTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTopCureMainTagView.m; sourceTree = "<group>"; };
-		A57004E41FF787C80007F126 /* HCTopCureMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTopCureMainViewController.h; sourceTree = "<group>"; };
-		A57004E51FF787C80007F126 /* HCTopCureMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTopCureMainViewController.m; sourceTree = "<group>"; };
 		A575874B1FE519A0000FC7CB /* HCGetProductsApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetProductsApi.h; sourceTree = "<group>"; };
 		A575874C1FE519A0000FC7CB /* HCGetProductsApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetProductsApi.m; sourceTree = "<group>"; };
 		A575874F1FE52733000FC7CB /* HCProductDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCProductDetailModel.h; sourceTree = "<group>"; };
@@ -628,11 +633,6 @@
 		A5D9AE391FDBC14100B5D4C0 /* HCGetVerifyCodeApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetVerifyCodeApi.m; sourceTree = "<group>"; };
 		A5D9AE3B1FDBCADB00B5D4C0 /* HCUserLoginApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCUserLoginApi.h; sourceTree = "<group>"; };
 		A5D9AE3C1FDBCADB00B5D4C0 /* HCUserLoginApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserLoginApi.m; sourceTree = "<group>"; };
-		A5DDC1C31FF9E10500F084C1 /* HCHealthManagementDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementDetailViewController.h; sourceTree = "<group>"; };
-		A5DDC1C41FF9E10500F084C1 /* HCHealthManagementDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementDetailViewController.m; sourceTree = "<group>"; };
-		A5DDC1C61FFA2DC600F084C1 /* HCHealthManageDetailHeaderTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthManageDetailHeaderTitleView.h; sourceTree = "<group>"; };
-		A5DDC1C71FFA2DC600F084C1 /* HCHealthManageDetailHeaderTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManageDetailHeaderTitleView.m; sourceTree = "<group>"; };
-		A5DDC1C91FFA2E4000F084C1 /* HCHealthManageDetailHeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCHealthManageDetailHeaderTitleView.xib; sourceTree = "<group>"; };
 		D46774D91909037E0185E2B2 /* Pods-IHealthCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.release.xcconfig"; sourceTree = "<group>"; };
 		E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IHealthCare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -676,6 +676,82 @@
 				A511F3591FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib */,
 			);
 			path = CenterMenu;
+			sourceTree = "<group>";
+		};
+		A5190E191FFA655F00BBF049 /* HealthManagement */ = {
+			isa = PBXGroup;
+			children = (
+				A5190E1A1FFA655F00BBF049 /* HCHealthManageDetailHeaderTitleView.h */,
+				A5190E1B1FFA655F00BBF049 /* HCHealthManageDetailHeaderTitleView.m */,
+				A5190E1C1FFA655F00BBF049 /* HCHealthManageDetailHeaderTitleView.xib */,
+				A5190E1D1FFA655F00BBF049 /* HCHealthManagementAnalysisViewController.h */,
+				A5190E1E1FFA655F00BBF049 /* HCHealthManagementAnalysisViewController.m */,
+				A5190E1F1FFA655F00BBF049 /* HCHealthManagementCellView.h */,
+				A5190E201FFA655F00BBF049 /* HCHealthManagementCellView.m */,
+				A5190E211FFA655F00BBF049 /* HCHealthManagementCellView.xib */,
+				A5190E221FFA655F00BBF049 /* HCHealthManagementClassRoomCellView.h */,
+				A5190E231FFA655F00BBF049 /* HCHealthManagementClassRoomCellView.m */,
+				A5190E241FFA655F00BBF049 /* HCHealthManagementClassRoomCellView.xib */,
+				A5190E251FFA655F00BBF049 /* HCHealthManagementClassRoomViewController.h */,
+				A5190E261FFA655F00BBF049 /* HCHealthManagementClassRoomViewController.m */,
+				A5190E271FFA655F00BBF049 /* HCHealthManagementDetailViewController.h */,
+				A5190E281FFA655F00BBF049 /* HCHealthManagementDetailViewController.m */,
+				A5190E291FFA655F00BBF049 /* HCHealthManagementMainViewController.h */,
+				A5190E2A1FFA655F00BBF049 /* HCHealthManagementMainViewController.m */,
+				A5190E2B1FFA655F00BBF049 /* HCHealthManagementMedicalServiceViewController.h */,
+				A5190E2C1FFA655F00BBF049 /* HCHealthManagementMedicalServiceViewController.m */,
+				A5190E2D1FFA655F00BBF049 /* HCHealthManagementViewController.h */,
+				A5190E2E1FFA655F00BBF049 /* HCHealthManagementViewController.m */,
+				A5190E2F1FFA655F00BBF049 /* HCHealthMedicalServiceCellView.h */,
+				A5190E301FFA655F00BBF049 /* HCHealthMedicalServiceCellView.m */,
+				A5190E311FFA655F00BBF049 /* HCHealthMedicalServiceCellView.xib */,
+			);
+			path = HealthManagement;
+			sourceTree = "<group>";
+		};
+		A5190E321FFA655F00BBF049 /* TopCure */ = {
+			isa = PBXGroup;
+			children = (
+				A5190E331FFA655F00BBF049 /* HCBestNewsCellView.h */,
+				A5190E341FFA655F00BBF049 /* HCBestNewsCellView.m */,
+				A5190E351FFA655F00BBF049 /* HCBestNewsCellView.xib */,
+				A5190E361FFA655F00BBF049 /* HCBestNewsDetailTitleView.h */,
+				A5190E371FFA655F00BBF049 /* HCBestNewsDetailTitleView.m */,
+				A5190E381FFA655F00BBF049 /* HCBestNewsDetailTitleView.xib */,
+				A5190E391FFA655F00BBF049 /* HCBestNewsDetailToolBar.h */,
+				A5190E3A1FFA655F00BBF049 /* HCBestNewsDetailToolBar.m */,
+				A5190E3B1FFA655F00BBF049 /* HCBestNewsDetailToolBar.xib */,
+				A5190E3C1FFA655F00BBF049 /* HCBestNewsDetailViewController.h */,
+				A5190E3D1FFA655F00BBF049 /* HCBestNewsDetailViewController.m */,
+				A5190E3E1FFA655F00BBF049 /* HCBestNewsMainViewController.h */,
+				A5190E3F1FFA655F00BBF049 /* HCBestNewsMainViewController.m */,
+				A5190E401FFA655F00BBF049 /* HCHighProductCellView.h */,
+				A5190E411FFA655F00BBF049 /* HCHighProductCellView.m */,
+				A5190E421FFA655F00BBF049 /* HCHighProductCellView.xib */,
+				A5190E431FFA655F00BBF049 /* HCHighProductDetailBottomView.h */,
+				A5190E441FFA655F00BBF049 /* HCHighProductDetailBottomView.m */,
+				A5190E451FFA655F00BBF049 /* HCHighProductDetailBottomView.xib */,
+				A5190E461FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.h */,
+				A5190E471FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.m */,
+				A5190E481FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.xib */,
+				A5190E491FFA655F00BBF049 /* HCHighProductDetailViewController.h */,
+				A5190E4A1FFA655F00BBF049 /* HCHighProductDetailViewController.m */,
+				A5190E4B1FFA655F00BBF049 /* HCHighProductMainViewController.h */,
+				A5190E4C1FFA655F00BBF049 /* HCHighProductMainViewController.m */,
+				A5190E4D1FFA655F00BBF049 /* HCProductDetailHeaderTitleView.h */,
+				A5190E4E1FFA655F00BBF049 /* HCProductDetailHeaderTitleView.m */,
+				A5190E4F1FFA655F00BBF049 /* HCProductDetailHeaderTitleView.xib */,
+				A5190E501FFA655F00BBF049 /* HCTopCureMainCustomNavbar.h */,
+				A5190E511FFA655F00BBF049 /* HCTopCureMainCustomNavbar.m */,
+				A5190E521FFA655F00BBF049 /* HCTopCureMainCustomNavbar.xib */,
+				A5190E531FFA655F00BBF049 /* HCTopCureMainTabView.h */,
+				A5190E541FFA655F00BBF049 /* HCTopCureMainTabView.m */,
+				A5190E551FFA655F00BBF049 /* HCTopCureMainTagView.h */,
+				A5190E561FFA655F00BBF049 /* HCTopCureMainTagView.m */,
+				A5190E571FFA655F00BBF049 /* HCTopCureMainViewController.h */,
+				A5190E581FFA655F00BBF049 /* HCTopCureMainViewController.m */,
+			);
+			path = TopCure;
 			sourceTree = "<group>";
 		};
 		A520E5CD1FEE6EEC00E4EFAD /* MMTableViewInfo */ = {
@@ -838,82 +914,6 @@
 				A5623CAD1FCDB851001A6B5D /* main.m */,
 			);
 			path = IHealthCare;
-			sourceTree = "<group>";
-		};
-		A57004B11FF787C80007F126 /* HealthManagement */ = {
-			isa = PBXGroup;
-			children = (
-				A57004B21FF787C80007F126 /* HCHealthManagementAnalysisViewController.h */,
-				A57004B31FF787C80007F126 /* HCHealthManagementAnalysisViewController.m */,
-				A57004B41FF787C80007F126 /* HCHealthManagementCellView.h */,
-				A57004B51FF787C80007F126 /* HCHealthManagementCellView.m */,
-				A57004B61FF787C80007F126 /* HCHealthManagementCellView.xib */,
-				A57004B71FF787C80007F126 /* HCHealthManagementClassRoomCellView.h */,
-				A57004B81FF787C80007F126 /* HCHealthManagementClassRoomCellView.m */,
-				A57004B91FF787C80007F126 /* HCHealthManagementClassRoomCellView.xib */,
-				A57004BA1FF787C80007F126 /* HCHealthManagementClassRoomViewController.h */,
-				A57004BB1FF787C80007F126 /* HCHealthManagementClassRoomViewController.m */,
-				A57004BC1FF787C80007F126 /* HCHealthManagementMainViewController.h */,
-				A57004BD1FF787C80007F126 /* HCHealthManagementMainViewController.m */,
-				A57004BE1FF787C80007F126 /* HCHealthManagementMedicalServiceViewController.h */,
-				A57004BF1FF787C80007F126 /* HCHealthManagementMedicalServiceViewController.m */,
-				A57004C01FF787C80007F126 /* HCHealthManagementViewController.h */,
-				A57004C11FF787C80007F126 /* HCHealthManagementViewController.m */,
-				A5DDC1C31FF9E10500F084C1 /* HCHealthManagementDetailViewController.h */,
-				A5DDC1C41FF9E10500F084C1 /* HCHealthManagementDetailViewController.m */,
-				A5DDC1C61FFA2DC600F084C1 /* HCHealthManageDetailHeaderTitleView.h */,
-				A5DDC1C71FFA2DC600F084C1 /* HCHealthManageDetailHeaderTitleView.m */,
-				A5DDC1C91FFA2E4000F084C1 /* HCHealthManageDetailHeaderTitleView.xib */,
-				A57004C21FF787C80007F126 /* HCHealthMedicalServiceCellView.h */,
-				A57004C31FF787C80007F126 /* HCHealthMedicalServiceCellView.m */,
-				A57004C41FF787C80007F126 /* HCHealthMedicalServiceCellView.xib */,
-			);
-			path = HealthManagement;
-			sourceTree = "<group>";
-		};
-		A57004C51FF787C80007F126 /* TopCure */ = {
-			isa = PBXGroup;
-			children = (
-				A57004E41FF787C80007F126 /* HCTopCureMainViewController.h */,
-				A57004E51FF787C80007F126 /* HCTopCureMainViewController.m */,
-				A57004C61FF787C80007F126 /* HCBestNewsCellView.h */,
-				A57004C71FF787C80007F126 /* HCBestNewsCellView.m */,
-				A57004C81FF787C80007F126 /* HCBestNewsCellView.xib */,
-				A57004CB1FF787C80007F126 /* HCBestNewsMainViewController.h */,
-				A57004CC1FF787C80007F126 /* HCBestNewsMainViewController.m */,
-				A57004C91FF787C80007F126 /* HCBestNewsDetailViewController.h */,
-				A57004CA1FF787C80007F126 /* HCBestNewsDetailViewController.m */,
-				A50F83D61FF8DA5100459B57 /* HCBestNewsDetailToolBar.h */,
-				A50F83D71FF8DA5100459B57 /* HCBestNewsDetailToolBar.m */,
-				A50F83D91FF8ECC500459B57 /* HCBestNewsDetailToolBar.xib */,
-				A50F83D11FF885A900459B57 /* HCBestNewsDetailTitleView.h */,
-				A50F83D21FF885A900459B57 /* HCBestNewsDetailTitleView.m */,
-				A50F83D41FF8870900459B57 /* HCBestNewsDetailTitleView.xib */,
-				A57004CD1FF787C80007F126 /* HCHighProductCellView.h */,
-				A57004CE1FF787C80007F126 /* HCHighProductCellView.m */,
-				A57004CF1FF787C80007F126 /* HCHighProductCellView.xib */,
-				A57004D01FF787C80007F126 /* HCHighProductDetailBottomView.h */,
-				A57004D11FF787C80007F126 /* HCHighProductDetailBottomView.m */,
-				A57004D21FF787C80007F126 /* HCHighProductDetailBottomView.xib */,
-				A57004D31FF787C80007F126 /* HCHighProductDetailCustomNavbar.h */,
-				A57004D41FF787C80007F126 /* HCHighProductDetailCustomNavbar.m */,
-				A57004D51FF787C80007F126 /* HCHighProductDetailCustomNavbar.xib */,
-				A57004D61FF787C80007F126 /* HCHighProductDetailViewController.h */,
-				A57004D71FF787C80007F126 /* HCHighProductDetailViewController.m */,
-				A57004D81FF787C80007F126 /* HCHighProductMainViewController.h */,
-				A57004D91FF787C80007F126 /* HCHighProductMainViewController.m */,
-				A57004DA1FF787C80007F126 /* HCProductDetailHeaderTitleView.h */,
-				A57004DB1FF787C80007F126 /* HCProductDetailHeaderTitleView.m */,
-				A57004DC1FF787C80007F126 /* HCProductDetailHeaderTitleView.xib */,
-				A57004DD1FF787C80007F126 /* HCTopCureMainCustomNavbar.h */,
-				A57004DE1FF787C80007F126 /* HCTopCureMainCustomNavbar.m */,
-				A57004DF1FF787C80007F126 /* HCTopCureMainCustomNavbar.xib */,
-				A57004E01FF787C80007F126 /* HCTopCureMainTabView.h */,
-				A57004E11FF787C80007F126 /* HCTopCureMainTabView.m */,
-				A57004E21FF787C80007F126 /* HCTopCureMainTagView.h */,
-				A57004E31FF787C80007F126 /* HCTopCureMainTagView.m */,
-			);
-			path = TopCure;
 			sourceTree = "<group>";
 		};
 		A575874E1FE526C1000FC7CB /* Model */ = {
@@ -1177,8 +1177,8 @@
 		A57B476A1FCEF9180004C397 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				A57004C51FF787C80007F126 /* TopCure */,
-				A57004B11FF787C80007F126 /* HealthManagement */,
+				A5190E321FFA655F00BBF049 /* TopCure */,
+				A5190E191FFA655F00BBF049 /* HealthManagement */,
 				A5268DA91FD3C7E500E2F93C /* WealthManagement */,
 				A5268DB71FD3CB0800E2F93C /* HappinessManagement */,
 				A55464FC1FEFAD3100A7E3C7 /* Me */,
@@ -1528,35 +1528,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A57004FE1FF787C80007F126 /* HCProductDetailHeaderTitleView.xib in Resources */,
+				A5190E6A1FFA655F00BBF049 /* HCBestNewsDetailTitleView.xib in Resources */,
+				A5190E5F1FFA655F00BBF049 /* HCHealthManagementClassRoomCellView.xib in Resources */,
+				A5190E7A1FFA655F00BBF049 /* HCTopCureMainCustomNavbar.xib in Resources */,
 				A57B47F31FCEF9190004C397 /* chat.proto in Resources */,
-				A57004F21FF787C80007F126 /* HCBestNewsCellView.xib in Resources */,
+				A5190E681FFA655F00BBF049 /* HCBestNewsCellView.xib in Resources */,
+				A5190E741FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.xib in Resources */,
 				A56CD78F1FD0424100FFF504 /* commonAssets.xcassets in Resources */,
-				A50F83D51FF8870900459B57 /* HCBestNewsDetailTitleView.xib in Resources */,
-				A5DDC1CA1FFA2E4000F084C1 /* HCHealthManageDetailHeaderTitleView.xib in Resources */,
 				A57B47F51FCEF9190004C397 /* main.proto in Resources */,
-				A57005001FF787C80007F126 /* HCTopCureMainCustomNavbar.xib in Resources */,
 				A57B47F71FCEF9190004C397 /* messagepush.proto in Resources */,
-				A57004E81FF787C80007F126 /* HCHealthManagementCellView.xib in Resources */,
 				A554650E1FEFAD3100A7E3C7 /* HCMeFooterView.xib in Resources */,
 				A56CD78D1FD033CB00FFF504 /* HCLoginContentView.xib in Resources */,
-				A57004EA1FF787C80007F126 /* HCHealthManagementClassRoomCellView.xib in Resources */,
 				A55465191FEFAD5700A7E3C7 /* HCNormalGroupCellView.xib in Resources */,
+				A5190E701FFA655F00BBF049 /* HCHighProductCellView.xib in Resources */,
+				A5190E661FFA655F00BBF049 /* HCHealthMedicalServiceCellView.xib in Resources */,
 				A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */,
-				A57004F61FF787C80007F126 /* HCHighProductCellView.xib in Resources */,
 				A56CD7841FD0306C00FFF504 /* LoginAssets.xcassets in Resources */,
+				A5190E5A1FFA655F00BBF049 /* HCHealthManageDetailHeaderTitleView.xib in Resources */,
 				A57B47EE1FCEF9190004C397 /* IQKeyboardManager.bundle in Resources */,
 				A566B4E11FD2EA6F004F6843 /* HCUserRegisterHeaderView.xib in Resources */,
+				A5190E6C1FFA655F00BBF049 /* HCBestNewsDetailToolBar.xib in Resources */,
 				A56CD7881FD0315000FFF504 /* MeAssets.xcassets in Resources */,
-				A57004FA1FF787C80007F126 /* HCHighProductDetailCustomNavbar.xib in Resources */,
-				A50F83DA1FF8ECC500459B57 /* HCBestNewsDetailToolBar.xib in Resources */,
 				A511F35A1FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib in Resources */,
 				A511F3551FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib in Resources */,
 				A55465101FEFAD3100A7E3C7 /* HCMeProfileCellView.xib in Resources */,
 				A56CD7861FD0312000FFF504 /* MainFrameAssets.xcassets in Resources */,
+				A5190E781FFA655F00BBF049 /* HCProductDetailHeaderTitleView.xib in Resources */,
+				A5190E5D1FFA655F00BBF049 /* HCHealthManagementCellView.xib in Resources */,
 				A554650B1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */,
-				A57004F01FF787C80007F126 /* HCHealthMedicalServiceCellView.xib in Resources */,
-				A57004F81FF787C80007F126 /* HCHighProductDetailBottomView.xib in Resources */,
+				A5190E721FFA655F00BBF049 /* HCHighProductDetailBottomView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1622,34 +1622,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A50F83D31FF885A900459B57 /* HCBestNewsDetailTitleView.m in Sources */,
+				A5190E631FFA655F00BBF049 /* HCHealthManagementMedicalServiceViewController.m in Sources */,
 				A526F41C1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.m in Sources */,
-				A5DDC1C81FFA2DC600F084C1 /* HCHealthManageDetailHeaderTitleView.m in Sources */,
 				A57B47EA1FCEF9190004C397 /* IQPreviousNextView.m in Sources */,
 				A57B48121FCEF9190004C397 /* SCLSwitchView.m in Sources */,
 				A566B4DC1FD2AC70004F6843 /* MMTitleView.m in Sources */,
 				A57B48391FCEF9190004C397 /* MFModelHelper.m in Sources */,
 				A57B47FC1FCEF9190004C397 /* ConcreteExtensionField.m in Sources */,
-				A57004F31FF787C80007F126 /* HCBestNewsDetailViewController.m in Sources */,
 				A57B48001FCEF9190004C397 /* ExtensionRegistry.m in Sources */,
 				A57B47F41FCEF9190004C397 /* Main.pb.m in Sources */,
 				A57B47E61FCEF9190004C397 /* IQKeyboardManager.m in Sources */,
 				A57B48091FCEF9190004C397 /* TextFormat.m in Sources */,
 				A57B48131FCEF9190004C397 /* SCLTextView.m in Sources */,
 				A57B48191FCEF9190004C397 /* NSCache+SafeInsert.m in Sources */,
-				A57004FF1FF787C80007F126 /* HCTopCureMainCustomNavbar.m in Sources */,
 				A53695AF1FD59769007CC67C /* SPPageController.m in Sources */,
+				A5190E6E1FFA655F00BBF049 /* HCBestNewsMainViewController.m in Sources */,
 				A554650D1FEFAD3100A7E3C7 /* HCMeFooterView.m in Sources */,
 				A57B480C1FCEF9190004C397 /* Utilities.m in Sources */,
 				A57B482C1FCEF9190004C397 /* MFUITableView.m in Sources */,
+				A5190E761FFA655F00BBF049 /* HCHighProductMainViewController.m in Sources */,
 				A56CD7821FD02E9B00FFF504 /* HCLoginViewController.m in Sources */,
+				A5190E601FFA655F00BBF049 /* HCHealthManagementClassRoomViewController.m in Sources */,
 				A57B48041FCEF9190004C397 /* MutableExtensionRegistry.m in Sources */,
 				A57B48471FCEF9190004C397 /* YYClassInfo.m in Sources */,
 				A57B47F91FCEF9190004C397 /* AbstractMessageBuilder.m in Sources */,
-				A57004F11FF787C80007F126 /* HCBestNewsCellView.m in Sources */,
+				A5190E7C1FFA655F00BBF049 /* HCTopCureMainTagView.m in Sources */,
 				A5268DBA1FD3CB2600E2F93C /* HCHappinessManagementViewController.m in Sources */,
 				A53695B01FD59769007CC67C /* SPTabController.m in Sources */,
+				A5190E5B1FFA655F00BBF049 /* HCHealthManagementAnalysisViewController.m in Sources */,
 				A57B48321FCEF9190004C397 /* MMSelectButton.m in Sources */,
+				A5190E6B1FFA655F00BBF049 /* HCBestNewsDetailToolBar.m in Sources */,
 				A57B47FB1FCEF9190004C397 /* CodedOutputStream.m in Sources */,
 				A57B481D1FCEF9190004C397 /* NSMutableSet+SafeInsert.m in Sources */,
 				A554650F1FEFAD3100A7E3C7 /* HCMeProfileCellView.m in Sources */,
@@ -1658,26 +1660,29 @@
 				A57B483F1FCEF9190004C397 /* MMTabBarController.m in Sources */,
 				A57B480D1FCEF9190004C397 /* WireFormat.m in Sources */,
 				A57B47F61FCEF9190004C397 /* Messagepush.pb.m in Sources */,
+				A5190E751FFA655F00BBF049 /* HCHighProductDetailViewController.m in Sources */,
 				A56CD77F1FD028AD00FFF504 /* HealthCareViewControllerManager.m in Sources */,
 				A5648D2E1FF2684F00EF956B /* HCGetHealthControlsApi.m in Sources */,
 				A57B47E01FCEF9190004C397 /* IQNSArray+Sort.m in Sources */,
-				A57004EF1FF787C80007F126 /* HCHealthMedicalServiceCellView.m in Sources */,
 				A57B48411FCEF9190004C397 /* MMServiceCenter.m in Sources */,
 				A554650C1FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m in Sources */,
 				A5268DBF1FD3FBAC00E2F93C /* HealthCareTabBarController.m in Sources */,
+				A5190E671FFA655F00BBF049 /* HCBestNewsCellView.m in Sources */,
 				A5268DB61FD3C86300E2F93C /* HCWealthManagementViewController.m in Sources */,
 				A57B48441FCEF9190004C397 /* XXNibBridge.m in Sources */,
 				A57B482A1FCEF9190004C397 /* MFUIButton.m in Sources */,
-				A57004E71FF787C80007F126 /* HCHealthManagementCellView.m in Sources */,
-				A57005011FF787C80007F126 /* HCTopCureMainTabView.m in Sources */,
 				A57B48301FCEF9190004C397 /* MMObject.m in Sources */,
 				A57B480E1FCEF9190004C397 /* SCLAlertView.m in Sources */,
 				A57B48181FCEF9190004C397 /* NSArray+SafeInsert.m in Sources */,
+				A5190E651FFA655F00BBF049 /* HCHealthMedicalServiceCellView.m in Sources */,
 				A57B47E11FCEF9190004C397 /* IQUIScrollView+Additions.m in Sources */,
+				A5190E591FFA655F00BBF049 /* HCHealthManageDetailHeaderTitleView.m in Sources */,
 				A57B48231FCEF9190004C397 /* UIViewController+FixBackIndicatorImage.m in Sources */,
 				A57B47EF1FCEF9190004C397 /* LYSideslipCell.m in Sources */,
 				A57B47EC1FCEF9190004C397 /* IQToolbar.m in Sources */,
+				A5190E641FFA655F00BBF049 /* HCHealthManagementViewController.m in Sources */,
 				A57B48071FCEF9190004C397 /* PBArray.m in Sources */,
+				A5190E6F1FFA655F00BBF049 /* HCHighProductCellView.m in Sources */,
 				A57B48381FCEF9190004C397 /* UINavigationBar+MMUINavigationBar.m in Sources */,
 				A55465111FEFAD3100A7E3C7 /* HCMeViewController.m in Sources */,
 				A53695B21FD59769007CC67C /* SPPageTagView.m in Sources */,
@@ -1685,12 +1690,11 @@
 				A57B48451FCEF9190004C397 /* XXNibConvention.m in Sources */,
 				A57B48031FCEF9190004C397 /* GeneratedMessageBuilder.m in Sources */,
 				A57B48171FCEF9190004C397 /* UIScrollView+SVPullToRefresh.m in Sources */,
-				A57004F71FF787C80007F126 /* HCHighProductDetailBottomView.m in Sources */,
 				A57B48021FCEF9190004C397 /* GeneratedMessage.m in Sources */,
 				A57B481B1FCEF9190004C397 /* NSMutableArray+SafeInsert.m in Sources */,
 				A511F3581FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m in Sources */,
 				A57B47E51FCEF9190004C397 /* IQUIWindow+Hierarchy.m in Sources */,
-				A57004ED1FF787C80007F126 /* HCHealthManagementMedicalServiceViewController.m in Sources */,
+				A5190E771FFA655F00BBF049 /* HCProductDetailHeaderTitleView.m in Sources */,
 				A5124EC21FECFB6400F37317 /* HCManagementDetailModel.m in Sources */,
 				A5D9AE3A1FDBC14100B5D4C0 /* HCGetVerifyCodeApi.m in Sources */,
 				A57B48401FCEF9190004C397 /* MMService.m in Sources */,
@@ -1700,7 +1704,6 @@
 				A57B48361FCEF9190004C397 /* MMUIView.m in Sources */,
 				A5623CAE1FCDB851001A6B5D /* main.m in Sources */,
 				A57B48281FCEF9190004C397 /* MFTableViewCell.m in Sources */,
-				A57004E61FF787C80007F126 /* HCHealthManagementAnalysisViewController.m in Sources */,
 				A57B48111FCEF9190004C397 /* SCLButton.m in Sources */,
 				A57B482B1FCEF9190004C397 /* MFUICollectionView.m in Sources */,
 				A57B48101FCEF9190004C397 /* SCLAlertViewStyleKit.m in Sources */,
@@ -1710,8 +1713,6 @@
 				A57B48211FCEF9190004C397 /* UIView+threadHook.m in Sources */,
 				A55465181FEFAD5700A7E3C7 /* HCNormalGroupCellView.m in Sources */,
 				A57B48141FCEF9190004C397 /* SCLTimerDisplay.m in Sources */,
-				A57004F91FF787C80007F126 /* HCHighProductDetailCustomNavbar.m in Sources */,
-				A57004EC1FF787C80007F126 /* HCHealthManagementMainViewController.m in Sources */,
 				A57B47FE1FCEF9190004C397 /* ExtendableMessage.m in Sources */,
 				A57A90C11FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m in Sources */,
 				A57B48271FCEF9190004C397 /* MFMultiMenuTableViewCell.m in Sources */,
@@ -1719,21 +1720,19 @@
 				A5BDB5081FE660700052B51B /* HCGetBestNewsApi.m in Sources */,
 				A57B483A1FCEF9190004C397 /* MFThemeHelper.m in Sources */,
 				A57B48201FCEF9190004C397 /* UIView+Extend.m in Sources */,
-				A57005031FF787C80007F126 /* HCTopCureMainViewController.m in Sources */,
 				A57B47E71FCEF9190004C397 /* IQKeyboardReturnKeyHandler.m in Sources */,
-				A57005021FF787C80007F126 /* HCTopCureMainTagView.m in Sources */,
 				A53695AE1FD59769007CC67C /* SPCoverController.m in Sources */,
 				A57B48431FCEF9190004C397 /* MFStringUtil.m in Sources */,
+				A5190E711FFA655F00BBF049 /* HCHighProductDetailBottomView.m in Sources */,
 				A5D9AE341FDBB87B00B5D4C0 /* MMNetworkRequest.m in Sources */,
-				A57004F51FF787C80007F126 /* HCHighProductCellView.m in Sources */,
+				A5190E5E1FFA655F00BBF049 /* HCHealthManagementClassRoomCellView.m in Sources */,
 				A57B48051FCEF9190004C397 /* MutableField.m in Sources */,
 				A57B47FD1FCEF9190004C397 /* Descriptor.pb.m in Sources */,
-				A57004E91FF787C80007F126 /* HCHealthManagementClassRoomCellView.m in Sources */,
 				A57B482D1FCEF9190004C397 /* MMBaseInfoItem.m in Sources */,
 				A520E5FF1FEE734F00E4EFAD /* MMTableViewCellInfo.m in Sources */,
 				A520E6021FEE755A00E4EFAD /* MMTableViewSectionInfo.m in Sources */,
-				A50F83D81FF8DA5100459B57 /* HCBestNewsDetailToolBar.m in Sources */,
 				A566B4DF1FD2EA55004F6843 /* HCUserRegisterHeaderView.m in Sources */,
+				A5190E7B1FFA655F00BBF049 /* HCTopCureMainTabView.m in Sources */,
 				A5648D451FF2ACEE00EF956B /* HCGetClassRoomApi.m in Sources */,
 				A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */,
 				A57B482F1FCEF9190004C397 /* MMNavigationController.m in Sources */,
@@ -1741,12 +1740,13 @@
 				A57B47F01FCEF9190004C397 /* MBProgressHUD.m in Sources */,
 				A5D9AE311FDBB87B00B5D4C0 /* YTKBatchRequest+AnimatingAccessory.m in Sources */,
 				A5D9AE331FDBB87B00B5D4C0 /* MFNetworkRequest.m in Sources */,
+				A5190E5C1FFA655F00BBF049 /* HCHealthManagementCellView.m in Sources */,
 				A5D9AE371FDBB98100B5D4C0 /* HealthCareApiManger.m in Sources */,
 				A57587511FE52733000FC7CB /* HCProductDetailModel.m in Sources */,
-				A57004EE1FF787C80007F126 /* HCHealthManagementViewController.m in Sources */,
 				A57B47EB1FCEF9190004C397 /* IQTitleBarButtonItem.m in Sources */,
 				A57B48311FCEF9190004C397 /* MMOnePixLayoutConstraint.m in Sources */,
 				A511F3531FD425B700AE5D57 /* HealthCareCenterMenuMainView.m in Sources */,
+				A5190E611FFA655F00BBF049 /* HCHealthManagementDetailViewController.m in Sources */,
 				A57B47E21FCEF9190004C397 /* IQUITextFieldView+Additions.m in Sources */,
 				A57B48371FCEF9190004C397 /* MMUIViewController.m in Sources */,
 				A5648D481FF2AEBE00EF956B /* HCClassRoomDetailModel.m in Sources */,
@@ -1754,12 +1754,14 @@
 				A57B48251FCEF9190004C397 /* UIViewController+pregress.m in Sources */,
 				A57B48341FCEF9190004C397 /* MMUINavigationBar.m in Sources */,
 				A57B481C1FCEF9190004C397 /* NSMutableDictionary+SafeInsert.m in Sources */,
-				A57004EB1FF787C80007F126 /* HCHealthManagementClassRoomViewController.m in Sources */,
 				A57B47F81FCEF9190004C397 /* AbstractMessage.m in Sources */,
 				A526F4131FF3DFFD00092ADD /* HCMedicalServiceDetailModel.m in Sources */,
+				A5190E6D1FFA655F00BBF049 /* HCBestNewsDetailViewController.m in Sources */,
 				A57B47E91FCEF9190004C397 /* IQBarButtonItem.m in Sources */,
+				A5190E691FFA655F00BBF049 /* HCBestNewsDetailTitleView.m in Sources */,
 				A520E6051FEE76A200E4EFAD /* MMTableViewInfo.m in Sources */,
 				A57B48061FCEF9190004C397 /* ObjectivecDescriptor.pb.m in Sources */,
+				A5190E791FFA655F00BBF049 /* HCTopCureMainCustomNavbar.m in Sources */,
 				A57B481A1FCEF9190004C397 /* NSDictionary+Unicode.m in Sources */,
 				A566B4D61FD297FE004F6843 /* UINavigationItem+margin.m in Sources */,
 				A57B480A1FCEF9190004C397 /* UnknownFieldSet.m in Sources */,
@@ -1769,6 +1771,7 @@
 				A57B48461FCEF9190004C397 /* NSObject+YYModel.m in Sources */,
 				A57B47DF1FCEF9190004C397 /* HexColors.m in Sources */,
 				A57B481F1FCEF9190004C397 /* NSString+MMWidth.m in Sources */,
+				A5190E7D1FFA655F00BBF049 /* HCTopCureMainViewController.m in Sources */,
 				A57B48241FCEF9190004C397 /* UIViewController+FullScreen.m in Sources */,
 				A57B48421FCEF9190004C397 /* MFAppMacroUtil.m in Sources */,
 				A56CD78B1FD0330A00FFF504 /* HCLoginContentView.m in Sources */,
@@ -1777,25 +1780,22 @@
 				A5D9AE301FDBB87B00B5D4C0 /* YTKBaseRequest+AnimatingAccessory.m in Sources */,
 				A554651A1FEFAD5700A7E3C7 /* HCPullFreshCountLogic.m in Sources */,
 				A520E5FC1FEE72AA00E4EFAD /* MMTableViewUserInfo.m in Sources */,
+				A5190E621FFA655F00BBF049 /* HCHealthManagementMainViewController.m in Sources */,
 				A575874D1FE519A0000FC7CB /* HCGetProductsApi.m in Sources */,
 				A57B47E81FCEF9190004C397 /* IQTextView.m in Sources */,
 				A57B480B1FCEF9190004C397 /* UnknownFieldSetBuilder.m in Sources */,
-				A57004FD1FF787C80007F126 /* HCProductDetailHeaderTitleView.m in Sources */,
 				A53695B11FD59769007CC67C /* SPPageContentView.m in Sources */,
 				A57B47F11FCEF9190004C397 /* MGJRouter.m in Sources */,
 				A57B48351FCEF9190004C397 /* MMUITextField.m in Sources */,
 				A57B48081FCEF9190004C397 /* RingBuffer.m in Sources */,
-				A57004FB1FF787C80007F126 /* HCHighProductDetailViewController.m in Sources */,
 				A53695B31FD59769007CC67C /* SPTagBarScrollView.m in Sources */,
+				A5190E731FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.m in Sources */,
 				A57B48331FCEF9190004C397 /* MMUIBridgeView.m in Sources */,
-				A57004FC1FF787C80007F126 /* HCHighProductMainViewController.m in Sources */,
 				A5D9AE2F1FDBB87B00B5D4C0 /* YTKAnimatingRequestAccessory.m in Sources */,
 				A566B4D01FD24ABF004F6843 /* MMBarButtonItem.m in Sources */,
 				A526F41F1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m in Sources */,
 				A566B4D31FD24BB7004F6843 /* MMBarButton.m in Sources */,
 				A566B4D91FD298B7004F6843 /* HCUserRegisterViewController.m in Sources */,
-				A5DDC1C51FF9E10500F084C1 /* HCHealthManagementDetailViewController.m in Sources */,
-				A57004F41FF787C80007F126 /* HCBestNewsMainViewController.m in Sources */,
 				A554650A1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

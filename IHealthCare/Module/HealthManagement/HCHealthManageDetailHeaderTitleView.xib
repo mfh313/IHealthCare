@@ -12,22 +12,106 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HCHealthManageDetailHeaderTitleView">
-            <rect key="frame" x="0.0" y="0.0" width="489" height="131"/>
+            <rect key="frame" x="0.0" y="0.0" width="489" height="96"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQ1-Ic-df7">
-                    <rect key="frame" x="414" y="67" width="42" height="21"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E91-8r-v8Z">
+                    <rect key="frame" x="19" y="24" width="49" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_focus_nor" translatesAutoresizingMaskIntoConstraints="NO" id="OpB-ae-hRU">
+                    <rect key="frame" x="19" y="58.5" width="14" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="14" id="MF0-f3-Lxa"/>
+                        <constraint firstAttribute="height" constant="14" id="s4e-ON-N4c"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsU-rF-xgj">
+                    <rect key="frame" x="41" y="54" width="30.5" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="S97-bu-6kA"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" id="eJO-ah-lji"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.56470588235294117" green="0.56470588235294117" blue="0.56470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_like_nor" translatesAutoresizingMaskIntoConstraints="NO" id="Cx0-wf-Kie">
+                    <rect key="frame" x="86" y="58" width="14" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="14" id="Ier-CV-PGU"/>
+                        <constraint firstAttribute="height" constant="14" id="N5o-YT-auj"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="67" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1G-7A-Yal">
+                    <rect key="frame" x="106.5" y="54" width="14.5" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="IlO-GO-chN"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" id="liK-sx-5mo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EzQ-F4-WVE">
+                    <rect key="frame" x="339" y="20" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="7fd-XZ-UYM"/>
+                        <constraint firstAttribute="width" constant="60" id="C0b-ag-kvm"/>
+                    </constraints>
+                    <state key="normal" image="management_btn_consulting_nor"/>
+                    <connections>
+                        <action selector="onClickChatButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="xOB-Ik-jPx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfi-7P-iTf">
+                    <rect key="frame" x="409" y="20" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="2Cw-Tj-sKR"/>
+                        <constraint firstAttribute="width" constant="60" id="4kA-B1-W05"/>
+                    </constraints>
+                    <state key="normal" image="management_btn_focus_nor"/>
+                    <connections>
+                        <action selector="onClickEyeButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="HU9-8a-INw"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="b1G-7A-Yal" firstAttribute="leading" secondItem="Cx0-wf-Kie" secondAttribute="trailing" constant="6" id="4Eg-vo-nhV"/>
+                <constraint firstItem="Cx0-wf-Kie" firstAttribute="leading" secondItem="PsU-rF-xgj" secondAttribute="trailing" constant="15" id="Ary-9Z-6cH"/>
+                <constraint firstItem="b1G-7A-Yal" firstAttribute="centerY" secondItem="Cx0-wf-Kie" secondAttribute="centerY" id="Bh1-Ex-ay7"/>
+                <constraint firstItem="E91-8r-v8Z" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="24" id="IEk-Bd-euU"/>
+                <constraint firstItem="Cx0-wf-Kie" firstAttribute="centerY" secondItem="PsU-rF-xgj" secondAttribute="centerY" id="JJA-Ur-TN1"/>
+                <constraint firstAttribute="trailing" secondItem="Yfi-7P-iTf" secondAttribute="trailing" constant="20" id="Jvh-cz-ovR"/>
+                <constraint firstItem="Yfi-7P-iTf" firstAttribute="leading" secondItem="EzQ-F4-WVE" secondAttribute="trailing" constant="10" id="Rcf-b1-y2U"/>
+                <constraint firstItem="PsU-rF-xgj" firstAttribute="centerY" secondItem="OpB-ae-hRU" secondAttribute="centerY" id="Sya-sD-Vh9"/>
+                <constraint firstItem="E91-8r-v8Z" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="19" id="T7l-kz-gYC"/>
+                <constraint firstItem="OpB-ae-hRU" firstAttribute="top" secondItem="E91-8r-v8Z" secondAttribute="bottom" constant="15" id="cCx-Xx-ljB"/>
+                <constraint firstItem="OpB-ae-hRU" firstAttribute="leading" secondItem="E91-8r-v8Z" secondAttribute="leading" id="gLj-WO-K63"/>
+                <constraint firstItem="PsU-rF-xgj" firstAttribute="leading" secondItem="OpB-ae-hRU" secondAttribute="trailing" constant="8" id="gtS-G3-Tcf"/>
+                <constraint firstItem="Yfi-7P-iTf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="hrT-L2-GRW"/>
+                <constraint firstItem="EzQ-F4-WVE" firstAttribute="centerY" secondItem="Yfi-7P-iTf" secondAttribute="centerY" id="k0x-Mc-UTc"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="82.5" y="319.5"/>
+            <connections>
+                <outlet property="m_chatButton" destination="EzQ-F4-WVE" id="ap5-cH-sS7"/>
+                <outlet property="m_eyeButton" destination="Yfi-7P-iTf" id="69M-tW-kkg"/>
+                <outlet property="m_eyeLabel" destination="PsU-rF-xgj" id="zqP-YQ-juR"/>
+                <outlet property="m_thumUpLabel" destination="b1G-7A-Yal" id="CGf-ED-BQh"/>
+                <outlet property="m_titleLabel" destination="E91-8r-v8Z" id="D67-XT-uwA"/>
+            </connections>
+            <point key="canvasLocation" x="120.5" y="311"/>
         </view>
     </objects>
+    <resources>
+        <image name="home_icon_focus_nor" width="14" height="14"/>
+        <image name="home_icon_like_nor" width="14" height="14"/>
+        <image name="management_btn_consulting_nor" width="22" height="22"/>
+        <image name="management_btn_focus_nor" width="22" height="22"/>
+    </resources>
 </document>

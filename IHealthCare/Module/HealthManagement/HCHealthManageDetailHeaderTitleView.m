@@ -11,12 +11,11 @@
 
 @interface HCHealthManageDetailHeaderTitleView ()
 {
-//    __weak IBOutlet UILabel *m_thumUpLabel;
-//    __weak IBOutlet UILabel *m_eyeLabel;
-//    __weak IBOutlet UILabel *m_nameLabel;
-//    __weak IBOutlet UILabel *m_detailLabel;
-//    __weak IBOutlet UIImageView *m_contentImageView;
-//    __weak IBOutlet UIView *m_contentView;
+    __weak IBOutlet UILabel *m_titleLabel;
+    __weak IBOutlet UILabel *m_eyeLabel;
+    __weak IBOutlet UILabel *m_thumUpLabel;
+    __weak IBOutlet UIButton *m_chatButton;
+    __weak IBOutlet UIButton *m_eyeButton;
     
     HCManagementDetailModel *m_detailModel;
 }
@@ -27,8 +26,23 @@
 
 -(void)setManagementDetail:(HCManagementDetailModel *)itemModel
 {
-   
+    m_detailModel = itemModel;
+    
+    m_titleLabel.text = itemModel.name;
+    m_eyeLabel.text = [NSString stringWithFormat:@"%@",@(itemModel.follow)];
+    m_thumUpLabel.text = [NSString stringWithFormat:@"%@",@(itemModel.thumbUp)];
 }
 
+- (IBAction)onClickChatButton:(id)sender {
+    if ([self.m_delegate respondsToSelector:@selector(onClickChat:)]) {
+        [self.m_delegate onClickChat:m_detailModel];
+    }
+}
+
+- (IBAction)onClickEyeButton:(id)sender {
+    if ([self.m_delegate respondsToSelector:@selector(onClickFollowUp:)]) {
+        [self.m_delegate onClickFollowUp:m_detailModel];
+    }
+}
 
 @end
