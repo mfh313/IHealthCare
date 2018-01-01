@@ -217,6 +217,8 @@
 		A5D9AE3A1FDBC14100B5D4C0 /* HCGetVerifyCodeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE391FDBC14100B5D4C0 /* HCGetVerifyCodeApi.m */; };
 		A5D9AE3D1FDBCADB00B5D4C0 /* HCUserLoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE3C1FDBCADB00B5D4C0 /* HCUserLoginApi.m */; };
 		A5DDC1C51FF9E10500F084C1 /* HCHealthManagementDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DDC1C41FF9E10500F084C1 /* HCHealthManagementDetailViewController.m */; };
+		A5DDC1C81FFA2DC600F084C1 /* HCHealthManageDetailHeaderTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DDC1C71FFA2DC600F084C1 /* HCHealthManageDetailHeaderTitleView.m */; };
+		A5DDC1CA1FFA2E4000F084C1 /* HCHealthManageDetailHeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DDC1C91FFA2E4000F084C1 /* HCHealthManageDetailHeaderTitleView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -628,6 +630,9 @@
 		A5D9AE3C1FDBCADB00B5D4C0 /* HCUserLoginApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserLoginApi.m; sourceTree = "<group>"; };
 		A5DDC1C31FF9E10500F084C1 /* HCHealthManagementDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementDetailViewController.h; sourceTree = "<group>"; };
 		A5DDC1C41FF9E10500F084C1 /* HCHealthManagementDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementDetailViewController.m; sourceTree = "<group>"; };
+		A5DDC1C61FFA2DC600F084C1 /* HCHealthManageDetailHeaderTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthManageDetailHeaderTitleView.h; sourceTree = "<group>"; };
+		A5DDC1C71FFA2DC600F084C1 /* HCHealthManageDetailHeaderTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManageDetailHeaderTitleView.m; sourceTree = "<group>"; };
+		A5DDC1C91FFA2E4000F084C1 /* HCHealthManageDetailHeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCHealthManageDetailHeaderTitleView.xib; sourceTree = "<group>"; };
 		D46774D91909037E0185E2B2 /* Pods-IHealthCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.release.xcconfig"; sourceTree = "<group>"; };
 		E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IHealthCare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -856,6 +861,9 @@
 				A57004C11FF787C80007F126 /* HCHealthManagementViewController.m */,
 				A5DDC1C31FF9E10500F084C1 /* HCHealthManagementDetailViewController.h */,
 				A5DDC1C41FF9E10500F084C1 /* HCHealthManagementDetailViewController.m */,
+				A5DDC1C61FFA2DC600F084C1 /* HCHealthManageDetailHeaderTitleView.h */,
+				A5DDC1C71FFA2DC600F084C1 /* HCHealthManageDetailHeaderTitleView.m */,
+				A5DDC1C91FFA2E4000F084C1 /* HCHealthManageDetailHeaderTitleView.xib */,
 				A57004C21FF787C80007F126 /* HCHealthMedicalServiceCellView.h */,
 				A57004C31FF787C80007F126 /* HCHealthMedicalServiceCellView.m */,
 				A57004C41FF787C80007F126 /* HCHealthMedicalServiceCellView.xib */,
@@ -1525,6 +1533,7 @@
 				A57004F21FF787C80007F126 /* HCBestNewsCellView.xib in Resources */,
 				A56CD78F1FD0424100FFF504 /* commonAssets.xcassets in Resources */,
 				A50F83D51FF8870900459B57 /* HCBestNewsDetailTitleView.xib in Resources */,
+				A5DDC1CA1FFA2E4000F084C1 /* HCHealthManageDetailHeaderTitleView.xib in Resources */,
 				A57B47F51FCEF9190004C397 /* main.proto in Resources */,
 				A57005001FF787C80007F126 /* HCTopCureMainCustomNavbar.xib in Resources */,
 				A57B47F71FCEF9190004C397 /* messagepush.proto in Resources */,
@@ -1615,6 +1624,7 @@
 			files = (
 				A50F83D31FF885A900459B57 /* HCBestNewsDetailTitleView.m in Sources */,
 				A526F41C1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.m in Sources */,
+				A5DDC1C81FFA2DC600F084C1 /* HCHealthManageDetailHeaderTitleView.m in Sources */,
 				A57B47EA1FCEF9190004C397 /* IQPreviousNextView.m in Sources */,
 				A57B48121FCEF9190004C397 /* SCLSwitchView.m in Sources */,
 				A566B4DC1FD2AC70004F6843 /* MMTitleView.m in Sources */,
