@@ -216,6 +216,7 @@
 		A5D9AE371FDBB98100B5D4C0 /* HealthCareApiManger.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE361FDBB98100B5D4C0 /* HealthCareApiManger.m */; };
 		A5D9AE3A1FDBC14100B5D4C0 /* HCGetVerifyCodeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE391FDBC14100B5D4C0 /* HCGetVerifyCodeApi.m */; };
 		A5D9AE3D1FDBCADB00B5D4C0 /* HCUserLoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE3C1FDBCADB00B5D4C0 /* HCUserLoginApi.m */; };
+		A5DDC1C51FF9E10500F084C1 /* HCHealthManagementDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DDC1C41FF9E10500F084C1 /* HCHealthManagementDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -625,6 +626,8 @@
 		A5D9AE391FDBC14100B5D4C0 /* HCGetVerifyCodeApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetVerifyCodeApi.m; sourceTree = "<group>"; };
 		A5D9AE3B1FDBCADB00B5D4C0 /* HCUserLoginApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCUserLoginApi.h; sourceTree = "<group>"; };
 		A5D9AE3C1FDBCADB00B5D4C0 /* HCUserLoginApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserLoginApi.m; sourceTree = "<group>"; };
+		A5DDC1C31FF9E10500F084C1 /* HCHealthManagementDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthManagementDetailViewController.h; sourceTree = "<group>"; };
+		A5DDC1C41FF9E10500F084C1 /* HCHealthManagementDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManagementDetailViewController.m; sourceTree = "<group>"; };
 		D46774D91909037E0185E2B2 /* Pods-IHealthCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.release.xcconfig"; sourceTree = "<group>"; };
 		E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IHealthCare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -851,6 +854,8 @@
 				A57004BF1FF787C80007F126 /* HCHealthManagementMedicalServiceViewController.m */,
 				A57004C01FF787C80007F126 /* HCHealthManagementViewController.h */,
 				A57004C11FF787C80007F126 /* HCHealthManagementViewController.m */,
+				A5DDC1C31FF9E10500F084C1 /* HCHealthManagementDetailViewController.h */,
+				A5DDC1C41FF9E10500F084C1 /* HCHealthManagementDetailViewController.m */,
 				A57004C21FF787C80007F126 /* HCHealthMedicalServiceCellView.h */,
 				A57004C31FF787C80007F126 /* HCHealthMedicalServiceCellView.m */,
 				A57004C41FF787C80007F126 /* HCHealthMedicalServiceCellView.xib */,
@@ -1779,6 +1784,7 @@
 				A526F41F1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m in Sources */,
 				A566B4D31FD24BB7004F6843 /* MMBarButton.m in Sources */,
 				A566B4D91FD298B7004F6843 /* HCUserRegisterViewController.m in Sources */,
+				A5DDC1C51FF9E10500F084C1 /* HCHealthManagementDetailViewController.m in Sources */,
 				A57004F41FF787C80007F126 /* HCBestNewsMainViewController.m in Sources */,
 				A554650A1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */,
 			);
