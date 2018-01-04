@@ -11,6 +11,7 @@
 #import "MMServiceCenter.h"
 #import "MFThemeHelper.h"
 #import "IQKeyboardManager.h"
+#import "WXApiManager.h"
 
 @interface HealthCareAppDelegate ()
 {
@@ -38,19 +39,31 @@
     [m_appViewControllerMgr launchLoginViewController];
 #endif
     
-    
     [MFThemeHelper setDefaultThemeColor];
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+    
+    [self registerWXPay];
     
     return YES;
 }
 
+-(void)registerWXPay
+{
+    [WXApi registerApp:@"wxfddaeb6d71257dc9" enableMTA:NO];
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return  [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [WXApi handleOpenURL:url delegate:[WXApiManager sharedManager]];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 }
-
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.

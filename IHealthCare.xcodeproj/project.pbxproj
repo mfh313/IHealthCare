@@ -68,6 +68,12 @@
 		A53695B11FD59769007CC67C /* SPPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695A91FD59769007CC67C /* SPPageContentView.m */; };
 		A53695B21FD59769007CC67C /* SPPageTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695AB1FD59769007CC67C /* SPPageTagView.m */; };
 		A53695B31FD59769007CC67C /* SPTagBarScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695AD1FD59769007CC67C /* SPTagBarScrollView.m */; };
+		A55388931FFE61D900D0DC27 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388861FFE61D900D0DC27 /* WXApiManager.m */; };
+		A55388941FFE61D900D0DC27 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388881FFE61D900D0DC27 /* WXApiRequestHandler.m */; };
+		A55388951FFE61D900D0DC27 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A553888A1FFE61D900D0DC27 /* WXApiResponseHandler.m */; };
+		A55388961FFE61D900D0DC27 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A553888E1FFE61D900D0DC27 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */; };
+		A55388971FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388901FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */; };
+		A55388981FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388921FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.m */; };
 		A554650A1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464FE1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m */; };
 		A554650B1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55464FF1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib */; };
 		A554650C1FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465011FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m */; };
@@ -334,6 +340,19 @@
 		A53695AB1FD59769007CC67C /* SPPageTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPPageTagView.m; sourceTree = "<group>"; };
 		A53695AC1FD59769007CC67C /* SPTagBarScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPTagBarScrollView.h; sourceTree = "<group>"; };
 		A53695AD1FD59769007CC67C /* SPTagBarScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTagBarScrollView.m; sourceTree = "<group>"; };
+		A55388851FFE61D900D0DC27 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
+		A55388861FFE61D900D0DC27 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
+		A55388871FFE61D900D0DC27 /* WXApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiRequestHandler.h; sourceTree = "<group>"; };
+		A55388881FFE61D900D0DC27 /* WXApiRequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiRequestHandler.m; sourceTree = "<group>"; };
+		A55388891FFE61D900D0DC27 /* WXApiResponseHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiResponseHandler.h; sourceTree = "<group>"; };
+		A553888A1FFE61D900D0DC27 /* WXApiResponseHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiResponseHandler.m; sourceTree = "<group>"; };
+		A553888C1FFE61D900D0DC27 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		A553888D1FFE61D900D0DC27 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GetMessageFromWXResp+responseWithTextOrMediaMessage.h"; sourceTree = "<group>"; };
+		A553888E1FFE61D900D0DC27 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GetMessageFromWXResp+responseWithTextOrMediaMessage.m"; sourceTree = "<group>"; };
+		A553888F1FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SendMessageToWXReq+requestWithTextOrMediaMessage.h"; sourceTree = "<group>"; };
+		A55388901FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SendMessageToWXReq+requestWithTextOrMediaMessage.m"; sourceTree = "<group>"; };
+		A55388911FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WXMediaMessage+messageConstruct.h"; sourceTree = "<group>"; };
+		A55388921FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WXMediaMessage+messageConstruct.m"; sourceTree = "<group>"; };
 		A55464FD1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAuthIDCardFacadeInputView.h; sourceTree = "<group>"; };
 		A55464FE1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAuthIDCardFacadeInputView.m; sourceTree = "<group>"; };
 		A55464FF1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCAuthIDCardFacadeInputView.xib; sourceTree = "<group>"; };
@@ -850,6 +869,42 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A55388831FFE61D900D0DC27 /* WeiXin */ = {
+			isa = PBXGroup;
+			children = (
+				A55388841FFE61D900D0DC27 /* Control */,
+				A553888B1FFE61D900D0DC27 /* Helper */,
+			);
+			path = WeiXin;
+			sourceTree = "<group>";
+		};
+		A55388841FFE61D900D0DC27 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				A55388851FFE61D900D0DC27 /* WXApiManager.h */,
+				A55388861FFE61D900D0DC27 /* WXApiManager.m */,
+				A55388871FFE61D900D0DC27 /* WXApiRequestHandler.h */,
+				A55388881FFE61D900D0DC27 /* WXApiRequestHandler.m */,
+				A55388891FFE61D900D0DC27 /* WXApiResponseHandler.h */,
+				A553888A1FFE61D900D0DC27 /* WXApiResponseHandler.m */,
+			);
+			path = Control;
+			sourceTree = "<group>";
+		};
+		A553888B1FFE61D900D0DC27 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A553888C1FFE61D900D0DC27 /* Constant.h */,
+				A553888D1FFE61D900D0DC27 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.h */,
+				A553888E1FFE61D900D0DC27 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */,
+				A553888F1FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.h */,
+				A55388901FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */,
+				A55388911FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.h */,
+				A55388921FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		A55464FC1FEFAD3100A7E3C7 /* Me */ = {
 			isa = PBXGroup;
 			children = (
@@ -1185,6 +1240,7 @@
 		A57B476A1FCEF9180004C397 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A55388831FFE61D900D0DC27 /* WeiXin */,
 				A5190E321FFA655F00BBF049 /* TopCure */,
 				A5190E191FFA655F00BBF049 /* HealthManagement */,
 				A5268DA91FD3C7E500E2F93C /* WealthManagement */,
@@ -1656,6 +1712,7 @@
 				A57B48471FCEF9190004C397 /* YYClassInfo.m in Sources */,
 				A57B47F91FCEF9190004C397 /* AbstractMessageBuilder.m in Sources */,
 				A5190E7C1FFA655F00BBF049 /* HCTopCureMainTagView.m in Sources */,
+				A55388951FFE61D900D0DC27 /* WXApiResponseHandler.m in Sources */,
 				A5268DBA1FD3CB2600E2F93C /* HCHappinessManagementViewController.m in Sources */,
 				A53695B01FD59769007CC67C /* SPTabController.m in Sources */,
 				A5190E5B1FFA655F00BBF049 /* HCHealthManagementAnalysisViewController.m in Sources */,
@@ -1663,9 +1720,11 @@
 				A5190E6B1FFA655F00BBF049 /* HCBestNewsDetailToolBar.m in Sources */,
 				A57B47FB1FCEF9190004C397 /* CodedOutputStream.m in Sources */,
 				A57B481D1FCEF9190004C397 /* NSMutableSet+SafeInsert.m in Sources */,
+				A55388981FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.m in Sources */,
 				A554650F1FEFAD3100A7E3C7 /* HCMeProfileCellView.m in Sources */,
 				A57B48161FCEF9190004C397 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				A5D9AE321FDBB87B00B5D4C0 /* YTKChainRequest+AnimatingAccessory.m in Sources */,
+				A55388971FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
 				A57B483F1FCEF9190004C397 /* MMTabBarController.m in Sources */,
 				A57B480D1FCEF9190004C397 /* WireFormat.m in Sources */,
 				A57B47F61FCEF9190004C397 /* Messagepush.pb.m in Sources */,
@@ -1685,6 +1744,7 @@
 				A57B48181FCEF9190004C397 /* NSArray+SafeInsert.m in Sources */,
 				A5190E651FFA655F00BBF049 /* HCHealthMedicalServiceCellView.m in Sources */,
 				A57B47E11FCEF9190004C397 /* IQUIScrollView+Additions.m in Sources */,
+				A55388941FFE61D900D0DC27 /* WXApiRequestHandler.m in Sources */,
 				A5190E591FFA655F00BBF049 /* HCHealthManageDetailHeaderTitleView.m in Sources */,
 				A57B48231FCEF9190004C397 /* UIViewController+FixBackIndicatorImage.m in Sources */,
 				A57B47EF1FCEF9190004C397 /* LYSideslipCell.m in Sources */,
@@ -1736,6 +1796,7 @@
 				A5D9AE341FDBB87B00B5D4C0 /* MMNetworkRequest.m in Sources */,
 				A5190E5E1FFA655F00BBF049 /* HCHealthManagementClassRoomCellView.m in Sources */,
 				A57B48051FCEF9190004C397 /* MutableField.m in Sources */,
+				A55388931FFE61D900D0DC27 /* WXApiManager.m in Sources */,
 				A57B47FD1FCEF9190004C397 /* Descriptor.pb.m in Sources */,
 				A57B482D1FCEF9190004C397 /* MMBaseInfoItem.m in Sources */,
 				A520E5FF1FEE734F00E4EFAD /* MMTableViewCellInfo.m in Sources */,
@@ -1747,6 +1808,7 @@
 				A57B482F1FCEF9190004C397 /* MMNavigationController.m in Sources */,
 				A57B47E41FCEF9190004C397 /* IQUIViewController+Additions.m in Sources */,
 				A57B47F01FCEF9190004C397 /* MBProgressHUD.m in Sources */,
+				A55388961FFE61D900D0DC27 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */,
 				A5D9AE311FDBB87B00B5D4C0 /* YTKBatchRequest+AnimatingAccessory.m in Sources */,
 				A5D9AE331FDBB87B00B5D4C0 /* MFNetworkRequest.m in Sources */,
 				A5190E5C1FFA655F00BBF049 /* HCHealthManagementCellView.m in Sources */,

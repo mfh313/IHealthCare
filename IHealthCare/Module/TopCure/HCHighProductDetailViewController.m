@@ -11,6 +11,8 @@
 #import "HCHighProductDetailCustomNavbar.h"
 #import "HCHighProductDetailBottomView.h"
 #import "HCProductDetailHeaderTitleView.h"
+#import "WXApiRequestHandler.h"
+#import "WXApiManager.h"
 
 @interface HCHighProductDetailViewController () <HCHighProductDetailCustomNavbarDelegate,HCHighProductDetailBottomViewDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -184,7 +186,7 @@
 #pragma mark - HCHighProductDetailBottomViewDelegate
 -(void)onClickBuyProduct
 {
-    NSLog(@"onClickBuyProduct");
+    [self bizPay];
 }
 
 -(void)onClickCollectionProduct
@@ -217,6 +219,16 @@
     [self makeCellObjects];
     
     [m_tableView reloadData];
+}
+
+- (void)bizPay {
+    NSString *res = [WXApiRequestHandler jumpToBizPay];
+    if( ![@"" isEqual:res] ){
+        UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"支付失败" message:res delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alter show];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
