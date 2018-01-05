@@ -289,6 +289,7 @@
     mfApi.authCode = loginService.token;
     mfApi.oid = m_oid;
     
+    mfApi.animatingText = @"正在支付";
     mfApi.animatingView = MFAppWindow;
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
