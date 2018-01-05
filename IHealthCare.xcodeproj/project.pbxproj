@@ -937,6 +937,13 @@
 			path = HCComponent;
 			sourceTree = "<group>";
 		};
+		A55925C41FFFB45D00CCA464 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 		A5623C921FCDB851001A6B5D = {
 			isa = PBXGroup;
 			children = (
@@ -1240,6 +1247,7 @@
 		A57B476A1FCEF9180004C397 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A55925C41FFFB45D00CCA464 /* Order */,
 				A55388831FFE61D900D0DC27 /* WeiXin */,
 				A5190E321FFA655F00BBF049 /* TopCure */,
 				A5190E191FFA655F00BBF049 /* HealthManagement */,
