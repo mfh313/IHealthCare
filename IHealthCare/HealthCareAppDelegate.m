@@ -13,6 +13,8 @@
 #import "IQKeyboardManager.h"
 #import "WXApiManager.h"
 
+#define WXKey @"wxfddaeb6d71257dc9"
+
 @interface HealthCareAppDelegate ()
 {
     MMServiceCenter *m_serviceCenter;
@@ -51,7 +53,7 @@
 
 -(void)registerWXPay
 {
-    [WXApi registerApp:@"wxfddaeb6d71257dc9" enableMTA:NO];
+    [WXApi registerApp:WXKey enableMTA:NO];
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
