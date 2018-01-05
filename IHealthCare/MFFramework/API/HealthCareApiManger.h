@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//订单支付
++ (NSString *)payOrder:(NSInteger)oid;
+
 //提交订单
 + (NSString *)createOrder;
 

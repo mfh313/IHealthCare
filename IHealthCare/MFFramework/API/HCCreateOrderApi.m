@@ -15,4 +15,25 @@
 #pragma mark - HCCreateOrderApi
 @implementation HCCreateOrderApi
 
+-(NSString *)requestUrl
+{
+    return [HealthCareApiManger createOrder];
+}
+
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPOST;
+}
+
+-(id)requestArgument
+{
+    NSMutableDictionary *requestArgument = [NSMutableDictionary dictionary];
+    requestArgument[@"userTel"] = self.userTel;
+    requestArgument[@"authCode"] = self.authCode;
+    requestArgument[@"name"] = self.name;
+    requestArgument[@"phone"] = self.phone;
+    requestArgument[@"addr"] = self.addr;
+    requestArgument[@"carts"] = [self.carts yy_modelToJSONObject];
+    return requestArgument;
+}
+
 @end

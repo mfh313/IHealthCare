@@ -14,6 +14,8 @@
 #import "WXApiRequestHandler.h"
 #import "WXApiManager.h"
 #import "HCCreateOrderApi.h"
+#import "HCLoginService.h"
+#import "HCPayOrderApi.h"
 
 @interface HCHighProductDetailViewController () <HCHighProductDetailCustomNavbarDelegate,HCHighProductDetailBottomViewDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -22,6 +24,8 @@
     
     MFUITableView *m_tableView;
     NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
+    
+    NSInteger m_oid;
 }
 
 @end
@@ -187,13 +191,12 @@
 #pragma mark - HCHighProductDetailBottomViewDelegate
 -(void)onClickBuyProduct
 {
-//    [self bizPay];
     [self createOrder];
 }
 
 -(void)onClickCollectionProduct
 {
-    NSLog(@"onClickCollectionProduct");
+    [self payOrder];
 }
 
 -(void)makeCellObjects
@@ -225,10 +228,26 @@
 
 -(void)createOrder
 {
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    
+    NSMutableArray *carts = [NSMutableArray array];
+    
+    HCOrderItemModel *testItem = [HCOrderItemModel new];
+    testItem.pid = self.detailModel.pid;
+    testItem.count = 3;
+    
+    [carts addObject:testItem];
+    
     __weak typeof(self) weakSelf = self;
     HCCreateOrderApi *mfApi = [HCCreateOrderApi new];
-    mfApi.animatingView = MFAppWindow;
+    mfApi.userTel = loginService.userPhone;
+    mfApi.authCode = loginService.token;
+    mfApi.name = @"马方华";
+    mfApi.phone = @"15811809295";
+    mfApi.addr = @"广东省深圳市福田区下沙四坊23号";
+    mfApi.carts = carts;
     
+    mfApi.animatingView = MFAppWindow;
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
         __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -237,7 +256,12 @@
             return;
         }
         
-        NSArray *bestNews = mfApi.responseNetworkData;
+        NSDictionary *createOrderInfo = mfApi.responseNetworkData;
+        NSNumber *oid = createOrderInfo[@"oid"];
+        m_oid = oid.intValue;
+        
+        [strongSelf showTips:@"创建订单成功，点击收藏按钮付款"];
+        
 //        NSMutableArray *news = [NSMutableArray array];
 //        for (int i = 0; i < bestNews.count; i++) {
 //            HCBestNewsDetailModel *itemModel = [HCBestNewsDetailModel yy_modelWithDictionary:bestNews[i]];
@@ -255,6 +279,37 @@
     }];
 }
 
+-(void)payOrder
+{
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    
+    __weak typeof(self) weakSelf = self;
+    HCPayOrderApi *mfApi = [HCPayOrderApi new];
+    mfApi.userTel = loginService.userPhone;
+    mfApi.authCode = loginService.token;
+    mfApi.oid = m_oid;
+    
+    mfApi.animatingView = MFAppWindow;
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSDictionary *payInfo = mfApi.responseNetworkData;
+        NSLog(@"payInfo=%@",payInfo);
+        
+        [strongSelf bizPayOrder:payInfo];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
+}
+
 - (void)bizPay {
     NSString *res = [WXApiRequestHandler jumpToBizPay];
     if( ![@"" isEqual:res] ){
@@ -262,8 +317,33 @@
         
         [alter show];
     }
-    
 }
+
+-(void)bizPayOrder:(NSDictionary *)dict
+{
+    NSMutableString *stamp  = [dict objectForKey:@"timeStamp"];
+    
+    //调起微信支付
+    PayReq* req             = [[PayReq alloc] init];
+    req.partnerId           = [dict objectForKey:@"partnerid"];
+    req.prepayId            = [dict objectForKey:@"prepayId"];
+    req.nonceStr            = [dict objectForKey:@"nonceStr"];
+    req.timeStamp           = stamp.intValue;
+    req.package             = [dict objectForKey:@"packAge"];
+    req.sign                = [dict objectForKey:@"paySign"];
+    [WXApi sendReq:req];
+    //日志输出
+    NSLog(@"appid=%@\npartid=%@\nprepayid=%@\nnoncestr=%@\ntimestamp=%ld\npackage=%@\nsign=%@",[dict objectForKey:@"appid"],req.partnerId,req.prepayId,req.nonceStr,(long)req.timeStamp,req.package,req.sign );
+}
+
+//appId = wxfddaeb6d71257dc9;
+//nonceStr = kmHIdw1u3TZdUnXg;
+//packAge = "Sign=WXPay";
+//partnerid = 1495088082;
+//paySign = 87C7B8F8C428C87C6E4A906B3D3BE8B7;
+//prepayId = wx201801060016200f2a86748b0371765845;
+//signType = "<null>";
+//timeStamp = 1515168980;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

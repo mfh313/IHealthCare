@@ -22,6 +22,13 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
     return test_ServerUrl;
 }
 
+//订单支付
++ (NSString *)payOrder:(NSInteger)oid
+{
+    NSString *parmUrl = [NSString stringWithFormat:@"api/orders/%@",@(oid)];
+    return MFURLWithPara(parmUrl);
+}
+
 //提交订单
 + (NSString *)createOrder
 {
