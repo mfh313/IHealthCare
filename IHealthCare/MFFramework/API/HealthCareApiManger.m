@@ -22,6 +22,12 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
     return test_ServerUrl;
 }
 
+//提交订单
++ (NSString *)createOrder
+{
+    return MFURLWithPara(@"api/orders");
+}
+
 + (NSString *)healthAnalysis:(NSInteger)page
 {
     NSString *parmUrl = [NSString stringWithFormat:@"api/medicalService/1/%@",@(page)];

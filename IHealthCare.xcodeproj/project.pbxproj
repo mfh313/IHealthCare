@@ -216,6 +216,8 @@
 		A58849081FFFC5C700FC93EE /* HCHealthManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58848F71FFFC5C700FC93EE /* HCHealthManagementViewController.m */; };
 		A58849091FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A58848F91FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.m */; };
 		A588490A1FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58848FA1FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.xib */; };
+		A588490D1FFFC90E00FC93EE /* HCCreateOrderApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A588490C1FFFC90E00FC93EE /* HCCreateOrderApi.m */; };
+		A58849111FFFD0D700FC93EE /* HCLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = A58849101FFFD0D700FC93EE /* HCLoginService.m */; };
 		A5BDB5051FE65B010052B51B /* HCBestNewsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */; };
 		A5BDB5081FE660700052B51B /* HCGetBestNewsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDB5071FE660700052B51B /* HCGetBestNewsApi.m */; };
 		A5D9AE2F1FDBB87B00B5D4C0 /* YTKAnimatingRequestAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE211FDBB87B00B5D4C0 /* YTKAnimatingRequestAccessory.m */; };
@@ -634,6 +636,10 @@
 		A58848F81FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthMedicalServiceCellView.h; sourceTree = "<group>"; };
 		A58848F91FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthMedicalServiceCellView.m; sourceTree = "<group>"; };
 		A58848FA1FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHealthMedicalServiceCellView.xib; sourceTree = "<group>"; };
+		A588490B1FFFC90E00FC93EE /* HCCreateOrderApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCreateOrderApi.h; sourceTree = "<group>"; };
+		A588490C1FFFC90E00FC93EE /* HCCreateOrderApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCreateOrderApi.m; sourceTree = "<group>"; };
+		A588490F1FFFD0D700FC93EE /* HCLoginService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCLoginService.h; sourceTree = "<group>"; };
+		A58849101FFFD0D700FC93EE /* HCLoginService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCLoginService.m; sourceTree = "<group>"; };
 		A5BDB5031FE65B010052B51B /* HCBestNewsDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBestNewsDetailModel.h; sourceTree = "<group>"; };
 		A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailModel.m; sourceTree = "<group>"; };
 		A5BDB5061FE660700052B51B /* HCGetBestNewsApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetBestNewsApi.h; sourceTree = "<group>"; };
@@ -1474,13 +1480,23 @@
 			path = HealthManagement;
 			sourceTree = "<group>";
 		};
+		A588490E1FFFD06100FC93EE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A588490F1FFFD0D700FC93EE /* HCLoginService.h */,
+				A58849101FFFD0D700FC93EE /* HCLoginService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		A5D9AE151FDBB87B00B5D4C0 /* MFFramework */ = {
 			isa = PBXGroup;
 			children = (
-				A5D9AE1D1FDBB87B00B5D4C0 /* MFFramework.h */,
+				A588490E1FFFD06100FC93EE /* Service */,
 				A5D9AE161FDBB87B00B5D4C0 /* API */,
 				A575874E1FE526C1000FC7CB /* Model */,
 				A5D9AE1E1FDBB87B00B5D4C0 /* Networking */,
+				A5D9AE1D1FDBB87B00B5D4C0 /* MFFramework.h */,
 			);
 			path = MFFramework;
 			sourceTree = "<group>";
@@ -1488,6 +1504,8 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A588490B1FFFC90E00FC93EE /* HCCreateOrderApi.h */,
+				A588490C1FFFC90E00FC93EE /* HCCreateOrderApi.m */,
 				A526F41A1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.h */,
 				A526F41B1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.m */,
 				A526F41D1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.h */,
@@ -1813,7 +1831,9 @@
 				A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */,
 				A57B482F1FCEF9190004C397 /* MMNavigationController.m in Sources */,
 				A57B47E41FCEF9190004C397 /* IQUIViewController+Additions.m in Sources */,
+				A588490D1FFFC90E00FC93EE /* HCCreateOrderApi.m in Sources */,
 				A57B47F01FCEF9190004C397 /* MBProgressHUD.m in Sources */,
+				A58849111FFFD0D700FC93EE /* HCLoginService.m in Sources */,
 				A55388961FFE61D900D0DC27 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */,
 				A5D9AE311FDBB87B00B5D4C0 /* YTKBatchRequest+AnimatingAccessory.m in Sources */,
 				A58849061FFFC5C700FC93EE /* HCHealthManagementMainViewController.m in Sources */,

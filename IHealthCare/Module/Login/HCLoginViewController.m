@@ -11,6 +11,7 @@
 #import "HCUserRegisterViewController.h"
 #import "HCGetVerifyCodeApi.h"
 #import "HCUserLoginApi.h"
+#import "HCLoginService.h"
 
 @interface HCLoginViewController () <HCLoginContentViewDelegate,tableViewDelegate,UITableViewDelegate>
 {
@@ -88,6 +89,12 @@
             [strongSelf showTips:mfApi.errorMessage];
             return;
         }
+        
+        HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+        loginService.userPhone = phone;
+        
+        NSDictionary *info = mfApi.responseNetworkData;
+        loginService.token = info[@"accessToken"];
         
         [[HealthCareViewControllerManager getAppViewControllerManager] launchMainTabViewController];
         

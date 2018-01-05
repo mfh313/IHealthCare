@@ -10,15 +10,32 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
-+ (NSString *)healthAnalysis:(NSInteger)page; //精准分析
-+ (NSString *)healthMedicalService:(NSInteger)page; //专业服务
-+ (NSString *)classRoomPage:(NSInteger)page;  //大讲堂
+//提交订单
++ (NSString *)createOrder;
+
+//精准分析
++ (NSString *)healthAnalysis:(NSInteger)page;
+
+//专业服务
++ (NSString *)healthMedicalService:(NSInteger)page;
+
+//大讲堂
++ (NSString *)classRoomPage:(NSInteger)page;
+
 + (NSString *)hospitals:(NSInteger )type page:(NSInteger)page;
-+ (NSString *)upImageToken; //七牛上传图像token
+
+//七牛上传图像token
++ (NSString *)upImageToken;
+
 + (NSString *)healthControls:(NSInteger )type page:(NSInteger)page;
-+ (NSString *)bestNews:(NSInteger )type page:(NSInteger)page; //查询所有前沿资讯
+
+//查询所有前沿资讯
++ (NSString *)bestNews:(NSInteger )type page:(NSInteger)page;
+
 + (NSString *)products:(NSInteger )cid page:(NSInteger)page;
+
 + (NSString *)getVerifycode:(NSString *)telephone;
+
 + (NSString *)userLogin;
 
 @end

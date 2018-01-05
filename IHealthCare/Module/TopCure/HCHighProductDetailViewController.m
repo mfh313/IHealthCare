@@ -13,6 +13,7 @@
 #import "HCProductDetailHeaderTitleView.h"
 #import "WXApiRequestHandler.h"
 #import "WXApiManager.h"
+#import "HCCreateOrderApi.h"
 
 @interface HCHighProductDetailViewController () <HCHighProductDetailCustomNavbarDelegate,HCHighProductDetailBottomViewDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -186,7 +187,8 @@
 #pragma mark - HCHighProductDetailBottomViewDelegate
 -(void)onClickBuyProduct
 {
-    [self bizPay];
+//    [self bizPay];
+    [self createOrder];
 }
 
 -(void)onClickCollectionProduct
@@ -219,6 +221,38 @@
     [self makeCellObjects];
     
     [m_tableView reloadData];
+}
+
+-(void)createOrder
+{
+    __weak typeof(self) weakSelf = self;
+    HCCreateOrderApi *mfApi = [HCCreateOrderApi new];
+    mfApi.animatingView = MFAppWindow;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSArray *bestNews = mfApi.responseNetworkData;
+//        NSMutableArray *news = [NSMutableArray array];
+//        for (int i = 0; i < bestNews.count; i++) {
+//            HCBestNewsDetailModel *itemModel = [HCBestNewsDetailModel yy_modelWithDictionary:bestNews[i]];
+//            [news addObject:itemModel];
+//        }
+//        m_bestNews = news;
+//
+//        [strongSelf reloadTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        [m_tableView.pullToRefreshView stopAnimating];
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
 }
 
 - (void)bizPay {
