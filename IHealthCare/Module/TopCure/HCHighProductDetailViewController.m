@@ -234,7 +234,7 @@
     
     HCOrderItemModel *testItem = [HCOrderItemModel new];
     testItem.pid = self.detailModel.pid;
-    testItem.count = 3;
+    testItem.count = 1;
     
     [carts addObject:testItem];
     
@@ -334,17 +334,10 @@
     req.sign                = [dict objectForKey:@"paySign"];
     [WXApi sendReq:req];
     //日志输出
-    NSLog(@"appid=%@\npartid=%@\nprepayid=%@\nnoncestr=%@\ntimestamp=%ld\npackage=%@\nsign=%@",[dict objectForKey:@"appId"],req.partnerId,req.prepayId,req.nonceStr,(long)req.timeStamp,req.package,req.sign );
+//    NSLog(@"appid=%@\npartnerId=%@\nprepayId=%@\nnonceStr=%@\ntimeStamp=%ld\npackage=%@\nsign=%@",[dict objectForKey:@"appId"],req.partnerId,req.prepayId,req.nonceStr,(long)req.timeStamp,req.package,req.sign);
+    
+    NSLog(@"appId=%@\nnonceStr=%@\npackAge=%@\npartnerid=%@\npaySign=%@\nprepayId=%@\ntimeStamp=%ld",[dict objectForKey:@"appId"],req.nonceStr,req.package,req.partnerId,req.sign,req.prepayId,(long)req.timeStamp);
 }
-
-//appId = wxfddaeb6d71257dc9;
-//nonceStr = kmHIdw1u3TZdUnXg;
-//packAge = "Sign=WXPay";
-//partnerid = 1495088082;
-//paySign = 87C7B8F8C428C87C6E4A906B3D3BE8B7;
-//prepayId = wx201801060016200f2a86748b0371765845;
-//signType = "<null>";
-//timeStamp = 1515168980;
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
