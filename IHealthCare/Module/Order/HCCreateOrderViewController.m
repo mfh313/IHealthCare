@@ -190,7 +190,7 @@
 
 -(void)onClickAddressCell:(MMTableViewCellInfo *)cellInfo
 {
-    
+    NSLog(@"onClickAddressCell");
 }
 
 - (void)didReceiveMemoryWarning {
