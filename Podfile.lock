@@ -32,6 +32,8 @@ PODS:
   - WeexSDK (0.16.2)
   - YTKNetwork (2.0.4):
     - AFNetworking (~> 3.0)
+  - ZFPlayer (2.1.5):
+    - Masonry
 
 DEPENDENCIES:
   - Masonry
@@ -44,6 +46,7 @@ DEPENDENCIES:
   - WechatOpenSDK
   - WeexSDK
   - YTKNetwork
+  - ZFPlayer
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
@@ -59,7 +62,8 @@ SPEC CHECKSUMS:
   WechatOpenSDK: 0ee07a8d492299d3e47372a33da5af26524a7576
   WeexSDK: 854ef66c9a90d609ad60e87c8b76affe2b772224
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
+  ZFPlayer: 8a80bf8eb4638b97fbceaefcd3ca9978e9f17c9d
 
-PODFILE CHECKSUM: 26934df0fd3d613fb600093dd204d5b357e49e3c
+PODFILE CHECKSUM: 5af630408af531f446ce04d455f5a681baa9eecc
 
 COCOAPODS: 1.3.1

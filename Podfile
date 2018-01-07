@@ -3,6 +3,7 @@
 
 target 'IHealthCare' do
 
+pod 'ZFPlayer'
 pod 'PLPlayerKit'
 pod 'Qiniu', '~> 7.2'
 pod 'WechatOpenSDK'
