@@ -7,11 +7,13 @@
 //
 
 #import "MMNetworkRequest.h"
+#import "HCProductDetailModel.h"
 
 @interface HCOrderItemModel : NSObject
 
 @property (nonatomic,assign) NSInteger pid;
 @property (nonatomic,assign) NSInteger count;
+@property (nonatomic,strong) HCProductDetailModel *detailModel;
 
 @end
 

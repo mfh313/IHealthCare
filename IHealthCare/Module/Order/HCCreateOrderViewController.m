@@ -20,6 +20,8 @@
 {
     MMTableViewInfo *m_tableViewInfo;
     HCOrderUserAddressModel *m_currentAddress;
+    
+    NSMutableArray *m_carts;
 }
 
 @end
@@ -31,6 +33,8 @@
     
     self.title = @"确认订单";
     [self setBackBarButton];
+    
+    [self initCart];
     
     m_tableViewInfo = [[MMTableViewInfo alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
     m_tableViewInfo.delegate = self;
@@ -47,6 +51,18 @@
     contentTableView.tableHeaderView = tableHeaderView;
     
     [self getMyAddressInfo];
+}
+
+-(void)initCart
+{
+    m_carts = [NSMutableArray array];
+    
+    HCOrderItemModel *orderItem = [HCOrderItemModel new];
+    orderItem.detailModel = self.detailModel;
+    orderItem.pid = self.detailModel.pid;
+    orderItem.count = 1;
+    
+    [m_carts addObject:orderItem];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -174,7 +190,7 @@
 
 -(void)onClickAddressCell:(MMTableViewCellInfo *)cellInfo
 {
-
+    
 }
 
 - (void)didReceiveMemoryWarning {
