@@ -14,4 +14,3 @@
 @property (nonatomic,strong) HCProductDetailModel *detailModel;
 
 @end
-

@@ -231,6 +231,7 @@
 		A5D9AE3A1FDBC14100B5D4C0 /* HCGetVerifyCodeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE391FDBC14100B5D4C0 /* HCGetVerifyCodeApi.m */; };
 		A5D9AE3D1FDBCADB00B5D4C0 /* HCUserLoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE3C1FDBCADB00B5D4C0 /* HCUserLoginApi.m */; };
 		A5DD8CFA2001BC450079CD7D /* HCOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD8CF92001BC450079CD7D /* HCOrderListViewController.m */; };
+		A5DD8CFD2001C4730079CD7D /* HCCreateOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD8CFC2001C4730079CD7D /* HCCreateOrderViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -669,6 +670,8 @@
 		A5D9AE3C1FDBCADB00B5D4C0 /* HCUserLoginApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserLoginApi.m; sourceTree = "<group>"; };
 		A5DD8CF82001BC450079CD7D /* HCOrderListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderListViewController.h; sourceTree = "<group>"; };
 		A5DD8CF92001BC450079CD7D /* HCOrderListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderListViewController.m; sourceTree = "<group>"; };
+		A5DD8CFB2001C4730079CD7D /* HCCreateOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCreateOrderViewController.h; sourceTree = "<group>"; };
+		A5DD8CFC2001C4730079CD7D /* HCCreateOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCreateOrderViewController.m; sourceTree = "<group>"; };
 		D46774D91909037E0185E2B2 /* Pods-IHealthCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.release.xcconfig"; sourceTree = "<group>"; };
 		E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IHealthCare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1561,6 +1564,8 @@
 		A5DD8CF72001BBD20079CD7D /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				A5DD8CFB2001C4730079CD7D /* HCCreateOrderViewController.h */,
+				A5DD8CFC2001C4730079CD7D /* HCCreateOrderViewController.m */,
 				A5DD8CF82001BC450079CD7D /* HCOrderListViewController.h */,
 				A5DD8CF92001BC450079CD7D /* HCOrderListViewController.m */,
 			);
@@ -1908,6 +1913,7 @@
 				A526F41F1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m in Sources */,
 				A566B4D31FD24BB7004F6843 /* MMBarButton.m in Sources */,
 				A566B4D91FD298B7004F6843 /* HCUserRegisterViewController.m in Sources */,
+				A5DD8CFD2001C4730079CD7D /* HCCreateOrderViewController.m in Sources */,
 				A554650A1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
