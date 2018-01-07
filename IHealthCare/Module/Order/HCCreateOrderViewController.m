@@ -28,7 +28,7 @@
     self.title = @"确认订单";
     [self setBackBarButton];
     
-    m_tableViewInfo = [[MMTableViewInfo alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    m_tableViewInfo = [[MMTableViewInfo alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
     m_tableViewInfo.delegate = self;
     
     UITableView *contentTableView = [m_tableViewInfo getTableView];
@@ -36,6 +36,11 @@
     contentTableView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
     contentTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     [self.view addSubview:contentTableView];
+    
+    UIView *tableHeaderView = [UIView new];
+    tableHeaderView.frame = CGRectMake(0, 0, CGRectGetWidth(contentTableView.frame), 10);
+    tableHeaderView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
+    contentTableView.tableHeaderView = tableHeaderView;
     
     [self getMyAddressInfo];
 }
