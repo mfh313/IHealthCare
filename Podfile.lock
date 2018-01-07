@@ -19,6 +19,8 @@ PODS:
   - MZAppearance (1.1.6)
   - MZFormSheetPresentationController (2.4.3):
     - MZAppearance
+  - PLPlayerKit (3.1.0):
+    - HappyDNS (~> 0.3.10)
   - Qiniu (7.2.3):
     - HappyDNS (~> 0.3)
   - SDWebImage (3.7.6):
@@ -34,6 +36,7 @@ PODS:
 DEPENDENCIES:
   - Masonry
   - MZFormSheetPresentationController
+  - PLPlayerKit
   - Qiniu (~> 7.2)
   - SDWebImage (~> 3.7.3)
   - SMPageControl (~> 1.2)
@@ -48,6 +51,7 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MZAppearance: 0c06d3fa9cc55142f1da14bc8631fbe8fd6e19d5
   MZFormSheetPresentationController: fbfdbad31884f16fac17fbe3c44c168306cc1095
+  PLPlayerKit: e5c6c32b63ca674e3f31278f1a5be7e9f02022d8
   Qiniu: ae0fea1cc379fae1560d8748ac537e0fbeb8626e
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
   SMPageControl: 922892813001cfaf059e86e6801f46a967e9ee29
@@ -56,6 +60,6 @@ SPEC CHECKSUMS:
   WeexSDK: 854ef66c9a90d609ad60e87c8b76affe2b772224
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
 
-PODFILE CHECKSUM: 6b8eb3f53bd095da95eba7c5f71c44383b1bf193
+PODFILE CHECKSUM: 26934df0fd3d613fb600093dd204d5b357e49e3c
 
 COCOAPODS: 1.3.1
