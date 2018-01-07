@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    m_cellInfos = [NSMutableArray array];
 }
 
 -(void)setWantsFullScreen:(BOOL)wantsFullScreenLayout

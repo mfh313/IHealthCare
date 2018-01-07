@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MFTableViewCellObject.h"
 
 @interface MMUIViewController : UIViewController
 {
     UIBarButtonItem *m_leftBarBtnItem;
     UIBarButtonItem *m_rightBarBtnItem;
+    
+    NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
 }
 
 -(void)onClickBackBtn:(id)sender;
