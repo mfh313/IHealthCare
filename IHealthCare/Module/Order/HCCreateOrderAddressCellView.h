@@ -10,4 +10,8 @@
 
 @interface HCCreateOrderAddressCellView : MMUIBridgeView
 
+-(void)setName:(NSString *)name;
+-(void)setPhone:(NSString *)phone;
+-(void)setAddressString:(NSString *)address;
+
 @end

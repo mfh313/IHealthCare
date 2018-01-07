@@ -234,6 +234,8 @@
 		A5DD8CFD2001C4730079CD7D /* HCCreateOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD8CFC2001C4730079CD7D /* HCCreateOrderViewController.m */; };
 		A5DD8D002001CCAF0079CD7D /* HCCreateOrderAddressCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD8CFF2001CCAF0079CD7D /* HCCreateOrderAddressCellView.m */; };
 		A5DD8D022001CD1A0079CD7D /* HCCreateOrderAddressCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DD8D012001CD1A0079CD7D /* HCCreateOrderAddressCellView.xib */; };
+		A5DD8D052001E8A60079CD7D /* HCOrderUserAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD8D042001E8A60079CD7D /* HCOrderUserAddressModel.m */; };
+		A5DD8D082001F6A90079CD7D /* HCGetOrderUserAddressApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD8D072001F6A90079CD7D /* HCGetOrderUserAddressApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -677,6 +679,10 @@
 		A5DD8CFE2001CCAF0079CD7D /* HCCreateOrderAddressCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCreateOrderAddressCellView.h; sourceTree = "<group>"; };
 		A5DD8CFF2001CCAF0079CD7D /* HCCreateOrderAddressCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCreateOrderAddressCellView.m; sourceTree = "<group>"; };
 		A5DD8D012001CD1A0079CD7D /* HCCreateOrderAddressCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCCreateOrderAddressCellView.xib; sourceTree = "<group>"; };
+		A5DD8D032001E8A60079CD7D /* HCOrderUserAddressModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderUserAddressModel.h; sourceTree = "<group>"; };
+		A5DD8D042001E8A60079CD7D /* HCOrderUserAddressModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderUserAddressModel.m; sourceTree = "<group>"; };
+		A5DD8D062001F6A90079CD7D /* HCGetOrderUserAddressApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetOrderUserAddressApi.h; sourceTree = "<group>"; };
+		A5DD8D072001F6A90079CD7D /* HCGetOrderUserAddressApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetOrderUserAddressApi.m; sourceTree = "<group>"; };
 		D46774D91909037E0185E2B2 /* Pods-IHealthCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.release.xcconfig"; sourceTree = "<group>"; };
 		E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IHealthCare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -968,6 +974,8 @@
 		A575874E1FE526C1000FC7CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A5DD8D032001E8A60079CD7D /* HCOrderUserAddressModel.h */,
+				A5DD8D042001E8A60079CD7D /* HCOrderUserAddressModel.m */,
 				A526F4111FF3DFFD00092ADD /* HCMedicalServiceDetailModel.h */,
 				A526F4121FF3DFFD00092ADD /* HCMedicalServiceDetailModel.m */,
 				A5648D461FF2AEBE00EF956B /* HCClassRoomDetailModel.h */,
@@ -1511,6 +1519,8 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A5DD8D062001F6A90079CD7D /* HCGetOrderUserAddressApi.h */,
+				A5DD8D072001F6A90079CD7D /* HCGetOrderUserAddressApi.m */,
 				A58849121FFFDA4700FC93EE /* HCPayOrderApi.h */,
 				A58849131FFFDA4700FC93EE /* HCPayOrderApi.m */,
 				A588490B1FFFC90E00FC93EE /* HCCreateOrderApi.h */,
@@ -1876,6 +1886,7 @@
 				A5648D481FF2AEBE00EF956B /* HCClassRoomDetailModel.m in Sources */,
 				A57B47F21FCEF9190004C397 /* Chat.pb.m in Sources */,
 				A57B48251FCEF9190004C397 /* UIViewController+pregress.m in Sources */,
+				A5DD8D082001F6A90079CD7D /* HCGetOrderUserAddressApi.m in Sources */,
 				A57B48341FCEF9190004C397 /* MMUINavigationBar.m in Sources */,
 				A57B481C1FCEF9190004C397 /* NSMutableDictionary+SafeInsert.m in Sources */,
 				A57B47F81FCEF9190004C397 /* AbstractMessage.m in Sources */,
@@ -1905,6 +1916,7 @@
 				A57B47FA1FCEF9190004C397 /* CodedInputStream.m in Sources */,
 				A57B47ED1FCEF9190004C397 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				A5D9AE301FDBB87B00B5D4C0 /* YTKBaseRequest+AnimatingAccessory.m in Sources */,
+				A5DD8D052001E8A60079CD7D /* HCOrderUserAddressModel.m in Sources */,
 				A554651A1FEFAD5700A7E3C7 /* HCPullFreshCountLogic.m in Sources */,
 				A520E5FC1FEE72AA00E4EFAD /* MMTableViewUserInfo.m in Sources */,
 				A575874D1FE519A0000FC7CB /* HCGetProductsApi.m in Sources */,

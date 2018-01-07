@@ -24,7 +24,7 @@
                         <action selector="onClickBackButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="c2n-sY-JiI"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title_btn_return_nor" translatesAutoresizingMaskIntoConstraints="NO" id="l1m-Bv-Q03">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title_btn_return_white_nor" translatesAutoresizingMaskIntoConstraints="NO" id="l1m-Bv-Q03">
                     <rect key="frame" x="15" y="11" width="22" height="22"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="22" id="NU0-Ni-OGF"/>
@@ -40,7 +40,7 @@
                         <action selector="onClickForwordButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="JAz-sM-log"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title_btn_share_nor" translatesAutoresizingMaskIntoConstraints="NO" id="SPV-vq-xz3">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="title_btn_share_white_nor" translatesAutoresizingMaskIntoConstraints="NO" id="SPV-vq-xz3">
                     <rect key="frame" x="435" y="11" width="22" height="22"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="22" id="ham-jo-mSZ"/>
@@ -68,7 +68,7 @@
         </view>
     </objects>
     <resources>
-        <image name="title_btn_return_nor" width="22" height="22"/>
-        <image name="title_btn_share_nor" width="22" height="22"/>
+        <image name="title_btn_return_white_nor" width="22" height="22"/>
+        <image name="title_btn_share_white_nor" width="22" height="22"/>
     </resources>
 </document>
