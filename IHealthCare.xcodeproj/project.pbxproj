@@ -230,6 +230,7 @@
 		A5D9AE371FDBB98100B5D4C0 /* HealthCareApiManger.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE361FDBB98100B5D4C0 /* HealthCareApiManger.m */; };
 		A5D9AE3A1FDBC14100B5D4C0 /* HCGetVerifyCodeApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE391FDBC14100B5D4C0 /* HCGetVerifyCodeApi.m */; };
 		A5D9AE3D1FDBCADB00B5D4C0 /* HCUserLoginApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE3C1FDBCADB00B5D4C0 /* HCUserLoginApi.m */; };
+		A5DD8CFA2001BC450079CD7D /* HCOrderListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD8CF92001BC450079CD7D /* HCOrderListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -666,6 +667,8 @@
 		A5D9AE391FDBC14100B5D4C0 /* HCGetVerifyCodeApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetVerifyCodeApi.m; sourceTree = "<group>"; };
 		A5D9AE3B1FDBCADB00B5D4C0 /* HCUserLoginApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCUserLoginApi.h; sourceTree = "<group>"; };
 		A5D9AE3C1FDBCADB00B5D4C0 /* HCUserLoginApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserLoginApi.m; sourceTree = "<group>"; };
+		A5DD8CF82001BC450079CD7D /* HCOrderListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderListViewController.h; sourceTree = "<group>"; };
+		A5DD8CF92001BC450079CD7D /* HCOrderListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderListViewController.m; sourceTree = "<group>"; };
 		D46774D91909037E0185E2B2 /* Pods-IHealthCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.release.xcconfig"; sourceTree = "<group>"; };
 		E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IHealthCare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -910,13 +913,6 @@
 				A55465171FEFAD5700A7E3C7 /* HCPullFreshCountLogic.m */,
 			);
 			path = HCComponent;
-			sourceTree = "<group>";
-		};
-		A55925C41FFFB45D00CCA464 /* Order */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Order;
 			sourceTree = "<group>";
 		};
 		A5623C921FCDB851001A6B5D = {
@@ -1223,7 +1219,7 @@
 			isa = PBXGroup;
 			children = (
 				A5190E321FFA655F00BBF049 /* TopCure */,
-				A55925C41FFFB45D00CCA464 /* Order */,
+				A5DD8CF72001BBD20079CD7D /* Order */,
 				A58848DF1FFFC5C700FC93EE /* HealthManagement */,
 				A55388831FFE61D900D0DC27 /* WeiXin */,
 				A5268DA91FD3C7E500E2F93C /* WealthManagement */,
@@ -1562,6 +1558,15 @@
 			path = Accessory;
 			sourceTree = "<group>";
 		};
+		A5DD8CF72001BBD20079CD7D /* Order */ = {
+			isa = PBXGroup;
+			children = (
+				A5DD8CF82001BC450079CD7D /* HCOrderListViewController.h */,
+				A5DD8CF92001BC450079CD7D /* HCOrderListViewController.m */,
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1806,6 +1811,7 @@
 				A58849071FFFC5C700FC93EE /* HCHealthManagementMedicalServiceViewController.m in Sources */,
 				A57B482B1FCEF9190004C397 /* MFUICollectionView.m in Sources */,
 				A57B48101FCEF9190004C397 /* SCLAlertViewStyleKit.m in Sources */,
+				A5DD8CFA2001BC450079CD7D /* HCOrderListViewController.m in Sources */,
 				A57B47FF1FCEF9190004C397 /* ExtendableMessageBuilder.m in Sources */,
 				A5D9AE3D1FDBCADB00B5D4C0 /* HCUserLoginApi.m in Sources */,
 				A57B48291FCEF9190004C397 /* MFTableViewCellObject.m in Sources */,

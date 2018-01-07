@@ -333,10 +333,8 @@
     req.package             = [dict objectForKey:@"packAge"];
     req.sign                = [dict objectForKey:@"paySign"];
     [WXApi sendReq:req];
-    //日志输出
-//    NSLog(@"appid=%@\npartnerId=%@\nprepayId=%@\nnonceStr=%@\ntimeStamp=%ld\npackage=%@\nsign=%@",[dict objectForKey:@"appId"],req.partnerId,req.prepayId,req.nonceStr,(long)req.timeStamp,req.package,req.sign);
     
-    NSLog(@"appId=%@\nnonceStr=%@\npackAge=%@\npartnerid=%@\npaySign=%@\nprepayId=%@\ntimeStamp=%ld",[dict objectForKey:@"appId"],req.nonceStr,req.package,req.partnerId,req.sign,req.prepayId,(long)req.timeStamp);
+//    NSLog(@"appid=%@\npartnerId=%@\nprepayId=%@\nnonceStr=%@\ntimeStamp=%ld\npackage=%@\nsign=%@",[dict objectForKey:@"appId"],req.partnerId,req.prepayId,req.nonceStr,(long)req.timeStamp,req.package,req.sign);
 }
 
 - (void)didReceiveMemoryWarning {
