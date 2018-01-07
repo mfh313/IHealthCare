@@ -72,6 +72,12 @@
     [self reloadMeView];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+}
+
 #pragma mark - HCMeProfileCellViewDelegate
 -(void)onClickToAuth:(HCMeProfileCellView *)view
 {
