@@ -8,7 +8,7 @@
 
 
 #define MFCustomDefaultColor [UIColor hx_colorWithHexString:@"e93871"]
-#define MFCustomLineColor [UIColor hx_colorWithHexString:@"d8d8d8"]
+#define MFCustomLineColor [UIColor hx_colorWithHexString:@"D8D8D8"]
 #define MFCustomNavBarColor [UIColor hx_colorWithHexString:@"0080C0"]
 #define MFCustomNavBarTitleColor [UIColor hx_colorWithHexString:@"595959"]
 

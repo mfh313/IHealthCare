@@ -11,11 +11,6 @@
 #import "HCHighProductDetailCustomNavbar.h"
 #import "HCHighProductDetailBottomView.h"
 #import "HCProductDetailHeaderTitleView.h"
-#import "WXApiRequestHandler.h"
-#import "WXApiManager.h"
-#import "HCCreateOrderApi.h"
-#import "HCLoginService.h"
-#import "HCPayOrderApi.h"
 #import "HCCreateOrderViewController.h"
 
 @interface HCHighProductDetailViewController () <HCHighProductDetailCustomNavbarDelegate,HCHighProductDetailBottomViewDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
@@ -25,8 +20,6 @@
     
     MFUITableView *m_tableView;
     NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
-    
-    NSInteger m_oid;
 }
 
 @end
@@ -199,12 +192,11 @@
 -(void)onClickBuyProduct
 {
     [self showCreateOrderVC];
-//    [self createOrder];
 }
 
 -(void)onClickCollectionProduct
 {
-    [self payOrder];
+    NSLog(@"onClickCollectionProduct");
 }
 
 -(void)makeCellObjects
@@ -232,117 +224,6 @@
     [self makeCellObjects];
     
     [m_tableView reloadData];
-}
-
--(void)createOrder
-{
-    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
-    
-    NSMutableArray *carts = [NSMutableArray array];
-    
-    HCOrderItemModel *testItem = [HCOrderItemModel new];
-    testItem.pid = self.detailModel.pid;
-    testItem.count = 1;
-    
-    [carts addObject:testItem];
-    
-    __weak typeof(self) weakSelf = self;
-    HCCreateOrderApi *mfApi = [HCCreateOrderApi new];
-    mfApi.userTel = loginService.userPhone;
-    mfApi.authCode = loginService.token;
-    mfApi.name = @"马方华";
-    mfApi.phone = @"15811809295";
-    mfApi.addr = @"广东省深圳市福田区下沙四坊23号";
-    mfApi.carts = carts;
-    
-    mfApi.animatingView = MFAppWindow;
-    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
-        
-        __strong typeof(weakSelf) strongSelf = weakSelf;
-        if (!mfApi.messageSuccess) {
-            [strongSelf showTips:mfApi.errorMessage];
-            return;
-        }
-        
-        NSDictionary *createOrderInfo = mfApi.responseNetworkData;
-        NSNumber *oid = createOrderInfo[@"oid"];
-        m_oid = oid.intValue;
-        
-        [strongSelf showTips:@"创建订单成功，点击收藏按钮付款"];
-        
-//        NSMutableArray *news = [NSMutableArray array];
-//        for (int i = 0; i < bestNews.count; i++) {
-//            HCBestNewsDetailModel *itemModel = [HCBestNewsDetailModel yy_modelWithDictionary:bestNews[i]];
-//            [news addObject:itemModel];
-//        }
-//        m_bestNews = news;
-//
-//        [strongSelf reloadTableView];
-        
-    } failure:^(YTKBaseRequest * request) {
-        
-        [m_tableView.pullToRefreshView stopAnimating];
-        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
-        [self showTips:errorDesc];
-    }];
-}
-
--(void)payOrder
-{
-    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
-    
-    __weak typeof(self) weakSelf = self;
-    HCPayOrderApi *mfApi = [HCPayOrderApi new];
-    mfApi.userTel = loginService.userPhone;
-    mfApi.authCode = loginService.token;
-    mfApi.oid = m_oid;
-    
-    mfApi.animatingText = @"正在支付";
-    mfApi.animatingView = MFAppWindow;
-    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
-        
-        __strong typeof(weakSelf) strongSelf = weakSelf;
-        if (!mfApi.messageSuccess) {
-            [strongSelf showTips:mfApi.errorMessage];
-            return;
-        }
-        
-        NSDictionary *payInfo = mfApi.responseNetworkData;
-        NSLog(@"payInfo=%@",payInfo);
-        
-        [strongSelf bizPayOrder:payInfo];
-        
-    } failure:^(YTKBaseRequest * request) {
-        
-        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
-        [self showTips:errorDesc];
-    }];
-}
-
-- (void)bizPay {
-    NSString *res = [WXApiRequestHandler jumpToBizPay];
-    if( ![@"" isEqual:res] ){
-        UIAlertView *alter = [[UIAlertView alloc] initWithTitle:@"支付失败" message:res delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        
-        [alter show];
-    }
-}
-
--(void)bizPayOrder:(NSDictionary *)dict
-{
-    NSMutableString *stamp  = [dict objectForKey:@"timeStamp"];
-    
-    //调起微信支付
-    PayReq* req             = [[PayReq alloc] init];
-    req.partnerId           = [dict objectForKey:@"partnerid"];
-    req.prepayId            = [dict objectForKey:@"prepayId"];
-    req.nonceStr            = [dict objectForKey:@"nonceStr"];
-    req.timeStamp           = stamp.intValue;
-    req.package             = [dict objectForKey:@"packAge"];
-    req.sign                = [dict objectForKey:@"paySign"];
-    [WXApi sendReq:req];
-    
-//    NSLog(@"appid=%@\npartnerId=%@\nprepayId=%@\nnonceStr=%@\ntimeStamp=%ld\npackage=%@\nsign=%@",[dict objectForKey:@"appId"],req.partnerId,req.prepayId,req.nonceStr,(long)req.timeStamp,req.package,req.sign);
 }
 
 -(void)showCreateOrderVC

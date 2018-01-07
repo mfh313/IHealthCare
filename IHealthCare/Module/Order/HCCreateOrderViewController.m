@@ -16,6 +16,8 @@
 #import "HCCreateOrderNullAddressCellView.h"
 #import "HCCreateOrderAddressCellView.h"
 #import "HCCreateOrderItemCellView.h"
+#import "WXApiRequestHandler.h"
+#import "WXApiManager.h"
 
 @interface HCCreateOrderViewController () <MMTableViewInfoDelegate>
 {
@@ -23,6 +25,8 @@
     HCOrderUserAddressModel *m_currentAddress;
     
     NSMutableArray *m_carts;
+    
+    NSInteger m_oid;
 }
 
 @end
@@ -47,6 +51,8 @@
     [self.view addSubview:contentTableView];
     
     [self getMyAddressInfo];
+    
+    [self setBottomView];
 }
 
 -(void)initCart
@@ -252,6 +258,135 @@
     cellView.frame = cell.contentView.bounds;
     
     HCOrderItemModel *orderItem =  [cellInfo getUserInfoValueForKey:@"cartItem"];
+    
+    [cellView setOrderItemCount:orderItem.count];
+    [cellView setProductDetail:orderItem.detailModel];
+}
+
+-(void)setBottomView
+{
+    UIView *bottomView = [UIView new];
+    bottomView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:bottomView];
+    [bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(self.view);
+        make.height.mas_equalTo(@(60));
+        make.bottom.equalTo(self.view).offset(0);
+        make.left.equalTo(self.view);
+    }];
+    
+    UIView *separator = [UIView new];
+    separator.backgroundColor = MFCustomLineColor;
+    [bottomView addSubview:separator];
+    [separator mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(bottomView.mas_bottom);
+        make.width.equalTo(bottomView.mas_width);
+        make.height.mas_equalTo(MFOnePixHeight);
+    }];
+    
+    UIButton *submitButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [submitButton setTitle:@"提交订单" forState:UIControlStateNormal];
+    submitButton.titleLabel.font = [UIFont systemFontOfSize:16.0f];
+    [submitButton setBackgroundImage:MFImageStretchCenter(@"common_btn_login_nor") forState:UIControlStateNormal];
+    [submitButton setBackgroundImage:MFImageStretchCenter(@"common_btn_login_press") forState:UIControlStateHighlighted];
+    [submitButton setBackgroundImage:MFImageStretchCenter(@"common_btn_login_dis") forState:UIControlStateDisabled];
+    [submitButton addTarget:self action:@selector(onClickSubmitButton) forControlEvents:UIControlEventTouchUpInside];
+    [bottomView addSubview:submitButton];
+    [submitButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.mas_equalTo(bottomView.mas_centerX);
+        make.centerY.mas_equalTo(bottomView.mas_centerY);
+        make.width.mas_equalTo(270);
+        make.height.mas_equalTo(40);
+    }];
+}
+
+-(void)onClickSubmitButton
+{
+    [self createOrder];
+}
+
+-(void)createOrder
+{
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    
+    __weak typeof(self) weakSelf = self;
+    HCCreateOrderApi *mfApi = [HCCreateOrderApi new];
+    mfApi.userTel = loginService.userPhone;
+    mfApi.authCode = loginService.token;
+    mfApi.name = m_currentAddress.name;
+    mfApi.phone = m_currentAddress.phone;
+    mfApi.addr = m_currentAddress.addr;
+    mfApi.carts = m_carts;
+    mfApi.animatingText = @"正在创建订单...";
+    mfApi.animatingView = MFAppWindow;
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSDictionary *createOrderInfo = mfApi.responseNetworkData;
+        NSNumber *oid = createOrderInfo[@"oid"];
+        m_oid = oid.intValue;
+        
+        [strongSelf payOrder];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
+}
+
+-(void)payOrder
+{
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    
+    __weak typeof(self) weakSelf = self;
+    HCPayOrderApi *mfApi = [HCPayOrderApi new];
+    mfApi.userTel = loginService.userPhone;
+    mfApi.authCode = loginService.token;
+    mfApi.oid = m_oid;
+    
+    mfApi.animatingText = @"正在支付";
+    mfApi.animatingView = MFAppWindow;
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSDictionary *payInfo = mfApi.responseNetworkData;
+        NSLog(@"payInfo=%@",payInfo);
+        
+        [strongSelf bizPayOrder:payInfo];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
+}
+
+-(void)bizPayOrder:(NSDictionary *)dict
+{
+    NSMutableString *stamp  = [dict objectForKey:@"timeStamp"];
+    
+    //调起微信支付
+    PayReq* req             = [[PayReq alloc] init];
+    req.partnerId           = [dict objectForKey:@"partnerid"];
+    req.prepayId            = [dict objectForKey:@"prepayId"];
+    req.nonceStr            = [dict objectForKey:@"nonceStr"];
+    req.timeStamp           = stamp.intValue;
+    req.package             = [dict objectForKey:@"packAge"];
+    req.sign                = [dict objectForKey:@"paySign"];
+    [WXApi sendReq:req];
+    
+    //    NSLog(@"appid=%@\npartnerId=%@\nprepayId=%@\nnonceStr=%@\ntimeStamp=%ld\npackage=%@\nsign=%@",[dict objectForKey:@"appId"],req.partnerId,req.prepayId,req.nonceStr,(long)req.timeStamp,req.package,req.sign);
 }
 
 - (void)didReceiveMemoryWarning {

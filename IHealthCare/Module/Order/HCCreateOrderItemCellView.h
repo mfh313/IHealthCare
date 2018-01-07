@@ -8,6 +8,10 @@
 
 #import "MMUIBridgeView.h"
 
+@class HCProductDetailModel;
 @interface HCCreateOrderItemCellView : MMUIBridgeView
+
+-(void)setProductDetail:(HCProductDetailModel *)detailModel;
+-(void)setOrderItemCount:(NSInteger)count;
 
 @end
