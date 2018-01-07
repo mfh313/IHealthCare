@@ -11,9 +11,10 @@
 #import "HCCreateOrderApi.h"
 #import "HCLoginService.h"
 #import "HCPayOrderApi.h"
-#import "HCCreateOrderAddressCellView.h"
 #import "HCOrderUserAddressModel.h"
 #import "HCGetOrderUserAddressApi.h"
+#import "HCCreateOrderNullAddressCellView.h"
+#import "HCCreateOrderAddressCellView.h"
 
 @interface HCCreateOrderViewController () <MMTableViewInfoDelegate>
 {
@@ -90,7 +91,48 @@
 -(void)reloadTableView
 {
     [m_tableViewInfo clearAllSection];
-    [self addAddressSection];
+    
+    if (!m_currentAddress)
+    {
+        [self addNullAddressSection];
+    }
+    else
+    {
+        [self addAddressSection];
+    }
+}
+
+-(void)addNullAddressSection
+{
+    MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
+    
+    MMTableViewCellInfo *cellInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeNullAddressCell:cellInfo:)
+                                                             makeTarget:self
+                                                              actionSel:@selector(onClickAddressCell:)
+                                                           actionTarget:self
+                                                                 height:90.0
+                                                               userInfo:nil];
+    [cellInfo addUserInfoValue:@"nullAddress" forKey:@"identifier"];
+    [sectionInfo addCell:cellInfo];
+    
+    [m_tableViewInfo addSection:sectionInfo];
+}
+
+- (void)makeNullAddressCell:(MFTableViewCell *)cell cellInfo:(MMTableViewCellInfo *)cellInfo
+{
+    if (!cell.m_subContentView) {
+        HCCreateOrderNullAddressCellView *cellView = [HCCreateOrderNullAddressCellView nibView];
+        cell.m_subContentView = cellView;
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+    }
+    else
+    {
+        [cell.contentView addSubview:cell.m_subContentView];
+    }
+    
+    HCCreateOrderNullAddressCellView *cellView = (HCCreateOrderNullAddressCellView *)cell.m_subContentView;
+    cellView.frame = cell.contentView.bounds;
 }
 
 -(void)addAddressSection
@@ -121,29 +163,18 @@
     {
         [cell.contentView addSubview:cell.m_subContentView];
     }
-
+    
     HCCreateOrderAddressCellView *cellView = (HCCreateOrderAddressCellView *)cell.m_subContentView;
     cellView.frame = cell.contentView.bounds;
     
-    [cellView setName:@"马方华1"];
-    [cellView setPhone:@"13798228953"];
-    [cellView setAddressString:@"广东省深圳市龙华区  民丰路129号"];
-
-//    NSMutableDictionary *itemInfo =  [cellInfo getUserInfoValueForKey:@"cellData"];
-//    NSString *imageName = itemInfo[@"image"];
-//    NSString *title = itemInfo[@"title"];
-//
-//    [cellView setLeftImage:MFImage(imageName)];
-//    [cellView setTitle:title];
+    [cellView setName:m_currentAddress.name];
+    [cellView setPhone:m_currentAddress.phone];
+    [cellView setAddressString:m_currentAddress.addr];
 }
 
 -(void)onClickAddressCell:(MMTableViewCellInfo *)cellInfo
 {
-//    NSMutableDictionary *itemInfo =  [cellInfo getUserInfoValueForKey:@"cellData"];
-//    NSString *key = itemInfo[@"key"];
-//    if ([key isEqualToString:@"setting"]) {
-//        NSLog(@"setting");
-//    }
+
 }
 
 - (void)didReceiveMemoryWarning {

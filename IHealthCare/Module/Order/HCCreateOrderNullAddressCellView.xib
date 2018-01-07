@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HCCreateOrderNullAddressCellView">
+            <rect key="frame" x="0.0" y="0.0" width="421" height="87"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加收货地址" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHb-ai-Cui">
+                    <rect key="frame" x="173.5" y="37" width="74" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_btn_next_nor" translatesAutoresizingMaskIntoConstraints="NO" id="05m-lx-WdP">
+                    <rect key="frame" x="384" y="32.5" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="22" id="U6g-EJ-Eo7"/>
+                        <constraint firstAttribute="height" constant="22" id="mFt-qS-MXa"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="05m-lx-WdP" secondAttribute="trailing" constant="15" id="3nO-Lk-uBS"/>
+                <constraint firstItem="05m-lx-WdP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="78m-a0-aw6"/>
+                <constraint firstItem="KHb-ai-Cui" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Xxf-56-cMg"/>
+                <constraint firstItem="KHb-ai-Cui" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oSF-uo-17m"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="55.5" y="358.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common_btn_next_nor" width="22" height="22"/>
+    </resources>
+</document>
