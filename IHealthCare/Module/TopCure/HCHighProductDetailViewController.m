@@ -167,7 +167,7 @@
     
     UITextView *cellView = (UITextView *)cell.m_subContentView;
     cellView.frame = CGRectMake(20, 0, CGRectGetWidth(cell.contentView.frame) - 45, CGRectGetHeight(cell.contentView.frame) - 0);
-    [cellView setText:self.detailModel.pdesc];
+    [cellView setText:self.detailModel.detail];
     return cell;
 }
 
