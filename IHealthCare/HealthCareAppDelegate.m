@@ -35,12 +35,6 @@
     m_appViewControllerMgr = [HealthCareViewControllerManager getAppViewControllerManager];
     [m_appViewControllerMgr setRootMainWindow:self.window];
     
-//#ifdef DEBUG
-//    [m_appViewControllerMgr launchMainTabViewController];
-//#else
-//    [m_appViewControllerMgr launchLoginViewController];
-//#endif
-    
     [m_appViewControllerMgr launchLoginViewController];
     
     [MFThemeHelper setDefaultThemeColor];

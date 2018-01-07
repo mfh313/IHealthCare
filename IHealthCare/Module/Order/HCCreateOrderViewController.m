@@ -15,6 +15,7 @@
 #import "HCGetOrderUserAddressApi.h"
 #import "HCCreateOrderNullAddressCellView.h"
 #import "HCCreateOrderAddressCellView.h"
+#import "HCCreateOrderItemCellView.h"
 
 @interface HCCreateOrderViewController () <MMTableViewInfoDelegate>
 {
@@ -36,19 +37,14 @@
     
     [self initCart];
     
-    m_tableViewInfo = [[MMTableViewInfo alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
+    m_tableViewInfo = [[MMTableViewInfo alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
     m_tableViewInfo.delegate = self;
     
     UITableView *contentTableView = [m_tableViewInfo getTableView];
     contentTableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     contentTableView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
-    contentTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    contentTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:contentTableView];
-    
-    UIView *tableHeaderView = [UIView new];
-    tableHeaderView.frame = CGRectMake(0, 0, CGRectGetWidth(contentTableView.frame), 10);
-    tableHeaderView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
-    contentTableView.tableHeaderView = tableHeaderView;
     
     [self getMyAddressInfo];
 }
@@ -93,7 +89,7 @@
             HCOrderUserAddressModel *itemModel = [HCOrderUserAddressModel yy_modelWithDictionary:addressInfoArray[i]];
             [addressInfos addObject:itemModel];
         }
-        m_currentAddress = addressInfos.firstObject;
+        m_currentAddress = addressInfos.lastObject;
         
         [strongSelf reloadTableView];
         
@@ -108,14 +104,17 @@
 {
     [m_tableViewInfo clearAllSection];
     
-    if (!m_currentAddress)
-    {
-        [self addNullAddressSection];
-    }
-    else
+    if (m_currentAddress)
     {
         [self addAddressSection];
     }
+    else
+    {
+        [self addNullAddressSection];
+    }
+    
+    [self addDivisionCell];
+    [self addCartItems];
 }
 
 -(void)addNullAddressSection
@@ -188,9 +187,71 @@
     [cellView setAddressString:m_currentAddress.addr];
 }
 
+-(void)addDivisionCell
+{
+    MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
+    
+    MMTableViewCellInfo *cellInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeDivisionCell:cellInfo:)
+                                                             makeTarget:self
+                                                              actionSel:nil
+                                                           actionTarget:self
+                                                                 height:10.0
+                                                               userInfo:nil];
+    
+    [sectionInfo addCell:cellInfo];
+    
+    [m_tableViewInfo addSection:sectionInfo];
+}
+
+- (void)makeDivisionCell:(MFTableViewCell *)cell cellInfo:(MMTableViewCellInfo *)cellInfo
+{
+    cell.contentView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
+}
+
 -(void)onClickAddressCell:(MMTableViewCellInfo *)cellInfo
 {
     NSLog(@"onClickAddressCell");
+}
+
+-(void)addCartItems
+{
+    MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
+    
+    for (int i = 0; i < m_carts.count; i++)
+    {
+        HCOrderItemModel *orderItem = m_carts[i];
+        
+        MMTableViewCellInfo *cellInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeCartItemCell:cellInfo:)
+                                                                 makeTarget:self
+                                                                  actionSel:nil
+                                                               actionTarget:self
+                                                                     height:118.0
+                                                                   userInfo:nil];
+        
+        [cellInfo addUserInfoValue:@"cartItem" forKey:@"identifier"];
+        [cellInfo addUserInfoValue:orderItem forKey:@"cartItem"];
+        
+        [sectionInfo addCell:cellInfo];
+    }
+    
+    [m_tableViewInfo addSection:sectionInfo];
+}
+
+- (void)makeCartItemCell:(MFTableViewCell *)cell cellInfo:(MMTableViewCellInfo *)cellInfo
+{
+    if (!cell.m_subContentView) {
+        HCCreateOrderItemCellView *cellView = [HCCreateOrderItemCellView nibView];
+        cell.m_subContentView = cellView;
+    }
+    else
+    {
+        [cell.contentView addSubview:cell.m_subContentView];
+    }
+    
+    HCCreateOrderItemCellView *cellView = (HCCreateOrderItemCellView *)cell.m_subContentView;
+    cellView.frame = cell.contentView.bounds;
+    
+    HCOrderItemModel *orderItem =  [cellInfo getUserInfoValueForKey:@"cartItem"];
 }
 
 - (void)didReceiveMemoryWarning {

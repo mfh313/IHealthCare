@@ -238,6 +238,8 @@
 		A5DD8D082001F6A90079CD7D /* HCGetOrderUserAddressApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD8D072001F6A90079CD7D /* HCGetOrderUserAddressApi.m */; };
 		A5DD8D0B200201730079CD7D /* HCCreateOrderNullAddressCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD8D0A200201730079CD7D /* HCCreateOrderNullAddressCellView.m */; };
 		A5DD8D0D200201950079CD7D /* HCCreateOrderNullAddressCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DD8D0C200201950079CD7D /* HCCreateOrderNullAddressCellView.xib */; };
+		A5DD8D102002116D0079CD7D /* HCCreateOrderItemCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD8D0F2002116D0079CD7D /* HCCreateOrderItemCellView.m */; };
+		A5DD8D12200211A00079CD7D /* HCCreateOrderItemCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DD8D11200211A00079CD7D /* HCCreateOrderItemCellView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -688,6 +690,9 @@
 		A5DD8D09200201730079CD7D /* HCCreateOrderNullAddressCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCreateOrderNullAddressCellView.h; sourceTree = "<group>"; };
 		A5DD8D0A200201730079CD7D /* HCCreateOrderNullAddressCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCreateOrderNullAddressCellView.m; sourceTree = "<group>"; };
 		A5DD8D0C200201950079CD7D /* HCCreateOrderNullAddressCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCCreateOrderNullAddressCellView.xib; sourceTree = "<group>"; };
+		A5DD8D0E2002116D0079CD7D /* HCCreateOrderItemCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCreateOrderItemCellView.h; sourceTree = "<group>"; };
+		A5DD8D0F2002116D0079CD7D /* HCCreateOrderItemCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCreateOrderItemCellView.m; sourceTree = "<group>"; };
+		A5DD8D11200211A00079CD7D /* HCCreateOrderItemCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCCreateOrderItemCellView.xib; sourceTree = "<group>"; };
 		D46774D91909037E0185E2B2 /* Pods-IHealthCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.release.xcconfig"; sourceTree = "<group>"; };
 		E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IHealthCare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1589,6 +1594,9 @@
 				A5DD8CFE2001CCAF0079CD7D /* HCCreateOrderAddressCellView.h */,
 				A5DD8CFF2001CCAF0079CD7D /* HCCreateOrderAddressCellView.m */,
 				A5DD8D012001CD1A0079CD7D /* HCCreateOrderAddressCellView.xib */,
+				A5DD8D0E2002116D0079CD7D /* HCCreateOrderItemCellView.h */,
+				A5DD8D0F2002116D0079CD7D /* HCCreateOrderItemCellView.m */,
+				A5DD8D11200211A00079CD7D /* HCCreateOrderItemCellView.xib */,
 				A5DD8D09200201730079CD7D /* HCCreateOrderNullAddressCellView.h */,
 				A5DD8D0A200201730079CD7D /* HCCreateOrderNullAddressCellView.m */,
 				A5DD8D0C200201950079CD7D /* HCCreateOrderNullAddressCellView.xib */,
@@ -1683,6 +1691,7 @@
 				A5190E6C1FFA655F00BBF049 /* HCBestNewsDetailToolBar.xib in Resources */,
 				A56CD7881FD0315000FFF504 /* MeAssets.xcassets in Resources */,
 				A511F35A1FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib in Resources */,
+				A5DD8D12200211A00079CD7D /* HCCreateOrderItemCellView.xib in Resources */,
 				A511F3551FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib in Resources */,
 				A55465101FEFAD3100A7E3C7 /* HCMeProfileCellView.xib in Resources */,
 				A58848FF1FFFC5C700FC93EE /* HCHealthManagementCellView.xib in Resources */,
@@ -1815,6 +1824,7 @@
 				A57B47E11FCEF9190004C397 /* IQUIScrollView+Additions.m in Sources */,
 				A55388941FFE61D900D0DC27 /* WXApiRequestHandler.m in Sources */,
 				A57B48231FCEF9190004C397 /* UIViewController+FixBackIndicatorImage.m in Sources */,
+				A5DD8D102002116D0079CD7D /* HCCreateOrderItemCellView.m in Sources */,
 				A57B47EF1FCEF9190004C397 /* LYSideslipCell.m in Sources */,
 				A57B47EC1FCEF9190004C397 /* IQToolbar.m in Sources */,
 				A57B48071FCEF9190004C397 /* PBArray.m in Sources */,

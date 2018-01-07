@@ -158,11 +158,12 @@
     NSMutableArray *section1 = [NSMutableArray array];
     NSMutableDictionary *records = [NSMutableDictionary dictionary];
     records[@"image"] = @"my_icon_health_records";
-    records[@"title"] = @"我的健康档案";
+    records[@"title"] = @"我的课程";
     
     NSMutableDictionary *service = [NSMutableDictionary dictionary];
     service[@"image"] = @"my_icon_service";
     service[@"title"] = @"我的服务";
+    //我的服务
     
     [section1 addObject:records];
     [section1 addObject:service];
@@ -194,7 +195,7 @@
     
     [section3 addObject:circle];
     [section3 addObject:invitation];
-    [section3 addObject:program];
+//    [section3 addObject:program];
     
     NSMutableArray *section4 = [NSMutableArray array];
     NSMutableDictionary *setting = [NSMutableDictionary dictionary];
