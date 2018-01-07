@@ -72,6 +72,11 @@
     return m_phoneTextField.text;
 }
 
+-(void)setInputPhone:(NSString *)phone
+{
+    m_phoneTextField.text = phone;
+}
+
 -(void)setVerifyCode:(NSString *)verifyCode
 {
     m_verificationCodeTextField.text = verifyCode;

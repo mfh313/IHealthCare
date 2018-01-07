@@ -24,6 +24,7 @@
 @property (nonatomic,weak) id<HCLoginContentViewDelegate> m_delegate;
 
 -(NSString *)inputPhoneText;
+-(void)setInputPhone:(NSString *)phone;
 -(void)setVerifyCode:(NSString *)verifyCode;
 
 @end

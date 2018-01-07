@@ -55,6 +55,12 @@
         make.bottom.equalTo(self.view).with.offset(-10);
         make.centerX.mas_equalTo(self.view.mas_centerX);
     }];
+    
+    #ifdef DEBUG
+    [m_loginContentView setInputPhone:@"13798228953"];
+    #else
+    
+    #endif
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView

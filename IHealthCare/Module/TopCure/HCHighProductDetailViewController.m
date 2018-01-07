@@ -16,6 +16,7 @@
 #import "HCCreateOrderApi.h"
 #import "HCLoginService.h"
 #import "HCPayOrderApi.h"
+#import "HCCreateOrderViewController.h"
 
 @interface HCHighProductDetailViewController () <HCHighProductDetailCustomNavbarDelegate,HCHighProductDetailBottomViewDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -67,6 +68,12 @@
     }];
     
     [self reloadTableView];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -191,7 +198,8 @@
 #pragma mark - HCHighProductDetailBottomViewDelegate
 -(void)onClickBuyProduct
 {
-    [self createOrder];
+    [self showCreateOrderVC];
+//    [self createOrder];
 }
 
 -(void)onClickCollectionProduct
@@ -335,6 +343,13 @@
     [WXApi sendReq:req];
     
 //    NSLog(@"appid=%@\npartnerId=%@\nprepayId=%@\nnonceStr=%@\ntimeStamp=%ld\npackage=%@\nsign=%@",[dict objectForKey:@"appId"],req.partnerId,req.prepayId,req.nonceStr,(long)req.timeStamp,req.package,req.sign);
+}
+
+-(void)showCreateOrderVC
+{
+    HCCreateOrderViewController *createOrderVC = [HCCreateOrderViewController new];
+    createOrderVC.detailModel = self.detailModel;
+    [self.navigationController pushViewController:createOrderVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
