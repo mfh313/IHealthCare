@@ -242,6 +242,11 @@
     NSLog(@"onClickFollowUp");
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

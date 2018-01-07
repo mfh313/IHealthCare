@@ -352,6 +352,11 @@
     [self.navigationController pushViewController:createOrderVC animated:YES];
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
