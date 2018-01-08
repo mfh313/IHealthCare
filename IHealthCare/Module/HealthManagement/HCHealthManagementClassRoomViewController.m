@@ -10,6 +10,7 @@
 #import "HCGetClassRoomApi.h"
 #import "HCClassRoomDetailModel.h"
 #import "HCHealthManagementClassRoomCellView.h"
+#import "HCClassRoomDetailViewController.h"
 
 @interface HCHealthManagementClassRoomViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCHealthManagementClassRoomCellViewDelegate>
 {
@@ -160,7 +161,10 @@
 #pragma mark - HCHealthManagementClassRoomCellViewDelegate
 -(void)onClickClassRoomDetail:(HCClassRoomDetailModel *)itemModel
 {
-    
+    HCClassRoomDetailViewController *classRoomDetailVC = [HCClassRoomDetailViewController new];
+    classRoomDetailVC.itemModel = itemModel;
+    classRoomDetailVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:classRoomDetailVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

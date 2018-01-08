@@ -58,6 +58,7 @@
 		A55388961FFE61D900D0DC27 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A553888E1FFE61D900D0DC27 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m */; };
 		A55388971FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388901FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */; };
 		A55388981FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388921FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.m */; };
+		A553E8BA2003944700BEFB14 /* HCClassRoomDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A553E8B92003944700BEFB14 /* HCClassRoomDetailViewController.m */; };
 		A554650A1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464FE1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m */; };
 		A554650B1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55464FF1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib */; };
 		A554650C1FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465011FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m */; };
@@ -339,6 +340,8 @@
 		A55388901FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SendMessageToWXReq+requestWithTextOrMediaMessage.m"; sourceTree = "<group>"; };
 		A55388911FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WXMediaMessage+messageConstruct.h"; sourceTree = "<group>"; };
 		A55388921FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WXMediaMessage+messageConstruct.m"; sourceTree = "<group>"; };
+		A553E8B82003944700BEFB14 /* HCClassRoomDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCClassRoomDetailViewController.h; sourceTree = "<group>"; };
+		A553E8B92003944700BEFB14 /* HCClassRoomDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCClassRoomDetailViewController.m; sourceTree = "<group>"; };
 		A55464FD1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAuthIDCardFacadeInputView.h; sourceTree = "<group>"; };
 		A55464FE1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAuthIDCardFacadeInputView.m; sourceTree = "<group>"; };
 		A55464FF1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCAuthIDCardFacadeInputView.xib; sourceTree = "<group>"; };
@@ -1487,6 +1490,8 @@
 				A58848EA1FFFC5C700FC93EE /* HCHealthManagementClassRoomCellView.xib */,
 				A58848EB1FFFC5C700FC93EE /* HCHealthManagementClassRoomViewController.h */,
 				A58848EC1FFFC5C700FC93EE /* HCHealthManagementClassRoomViewController.m */,
+				A553E8B82003944700BEFB14 /* HCClassRoomDetailViewController.h */,
+				A553E8B92003944700BEFB14 /* HCClassRoomDetailViewController.m */,
 				A58848ED1FFFC5C700FC93EE /* HCHealthManagementDetailToolBar.h */,
 				A58848EE1FFFC5C700FC93EE /* HCHealthManagementDetailToolBar.m */,
 				A58848EF1FFFC5C700FC93EE /* HCHealthManagementDetailToolBar.xib */,
@@ -1957,6 +1962,7 @@
 				A566B4D31FD24BB7004F6843 /* MMBarButton.m in Sources */,
 				A566B4D91FD298B7004F6843 /* HCUserRegisterViewController.m in Sources */,
 				A5DD8CFD2001C4730079CD7D /* HCCreateOrderViewController.m in Sources */,
+				A553E8BA2003944700BEFB14 /* HCClassRoomDetailViewController.m in Sources */,
 				A554650A1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

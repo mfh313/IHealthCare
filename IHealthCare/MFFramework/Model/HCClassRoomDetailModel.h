@@ -12,6 +12,7 @@
 
 @property (nonatomic,assign) NSInteger crid;
 @property (nonatomic,strong) NSString *imageUrl; //图片
+@property (nonatomic,strong) NSString *videoUrl; 
 @property (nonatomic,strong) NSString *name; //课堂标题
 @property (nonatomic,strong) NSString *classRoomDescription; //简介特色
 @property (nonatomic,strong) NSString *detail; //详情
