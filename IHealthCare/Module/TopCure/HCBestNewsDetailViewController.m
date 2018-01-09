@@ -199,9 +199,14 @@
     [m_cellInfos addObject:newsTitle];
     
     MFTableViewCellObject *newsDetail = [MFTableViewCellObject new];
-    newsDetail.cellHeight = 300.0f;
+    newsDetail.cellHeight = [self textHeightForNewsDetail:self.detailModel.detail];
     newsDetail.cellReuseIdentifier = @"newsDetail";
     [m_cellInfos addObject:newsDetail];
+}
+
+-(CGFloat)textHeightForNewsDetail:(NSString *)detail
+{
+    return [detail MMSizeWithFont:[UIFont systemFontOfSize:16.0f] maxSize:CGSizeMake(CGRectGetWidth(self.view.frame) - 45, CGFLOAT_MAX)].height + 30;
 }
 
 #pragma mark - HCHighProductDetailCustomNavbarDelegate
