@@ -47,12 +47,18 @@
     [_playerView autoPlayTheVideo];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+}
+
 - (ZFPlayerModel *)playerModel {
     if (!_playerModel) {
         _playerModel                  = [[ZFPlayerModel alloc] init];
-        _playerModel.title            = @"这里设置视频标题";
+        _playerModel.title            = self.itemModel.name;
         _playerModel.videoURL         = [NSURL URLWithString:self.videoURLString];
-        _playerModel.placeholderImage = [UIImage imageNamed:@"loading_bgView1"];
+//        _playerModel.placeholderImage = [UIImage imageNamed:@"loading_bgView1"];
         _playerModel.fatherView       = self.playerFatherView;
         //        _playerModel.resolutionDic = @{@"高清" : self.videoURL.absoluteString,
         //                                       @"标清" : self.videoURL.absoluteString};
@@ -88,6 +94,11 @@
     //        _playerView.forcePortrait = YES;
     /// 默认全屏播放
     //        _playerView.fullScreenPlay = YES;
+}
+
+- (void)zf_playerBackAction
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
