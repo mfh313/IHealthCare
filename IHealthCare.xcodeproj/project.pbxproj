@@ -59,6 +59,7 @@
 		A55388971FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388901FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m */; };
 		A55388981FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388921FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.m */; };
 		A553E8BA2003944700BEFB14 /* HCClassRoomDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A553E8B92003944700BEFB14 /* HCClassRoomDetailViewController.m */; };
+		A553F39F200624DB002A205B /* HCMedicalServiceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A553F39E200624DB002A205B /* HCMedicalServiceDetailViewController.m */; };
 		A554650A1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464FE1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m */; };
 		A554650B1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55464FF1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib */; };
 		A554650C1FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465011FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m */; };
@@ -342,6 +343,8 @@
 		A55388921FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WXMediaMessage+messageConstruct.m"; sourceTree = "<group>"; };
 		A553E8B82003944700BEFB14 /* HCClassRoomDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCClassRoomDetailViewController.h; sourceTree = "<group>"; };
 		A553E8B92003944700BEFB14 /* HCClassRoomDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCClassRoomDetailViewController.m; sourceTree = "<group>"; };
+		A553F39D200624DB002A205B /* HCMedicalServiceDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMedicalServiceDetailViewController.h; sourceTree = "<group>"; };
+		A553F39E200624DB002A205B /* HCMedicalServiceDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMedicalServiceDetailViewController.m; sourceTree = "<group>"; };
 		A55464FD1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAuthIDCardFacadeInputView.h; sourceTree = "<group>"; };
 		A55464FE1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAuthIDCardFacadeInputView.m; sourceTree = "<group>"; };
 		A55464FF1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCAuthIDCardFacadeInputView.xib; sourceTree = "<group>"; };
@@ -1501,6 +1504,8 @@
 				A58848F31FFFC5C700FC93EE /* HCHealthManagementMainViewController.m */,
 				A58848F41FFFC5C700FC93EE /* HCHealthManagementMedicalServiceViewController.h */,
 				A58848F51FFFC5C700FC93EE /* HCHealthManagementMedicalServiceViewController.m */,
+				A553F39D200624DB002A205B /* HCMedicalServiceDetailViewController.h */,
+				A553F39E200624DB002A205B /* HCMedicalServiceDetailViewController.m */,
 				A58848F61FFFC5C700FC93EE /* HCHealthManagementViewController.h */,
 				A58848F71FFFC5C700FC93EE /* HCHealthManagementViewController.m */,
 				A58848F81FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.h */,
@@ -1881,6 +1886,7 @@
 				A5190E711FFA655F00BBF049 /* HCHighProductDetailBottomView.m in Sources */,
 				A5D9AE341FDBB87B00B5D4C0 /* MMNetworkRequest.m in Sources */,
 				A57B48051FCEF9190004C397 /* MutableField.m in Sources */,
+				A553F39F200624DB002A205B /* HCMedicalServiceDetailViewController.m in Sources */,
 				A58849141FFFDA4700FC93EE /* HCPayOrderApi.m in Sources */,
 				A55388931FFE61D900D0DC27 /* WXApiManager.m in Sources */,
 				A57B47FD1FCEF9190004C397 /* Descriptor.pb.m in Sources */,
