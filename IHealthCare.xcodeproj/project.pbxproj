@@ -60,6 +60,8 @@
 		A55388981FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388921FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.m */; };
 		A553E8BA2003944700BEFB14 /* HCClassRoomDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A553E8B92003944700BEFB14 /* HCClassRoomDetailViewController.m */; };
 		A553F39F200624DB002A205B /* HCMedicalServiceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A553F39E200624DB002A205B /* HCMedicalServiceDetailViewController.m */; };
+		A553F3A2200633E1002A205B /* HCMedicalServiceDetailHeaderTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A553F3A1200633E1002A205B /* HCMedicalServiceDetailHeaderTitleView.m */; };
+		A553F3A420063417002A205B /* HCMedicalServiceDetailHeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A553F3A320063417002A205B /* HCMedicalServiceDetailHeaderTitleView.xib */; };
 		A554650A1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464FE1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m */; };
 		A554650B1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55464FF1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib */; };
 		A554650C1FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465011FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m */; };
@@ -345,6 +347,9 @@
 		A553E8B92003944700BEFB14 /* HCClassRoomDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCClassRoomDetailViewController.m; sourceTree = "<group>"; };
 		A553F39D200624DB002A205B /* HCMedicalServiceDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMedicalServiceDetailViewController.h; sourceTree = "<group>"; };
 		A553F39E200624DB002A205B /* HCMedicalServiceDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMedicalServiceDetailViewController.m; sourceTree = "<group>"; };
+		A553F3A0200633E1002A205B /* HCMedicalServiceDetailHeaderTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMedicalServiceDetailHeaderTitleView.h; sourceTree = "<group>"; };
+		A553F3A1200633E1002A205B /* HCMedicalServiceDetailHeaderTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMedicalServiceDetailHeaderTitleView.m; sourceTree = "<group>"; };
+		A553F3A320063417002A205B /* HCMedicalServiceDetailHeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMedicalServiceDetailHeaderTitleView.xib; sourceTree = "<group>"; };
 		A55464FD1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAuthIDCardFacadeInputView.h; sourceTree = "<group>"; };
 		A55464FE1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAuthIDCardFacadeInputView.m; sourceTree = "<group>"; };
 		A55464FF1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCAuthIDCardFacadeInputView.xib; sourceTree = "<group>"; };
@@ -1506,6 +1511,9 @@
 				A58848F51FFFC5C700FC93EE /* HCHealthManagementMedicalServiceViewController.m */,
 				A553F39D200624DB002A205B /* HCMedicalServiceDetailViewController.h */,
 				A553F39E200624DB002A205B /* HCMedicalServiceDetailViewController.m */,
+				A553F3A0200633E1002A205B /* HCMedicalServiceDetailHeaderTitleView.h */,
+				A553F3A1200633E1002A205B /* HCMedicalServiceDetailHeaderTitleView.m */,
+				A553F3A320063417002A205B /* HCMedicalServiceDetailHeaderTitleView.xib */,
 				A58848F61FFFC5C700FC93EE /* HCHealthManagementViewController.h */,
 				A58848F71FFFC5C700FC93EE /* HCHealthManagementViewController.m */,
 				A58848F81FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.h */,
@@ -1705,6 +1713,7 @@
 				A511F3551FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib in Resources */,
 				A55465101FEFAD3100A7E3C7 /* HCMeProfileCellView.xib in Resources */,
 				A58848FF1FFFC5C700FC93EE /* HCHealthManagementCellView.xib in Resources */,
+				A553F3A420063417002A205B /* HCMedicalServiceDetailHeaderTitleView.xib in Resources */,
 				A56CD7861FD0312000FFF504 /* MainFrameAssets.xcassets in Resources */,
 				A5190E781FFA655F00BBF049 /* HCProductDetailHeaderTitleView.xib in Resources */,
 				A554650B1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */,
@@ -1841,6 +1850,7 @@
 				A57B48071FCEF9190004C397 /* PBArray.m in Sources */,
 				A5190E6F1FFA655F00BBF049 /* HCHighProductCellView.m in Sources */,
 				A57B48381FCEF9190004C397 /* UINavigationBar+MMUINavigationBar.m in Sources */,
+				A553F3A2200633E1002A205B /* HCMedicalServiceDetailHeaderTitleView.m in Sources */,
 				A55465111FEFAD3100A7E3C7 /* HCMeViewController.m in Sources */,
 				A53695B21FD59769007CC67C /* SPPageTagView.m in Sources */,
 				A57B482E1FCEF9190004C397 /* MMBaseTextFieldItem.m in Sources */,

@@ -10,6 +10,7 @@
 #import "HCGetHealthManagementAnalysisApi.h"
 #import "HCHealthMedicalServiceCellView.h"
 #import "HCMedicalServiceDetailModel.h"
+#import "HCMedicalServiceDetailViewController.h"
 
 @interface HCHealthManagementAnalysisViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCHealthMedicalServiceCellViewDelegate>
 {
@@ -160,7 +161,10 @@
 #pragma mark - HCHealthMedicalServiceCellViewDelegate
 -(void)onClickShowMedicalService:(HCMedicalServiceDetailModel *)itemModel
 {
-    
+    HCMedicalServiceDetailViewController *detailVC = [HCMedicalServiceDetailViewController new];
+    detailVC.detailModel = itemModel;
+    detailVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
