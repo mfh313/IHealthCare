@@ -44,7 +44,7 @@
     [self initPlayerView];
     
     // 自动播放，默认不自动播放
-    [_playerView autoPlayTheVideo];
+//    [_playerView autoPlayTheVideo];
 }
 
 -(void)viewWillAppear:(BOOL)animated
