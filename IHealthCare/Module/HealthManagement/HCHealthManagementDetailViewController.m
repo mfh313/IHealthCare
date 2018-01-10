@@ -167,7 +167,7 @@
     
     UITextView *cellView = (UITextView *)cell.m_subContentView;
     cellView.frame = CGRectMake(20, 0, CGRectGetWidth(cell.contentView.frame) - 45, CGRectGetHeight(cell.contentView.frame) - 0);
-    [cellView setText:self.detailModel.managerDescription];
+    [cellView setText:self.detailModel.detail];
     return cell;
 }
 
@@ -219,9 +219,14 @@
     [m_cellInfos addObject:healthTitle];
     
     MFTableViewCellObject *healthDetail = [MFTableViewCellObject new];
-    healthDetail.cellHeight = 300.0f;
+    healthDetail.cellHeight = [self textHeightForNewsDetail:self.detailModel.detail];
     healthDetail.cellReuseIdentifier = @"healthDetail";
     [m_cellInfos addObject:healthDetail];
+}
+
+-(CGFloat)textHeightForNewsDetail:(NSString *)detail
+{
+    return [detail MMSizeWithFont:[UIFont systemFontOfSize:16.0f] maxSize:CGSizeMake(CGRectGetWidth(self.view.frame) - 45, CGFLOAT_MAX)].height + 30;
 }
 
 -(void)reloadTableView
