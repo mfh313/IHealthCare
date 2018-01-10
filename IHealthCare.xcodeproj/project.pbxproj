@@ -62,6 +62,8 @@
 		A553F39F200624DB002A205B /* HCMedicalServiceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A553F39E200624DB002A205B /* HCMedicalServiceDetailViewController.m */; };
 		A553F3A2200633E1002A205B /* HCMedicalServiceDetailHeaderTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A553F3A1200633E1002A205B /* HCMedicalServiceDetailHeaderTitleView.m */; };
 		A553F3A420063417002A205B /* HCMedicalServiceDetailHeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A553F3A320063417002A205B /* HCMedicalServiceDetailHeaderTitleView.xib */; };
+		A553F3A7200665A2002A205B /* HCCountStepView.m in Sources */ = {isa = PBXBuildFile; fileRef = A553F3A6200665A2002A205B /* HCCountStepView.m */; };
+		A553F3A92006661E002A205B /* HCCountStepView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A553F3A82006661E002A205B /* HCCountStepView.xib */; };
 		A554650A1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55464FE1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m */; };
 		A554650B1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55464FF1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib */; };
 		A554650C1FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465011FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m */; };
@@ -350,6 +352,9 @@
 		A553F3A0200633E1002A205B /* HCMedicalServiceDetailHeaderTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMedicalServiceDetailHeaderTitleView.h; sourceTree = "<group>"; };
 		A553F3A1200633E1002A205B /* HCMedicalServiceDetailHeaderTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMedicalServiceDetailHeaderTitleView.m; sourceTree = "<group>"; };
 		A553F3A320063417002A205B /* HCMedicalServiceDetailHeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMedicalServiceDetailHeaderTitleView.xib; sourceTree = "<group>"; };
+		A553F3A5200665A2002A205B /* HCCountStepView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCountStepView.h; sourceTree = "<group>"; };
+		A553F3A6200665A2002A205B /* HCCountStepView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCountStepView.m; sourceTree = "<group>"; };
+		A553F3A82006661E002A205B /* HCCountStepView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCCountStepView.xib; sourceTree = "<group>"; };
 		A55464FD1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAuthIDCardFacadeInputView.h; sourceTree = "<group>"; };
 		A55464FE1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAuthIDCardFacadeInputView.m; sourceTree = "<group>"; };
 		A55464FF1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCAuthIDCardFacadeInputView.xib; sourceTree = "<group>"; };
@@ -941,6 +946,9 @@
 		A55465121FEFAD5700A7E3C7 /* HCComponent */ = {
 			isa = PBXGroup;
 			children = (
+				A553F3A5200665A2002A205B /* HCCountStepView.h */,
+				A553F3A6200665A2002A205B /* HCCountStepView.m */,
+				A553F3A82006661E002A205B /* HCCountStepView.xib */,
 				A55465131FEFAD5700A7E3C7 /* HCNormalGroupCellView.h */,
 				A55465141FEFAD5700A7E3C7 /* HCNormalGroupCellView.m */,
 				A55465151FEFAD5700A7E3C7 /* HCNormalGroupCellView.xib */,
@@ -1716,6 +1724,7 @@
 				A553F3A420063417002A205B /* HCMedicalServiceDetailHeaderTitleView.xib in Resources */,
 				A56CD7861FD0312000FFF504 /* MainFrameAssets.xcassets in Resources */,
 				A5190E781FFA655F00BBF049 /* HCProductDetailHeaderTitleView.xib in Resources */,
+				A553F3A92006661E002A205B /* HCCountStepView.xib in Resources */,
 				A554650B1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */,
 				A5190E721FFA655F00BBF049 /* HCHighProductDetailBottomView.xib in Resources */,
 				A588490A1FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.xib in Resources */,
@@ -1972,6 +1981,7 @@
 				A53695B31FD59769007CC67C /* SPTagBarScrollView.m in Sources */,
 				A5190E731FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.m in Sources */,
 				A57B48331FCEF9190004C397 /* MMUIBridgeView.m in Sources */,
+				A553F3A7200665A2002A205B /* HCCountStepView.m in Sources */,
 				A5D9AE2F1FDBB87B00B5D4C0 /* YTKAnimatingRequestAccessory.m in Sources */,
 				A566B4D01FD24ABF004F6843 /* MMBarButtonItem.m in Sources */,
 				A526F41F1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m in Sources */,
