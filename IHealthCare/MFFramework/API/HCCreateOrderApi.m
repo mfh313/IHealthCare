@@ -8,11 +8,7 @@
 
 #import "HCCreateOrderApi.h"
 
-@implementation HCOrderItemModel
 
-@end
-
-#pragma mark - HCCreateOrderApi
 @implementation HCCreateOrderApi
 
 -(NSString *)requestUrl

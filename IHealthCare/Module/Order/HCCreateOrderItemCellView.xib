@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -66,11 +66,20 @@
                     <color key="textColor" red="1" green="0.21176470589999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycf-Om-d3h" customClass="HCCountStepView">
+                    <rect key="frame" x="338" y="76" width="70" height="22"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="PQi-IA-YAx"/>
+                        <constraint firstAttribute="width" constant="70" id="gCn-xp-OMU"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="9Yu-OI-DRx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Faf-CI-z1p"/>
                 <constraint firstItem="694-fG-pgv" firstAttribute="leading" secondItem="9Yu-OI-DRx" secondAttribute="trailing" constant="10" id="H2w-E9-WoD"/>
+                <constraint firstAttribute="trailing" secondItem="ycf-Om-d3h" secondAttribute="trailing" constant="15" id="Q4K-sO-sI4"/>
                 <constraint firstItem="ntb-YV-oez" firstAttribute="leading" secondItem="694-fG-pgv" secondAttribute="leading" id="Rcq-hn-gtS"/>
                 <constraint firstItem="yLC-Dq-9dN" firstAttribute="leading" secondItem="ntb-YV-oez" secondAttribute="trailing" constant="20" id="Rzw-sF-l1s"/>
                 <constraint firstItem="Xja-D5-kIO" firstAttribute="centerY" secondItem="bNo-MG-E1s" secondAttribute="centerY" id="Ufc-EY-NDv"/>
@@ -78,6 +87,7 @@
                 <constraint firstItem="bNo-MG-E1s" firstAttribute="leading" secondItem="694-fG-pgv" secondAttribute="leading" id="Z84-6q-vKQ"/>
                 <constraint firstItem="9Yu-OI-DRx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="bCw-hg-pKc"/>
                 <constraint firstItem="yLC-Dq-9dN" firstAttribute="centerY" secondItem="ntb-YV-oez" secondAttribute="centerY" id="dRZ-SI-Iv9"/>
+                <constraint firstAttribute="bottom" secondItem="ycf-Om-d3h" secondAttribute="bottom" constant="20" id="fbL-7T-u5G"/>
                 <constraint firstItem="694-fG-pgv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="nyP-ZD-bEj"/>
                 <constraint firstItem="ntb-YV-oez" firstAttribute="centerY" secondItem="9Yu-OI-DRx" secondAttribute="centerY" id="vPb-FR-udx"/>
                 <constraint firstItem="Xja-D5-kIO" firstAttribute="leading" secondItem="bNo-MG-E1s" secondAttribute="trailing" constant="5" id="zNZ-A1-gqx"/>
@@ -91,8 +101,9 @@
                 <outlet property="_nameLabel" destination="694-fG-pgv" id="wZD-gy-HZu"/>
                 <outlet property="_promotionLabel" destination="yLC-Dq-9dN" id="CDH-RJ-28C"/>
                 <outlet property="_salesLabel" destination="ntb-YV-oez" id="3e6-1v-53M"/>
+                <outlet property="m_stepView" destination="ycf-Om-d3h" id="maO-Rw-gfG"/>
             </connections>
-            <point key="canvasLocation" x="56.5" y="338"/>
+            <point key="canvasLocation" x="-61.5" y="281"/>
         </view>
     </objects>
 </document>

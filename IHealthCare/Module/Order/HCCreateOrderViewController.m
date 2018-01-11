@@ -259,8 +259,7 @@
     
     HCOrderItemModel *orderItem =  [cellInfo getUserInfoValueForKey:@"cartItem"];
     
-    [cellView setOrderItemCount:orderItem.count];
-    [cellView setProductDetail:orderItem.detailModel];
+    [cellView setOrderItemModel:orderItem];
 }
 
 -(void)setBottomView

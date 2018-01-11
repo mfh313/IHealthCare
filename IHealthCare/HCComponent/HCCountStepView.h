@@ -8,6 +8,17 @@
 
 #import "MMUIBridgeView.h"
 
+@protocol HCCountStepViewDelegate <NSObject>
+@optional
+-(void)onClickMinusButton;
+-(void)onClickAddButton;
+
+@end
+
 @interface HCCountStepView : MMUIBridgeView
+
+@property (nonatomic,weak) id<HCCountStepViewDelegate> m_delegate;
+
+-(void)setCurrentCount:(NSInteger)count;
 
 @end
