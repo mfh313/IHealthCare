@@ -312,6 +312,11 @@
 
 -(void)createOrder
 {
+    if (!m_currentAddress) {
+        [self showTips:@"请添加收货地址"]；
+        return;
+    }
+    
     HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
     
     __weak typeof(self) weakSelf = self;
