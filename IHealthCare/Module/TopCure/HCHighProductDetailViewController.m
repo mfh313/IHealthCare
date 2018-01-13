@@ -20,7 +20,6 @@
     HCHighProductDetailBottomView *m_bottomView;
     
     MFUITableView *m_tableView;
-    NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
 }
 
 @property (nonatomic,strong) HCProductDetailModel *detailModel;
@@ -31,8 +30,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    m_cellInfos = [NSMutableArray array];
     
     m_tableView = [[MFUITableView alloc] initWithFrame:CGRectMake(0, -20, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame)) style:UITableViewStylePlain];
     m_tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
