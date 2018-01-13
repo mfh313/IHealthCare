@@ -384,8 +384,6 @@
     req.package             = [dict objectForKey:@"packAge"];
     req.sign                = [dict objectForKey:@"paySign"];
     [WXApi sendReq:req];
-    
-    //    NSLog(@"appid=%@\npartnerId=%@\nprepayId=%@\nnonceStr=%@\ntimeStamp=%ld\npackage=%@\nsign=%@",[dict objectForKey:@"appId"],req.partnerId,req.prepayId,req.nonceStr,(long)req.timeStamp,req.package,req.sign);
 }
 
 - (void)didReceiveMemoryWarning {
