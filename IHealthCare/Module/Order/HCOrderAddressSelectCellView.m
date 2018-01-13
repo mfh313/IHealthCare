@@ -24,7 +24,7 @@
 {
     [self initSelectImageView];
     [self initAddressContentView];
-//    [self initEditButton];
+    [self initEditButton];
 }
 
 -(void)initSelectImageView
