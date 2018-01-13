@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//增加订单地址
++ (NSString *)addOrderAddress;
+
 //订单地址列表
 + (NSString *)getUserOrderAddress:(NSString *)tel;
 

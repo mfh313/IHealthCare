@@ -10,6 +10,8 @@
 #import "HCOrderAddressCreateTextCellView.h"
 #import "HCOrderAddressCreateRegionCellView.h"
 #import "HCOrderAddressCreateDefaultSetCellView.h"
+#import "HCAddOrderAddressApi.h"
+#import "HCOrderUserAddressModel.h"
 
 @interface HCOrderAddressCreateViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCOrderAddressCreateCellViewDelegate>
 {
@@ -381,7 +383,53 @@
 
 -(void)onClickBottomButton:(id)sender
 {
+    if ([MFStringUtil isBlankString:m_addressInfo[@"name"]]
+        || [MFStringUtil isBlankString:m_addressInfo[@"phone"]]
+        || [MFStringUtil isBlankString:m_addressInfo[@"addr"]]
+        || [MFStringUtil isBlankString:m_addressInfo[@"city"]])
+    {
+        [self showTips:@"请输入完整信息"];
+        return;
+    }
     
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    
+    __weak typeof(self) weakSelf = self;
+    HCAddOrderAddressApi *mfApi = [HCAddOrderAddressApi new];
+    mfApi.userTel = loginService.userPhone;
+    mfApi.name = m_addressInfo[@"name"];
+    mfApi.phone = m_addressInfo[@"phone"];
+    mfApi.addr = m_addressInfo[@"addr"];
+    mfApi.city = m_addressInfo[@"city"];
+    
+    mfApi.animatingView = MFAppWindow;
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSDictionary *addressInfo = mfApi.responseNetworkData;
+        
+        HCOrderUserAddressModel *addressModel = [HCOrderUserAddressModel yy_modelWithDictionary:addressInfo];
+        [strongSelf onCreateUserAddressModel:addressModel];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
+}
+
+-(void)onCreateUserAddressModel:(HCOrderUserAddressModel *)address
+{
+    if ([self.m_delegate respondsToSelector:@selector(onCreateAddressInfo:address:)]) {
+        [self.m_delegate onCreateAddressInfo:self address:address];
+    }
+    
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

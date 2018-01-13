@@ -12,6 +12,8 @@
 #import "HealthCareViewControllerManager.h"
 #import "MFFramework.h"
 
+#import "HCLoginService.h"
+
 #import <LGAlertView/LGAlertView.h>
 
 #import <SDWebImage/UIImageView+WebCache.h>

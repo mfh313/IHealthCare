@@ -8,10 +8,10 @@
 
 #import "MMUIViewController.h"
 
-@class HCOrderAddressCreateViewController;
+@class HCOrderAddressCreateViewController,HCOrderUserAddressModel;
 @protocol HCOrderAddressCreateViewControllerDelegate <NSObject>
 @optional
--(void)onCreateAddress:(HCOrderAddressCreateViewController *)controller addressInfo:(NSMutableDictionary *)info;
+-(void)onCreateAddressInfo:(HCOrderAddressCreateViewController *)controller address:(HCOrderUserAddressModel *)address;
 
 @end
 

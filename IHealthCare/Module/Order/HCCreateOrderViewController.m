@@ -371,8 +371,6 @@
         }
         
         NSDictionary *payInfo = mfApi.responseNetworkData;
-        NSLog(@"payInfo=%@",payInfo);
-        
         [strongSelf bizPayOrder:payInfo];
         
     } failure:^(YTKBaseRequest * request) {

@@ -70,7 +70,7 @@
 }
 
 #pragma mark - HCOrderAddressCreateViewControllerDelegate
--(void)onDidCreateAddress:(HCOrderAddressCreateViewController *)controller
+-(void)onCreateAddressInfo:(HCOrderAddressCreateViewController *)controller address:(HCOrderUserAddressModel *)address
 {
     
 }

@@ -22,6 +22,12 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
     return test_ServerUrl;
 }
 
+//增加订单地址
++ (NSString *)addOrderAddress
+{
+    return MFURLWithPara(@"api/address");
+}
+
 //订单地址列表
 + (NSString *)getUserOrderAddress:(NSString *)tel
 {
