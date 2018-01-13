@@ -18,5 +18,6 @@
 @interface HCOrderAddressSelectViewController : MMUIViewController
 
 @property (nonatomic,weak) id<HCOrderAddressSelectViewControllerDelegate> m_delegate;
+@property (nonatomic,assign) NSInteger currentAid;
 
 @end

@@ -11,10 +11,16 @@
 @interface HCOrderAddressSelectCellView : MMUIView
 {
     UIImageView *m_selectImageView;
+    
+    UILabel *m_nameLabel;
+    UILabel *m_phoneLabel;
+    UILabel *m_addressLabel;
     UIView *m_addressContentView;
+    
     UIButton *m_editButton;
 }
 
 -(void)setAddressSelected:(BOOL)selected;
+-(void)setAddressInfo:(NSString *)name phone:(NSString *)phone address:(NSString *)address;
 
 @end

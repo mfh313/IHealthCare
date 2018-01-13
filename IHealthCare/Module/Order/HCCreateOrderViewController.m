@@ -82,6 +82,7 @@
     HCGetOrderUserAddressApi *mfApi = [HCGetOrderUserAddressApi new];
     mfApi.userTel = loginService.userPhone;
     
+    mfApi.animatingView = MFAppWindow;
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
         __strong typeof(weakSelf) strongSelf = weakSelf;
@@ -96,7 +97,7 @@
             HCOrderUserAddressModel *itemModel = [HCOrderUserAddressModel yy_modelWithDictionary:addressInfoArray[i]];
             [addressInfos addObject:itemModel];
         }
-        m_currentAddress = addressInfos.lastObject;
+        m_currentAddress = addressInfos.firstObject;
         
         [strongSelf reloadTableView];
         
@@ -220,12 +221,17 @@
 -(void)onClickAddressCell:(MMTableViewCellInfo *)cellInfo
 {
     HCOrderAddressSelectViewController *selectVC = [HCOrderAddressSelectViewController new];
+    selectVC.currentAid = m_currentAddress.aid;
     selectVC.m_delegate = self;
     [self.navigationController pushViewController:selectVC animated:YES];
 }
 
 #pragma mark - HCOrderAddressSelectViewControllerDelegate
-
+-(void)onDidSelectAddress:(HCOrderUserAddressModel *)address
+{
+    m_currentAddress = address;
+    [self reloadTableView];
+}
 
 -(void)addCartItems
 {

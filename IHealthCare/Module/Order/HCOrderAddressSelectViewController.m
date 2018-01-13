@@ -16,11 +16,15 @@
 {
     MMTableViewInfo *m_tableViewInfo;
     NSMutableArray *m_addressInfos;
+    
+    NSInteger m_selectAid;
 }
 
 @end
 
 @implementation HCOrderAddressSelectViewController
+
+@synthesize currentAid = m_selectAid;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,9 +41,37 @@
     contentTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:contentTableView];
     
+    [contentTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(self.view);
+        make.top.mas_equalTo(self.view.mas_top);
+        make.bottom.equalTo(self.view).offset(-60);
+        make.left.equalTo(self.view);
+    }];
+    
     [self setBottomView];
     
     [self getMyAddressInfo];
+}
+
+-(void)onClickBackBtn:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    if ([self.m_delegate respondsToSelector:@selector(onDidSelectAddress:)])
+    {
+        HCOrderUserAddressModel *address = nil;
+        for (int i = 0; i < m_addressInfos.count; i++)
+        {
+            HCOrderUserAddressModel *item = m_addressInfos[i];
+            if (item.aid == m_selectAid)
+            {
+                address = item;
+                break;
+            }
+        }
+        
+        [self.m_delegate onDidSelectAddress:address];
+    }
 }
 
 -(void)getMyAddressInfo
@@ -82,13 +114,18 @@
     
     MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
     
-    for (int i = 0; i < m_addressInfos.count; i++) {
+    for (int i = 0; i < m_addressInfos.count; i++)
+    {
+        HCOrderUserAddressModel *info = m_addressInfos[i];
+        
         MMTableViewCellInfo *cellInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeAddressCell:cellInfo:)
                                                                  makeTarget:self
                                                                   actionSel:@selector(onClickAddressCell:)
                                                                actionTarget:self
                                                                      height:90.0
                                                                    userInfo:nil];
+        
+        [cellInfo addUserInfoValue:info forKey:@"cellData"];
         
         [sectionInfo addCell:cellInfo];
         
@@ -132,11 +169,26 @@
     
     HCOrderAddressSelectCellView *cellView = (HCOrderAddressSelectCellView *)cell.m_subContentView;
     cellView.frame = cell.contentView.bounds;
+    
+    HCOrderUserAddressModel *addressInfo =  [cellInfo getUserInfoValueForKey:@"cellData"];
+    if (m_selectAid == addressInfo.aid)
+    {
+        [cellView setAddressSelected:YES];
+    }
+    else
+    {
+        [cellView setAddressSelected:NO];
+    }
+    
+    [cellView setAddressInfo:addressInfo.name phone:addressInfo.phone address:addressInfo.addr];
 }
 
 -(void)onClickAddressCell:(MMTableViewCellInfo *)cellInfo
 {
+    HCOrderUserAddressModel *addressInfo =  [cellInfo getUserInfoValueForKey:@"cellData"];
+    m_selectAid = addressInfo.aid;
     
+    [self reloadTableView];
 }
 
 -(void)setBottomView
@@ -186,7 +238,9 @@
 #pragma mark - HCOrderAddressCreateViewControllerDelegate
 -(void)onCreateAddressInfo:(HCOrderAddressCreateViewController *)controller address:(HCOrderUserAddressModel *)address
 {
+    m_selectAid = address.aid;
     
+    [self getMyAddressInfo];
 }
 
 - (void)didReceiveMemoryWarning {
