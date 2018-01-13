@@ -332,24 +332,19 @@
 
 -(void)onClickSelectCity:(HCOrderAddressCreateCellView *)cellView
 {
-//    NSString *attachKey = cellView.attachKey;
-//
-//    LGAlertView *alertView = [LGAlertView alertViewWithTitle:nil message:nil style:LGAlertViewStyleActionSheet buttonTitles:@[@"深圳",@"上海"] cancelButtonTitle:@"取消" destructiveButtonTitle:nil actionHandler:^(LGAlertView * _Nonnull alertView, NSUInteger index, NSString * _Nullable title) {
-//
-//        if (index == 0)
-//        {
-//            [self gaoDeNavigation];
-//        }
-//        else if (index == 1)
-//        {
-//            [self baiduNavigation];
-//        }
-//
-//    } cancelHandler:^(LGAlertView * _Nonnull alertView) {
-//
-//    } destructiveHandler:nil];
-//
-//    [alertView showAnimated:YES completionHandler:nil];
+    NSString *attachKey = cellView.attachKey;
+    NSArray *cityArray = @[@"深圳",@"上海",@"上海",@"上海"];
+    
+    LGAlertView *alertView = [LGAlertView alertViewWithTitle:nil message:nil style:LGAlertViewStyleActionSheet buttonTitles:cityArray cancelButtonTitle:@"取消" destructiveButtonTitle:nil actionHandler:^(LGAlertView * _Nonnull alertView, NSUInteger index, NSString * _Nullable title) {
+
+        NSString *value = cityArray[index];
+        [m_addressInfo safeSetObject:value forKey:attachKey];
+
+    } cancelHandler:^(LGAlertView * _Nonnull alertView) {
+
+    } destructiveHandler:nil];
+
+    [alertView showAnimated:YES completionHandler:nil];
 }
 
 -(NSString *)leftTitleString:(MFTableViewCellObject *)cellInfo
