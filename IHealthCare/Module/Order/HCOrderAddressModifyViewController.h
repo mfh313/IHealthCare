@@ -9,8 +9,17 @@
 #import "MMUIViewController.h"
 #import "HCOrderUserAddressModel.h"
 
+@class HCOrderAddressModifyViewController;
+@protocol HCOrderAddressModifyViewControllerDelegate <NSObject>
+@optional
+-(void)onModifyAddressInfo:(HCOrderAddressModifyViewController *)controller address:(HCOrderUserAddressModel *)address;
+
+@end
+
 @interface HCOrderAddressModifyViewController : MMUIViewController
 
 @property (nonatomic,strong) HCOrderUserAddressModel *addressInfo;
+
+@property (nonatomic,weak) id<HCOrderAddressModifyViewControllerDelegate> m_delegate;
 
 @end

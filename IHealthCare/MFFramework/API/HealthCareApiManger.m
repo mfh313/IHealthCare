@@ -22,6 +22,13 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
     return test_ServerUrl;
 }
 
+//修改地址
++ (NSString *)modifyOrderAddress:(NSInteger)aid
+{
+    NSString *parmUrl = [NSString stringWithFormat:@"api/address/%@",@(aid)];
+    return MFURLWithPara(parmUrl);
+}
+
 //增加订单地址
 + (NSString *)addOrderAddress
 {

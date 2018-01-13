@@ -13,7 +13,7 @@
 #import "HCGetOrderUserAddressApi.h"
 #import "HCOrderAddressModifyViewController.h"
 
-@interface HCOrderAddressSelectViewController () <HCOrderAddressSelectCellViewDelegate,HCOrderAddressCreateViewControllerDelegate,MMTableViewInfoDelegate>
+@interface HCOrderAddressSelectViewController () <HCOrderAddressSelectCellViewDelegate,HCOrderAddressCreateViewControllerDelegate,MMTableViewInfoDelegate,HCOrderAddressModifyViewControllerDelegate>
 {
     MMTableViewInfo *m_tableViewInfo;
     NSMutableArray *m_addressInfos;
@@ -191,7 +191,14 @@
 {
     HCOrderAddressModifyViewController *modifyVC = [HCOrderAddressModifyViewController new];
     modifyVC.addressInfo = address;
+    modifyVC.m_delegate = self;
     [self.navigationController pushViewController:modifyVC animated:YES];
+}
+
+#pragma mark - HCOrderAddressModifyViewControllerDelegate
+-(void)onModifyAddressInfo:(HCOrderAddressModifyViewController *)controller address:(HCOrderUserAddressModel *)address
+{
+    [self getMyAddressInfo];
 }
 
 -(void)onClickAddressCell:(MMTableViewCellInfo *)cellInfo

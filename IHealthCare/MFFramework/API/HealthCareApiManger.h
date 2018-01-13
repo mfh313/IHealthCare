@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//修改地址
++ (NSString *)modifyOrderAddress:(NSInteger)aid;
+
 //增加订单地址
 + (NSString *)addOrderAddress;
 
