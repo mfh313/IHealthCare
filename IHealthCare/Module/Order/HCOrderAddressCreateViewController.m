@@ -257,7 +257,7 @@
     defaultSet.cellReuseIdentifier = @"defaultSet";
     defaultSet.attachKey = @"defaultSet";
     defaultSet.cellHeight = 70.0f;
-    [m_cellInfos addObject:defaultSet];
+//    [m_cellInfos addObject:defaultSet];
 }
 
 -(MFTableViewCellObject *)separatorCellObject
