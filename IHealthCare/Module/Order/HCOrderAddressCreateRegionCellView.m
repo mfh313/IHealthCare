@@ -10,6 +10,12 @@
 
 @implementation HCOrderAddressCreateRegionCellView
 
+-(void)initSubViews
+{
+    [super initSubViews];
+    
+}
+
 
 @end
 

@@ -11,9 +11,11 @@
 #import "HCOrderAddressCreateRegionCellView.h"
 #import "HCOrderAddressCreateDefaultSetCellView.h"
 
-@interface HCOrderAddressCreateViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface HCOrderAddressCreateViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCOrderAddressCreateCellViewDelegate>
 {
     MFUITableView *m_tableView;
+    
+    NSMutableDictionary *m_addressInfo;
 }
 
 @end
@@ -25,6 +27,8 @@
     
     self.title = @"新建收货地址";
     [self setBackBarButton];
+    
+    m_addressInfo = [NSMutableDictionary dictionary];
     
     m_tableView = [[MFUITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     m_tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -38,6 +42,18 @@
     [self reloadTableView];
     
     [self setBottomView];
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (scrollView.isDragging && scrollView == m_tableView) {
+        [self.view endEditing:YES];
+    }
+}
+
+- (void)touchesBegan_TableView:(NSSet *)arg1 withEvent:(UIEvent *)event
+{
+    [self.view endEditing:YES];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -100,14 +116,18 @@
         cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         
         HCOrderAddressCreateTextCellView *cellView = [[HCOrderAddressCreateTextCellView alloc] initWithFrame:CGRectZero];
+        cellView.m_delegate = self;
         cell.m_subContentView = cellView;
     }
     
     HCOrderAddressCreateTextCellView *cellView = (HCOrderAddressCreateTextCellView *)cell.m_subContentView;
     cellView.leftTitle = [self leftTitleString:cellInfo];
-    cellView.cellKey = attachKey;
+    cellView.attachKey = attachKey;
     
     [cellView layoutContentViews];
+    
+    NSString *value = m_addressInfo[attachKey];
+    [cellView setTextFieldValue:value];
     
     return cell;
 }
@@ -123,12 +143,13 @@
         cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         
         HCOrderAddressCreateRegionCellView *cellView = [[HCOrderAddressCreateRegionCellView alloc] initWithFrame:CGRectZero];
+        cellView.m_delegate = self;
         cell.m_subContentView = cellView;
     }
     
     HCOrderAddressCreateRegionCellView *cellView = (HCOrderAddressCreateRegionCellView *)cell.m_subContentView;
     cellView.leftTitle = [self leftTitleString:cellInfo];
-    cellView.cellKey = attachKey;
+    cellView.attachKey = attachKey;
     
     [cellView layoutContentViews];
     
@@ -145,13 +166,14 @@
     if (cell == nil) {
         cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         
-        HCOrderAddressCreateRegionCellView *cellView = [[HCOrderAddressCreateRegionCellView alloc] initWithFrame:CGRectZero];
+        HCOrderAddressCreateDefaultSetCellView *cellView = [[HCOrderAddressCreateDefaultSetCellView alloc] initWithFrame:CGRectZero];
+        cellView.m_delegate = self;
         cell.m_subContentView = cellView;
     }
     
-    HCOrderAddressCreateRegionCellView *cellView = (HCOrderAddressCreateRegionCellView *)cell.m_subContentView;
+    HCOrderAddressCreateDefaultSetCellView *cellView = (HCOrderAddressCreateDefaultSetCellView *)cell.m_subContentView;
     cellView.leftTitle = [self leftTitleString:cellInfo];
-    cellView.cellKey = attachKey;
+    cellView.attachKey = attachKey;
     
     [cellView layoutContentViews];
     
@@ -271,9 +293,29 @@
     }];
 }
 
--(void)onClickBottomButton:(id)sender
+#pragma mark - HCOrderAddressCreateCellViewDelegate
+-(BOOL)orderAddressCreateCellView:(HCOrderAddressCreateCellView *)cellView shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
+    UITextField *contentTextField = [cellView contentTextField];
     
+    NSString *content = contentTextField.text;
+    
+    if ([string isEqualToString:@"\n"]) {
+        [contentTextField resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
+}
+
+-(void)orderAddressTextFiledEditChanged:(HCOrderAddressCreateCellView *)cellView
+{
+    UITextField *contentTextField = [cellView contentTextField];
+    NSString *content = contentTextField.text;
+    
+    NSString *attachKey = cellView.attachKey;
+    
+    [m_addressInfo safeSetObject:content forKey:attachKey];
 }
 
 -(NSString *)leftTitleString:(MFTableViewCellObject *)cellInfo
@@ -302,6 +344,11 @@
     }
     
     return [leftTitle stringByAppendingString:@":"];
+}
+
+-(void)onClickBottomButton:(id)sender
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {

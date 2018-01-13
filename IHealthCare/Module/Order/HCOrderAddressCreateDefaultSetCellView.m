@@ -10,12 +10,14 @@
 
 @implementation HCOrderAddressCreateDefaultSetCellView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(void)layoutContentViews
+{
+    [super layoutContentViews];
+    
+    [m_titleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(110);
+    }];
+    
 }
-*/
 
 @end
