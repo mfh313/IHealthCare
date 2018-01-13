@@ -13,6 +13,7 @@
 @optional
 -(BOOL)orderAddressCreateCellView:(HCOrderAddressCreateCellView *)cellView shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
 -(void)orderAddressTextFiledEditChanged:(HCOrderAddressCreateCellView *)cellView;
+-(void)onClickSelectCity:(HCOrderAddressCreateCellView *)cellView;
 
 @end
 
@@ -36,5 +37,6 @@
 -(UITextField *)contentTextField;
 -(void)setTextFieldValue:(NSString *)text;
 -(void)initAccessoryView;
+-(void)setContentLabelValue:(NSString *)text;
 
 @end

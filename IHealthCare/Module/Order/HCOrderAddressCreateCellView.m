@@ -117,8 +117,28 @@
 {
     m_contentLabel = [[UILabel alloc] init];
     m_contentLabel.font = [UIFont systemFontOfSize:14.0f];
+    m_contentLabel.backgroundColor = [UIColor whiteColor];
     m_contentLabel.textColor = [UIColor hx_colorWithHexString:@"0F0F0F"];
     [self addSubview:m_contentLabel];
+    
+    m_contentLabel.userInteractionEnabled = YES;
+    
+    UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onClickContentLabel)];
+    [m_contentLabel addGestureRecognizer:tapGes];
+}
+
+-(void)onClickContentLabel
+{
+    if ([self.m_delegate respondsToSelector:@selector(onClickSelectCity:)]) {
+        [self.m_delegate onClickSelectCity:self];
+    }
+}
+
+-(void)setContentLabelValue:(NSString *)text
+{
+    [m_contentLabel setText:text];
+    
+    [m_contentLabel setText:@"深圳"];
 }
 
 @end

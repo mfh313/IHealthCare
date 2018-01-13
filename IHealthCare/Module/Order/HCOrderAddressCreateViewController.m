@@ -155,11 +155,15 @@
         cell.m_subContentView = cellView;
     }
     
+    NSString *value = m_addressInfo[attachKey];
+    
     HCOrderAddressCreateRegionCellView *cellView = (HCOrderAddressCreateRegionCellView *)cell.m_subContentView;
     cellView.leftTitle = [self leftTitleString:cellInfo];
     cellView.attachKey = attachKey;
     
     [cellView layoutContentViews];
+    
+    [cellView setContentLabelValue:value];
     
     return cell;
 }
@@ -324,6 +328,13 @@
     NSString *attachKey = cellView.attachKey;
     
     [m_addressInfo safeSetObject:content forKey:attachKey];
+}
+
+-(void)onClickSelectCity:(HCOrderAddressCreateCellView *)cellView
+{
+    NSString *attachKey = cellView.attachKey;
+    
+    
 }
 
 -(NSString *)leftTitleString:(MFTableViewCellObject *)cellInfo
