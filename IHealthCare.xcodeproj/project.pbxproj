@@ -208,6 +208,7 @@
 		A57B48561FCEFAEA0004C397 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57B48551FCEFAE30004C397 /* UIKit.framework */; };
 		A5871AE020099CDE004238B6 /* HCGetProductDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871ADF20099CDE004238B6 /* HCGetProductDetailApi.m */; };
 		A5871AE32009BDBE004238B6 /* HCOrderAddressSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AE22009BDBE004238B6 /* HCOrderAddressSelectViewController.m */; };
+		A5871AE62009C206004238B6 /* HCOrderAddressCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AE52009C206004238B6 /* HCOrderAddressCreateViewController.m */; };
 		A58848FB1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A58848E11FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m */; };
 		A58848FC1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58848E21FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib */; };
 		A58848FD1FFFC5C700FC93EE /* HCHealthManagementAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58848E41FFFC5C700FC93EE /* HCHealthManagementAnalysisViewController.m */; };
@@ -642,6 +643,8 @@
 		A5871ADF20099CDE004238B6 /* HCGetProductDetailApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetProductDetailApi.m; sourceTree = "<group>"; };
 		A5871AE12009BDBE004238B6 /* HCOrderAddressSelectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderAddressSelectViewController.h; sourceTree = "<group>"; };
 		A5871AE22009BDBE004238B6 /* HCOrderAddressSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderAddressSelectViewController.m; sourceTree = "<group>"; };
+		A5871AE42009C206004238B6 /* HCOrderAddressCreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderAddressCreateViewController.h; sourceTree = "<group>"; };
+		A5871AE52009C206004238B6 /* HCOrderAddressCreateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderAddressCreateViewController.m; sourceTree = "<group>"; };
 		A58848E01FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManageDetailHeaderTitleView.h; sourceTree = "<group>"; };
 		A58848E11FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManageDetailHeaderTitleView.m; sourceTree = "<group>"; };
 		A58848E21FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHealthManageDetailHeaderTitleView.xib; sourceTree = "<group>"; };
@@ -1627,6 +1630,8 @@
 				A5DD8CFC2001C4730079CD7D /* HCCreateOrderViewController.m */,
 				A5871AE12009BDBE004238B6 /* HCOrderAddressSelectViewController.h */,
 				A5871AE22009BDBE004238B6 /* HCOrderAddressSelectViewController.m */,
+				A5871AE42009C206004238B6 /* HCOrderAddressCreateViewController.h */,
+				A5871AE52009C206004238B6 /* HCOrderAddressCreateViewController.m */,
 				A5DD8D0E2002116D0079CD7D /* HCCreateOrderItemCellView.h */,
 				A5DD8D0F2002116D0079CD7D /* HCCreateOrderItemCellView.m */,
 				A5DD8D11200211A00079CD7D /* HCCreateOrderItemCellView.xib */,
@@ -1955,6 +1960,7 @@
 				A57B47F81FCEF9190004C397 /* AbstractMessage.m in Sources */,
 				A526F4131FF3DFFD00092ADD /* HCMedicalServiceDetailModel.m in Sources */,
 				A5190E6D1FFA655F00BBF049 /* HCBestNewsDetailViewController.m in Sources */,
+				A5871AE62009C206004238B6 /* HCOrderAddressCreateViewController.m in Sources */,
 				A57B47E91FCEF9190004C397 /* IQBarButtonItem.m in Sources */,
 				A5190E691FFA655F00BBF049 /* HCBestNewsDetailTitleView.m in Sources */,
 				A520E6051FEE76A200E4EFAD /* MMTableViewInfo.m in Sources */,

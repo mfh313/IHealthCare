@@ -11,7 +11,7 @@
 @class HCOrderUserAddressModel;
 @protocol HCOrderAddressSelectViewControllerDelegate <NSObject>
 @optional
--(void)onDidSelecAddress:(HCOrderUserAddressModel *)address;
+-(void)onDidSelectAddress:(HCOrderUserAddressModel *)address;
 
 @end
 

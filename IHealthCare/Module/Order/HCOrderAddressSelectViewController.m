@@ -8,8 +8,9 @@
 
 #import "HCOrderAddressSelectViewController.h"
 #import "HCOrderUserAddressModel.h"
+#import "HCOrderAddressCreateViewController.h"
 
-@interface HCOrderAddressSelectViewController ()
+@interface HCOrderAddressSelectViewController () <HCOrderAddressCreateViewControllerDelegate>
 
 @end
 
@@ -62,6 +63,14 @@
 }
 
 -(void)onClickBottomButton:(id)sender
+{
+    HCOrderAddressCreateViewController *controller = [HCOrderAddressCreateViewController new];
+    controller.m_delegate = self;
+    [self.navigationController pushViewController:controller animated:YES];
+}
+
+#pragma mark - HCOrderAddressCreateViewControllerDelegate
+-(void)onDidCreateAddress:(HCOrderAddressCreateViewController *)controller
 {
     
 }
