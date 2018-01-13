@@ -91,9 +91,32 @@
                                                                    userInfo:nil];
         
         [sectionInfo addCell:cellInfo];
+        
+        if (i != m_addressInfos.count - 1)
+        {
+            MMTableViewCellInfo *separator = [MMTableViewCellInfo cellForMakeSel:@selector(makeSeparatorCell:cellInfo:)
+                                                                     makeTarget:self
+                                                                      actionSel:nil
+                                                                   actionTarget:self
+                                                                         height:MFOnePixHeight
+                                                                       userInfo:nil];
+            
+            [sectionInfo addCell:separator];
+        }
     }
     
     [m_tableViewInfo addSection:sectionInfo];
+}
+
+- (void)makeSeparatorCell:(MFTableViewCell *)cell cellInfo:(MMTableViewCellInfo *)cellInfo
+{
+    if (!cell.m_subContentView) {
+        UIView *separator = [UIView new];
+        separator.frame = CGRectMake(0, 0, CGRectGetWidth(cell.contentView.frame), MFOnePixHeight);
+        separator.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        separator.backgroundColor = MFCustomLineColor;
+        [cell.contentView addSubview:separator];
+    }
 }
 
 - (void)makeAddressCell:(MFTableViewCell *)cell cellInfo:(MMTableViewCellInfo *)cellInfo
