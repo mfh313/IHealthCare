@@ -13,6 +13,7 @@
 @property (nonatomic,assign) NSInteger uid;
 @property (nonatomic,assign) NSInteger aid;
 @property (nonatomic,strong) NSString *name;
+@property (nonatomic,strong) NSString *userTel;
 @property (nonatomic,strong) NSString *phone;
 @property (nonatomic,strong) NSString *addr;
 @property (nonatomic,strong) NSString *city;
