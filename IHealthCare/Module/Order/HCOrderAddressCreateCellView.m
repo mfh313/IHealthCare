@@ -100,4 +100,17 @@
     [m_textField setText:text];
 }
 
+-(void)initAccessoryView
+{
+    m_accessoryView = [[UIImageView alloc] initWithImage:MFImage(@"common_btn_next_nor")];
+    [self addSubview:m_accessoryView];
+    
+    [m_accessoryView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self.mas_right).offset(-15);
+        make.centerY.mas_equalTo(self.mas_centerY);
+        make.width.mas_equalTo(22);
+        make.height.mas_equalTo(22);
+    }];
+}
+
 @end

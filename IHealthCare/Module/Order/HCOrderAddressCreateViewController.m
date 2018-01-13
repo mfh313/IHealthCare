@@ -120,14 +120,22 @@
         cell.m_subContentView = cellView;
     }
     
+    NSString *value = m_addressInfo[attachKey];
+    
     HCOrderAddressCreateTextCellView *cellView = (HCOrderAddressCreateTextCellView *)cell.m_subContentView;
     cellView.leftTitle = [self leftTitleString:cellInfo];
     cellView.attachKey = attachKey;
-    
     [cellView layoutContentViews];
-    
-    NSString *value = m_addressInfo[attachKey];
     [cellView setTextFieldValue:value];
+    
+    UITextField *contentTextField = [cellView contentTextField];
+    if ([attachKey isEqualToString:@"phone"]) {
+        contentTextField.keyboardType = UIKeyboardTypeNumberPad;
+    }
+    else
+    {
+        contentTextField.keyboardType = UIKeyboardTypeDefault;
+    }
     
     return cell;
 }

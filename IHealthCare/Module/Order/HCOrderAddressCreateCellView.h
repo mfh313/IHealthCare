@@ -34,5 +34,6 @@
 -(void)layoutContentViews;
 -(UITextField *)contentTextField;
 -(void)setTextFieldValue:(NSString *)text;
+-(void)initAccessoryView;
 
 @end

@@ -14,6 +14,8 @@
 {
     [super initSubViews];
     
+    [self initAccessoryView];
+    
 }
 
 
