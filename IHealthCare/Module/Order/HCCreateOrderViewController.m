@@ -313,7 +313,7 @@
 -(void)createOrder
 {
     if (!m_currentAddress) {
-        [self showTips:@"请添加收货地址"]；
+        [self showTips:@"请添加收货地址"];
         return;
     }
     
