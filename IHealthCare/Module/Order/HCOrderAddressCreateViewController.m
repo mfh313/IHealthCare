@@ -335,7 +335,7 @@
 -(void)onClickSelectCity:(HCOrderAddressCreateCellView *)cellView
 {
     NSString *attachKey = cellView.attachKey;
-    NSArray *cityArray = @[@"深圳",@"北京",@"上海",@"广州"];
+    NSArray *cityArray = @[@"深圳市",@"北京市",@"上海市",@"广州市"];
     
     __weak typeof(self) weakSelf = self;
     LGAlertView *alertView = [LGAlertView alertViewWithTitle:nil message:nil style:LGAlertViewStyleActionSheet buttonTitles:cityArray cancelButtonTitle:@"取消" destructiveButtonTitle:nil actionHandler:^(LGAlertView * _Nonnull alertView, NSUInteger index, NSString * _Nullable title) {

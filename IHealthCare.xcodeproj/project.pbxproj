@@ -214,6 +214,7 @@
 		A5871AEF2009C7C3004238B6 /* HCOrderAddressCreateRegionCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AEE2009C7C3004238B6 /* HCOrderAddressCreateRegionCellView.m */; };
 		A5871AF22009C7FF004238B6 /* HCOrderAddressCreateDefaultSetCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AF12009C7FF004238B6 /* HCOrderAddressCreateDefaultSetCellView.m */; };
 		A5871AF5200A22B8004238B6 /* HCAddOrderAddressApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AF4200A22B8004238B6 /* HCAddOrderAddressApi.m */; };
+		A5871AF8200A2B49004238B6 /* HCOrderAddressSelectCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AF7200A2B48004238B6 /* HCOrderAddressSelectCellView.m */; };
 		A58848FB1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A58848E11FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m */; };
 		A58848FC1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58848E21FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib */; };
 		A58848FD1FFFC5C700FC93EE /* HCHealthManagementAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58848E41FFFC5C700FC93EE /* HCHealthManagementAnalysisViewController.m */; };
@@ -660,6 +661,8 @@
 		A5871AF12009C7FF004238B6 /* HCOrderAddressCreateDefaultSetCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderAddressCreateDefaultSetCellView.m; sourceTree = "<group>"; };
 		A5871AF3200A22B8004238B6 /* HCAddOrderAddressApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAddOrderAddressApi.h; sourceTree = "<group>"; };
 		A5871AF4200A22B8004238B6 /* HCAddOrderAddressApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCAddOrderAddressApi.m; sourceTree = "<group>"; };
+		A5871AF6200A2B48004238B6 /* HCOrderAddressSelectCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderAddressSelectCellView.h; sourceTree = "<group>"; };
+		A5871AF7200A2B48004238B6 /* HCOrderAddressSelectCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderAddressSelectCellView.m; sourceTree = "<group>"; };
 		A58848E01FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManageDetailHeaderTitleView.h; sourceTree = "<group>"; };
 		A58848E11FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManageDetailHeaderTitleView.m; sourceTree = "<group>"; };
 		A58848E21FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHealthManageDetailHeaderTitleView.xib; sourceTree = "<group>"; };
@@ -1647,6 +1650,8 @@
 				A5DD8CFC2001C4730079CD7D /* HCCreateOrderViewController.m */,
 				A5871AE12009BDBE004238B6 /* HCOrderAddressSelectViewController.h */,
 				A5871AE22009BDBE004238B6 /* HCOrderAddressSelectViewController.m */,
+				A5871AF6200A2B48004238B6 /* HCOrderAddressSelectCellView.h */,
+				A5871AF7200A2B48004238B6 /* HCOrderAddressSelectCellView.m */,
 				A5871AE42009C206004238B6 /* HCOrderAddressCreateViewController.h */,
 				A5871AE52009C206004238B6 /* HCOrderAddressCreateViewController.m */,
 				A5871AE72009C48B004238B6 /* HCOrderAddressCreateCellView.h */,
@@ -2029,6 +2034,7 @@
 				A53695B31FD59769007CC67C /* SPTagBarScrollView.m in Sources */,
 				A5190E731FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.m in Sources */,
 				A57B48331FCEF9190004C397 /* MMUIBridgeView.m in Sources */,
+				A5871AF8200A2B49004238B6 /* HCOrderAddressSelectCellView.m in Sources */,
 				A553F3A7200665A2002A205B /* HCCountStepView.m in Sources */,
 				A5D9AE2F1FDBB87B00B5D4C0 /* YTKAnimatingRequestAccessory.m in Sources */,
 				A566B4D01FD24ABF004F6843 /* MMBarButtonItem.m in Sources */,

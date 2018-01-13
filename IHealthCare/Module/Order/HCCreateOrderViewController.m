@@ -191,7 +191,9 @@
     
     [cellView setName:m_currentAddress.name];
     [cellView setPhone:m_currentAddress.phone];
-    [cellView setAddressString:m_currentAddress.addr];
+    
+    NSString *address = [NSString stringWithFormat:@"%@%@",m_currentAddress.city,m_currentAddress.addr];
+    [cellView setAddressString:address];
 }
 
 -(void)addDivisionCell
