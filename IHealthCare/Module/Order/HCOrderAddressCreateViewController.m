@@ -59,18 +59,18 @@
     {
         return [self tableView:tableView addressTextCellForIndexPath:indexPath];
     }
+    else if ([identifier isEqualToString:@"citySelect"])
+    {
+        return [self tableView:tableView citySelectCellForIndexPath:indexPath];
+    }
+    else if ([identifier isEqualToString:@"defaultSet"])
+    {
+        return [self tableView:tableView defaultSetCellForIndexPath:indexPath];
+    }
     else if ([identifier isEqualToString:@"separator"])
     {
         return [self tableView:tableView separatorCellForIndex:indexPath];
     }
-//    else if ([identifier isEqualToString:@"productTitle"])
-//    {
-//        return [self tableView:tableView productTitleCellForIndexPath:indexPath];
-//    }
-//    else if ([identifier isEqualToString:@"productDetail"])
-//    {
-//        return [self tableView:tableView productDetailCellForIndexPath:indexPath];
-//    }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil)
@@ -104,6 +104,52 @@
     }
     
     HCOrderAddressCreateTextCellView *cellView = (HCOrderAddressCreateTextCellView *)cell.m_subContentView;
+    cellView.leftTitle = [self leftTitleString:cellInfo];
+    cellView.cellKey = attachKey;
+    
+    [cellView layoutContentViews];
+    
+    return cell;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView citySelectCellForIndexPath:(NSIndexPath *)indexPath
+{
+    MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    NSString *identifier = cellInfo.cellReuseIdentifier;
+    NSString *attachKey = cellInfo.attachKey;
+    
+    MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+        HCOrderAddressCreateRegionCellView *cellView = [[HCOrderAddressCreateRegionCellView alloc] initWithFrame:CGRectZero];
+        cell.m_subContentView = cellView;
+    }
+    
+    HCOrderAddressCreateRegionCellView *cellView = (HCOrderAddressCreateRegionCellView *)cell.m_subContentView;
+    cellView.leftTitle = [self leftTitleString:cellInfo];
+    cellView.cellKey = attachKey;
+    
+    [cellView layoutContentViews];
+    
+    return cell;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView defaultSetCellForIndexPath:(NSIndexPath *)indexPath
+{
+    MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    NSString *identifier = cellInfo.cellReuseIdentifier;
+    NSString *attachKey = cellInfo.attachKey;
+    
+    MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+        HCOrderAddressCreateRegionCellView *cellView = [[HCOrderAddressCreateRegionCellView alloc] initWithFrame:CGRectZero];
+        cell.m_subContentView = cellView;
+    }
+    
+    HCOrderAddressCreateRegionCellView *cellView = (HCOrderAddressCreateRegionCellView *)cell.m_subContentView;
     cellView.leftTitle = [self leftTitleString:cellInfo];
     cellView.cellKey = attachKey;
     
@@ -236,26 +282,26 @@
     NSString *leftTitle = nil;
     
     if ([attachKey isEqualToString:@"name"]) {
-        leftTitle = @"收货人：";
+        leftTitle = @"收货人";
     }
     else if ([attachKey isEqualToString:@"phone"])
     {
-        leftTitle = @"联系方式：";
+        leftTitle = @"联系方式";
     }
     else if ([attachKey isEqualToString:@"city"])
     {
-        leftTitle = @"所在地区：";
+        leftTitle = @"所在地区";
     }
     else if ([attachKey isEqualToString:@"addr"])
     {
-        leftTitle = @"详细地址：";
+        leftTitle = @"详细地址";
     }
     else if ([attachKey isEqualToString:@"defaultSet"])
     {
-        leftTitle = @"设置为默认地址：";
+        leftTitle = @"设置为默认地址";
     }
     
-    return leftTitle;
+    return [leftTitle stringByAppendingString:@":"];
 }
 
 - (void)didReceiveMemoryWarning {

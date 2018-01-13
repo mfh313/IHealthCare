@@ -11,6 +11,8 @@
 @interface HCOrderAddressCreateCellView : MMUIView
 {
     UILabel *m_titleLabel;
+    UILabel *m_contentLabel;
+    UIImageView *m_accessoryView;
 }
 
 @property (nonatomic,strong) NSString *cellKey;
