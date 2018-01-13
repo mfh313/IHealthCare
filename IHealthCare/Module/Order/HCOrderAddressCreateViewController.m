@@ -7,6 +7,9 @@
 //
 
 #import "HCOrderAddressCreateViewController.h"
+#import "HCOrderAddressCreateTextCellView.h"
+#import "HCOrderAddressCreateRegionCellView.h"
+#import "HCOrderAddressCreateDefaultSetCellView.h"
 
 @interface HCOrderAddressCreateViewController ()
 

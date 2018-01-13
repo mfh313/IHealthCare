@@ -14,6 +14,7 @@
 }
 
 @property (nonatomic,strong) NSString *cellKey;
+@property (nonatomic,strong) NSString *leftTitle;
 
 -(void)initSubViews;
 -(void)initLeftTitleView;
