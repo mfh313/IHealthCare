@@ -121,6 +121,7 @@
     m_editButton = [UIButton buttonWithType:UIButtonTypeCustom];
     m_editButton.backgroundColor = [UIColor whiteColor];
     [m_editButton setImage:MFImage(@"home_btn_editor_nor") forState:UIControlStateNormal];
+    [m_editButton addTarget:self action:@selector(onClickEditButton:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:m_editButton];
     
     [m_editButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -129,6 +130,11 @@
         make.width.mas_equalTo(60);
         make.height.mas_equalTo(self.mas_height);
     }];
+    
+}
+
+-(void)onClickEditButton:(id)sender
+{
     
 }
 

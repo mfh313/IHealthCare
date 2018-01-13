@@ -215,6 +215,7 @@
 		A5871AF22009C7FF004238B6 /* HCOrderAddressCreateDefaultSetCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AF12009C7FF004238B6 /* HCOrderAddressCreateDefaultSetCellView.m */; };
 		A5871AF5200A22B8004238B6 /* HCAddOrderAddressApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AF4200A22B8004238B6 /* HCAddOrderAddressApi.m */; };
 		A5871AF8200A2B49004238B6 /* HCOrderAddressSelectCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AF7200A2B48004238B6 /* HCOrderAddressSelectCellView.m */; };
+		A5871AFB200A5097004238B6 /* HCOrderAddressModifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AFA200A5097004238B6 /* HCOrderAddressModifyViewController.m */; };
 		A58848FB1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A58848E11FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m */; };
 		A58848FC1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58848E21FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib */; };
 		A58848FD1FFFC5C700FC93EE /* HCHealthManagementAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58848E41FFFC5C700FC93EE /* HCHealthManagementAnalysisViewController.m */; };
@@ -663,6 +664,8 @@
 		A5871AF4200A22B8004238B6 /* HCAddOrderAddressApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCAddOrderAddressApi.m; sourceTree = "<group>"; };
 		A5871AF6200A2B48004238B6 /* HCOrderAddressSelectCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderAddressSelectCellView.h; sourceTree = "<group>"; };
 		A5871AF7200A2B48004238B6 /* HCOrderAddressSelectCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderAddressSelectCellView.m; sourceTree = "<group>"; };
+		A5871AF9200A5097004238B6 /* HCOrderAddressModifyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderAddressModifyViewController.h; sourceTree = "<group>"; };
+		A5871AFA200A5097004238B6 /* HCOrderAddressModifyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderAddressModifyViewController.m; sourceTree = "<group>"; };
 		A58848E01FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManageDetailHeaderTitleView.h; sourceTree = "<group>"; };
 		A58848E11FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManageDetailHeaderTitleView.m; sourceTree = "<group>"; };
 		A58848E21FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHealthManageDetailHeaderTitleView.xib; sourceTree = "<group>"; };
@@ -1654,6 +1657,8 @@
 				A5871AF7200A2B48004238B6 /* HCOrderAddressSelectCellView.m */,
 				A5871AE42009C206004238B6 /* HCOrderAddressCreateViewController.h */,
 				A5871AE52009C206004238B6 /* HCOrderAddressCreateViewController.m */,
+				A5871AF9200A5097004238B6 /* HCOrderAddressModifyViewController.h */,
+				A5871AFA200A5097004238B6 /* HCOrderAddressModifyViewController.m */,
 				A5871AE72009C48B004238B6 /* HCOrderAddressCreateCellView.h */,
 				A5871AE82009C48B004238B6 /* HCOrderAddressCreateCellView.m */,
 				A5871AEA2009C75B004238B6 /* HCOrderAddressCreateTextCellView.h */,
@@ -1870,6 +1875,7 @@
 				A57B48321FCEF9190004C397 /* MMSelectButton.m in Sources */,
 				A5190E6B1FFA655F00BBF049 /* HCBestNewsDetailToolBar.m in Sources */,
 				A5871AEC2009C75B004238B6 /* HCOrderAddressCreateTextCellView.m in Sources */,
+				A5871AFB200A5097004238B6 /* HCOrderAddressModifyViewController.m in Sources */,
 				A57B47FB1FCEF9190004C397 /* CodedOutputStream.m in Sources */,
 				A58848FD1FFFC5C700FC93EE /* HCHealthManagementAnalysisViewController.m in Sources */,
 				A57B481D1FCEF9190004C397 /* NSMutableSet+SafeInsert.m in Sources */,
