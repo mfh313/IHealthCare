@@ -333,12 +333,16 @@
 -(void)onClickSelectCity:(HCOrderAddressCreateCellView *)cellView
 {
     NSString *attachKey = cellView.attachKey;
-    NSArray *cityArray = @[@"深圳",@"上海",@"上海",@"上海"];
+    NSArray *cityArray = @[@"深圳",@"北京",@"上海",@"广州"];
     
+    __weak typeof(self) weakSelf = self;
     LGAlertView *alertView = [LGAlertView alertViewWithTitle:nil message:nil style:LGAlertViewStyleActionSheet buttonTitles:cityArray cancelButtonTitle:@"取消" destructiveButtonTitle:nil actionHandler:^(LGAlertView * _Nonnull alertView, NSUInteger index, NSString * _Nullable title) {
 
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
         NSString *value = cityArray[index];
         [m_addressInfo safeSetObject:value forKey:attachKey];
+        [strongSelf reloadTableView];
 
     } cancelHandler:^(LGAlertView * _Nonnull alertView) {
 
