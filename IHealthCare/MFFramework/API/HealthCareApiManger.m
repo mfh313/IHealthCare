@@ -83,6 +83,12 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
     return MFURLWithPara(parmUrl);
 }
 
++ (NSString *)productDetail:(NSInteger)pid
+{
+    NSString *parmUrl = [NSString stringWithFormat:@"api/products/%@",@(pid)];
+    return MFURLWithPara(parmUrl);
+}
+
 + (NSString *)products:(NSInteger )cid page:(NSInteger)page
 {
     NSString *parmUrl = [NSString stringWithFormat:@"api/products/%@/%@",@(cid),@(page)];

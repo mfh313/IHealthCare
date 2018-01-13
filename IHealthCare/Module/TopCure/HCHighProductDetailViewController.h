@@ -8,9 +8,8 @@
 
 #import "MMUIViewController.h"
 
-@class HCProductDetailModel;
 @interface HCHighProductDetailViewController : MMUIViewController
 
-@property (nonatomic,strong) HCProductDetailModel *detailModel;
+@property (nonatomic,assign) NSInteger pid;
 
 @end

@@ -166,7 +166,7 @@
 -(void)onClickShowProductDetail:(HCProductDetailModel *)itemModel
 {
     HCHighProductDetailViewController *detailVC = [HCHighProductDetailViewController new];
-    detailVC.detailModel = itemModel;
+    detailVC.pid = itemModel.pid;
     detailVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:detailVC animated:YES];
 }

@@ -12,6 +12,7 @@
 #import "HCHighProductDetailBottomView.h"
 #import "HCProductDetailHeaderTitleView.h"
 #import "HCCreateOrderViewController.h"
+#import "HCGetProductDetailApi.h"
 
 @interface HCHighProductDetailViewController () <HCHighProductDetailCustomNavbarDelegate,HCHighProductDetailBottomViewDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -21,6 +22,8 @@
     MFUITableView *m_tableView;
     NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
 }
+
+@property (nonatomic,strong) HCProductDetailModel *detailModel;
 
 @end
 
@@ -60,7 +63,36 @@
         make.left.equalTo(self.view);
     }];
     
-    [self reloadTableView];
+    [self getProductDetail];
+}
+
+-(void)getProductDetail
+{
+    __weak typeof(self) weakSelf = self;
+    HCGetProductDetailApi *mfApi = [HCGetProductDetailApi new];
+    mfApi.pid = self.pid;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        [m_tableView.pullToRefreshView stopAnimating];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSDictionary *product = mfApi.responseNetworkData;
+        HCProductDetailModel *itemModel = [HCProductDetailModel yy_modelWithDictionary:product];
+        strongSelf.detailModel = itemModel;
+        
+        [strongSelf reloadTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        [m_tableView.pullToRefreshView stopAnimating];
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
 }
 
 -(void)viewWillAppear:(BOOL)animated

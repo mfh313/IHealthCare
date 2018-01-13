@@ -18,4 +18,3 @@ extern NSInteger const PRODUCT_CLASS_ROOM;  //大讲堂
 @property (nonatomic,assign) NSInteger page;
 
 @end
-

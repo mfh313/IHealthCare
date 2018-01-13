@@ -206,6 +206,7 @@
 		A57B48521FCEFA5E0004C397 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57B48511FCEFA570004C397 /* JavaScriptCore.framework */; };
 		A57B48541FCEFA6C0004C397 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57B48531FCEFA650004C397 /* CoreText.framework */; };
 		A57B48561FCEFAEA0004C397 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57B48551FCEFAE30004C397 /* UIKit.framework */; };
+		A5871AE020099CDE004238B6 /* HCGetProductDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871ADF20099CDE004238B6 /* HCGetProductDetailApi.m */; };
 		A58848FB1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A58848E11FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m */; };
 		A58848FC1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58848E21FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib */; };
 		A58848FD1FFFC5C700FC93EE /* HCHealthManagementAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58848E41FFFC5C700FC93EE /* HCHealthManagementAnalysisViewController.m */; };
@@ -636,6 +637,8 @@
 		A57B48511FCEFA570004C397 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		A57B48531FCEFA650004C397 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		A57B48551FCEFAE30004C397 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A5871ADE20099CDE004238B6 /* HCGetProductDetailApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetProductDetailApi.h; sourceTree = "<group>"; };
+		A5871ADF20099CDE004238B6 /* HCGetProductDetailApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetProductDetailApi.m; sourceTree = "<group>"; };
 		A58848E01FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManageDetailHeaderTitleView.h; sourceTree = "<group>"; };
 		A58848E11FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManageDetailHeaderTitleView.m; sourceTree = "<group>"; };
 		A58848E21FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHealthManageDetailHeaderTitleView.xib; sourceTree = "<group>"; };
@@ -1555,6 +1558,8 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A5871ADE20099CDE004238B6 /* HCGetProductDetailApi.h */,
+				A5871ADF20099CDE004238B6 /* HCGetProductDetailApi.m */,
 				A5DD8D062001F6A90079CD7D /* HCGetOrderUserAddressApi.h */,
 				A5DD8D072001F6A90079CD7D /* HCGetOrderUserAddressApi.m */,
 				A58849121FFFDA4700FC93EE /* HCPayOrderApi.h */,
@@ -1893,6 +1898,7 @@
 				A57B48141FCEF9190004C397 /* SCLTimerDisplay.m in Sources */,
 				A57B47FE1FCEF9190004C397 /* ExtendableMessage.m in Sources */,
 				A57A90C11FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m in Sources */,
+				A5871AE020099CDE004238B6 /* HCGetProductDetailApi.m in Sources */,
 				A5DD8D002001CCAF0079CD7D /* HCCreateOrderAddressCellView.m in Sources */,
 				A57B48271FCEF9190004C397 /* MFMultiMenuTableViewCell.m in Sources */,
 				A57B48221FCEF9190004C397 /* UIView+viewController.m in Sources */,

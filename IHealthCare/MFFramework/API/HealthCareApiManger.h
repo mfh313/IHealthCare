@@ -38,6 +38,8 @@
 //查询所有前沿资讯
 + (NSString *)bestNews:(NSInteger )type page:(NSInteger)page;
 
++ (NSString *)productDetail:(NSInteger)pid;
+
 + (NSString *)products:(NSInteger )cid page:(NSInteger)page;
 
 + (NSString *)getVerifycode:(NSString *)telephone;
