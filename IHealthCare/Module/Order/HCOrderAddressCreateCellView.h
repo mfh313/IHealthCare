@@ -18,5 +18,6 @@
 
 -(void)initSubViews;
 -(void)initLeftTitleView;
+-(void)layoutContentViews;
 
 @end

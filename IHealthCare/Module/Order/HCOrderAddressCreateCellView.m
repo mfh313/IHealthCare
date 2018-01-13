@@ -40,4 +40,9 @@
     }];
 }
 
+-(void)layoutContentViews
+{
+    m_titleLabel.text = self.leftTitle;
+}
+
 @end

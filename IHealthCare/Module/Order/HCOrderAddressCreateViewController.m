@@ -55,10 +55,14 @@
     MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
     NSString *identifier = cellInfo.cellReuseIdentifier;
     
-//    if ([identifier isEqualToString:@"productImage"])
-//    {
-//        return [self tableView:tableView productImageCellForIndexPath:indexPath];
-//    }
+    if ([identifier isEqualToString:@"addressText"])
+    {
+        return [self tableView:tableView addressTextCellForIndexPath:indexPath];
+    }
+    else if ([identifier isEqualToString:@"separator"])
+    {
+        return [self tableView:tableView separatorCellForIndex:indexPath];
+    }
 //    else if ([identifier isEqualToString:@"productTitle"])
 //    {
 //        return [self tableView:tableView productTitleCellForIndexPath:indexPath];
@@ -85,6 +89,47 @@
     return cellInfo.cellHeight;
 }
 
+-(UITableViewCell *)tableView:(UITableView *)tableView addressTextCellForIndexPath:(NSIndexPath *)indexPath
+{
+    MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    NSString *identifier = cellInfo.cellReuseIdentifier;
+    NSString *attachKey = cellInfo.attachKey;
+    
+    MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+        HCOrderAddressCreateTextCellView *cellView = [[HCOrderAddressCreateTextCellView alloc] initWithFrame:CGRectZero];
+        cell.m_subContentView = cellView;
+    }
+    
+    HCOrderAddressCreateTextCellView *cellView = (HCOrderAddressCreateTextCellView *)cell.m_subContentView;
+    cellView.leftTitle = [self leftTitleString:cellInfo];
+    cellView.cellKey = attachKey;
+    
+    [cellView layoutContentViews];
+    
+    return cell;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView separatorCellForIndex:(NSIndexPath *)indexPath
+{
+    MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    NSString *identifier = cellInfo.cellReuseIdentifier;
+    
+    MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+        UIView *separator = [UIView new];
+        separator.frame = CGRectMake(0, 0, CGRectGetWidth(cell.contentView.frame), MFOnePixHeight);
+        separator.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        separator.backgroundColor = MFCustomLineColor;
+        [cell.contentView addSubview:separator];
+    }
+    return cell;
+}
+
 -(void)reloadTableView
 {
     [self makeCellObjects];
@@ -102,11 +147,15 @@
     addressText.cellHeight = 70.0f;
     [m_cellInfos addObject:addressText];
     
+    [m_cellInfos addObject:[self separatorCellObject]];
+    
     MFTableViewCellObject *phone = [MFTableViewCellObject new];
     phone.cellReuseIdentifier = @"addressText";
     phone.attachKey = @"phone";
     phone.cellHeight = 70.0f;
     [m_cellInfos addObject:phone];
+    
+    [m_cellInfos addObject:[self separatorCellObject]];
     
     MFTableViewCellObject *city = [MFTableViewCellObject new];
     city.cellReuseIdentifier = @"citySelect";
@@ -114,17 +163,29 @@
     city.cellHeight = 70.0f;
     [m_cellInfos addObject:city];
     
+    [m_cellInfos addObject:[self separatorCellObject]];
+    
     MFTableViewCellObject *addr = [MFTableViewCellObject new];
     addr.cellReuseIdentifier = @"addressText";
     addr.attachKey = @"addr";
     addr.cellHeight = 70.0f;
     [m_cellInfos addObject:addr];
     
+    [m_cellInfos addObject:[self separatorCellObject]];
+    
     MFTableViewCellObject *defaultSet = [MFTableViewCellObject new];
     defaultSet.cellReuseIdentifier = @"defaultSet";
     defaultSet.attachKey = @"defaultSet";
     defaultSet.cellHeight = 70.0f;
     [m_cellInfos addObject:defaultSet];
+}
+
+-(MFTableViewCellObject *)separatorCellObject
+{
+    MFTableViewCellObject *separator = [MFTableViewCellObject new];
+    separator.cellHeight = MFOnePixHeight;
+    separator.cellReuseIdentifier = @"separator";
+    return separator;
 }
 
 -(void)setBottomView
@@ -167,6 +228,34 @@
 -(void)onClickBottomButton:(id)sender
 {
     
+}
+
+-(NSString *)leftTitleString:(MFTableViewCellObject *)cellInfo
+{
+    NSString *attachKey = cellInfo.attachKey;
+    NSString *leftTitle = nil;
+    
+    if ([attachKey isEqualToString:@"name"]) {
+        leftTitle = @"收货人：";
+    }
+    else if ([attachKey isEqualToString:@"phone"])
+    {
+        leftTitle = @"联系方式：";
+    }
+    else if ([attachKey isEqualToString:@"city"])
+    {
+        leftTitle = @"所在地区：";
+    }
+    else if ([attachKey isEqualToString:@"addr"])
+    {
+        leftTitle = @"详细地址：";
+    }
+    else if ([attachKey isEqualToString:@"defaultSet"])
+    {
+        leftTitle = @"设置为默认地址：";
+    }
+    
+    return leftTitle;
 }
 
 - (void)didReceiveMemoryWarning {
