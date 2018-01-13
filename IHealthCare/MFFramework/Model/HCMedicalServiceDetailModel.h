@@ -13,6 +13,7 @@
 @property (nonatomic,assign) NSInteger mid;
 @property (nonatomic,strong) NSString *name;    //名字
 @property (nonatomic,strong) NSString *imageUrl; //图片
+@property (nonatomic,strong) NSString *webLink;
 @property (nonatomic,strong) NSString *country;  //国家
 @property (nonatomic,strong) NSString *province; //省份
 @property (nonatomic,strong) NSString *city; //城市
