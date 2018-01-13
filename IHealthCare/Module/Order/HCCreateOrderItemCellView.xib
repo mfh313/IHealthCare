@@ -47,9 +47,9 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bNo-MG-E1s">
-                    <rect key="frame" x="171" y="81" width="9" height="17"/>
+                    <rect key="frame" x="171" y="81" width="10" height="17"/>
                     <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" id="Dae-hX-q26"/>
+                        <constraint firstAttribute="width" constant="10" id="Dae-hX-q26"/>
                         <constraint firstAttribute="height" constant="17" id="fLk-IW-hAv"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -57,7 +57,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16789.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xja-D5-kIO">
-                    <rect key="frame" x="185" y="81" width="61" height="17"/>
+                    <rect key="frame" x="181" y="81" width="61" height="17"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" id="14q-kY-kXb"/>
                         <constraint firstAttribute="height" constant="17" id="Gko-0u-CRf"/>
@@ -67,7 +67,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ycf-Om-d3h" customClass="HCCountStepView">
-                    <rect key="frame" x="338" y="76" width="70" height="22"/>
+                    <rect key="frame" x="343" y="76" width="70" height="22"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="22" id="PQi-IA-YAx"/>
@@ -79,9 +79,10 @@
             <constraints>
                 <constraint firstItem="9Yu-OI-DRx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Faf-CI-z1p"/>
                 <constraint firstItem="694-fG-pgv" firstAttribute="leading" secondItem="9Yu-OI-DRx" secondAttribute="trailing" constant="10" id="H2w-E9-WoD"/>
-                <constraint firstAttribute="trailing" secondItem="ycf-Om-d3h" secondAttribute="trailing" constant="15" id="Q4K-sO-sI4"/>
+                <constraint firstAttribute="trailing" secondItem="ycf-Om-d3h" secondAttribute="trailing" constant="10" id="Q4K-sO-sI4"/>
                 <constraint firstItem="ntb-YV-oez" firstAttribute="leading" secondItem="694-fG-pgv" secondAttribute="leading" id="Rcq-hn-gtS"/>
                 <constraint firstItem="yLC-Dq-9dN" firstAttribute="leading" secondItem="ntb-YV-oez" secondAttribute="trailing" constant="20" id="Rzw-sF-l1s"/>
+                <constraint firstItem="ycf-Om-d3h" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Xja-D5-kIO" secondAttribute="trailing" id="Udn-7U-cW5"/>
                 <constraint firstItem="Xja-D5-kIO" firstAttribute="centerY" secondItem="bNo-MG-E1s" secondAttribute="centerY" id="Ufc-EY-NDv"/>
                 <constraint firstItem="bNo-MG-E1s" firstAttribute="bottom" secondItem="9Yu-OI-DRx" secondAttribute="bottom" id="Ysl-Kq-7IS"/>
                 <constraint firstItem="bNo-MG-E1s" firstAttribute="leading" secondItem="694-fG-pgv" secondAttribute="leading" id="Z84-6q-vKQ"/>
@@ -90,7 +91,7 @@
                 <constraint firstAttribute="bottom" secondItem="ycf-Om-d3h" secondAttribute="bottom" constant="20" id="fbL-7T-u5G"/>
                 <constraint firstItem="694-fG-pgv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="nyP-ZD-bEj"/>
                 <constraint firstItem="ntb-YV-oez" firstAttribute="centerY" secondItem="9Yu-OI-DRx" secondAttribute="centerY" id="vPb-FR-udx"/>
-                <constraint firstItem="Xja-D5-kIO" firstAttribute="leading" secondItem="bNo-MG-E1s" secondAttribute="trailing" constant="5" id="zNZ-A1-gqx"/>
+                <constraint firstItem="Xja-D5-kIO" firstAttribute="leading" secondItem="bNo-MG-E1s" secondAttribute="trailing" id="zNZ-A1-gqx"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
