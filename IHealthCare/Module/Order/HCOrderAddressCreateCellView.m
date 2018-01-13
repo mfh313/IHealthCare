@@ -137,8 +137,6 @@
 -(void)setContentLabelValue:(NSString *)text
 {
     [m_contentLabel setText:text];
-    
-    [m_contentLabel setText:@"深圳"];
 }
 
 @end
