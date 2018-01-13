@@ -187,7 +187,7 @@
 }
 
 #pragma mark - HCOrderAddressSelectCellViewDelegate
--(void)onDidSelectAddress:(HCOrderUserAddressModel *)address
+-(void)onClickModifyAddress:(HCOrderUserAddressModel *)address
 {
     HCOrderAddressModifyViewController *modifyVC = [HCOrderAddressModifyViewController new];
     modifyVC.addressInfo = address;

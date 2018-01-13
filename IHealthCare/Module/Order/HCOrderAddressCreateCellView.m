@@ -60,7 +60,7 @@
     [self addSubview:m_textField];
     
     [m_textField mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.mas_equalTo(m_titleLabel.mas_right).offset(10);
+        make.left.mas_equalTo(m_titleLabel.mas_right).offset(5);
         make.right.mas_equalTo(self.mas_right).offset(-10);
         make.centerY.mas_equalTo(self.mas_centerY);
         make.height.mas_equalTo(50);
