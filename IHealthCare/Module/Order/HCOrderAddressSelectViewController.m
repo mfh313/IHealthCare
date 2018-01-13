@@ -11,8 +11,9 @@
 #import "HCOrderAddressCreateViewController.h"
 #import "HCOrderAddressSelectCellView.h"
 #import "HCGetOrderUserAddressApi.h"
+#import "HCOrderAddressModifyViewController.h"
 
-@interface HCOrderAddressSelectViewController () <HCOrderAddressCreateViewControllerDelegate,MMTableViewInfoDelegate>
+@interface HCOrderAddressSelectViewController () <HCOrderAddressSelectCellViewDelegate,HCOrderAddressCreateViewControllerDelegate,MMTableViewInfoDelegate>
 {
     MMTableViewInfo *m_tableViewInfo;
     NSMutableArray *m_addressInfos;
@@ -160,6 +161,7 @@
 {
     if (!cell.m_subContentView) {
         HCOrderAddressSelectCellView *cellView = [[HCOrderAddressSelectCellView alloc] initWithFrame:cell.contentView.frame];
+        cellView.m_delegate = self;
         cell.m_subContentView = cellView;
     }
     else
@@ -171,6 +173,9 @@
     cellView.frame = cell.contentView.bounds;
     
     HCOrderUserAddressModel *addressInfo =  [cellInfo getUserInfoValueForKey:@"cellData"];
+    
+    [cellView setAddressInfo:addressInfo];
+    
     if (m_selectAid == addressInfo.aid)
     {
         [cellView setAddressSelected:YES];
@@ -179,8 +184,14 @@
     {
         [cellView setAddressSelected:NO];
     }
-    
-    [cellView setAddressInfo:addressInfo.name phone:addressInfo.phone address:addressInfo.addr];
+}
+
+#pragma mark - HCOrderAddressSelectCellViewDelegate
+-(void)onDidSelectAddress:(HCOrderUserAddressModel *)address
+{
+    HCOrderAddressModifyViewController *modifyVC = [HCOrderAddressModifyViewController new];
+    modifyVC.addressInfo = address;
+    [self.navigationController pushViewController:modifyVC animated:YES];
 }
 
 -(void)onClickAddressCell:(MMTableViewCellInfo *)cellInfo

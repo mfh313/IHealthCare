@@ -58,11 +58,13 @@
     }
 }
 
--(void)setAddressInfo:(NSString *)name phone:(NSString *)phone address:(NSString *)address
+-(void)setAddressInfo:(HCOrderUserAddressModel *)addressInfo
 {
-    m_nameLabel.text = name;
-    m_phoneLabel.text = phone;
-    m_addressLabel.text = address;
+    m_addressInfo = addressInfo;
+    
+    m_nameLabel.text = m_addressInfo.name;
+    m_phoneLabel.text = m_addressInfo.phone;
+    m_addressLabel.text = m_addressInfo.addr;
 }
 
 -(void)initAddressContentView
@@ -135,7 +137,9 @@
 
 -(void)onClickEditButton:(id)sender
 {
-    
+    if ([self.m_delegate respondsToSelector:@selector(onClickModifyAddress:)]) {
+        [self.m_delegate onClickModifyAddress:m_addressInfo];
+    }
 }
 
 @end

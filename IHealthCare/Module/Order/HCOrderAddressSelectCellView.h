@@ -7,10 +7,11 @@
 //
 
 #import "MMUIView.h"
+#import "HCOrderUserAddressModel.h"
 
 @protocol HCOrderAddressSelectCellViewDelegate <NSObject>
 @optional
-
+-(void)onClickModifyAddress:(HCOrderUserAddressModel *)address;
 
 @end
 
@@ -24,11 +25,13 @@
     UIView *m_addressContentView;
     
     UIButton *m_editButton;
+    
+    HCOrderUserAddressModel *m_addressInfo;
 }
 
 @property (nonatomic,weak) id<HCOrderAddressSelectCellViewDelegate> m_delegate;
 
+-(void)setAddressInfo:(HCOrderUserAddressModel *)addressInfo;
 -(void)setAddressSelected:(BOOL)selected;
--(void)setAddressInfo:(NSString *)name phone:(NSString *)phone address:(NSString *)address;
 
 @end

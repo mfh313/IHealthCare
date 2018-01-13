@@ -11,4 +11,6 @@
 
 @interface HCOrderAddressModifyViewController : MMUIViewController
 
+@property (nonatomic,strong) HCOrderUserAddressModel *addressInfo;
+
 @end

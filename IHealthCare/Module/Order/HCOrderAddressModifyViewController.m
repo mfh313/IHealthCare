@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"修改收货地址";
+    [self setBackBarButton];
 }
 
 - (void)didReceiveMemoryWarning {
