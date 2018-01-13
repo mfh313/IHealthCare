@@ -13,4 +13,9 @@
     UILabel *m_titleLabel;
 }
 
+@property (nonatomic,strong) NSString *cellKey;
+
+-(void)initSubViews;
+-(void)initLeftTitleView;
+
 @end
