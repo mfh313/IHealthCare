@@ -11,7 +11,7 @@
 @class HCOrderAddressCreateViewController;
 @protocol HCOrderAddressCreateViewControllerDelegate <NSObject>
 @optional
--(void)onDidCreateAddress:(HCOrderAddressCreateViewController *)controller;
+-(void)onCreateAddress:(HCOrderAddressCreateViewController *)controller addressInfo:(NSMutableDictionary *)info;
 
 @end
 
