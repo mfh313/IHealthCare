@@ -113,4 +113,12 @@
     }];
 }
 
+-(void)initContentLabel
+{
+    m_contentLabel = [[UILabel alloc] init];
+    m_contentLabel.font = [UIFont systemFontOfSize:14.0f];
+    m_contentLabel.textColor = [UIColor hx_colorWithHexString:@"0F0F0F"];
+    [self addSubview:m_contentLabel];
+}
+
 @end

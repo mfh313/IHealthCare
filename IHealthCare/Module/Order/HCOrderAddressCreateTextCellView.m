@@ -13,9 +13,7 @@
 -(void)initSubViews
 {
     [super initSubViews];
-    
     [self initTextField];
 }
-
 
 @end

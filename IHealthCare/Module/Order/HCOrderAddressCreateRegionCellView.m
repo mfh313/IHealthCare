@@ -15,9 +15,20 @@
     [super initSubViews];
     
     [self initAccessoryView];
-    
+    [self initContentLabel];
 }
 
+-(void)layoutContentViews
+{
+    [super layoutContentViews];
+    
+    [m_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(m_titleLabel.mas_right).offset(10);
+        make.right.mas_equalTo(m_accessoryView.mas_left).offset(-10);
+        make.centerY.mas_equalTo(self.mas_centerY);
+        make.height.mas_equalTo(40);
+    }];
+}
 
 @end
 

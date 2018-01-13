@@ -31,6 +31,7 @@
 -(void)initSubViews;
 -(void)initLeftTitleView;
 -(void)initTextField;
+-(void)initContentLabel;
 -(void)layoutContentViews;
 -(UITextField *)contentTextField;
 -(void)setTextFieldValue:(NSString *)text;
