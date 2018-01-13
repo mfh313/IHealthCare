@@ -18,8 +18,9 @@
 #import "HCCreateOrderItemCellView.h"
 #import "WXApiRequestHandler.h"
 #import "WXApiManager.h"
+#import "HCOrderAddressSelectViewController.h"
 
-@interface HCCreateOrderViewController () <MMTableViewInfoDelegate>
+@interface HCCreateOrderViewController () <MMTableViewInfoDelegate,HCOrderAddressSelectViewControllerDelegate>
 {
     MMTableViewInfo *m_tableViewInfo;
     HCOrderUserAddressModel *m_currentAddress;
@@ -216,8 +217,13 @@
 
 -(void)onClickAddressCell:(MMTableViewCellInfo *)cellInfo
 {
-    NSLog(@"onClickAddressCell");
+    HCOrderAddressSelectViewController *selectVC = [HCOrderAddressSelectViewController new];
+    selectVC.m_delegate = self;
+    [self.navigationController pushViewController:selectVC animated:YES];
 }
+
+#pragma mark - HCOrderAddressSelectViewControllerDelegate
+
 
 -(void)addCartItems
 {
