@@ -209,6 +209,10 @@
 		A5871AE020099CDE004238B6 /* HCGetProductDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871ADF20099CDE004238B6 /* HCGetProductDetailApi.m */; };
 		A5871AE32009BDBE004238B6 /* HCOrderAddressSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AE22009BDBE004238B6 /* HCOrderAddressSelectViewController.m */; };
 		A5871AE62009C206004238B6 /* HCOrderAddressCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AE52009C206004238B6 /* HCOrderAddressCreateViewController.m */; };
+		A5871AE92009C48B004238B6 /* HCOrderAddressCreateCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AE82009C48B004238B6 /* HCOrderAddressCreateCellView.m */; };
+		A5871AEC2009C75B004238B6 /* HCOrderAddressCreateTextCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AEB2009C75B004238B6 /* HCOrderAddressCreateTextCellView.m */; };
+		A5871AEF2009C7C3004238B6 /* HCOrderAddressCreateRegionCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AEE2009C7C3004238B6 /* HCOrderAddressCreateRegionCellView.m */; };
+		A5871AF22009C7FF004238B6 /* HCOrderAddressCreateDefaultSetCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AF12009C7FF004238B6 /* HCOrderAddressCreateDefaultSetCellView.m */; };
 		A58848FB1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A58848E11FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m */; };
 		A58848FC1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58848E21FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib */; };
 		A58848FD1FFFC5C700FC93EE /* HCHealthManagementAnalysisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58848E41FFFC5C700FC93EE /* HCHealthManagementAnalysisViewController.m */; };
@@ -645,6 +649,14 @@
 		A5871AE22009BDBE004238B6 /* HCOrderAddressSelectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderAddressSelectViewController.m; sourceTree = "<group>"; };
 		A5871AE42009C206004238B6 /* HCOrderAddressCreateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderAddressCreateViewController.h; sourceTree = "<group>"; };
 		A5871AE52009C206004238B6 /* HCOrderAddressCreateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderAddressCreateViewController.m; sourceTree = "<group>"; };
+		A5871AE72009C48B004238B6 /* HCOrderAddressCreateCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderAddressCreateCellView.h; sourceTree = "<group>"; };
+		A5871AE82009C48B004238B6 /* HCOrderAddressCreateCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderAddressCreateCellView.m; sourceTree = "<group>"; };
+		A5871AEA2009C75B004238B6 /* HCOrderAddressCreateTextCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderAddressCreateTextCellView.h; sourceTree = "<group>"; };
+		A5871AEB2009C75B004238B6 /* HCOrderAddressCreateTextCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderAddressCreateTextCellView.m; sourceTree = "<group>"; };
+		A5871AED2009C7C3004238B6 /* HCOrderAddressCreateRegionCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderAddressCreateRegionCellView.h; sourceTree = "<group>"; };
+		A5871AEE2009C7C3004238B6 /* HCOrderAddressCreateRegionCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderAddressCreateRegionCellView.m; sourceTree = "<group>"; };
+		A5871AF02009C7FF004238B6 /* HCOrderAddressCreateDefaultSetCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderAddressCreateDefaultSetCellView.h; sourceTree = "<group>"; };
+		A5871AF12009C7FF004238B6 /* HCOrderAddressCreateDefaultSetCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderAddressCreateDefaultSetCellView.m; sourceTree = "<group>"; };
 		A58848E01FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHealthManageDetailHeaderTitleView.h; sourceTree = "<group>"; };
 		A58848E11FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHealthManageDetailHeaderTitleView.m; sourceTree = "<group>"; };
 		A58848E21FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHealthManageDetailHeaderTitleView.xib; sourceTree = "<group>"; };
@@ -1632,6 +1644,14 @@
 				A5871AE22009BDBE004238B6 /* HCOrderAddressSelectViewController.m */,
 				A5871AE42009C206004238B6 /* HCOrderAddressCreateViewController.h */,
 				A5871AE52009C206004238B6 /* HCOrderAddressCreateViewController.m */,
+				A5871AEA2009C75B004238B6 /* HCOrderAddressCreateTextCellView.h */,
+				A5871AEB2009C75B004238B6 /* HCOrderAddressCreateTextCellView.m */,
+				A5871AED2009C7C3004238B6 /* HCOrderAddressCreateRegionCellView.h */,
+				A5871AEE2009C7C3004238B6 /* HCOrderAddressCreateRegionCellView.m */,
+				A5871AF02009C7FF004238B6 /* HCOrderAddressCreateDefaultSetCellView.h */,
+				A5871AF12009C7FF004238B6 /* HCOrderAddressCreateDefaultSetCellView.m */,
+				A5871AE72009C48B004238B6 /* HCOrderAddressCreateCellView.h */,
+				A5871AE82009C48B004238B6 /* HCOrderAddressCreateCellView.m */,
 				A5DD8D0E2002116D0079CD7D /* HCCreateOrderItemCellView.h */,
 				A5DD8D0F2002116D0079CD7D /* HCCreateOrderItemCellView.m */,
 				A5DD8D11200211A00079CD7D /* HCCreateOrderItemCellView.xib */,
@@ -1830,6 +1850,7 @@
 				A5190E761FFA655F00BBF049 /* HCHighProductMainViewController.m in Sources */,
 				A56CD7821FD02E9B00FFF504 /* HCLoginViewController.m in Sources */,
 				A57B48041FCEF9190004C397 /* MutableExtensionRegistry.m in Sources */,
+				A5871AE92009C48B004238B6 /* HCOrderAddressCreateCellView.m in Sources */,
 				A57B48471FCEF9190004C397 /* YYClassInfo.m in Sources */,
 				A57B47F91FCEF9190004C397 /* AbstractMessageBuilder.m in Sources */,
 				A5190E7C1FFA655F00BBF049 /* HCTopCureMainTagView.m in Sources */,
@@ -1838,6 +1859,7 @@
 				A53695B01FD59769007CC67C /* SPTabController.m in Sources */,
 				A57B48321FCEF9190004C397 /* MMSelectButton.m in Sources */,
 				A5190E6B1FFA655F00BBF049 /* HCBestNewsDetailToolBar.m in Sources */,
+				A5871AEC2009C75B004238B6 /* HCOrderAddressCreateTextCellView.m in Sources */,
 				A57B47FB1FCEF9190004C397 /* CodedOutputStream.m in Sources */,
 				A58848FD1FFFC5C700FC93EE /* HCHealthManagementAnalysisViewController.m in Sources */,
 				A57B481D1FCEF9190004C397 /* NSMutableSet+SafeInsert.m in Sources */,
@@ -1845,7 +1867,9 @@
 				A58849051FFFC5C700FC93EE /* HCHealthManagementDetailViewController.m in Sources */,
 				A554650F1FEFAD3100A7E3C7 /* HCMeProfileCellView.m in Sources */,
 				A57B48161FCEF9190004C397 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
+				A5871AF22009C7FF004238B6 /* HCOrderAddressCreateDefaultSetCellView.m in Sources */,
 				A5D9AE321FDBB87B00B5D4C0 /* YTKChainRequest+AnimatingAccessory.m in Sources */,
+				A5871AEF2009C7C3004238B6 /* HCOrderAddressCreateRegionCellView.m in Sources */,
 				A55388971FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
 				A57B483F1FCEF9190004C397 /* MMTabBarController.m in Sources */,
 				A57B480D1FCEF9190004C397 /* WireFormat.m in Sources */,
