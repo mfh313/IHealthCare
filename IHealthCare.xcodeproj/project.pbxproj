@@ -1015,11 +1015,6 @@
 		A5623C9D1FCDB851001A6B5D /* IHealthCare */ = {
 			isa = PBXGroup;
 			children = (
-				A5623C9E1FCDB851001A6B5D /* HealthCareAppDelegate.h */,
-				A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */,
-				A56CD77D1FD028AD00FFF504 /* HealthCareViewControllerManager.h */,
-				A56CD77E1FD028AD00FFF504 /* HealthCareViewControllerManager.m */,
-				A5268DBB1FD3CC8F00E2F93C /* HealthCare_pch.h */,
 				A57B476A1FCEF9180004C397 /* Module */,
 				A5D9AE151FDBB87B00B5D4C0 /* MFFramework */,
 				A55465121FEFAD5700A7E3C7 /* HCComponent */,
@@ -1030,6 +1025,11 @@
 				A56CD7831FD0306C00FFF504 /* LoginAssets.xcassets */,
 				A56CD7851FD0312000FFF504 /* MainFrameAssets.xcassets */,
 				A56CD7871FD0315000FFF504 /* MeAssets.xcassets */,
+				A5623C9E1FCDB851001A6B5D /* HealthCareAppDelegate.h */,
+				A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */,
+				A56CD77D1FD028AD00FFF504 /* HealthCareViewControllerManager.h */,
+				A56CD77E1FD028AD00FFF504 /* HealthCareViewControllerManager.m */,
+				A5268DBB1FD3CC8F00E2F93C /* HealthCare_pch.h */,
 				A5623CAC1FCDB851001A6B5D /* Info.plist */,
 				A5623CAD1FCDB851001A6B5D /* main.m */,
 			);
