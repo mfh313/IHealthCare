@@ -81,7 +81,7 @@
     
     for (int i = 0; i < m_subClassDetails.count; i++)
     {
-        HCSubClassDetailModel *itemModel = m_subClassDetails[i];
+        HCSubClassDetailModel *subDetail = m_subClassDetails[i];
         
         MMTableViewCellInfo *cellInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeDetailCell:cellInfo:)
                                                                  makeTarget:self
@@ -89,7 +89,7 @@
                                                                actionTarget:self
                                                                      height:50
                                                                    userInfo:nil];
-        [cellInfo addUserInfoValue:itemModel forKey:@"cellInfo"];
+        [cellInfo addUserInfoValue:subDetail forKey:@"cellInfo"];
         
         [sectionInfo addCell:cellInfo];
     }
@@ -109,9 +109,9 @@
         [cell.contentView addSubview:cell.m_subContentView];
     }
     
-    HCSubClassDetailModel *detail =  [cellInfo getUserInfoValueForKey:@"cellInfo"];
+    HCSubClassDetailModel *subDetail =  [cellInfo getUserInfoValueForKey:@"cellInfo"];
     
-    NSString *classDetail = [NSString stringWithFormat:@"%@、%@",@(detail.seqNumber),detail.name];
+    NSString *classDetail = [NSString stringWithFormat:@"%@、%@",@(subDetail.seqNumber),subDetail.name];
     
     cell.textLabel.font = [UIFont systemFontOfSize:14.0f];
     cell.textLabel.textColor = [UIColor hx_colorWithHexString:@"333333"];
@@ -120,18 +120,17 @@
 
 -(void)onClickDetailCell:(MMTableViewCellInfo *)cellInfo
 {
-    HCSubClassDetailModel *detail =  [cellInfo getUserInfoValueForKey:@"cellInfo"];
-    
-    [self getSubClassDetail];
+    HCSubClassDetailModel *subDetail =  [cellInfo getUserInfoValueForKey:@"cellInfo"];
+    [self getSubClassDetail:subDetail.crid];
 }
 
--(void)getSubClassDetail
+-(void)getSubClassDetail:(NSInteger)crid
 {
     HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
     
     __weak typeof(self) weakSelf = self;
     HCGetSubClassDetailApi *mfApi = [HCGetSubClassDetailApi new];
-    mfApi.crid = self.detailModel.crid;
+    mfApi.crid = crid;
     mfApi.userTel = loginService.userPhone;
     mfApi.authCode = loginService.token;
     
