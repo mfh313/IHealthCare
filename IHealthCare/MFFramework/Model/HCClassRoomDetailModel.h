@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HCUserModel.h"
 
 @interface HCClassRoomDetailModel : NSObject
 
@@ -24,5 +25,8 @@
 @property (nonatomic,assign) CGFloat discount;  //折扣
 @property (nonatomic,strong) NSString *privilegeTime; //优惠时间
 @property (nonatomic,assign) NSInteger sales;  //销量，付费后加1
+@property (nonatomic,assign) NSInteger cid;
+@property (nonatomic,assign) NSInteger csid;
+@property (nonatomic,strong) HCUserModel *user;
 
 @end

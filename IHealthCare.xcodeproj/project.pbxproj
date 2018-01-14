@@ -48,6 +48,7 @@
 		A526F41F1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A526F41E1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m */; };
 		A52A8E16200AE8CF0067E856 /* HCPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = A52A8E15200AE8CF0067E856 /* HCPlayerControlView.m */; };
 		A52A8E27200AF7220067E856 /* HCGetClassDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A52A8E26200AF7220067E856 /* HCGetClassDetailApi.m */; };
+		A52A8E2A200AFB310067E856 /* HCUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A52A8E29200AFB310067E856 /* HCUserModel.m */; };
 		A53695AE1FD59769007CC67C /* SPCoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = A536959E1FD59769007CC67C /* SPCoverController.m */; };
 		A53695AF1FD59769007CC67C /* SPPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695A01FD59769007CC67C /* SPPageController.m */; };
 		A53695B01FD59769007CC67C /* SPTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695A21FD59769007CC67C /* SPTabController.m */; };
@@ -334,6 +335,8 @@
 		A52A8E15200AE8CF0067E856 /* HCPlayerControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPlayerControlView.m; sourceTree = "<group>"; };
 		A52A8E25200AF7220067E856 /* HCGetClassDetailApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetClassDetailApi.h; sourceTree = "<group>"; };
 		A52A8E26200AF7220067E856 /* HCGetClassDetailApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetClassDetailApi.m; sourceTree = "<group>"; };
+		A52A8E28200AFB310067E856 /* HCUserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCUserModel.h; sourceTree = "<group>"; };
+		A52A8E29200AFB310067E856 /* HCUserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserModel.m; sourceTree = "<group>"; };
 		A536959D1FD59769007CC67C /* SPCoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPCoverController.h; sourceTree = "<group>"; };
 		A536959E1FD59769007CC67C /* SPCoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPCoverController.m; sourceTree = "<group>"; };
 		A536959F1FD59769007CC67C /* SPPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPageController.h; sourceTree = "<group>"; };
@@ -1042,6 +1045,8 @@
 		A575874E1FE526C1000FC7CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A52A8E28200AFB310067E856 /* HCUserModel.h */,
+				A52A8E29200AFB310067E856 /* HCUserModel.m */,
 				A5DD8D032001E8A60079CD7D /* HCOrderUserAddressModel.h */,
 				A5DD8D042001E8A60079CD7D /* HCOrderUserAddressModel.m */,
 				A526F4111FF3DFFD00092ADD /* HCMedicalServiceDetailModel.h */,
@@ -2006,6 +2011,7 @@
 				A57B47EB1FCEF9190004C397 /* IQTitleBarButtonItem.m in Sources */,
 				A57B48311FCEF9190004C397 /* MMOnePixLayoutConstraint.m in Sources */,
 				A511F3531FD425B700AE5D57 /* HealthCareCenterMenuMainView.m in Sources */,
+				A52A8E2A200AFB310067E856 /* HCUserModel.m in Sources */,
 				A57B47E21FCEF9190004C397 /* IQUITextFieldView+Additions.m in Sources */,
 				A57B48371FCEF9190004C397 /* MMUIViewController.m in Sources */,
 				A5648D481FF2AEBE00EF956B /* HCClassRoomDetailModel.m in Sources */,

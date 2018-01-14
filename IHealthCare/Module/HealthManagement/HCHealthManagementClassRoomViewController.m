@@ -162,7 +162,7 @@
 -(void)onClickClassRoomDetail:(HCClassRoomDetailModel *)itemModel
 {
     HCClassRoomDetailViewController *classRoomDetailVC = [HCClassRoomDetailViewController new];
-    classRoomDetailVC.itemModel = itemModel;
+    classRoomDetailVC.detailModel = itemModel;
     classRoomDetailVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:classRoomDetailVC animated:YES];
 }

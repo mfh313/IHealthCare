@@ -16,4 +16,8 @@
              };
 }
 
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"user" : [HCUserModel class]};
+}
+
 @end

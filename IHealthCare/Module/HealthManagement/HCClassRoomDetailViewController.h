@@ -11,6 +11,6 @@
 @class HCClassRoomDetailModel;
 @interface HCClassRoomDetailViewController : MMUIViewController
 
-@property (nonatomic, strong) HCClassRoomDetailModel *itemModel;
+@property (nonatomic, strong) HCClassRoomDetailModel *detailModel;
 
 @end

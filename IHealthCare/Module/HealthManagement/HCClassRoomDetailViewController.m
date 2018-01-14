@@ -31,7 +31,7 @@
     
     [self setBackBarButton];
     
-    self.videoURLString = self.itemModel.videoUrl;
+    self.videoURLString = self.detailModel.videoUrl;
     
     self.playerFatherView = [[UIView alloc] init];
     [self.view addSubview:self.playerFatherView];
@@ -43,11 +43,35 @@
     }];
     
     [self initPlayerView];
+    
+    [self getClassRoomDetail];
 }
 
 -(void)getClassRoomDetail
 {
+    __weak typeof(self) weakSelf = self;
+    HCGetClassDetailApi *mfApi = [HCGetClassDetailApi new];
+    mfApi.pid = self.detailModel.crid;
     
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSDictionary *product = mfApi.responseNetworkData;
+        HCClassRoomDetailModel *itemModel = [HCClassRoomDetailModel yy_modelWithDictionary:product];
+        strongSelf.detailModel = itemModel;
+        
+        NSLog(@"detailModel=%@",strongSelf.detailModel);
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
 }
 
 //大讲堂的tab设置：课程说明和课程选集
@@ -60,7 +84,7 @@
 - (ZFPlayerModel *)playerModel {
     if (!_playerModel) {
         _playerModel                  = [[ZFPlayerModel alloc] init];
-        _playerModel.title            = self.itemModel.name;
+        _playerModel.title            = self.detailModel.name;
         _playerModel.videoURL         = [NSURL URLWithString:self.videoURLString];
         _playerModel.fatherView       = self.playerFatherView;
     }
