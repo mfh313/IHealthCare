@@ -445,7 +445,7 @@
 
 - (CGFloat)markViewBottom
 {
-    return [self preferTabHAtIndex:self.pageController.currentPageIndex] - 7;
+    return [self preferTabHAtIndex:self.pageController.currentPageIndex]-7;
 }
 
 -(CGFloat)markViewWidthForIndex:(NSInteger)index
