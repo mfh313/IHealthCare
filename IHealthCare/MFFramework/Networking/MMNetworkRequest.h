@@ -17,6 +17,7 @@
 -(BOOL)useGlobalAppToken;
 -(id _Nullable )requestArgumentWithToken;
 -(BOOL)messageSuccess;
+-(NSString *)errorCode;
 -(NSString*_Nullable)errorMessage;
 -(id _Nullable )responseNetworkData;
 

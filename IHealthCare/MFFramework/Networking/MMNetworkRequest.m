@@ -95,6 +95,16 @@
     return string;
 }
 
+-(NSString *)errorCode
+{
+    if (![self.responseJSONObject isKindOfClass:[NSDictionary class]])
+    {
+        return nil;
+    }
+    
+    return self.responseJSONObject[@"code"];
+}
+
 -(id)responseNetworkData
 {
     if (![self.responseJSONObject isKindOfClass:[NSDictionary class]])

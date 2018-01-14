@@ -43,7 +43,6 @@
     __weak typeof(self) weakSelf = self;
     HCGetSubClassesApi *mfApi = [HCGetSubClassesApi new];
     mfApi.crid = self.detailModel.crid;
-//    mfApi.page = 1;
     
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
@@ -123,6 +122,52 @@
 {
     HCSubClassDetailModel *detail =  [cellInfo getUserInfoValueForKey:@"cellInfo"];
     
+    [self getSubClassDetail];
+}
+
+-(void)getSubClassDetail
+{
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    
+    __weak typeof(self) weakSelf = self;
+    HCGetSubClassDetailApi *mfApi = [HCGetSubClassDetailApi new];
+    mfApi.crid = self.detailModel.crid;
+    mfApi.userTel = loginService.userPhone;
+    mfApi.authCode = loginService.token;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess)
+        {
+            NSString *errorCode = [mfApi errorCode];
+            if ([errorCode isEqualToString:@"200002"])
+            {
+                [strongSelf showTips:@"请购买此课程"];
+            }
+            
+            return;
+        }
+        
+//        NSMutableArray *responseData = mfApi.responseNetworkData;
+//
+//        NSMutableArray *details = [NSMutableArray array];
+//        for (int i = 0; i < responseData.count; i++)
+//        {
+//            HCSubClassDetailModel *itemModel = [HCSubClassDetailModel yy_modelWithDictionary:responseData[i]];
+//
+//            [details addObject:itemModel];
+//        }
+//
+//        m_subClassDetails = details;
+//
+//        [strongSelf reloadTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
 }
 
 -(void)reloadCourseSelection
