@@ -98,6 +98,7 @@
         _playerModel                  = [[ZFPlayerModel alloc] init];
         _playerModel.title            = self.detailModel.name;
         _playerModel.videoURL         = [NSURL URLWithString:self.videoURLString];
+        _playerModel.placeholderImageURLString = self.detailModel.imageUrl;
         _playerModel.fatherView       = self.playerFatherView;
     }
     return _playerModel;
@@ -114,18 +115,9 @@
     // 设置代理
     _playerView.delegate = self;
     
-    //（可选设置）可以设置视频的填充模式，内部设置默认（ZFPlayerLayerGravityResizeAspect：等比例填充，直到一个维度到达区域边界）
-    // _playerView.playerLayerGravity = ZFPlayerLayerGravityResize;
-    
-    // 打开下载功能（默认没有这个功能）
-    //        _playerView.hasDownload    = YES;
-    
     // 打开预览图
     _playerView.hasPreviewView = YES;
     
-    //        _playerView.forcePortrait = YES;
-    /// 默认全屏播放
-    //        _playerView.fullScreenPlay = YES;
 }
 
 - (void)zf_playerBackAction

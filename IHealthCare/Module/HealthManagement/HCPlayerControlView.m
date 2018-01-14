@@ -175,32 +175,6 @@ static const CGFloat ZFPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
         make.height.mas_equalTo(50);
     }];
     
-//    [self.backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.leading.equalTo(self.topImageView.mas_leading).offset(15);
-//        make.top.equalTo(self.topImageView.mas_top).offset(3);
-//        make.width.height.mas_equalTo(40);
-//    }];
-//    
-//    [self.downLoadBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.width.mas_equalTo(40);
-//        make.height.mas_equalTo(49);
-//        make.trailing.equalTo(self.topImageView.mas_trailing).offset(-10);
-//        make.centerY.equalTo(self.backBtn.mas_centerY);
-//    }];
-//    
-//    [self.resolutionBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.width.mas_equalTo(40);
-//        make.height.mas_equalTo(25);
-//        make.trailing.equalTo(self.downLoadBtn.mas_leading).offset(-10);
-//        make.centerY.equalTo(self.backBtn.mas_centerY);
-//    }];
-    
-//    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.leading.equalTo(self.backBtn.mas_trailing).offset(5);
-//        make.centerY.equalTo(self.backBtn.mas_centerY);
-//        make.trailing.equalTo(self.resolutionBtn.mas_leading).offset(-10);
-//    }];
-    
     [self.bottomImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.trailing.bottom.mas_equalTo(0);
         make.height.mas_equalTo(50);
@@ -506,7 +480,7 @@ static const CGFloat ZFPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
 
     [self.mainBackBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(self.mas_leading).offset(12);
-        make.top.equalTo(self.mas_top).offset(18);
+        make.top.equalTo(self.mas_top).offset(20);
         make.width.mas_equalTo(57);
         make.height.mas_equalTo(44);
     }];
