@@ -13,12 +13,15 @@
 #import "HCClassRoomDetailModel.h"
 #import "HCGetClassDetailApi.h"
 #import "HCPlayerControlView.h"
+#import "HCHighProductDetailBottomView.h"
 
-@interface HCClassRoomDetailViewController () <ZFPlayerDelegate>
+@interface HCClassRoomDetailViewController () <ZFPlayerDelegate,HCHighProductDetailBottomViewDelegate>
 {
     UIView *m_naviCoverView;
     ZFPlayerView *_playerView;
     HCPlayerControlView *m_playControlView;
+    
+    HCHighProductDetailBottomView *m_bottomView;
 }
 
 @property (nonatomic, strong) ZFPlayerModel *playerModel;
@@ -32,8 +35,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setBackBarButton];
-    
     m_naviCoverView = [[UIView alloc] init];
     m_naviCoverView.backgroundColor = [UIColor hx_colorWithHexString:@"000000"];
     [self.view addSubview:m_naviCoverView];
@@ -44,18 +45,17 @@
         make.height.mas_equalTo(50);
     }];
     
-    
-    self.playerFatherView = [[UIView alloc] init];
-    [self.view addSubview:self.playerFatherView];
-    [self.playerFatherView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(20);
-        make.leading.trailing.mas_equalTo(0);
-        make.height.mas_equalTo(self.playerFatherView.mas_width).multipliedBy(9.0f/16.0f);
-    }];
-    
-    self.videoURLString = self.detailModel.videoUrl;
-    
     [self initPlayerView];
+    
+    m_bottomView = [HCHighProductDetailBottomView nibView];
+    m_bottomView.m_delegate = self;
+    [self.view addSubview:m_bottomView];
+    [m_bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(self.view);
+        make.height.mas_equalTo(@(60));
+        make.bottom.equalTo(self.view).offset(0);
+        make.left.equalTo(self.view);
+    }];
     
     [self getClassRoomDetail];
 }
@@ -106,6 +106,16 @@
 
 -(void)initPlayerView
 {
+    self.playerFatherView = [[UIView alloc] init];
+    [self.view addSubview:self.playerFatherView];
+    [self.playerFatherView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(20);
+        make.leading.trailing.mas_equalTo(0);
+        make.height.mas_equalTo(self.playerFatherView.mas_width).multipliedBy(9.0f/16.0f);
+    }];
+    
+    self.videoURLString = self.detailModel.videoUrl;
+    
     _playerView = [[ZFPlayerView alloc] init];
     
     m_playControlView = [HCPlayerControlView new];
@@ -123,6 +133,17 @@
 - (void)zf_playerBackAction
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark - HCHighProductDetailBottomViewDelegate
+-(void)onClickBuyProduct
+{
+    
+}
+
+-(void)onClickCollectionProduct
+{
+    NSLog(@"onClickCollectionProduct");
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle
