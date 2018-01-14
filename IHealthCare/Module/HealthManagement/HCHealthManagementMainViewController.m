@@ -61,10 +61,10 @@
     classRoom[@"title"] = @"大讲堂";
     classRoom[@"key"] = @"classRoom";
     
+    [m_tabInfo addObject:classRoom];
     [m_tabInfo addObject:check];
     [m_tabInfo addObject:analysis];
     [m_tabInfo addObject:service];
-    [m_tabInfo addObject:classRoom];
 }
 
 - (NSString *)titleForIndex:(NSInteger)index
