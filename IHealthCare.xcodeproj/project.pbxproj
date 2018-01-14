@@ -46,6 +46,7 @@
 		A526F4131FF3DFFD00092ADD /* HCMedicalServiceDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A526F4121FF3DFFD00092ADD /* HCMedicalServiceDetailModel.m */; };
 		A526F41C1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A526F41B1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.m */; };
 		A526F41F1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A526F41E1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m */; };
+		A52A8E16200AE8CF0067E856 /* HCPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = A52A8E15200AE8CF0067E856 /* HCPlayerControlView.m */; };
 		A53695AE1FD59769007CC67C /* SPCoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = A536959E1FD59769007CC67C /* SPCoverController.m */; };
 		A53695AF1FD59769007CC67C /* SPPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695A01FD59769007CC67C /* SPPageController.m */; };
 		A53695B01FD59769007CC67C /* SPTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695A21FD59769007CC67C /* SPTabController.m */; };
@@ -328,6 +329,8 @@
 		A526F41B1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetHealthManagementAnalysisApi.m; sourceTree = "<group>"; };
 		A526F41D1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetHealthMedicalServiceApi.h; sourceTree = "<group>"; };
 		A526F41E1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetHealthMedicalServiceApi.m; sourceTree = "<group>"; };
+		A52A8E14200AE8CF0067E856 /* HCPlayerControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCPlayerControlView.h; sourceTree = "<group>"; };
+		A52A8E15200AE8CF0067E856 /* HCPlayerControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPlayerControlView.m; sourceTree = "<group>"; };
 		A536959D1FD59769007CC67C /* SPCoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPCoverController.h; sourceTree = "<group>"; };
 		A536959E1FD59769007CC67C /* SPCoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPCoverController.m; sourceTree = "<group>"; };
 		A536959F1FD59769007CC67C /* SPPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPageController.h; sourceTree = "<group>"; };
@@ -1541,6 +1544,8 @@
 				A58848EC1FFFC5C700FC93EE /* HCHealthManagementClassRoomViewController.m */,
 				A553E8B82003944700BEFB14 /* HCClassRoomDetailViewController.h */,
 				A553E8B92003944700BEFB14 /* HCClassRoomDetailViewController.m */,
+				A52A8E14200AE8CF0067E856 /* HCPlayerControlView.h */,
+				A52A8E15200AE8CF0067E856 /* HCPlayerControlView.m */,
 				A58848ED1FFFC5C700FC93EE /* HCHealthManagementDetailToolBar.h */,
 				A58848EE1FFFC5C700FC93EE /* HCHealthManagementDetailToolBar.m */,
 				A58848EF1FFFC5C700FC93EE /* HCHealthManagementDetailToolBar.xib */,
@@ -2045,6 +2050,7 @@
 				A57B48081FCEF9190004C397 /* RingBuffer.m in Sources */,
 				A53695B31FD59769007CC67C /* SPTagBarScrollView.m in Sources */,
 				A5190E731FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.m in Sources */,
+				A52A8E16200AE8CF0067E856 /* HCPlayerControlView.m in Sources */,
 				A57B48331FCEF9190004C397 /* MMUIBridgeView.m in Sources */,
 				A5871AF8200A2B49004238B6 /* HCOrderAddressSelectCellView.m in Sources */,
 				A553F3A7200665A2002A205B /* HCCountStepView.m in Sources */,
