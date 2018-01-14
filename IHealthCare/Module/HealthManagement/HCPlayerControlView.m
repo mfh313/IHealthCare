@@ -23,10 +23,8 @@ static const CGFloat ZFPlayerAnimationTimeInterval             = 7.0f;
 static const CGFloat ZFPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
 
 @interface HCPlayerControlView () <UIGestureRecognizerDelegate>
-{
-    UIView *m_leftBackView;
-}
 
+@property (nonatomic, strong) UIButton                *mainBackBtn;
 @property (nonatomic, strong) UIButton                *centerButton;
 /** 标题 */
 @property (nonatomic, strong) UILabel                 *titleLabel;
@@ -100,19 +98,6 @@ static const CGFloat ZFPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
 
 @implementation HCPlayerControlView
 
--(void)setBackBarButton
-{
-    m_leftBackView = [UIView new];
-    m_leftBackView.frame = CGRectMake(7, 5, 62, 44);
-    MMBarButton *m_btn = [MMBarButton buttonWithType:UIButtonTypeCustom];
-    [m_btn addTarget:self action:@selector(backBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    m_btn.frame = CGRectMake(5, 0, 57, 44);
-    [m_btn setImage:MFImage(@"title_btn_return_white_nor") forState:UIControlStateNormal];
-    [m_btn setImage:MFImage(@"title_btn_return_white_nor") forState:UIControlStateHighlighted];
-    [m_btn setContentEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 34)];
-    [m_leftBackView addSubview:m_btn];
-}
-
 - (instancetype)init {
     self = [super init];
     if (self) {
@@ -121,6 +106,8 @@ static const CGFloat ZFPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
         [self addSubview:self.topImageView];
         [self addSubview:self.bottomImageView];
         
+        self.topImageView.backgroundColor = [UIColor clearColor];
+        
         [self.bottomImageView addSubview:self.startBtn];
         [self.bottomImageView addSubview:self.currentTimeLabel];
         [self.bottomImageView addSubview:self.progressView];
@@ -128,9 +115,7 @@ static const CGFloat ZFPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
         [self.bottomImageView addSubview:self.fullScreenBtn];
         [self.bottomImageView addSubview:self.totalTimeLabel];
         
-        [self setBackBarButton];
-        [self addSubview:m_leftBackView];
-        self.topImageView.backgroundColor = [UIColor clearColor];
+        [self addSubview:self.mainBackBtn];
         
         [self.topImageView addSubview:self.downLoadBtn];
         [self addSubview:self.lockBtn];
@@ -518,12 +503,14 @@ static const CGFloat ZFPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
     self.fullScreen             = YES;
     self.lockBtn.hidden         = !self.isFullScreen;
     self.fullScreenBtn.selected = self.isFullScreen;
-//    [self.backBtn setImage:MFImage(@"title_btn_return_white_nor") forState:UIControlStateNormal];
-//    [self.backBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.topImageView.mas_top).offset(23);
-//        make.leading.equalTo(self.topImageView.mas_leading).offset(10);
-//        make.width.height.mas_equalTo(40);
-//    }];
+
+    [self.mainBackBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(self.mas_leading).offset(12);
+        make.top.equalTo(self.mas_top).offset(15);
+        make.width.mas_equalTo(57);
+        make.height.mas_equalTo(44);
+    }];
+    
 }
 /**
  *  设置竖屏的约束
@@ -532,15 +519,13 @@ static const CGFloat ZFPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
     self.fullScreen             = NO;
     self.lockBtn.hidden         = !self.isFullScreen;
     self.fullScreenBtn.selected = self.isFullScreen;
-//    [self.backBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
-//        make.top.equalTo(self.topImageView.mas_top).offset(3);
-//        make.leading.equalTo(self.topImageView.mas_leading).offset(10);
-//        make.width.height.mas_equalTo(40);
-//    }];
-    
-    if (self.isCellVideo) {
-        [self.backBtn setImage:ZFPlayerImage(@"ZFPlayer_close") forState:UIControlStateNormal];
-    }
+
+    [self.mainBackBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(self.mas_leading).offset(12);
+        make.top.equalTo(self.mas_top).offset(5);
+        make.width.mas_equalTo(57);
+        make.height.mas_equalTo(44);
+    }];
 }
 
 #pragma mark - Private Method
@@ -626,6 +611,17 @@ static const CGFloat ZFPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
         _titleLabel.font = [UIFont systemFontOfSize:15.0];
     }
     return _titleLabel;
+}
+
+-(UIButton *)mainBackBtn
+{
+    if (!_mainBackBtn) {
+        _mainBackBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_mainBackBtn setImage:MFImage(@"title_btn_return_white_nor") forState:UIControlStateNormal];
+        [_mainBackBtn setContentEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 34)];
+        [_mainBackBtn addTarget:self action:@selector(backBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _mainBackBtn;
 }
 
 - (UIButton *)backBtn {
