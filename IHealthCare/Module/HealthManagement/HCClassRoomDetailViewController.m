@@ -12,11 +12,13 @@
 #import "ZFPlayer.h"
 #import "HCClassRoomDetailModel.h"
 #import "HCGetClassDetailApi.h"
+#import "HCPlayerControlView.h"
 
 @interface HCClassRoomDetailViewController () <ZFPlayerDelegate>
 {
     UIView *m_naviCoverView;
     ZFPlayerView *_playerView;
+    HCPlayerControlView *m_playControlView;
 }
 
 @property (nonatomic, strong) ZFPlayerModel *playerModel;
@@ -42,16 +44,16 @@
         make.height.mas_equalTo(50);
     }];
     
-    self.videoURLString = self.detailModel.videoUrl;
     
     self.playerFatherView = [[UIView alloc] init];
     [self.view addSubview:self.playerFatherView];
     [self.playerFatherView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(20);
         make.leading.trailing.mas_equalTo(0);
-        // 这里宽高比16：9,可自定义宽高比
         make.height.mas_equalTo(self.playerFatherView.mas_width).multipliedBy(9.0f/16.0f);
     }];
+    
+    self.videoURLString = self.detailModel.videoUrl;
     
     [self initPlayerView];
     
@@ -85,7 +87,6 @@
     }];
 }
 
-//大讲堂的tab设置：课程说明和课程选集
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -106,14 +107,9 @@
 {
     _playerView = [[ZFPlayerView alloc] init];
     
-    /*****************************************************************************************
-     *   // 指定控制层(可自定义)
-     *   // ZFPlayerControlView *controlView = [[ZFPlayerControlView alloc] init];
-     *   // 设置控制层和播放模型
-     *   // 控制层传nil，默认使用ZFPlayerControlView(如自定义可传自定义的控制层)
-     *   // 等效于 [_playerView playerModel:self.playerModel];
-     ******************************************************************************************/
-    [_playerView playerControlView:nil playerModel:self.playerModel];
+    m_playControlView = [HCPlayerControlView new];
+    
+    [_playerView playerControlView:m_playControlView playerModel:self.playerModel];
     
     // 设置代理
     _playerView.delegate = self;
