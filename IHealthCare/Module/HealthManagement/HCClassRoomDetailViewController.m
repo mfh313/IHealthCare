@@ -15,6 +15,7 @@
 #import "HCPlayerControlView.h"
 #import "HCHighProductDetailBottomView.h"
 #import "HCClassRoomCourseDescriptionViewController.h"
+#import "SPPageController.h"
 
 @interface HCClassRoomDetailViewController () <ZFPlayerDelegate,HCHighProductDetailBottomViewDelegate>
 {
@@ -23,18 +24,24 @@
     HCPlayerControlView *m_playControlView;
     
     HCHighProductDetailBottomView *m_bottomView;
+    
+    NSMutableArray<NSMutableDictionary *> *m_tabInfo;
 }
 
 @property (nonatomic, strong) ZFPlayerModel *playerModel;
 @property (nonatomic, strong) NSString *videoURLString;
 @property (nonatomic, strong) UIView *playerFatherView;
+@property (nonatomic, strong) NSMutableDictionary <NSNumber *, UIViewController *> *memCacheDic;
 
 @end
 
 @implementation HCClassRoomDetailViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    
+    [self initTabInfo];
+    self.memCacheDic = [[NSMutableDictionary <NSNumber *, UIViewController *> alloc] init];
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     m_naviCoverView = [[UIView alloc] init];
     m_naviCoverView.backgroundColor = [UIColor hx_colorWithHexString:@"000000"];
@@ -58,7 +65,127 @@
         make.left.equalTo(self.view);
     }];
     
+    [super viewDidLoad];
+    
     [self getClassRoomDetail];
+}
+
+-(void)initTabInfo
+{
+    m_tabInfo = [NSMutableArray array];
+    
+    NSMutableDictionary *courseDescription = [NSMutableDictionary dictionary];
+    courseDescription[@"title"] = @"课程说明";
+    courseDescription[@"key"] = @"courseDescription";
+    
+    NSMutableDictionary *courseSelection = [NSMutableDictionary dictionary];
+    courseSelection[@"title"] = @"课程选集";
+    courseSelection[@"key"] = @"courseSelection";
+    
+    [m_tabInfo addObject:courseDescription];
+    [m_tabInfo addObject:courseSelection];
+}
+
+- (NSString *)titleForIndex:(NSInteger)index
+{
+    NSMutableDictionary *tabItem = m_tabInfo[index];
+    return tabItem[@"title"];
+}
+
+- (UIColor *)titleColorForIndex:(NSInteger)index
+{
+    return [UIColor hx_colorWithHexString:@"595959"];
+}
+
+- (UIColor *)titleHighlightColorForIndex:(NSInteger)index
+{
+    return [UIColor hx_colorWithHexString:@"F4A523"];
+}
+
+- (UIFont *)titleFontForIndex:(NSInteger)index
+{
+    return [UIFont systemFontOfSize:14.0];
+}
+
+- (BOOL)needMarkView
+{
+    return YES;
+}
+
+-(UIColor *)markViewColorForIndex:(NSInteger)index
+{
+    return [UIColor hx_colorWithHexString:@"F4A523"];
+}
+
+- (CGFloat)markViewBottom
+{
+    return 40;
+}
+
+- (CGFloat)preferTabY
+{
+    [self.view layoutIfNeeded];
+    CGFloat pageY = CGRectGetMaxY(self.playerFatherView.frame);
+    return pageY;
+}
+
+- (CGFloat)preferTabHAtIndex:(NSInteger)index
+{
+    return 44;
+}
+
+- (CGRect)preferPageFrame
+{
+    [self.view layoutIfNeeded];
+    
+    CGFloat pageY = CGRectGetMaxY(self.playerFatherView.frame);
+    return CGRectMake(0, pageY, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - pageY - 60);
+}
+
+- (UIViewController *)controllerAtIndex:(NSInteger)index
+{
+    if (![self.memCacheDic objectForKey:@(index)])
+    {
+        UIViewController *controller = nil;
+        
+        NSMutableDictionary *tabItem = m_tabInfo[index];
+        NSString *key = tabItem[@"key"];
+        if ([key isEqualToString:@"courseDescription"])
+        {
+            HCClassRoomCourseDescriptionViewController *descriptionVC = [HCClassRoomCourseDescriptionViewController new];
+            descriptionVC.view.backgroundColor = [UIColor redColor];
+            controller = descriptionVC;
+        }
+        else if ([key isEqualToString:@"courseSelection"])
+        {
+            HCClassRoomCourseDescriptionViewController *courseVC = [HCClassRoomCourseDescriptionViewController new];
+            courseVC.view.backgroundColor = [UIColor blueColor];
+            controller = courseVC;
+        }
+        
+        controller.view.frame = [self preferPageFrame];
+        [self.memCacheDic setObject:controller forKey:@(index)];
+    }
+    
+    return [self.memCacheDic objectForKey:@(index)];
+}
+
+-(NSInteger)preferPageFirstAtIndex {
+    return 0;
+}
+
+-(BOOL)isSubPageCanScrollForIndex:(NSInteger)index
+{
+    return YES;
+}
+
+- (NSInteger)numberOfControllers
+{
+    return m_tabInfo.count;
+}
+
+-(BOOL)isPreLoad {
+    return YES;
 }
 
 -(void)getClassRoomDetail

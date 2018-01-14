@@ -7,9 +7,10 @@
 //
 
 #import "MMUIViewController.h"
+#import "SPCoverController.h"
 
 @class HCClassRoomDetailModel;
-@interface HCClassRoomDetailViewController : MMUIViewController
+@interface HCClassRoomDetailViewController : SPCoverController
 
 @property (nonatomic, strong) HCClassRoomDetailModel *detailModel;
 
