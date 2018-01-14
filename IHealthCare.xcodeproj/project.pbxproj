@@ -1581,10 +1581,10 @@
 		A5D9AE151FDBB87B00B5D4C0 /* MFFramework */ = {
 			isa = PBXGroup;
 			children = (
-				A588490E1FFFD06100FC93EE /* Service */,
 				A5D9AE161FDBB87B00B5D4C0 /* API */,
 				A575874E1FE526C1000FC7CB /* Model */,
 				A5D9AE1E1FDBB87B00B5D4C0 /* Networking */,
+				A588490E1FFFD06100FC93EE /* Service */,
 				A5D9AE1D1FDBB87B00B5D4C0 /* MFFramework.h */,
 			);
 			path = MFFramework;

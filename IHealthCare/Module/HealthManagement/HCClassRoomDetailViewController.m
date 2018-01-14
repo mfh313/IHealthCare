@@ -42,11 +42,14 @@
     }];
     
     [self initPlayerView];
-    
-    // 自动播放，默认不自动播放
-//    [_playerView autoPlayTheVideo];
 }
 
+-(void)getClassRoomDetail
+{
+    
+}
+
+//大讲堂的tab设置：课程说明和课程选集
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -58,10 +61,7 @@
         _playerModel                  = [[ZFPlayerModel alloc] init];
         _playerModel.title            = self.itemModel.name;
         _playerModel.videoURL         = [NSURL URLWithString:self.videoURLString];
-//        _playerModel.placeholderImage = [UIImage imageNamed:@"loading_bgView1"];
         _playerModel.fatherView       = self.playerFatherView;
-        //        _playerModel.resolutionDic = @{@"高清" : self.videoURL.absoluteString,
-        //                                       @"标清" : self.videoURL.absoluteString};
     }
     return _playerModel;
 }
