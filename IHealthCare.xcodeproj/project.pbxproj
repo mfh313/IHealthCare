@@ -13,6 +13,9 @@
 		A50FDCA7200B6A81007F091B /* HCGetSubClassDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A50FDCA6200B6A81007F091B /* HCGetSubClassDetailApi.m */; };
 		A50FDCAA200B6C14007F091B /* HCClassRoomCourseSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50FDCA9200B6C14007F091B /* HCClassRoomCourseSelectionViewController.m */; };
 		A50FDCAD200B7587007F091B /* HCSubClassDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A50FDCAC200B7587007F091B /* HCSubClassDetailModel.m */; };
+		A50FDCB0200B80CB007F091B /* HCClassRoomCreateOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50FDCAF200B80CB007F091B /* HCClassRoomCreateOrderViewController.m */; };
+		A50FDCB3200B897A007F091B /* HCClassCreateOrderItemCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A50FDCB2200B897A007F091B /* HCClassCreateOrderItemCellView.m */; };
+		A50FDCB5200B89D5007F091B /* HCClassCreateOrderItemCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A50FDCB4200B89D5007F091B /* HCClassCreateOrderItemCellView.xib */; };
 		A511F3531FD425B700AE5D57 /* HealthCareCenterMenuMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = A511F3521FD425B700AE5D57 /* HealthCareCenterMenuMainView.m */; };
 		A511F3551FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A511F3541FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib */; };
 		A511F3581FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A511F3571FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m */; };
@@ -279,6 +282,11 @@
 		A50FDCA9200B6C14007F091B /* HCClassRoomCourseSelectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCClassRoomCourseSelectionViewController.m; sourceTree = "<group>"; };
 		A50FDCAB200B7587007F091B /* HCSubClassDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSubClassDetailModel.h; sourceTree = "<group>"; };
 		A50FDCAC200B7587007F091B /* HCSubClassDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCSubClassDetailModel.m; sourceTree = "<group>"; };
+		A50FDCAE200B80CB007F091B /* HCClassRoomCreateOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCClassRoomCreateOrderViewController.h; sourceTree = "<group>"; };
+		A50FDCAF200B80CB007F091B /* HCClassRoomCreateOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCClassRoomCreateOrderViewController.m; sourceTree = "<group>"; };
+		A50FDCB1200B897A007F091B /* HCClassCreateOrderItemCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCClassCreateOrderItemCellView.h; sourceTree = "<group>"; };
+		A50FDCB2200B897A007F091B /* HCClassCreateOrderItemCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCClassCreateOrderItemCellView.m; sourceTree = "<group>"; };
+		A50FDCB4200B89D5007F091B /* HCClassCreateOrderItemCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCClassCreateOrderItemCellView.xib; sourceTree = "<group>"; };
 		A511F3511FD425B700AE5D57 /* HealthCareCenterMenuMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthCareCenterMenuMainView.h; sourceTree = "<group>"; };
 		A511F3521FD425B700AE5D57 /* HealthCareCenterMenuMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthCareCenterMenuMainView.m; sourceTree = "<group>"; };
 		A511F3541FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthCareCenterMenuMainView.xib; sourceTree = "<group>"; };
@@ -1694,6 +1702,11 @@
 		A5DD8CF72001BBD20079CD7D /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				A50FDCAE200B80CB007F091B /* HCClassRoomCreateOrderViewController.h */,
+				A50FDCAF200B80CB007F091B /* HCClassRoomCreateOrderViewController.m */,
+				A50FDCB1200B897A007F091B /* HCClassCreateOrderItemCellView.h */,
+				A50FDCB2200B897A007F091B /* HCClassCreateOrderItemCellView.m */,
+				A50FDCB4200B89D5007F091B /* HCClassCreateOrderItemCellView.xib */,
 				A5DD8CFB2001C4730079CD7D /* HCCreateOrderViewController.h */,
 				A5DD8CFC2001C4730079CD7D /* HCCreateOrderViewController.m */,
 				A5871AE12009BDBE004238B6 /* HCOrderAddressSelectViewController.h */,
@@ -1806,6 +1819,7 @@
 				A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */,
 				A58848FC1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib in Resources */,
 				A56CD7841FD0306C00FFF504 /* LoginAssets.xcassets in Resources */,
+				A50FDCB5200B89D5007F091B /* HCClassCreateOrderItemCellView.xib in Resources */,
 				A57B47EE1FCEF9190004C397 /* IQKeyboardManager.bundle in Resources */,
 				A566B4E11FD2EA6F004F6843 /* HCUserRegisterHeaderView.xib in Resources */,
 				A58849041FFFC5C700FC93EE /* HCHealthManagementDetailToolBar.xib in Resources */,
@@ -1919,6 +1933,7 @@
 				A53695B01FD59769007CC67C /* SPTabController.m in Sources */,
 				A57B48321FCEF9190004C397 /* MMSelectButton.m in Sources */,
 				A5190E6B1FFA655F00BBF049 /* HCBestNewsDetailToolBar.m in Sources */,
+				A50FDCB0200B80CB007F091B /* HCClassRoomCreateOrderViewController.m in Sources */,
 				A5871AEC2009C75B004238B6 /* HCOrderAddressCreateTextCellView.m in Sources */,
 				A52A8E27200AF7220067E856 /* HCGetClassDetailApi.m in Sources */,
 				A5871AFB200A5097004238B6 /* HCOrderAddressModifyViewController.m in Sources */,
@@ -2088,6 +2103,7 @@
 				A57B47F11FCEF9190004C397 /* MGJRouter.m in Sources */,
 				A57B48351FCEF9190004C397 /* MMUITextField.m in Sources */,
 				A57B48081FCEF9190004C397 /* RingBuffer.m in Sources */,
+				A50FDCB3200B897A007F091B /* HCClassCreateOrderItemCellView.m in Sources */,
 				A53695B31FD59769007CC67C /* SPTagBarScrollView.m in Sources */,
 				A5190E731FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.m in Sources */,
 				A52A8E16200AE8CF0067E856 /* HCPlayerControlView.m in Sources */,

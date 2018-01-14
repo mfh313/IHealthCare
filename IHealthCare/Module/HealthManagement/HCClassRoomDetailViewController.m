@@ -17,6 +17,7 @@
 #import "HCClassRoomCourseDescriptionViewController.h"
 #import "SPPageController.h"
 #import "HCClassRoomCourseSelectionViewController.h"
+#import "HCClassRoomCreateOrderViewController.h"
 
 @interface HCClassRoomDetailViewController () <ZFPlayerDelegate,HCHighProductDetailBottomViewDelegate>
 {
@@ -286,7 +287,9 @@
 #pragma mark - HCHighProductDetailBottomViewDelegate
 -(void)onClickBuyProduct
 {
-    
+    HCClassRoomCreateOrderViewController *createOrderVC = [HCClassRoomCreateOrderViewController new];
+    createOrderVC.detailModel = self.detailModel;
+    [self.navigationController pushViewController:createOrderVC animated:YES];
 }
 
 -(void)onClickCollectionProduct
