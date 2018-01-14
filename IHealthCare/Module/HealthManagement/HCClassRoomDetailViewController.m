@@ -15,6 +15,7 @@
 
 @interface HCClassRoomDetailViewController () <ZFPlayerDelegate>
 {
+    UIView *m_naviCoverView;
     ZFPlayerView *_playerView;
 }
 
@@ -30,6 +31,16 @@
     [super viewDidLoad];
     
     [self setBackBarButton];
+    
+    m_naviCoverView = [[UIView alloc] init];
+    m_naviCoverView.backgroundColor = [UIColor hx_colorWithHexString:@"000000"];
+    [self.view addSubview:m_naviCoverView];
+    [m_naviCoverView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(0);
+        make.left.mas_equalTo(self.view.mas_left);
+        make.width.mas_equalTo(self.view.mas_width);
+        make.height.mas_equalTo(50);
+    }];
     
     self.videoURLString = self.detailModel.videoUrl;
     
@@ -124,6 +135,11 @@
 - (void)zf_playerBackAction
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {
