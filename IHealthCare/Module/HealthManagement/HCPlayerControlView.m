@@ -878,7 +878,7 @@ static const CGFloat ZFPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
 - (UIProgressView *)bottomProgressView {
     if (!_bottomProgressView) {
         _bottomProgressView                   = [[UIProgressView alloc] init];
-        _bottomProgressView.progressTintColor = [UIColor whiteColor];
+        _bottomProgressView.progressTintColor = [UIColor hx_colorWithHexString:@"F9C255"];//[UIColor whiteColor];
         _bottomProgressView.trackTintColor    = [UIColor clearColor];
     }
     return _bottomProgressView;
