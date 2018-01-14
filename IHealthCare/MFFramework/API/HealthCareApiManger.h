@@ -10,6 +10,12 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//查询子课程详情
++ (NSString *)subClassesDetail:(NSInteger)crid;
+
+//查询子课程列表
++ (NSString *)subClassesDetail:(NSInteger)crid page:(NSInteger)page;
+
 //查询课程详情
 + (NSString *)classDetail:(NSInteger)pid;
 

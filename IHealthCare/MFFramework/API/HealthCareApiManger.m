@@ -17,6 +17,20 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
 
 @implementation HealthCareApiManger
 
+//查询子课程详情
++ (NSString *)subClassesDetail:(NSInteger)crid
+{
+    NSString *parmUrl = [NSString stringWithFormat:@"api/subClasses/%@",@(crid)];
+    return MFURLWithPara(parmUrl);
+}
+
+//查询子课程列表
++ (NSString *)subClassesDetail:(NSInteger)crid page:(NSInteger)page
+{
+    NSString *parmUrl = [NSString stringWithFormat:@"api/subClasses/%@/%@",@(crid),@(page)];
+    return MFURLWithPara(parmUrl);
+}
+
 //查询课程详情
 + (NSString *)classDetail:(NSInteger)pid
 {
