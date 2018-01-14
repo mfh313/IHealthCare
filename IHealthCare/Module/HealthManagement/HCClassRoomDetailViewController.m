@@ -11,6 +11,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "ZFPlayer.h"
 #import "HCClassRoomDetailModel.h"
+#import "HCSubClassDetailModel.h"
 #import "HCGetClassDetailApi.h"
 #import "HCPlayerControlView.h"
 #import "HCHighProductDetailBottomView.h"
@@ -19,7 +20,7 @@
 #import "HCClassRoomCourseSelectionViewController.h"
 #import "HCClassRoomCreateOrderViewController.h"
 
-@interface HCClassRoomDetailViewController () <ZFPlayerDelegate,HCHighProductDetailBottomViewDelegate>
+@interface HCClassRoomDetailViewController () <ZFPlayerDelegate,HCHighProductDetailBottomViewDelegate,HCClassRoomCourseSelectionViewControllerDelegate>
 {
     UIView *m_naviCoverView;
     ZFPlayerView *_playerView;
@@ -167,6 +168,7 @@
         else if ([key isEqualToString:@"courseSelection"])
         {
             HCClassRoomCourseSelectionViewController *courseVC = [HCClassRoomCourseSelectionViewController new];
+            courseVC.m_delegate = self;
             courseVC.detailModel = self.detailModel;
             
             controller = courseVC;
@@ -177,7 +179,6 @@
         controller.view.frame = [self preferPageFrame];
         [self.memCacheDic setObject:controller forKey:@(index)];
     }
-    
     
     return [self.memCacheDic objectForKey:@(index)];
 }
@@ -295,6 +296,15 @@
 -(void)onClickCollectionProduct
 {
     NSLog(@"onClickCollectionProduct");
+}
+
+#pragma mark - HCClassRoomCourseSelectionViewControllerDelegate
+-(void)onSelectClassSubDetal:(HCSubClassDetailModel *)subDetal
+                  controller:(HCClassRoomCourseSelectionViewController *)controller
+{
+    self.videoURLString = subDetal.videoUrl;
+    _playerModel.videoURL  = [NSURL URLWithString:self.videoURLString];
+    [_playerView resetToPlayNewVideo:_playerModel];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle

@@ -17,6 +17,8 @@
     NSMutableArray *m_subClassDetails;
     
     MMTableViewInfo *m_tableViewInfo;
+    
+    NSInteger m_currentSubClass;
 }
 
 @end
@@ -114,14 +116,23 @@
     NSString *classDetail = [NSString stringWithFormat:@"%@、%@",@(subDetail.seqNumber),subDetail.name];
     
     cell.textLabel.font = [UIFont systemFontOfSize:14.0f];
-    cell.textLabel.textColor = [UIColor hx_colorWithHexString:@"333333"];
     cell.textLabel.text = classDetail;
+    
+    if (m_currentSubClass == subDetail.crid)
+    {
+        cell.textLabel.textColor = [UIColor hx_colorWithHexString:@"F4A523"];
+    }
+    else
+    {
+        cell.textLabel.textColor = [UIColor hx_colorWithHexString:@"333333"];
+    }
 }
 
 -(void)onClickDetailCell:(MMTableViewCellInfo *)cellInfo
 {
     HCSubClassDetailModel *subDetail =  [cellInfo getUserInfoValueForKey:@"cellInfo"];
     [self getSubClassDetail:subDetail.crid];
+    
 }
 
 -(void)getSubClassDetail:(NSInteger)crid
@@ -144,29 +155,28 @@
             {
                 [strongSelf showTips:@"请购买此课程"];
             }
-            
             return;
         }
         
-//        NSMutableArray *responseData = mfApi.responseNetworkData;
-//
-//        NSMutableArray *details = [NSMutableArray array];
-//        for (int i = 0; i < responseData.count; i++)
-//        {
-//            HCSubClassDetailModel *itemModel = [HCSubClassDetailModel yy_modelWithDictionary:responseData[i]];
-//
-//            [details addObject:itemModel];
-//        }
-//
-//        m_subClassDetails = details;
-//
-//        [strongSelf reloadTableView];
+        NSDictionary *responseData = mfApi.responseNetworkData;
+        HCSubClassDetailModel *subDetail = [HCSubClassDetailModel yy_modelWithDictionary:responseData];
+        [strongSelf onSelectItemClass:subDetail];
         
     } failure:^(YTKBaseRequest * request) {
         
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];
+}
+
+-(void)onSelectItemClass:(HCSubClassDetailModel *)subDetail
+{
+    if ([self.m_delegate respondsToSelector:@selector(onSelectClassSubDetal:controller:)]) {
+        [self.m_delegate onSelectClassSubDetal:subDetail controller:self];
+    }
+    
+    m_currentSubClass = subDetail.crid;
+    [self reloadTableView];
 }
 
 -(void)reloadCourseSelection
