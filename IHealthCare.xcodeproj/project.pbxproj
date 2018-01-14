@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		58B5C84FF304ABEEE42AA899 /* libPods-IHealthCare.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */; };
 		A50FDCA1200B5709007F091B /* HCClassRoomCourseDescriptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A50FDCA0200B5709007F091B /* HCClassRoomCourseDescriptionViewController.m */; };
+		A50FDCA4200B69DD007F091B /* HCGetSubClassesApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A50FDCA3200B69DD007F091B /* HCGetSubClassesApi.m */; };
+		A50FDCA7200B6A81007F091B /* HCGetSubClassDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A50FDCA6200B6A81007F091B /* HCGetSubClassDetailApi.m */; };
 		A511F3531FD425B700AE5D57 /* HealthCareCenterMenuMainView.m in Sources */ = {isa = PBXBuildFile; fileRef = A511F3521FD425B700AE5D57 /* HealthCareCenterMenuMainView.m */; };
 		A511F3551FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A511F3541FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib */; };
 		A511F3581FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A511F3571FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m */; };
@@ -267,6 +269,10 @@
 		A41FACF4AE9BA7E925BD1703 /* Pods-IHealthCare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.debug.xcconfig"; sourceTree = "<group>"; };
 		A50FDC9F200B5708007F091B /* HCClassRoomCourseDescriptionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCClassRoomCourseDescriptionViewController.h; sourceTree = "<group>"; };
 		A50FDCA0200B5709007F091B /* HCClassRoomCourseDescriptionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCClassRoomCourseDescriptionViewController.m; sourceTree = "<group>"; };
+		A50FDCA2200B69DD007F091B /* HCGetSubClassesApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetSubClassesApi.h; sourceTree = "<group>"; };
+		A50FDCA3200B69DD007F091B /* HCGetSubClassesApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetSubClassesApi.m; sourceTree = "<group>"; };
+		A50FDCA5200B6A81007F091B /* HCGetSubClassDetailApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetSubClassDetailApi.h; sourceTree = "<group>"; };
+		A50FDCA6200B6A81007F091B /* HCGetSubClassDetailApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetSubClassDetailApi.m; sourceTree = "<group>"; };
 		A511F3511FD425B700AE5D57 /* HealthCareCenterMenuMainView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthCareCenterMenuMainView.h; sourceTree = "<group>"; };
 		A511F3521FD425B700AE5D57 /* HealthCareCenterMenuMainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthCareCenterMenuMainView.m; sourceTree = "<group>"; };
 		A511F3541FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HealthCareCenterMenuMainView.xib; sourceTree = "<group>"; };
@@ -1606,6 +1612,10 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A50FDCA5200B6A81007F091B /* HCGetSubClassDetailApi.h */,
+				A50FDCA6200B6A81007F091B /* HCGetSubClassDetailApi.m */,
+				A50FDCA2200B69DD007F091B /* HCGetSubClassesApi.h */,
+				A50FDCA3200B69DD007F091B /* HCGetSubClassesApi.m */,
 				A52A8E25200AF7220067E856 /* HCGetClassDetailApi.h */,
 				A52A8E26200AF7220067E856 /* HCGetClassDetailApi.m */,
 				A5871AFC200A5A6F004238B6 /* HCModifyOrderAddressApi.h */,
@@ -2023,6 +2033,7 @@
 				A57B47F21FCEF9190004C397 /* Chat.pb.m in Sources */,
 				A57B48251FCEF9190004C397 /* UIViewController+pregress.m in Sources */,
 				A5DD8D082001F6A90079CD7D /* HCGetOrderUserAddressApi.m in Sources */,
+				A50FDCA7200B6A81007F091B /* HCGetSubClassDetailApi.m in Sources */,
 				A5871AE32009BDBE004238B6 /* HCOrderAddressSelectViewController.m in Sources */,
 				A57B48341FCEF9190004C397 /* MMUINavigationBar.m in Sources */,
 				A57B481C1FCEF9190004C397 /* NSMutableDictionary+SafeInsert.m in Sources */,
@@ -2077,6 +2088,7 @@
 				A526F41F1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m in Sources */,
 				A566B4D31FD24BB7004F6843 /* MMBarButton.m in Sources */,
 				A566B4D91FD298B7004F6843 /* HCUserRegisterViewController.m in Sources */,
+				A50FDCA4200B69DD007F091B /* HCGetSubClassesApi.m in Sources */,
 				A5DD8CFD2001C4730079CD7D /* HCCreateOrderViewController.m in Sources */,
 				A553E8BA2003944700BEFB14 /* HCClassRoomDetailViewController.m in Sources */,
 				A554650A1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */,
