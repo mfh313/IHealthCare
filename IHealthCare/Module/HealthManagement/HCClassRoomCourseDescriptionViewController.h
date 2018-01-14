@@ -8,6 +8,11 @@
 
 #import "MMUIViewController.h"
 
+@class HCClassRoomDetailModel;
 @interface HCClassRoomCourseDescriptionViewController : MMUIViewController
+
+@property (nonatomic, strong) HCClassRoomDetailModel *detailModel;
+
+-(void)reloadCourseDescription;
 
 @end

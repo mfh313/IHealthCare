@@ -6,7 +6,6 @@
 //  Copyright © 2018年 mafanghua. All rights reserved.
 //
 
-#import "MMUIViewController.h"
 #import "SPCoverController.h"
 
 @class HCClassRoomDetailModel;

@@ -26,6 +26,8 @@
     HCHighProductDetailBottomView *m_bottomView;
     
     NSMutableArray<NSMutableDictionary *> *m_tabInfo;
+    
+    HCClassRoomCourseDescriptionViewController *m_descriptionVC;
 }
 
 @property (nonatomic, strong) ZFPlayerModel *playerModel;
@@ -153,7 +155,11 @@
         if ([key isEqualToString:@"courseDescription"])
         {
             HCClassRoomCourseDescriptionViewController *descriptionVC = [HCClassRoomCourseDescriptionViewController new];
+            descriptionVC.detailModel = self.detailModel;
+            
             controller = descriptionVC;
+            
+            m_descriptionVC = controller;
         }
         else if ([key isEqualToString:@"courseSelection"])
         {
@@ -204,13 +210,19 @@
         HCClassRoomDetailModel *itemModel = [HCClassRoomDetailModel yy_modelWithDictionary:product];
         strongSelf.detailModel = itemModel;
         
-        NSLog(@"detailModel=%@",strongSelf.detailModel);
+        [strongSelf reloadSubController];
         
     } failure:^(YTKBaseRequest * request) {
         
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];
+}
+
+-(void)reloadSubController
+{
+    m_descriptionVC.detailModel = self.detailModel;
+    [m_descriptionVC reloadCourseDescription];
 }
 
 -(void)viewWillAppear:(BOOL)animated
