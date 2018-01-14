@@ -506,7 +506,7 @@ static const CGFloat ZFPlayerControlBarAutoFadeOutTimeInterval = 0.35f;
 
     [self.mainBackBtn mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(self.mas_leading).offset(12);
-        make.top.equalTo(self.mas_top).offset(15);
+        make.top.equalTo(self.mas_top).offset(18);
         make.width.mas_equalTo(57);
         make.height.mas_equalTo(44);
     }];
