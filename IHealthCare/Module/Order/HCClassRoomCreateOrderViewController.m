@@ -15,7 +15,7 @@
 #import "HCGetOrderUserAddressApi.h"
 #import "HCCreateOrderNullAddressCellView.h"
 #import "HCCreateOrderAddressCellView.h"
-#import "HCCreateOrderItemCellView.h"
+#import "HCClassCreateOrderItemCellView.h"
 #import "WXApiRequestHandler.h"
 #import "WXApiManager.h"
 #import "HCOrderAddressSelectViewController.h"
@@ -260,7 +260,7 @@
 - (void)makeCartItemCell:(MFTableViewCell *)cell cellInfo:(MMTableViewCellInfo *)cellInfo
 {
     if (!cell.m_subContentView) {
-        HCCreateOrderItemCellView *cellView = [HCCreateOrderItemCellView nibView];
+        HCClassCreateOrderItemCellView *cellView = [HCClassCreateOrderItemCellView nibView];
         cell.m_subContentView = cellView;
     }
     else
@@ -268,7 +268,7 @@
         [cell.contentView addSubview:cell.m_subContentView];
     }
     
-    HCCreateOrderItemCellView *cellView = (HCCreateOrderItemCellView *)cell.m_subContentView;
+    HCClassCreateOrderItemCellView *cellView = (HCClassCreateOrderItemCellView *)cell.m_subContentView;
     cellView.frame = cell.contentView.bounds;
     
     HCOrderItemModel *orderItem =  [cellInfo getUserInfoValueForKey:@"cartItem"];
