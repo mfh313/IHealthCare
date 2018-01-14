@@ -230,6 +230,9 @@
 {
     m_descriptionVC.detailModel = self.detailModel;
     [m_descriptionVC reloadCourseDescription];
+    
+    m_courseVC.detailModel = self.detailModel;
+    [m_courseVC reloadCourseSelection];
 }
 
 -(void)viewWillAppear:(BOOL)animated
