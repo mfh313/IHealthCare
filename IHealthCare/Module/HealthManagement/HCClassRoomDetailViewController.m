@@ -138,7 +138,7 @@
 {
     [self.view layoutIfNeeded];
     
-    CGFloat pageY = CGRectGetMaxY(self.playerFatherView.frame);
+    CGFloat pageY = [self preferTabY] + 44;
     return CGRectMake(0, pageY, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) - pageY - 60);
 }
 
@@ -153,13 +153,11 @@
         if ([key isEqualToString:@"courseDescription"])
         {
             HCClassRoomCourseDescriptionViewController *descriptionVC = [HCClassRoomCourseDescriptionViewController new];
-            descriptionVC.view.backgroundColor = [UIColor redColor];
             controller = descriptionVC;
         }
         else if ([key isEqualToString:@"courseSelection"])
         {
             HCClassRoomCourseDescriptionViewController *courseVC = [HCClassRoomCourseDescriptionViewController new];
-            courseVC.view.backgroundColor = [UIColor blueColor];
             controller = courseVC;
         }
         
