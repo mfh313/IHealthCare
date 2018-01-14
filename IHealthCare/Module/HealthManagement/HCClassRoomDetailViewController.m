@@ -14,6 +14,7 @@
 #import "HCGetClassDetailApi.h"
 #import "HCPlayerControlView.h"
 #import "HCHighProductDetailBottomView.h"
+#import "HCClassRoomCourseDescriptionViewController.h"
 
 @interface HCClassRoomDetailViewController () <ZFPlayerDelegate,HCHighProductDetailBottomViewDelegate>
 {
