@@ -17,9 +17,11 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
 
 @implementation HealthCareApiManger
 
-+ (NSString *)hostUrl
+//查询课程详情
++ (NSString *)classDetail:(NSInteger)pid
 {
-    return test_ServerUrl;
+    NSString *parmUrl = [NSString stringWithFormat:@"api/classes/%@",@(pid)];
+    return MFURLWithPara(parmUrl);
 }
 
 //修改地址
@@ -117,6 +119,11 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
 + (NSString *)userLogin
 {
     return MFURLWithPara(@"api/users/login");
+}
+
++ (NSString *)hostUrl
+{
+    return test_ServerUrl;
 }
 
 @end

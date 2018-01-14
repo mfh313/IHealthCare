@@ -47,6 +47,7 @@
 		A526F41C1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A526F41B1FF3E9A300092ADD /* HCGetHealthManagementAnalysisApi.m */; };
 		A526F41F1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A526F41E1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m */; };
 		A52A8E16200AE8CF0067E856 /* HCPlayerControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = A52A8E15200AE8CF0067E856 /* HCPlayerControlView.m */; };
+		A52A8E27200AF7220067E856 /* HCGetClassDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A52A8E26200AF7220067E856 /* HCGetClassDetailApi.m */; };
 		A53695AE1FD59769007CC67C /* SPCoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = A536959E1FD59769007CC67C /* SPCoverController.m */; };
 		A53695AF1FD59769007CC67C /* SPPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695A01FD59769007CC67C /* SPPageController.m */; };
 		A53695B01FD59769007CC67C /* SPTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695A21FD59769007CC67C /* SPTabController.m */; };
@@ -331,6 +332,8 @@
 		A526F41E1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetHealthMedicalServiceApi.m; sourceTree = "<group>"; };
 		A52A8E14200AE8CF0067E856 /* HCPlayerControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCPlayerControlView.h; sourceTree = "<group>"; };
 		A52A8E15200AE8CF0067E856 /* HCPlayerControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPlayerControlView.m; sourceTree = "<group>"; };
+		A52A8E25200AF7220067E856 /* HCGetClassDetailApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetClassDetailApi.h; sourceTree = "<group>"; };
+		A52A8E26200AF7220067E856 /* HCGetClassDetailApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetClassDetailApi.m; sourceTree = "<group>"; };
 		A536959D1FD59769007CC67C /* SPCoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPCoverController.h; sourceTree = "<group>"; };
 		A536959E1FD59769007CC67C /* SPCoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPCoverController.m; sourceTree = "<group>"; };
 		A536959F1FD59769007CC67C /* SPPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPPageController.h; sourceTree = "<group>"; };
@@ -1299,9 +1302,9 @@
 		A57B476A1FCEF9180004C397 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A58848DF1FFFC5C700FC93EE /* HealthManagement */,
 				A5190E321FFA655F00BBF049 /* TopCure */,
 				A5DD8CF72001BBD20079CD7D /* Order */,
-				A58848DF1FFFC5C700FC93EE /* HealthManagement */,
 				A55388831FFE61D900D0DC27 /* WeiXin */,
 				A5268DA91FD3C7E500E2F93C /* WealthManagement */,
 				A5268DB71FD3CB0800E2F93C /* HappinessManagement */,
@@ -1593,6 +1596,8 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A52A8E25200AF7220067E856 /* HCGetClassDetailApi.h */,
+				A52A8E26200AF7220067E856 /* HCGetClassDetailApi.m */,
 				A5871AFC200A5A6F004238B6 /* HCModifyOrderAddressApi.h */,
 				A5871AFD200A5A6F004238B6 /* HCModifyOrderAddressApi.m */,
 				A5871AF3200A22B8004238B6 /* HCAddOrderAddressApi.h */,
@@ -1885,6 +1890,7 @@
 				A57B48321FCEF9190004C397 /* MMSelectButton.m in Sources */,
 				A5190E6B1FFA655F00BBF049 /* HCBestNewsDetailToolBar.m in Sources */,
 				A5871AEC2009C75B004238B6 /* HCOrderAddressCreateTextCellView.m in Sources */,
+				A52A8E27200AF7220067E856 /* HCGetClassDetailApi.m in Sources */,
 				A5871AFB200A5097004238B6 /* HCOrderAddressModifyViewController.m in Sources */,
 				A57B47FB1FCEF9190004C397 /* CodedOutputStream.m in Sources */,
 				A58848FD1FFFC5C700FC93EE /* HCHealthManagementAnalysisViewController.m in Sources */,

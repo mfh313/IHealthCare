@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//查询课程详情
++ (NSString *)classDetail:(NSInteger)pid;
+
 //修改地址
 + (NSString *)modifyOrderAddress:(NSInteger)aid;
 

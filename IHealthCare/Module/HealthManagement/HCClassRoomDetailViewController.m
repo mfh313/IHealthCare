@@ -11,6 +11,7 @@
 #import <MediaPlayer/MediaPlayer.h>
 #import "ZFPlayer.h"
 #import "HCClassRoomDetailModel.h"
+#import "HCGetClassDetailApi.h"
 
 @interface HCClassRoomDetailViewController () <ZFPlayerDelegate>
 {
