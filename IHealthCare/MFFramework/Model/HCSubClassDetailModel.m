@@ -12,7 +12,8 @@
 
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{
-             @"subClassDescription" : @"description"
+             @"subClassDescription" : @"description",
+             @"crid" : @"id"
              };
 }
 
