@@ -16,6 +16,7 @@
 #import "HCHighProductDetailBottomView.h"
 #import "HCClassRoomCourseDescriptionViewController.h"
 #import "SPPageController.h"
+#import "HCClassRoomCourseSelectionViewController.h"
 
 @interface HCClassRoomDetailViewController () <ZFPlayerDelegate,HCHighProductDetailBottomViewDelegate>
 {
@@ -28,6 +29,7 @@
     NSMutableArray<NSMutableDictionary *> *m_tabInfo;
     
     HCClassRoomCourseDescriptionViewController *m_descriptionVC;
+    HCClassRoomCourseSelectionViewController *m_courseVC;
 }
 
 @property (nonatomic, strong) ZFPlayerModel *playerModel;
@@ -159,17 +161,22 @@
             
             controller = descriptionVC;
             
-            m_descriptionVC = controller;
+            m_descriptionVC = descriptionVC;
         }
         else if ([key isEqualToString:@"courseSelection"])
         {
-            HCClassRoomCourseDescriptionViewController *courseVC = [HCClassRoomCourseDescriptionViewController new];
+            HCClassRoomCourseSelectionViewController *courseVC = [HCClassRoomCourseSelectionViewController new];
+            courseVC.detailModel = self.detailModel;
+            
             controller = courseVC;
+            
+            m_courseVC = courseVC;
         }
         
         controller.view.frame = [self preferPageFrame];
         [self.memCacheDic setObject:controller forKey:@(index)];
     }
+    
     
     return [self.memCacheDic objectForKey:@(index)];
 }
