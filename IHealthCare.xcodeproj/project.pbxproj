@@ -1332,8 +1332,8 @@
 		A57B476A1FCEF9180004C397 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				A58848DF1FFFC5C700FC93EE /* HealthManagement */,
 				A5190E321FFA655F00BBF049 /* TopCure */,
+				A58848DF1FFFC5C700FC93EE /* HealthManagement */,
 				A5DD8CF72001BBD20079CD7D /* Order */,
 				A55388831FFE61D900D0DC27 /* WeiXin */,
 				A5268DA91FD3C7E500E2F93C /* WealthManagement */,
