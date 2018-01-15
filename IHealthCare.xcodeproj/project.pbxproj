@@ -249,6 +249,9 @@
 		A58849141FFFDA4700FC93EE /* HCPayOrderApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A58849131FFFDA4700FC93EE /* HCPayOrderApi.m */; };
 		A5BDB5051FE65B010052B51B /* HCBestNewsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */; };
 		A5BDB5081FE660700052B51B /* HCGetBestNewsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDB5071FE660700052B51B /* HCGetBestNewsApi.m */; };
+		A5CA4BD7200CF261004415F6 /* HCMeProfileBaseCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CA4BD6200CF261004415F6 /* HCMeProfileBaseCellView.m */; };
+		A5CA4BDA200CF394004415F6 /* HCMeProfileUnLoginCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CA4BD9200CF394004415F6 /* HCMeProfileUnLoginCellView.m */; };
+		A5CA4BDD200CF451004415F6 /* HCMeProfileAuthStatusCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CA4BDC200CF451004415F6 /* HCMeProfileAuthStatusCellView.m */; };
 		A5D9AE2F1FDBB87B00B5D4C0 /* YTKAnimatingRequestAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE211FDBB87B00B5D4C0 /* YTKAnimatingRequestAccessory.m */; };
 		A5D9AE301FDBB87B00B5D4C0 /* YTKBaseRequest+AnimatingAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE231FDBB87B00B5D4C0 /* YTKBaseRequest+AnimatingAccessory.m */; };
 		A5D9AE311FDBB87B00B5D4C0 /* YTKBatchRequest+AnimatingAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = A5D9AE251FDBB87B00B5D4C0 /* YTKBatchRequest+AnimatingAccessory.m */; };
@@ -738,6 +741,12 @@
 		A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailModel.m; sourceTree = "<group>"; };
 		A5BDB5061FE660700052B51B /* HCGetBestNewsApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetBestNewsApi.h; sourceTree = "<group>"; };
 		A5BDB5071FE660700052B51B /* HCGetBestNewsApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetBestNewsApi.m; sourceTree = "<group>"; };
+		A5CA4BD5200CF261004415F6 /* HCMeProfileBaseCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeProfileBaseCellView.h; sourceTree = "<group>"; };
+		A5CA4BD6200CF261004415F6 /* HCMeProfileBaseCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMeProfileBaseCellView.m; sourceTree = "<group>"; };
+		A5CA4BD8200CF394004415F6 /* HCMeProfileUnLoginCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeProfileUnLoginCellView.h; sourceTree = "<group>"; };
+		A5CA4BD9200CF394004415F6 /* HCMeProfileUnLoginCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMeProfileUnLoginCellView.m; sourceTree = "<group>"; };
+		A5CA4BDB200CF451004415F6 /* HCMeProfileAuthStatusCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeProfileAuthStatusCellView.h; sourceTree = "<group>"; };
+		A5CA4BDC200CF451004415F6 /* HCMeProfileAuthStatusCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMeProfileAuthStatusCellView.m; sourceTree = "<group>"; };
 		A5D9AE1D1FDBB87B00B5D4C0 /* MFFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFFramework.h; sourceTree = "<group>"; };
 		A5D9AE201FDBB87B00B5D4C0 /* YTKAnimatingRequestAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTKAnimatingRequestAccessory.h; sourceTree = "<group>"; };
 		A5D9AE211FDBB87B00B5D4C0 /* YTKAnimatingRequestAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTKAnimatingRequestAccessory.m; sourceTree = "<group>"; };
@@ -999,11 +1008,17 @@
 				A55465021FEFAD3100A7E3C7 /* HCMeFooterView.h */,
 				A55465031FEFAD3100A7E3C7 /* HCMeFooterView.m */,
 				A55465041FEFAD3100A7E3C7 /* HCMeFooterView.xib */,
+				A5CA4BD5200CF261004415F6 /* HCMeProfileBaseCellView.h */,
+				A5CA4BD6200CF261004415F6 /* HCMeProfileBaseCellView.m */,
+				A5CA4BD8200CF394004415F6 /* HCMeProfileUnLoginCellView.h */,
+				A5CA4BD9200CF394004415F6 /* HCMeProfileUnLoginCellView.m */,
+				A5CA4BDB200CF451004415F6 /* HCMeProfileAuthStatusCellView.h */,
+				A5CA4BDC200CF451004415F6 /* HCMeProfileAuthStatusCellView.m */,
+				A55465081FEFAD3100A7E3C7 /* HCMeViewController.h */,
+				A55465091FEFAD3100A7E3C7 /* HCMeViewController.m */,
 				A55465051FEFAD3100A7E3C7 /* HCMeProfileCellView.h */,
 				A55465061FEFAD3100A7E3C7 /* HCMeProfileCellView.m */,
 				A55465071FEFAD3100A7E3C7 /* HCMeProfileCellView.xib */,
-				A55465081FEFAD3100A7E3C7 /* HCMeViewController.h */,
-				A55465091FEFAD3100A7E3C7 /* HCMeViewController.m */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -2092,14 +2107,17 @@
 				A57B47FA1FCEF9190004C397 /* CodedInputStream.m in Sources */,
 				A57B47ED1FCEF9190004C397 /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				A5D9AE301FDBB87B00B5D4C0 /* YTKBaseRequest+AnimatingAccessory.m in Sources */,
+				A5CA4BDD200CF451004415F6 /* HCMeProfileAuthStatusCellView.m in Sources */,
 				A5DD8D052001E8A60079CD7D /* HCOrderUserAddressModel.m in Sources */,
 				A554651A1FEFAD5700A7E3C7 /* HCPullFreshCountLogic.m in Sources */,
 				A520E5FC1FEE72AA00E4EFAD /* MMTableViewUserInfo.m in Sources */,
 				A575874D1FE519A0000FC7CB /* HCGetProductsApi.m in Sources */,
 				A57B47E81FCEF9190004C397 /* IQTextView.m in Sources */,
+				A5CA4BD7200CF261004415F6 /* HCMeProfileBaseCellView.m in Sources */,
 				A57B480B1FCEF9190004C397 /* UnknownFieldSetBuilder.m in Sources */,
 				A53695B11FD59769007CC67C /* SPPageContentView.m in Sources */,
 				A58848FB1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m in Sources */,
+				A5CA4BDA200CF394004415F6 /* HCMeProfileUnLoginCellView.m in Sources */,
 				A57B47F11FCEF9190004C397 /* MGJRouter.m in Sources */,
 				A57B48351FCEF9190004C397 /* MMUITextField.m in Sources */,
 				A57B48081FCEF9190004C397 /* RingBuffer.m in Sources */,
