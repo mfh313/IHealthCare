@@ -105,6 +105,20 @@
         [profileView layoutProfileViews];
         return;
     }
+    
+    HCMeProfileAuthStatusCellView *profileView = [[HCMeProfileAuthStatusCellView alloc] init];
+    profileView.userInfo = m_useInfo;
+    profileView.m_delegate = self;
+    [tableHeaderView addSubview:profileView];
+    
+    [profileView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(contentTableView);
+        make.height.mas_equalTo(@(130));
+        make.left.mas_equalTo(@(0));
+        make.top.mas_equalTo(@(0));
+    }];
+    
+    [profileView layoutProfileViews];
 }
 
 -(void)setFooterView:(UITableView *)contentTableView

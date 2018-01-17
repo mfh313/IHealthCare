@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HCUserModel.h"
 
 @class HCMeProfileCellView;
 @protocol HCMeProfileCellViewDelegate <NSObject>
@@ -23,6 +24,7 @@
 }
 
 @property (nonatomic,weak) id<HCMeProfileCellViewDelegate> m_delegate;
+@property (nonatomic,strong) HCUserModel *userInfo;
 
 -(void)initAvtarImage;
 -(void)initUnloginLabel;
