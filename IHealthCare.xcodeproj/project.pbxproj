@@ -77,8 +77,6 @@
 		A554650C1FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465011FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m */; };
 		A554650D1FEFAD3100A7E3C7 /* HCMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465031FEFAD3100A7E3C7 /* HCMeFooterView.m */; };
 		A554650E1FEFAD3100A7E3C7 /* HCMeFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55465041FEFAD3100A7E3C7 /* HCMeFooterView.xib */; };
-		A554650F1FEFAD3100A7E3C7 /* HCMeProfileCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465061FEFAD3100A7E3C7 /* HCMeProfileCellView.m */; };
-		A55465101FEFAD3100A7E3C7 /* HCMeProfileCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55465071FEFAD3100A7E3C7 /* HCMeProfileCellView.xib */; };
 		A55465111FEFAD3100A7E3C7 /* HCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465091FEFAD3100A7E3C7 /* HCMeViewController.m */; };
 		A55465181FEFAD5700A7E3C7 /* HCNormalGroupCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465141FEFAD5700A7E3C7 /* HCNormalGroupCellView.m */; };
 		A55465191FEFAD5700A7E3C7 /* HCNormalGroupCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55465151FEFAD5700A7E3C7 /* HCNormalGroupCellView.xib */; };
@@ -404,9 +402,6 @@
 		A55465021FEFAD3100A7E3C7 /* HCMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMeFooterView.h; sourceTree = "<group>"; };
 		A55465031FEFAD3100A7E3C7 /* HCMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMeFooterView.m; sourceTree = "<group>"; };
 		A55465041FEFAD3100A7E3C7 /* HCMeFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCMeFooterView.xib; sourceTree = "<group>"; };
-		A55465051FEFAD3100A7E3C7 /* HCMeProfileCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMeProfileCellView.h; sourceTree = "<group>"; };
-		A55465061FEFAD3100A7E3C7 /* HCMeProfileCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMeProfileCellView.m; sourceTree = "<group>"; };
-		A55465071FEFAD3100A7E3C7 /* HCMeProfileCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCMeProfileCellView.xib; sourceTree = "<group>"; };
 		A55465081FEFAD3100A7E3C7 /* HCMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCMeViewController.h; sourceTree = "<group>"; };
 		A55465091FEFAD3100A7E3C7 /* HCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCMeViewController.m; sourceTree = "<group>"; };
 		A55465131FEFAD5700A7E3C7 /* HCNormalGroupCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCNormalGroupCellView.h; sourceTree = "<group>"; };
@@ -1016,9 +1011,6 @@
 				A5CA4BDC200CF451004415F6 /* HCMeProfileAuthStatusCellView.m */,
 				A55465081FEFAD3100A7E3C7 /* HCMeViewController.h */,
 				A55465091FEFAD3100A7E3C7 /* HCMeViewController.m */,
-				A55465051FEFAD3100A7E3C7 /* HCMeProfileCellView.h */,
-				A55465061FEFAD3100A7E3C7 /* HCMeProfileCellView.m */,
-				A55465071FEFAD3100A7E3C7 /* HCMeProfileCellView.xib */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -1842,7 +1834,6 @@
 				A56CD7881FD0315000FFF504 /* MeAssets.xcassets in Resources */,
 				A511F35A1FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib in Resources */,
 				A511F3551FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib in Resources */,
-				A55465101FEFAD3100A7E3C7 /* HCMeProfileCellView.xib in Resources */,
 				A58848FF1FFFC5C700FC93EE /* HCHealthManagementCellView.xib in Resources */,
 				A553F3A420063417002A205B /* HCMedicalServiceDetailHeaderTitleView.xib in Resources */,
 				A56CD7861FD0312000FFF504 /* MainFrameAssets.xcassets in Resources */,
@@ -1954,7 +1945,6 @@
 				A57B481D1FCEF9190004C397 /* NSMutableSet+SafeInsert.m in Sources */,
 				A55388981FFE61D900D0DC27 /* WXMediaMessage+messageConstruct.m in Sources */,
 				A58849051FFFC5C700FC93EE /* HCHealthManagementDetailViewController.m in Sources */,
-				A554650F1FEFAD3100A7E3C7 /* HCMeProfileCellView.m in Sources */,
 				A57B48161FCEF9190004C397 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				A5D9AE321FDBB87B00B5D4C0 /* YTKChainRequest+AnimatingAccessory.m in Sources */,
 				A55388971FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
