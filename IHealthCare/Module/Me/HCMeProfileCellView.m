@@ -46,7 +46,7 @@
 -(void)initLevelLabel
 {
     m_levelLabel = [[UILabel alloc] init];
-    m_levelLabel.textColor = [UIColor hx_colorWithHexString:@"A5A5A%"];
+    m_levelLabel.textColor = [UIColor hx_colorWithHexString:@"A5A5A5"];
     m_levelLabel.text = @"级别";
     m_levelLabel.font = [UIFont systemFontOfSize:12];
     [self addSubview:m_levelLabel];
