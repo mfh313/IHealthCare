@@ -31,7 +31,7 @@
 {
     [super awakeFromNib];
     
-    _imageView.contentMode = UIViewContentModeScaleAspectFit;
+    _imageView.contentMode = UIViewContentModeScaleAspectFill;
     
     m_stepView.m_delegate = self;
     
