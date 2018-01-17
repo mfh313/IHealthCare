@@ -31,8 +31,6 @@
     }];
     
     [m_unLoginLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.width.mas_equalTo(80);
-//        make.height.mas_equalTo(80);
         make.left.mas_equalTo(m_avtarImageView.mas_right).offset(30);
         make.centerY.mas_equalTo(self.mas_centerY);
     }];

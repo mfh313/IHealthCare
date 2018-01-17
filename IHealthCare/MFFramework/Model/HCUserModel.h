@@ -37,4 +37,6 @@ extern NSInteger const HCUserAuthStatus_Authorized; //已认证
 @property (nonatomic,strong) NSString *imageUrl;  //图像URL
 @property (nonatomic,assign) NSInteger status; //1：未认证，2：认证中，3：已认证，默认是未认证
 
+-(NSString *)userLevelDescription;
+
 @end

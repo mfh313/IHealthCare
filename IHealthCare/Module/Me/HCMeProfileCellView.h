@@ -21,6 +21,13 @@
 {
     UIImageView *m_avtarImageView;
     UILabel *m_unLoginLabel;
+    
+    UILabel *m_nameLabel;
+    UILabel *m_levelLabel;
+    UILabel *m_authedLabel;
+    UIButton *m_authButton;
+    
+    UIImageView *m_accessoryImageView;
 }
 
 @property (nonatomic,weak) id<HCMeProfileCellViewDelegate> m_delegate;
@@ -28,6 +35,10 @@
 
 -(void)initAvtarImage;
 -(void)initUnloginLabel;
+-(void)initNameLabel;
+-(void)initLevelLabel;
+-(void)initAuthedLabel;
+-(void)initAccessoryImageView;
 -(void)layoutProfileViews;
 
 @end
