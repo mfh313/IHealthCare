@@ -236,7 +236,7 @@
 		A58849141FFFDA4700FC93EE /* HCPayOrderApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A58849131FFFDA4700FC93EE /* HCPayOrderApi.m */; };
 		A5BDB5051FE65B010052B51B /* HCBestNewsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */; };
 		A5BDB5081FE660700052B51B /* HCGetBestNewsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDB5071FE660700052B51B /* HCGetBestNewsApi.m */; };
-		A5CA4BD7200CF261004415F6 /* HCMeProfileBaseCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CA4BD6200CF261004415F6 /* HCMeProfileBaseCellView.m */; };
+		A5CA4BD7200CF261004415F6 /* HCMeProfileCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CA4BD6200CF261004415F6 /* HCMeProfileCellView.m */; };
 		A5CA4BDA200CF394004415F6 /* HCMeProfileUnLoginCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CA4BD9200CF394004415F6 /* HCMeProfileUnLoginCellView.m */; };
 		A5CA4BDD200CF451004415F6 /* HCMeProfileAuthStatusCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CA4BDC200CF451004415F6 /* HCMeProfileAuthStatusCellView.m */; };
 		A5CA4C01200CF567004415F6 /* HCClassCreateOrderItemCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CA4BE0200CF567004415F6 /* HCClassCreateOrderItemCellView.m */; };
@@ -715,8 +715,8 @@
 		A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailModel.m; sourceTree = "<group>"; };
 		A5BDB5061FE660700052B51B /* HCGetBestNewsApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetBestNewsApi.h; sourceTree = "<group>"; };
 		A5BDB5071FE660700052B51B /* HCGetBestNewsApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetBestNewsApi.m; sourceTree = "<group>"; };
-		A5CA4BD5200CF261004415F6 /* HCMeProfileBaseCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeProfileBaseCellView.h; sourceTree = "<group>"; };
-		A5CA4BD6200CF261004415F6 /* HCMeProfileBaseCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMeProfileBaseCellView.m; sourceTree = "<group>"; };
+		A5CA4BD5200CF261004415F6 /* HCMeProfileCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeProfileCellView.h; sourceTree = "<group>"; };
+		A5CA4BD6200CF261004415F6 /* HCMeProfileCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMeProfileCellView.m; sourceTree = "<group>"; };
 		A5CA4BD8200CF394004415F6 /* HCMeProfileUnLoginCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeProfileUnLoginCellView.h; sourceTree = "<group>"; };
 		A5CA4BD9200CF394004415F6 /* HCMeProfileUnLoginCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMeProfileUnLoginCellView.m; sourceTree = "<group>"; };
 		A5CA4BDB200CF451004415F6 /* HCMeProfileAuthStatusCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMeProfileAuthStatusCellView.h; sourceTree = "<group>"; };
@@ -1003,8 +1003,8 @@
 				A55465021FEFAD3100A7E3C7 /* HCMeFooterView.h */,
 				A55465031FEFAD3100A7E3C7 /* HCMeFooterView.m */,
 				A55465041FEFAD3100A7E3C7 /* HCMeFooterView.xib */,
-				A5CA4BD5200CF261004415F6 /* HCMeProfileBaseCellView.h */,
-				A5CA4BD6200CF261004415F6 /* HCMeProfileBaseCellView.m */,
+				A5CA4BD5200CF261004415F6 /* HCMeProfileCellView.h */,
+				A5CA4BD6200CF261004415F6 /* HCMeProfileCellView.m */,
 				A5CA4BD8200CF394004415F6 /* HCMeProfileUnLoginCellView.h */,
 				A5CA4BD9200CF394004415F6 /* HCMeProfileUnLoginCellView.m */,
 				A5CA4BDB200CF451004415F6 /* HCMeProfileAuthStatusCellView.h */,
@@ -2106,7 +2106,7 @@
 				A5CA4C11200CF567004415F6 /* HCOrderAddressSelectCellView.m in Sources */,
 				A575874D1FE519A0000FC7CB /* HCGetProductsApi.m in Sources */,
 				A57B47E81FCEF9190004C397 /* IQTextView.m in Sources */,
-				A5CA4BD7200CF261004415F6 /* HCMeProfileBaseCellView.m in Sources */,
+				A5CA4BD7200CF261004415F6 /* HCMeProfileCellView.m in Sources */,
 				A57B480B1FCEF9190004C397 /* UnknownFieldSetBuilder.m in Sources */,
 				A53695B11FD59769007CC67C /* SPPageContentView.m in Sources */,
 				A58848FB1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m in Sources */,

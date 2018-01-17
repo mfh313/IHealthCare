@@ -1,5 +1,5 @@
 //
-//  HCMeProfileBaseCellView.h
+//  HCMeProfileCellView.h
 //  IHealthCare
 //
 //  Created by mafanghua on 2018/1/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HCMeProfileBaseCellView : UIControl
+@interface HCMeProfileCellView : UIControl
 {
     UIImageView *m_avtarImageView;
     UILabel *m_unLoginLabel;

@@ -1,14 +1,14 @@
 //
-//  HCMeProfileBaseCellView.m
+//  HCMeProfileCellView.m
 //  IHealthCare
 //
 //  Created by mafanghua on 2018/1/15.
 //  Copyright © 2018年 mafanghua. All rights reserved.
 //
 
-#import "HCMeProfileBaseCellView.h"
+#import "HCMeProfileCellView.h"
 
-@implementation HCMeProfileBaseCellView
+@implementation HCMeProfileCellView
 
 -(instancetype)initWithFrame:(CGRect)frame
 {

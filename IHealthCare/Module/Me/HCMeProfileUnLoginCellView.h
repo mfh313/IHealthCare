@@ -6,8 +6,8 @@
 //  Copyright © 2018年 mafanghua. All rights reserved.
 //
 
-#import "HCMeProfileBaseCellView.h"
+#import "HCMeProfileCellView.h"
 
-@interface HCMeProfileUnLoginCellView : HCMeProfileBaseCellView
+@interface HCMeProfileUnLoginCellView : HCMeProfileCellView
 
 @end
