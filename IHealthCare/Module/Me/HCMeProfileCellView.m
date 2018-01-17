@@ -55,7 +55,7 @@
 -(void)initAuthedLabel
 {
     m_authedLabel = [[UILabel alloc] init];
-    m_authedLabel.textColor = [UIColor hx_colorWithHexString:@"A5A5A%"];
+    m_authedLabel.textColor = [UIColor hx_colorWithHexString:@"A5A5A5"];
     m_authedLabel.text = @"已认证";
     m_authedLabel.font = [UIFont systemFontOfSize:12];
     [self addSubview:m_authedLabel];

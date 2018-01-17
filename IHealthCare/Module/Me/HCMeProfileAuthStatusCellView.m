@@ -27,7 +27,7 @@
 
 -(void)layoutProfileViews
 {
-    m_nameLabel.text = self.userInfo.name;
+    m_nameLabel.text = @"马方华";//self.userInfo.name;
     m_levelLabel.text = [self.userInfo userLevelDescription];
 
     [self makeSubViewsConstraints];
@@ -42,7 +42,15 @@
         make.centerY.mas_equalTo(self.mas_centerY);
     }];
     
+    [m_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(m_avtarImageView.mas_right).offset(30);
+        make.top.mas_equalTo(self.mas_top).offset(42);
+    }];
     
+    [m_levelLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(m_avtarImageView.mas_right).offset(30);
+        make.top.mas_equalTo(m_nameLabel.mas_bottom).offset(8);
+    }];
     
     [m_accessoryImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(self.mas_right).offset(-15);
