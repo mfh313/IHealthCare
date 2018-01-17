@@ -27,7 +27,17 @@
 
 -(void)layoutProfileViews
 {
-    m_nameLabel.text = @"马方华";//self.userInfo.name;
+    if ([MFStringUtil isBlankString:self.userInfo.name])
+    {
+        m_nameLabel.textColor = [UIColor hx_colorWithHexString:@"A5A5A5"];
+        m_nameLabel.text = @"请设置姓名";
+    }
+    else
+    {
+        m_nameLabel.textColor = [UIColor hx_colorWithHexString:@"000000"];
+        m_nameLabel.text = self.userInfo.name;
+    }
+    
     m_levelLabel.text = [self.userInfo userLevelDescription];
 
     [self makeSubViewsConstraints];
@@ -45,6 +55,7 @@
     [m_nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(m_avtarImageView.mas_right).offset(30);
         make.top.mas_equalTo(self.mas_top).offset(42);
+        make.height.mas_equalTo(20);
     }];
     
     [m_levelLabel mas_makeConstraints:^(MASConstraintMaker *make) {
