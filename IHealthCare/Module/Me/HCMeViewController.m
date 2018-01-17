@@ -13,12 +13,15 @@
 #import "HCMeProfileUnLoginCellView.h"
 #import "HCMeProfileAuthStatusCellView.h"
 #import "HCGetUserInfoApi.h"
+#import "HCUserModel.h"
 
 @interface HCMeViewController () <MMTableViewInfoDelegate,HCMeProfileCellViewDelegate>
 {
     MMTableViewInfo *m_tableViewInfo;
     
     NSMutableArray<NSMutableArray *> *m_tableSources;
+    
+    HCUserModel *m_useInfo;
 }
 
 @end
@@ -42,15 +45,41 @@
     contentTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     [self.view addSubview:contentTableView];
     
-    [self setHeaderView:contentTableView];
     [self setFooterView:contentTableView];
+    
+    [self getUserInfo];
     
     [self reloadMeView];
 }
 
 -(void)getUserInfo
 {
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
     
+    __weak typeof(self) weakSelf = self;
+    HCGetUserInfoApi *mfApi = [HCGetUserInfoApi new];
+    mfApi.userTel = loginService.userPhone;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSDictionary *responseNetworkData = mfApi.responseNetworkData;
+        
+        m_useInfo = [HCUserModel yy_modelWithDictionary:responseNetworkData];
+        
+        UITableView *contentTableView = [m_tableViewInfo getTableView];
+        [strongSelf setHeaderView:contentTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
 }
 
 -(void)setHeaderView:(UITableView *)contentTableView

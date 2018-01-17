@@ -12,7 +12,7 @@
 
 -(NSString *)requestUrl
 {
-    return [HealthCareApiManger userInfo:self.telephone];
+    return [HealthCareApiManger userInfo:self.userTel];
 }
 
 - (YTKRequestMethod)requestMethod {

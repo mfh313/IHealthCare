@@ -10,6 +10,6 @@
 
 @interface HCGetUserInfoApi : MMNetworkRequest
 
-@property (nonatomic,strong) NSString *telephone;
+@property (nonatomic,strong) NSString *userTel;
 
 @end

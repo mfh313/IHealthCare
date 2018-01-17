@@ -8,6 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSInteger const HCUserLevel_1; //用户
+extern NSInteger const HCUserLevel_2; //VIP
+extern NSInteger const HCUserLevel_3; //大客户
+extern NSInteger const HCUserLevel_4; //签约代理商
+extern NSInteger const HCUserLevel_5; //直属代理商
+extern NSInteger const HCUserLevel_6; //合伙人
+
+extern NSInteger const HCUser_male; //男
+extern NSInteger const HCUser_female; //女
+
+extern NSInteger const HCUserAuthStatus_UnAuthorized; //未认证
+extern NSInteger const HCUserAuthStatus_Authoring; //认证中
+extern NSInteger const HCUserAuthStatus_Authorized; //已认证
+
 @interface HCUserModel : NSObject
 
 @property (nonatomic,strong) NSString *telephone; //手机号码
