@@ -24,4 +24,8 @@
 
 @property (nonatomic,weak) id<HCMeProfileCellViewDelegate> m_delegate;
 
+-(void)initAvtarImage;
+-(void)initUnloginLabel;
+-(void)layoutProfileViews;
+
 @end

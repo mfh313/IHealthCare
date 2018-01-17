@@ -57,7 +57,7 @@
     HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
     if ([MFStringUtil isBlankString:loginService.token])
     {
-        HCMeProfileCellView *profileView = [[HCMeProfileCellView alloc] init];
+        HCMeProfileUnLoginCellView *profileView = [[HCMeProfileUnLoginCellView alloc] init];
         profileView.m_delegate = self;
         [tableHeaderView addSubview:profileView];
         [profileView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -67,9 +67,9 @@
             make.top.mas_equalTo(@(0));
         }];
         
+        [profileView layoutProfileViews];
         return;
     }
-    
 }
 
 -(void)setFooterView:(UITableView *)contentTableView

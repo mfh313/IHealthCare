@@ -10,4 +10,6 @@
 
 @interface HCMeProfileUnLoginCellView : HCMeProfileCellView
 
+
+
 @end
