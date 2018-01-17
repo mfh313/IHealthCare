@@ -30,7 +30,7 @@
     if ([MFStringUtil isBlankString:self.userInfo.name])
     {
         m_nameLabel.textColor = [UIColor hx_colorWithHexString:@"A5A5A5"];
-        m_nameLabel.text = @"请设置姓名";
+        m_nameLabel.text = @"未设置姓名";
     }
     else
     {
@@ -39,6 +39,8 @@
     }
     
     m_levelLabel.text = [self.userInfo userLevelDescription];
+    
+    
 
     [self makeSubViewsConstraints];
 }
