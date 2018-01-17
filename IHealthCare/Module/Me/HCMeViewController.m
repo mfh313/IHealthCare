@@ -40,26 +40,44 @@
     contentTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     [self.view addSubview:contentTableView];
     
+    [self setHeaderView:contentTableView];
+    [self setFooterView:contentTableView];
+    
+    [self reloadMeView];
+}
+
+-(void)setHeaderView:(UITableView *)contentTableView
+{
     UIView *tableHeaderView = [UIView new];
     tableHeaderView.frame = CGRectMake(0, 0, CGRectGetWidth(contentTableView.frame), 140);
     tableHeaderView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
     contentTableView.tableHeaderView = tableHeaderView;
     
-    HCMeProfileCellView *profileView = [HCMeProfileCellView nibView];
-    profileView.m_delegate = self;
-    [tableHeaderView addSubview:profileView];
-    [profileView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(contentTableView);
-        make.height.mas_equalTo(@(130));
-        make.left.mas_equalTo(@(0));
-        make.top.mas_equalTo(@(0));
-    }];
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    if ([MFStringUtil isBlankString:loginService.token])
+    {
+        HCMeProfileCellView *profileView = [[HCMeProfileCellView alloc] init];
+        profileView.m_delegate = self;
+        [tableHeaderView addSubview:profileView];
+        [profileView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(contentTableView);
+            make.height.mas_equalTo(@(130));
+            make.left.mas_equalTo(@(0));
+            make.top.mas_equalTo(@(0));
+        }];
+        
+        return;
+    }
     
+}
+
+-(void)setFooterView:(UITableView *)contentTableView
+{
     UIView *tableFooterView = [UIView new];
     tableFooterView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
     tableFooterView.frame = CGRectMake(0, 0, CGRectGetWidth(contentTableView.frame), 260);
     contentTableView.tableFooterView = tableFooterView;
-
+    
     HCMeFooterView *footerView = [HCMeFooterView nibView];
     [tableFooterView addSubview:footerView];
     [footerView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -68,8 +86,6 @@
         make.left.mas_equalTo(@(0));
         make.top.mas_equalTo(@(0));
     }];
-    
-    [self reloadMeView];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -177,7 +193,7 @@
     collection[@"image"] = @"my_icon_collection";
     collection[@"title"] = @"我的收藏";
     
-    [section2 addObject:focus];
+//    [section2 addObject:focus];
     [section2 addObject:collection];
     
     NSMutableArray *section3 = [NSMutableArray array];
@@ -193,7 +209,7 @@
     program[@"image"] = @"my_icon_program";
     program[@"title"] = @"我的小程序";
     
-    [section3 addObject:circle];
+//    [section3 addObject:circle];
     [section3 addObject:invitation];
 //    [section3 addObject:program];
     
@@ -207,7 +223,7 @@
     [m_tableSources addObject:section1];
     [m_tableSources addObject:section2];
     [m_tableSources addObject:section3];
-    [m_tableSources addObject:section4];
+//    [m_tableSources addObject:section4];
 }
 
 - (void)didReceiveMemoryWarning {

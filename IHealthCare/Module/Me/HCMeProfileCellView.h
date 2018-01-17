@@ -8,10 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@class HCMeProfileCellView;
+@protocol HCMeProfileCellViewDelegate <NSObject>
+@optional
+-(void)onClickToAuth:(HCMeProfileCellView *)view;
+-(void)onClickProfileCell:(HCMeProfileCellView *)view;
+
+@end
+
 @interface HCMeProfileCellView : UIControl
 {
     UIImageView *m_avtarImageView;
     UILabel *m_unLoginLabel;
 }
+
+@property (nonatomic,weak) id<HCMeProfileCellViewDelegate> m_delegate;
 
 @end
