@@ -7,10 +7,11 @@
 //
 
 #import "HCMeViewController.h"
-#import "HCMeProfileCellView.h"
 #import "HCNormalGroupCellView.h"
 #import "HCMeFooterView.h"
 #import "HCAuthIDCardViewController.h"
+#import "HCMeProfileUnLoginCellView.h"
+#import "HCMeProfileAuthStatusCellView.h"
 
 @interface HCMeViewController () <MMTableViewInfoDelegate,HCMeProfileCellViewDelegate>
 {
