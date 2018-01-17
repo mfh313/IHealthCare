@@ -12,6 +12,7 @@
 #import "HCAuthIDCardViewController.h"
 #import "HCMeProfileUnLoginCellView.h"
 #import "HCMeProfileAuthStatusCellView.h"
+#import "HCGetUserInfoApi.h"
 
 @interface HCMeViewController () <MMTableViewInfoDelegate,HCMeProfileCellViewDelegate>
 {
@@ -45,6 +46,11 @@
     [self setFooterView:contentTableView];
     
     [self reloadMeView];
+}
+
+-(void)getUserInfo
+{
+    
 }
 
 -(void)setHeaderView:(UITableView *)contentTableView

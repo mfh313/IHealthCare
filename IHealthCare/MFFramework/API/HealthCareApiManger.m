@@ -124,6 +124,13 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
     return MFURLWithPara(parmUrl);
 }
 
+//查询用户信息
++ (NSString *)userInfo:(NSString *)telephone
+{
+    NSString *parmUrl = [NSString stringWithFormat:@"api/users/%@",telephone];
+    return MFURLWithPara(parmUrl);
+}
+
 + (NSString *)getVerifycode:(NSString *)telephone
 {
     NSString *parmUrl = [NSString stringWithFormat:@"api/users/verifycode/%@",telephone];

@@ -234,6 +234,7 @@
 		A588490D1FFFC90E00FC93EE /* HCCreateOrderApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A588490C1FFFC90E00FC93EE /* HCCreateOrderApi.m */; };
 		A58849111FFFD0D700FC93EE /* HCLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = A58849101FFFD0D700FC93EE /* HCLoginService.m */; };
 		A58849141FFFDA4700FC93EE /* HCPayOrderApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A58849131FFFDA4700FC93EE /* HCPayOrderApi.m */; };
+		A594B027200F9A6600D34EAD /* HCGetUserInfoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A594B026200F9A6600D34EAD /* HCGetUserInfoApi.m */; };
 		A5BDB5051FE65B010052B51B /* HCBestNewsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */; };
 		A5BDB5081FE660700052B51B /* HCGetBestNewsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDB5071FE660700052B51B /* HCGetBestNewsApi.m */; };
 		A5CA4BD7200CF261004415F6 /* HCMeProfileCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CA4BD6200CF261004415F6 /* HCMeProfileCellView.m */; };
@@ -711,6 +712,8 @@
 		A58849101FFFD0D700FC93EE /* HCLoginService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCLoginService.m; sourceTree = "<group>"; };
 		A58849121FFFDA4700FC93EE /* HCPayOrderApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCPayOrderApi.h; sourceTree = "<group>"; };
 		A58849131FFFDA4700FC93EE /* HCPayOrderApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPayOrderApi.m; sourceTree = "<group>"; };
+		A594B025200F9A6600D34EAD /* HCGetUserInfoApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetUserInfoApi.h; sourceTree = "<group>"; };
+		A594B026200F9A6600D34EAD /* HCGetUserInfoApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetUserInfoApi.m; sourceTree = "<group>"; };
 		A5BDB5031FE65B010052B51B /* HCBestNewsDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBestNewsDetailModel.h; sourceTree = "<group>"; };
 		A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailModel.m; sourceTree = "<group>"; };
 		A5BDB5061FE660700052B51B /* HCGetBestNewsApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetBestNewsApi.h; sourceTree = "<group>"; };
@@ -1678,6 +1681,8 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A594B025200F9A6600D34EAD /* HCGetUserInfoApi.h */,
+				A594B026200F9A6600D34EAD /* HCGetUserInfoApi.m */,
 				A50FDCA5200B6A81007F091B /* HCGetSubClassDetailApi.h */,
 				A50FDCA6200B6A81007F091B /* HCGetSubClassDetailApi.m */,
 				A50FDCA2200B69DD007F091B /* HCGetSubClassesApi.h */,
@@ -2110,6 +2115,7 @@
 				A57B480B1FCEF9190004C397 /* UnknownFieldSetBuilder.m in Sources */,
 				A53695B11FD59769007CC67C /* SPPageContentView.m in Sources */,
 				A58848FB1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m in Sources */,
+				A594B027200F9A6600D34EAD /* HCGetUserInfoApi.m in Sources */,
 				A5CA4BDA200CF394004415F6 /* HCMeProfileUnLoginCellView.m in Sources */,
 				A57B47F11FCEF9190004C397 /* MGJRouter.m in Sources */,
 				A57B48351FCEF9190004C397 /* MMUITextField.m in Sources */,

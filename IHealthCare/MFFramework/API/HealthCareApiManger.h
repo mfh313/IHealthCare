@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//查询用户信息
++ (NSString *)userInfo:(NSString *)telephone;
+
 //查询子课程详情
 + (NSString *)subClassesDetail:(NSInteger)crid;
 
