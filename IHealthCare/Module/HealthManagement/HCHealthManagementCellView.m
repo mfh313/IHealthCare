@@ -34,7 +34,7 @@
     m_contentView.layer.cornerRadius = 10.0f;
     m_contentView.layer.masksToBounds = YES;
     
-    m_contentImageView.contentMode = UIViewContentModeScaleAspectFill;
+//    m_contentImageView.contentMode = UIViewContentModeScaleAspectFill;
 }
 
 -(void)setManagementDetail:(HCManagementDetailModel *)itemModel
