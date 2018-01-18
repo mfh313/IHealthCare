@@ -18,11 +18,24 @@
         [self initNameLabel];
         [self initLevelLabel];
         
+        [self initAuthButton];
         [self initAuthedLabel];
         [self initAccessoryImageView];
+        
+        [m_authButton setHidden:YES];
+        [m_authedLabel setHidden:YES];
+        
+        [self addTarget:self action:@selector(onClickContent:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     return self;
+}
+
+-(void)onClickContent:(id)sender
+{
+    if ([self.m_delegate respondsToSelector:@selector(onClickProfileCell:)]) {
+        [self.m_delegate onClickProfileCell:self];
+    }
 }
 
 -(void)layoutProfileViews
@@ -40,8 +53,21 @@
     
     m_levelLabel.text = [self.userInfo userLevelDescription];
     
+    if (self.userInfo.status == HCUserAuthStatus_Authorized)
+    {
+        [m_authedLabel setHidden:NO];
+    }
+    else if (self.userInfo.status == HCUserAuthStatus_UnAuthorized)
+    {
+        [m_authButton setHidden:NO];
+        [m_authButton setTitle:@"身份认证" forState:UIControlStateNormal];
+    }
+    else if (self.userInfo.status == HCUserAuthStatus_Authoring)
+    {
+        [m_authButton setHidden:NO];
+        [m_authButton setTitle:@"认证中..." forState:UIControlStateNormal];
+    }
     
-
     [self makeSubViewsConstraints];
 }
 
@@ -70,6 +96,20 @@
         make.centerY.mas_equalTo(self.mas_centerY);
         make.width.mas_equalTo(22);
         make.height.mas_equalTo(22);
+    }];
+    
+    [m_authedLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(m_accessoryImageView.mas_left).offset(-55);
+        make.centerY.mas_equalTo(self.mas_centerY);
+        make.width.mas_equalTo(70);
+        make.height.mas_equalTo(30);
+    }];
+    
+    [m_authButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(m_accessoryImageView.mas_left).offset(-55);
+        make.centerY.mas_equalTo(self.mas_centerY);
+        make.width.mas_equalTo(70);
+        make.height.mas_equalTo(30);
     }];
 }
 

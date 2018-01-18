@@ -153,7 +153,7 @@
 
 -(void)onClickProfileCell:(HCMeProfileCellView *)view
 {
-    
+    NSLog(@"onClickProfileCell");
 }
 
 -(void)reloadMeView

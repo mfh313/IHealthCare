@@ -61,6 +61,25 @@
     [self addSubview:m_authedLabel];
 }
 
+-(void)initAuthButton
+{
+    m_authButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    m_authButton.titleLabel.font = [UIFont systemFontOfSize:12];
+    [m_authButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [m_authButton setBackgroundImage:MFImageStretchCenter(@"common_btn_code_nor") forState:UIControlStateNormal];
+    [m_authButton setBackgroundImage:MFImageStretchCenter(@"common_btn_code_press") forState:UIControlStateHighlighted];
+    [m_authButton setBackgroundImage:MFImageStretchCenter(@"common_btn_code_dis") forState:UIControlStateDisabled];
+    [m_authButton addTarget:self action:@selector(onClickAuthButton:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:m_authButton];
+}
+
+-(void)onClickAuthButton:(id)sender
+{
+    if ([self.m_delegate respondsToSelector:@selector(onClickToAuth:)]) {
+        [self.m_delegate onClickToAuth:self];
+    }
+}
+
 -(void)initAccessoryImageView
 {
     m_accessoryImageView = [[UIImageView alloc] initWithImage:MFImage(@"common_btn_next_nor")];

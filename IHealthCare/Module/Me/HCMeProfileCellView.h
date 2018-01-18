@@ -38,6 +38,7 @@
 -(void)initNameLabel;
 -(void)initLevelLabel;
 -(void)initAuthedLabel;
+-(void)initAuthButton;
 -(void)initAccessoryImageView;
 -(void)layoutProfileViews;
 
