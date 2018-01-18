@@ -47,26 +47,23 @@
 {
     [m_tableViewInfo clearAllSection];
     
-    for (int i = 0; i < 10; i++) {
-        [self addAvtarImageSection];
-        [self addDetailInfoSection];
-        
-        MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
-        
-        MMTableViewCellInfo *prePhone = [MMTableViewCellInfo cellForMakeSel:@selector(makeDetailInfoCell:cellInfo:)
-                                                                 makeTarget:self
-                                                                  actionSel:@selector(onClickDetailInfoCell:)
-                                                               actionTarget:self
-                                                                     height:50.0
-                                                                   userInfo:nil];
-        
-        [prePhone addUserInfoValue:@"prePhone" forKey:@"contentKey"];
-        
-        [sectionInfo addCell:prePhone];
-        
-        [m_tableViewInfo addSection:sectionInfo];
-    }
+    [self addAvtarImageSection];
+    [self addDetailInfoSection];
     
+    MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
+    
+    MMTableViewCellInfo *prePhone = [MMTableViewCellInfo cellForMakeSel:@selector(makeDetailInfoCell:cellInfo:)
+                                                             makeTarget:self
+                                                              actionSel:@selector(onClickDetailInfoCell:)
+                                                           actionTarget:self
+                                                                 height:50.0
+                                                               userInfo:nil];
+    
+    [prePhone addUserInfoValue:@"prePhone" forKey:@"contentKey"];
+    
+    [sectionInfo addCell:prePhone];
+    
+    [m_tableViewInfo addSection:sectionInfo];
 }
 
 -(void)addAvtarImageSection
@@ -154,8 +151,8 @@
     }
     else if ([contentKey isEqualToString:@"city"])
     {
-        [cellView setContentViewType:HCMyInfoInputType_citySelect];
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        [cellView setContentViewType:HCMyInfoInputType_citySelect];
         [cellView setLeftTitle:@"城市" titleWidth:45];
     }
     else if ([contentKey isEqualToString:@"prePhone"])
