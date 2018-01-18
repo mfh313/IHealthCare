@@ -44,8 +44,9 @@
     contentTableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     contentTableView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
     contentTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
-    contentTableView.sectionHeaderHeight = 15.0f;
     [self.view addSubview:contentTableView];
+    
+    contentTableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, CGFLOAT_MIN)];
     
     [self setFooterView:contentTableView];
     
