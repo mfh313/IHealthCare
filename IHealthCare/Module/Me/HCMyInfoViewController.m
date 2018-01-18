@@ -8,6 +8,7 @@
 
 #import "HCMyInfoViewController.h"
 #import "HCMyInfoAvtarCellView.h"
+#import "HCMyInfoInputCellView.h"
 
 @interface HCMyInfoViewController () <MMTableViewInfoDelegate>
 {
@@ -47,6 +48,22 @@
     [m_tableViewInfo clearAllSection];
     
     [self addAvtarImageSection];
+    [self addDetailInfoSection];
+    
+    MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
+    
+    MMTableViewCellInfo *prePhone = [MMTableViewCellInfo cellForMakeSel:@selector(makeDetailInfoCell:cellInfo:)
+                                                              makeTarget:self
+                                                               actionSel:@selector(onClickDetailInfoCell:)
+                                                            actionTarget:self
+                                                                  height:50.0
+                                                                userInfo:nil];
+    
+    [prePhone addUserInfoValue:@"prePhone" forKey:@"contentKey"];
+    
+    [sectionInfo addCell:prePhone];
+    
+    [m_tableViewInfo addSection:sectionInfo];
 }
 
 -(void)addAvtarImageSection
@@ -63,6 +80,105 @@
     [sectionInfo addCell:cellInfo];
     
     [m_tableViewInfo addSection:sectionInfo];
+}
+
+-(void)addDetailInfoSection
+{
+    MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
+    
+    MMTableViewCellInfo *nameInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeDetailInfoCell:cellInfo:)
+                                                             makeTarget:self
+                                                              actionSel:@selector(onClickDetailInfoCell:)
+                                                           actionTarget:self
+                                                                 height:50.0
+                                                               userInfo:nil];
+    
+    [nameInfo addUserInfoValue:@"name" forKey:@"contentKey"];
+    
+    MMTableViewCellInfo *phoneInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeDetailInfoCell:cellInfo:)
+                                                             makeTarget:self
+                                                              actionSel:@selector(onClickDetailInfoCell:)
+                                                           actionTarget:self
+                                                                 height:50.0
+                                                               userInfo:nil];
+    
+    [phoneInfo addUserInfoValue:@"phone" forKey:@"contentKey"];
+    
+    MMTableViewCellInfo *cityInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeDetailInfoCell:cellInfo:)
+                                                              makeTarget:self
+                                                               actionSel:@selector(onClickDetailInfoCell:)
+                                                            actionTarget:self
+                                                                  height:50.0
+                                                                userInfo:nil];
+    
+    [cityInfo addUserInfoValue:@"city" forKey:@"contentKey"];
+    
+    [sectionInfo addCell:nameInfo];
+    [sectionInfo addCell:phoneInfo];
+    [sectionInfo addCell:cityInfo];
+    
+    [m_tableViewInfo addSection:sectionInfo];
+}
+
+- (void)makeDetailInfoCell:(MFTableViewCell *)cell cellInfo:(MMTableViewCellInfo *)cellInfo
+{
+    if (!cell.m_subContentView) {
+        HCMyInfoInputCellView *cellView = [[HCMyInfoInputCellView alloc] initWithFrame:cell.contentView.frame];
+        cell.m_subContentView = cellView;
+    }
+    else
+    {
+        [cell.contentView addSubview:cell.m_subContentView];
+    }
+    
+    HCMyInfoInputCellView *cellView = (HCMyInfoInputCellView *)cell.m_subContentView;
+    cellView.frame = cell.contentView.bounds;
+    
+    NSString *contentKey =  [cellInfo getUserInfoValueForKey:@"contentKey"];
+    if ([contentKey isEqualToString:@"name"])
+    {
+        [cellView setLeftTitle:@"姓名" titleWidth:45];
+        [cellView setTextFieldContent:self.userInfo.name placeHolder:@"请输入姓名"];
+    }
+    else if ([contentKey isEqualToString:@"phone"])
+    {
+        [cellView setLeftTitle:@"手机号" titleWidth:45];
+        [cellView setShowContent:self.userInfo.telephone];
+    }
+    else if ([contentKey isEqualToString:@"city"])
+    {
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        [cellView setLeftTitle:@"城市" titleWidth:45];
+    }
+    else if ([contentKey isEqualToString:@"prePhone"])
+    {
+        [cellView setLeftTitle:@"邀请人手机号" titleWidth:90];
+        [cellView setTextFieldContent:self.userInfo.name placeHolder:@"请输入邀请人手机号"];
+    }
+    
+}
+
+-(void)onClickDetailInfoCell:(MMTableViewCellInfo *)cellInfo
+{
+    NSString *contentKey =  [cellInfo getUserInfoValueForKey:@"contentKey"];
+    if ([contentKey isEqualToString:@"city"])
+    {
+        NSArray *cityArray = @[@"深圳市",@"北京市",@"上海市",@"广州市"];
+        
+        __weak typeof(self) weakSelf = self;
+        LGAlertView *alertView = [LGAlertView alertViewWithTitle:nil message:nil style:LGAlertViewStyleActionSheet buttonTitles:cityArray cancelButtonTitle:@"取消" destructiveButtonTitle:nil actionHandler:^(LGAlertView * _Nonnull alertView, NSUInteger index, NSString * _Nullable title) {
+            
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            
+            NSString *value = cityArray[index];
+            
+        } cancelHandler:^(LGAlertView * _Nonnull alertView) {
+            
+        } destructiveHandler:nil];
+        
+        [alertView showAnimated:YES completionHandler:nil];
+    }
+    
 }
 
 - (void)makeAvtarImageCell:(MFTableViewCell *)cell cellInfo:(MMTableViewCellInfo *)cellInfo

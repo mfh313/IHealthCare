@@ -21,8 +21,6 @@
 {
     [super awakeFromNib];
     
-//    [self layoutIfNeeded];
-    
     UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:m_avtarImageView.bounds byRoundingCorners:UIRectCornerAllCorners cornerRadii:m_avtarImageView.bounds.size];
     
     CAShapeLayer *maskLayer = [[CAShapeLayer alloc]init];

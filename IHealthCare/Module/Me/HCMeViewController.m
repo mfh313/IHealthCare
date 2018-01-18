@@ -44,6 +44,7 @@
     contentTableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     contentTableView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
     contentTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    contentTableView.sectionHeaderHeight = 15.0f;
     [self.view addSubview:contentTableView];
     
     [self setFooterView:contentTableView];
@@ -155,6 +156,7 @@
 -(void)onClickProfileCell:(HCMeProfileCellView *)view
 {
     HCMyInfoViewController *myInfoVC = [HCMyInfoViewController new];
+    myInfoVC.userInfo = m_useInfo;
     [self.navigationController pushViewController:myInfoVC animated:YES];
 }
 

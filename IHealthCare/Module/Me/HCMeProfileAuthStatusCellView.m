@@ -99,14 +99,14 @@
     }];
     
     [m_authedLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(m_accessoryImageView.mas_left).offset(-55);
+        make.right.mas_equalTo(m_accessoryImageView.mas_left).offset(0);
         make.centerY.mas_equalTo(self.mas_centerY);
         make.width.mas_equalTo(70);
         make.height.mas_equalTo(30);
     }];
     
     [m_authButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(m_accessoryImageView.mas_left).offset(-55);
+        make.right.mas_equalTo(m_accessoryImageView.mas_left).offset(0);
         make.centerY.mas_equalTo(self.mas_centerY);
         make.width.mas_equalTo(70);
         make.height.mas_equalTo(30);

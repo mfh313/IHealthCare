@@ -215,6 +215,7 @@
 		A5854A4D2010E0FC001F4A1F /* HCMyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5854A4C2010E0FC001F4A1F /* HCMyInfoViewController.m */; };
 		A5854A502010EE0E001F4A1F /* HCMyInfoAvtarCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5854A4F2010EE0E001F4A1F /* HCMyInfoAvtarCellView.m */; };
 		A5854A522010EE30001F4A1F /* HCMyInfoAvtarCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5854A512010EE30001F4A1F /* HCMyInfoAvtarCellView.xib */; };
+		A5854A552010F376001F4A1F /* HCMyInfoInputCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5854A542010F376001F4A1F /* HCMyInfoInputCellView.m */; };
 		A5871AE020099CDE004238B6 /* HCGetProductDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871ADF20099CDE004238B6 /* HCGetProductDetailApi.m */; };
 		A5871AF5200A22B8004238B6 /* HCAddOrderAddressApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AF4200A22B8004238B6 /* HCAddOrderAddressApi.m */; };
 		A5871AFE200A5A6F004238B6 /* HCModifyOrderAddressApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AFD200A5A6F004238B6 /* HCModifyOrderAddressApi.m */; };
@@ -681,6 +682,8 @@
 		A5854A4E2010EE0E001F4A1F /* HCMyInfoAvtarCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyInfoAvtarCellView.h; sourceTree = "<group>"; };
 		A5854A4F2010EE0E001F4A1F /* HCMyInfoAvtarCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyInfoAvtarCellView.m; sourceTree = "<group>"; };
 		A5854A512010EE30001F4A1F /* HCMyInfoAvtarCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMyInfoAvtarCellView.xib; sourceTree = "<group>"; };
+		A5854A532010F376001F4A1F /* HCMyInfoInputCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyInfoInputCellView.h; sourceTree = "<group>"; };
+		A5854A542010F376001F4A1F /* HCMyInfoInputCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyInfoInputCellView.m; sourceTree = "<group>"; };
 		A5871ADE20099CDE004238B6 /* HCGetProductDetailApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetProductDetailApi.h; sourceTree = "<group>"; };
 		A5871ADF20099CDE004238B6 /* HCGetProductDetailApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetProductDetailApi.m; sourceTree = "<group>"; };
 		A5871AF3200A22B8004238B6 /* HCAddOrderAddressApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAddOrderAddressApi.h; sourceTree = "<group>"; };
@@ -1024,6 +1027,8 @@
 				A55465091FEFAD3100A7E3C7 /* HCMeViewController.m */,
 				A5854A4B2010E0FC001F4A1F /* HCMyInfoViewController.h */,
 				A5854A4C2010E0FC001F4A1F /* HCMyInfoViewController.m */,
+				A5854A532010F376001F4A1F /* HCMyInfoInputCellView.h */,
+				A5854A542010F376001F4A1F /* HCMyInfoInputCellView.m */,
 				A5854A4E2010EE0E001F4A1F /* HCMyInfoAvtarCellView.h */,
 				A5854A4F2010EE0E001F4A1F /* HCMyInfoAvtarCellView.m */,
 				A5854A512010EE30001F4A1F /* HCMyInfoAvtarCellView.xib */,
@@ -2140,6 +2145,7 @@
 				A5190E731FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.m in Sources */,
 				A52A8E16200AE8CF0067E856 /* HCPlayerControlView.m in Sources */,
 				A57B48331FCEF9190004C397 /* MMUIBridgeView.m in Sources */,
+				A5854A552010F376001F4A1F /* HCMyInfoInputCellView.m in Sources */,
 				A50FDCA1200B5709007F091B /* HCClassRoomCourseDescriptionViewController.m in Sources */,
 				A553F3A7200665A2002A205B /* HCCountStepView.m in Sources */,
 				A5D9AE2F1FDBB87B00B5D4C0 /* YTKAnimatingRequestAccessory.m in Sources */,
