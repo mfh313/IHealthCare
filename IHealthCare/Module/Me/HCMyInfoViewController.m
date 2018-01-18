@@ -200,7 +200,20 @@
 
 -(void)onClickAvtarImageCell:(MMTableViewCellInfo *)cellInfo
 {
+    NSArray *actionArray = @[@"拍照",@"从手机相册选择"];
     
+    __weak typeof(self) weakSelf = self;
+    LGAlertView *alertView = [LGAlertView alertViewWithTitle:nil message:nil style:LGAlertViewStyleActionSheet buttonTitles:actionArray cancelButtonTitle:@"取消" destructiveButtonTitle:nil actionHandler:^(LGAlertView * _Nonnull alertView, NSUInteger index, NSString * _Nullable title) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        NSString *value = actionArray[index];
+        
+    } cancelHandler:^(LGAlertView * _Nonnull alertView) {
+        
+    } destructiveHandler:nil];
+    
+    [alertView showAnimated:YES completionHandler:nil];
 }
 
 -(void)onClickRightButton:(id)sender
