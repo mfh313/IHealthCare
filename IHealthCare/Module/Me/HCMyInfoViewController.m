@@ -47,23 +47,26 @@
 {
     [m_tableViewInfo clearAllSection];
     
-    [self addAvtarImageSection];
-    [self addDetailInfoSection];
+    for (int i = 0; i < 10; i++) {
+        [self addAvtarImageSection];
+        [self addDetailInfoSection];
+        
+        MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
+        
+        MMTableViewCellInfo *prePhone = [MMTableViewCellInfo cellForMakeSel:@selector(makeDetailInfoCell:cellInfo:)
+                                                                 makeTarget:self
+                                                                  actionSel:@selector(onClickDetailInfoCell:)
+                                                               actionTarget:self
+                                                                     height:50.0
+                                                                   userInfo:nil];
+        
+        [prePhone addUserInfoValue:@"prePhone" forKey:@"contentKey"];
+        
+        [sectionInfo addCell:prePhone];
+        
+        [m_tableViewInfo addSection:sectionInfo];
+    }
     
-    MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
-    
-    MMTableViewCellInfo *prePhone = [MMTableViewCellInfo cellForMakeSel:@selector(makeDetailInfoCell:cellInfo:)
-                                                             makeTarget:self
-                                                              actionSel:@selector(onClickDetailInfoCell:)
-                                                           actionTarget:self
-                                                                 height:50.0
-                                                               userInfo:nil];
-    
-    [prePhone addUserInfoValue:@"prePhone" forKey:@"contentKey"];
-    
-    [sectionInfo addCell:prePhone];
-    
-    [m_tableViewInfo addSection:sectionInfo];
 }
 
 -(void)addAvtarImageSection
@@ -131,31 +134,36 @@
         [cell.contentView addSubview:cell.m_subContentView];
     }
     
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
     HCMyInfoInputCellView *cellView = (HCMyInfoInputCellView *)cell.m_subContentView;
     cellView.frame = cell.contentView.bounds;
     
     NSString *contentKey =  [cellInfo getUserInfoValueForKey:@"contentKey"];
     if ([contentKey isEqualToString:@"name"])
     {
+        [cellView setContentViewType:HCMyInfoInputType_textField];
         [cellView setLeftTitle:@"姓名" titleWidth:45];
         [cellView setTextFieldContent:self.userInfo.name placeHolder:@"请输入姓名"];
     }
     else if ([contentKey isEqualToString:@"phone"])
     {
+        [cellView setContentViewType:HCMyInfoInputType_content];
         [cellView setLeftTitle:@"手机号" titleWidth:45];
         [cellView setShowContent:self.userInfo.telephone];
     }
     else if ([contentKey isEqualToString:@"city"])
     {
+        [cellView setContentViewType:HCMyInfoInputType_citySelect];
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         [cellView setLeftTitle:@"城市" titleWidth:45];
     }
     else if ([contentKey isEqualToString:@"prePhone"])
     {
+        [cellView setContentViewType:HCMyInfoInputType_textField];
         [cellView setLeftTitle:@"邀请人手机号" titleWidth:90];
         [cellView setTextFieldContent:self.userInfo.name placeHolder:@"请输入邀请人手机号"];
     }
-    
 }
 
 -(void)onClickDetailInfoCell:(MMTableViewCellInfo *)cellInfo

@@ -35,11 +35,35 @@
     return self;
 }
 
+-(void)setContentViewType:(HCMyInfoInputType)inputType
+{
+    switch (inputType) {
+        case HCMyInfoInputType_textField:
+        {
+            [m_contentLabel setHidden:YES];
+            [m_textField setHidden:NO];
+        }
+            break;
+        case HCMyInfoInputType_content:
+        {
+            [m_textField setHidden:YES];
+            [m_contentLabel setHidden:NO];
+        }
+            break;
+        case HCMyInfoInputType_citySelect:
+        {
+            [m_textField setHidden:YES];
+            [m_contentLabel setHidden:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
 -(void)setLeftTitle:(NSString *)title titleWidth:(CGFloat)titleWidth
 {
-    [m_textField setHidden:YES];
-    [m_contentLabel setHidden:YES];
-    
     m_titleLabel.text = title;
     m_titleWidth = titleWidth;
     
@@ -50,16 +74,8 @@
     }];
 }
 
--(UITextField *)contentTextField
-{
-    return m_textField;
-}
-
 -(void)setShowContent:(NSString *)content
 {
-    [m_textField setHidden:YES];
-    [m_contentLabel setHidden:NO];
-    
     m_contentLabel.text = content;
     
     [m_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -70,9 +86,6 @@
 
 -(void)setTextFieldContent:(NSString *)content placeHolder:(NSString *)placeHolder
 {
-    [m_contentLabel setHidden:YES];
-    [m_textField setHidden:NO];
-    
     m_textField.text = content;
     m_textField.placeholder = placeHolder;
     
@@ -82,6 +95,11 @@
         make.height.mas_equalTo(self.mas_height);
         make.centerY.mas_equalTo(self.mas_centerY);
     }];
+}
+
+-(UITextField *)contentTextField
+{
+    return m_textField;
 }
 
 #pragma mark - UITextFieldDelegate
