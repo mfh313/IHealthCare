@@ -53,11 +53,11 @@
     MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
     
     MMTableViewCellInfo *prePhone = [MMTableViewCellInfo cellForMakeSel:@selector(makeDetailInfoCell:cellInfo:)
-                                                              makeTarget:self
-                                                               actionSel:@selector(onClickDetailInfoCell:)
-                                                            actionTarget:self
-                                                                  height:50.0
-                                                                userInfo:nil];
+                                                             makeTarget:self
+                                                              actionSel:@selector(onClickDetailInfoCell:)
+                                                           actionTarget:self
+                                                                 height:50.0
+                                                               userInfo:nil];
     
     [prePhone addUserInfoValue:@"prePhone" forKey:@"contentKey"];
     

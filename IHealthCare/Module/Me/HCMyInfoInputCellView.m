@@ -17,7 +17,7 @@
         m_titleLabel = [[UILabel alloc] init];
         m_titleLabel.font = [UIFont systemFontOfSize:14.0f];
         m_titleLabel.textColor = [UIColor hx_colorWithHexString:000000];
-        m_titleLabel.backgroundColor = [UIColor whiteColor];
+        m_titleLabel.backgroundColor = [UIColor redColor];
         [self addSubview:m_titleLabel];
         
         m_contentLabel = [[UILabel alloc] init];
@@ -37,10 +37,13 @@
 
 -(void)setLeftTitle:(NSString *)title titleWidth:(CGFloat)titleWidth
 {
+    [m_textField setHidden:YES];
+    [m_contentLabel setHidden:YES];
+    
     m_titleLabel.text = title;
     m_titleWidth = titleWidth;
     
-    [m_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [m_titleLabel mas_updateConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(@(m_titleWidth));
         make.left.mas_equalTo(self.mas_left).offset(20);
         make.centerY.mas_equalTo(self.mas_centerY);
@@ -54,6 +57,9 @@
 
 -(void)setShowContent:(NSString *)content
 {
+    [m_textField setHidden:YES];
+    [m_contentLabel setHidden:NO];
+    
     m_contentLabel.text = content;
     
     [m_contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -64,6 +70,9 @@
 
 -(void)setTextFieldContent:(NSString *)content placeHolder:(NSString *)placeHolder
 {
+    [m_contentLabel setHidden:YES];
+    [m_textField setHidden:NO];
+    
     m_textField.text = content;
     m_textField.placeholder = placeHolder;
     
