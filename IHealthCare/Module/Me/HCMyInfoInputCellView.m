@@ -17,7 +17,7 @@
         m_titleLabel = [[UILabel alloc] init];
         m_titleLabel.font = [UIFont systemFontOfSize:14.0f];
         m_titleLabel.textColor = [UIColor hx_colorWithHexString:000000];
-        m_titleLabel.backgroundColor = [UIColor redColor];
+        m_titleLabel.backgroundColor = [UIColor whiteColor];
         [self addSubview:m_titleLabel];
         
         m_contentLabel = [[UILabel alloc] init];
