@@ -18,8 +18,8 @@
 }
 
 -(void)setLeftTitle:(NSString *)title titleWidth:(CGFloat)titleWidth;
--(UITextField *)contentTextField;
 -(void)setShowContent:(NSString *)content;
 -(void)setTextFieldContent:(NSString *)content placeHolder:(NSString *)placeHolder;
+-(UITextField *)contentTextField;
 
 @end
