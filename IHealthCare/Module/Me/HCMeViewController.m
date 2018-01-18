@@ -14,6 +14,7 @@
 #import "HCMeProfileAuthStatusCellView.h"
 #import "HCGetUserInfoApi.h"
 #import "HCUserModel.h"
+#import "HCMyInfoViewController.h"
 
 @interface HCMeViewController () <MMTableViewInfoDelegate,HCMeProfileCellViewDelegate>
 {
@@ -153,7 +154,8 @@
 
 -(void)onClickProfileCell:(HCMeProfileCellView *)view
 {
-    NSLog(@"onClickProfileCell");
+    HCMyInfoViewController *myInfoVC = [HCMyInfoViewController new];
+    [self.navigationController pushViewController:myInfoVC animated:YES];
 }
 
 -(void)reloadMeView

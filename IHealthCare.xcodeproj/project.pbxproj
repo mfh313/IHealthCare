@@ -212,6 +212,7 @@
 		A57B48521FCEFA5E0004C397 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57B48511FCEFA570004C397 /* JavaScriptCore.framework */; };
 		A57B48541FCEFA6C0004C397 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57B48531FCEFA650004C397 /* CoreText.framework */; };
 		A57B48561FCEFAEA0004C397 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57B48551FCEFAE30004C397 /* UIKit.framework */; };
+		A5854A4D2010E0FC001F4A1F /* HCMyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5854A4C2010E0FC001F4A1F /* HCMyInfoViewController.m */; };
 		A5871AE020099CDE004238B6 /* HCGetProductDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871ADF20099CDE004238B6 /* HCGetProductDetailApi.m */; };
 		A5871AF5200A22B8004238B6 /* HCAddOrderAddressApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AF4200A22B8004238B6 /* HCAddOrderAddressApi.m */; };
 		A5871AFE200A5A6F004238B6 /* HCModifyOrderAddressApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AFD200A5A6F004238B6 /* HCModifyOrderAddressApi.m */; };
@@ -673,6 +674,8 @@
 		A57B48511FCEFA570004C397 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		A57B48531FCEFA650004C397 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		A57B48551FCEFAE30004C397 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A5854A4B2010E0FC001F4A1F /* HCMyInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyInfoViewController.h; sourceTree = "<group>"; };
+		A5854A4C2010E0FC001F4A1F /* HCMyInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyInfoViewController.m; sourceTree = "<group>"; };
 		A5871ADE20099CDE004238B6 /* HCGetProductDetailApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetProductDetailApi.h; sourceTree = "<group>"; };
 		A5871ADF20099CDE004238B6 /* HCGetProductDetailApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetProductDetailApi.m; sourceTree = "<group>"; };
 		A5871AF3200A22B8004238B6 /* HCAddOrderAddressApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAddOrderAddressApi.h; sourceTree = "<group>"; };
@@ -1012,6 +1015,8 @@
 				A5CA4BDC200CF451004415F6 /* HCMeProfileAuthStatusCellView.m */,
 				A5CA4BD5200CF261004415F6 /* HCMeProfileCellView.h */,
 				A5CA4BD6200CF261004415F6 /* HCMeProfileCellView.m */,
+				A5854A4B2010E0FC001F4A1F /* HCMyInfoViewController.h */,
+				A5854A4C2010E0FC001F4A1F /* HCMyInfoViewController.m */,
 				A55465081FEFAD3100A7E3C7 /* HCMeViewController.h */,
 				A55465091FEFAD3100A7E3C7 /* HCMeViewController.m */,
 			);
@@ -2059,6 +2064,7 @@
 				A50FDCAD200B7587007F091B /* HCSubClassDetailModel.m in Sources */,
 				A5D9AE371FDBB98100B5D4C0 /* HealthCareApiManger.m in Sources */,
 				A57587511FE52733000FC7CB /* HCProductDetailModel.m in Sources */,
+				A5854A4D2010E0FC001F4A1F /* HCMyInfoViewController.m in Sources */,
 				A57B47EB1FCEF9190004C397 /* IQTitleBarButtonItem.m in Sources */,
 				A57B48311FCEF9190004C397 /* MMOnePixLayoutConstraint.m in Sources */,
 				A511F3531FD425B700AE5D57 /* HealthCareCenterMenuMainView.m in Sources */,
