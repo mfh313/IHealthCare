@@ -22,6 +22,12 @@
     
     self.title = @"个人资料";
     [self setBackBarButton];
+    [self setRightBarButtonTitle:@"保存"];
+}
+
+-(void)onClickRightButton:(id)sender
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {

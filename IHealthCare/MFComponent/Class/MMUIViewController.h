@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MFTableViewCellObject.h"
+#import "MMBarButton.h"
 
 @interface MMUIViewController : UIViewController
 {
@@ -24,5 +25,7 @@
 -(id)getNavigationRightButton:(id)arg1;
 -(void)setBackBarButton;
 -(void)setWantsFullScreen:(BOOL)wantsFullScreenLayout;
+-(void)setRightBarButtonTitle:(NSString *)title;
+-(void)onClickRightButton:(id)sender;
 
 @end
