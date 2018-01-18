@@ -213,6 +213,8 @@
 		A57B48541FCEFA6C0004C397 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57B48531FCEFA650004C397 /* CoreText.framework */; };
 		A57B48561FCEFAEA0004C397 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A57B48551FCEFAE30004C397 /* UIKit.framework */; };
 		A5854A4D2010E0FC001F4A1F /* HCMyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5854A4C2010E0FC001F4A1F /* HCMyInfoViewController.m */; };
+		A5854A502010EE0E001F4A1F /* HCMyInfoAvtarCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5854A4F2010EE0E001F4A1F /* HCMyInfoAvtarCellView.m */; };
+		A5854A522010EE30001F4A1F /* HCMyInfoAvtarCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5854A512010EE30001F4A1F /* HCMyInfoAvtarCellView.xib */; };
 		A5871AE020099CDE004238B6 /* HCGetProductDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871ADF20099CDE004238B6 /* HCGetProductDetailApi.m */; };
 		A5871AF5200A22B8004238B6 /* HCAddOrderAddressApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AF4200A22B8004238B6 /* HCAddOrderAddressApi.m */; };
 		A5871AFE200A5A6F004238B6 /* HCModifyOrderAddressApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5871AFD200A5A6F004238B6 /* HCModifyOrderAddressApi.m */; };
@@ -676,6 +678,9 @@
 		A57B48551FCEFAE30004C397 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A5854A4B2010E0FC001F4A1F /* HCMyInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyInfoViewController.h; sourceTree = "<group>"; };
 		A5854A4C2010E0FC001F4A1F /* HCMyInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyInfoViewController.m; sourceTree = "<group>"; };
+		A5854A4E2010EE0E001F4A1F /* HCMyInfoAvtarCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyInfoAvtarCellView.h; sourceTree = "<group>"; };
+		A5854A4F2010EE0E001F4A1F /* HCMyInfoAvtarCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyInfoAvtarCellView.m; sourceTree = "<group>"; };
+		A5854A512010EE30001F4A1F /* HCMyInfoAvtarCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMyInfoAvtarCellView.xib; sourceTree = "<group>"; };
 		A5871ADE20099CDE004238B6 /* HCGetProductDetailApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetProductDetailApi.h; sourceTree = "<group>"; };
 		A5871ADF20099CDE004238B6 /* HCGetProductDetailApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetProductDetailApi.m; sourceTree = "<group>"; };
 		A5871AF3200A22B8004238B6 /* HCAddOrderAddressApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAddOrderAddressApi.h; sourceTree = "<group>"; };
@@ -1015,10 +1020,13 @@
 				A5CA4BDC200CF451004415F6 /* HCMeProfileAuthStatusCellView.m */,
 				A5CA4BD5200CF261004415F6 /* HCMeProfileCellView.h */,
 				A5CA4BD6200CF261004415F6 /* HCMeProfileCellView.m */,
-				A5854A4B2010E0FC001F4A1F /* HCMyInfoViewController.h */,
-				A5854A4C2010E0FC001F4A1F /* HCMyInfoViewController.m */,
 				A55465081FEFAD3100A7E3C7 /* HCMeViewController.h */,
 				A55465091FEFAD3100A7E3C7 /* HCMeViewController.m */,
+				A5854A4B2010E0FC001F4A1F /* HCMyInfoViewController.h */,
+				A5854A4C2010E0FC001F4A1F /* HCMyInfoViewController.m */,
+				A5854A4E2010EE0E001F4A1F /* HCMyInfoAvtarCellView.h */,
+				A5854A4F2010EE0E001F4A1F /* HCMyInfoAvtarCellView.m */,
+				A5854A512010EE30001F4A1F /* HCMyInfoAvtarCellView.xib */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -1834,6 +1842,7 @@
 				A55465191FEFAD5700A7E3C7 /* HCNormalGroupCellView.xib in Resources */,
 				A5190E701FFA655F00BBF049 /* HCHighProductCellView.xib in Resources */,
 				A5CA4C05200CF567004415F6 /* HCCreateOrderAddressCellView.xib in Resources */,
+				A5854A522010EE30001F4A1F /* HCMyInfoAvtarCellView.xib in Resources */,
 				A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */,
 				A58848FC1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib in Resources */,
 				A56CD7841FD0306C00FFF504 /* LoginAssets.xcassets in Resources */,
@@ -2065,6 +2074,7 @@
 				A5D9AE371FDBB98100B5D4C0 /* HealthCareApiManger.m in Sources */,
 				A57587511FE52733000FC7CB /* HCProductDetailModel.m in Sources */,
 				A5854A4D2010E0FC001F4A1F /* HCMyInfoViewController.m in Sources */,
+				A5854A502010EE0E001F4A1F /* HCMyInfoAvtarCellView.m in Sources */,
 				A57B47EB1FCEF9190004C397 /* IQTitleBarButtonItem.m in Sources */,
 				A57B48311FCEF9190004C397 /* MMOnePixLayoutConstraint.m in Sources */,
 				A511F3531FD425B700AE5D57 /* HealthCareCenterMenuMainView.m in Sources */,

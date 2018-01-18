@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HCMyInfoAvtarCellView">
+            <rect key="frame" x="0.0" y="0.0" width="384" height="88"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="头像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4eZ-vN-2Ef">
+                    <rect key="frame" x="20" y="36" width="29" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common_btn_next_nor" translatesAutoresizingMaskIntoConstraints="NO" id="KwJ-qN-L1R">
+                    <rect key="frame" x="347" y="33" width="22" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="Gmb-3b-jDV"/>
+                        <constraint firstAttribute="width" constant="22" id="Gnd-Rt-7XX"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_img_default_head_nor" translatesAutoresizingMaskIntoConstraints="NO" id="3az-7R-9ji">
+                    <rect key="frame" x="279" y="16.5" width="55" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="55" id="Hbq-QZ-gdz"/>
+                        <constraint firstAttribute="height" constant="55" id="ITo-Zy-mCR"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="KwJ-qN-L1R" secondAttribute="trailing" constant="15" id="1Vb-GT-ytY"/>
+                <constraint firstItem="4eZ-vN-2Ef" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="F2j-i8-WX6"/>
+                <constraint firstItem="KwJ-qN-L1R" firstAttribute="leading" secondItem="3az-7R-9ji" secondAttribute="trailing" constant="13" id="N4G-7B-IQT"/>
+                <constraint firstItem="3az-7R-9ji" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="doo-dI-e8o"/>
+                <constraint firstItem="4eZ-vN-2Ef" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="twi-6D-TIQ"/>
+                <constraint firstItem="KwJ-qN-L1R" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="vp2-3F-fo0"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="m_avtarImageView" destination="3az-7R-9ji" id="F5j-qf-9T9"/>
+            </connections>
+            <point key="canvasLocation" x="29" y="341"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="common_btn_next_nor" width="22" height="22"/>
+        <image name="my_img_default_head_nor" width="80" height="80"/>
+    </resources>
+</document>

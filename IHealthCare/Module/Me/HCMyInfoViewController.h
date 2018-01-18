@@ -7,7 +7,10 @@
 //
 
 #import "MMUIViewController.h"
+#import "HCUserModel.h"
 
 @interface HCMyInfoViewController : MMUIViewController
+
+@property (nonatomic,strong) HCUserModel *userInfo;
 
 @end
