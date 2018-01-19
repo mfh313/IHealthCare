@@ -151,7 +151,7 @@
         HCClassRoomDetailModel *itemModel  = m_classRooms[i];
         
         MFTableViewCellObject *classRoom = [MFTableViewCellObject new];
-        classRoom.cellHeight = 230.0f;
+        classRoom.cellHeight = 202.0f;
         classRoom.cellReuseIdentifier = @"classRoom";
         classRoom.attachIndex = i;
         [m_cellInfos addObject:classRoom];

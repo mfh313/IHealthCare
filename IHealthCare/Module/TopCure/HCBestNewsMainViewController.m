@@ -156,7 +156,7 @@
         HCBestNewsDetailModel *itemModel  = m_bestNews[i];
         
         MFTableViewCellObject *highProducts = [MFTableViewCellObject new];
-        highProducts.cellHeight = 230.0f;
+        highProducts.cellHeight = 202.0f;
         highProducts.cellReuseIdentifier = @"bestNews";
         highProducts.attachIndex = i;
         [m_cellInfos addObject:highProducts];

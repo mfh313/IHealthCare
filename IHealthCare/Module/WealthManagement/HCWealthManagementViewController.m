@@ -161,7 +161,7 @@
         HCManagementDetailModel *itemModel  = m_healthControls[i];
         
         MFTableViewCellObject *healthControl = [MFTableViewCellObject new];
-        healthControl.cellHeight = 230.0f;
+        healthControl.cellHeight = 202.0f;
         healthControl.cellReuseIdentifier = @"healthControls";
         healthControl.attachIndex = i;
         [m_cellInfos addObject:healthControl];
