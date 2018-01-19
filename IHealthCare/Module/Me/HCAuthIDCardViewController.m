@@ -158,9 +158,16 @@
 
 -(void)uploadImageToQNiu:(UIImage *)image
 {
+    __weak typeof(self) weakSelf = self;
+    [self showMBCircleInWindow];
+    
     HCQiniuFileService *qiniuService = [[MMServiceCenter defaultCenter] getService:[HCQiniuFileService class]];
-    [qiniuService uploadImageToQNiu:image complete:^(NSString *url, NSString *name) {
+    [qiniuService uploadImageToQNiu:image complete:^(NSString *url, NSString *name)
+    {
+        __strong typeof(weakSelf) strongSelf = weakSelf;
         m_idImageUrl = url;
+        [strongSelf showTips:@"身份证上传成功"];
+        
     }];
 }
 

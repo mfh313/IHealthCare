@@ -14,6 +14,7 @@ typedef void (^HCQiniuFileServiceHandler)(NSString *url, NSString *name);
 @interface HCQiniuFileService : MMService
 
 @property (nonatomic,strong) NSString *token;
+@property (nonatomic,strong) NSString *bucketUrl;
 
 -(void)getImageToken;
 -(void)uploadImageToQNiu:(UIImage *)image complete:(HCQiniuFileServiceHandler)completion;

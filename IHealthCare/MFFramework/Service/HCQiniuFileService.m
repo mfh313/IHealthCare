@@ -22,8 +22,9 @@
             return;
         }
         
-        strongSelf.token = mfApi.responseNetworkData;
-        NSLog(@"qiniu token=%@",self.token);
+        NSDictionary *tokenInfo = mfApi.responseNetworkData;
+        strongSelf.token = tokenInfo[@"upToken"];
+        strongSelf.bucketUrl = tokenInfo[@"bucketUrl"];
         
     } failure:^(YTKBaseRequest * request) {
         
@@ -75,16 +76,11 @@
         NSLog(@"info ===== %@", info);
         NSLog(@"resp ===== %@", resp);
         if (completion) {
-            NSString *url = [[self hostUrl] stringByAppendingString:resp[@"key"]];
+            NSString *url = [self.bucketUrl stringByAppendingPathComponent:resp[@"key"]];
             completion(url,resp[@"key"]);
         }
     }
                 option:uploadOption];
-}
-
--(NSString *)hostUrl
-{
-    return @"http://p0z63ojhm.bkt.clouddn.com/";
 }
 
 @end
