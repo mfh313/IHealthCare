@@ -17,3 +17,4 @@
 #import <LGAlertView/LGAlertView.h>
 
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIButton+WebCache.h>

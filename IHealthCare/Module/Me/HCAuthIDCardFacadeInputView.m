@@ -26,6 +26,19 @@
     [m_contentButton addTarget:self action:@selector(onClickContentButton:) forControlEvents:UIControlEventTouchUpInside];
 }
 
+-(void)setIdImageUrl:(NSString *)url
+{
+    if ([MFStringUtil isBlankString:url])
+    {
+        [m_contentButton setImage:MFImage(@"my_btn_add_nor") forState:UIControlStateNormal];
+        [m_contentButton setImage:MFImage(@"my_btn_add_press") forState:UIControlStateHighlighted];
+        
+        return;
+    }
+    
+    [m_contentButton sd_setImageWithURL:[NSURL URLWithString:url] forState:UIControlStateNormal];
+}
+
 -(void)onClickContentButton:(id)sender
 {
     if ([self.m_delegate respondsToSelector:@selector(onClickContenButton:)]) {

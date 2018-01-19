@@ -43,6 +43,15 @@
     tableHeaderView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
     contentTableView.tableHeaderView = tableHeaderView;
     
+    [self reloadTableView];
+    
+    [self setTableFooterView];
+}
+
+-(void)reloadTableView
+{
+    [m_tableViewInfo clearAllSection];
+    
     MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
     
     MMTableViewCellInfo *cellInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeIDCardImageCell:cellInfo:)
@@ -55,8 +64,6 @@
     [sectionInfo addCell:cellInfo];
     
     [m_tableViewInfo addSection:sectionInfo];
-    
-    [self setTableFooterView];
 }
 
 -(void)setTableFooterView
@@ -97,6 +104,11 @@
     {
         [cell.contentView addSubview:cell.m_subContentView];
     }
+    
+    HCAuthIDCardFacadeInputView *cellView = (HCAuthIDCardFacadeInputView *)cell.m_subContentView;
+    cellView.frame = cell.contentView.bounds;
+    
+    [cellView setIdImageUrl:m_idImageUrl];
 }
 
 #pragma mark - HCAuthIDCardFacadeInputViewDelegate
@@ -159,7 +171,7 @@
 -(void)uploadImageToQNiu:(UIImage *)image
 {
     __weak typeof(self) weakSelf = self;
-    [self showMBCircleInWindow];
+    [self showMBCircleInViewController];
     
     HCQiniuFileService *qiniuService = [[MMServiceCenter defaultCenter] getService:[HCQiniuFileService class]];
     [qiniuService uploadImageToQNiu:image complete:^(NSString *url, NSString *name)
@@ -167,7 +179,7 @@
         __strong typeof(weakSelf) strongSelf = weakSelf;
         m_idImageUrl = url;
         [strongSelf showTips:@"身份证上传成功"];
-        
+        [strongSelf reloadTableView];
     }];
 }
 

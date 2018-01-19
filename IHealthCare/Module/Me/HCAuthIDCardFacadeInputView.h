@@ -19,4 +19,6 @@
 
 @property (nonatomic,weak) id<HCAuthIDCardFacadeInputViewDelegate> m_delegate;
 
+-(void)setIdImageUrl:(NSString *)url;
+
 @end
