@@ -12,6 +12,7 @@
 #import "HCGetVerifyCodeApi.h"
 #import "HCUserLoginApi.h"
 #import "HCLoginService.h"
+#import "HCQiniuFileService.h"
 
 @interface HCLoginViewController () <HCLoginContentViewDelegate,tableViewDelegate,UITableViewDelegate>
 {
@@ -105,10 +106,18 @@
         
         [[HealthCareViewControllerManager getAppViewControllerManager] launchMainTabViewController];
         
+        [strongSelf onLoginSucess];
+        
     } failure:^(YTKBaseRequest * request) {
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];
+}
+
+-(void)onLoginSucess
+{
+    HCQiniuFileService *qiniuService = [[MMServiceCenter defaultCenter] getService:[HCQiniuFileService class]];
+    [qiniuService getImageToken];
 }
 
 -(void)onClickRegister:(id)sender
