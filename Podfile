@@ -5,7 +5,6 @@ target 'IHealthCare' do
 
 pod 'LGAlertView'
 pod 'ZFPlayer'
-pod 'PLPlayerKit'
 pod 'Qiniu', '~> 7.2'
 pod 'WechatOpenSDK'
 pod 'MZFormSheetPresentationController'
