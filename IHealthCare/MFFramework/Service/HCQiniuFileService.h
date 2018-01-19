@@ -9,11 +9,13 @@
 #import "MMService.h"
 #import <QiniuSDK.h>
 
+typedef void (^HCQiniuFileServiceHandler)(NSString *url, NSString *name);
+
 @interface HCQiniuFileService : MMService
 
 @property (nonatomic,strong) NSString *token;
 
 -(void)getImageToken;
--(void)uploadImageToQNiu:(UIImage *)image;
+-(void)uploadImageToQNiu:(UIImage *)image complete:(HCQiniuFileServiceHandler)completion;
 
 @end

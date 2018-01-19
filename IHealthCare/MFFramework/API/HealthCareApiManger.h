@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//身份认证
++ (NSString *)userAuth;
+
 //查询用户信息
 + (NSString *)userInfo:(NSString *)telephone;
 

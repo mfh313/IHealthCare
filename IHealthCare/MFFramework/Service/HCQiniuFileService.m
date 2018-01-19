@@ -57,12 +57,13 @@
     return filePath;
 }
 
--(void)uploadImageToQNiu:(UIImage *)image
+-(void)uploadImageToQNiu:(UIImage *)image complete:(HCQiniuFileServiceHandler)completion
 {
-    [self uploadImageToQNFilePath:[self getImagePath:image]];
+    [self uploadImageToQNFilePath:[self getImagePath:image] complete:completion];
 }
 
-- (void)uploadImageToQNFilePath:(NSString *)filePath {
+- (void)uploadImageToQNFilePath:(NSString *)filePath complete:(HCQiniuFileServiceHandler)completion
+{
     QNUploadManager *upManager = [[QNUploadManager alloc] init];
     QNUploadOption *uploadOption = [[QNUploadOption alloc] initWithMime:nil progressHandler:^(NSString *key, float percent) {
         NSLog(@"percent == %.2f", percent);
@@ -73,10 +74,17 @@
     [upManager putFile:filePath key:nil token:self.token complete:^(QNResponseInfo *info, NSString *key, NSDictionary *resp) {
         NSLog(@"info ===== %@", info);
         NSLog(@"resp ===== %@", resp);
+        if (completion) {
+            NSString *url = [[self hostUrl] stringByAppendingString:resp[@"key"]];
+            completion(url,resp[@"key"]);
+        }
     }
                 option:uploadOption];
 }
 
-
+-(NSString *)hostUrl
+{
+    return @"http://p0z63ojhm.bkt.clouddn.com/";
+}
 
 @end

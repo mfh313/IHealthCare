@@ -14,6 +14,8 @@
 @interface HCAuthIDCardViewController () <HCAuthIDCardFacadeInputViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     MMTableViewInfo *m_tableViewInfo;
+    
+    NSString *m_idImageUrl;
 }
 
 @property (nonatomic, strong) UIImage *pickImage;
@@ -157,7 +159,9 @@
 -(void)uploadImageToQNiu:(UIImage *)image
 {
     HCQiniuFileService *qiniuService = [[MMServiceCenter defaultCenter] getService:[HCQiniuFileService class]];
-    [qiniuService uploadImageToQNiu:image];
+    [qiniuService uploadImageToQNiu:image complete:^(NSString *url, NSString *name) {
+        m_idImageUrl = url;
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

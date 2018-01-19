@@ -17,6 +17,12 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
 
 @implementation HealthCareApiManger
 
+//身份认证
++ (NSString *)userAuth
+{
+    return MFURLWithPara(@"api/users/auth");
+}
+
 //查询子课程详情
 + (NSString *)subClassesDetail:(NSInteger)crid
 {

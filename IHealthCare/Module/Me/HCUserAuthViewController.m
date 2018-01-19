@@ -7,9 +7,12 @@
 //
 
 #import "HCUserAuthViewController.h"
+#import "HCUserAuthApi.h"
 
 @interface HCUserAuthViewController ()
-
+{
+    
+}
 @end
 
 @implementation HCUserAuthViewController
