@@ -23,6 +23,7 @@
         }
         
         strongSelf.token = mfApi.responseNetworkData;
+        NSLog(@"qiniu token=%@",self.token);
         
     } failure:^(YTKBaseRequest * request) {
         

@@ -9,6 +9,7 @@
 #import "HCAuthIDCardViewController.h"
 #import "HCAuthIDCardFacadeInputView.h"
 #import "HCQiniuFileService.h"
+#import "HCUserAuthViewController.h"
 
 @interface HCAuthIDCardViewController () <HCAuthIDCardFacadeInputViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
@@ -104,7 +105,8 @@
 
 -(void)onClickNextButton
 {
-    NSLog(@"onClickNextButton");
+    HCUserAuthViewController *userAuthVC = [HCUserAuthViewController new];
+    [self.navigationController pushViewController:userAuthVC animated:YES];
 }
 
 - (void)gotoImageLibrary {

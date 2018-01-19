@@ -61,6 +61,7 @@
 		A53695B21FD59769007CC67C /* SPPageTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695AB1FD59769007CC67C /* SPPageTagView.m */; };
 		A53695B31FD59769007CC67C /* SPTagBarScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = A53695AD1FD59769007CC67C /* SPTagBarScrollView.m */; };
 		A549A99020121A5F0095E557 /* HCQiniuFileService.m in Sources */ = {isa = PBXBuildFile; fileRef = A549A98F20121A5F0095E557 /* HCQiniuFileService.m */; };
+		A549A993201220FD0095E557 /* HCUserAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A549A992201220FD0095E557 /* HCUserAuthViewController.m */; };
 		A55388931FFE61D900D0DC27 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388861FFE61D900D0DC27 /* WXApiManager.m */; };
 		A55388941FFE61D900D0DC27 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388881FFE61D900D0DC27 /* WXApiRequestHandler.m */; };
 		A55388951FFE61D900D0DC27 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A553888A1FFE61D900D0DC27 /* WXApiResponseHandler.m */; };
@@ -379,6 +380,8 @@
 		A53695AD1FD59769007CC67C /* SPTagBarScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPTagBarScrollView.m; sourceTree = "<group>"; };
 		A549A98E20121A5F0095E557 /* HCQiniuFileService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCQiniuFileService.h; sourceTree = "<group>"; };
 		A549A98F20121A5F0095E557 /* HCQiniuFileService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCQiniuFileService.m; sourceTree = "<group>"; };
+		A549A991201220FD0095E557 /* HCUserAuthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCUserAuthViewController.h; sourceTree = "<group>"; };
+		A549A992201220FD0095E557 /* HCUserAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserAuthViewController.m; sourceTree = "<group>"; };
 		A55388851FFE61D900D0DC27 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
 		A55388861FFE61D900D0DC27 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
 		A55388871FFE61D900D0DC27 /* WXApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiRequestHandler.h; sourceTree = "<group>"; };
@@ -1017,6 +1020,8 @@
 				A55464FF1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib */,
 				A55465001FEFAD3100A7E3C7 /* HCAuthIDCardViewController.h */,
 				A55465011FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m */,
+				A549A991201220FD0095E557 /* HCUserAuthViewController.h */,
+				A549A992201220FD0095E557 /* HCUserAuthViewController.m */,
 				A55465021FEFAD3100A7E3C7 /* HCMeFooterView.h */,
 				A55465031FEFAD3100A7E3C7 /* HCMeFooterView.m */,
 				A55465041FEFAD3100A7E3C7 /* HCMeFooterView.xib */,
@@ -2108,6 +2113,7 @@
 				A520E6051FEE76A200E4EFAD /* MMTableViewInfo.m in Sources */,
 				A57B48061FCEF9190004C397 /* ObjectivecDescriptor.pb.m in Sources */,
 				A5190E791FFA655F00BBF049 /* HCTopCureMainCustomNavbar.m in Sources */,
+				A549A993201220FD0095E557 /* HCUserAuthViewController.m in Sources */,
 				A57B481A1FCEF9190004C397 /* NSDictionary+Unicode.m in Sources */,
 				A5CA4C0F200CF567004415F6 /* HCOrderAddressCreateViewController.m in Sources */,
 				A566B4D61FD297FE004F6843 /* UINavigationItem+margin.m in Sources */,
