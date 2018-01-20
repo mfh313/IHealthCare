@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HCUserAuthLevelSelectItemView.h"
+#import "HCUserModel.h"
 
 @class HCUserAuthLevelSelectView;
 @protocol HCUserAuthLevelSelectViewDelegate <NSObject>
@@ -19,6 +21,8 @@
 @interface HCUserAuthLevelSelectView : UIView
 {
     UILabel *m_titleLabel;
+    HCUserAuthLevelSelectItemView *m_BigCustomerView;
+    HCUserAuthLevelSelectItemView *m_AgentView;
 }
 
 @property (nonatomic,weak) id<HCUserAuthLevelSelectViewDelegate> m_delegate;
@@ -26,3 +30,4 @@
 -(void)setCurrentLevel:(NSInteger)level;
 
 @end
+

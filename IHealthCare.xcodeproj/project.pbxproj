@@ -279,6 +279,7 @@
 		A5DD8D082001F6A90079CD7D /* HCGetOrderUserAddressApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD8D072001F6A90079CD7D /* HCGetOrderUserAddressApi.m */; };
 		AC47664B20132A6600B2DB6D /* HCUserAuthTextInputCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC47664A20132A6600B2DB6D /* HCUserAuthTextInputCellView.m */; };
 		AC47665120133EEE00B2DB6D /* HCUserAuthLevelSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC47665020133EEE00B2DB6D /* HCUserAuthLevelSelectView.m */; };
+		AC47665420134E3800B2DB6D /* HCUserAuthLevelSelectItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC47665320134E3800B2DB6D /* HCUserAuthLevelSelectItemView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -807,6 +808,8 @@
 		AC47664A20132A6600B2DB6D /* HCUserAuthTextInputCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserAuthTextInputCellView.m; sourceTree = "<group>"; };
 		AC47664F20133EEE00B2DB6D /* HCUserAuthLevelSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCUserAuthLevelSelectView.h; sourceTree = "<group>"; };
 		AC47665020133EEE00B2DB6D /* HCUserAuthLevelSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserAuthLevelSelectView.m; sourceTree = "<group>"; };
+		AC47665220134E3800B2DB6D /* HCUserAuthLevelSelectItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCUserAuthLevelSelectItemView.h; sourceTree = "<group>"; };
+		AC47665320134E3800B2DB6D /* HCUserAuthLevelSelectItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserAuthLevelSelectItemView.m; sourceTree = "<group>"; };
 		D46774D91909037E0185E2B2 /* Pods-IHealthCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.release.xcconfig"; sourceTree = "<group>"; };
 		E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IHealthCare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1033,6 +1036,8 @@
 				A549A992201220FD0095E557 /* HCUserAuthViewController.m */,
 				AC47664F20133EEE00B2DB6D /* HCUserAuthLevelSelectView.h */,
 				AC47665020133EEE00B2DB6D /* HCUserAuthLevelSelectView.m */,
+				AC47665220134E3800B2DB6D /* HCUserAuthLevelSelectItemView.h */,
+				AC47665320134E3800B2DB6D /* HCUserAuthLevelSelectItemView.m */,
 				AC47664920132A6600B2DB6D /* HCUserAuthTextInputCellView.h */,
 				AC47664A20132A6600B2DB6D /* HCUserAuthTextInputCellView.m */,
 				A55465021FEFAD3100A7E3C7 /* HCMeFooterView.h */,
@@ -2112,6 +2117,7 @@
 				A57B47E21FCEF9190004C397 /* IQUITextFieldView+Additions.m in Sources */,
 				A57B48371FCEF9190004C397 /* MMUIViewController.m in Sources */,
 				A5648D481FF2AEBE00EF956B /* HCClassRoomDetailModel.m in Sources */,
+				AC47665420134E3800B2DB6D /* HCUserAuthLevelSelectItemView.m in Sources */,
 				A57B47F21FCEF9190004C397 /* Chat.pb.m in Sources */,
 				A57B48251FCEF9190004C397 /* UIViewController+pregress.m in Sources */,
 				A5DD8D082001F6A90079CD7D /* HCGetOrderUserAddressApi.m in Sources */,
