@@ -8,8 +8,9 @@
 
 #import "HCUserAuthViewController.h"
 #import "HCUserAuthApi.h"
+#import "HCUserAuthTextInputCellView.h"
 
-@interface HCUserAuthViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface HCUserAuthViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCUserAuthTextInputCellViewDelegate>
 {
     MFUITableView *m_tableView;
     NSMutableArray *m_authInfos;
@@ -106,14 +107,17 @@
     NSMutableDictionary *telephone = [NSMutableDictionary dictionary];
     telephone[@"key"] = @"telephone";
     telephone[@"placeholder"] = @"绑定手机号";
+    telephone[@"keyboardType"] = @(UIKeyboardTypeNumberPad);
     
     NSMutableDictionary *idNumber = [NSMutableDictionary dictionary];
     idNumber[@"key"] = @"idNumber";
     idNumber[@"placeholder"] = @"身份证";
+    idNumber[@"keyboardType"] = @(UIKeyboardTypeNumberPad);
     
     NSMutableDictionary *bankCardId = [NSMutableDictionary dictionary];
     bankCardId[@"key"] = @"bankCardId";
     bankCardId[@"placeholder"] = @"银行卡号";
+    bankCardId[@"keyboardType"] = @(UIKeyboardTypeNumberPad);
     
     NSMutableDictionary *company = [NSMutableDictionary dictionary];
     company[@"key"] = @"company";
@@ -142,7 +146,7 @@
     NSString *identifier = cellInfo.cellReuseIdentifier;
     if ([identifier isEqualToString:@"textField"])
     {
-        
+        return [self tableView:tableView textFieldCellForIndex:indexPath];
     }
     else if ([identifier isEqualToString:@"levelSelect"])
     {
@@ -176,6 +180,46 @@
 {
     MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
     return cellInfo.cellHeight;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView textFieldCellForIndex:(NSIndexPath *)indexPath
+{
+    MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    NSString *identifier = cellInfo.cellReuseIdentifier;
+    NSInteger attachIndex = cellInfo.attachIndex;
+    
+    MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+        HCUserAuthTextInputCellView *cellView = [[HCUserAuthTextInputCellView alloc] initWithFrame:cell.contentView.frame];
+        cellView.m_delegate = self;
+        cell.m_subContentView = cellView;
+    }
+    
+    NSMutableDictionary *textFieldInfo = m_authInfos[attachIndex];
+    
+    HCUserAuthTextInputCellView *cellView = (HCUserAuthTextInputCellView *)cell.m_subContentView;
+    cellView.index = attachIndex;
+    [cellView setPlaceHolder:textFieldInfo[@"placeholder"]];
+    
+    UITextField *contentTextField = [cellView contentTextField];
+    contentTextField.returnKeyType = UIReturnKeyDone;
+    contentTextField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    if (textFieldInfo[@"keyboardType"])
+    {
+        NSInteger keyboardType = [(NSNumber *)textFieldInfo[@"keyboardType"] integerValue];
+        contentTextField.keyboardType = keyboardType;
+    }
+    else
+    {
+        contentTextField.keyboardType = UIKeyboardTypeDefault;
+    }
+    
+    NSString *inputValue = textFieldInfo[@"inputValue"];
+    [contentTextField setText:inputValue];
+    
+    return cell;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView submitButtonCellForIndex:(NSIndexPath *)indexPath
@@ -234,6 +278,32 @@
 -(void)onClickSubmitButton
 {
     NSLog(@"onClickSubmitButton");
+}
+
+#pragma mark - HCUserAuthTextInputCellViewDelegate
+-(BOOL)userAuthTextInputCellView:(HCUserAuthTextInputCellView *)cellView shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    UITextField *contentTextField = [cellView contentTextField];
+    
+    NSString *content = contentTextField.text;
+    
+    if ([string isEqualToString:@"\n"]) {
+        [contentTextField resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
+}
+
+-(void)userAuthTextFieldEditChanged:(HCUserAuthTextInputCellView *)cellView
+{
+    UITextField *contentTextField = [cellView contentTextField];
+    NSString *content = contentTextField.text;
+    
+    NSInteger attachIndex = cellView.index;
+    
+    NSMutableDictionary *textFieldInfo = m_authInfos[attachIndex];
+    [textFieldInfo safeSetObject:content forKey:@"inputValue"];
 }
 
 - (void)didReceiveMemoryWarning {
