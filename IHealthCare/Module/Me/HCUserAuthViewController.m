@@ -12,8 +12,9 @@
 #import "HCUserAuthLevelSelectView.h"
 #import "HCUserAuthApi.h"
 #import "HCMeViewController.h"
+#import "HCUserAuthSubmitSuccessViewController.h"
 
-@interface HCUserAuthViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCUserAuthTextInputCellViewDelegate,HCUserAuthLevelSelectViewDelegate>
+@interface HCUserAuthViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCUserAuthTextInputCellViewDelegate,HCUserAuthLevelSelectViewDelegate,HCUserAuthSubmitSuccessViewControllerDelegate>
 {
     MFUITableView *m_tableView;
     
@@ -372,14 +373,22 @@
         
         NSDictionary *tokenInfo = mfApi.responseNetworkData;
         [strongSelf showTips:@"提交成功"];
-        [strongSelf popToMeController];
+        [strongSelf pushUserAuthSubmitSuccessVC];
         
     } failure:^(YTKBaseRequest * request) {
         
     }];
 }
 
--(void)popToMeController
+-(void)pushUserAuthSubmitSuccessVC
+{
+    HCUserAuthSubmitSuccessViewController *successVC = [HCUserAuthSubmitSuccessViewController new];
+    successVC.m_delegate = self;
+    [self.navigationController pushViewController:successVC animated:YES];
+}
+
+#pragma mark - HCUserAuthSubmitSuccessViewControllerDelegate
+-(void)onClickUserAuthSubmitSuccess
 {
     NSArray *viewControllers = self.navigationController.viewControllers;
     
@@ -396,6 +405,7 @@
     UIViewController *meVC = viewControllers[meVCIndex];
     [self.navigationController popToViewController:meVC animated:YES];
 }
+
 
 -(BOOL)checkSubmitInfo
 {
