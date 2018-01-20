@@ -10,4 +10,6 @@
 
 @interface HCUserAuthViewController : MMUIViewController
 
+@property (nonatomic,strong) NSString *IdImageUrl;
+
 @end

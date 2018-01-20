@@ -120,6 +120,7 @@
 -(void)onClickNextButton
 {
     HCUserAuthViewController *userAuthVC = [HCUserAuthViewController new];
+    userAuthVC.IdImageUrl = m_idImageUrl;
     [self.navigationController pushViewController:userAuthVC animated:YES];
 }
 
