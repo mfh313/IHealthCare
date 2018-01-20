@@ -89,6 +89,7 @@
 		A5623CAE1FCDB851001A6B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623CAD1FCDB851001A6B5D /* main.m */; };
 		A563AECB201382A8006EDC3C /* HCUserAuthSubmitSuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A563AECA201382A8006EDC3C /* HCUserAuthSubmitSuccessViewController.m */; };
 		A563AECE20138E8C006EDC3C /* HCUserAuthStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A563AECD20138E8C006EDC3C /* HCUserAuthStatusViewController.m */; };
+		A563AED12013A7BF006EDC3C /* HCPutUserInfoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A563AED02013A7BF006EDC3C /* HCPutUserInfoApi.m */; };
 		A5648D2E1FF2684F00EF956B /* HCGetHealthControlsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5648D2D1FF2684F00EF956B /* HCGetHealthControlsApi.m */; };
 		A5648D451FF2ACEE00EF956B /* HCGetClassRoomApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5648D441FF2ACEE00EF956B /* HCGetClassRoomApi.m */; };
 		A5648D481FF2AEBE00EF956B /* HCClassRoomDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5648D471FF2AEBE00EF956B /* HCClassRoomDetailModel.m */; };
@@ -439,6 +440,8 @@
 		A563AECA201382A8006EDC3C /* HCUserAuthSubmitSuccessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserAuthSubmitSuccessViewController.m; sourceTree = "<group>"; };
 		A563AECC20138E8C006EDC3C /* HCUserAuthStatusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCUserAuthStatusViewController.h; sourceTree = "<group>"; };
 		A563AECD20138E8C006EDC3C /* HCUserAuthStatusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserAuthStatusViewController.m; sourceTree = "<group>"; };
+		A563AECF2013A7BF006EDC3C /* HCPutUserInfoApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCPutUserInfoApi.h; sourceTree = "<group>"; };
+		A563AED02013A7BF006EDC3C /* HCPutUserInfoApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPutUserInfoApi.m; sourceTree = "<group>"; };
 		A5648D2C1FF2684E00EF956B /* HCGetHealthControlsApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetHealthControlsApi.h; sourceTree = "<group>"; };
 		A5648D2D1FF2684F00EF956B /* HCGetHealthControlsApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetHealthControlsApi.m; sourceTree = "<group>"; };
 		A5648D431FF2ACEE00EF956B /* HCGetClassRoomApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetClassRoomApi.h; sourceTree = "<group>"; };
@@ -1740,6 +1743,8 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A563AECF2013A7BF006EDC3C /* HCPutUserInfoApi.h */,
+				A563AED02013A7BF006EDC3C /* HCPutUserInfoApi.m */,
 				AC476655201375F400B2DB6D /* HCGetHealthControlDetailApi.h */,
 				AC476656201375F500B2DB6D /* HCGetHealthControlDetailApi.m */,
 				A549A994201222D10095E557 /* HCUserAuthApi.h */,
@@ -2019,6 +2024,7 @@
 				A55388971FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
 				A5CA4C06200CF567004415F6 /* HCCreateOrderItemCellView.m in Sources */,
 				A57B483F1FCEF9190004C397 /* MMTabBarController.m in Sources */,
+				A563AED12013A7BF006EDC3C /* HCPutUserInfoApi.m in Sources */,
 				A57B480D1FCEF9190004C397 /* WireFormat.m in Sources */,
 				A5CA4C12200CF567004415F6 /* HCOrderAddressSelectViewController.m in Sources */,
 				A58849091FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.m in Sources */,

@@ -10,6 +10,7 @@
 #import "HCMyInfoAvtarCellView.h"
 #import "HCMyInfoInputCellView.h"
 #import "HCGetUserInfoApi.h"
+#import "HCPutUserInfoApi.h"
 
 @interface HCMyInfoViewController () <MMTableViewInfoDelegate>
 {
