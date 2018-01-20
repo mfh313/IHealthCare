@@ -13,4 +13,3 @@
 @property (nonatomic,strong) NSString *IdImageUrl;
 
 @end
-

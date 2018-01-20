@@ -278,6 +278,7 @@
 		A5DD8D052001E8A60079CD7D /* HCOrderUserAddressModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD8D042001E8A60079CD7D /* HCOrderUserAddressModel.m */; };
 		A5DD8D082001F6A90079CD7D /* HCGetOrderUserAddressApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5DD8D072001F6A90079CD7D /* HCGetOrderUserAddressApi.m */; };
 		AC47664B20132A6600B2DB6D /* HCUserAuthTextInputCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC47664A20132A6600B2DB6D /* HCUserAuthTextInputCellView.m */; };
+		AC47665120133EEE00B2DB6D /* HCUserAuthLevelSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC47665020133EEE00B2DB6D /* HCUserAuthLevelSelectView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -804,6 +805,8 @@
 		A5DD8D072001F6A90079CD7D /* HCGetOrderUserAddressApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetOrderUserAddressApi.m; sourceTree = "<group>"; };
 		AC47664920132A6600B2DB6D /* HCUserAuthTextInputCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCUserAuthTextInputCellView.h; sourceTree = "<group>"; };
 		AC47664A20132A6600B2DB6D /* HCUserAuthTextInputCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserAuthTextInputCellView.m; sourceTree = "<group>"; };
+		AC47664F20133EEE00B2DB6D /* HCUserAuthLevelSelectView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCUserAuthLevelSelectView.h; sourceTree = "<group>"; };
+		AC47665020133EEE00B2DB6D /* HCUserAuthLevelSelectView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserAuthLevelSelectView.m; sourceTree = "<group>"; };
 		D46774D91909037E0185E2B2 /* Pods-IHealthCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.release.xcconfig"; sourceTree = "<group>"; };
 		E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IHealthCare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1028,6 +1031,8 @@
 				A55465011FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m */,
 				A549A991201220FD0095E557 /* HCUserAuthViewController.h */,
 				A549A992201220FD0095E557 /* HCUserAuthViewController.m */,
+				AC47664F20133EEE00B2DB6D /* HCUserAuthLevelSelectView.h */,
+				AC47665020133EEE00B2DB6D /* HCUserAuthLevelSelectView.m */,
 				AC47664920132A6600B2DB6D /* HCUserAuthTextInputCellView.h */,
 				AC47664A20132A6600B2DB6D /* HCUserAuthTextInputCellView.m */,
 				A55465021FEFAD3100A7E3C7 /* HCMeFooterView.h */,
@@ -2166,6 +2171,7 @@
 				A57B48081FCEF9190004C397 /* RingBuffer.m in Sources */,
 				A53695B31FD59769007CC67C /* SPTagBarScrollView.m in Sources */,
 				A5190E731FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.m in Sources */,
+				AC47665120133EEE00B2DB6D /* HCUserAuthLevelSelectView.m in Sources */,
 				A52A8E16200AE8CF0067E856 /* HCPlayerControlView.m in Sources */,
 				A57B48331FCEF9190004C397 /* MMUIBridgeView.m in Sources */,
 				A549A996201222D10095E557 /* HCUserAuthApi.m in Sources */,

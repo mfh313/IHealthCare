@@ -9,12 +9,17 @@
 #import "HCUserAuthViewController.h"
 #import "HCUserAuthApi.h"
 #import "HCUserAuthTextInputCellView.h"
+#import "HCUserAuthLevelSelectView.h"
 
-@interface HCUserAuthViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCUserAuthTextInputCellViewDelegate>
+@interface HCUserAuthViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCUserAuthTextInputCellViewDelegate,HCUserAuthLevelSelectViewDelegate>
 {
     MFUITableView *m_tableView;
+    
     NSMutableArray *m_authInfos;
+    
+    NSInteger m_userLevel;
 }
+
 @end
 
 @implementation HCUserAuthViewController
@@ -35,6 +40,7 @@
     [self.view addSubview:m_tableView];
     
     [self initAuthInfos];
+    m_userLevel = 3;
     
     [self makeCellObjects];
     [m_tableView reloadData];
@@ -150,7 +156,7 @@
     }
     else if ([identifier isEqualToString:@"levelSelect"])
     {
-        
+        return [self tableView:tableView levelSelectCellForIndex:indexPath];
     }
     else if ([identifier isEqualToString:@"submitButton"])
     {
@@ -180,6 +186,35 @@
 {
     MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
     return cellInfo.cellHeight;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView levelSelectCellForIndex:(NSIndexPath *)indexPath
+{
+    MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    NSString *identifier = cellInfo.cellReuseIdentifier;
+    NSInteger attachIndex = cellInfo.attachIndex;
+    
+    MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+        HCUserAuthLevelSelectView *cellView = [[HCUserAuthLevelSelectView alloc] initWithFrame:cell.contentView.frame];
+        cellView.m_delegate = self;
+        cell.m_subContentView = cellView;
+    }
+    
+    NSMutableDictionary *textFieldInfo = m_authInfos[attachIndex];
+    
+    HCUserAuthLevelSelectView *cellView = (HCUserAuthLevelSelectView *)cell.m_subContentView;
+    [cellView setCurrentLevel:m_userLevel];
+    
+    return cell;
+}
+
+#pragma mark - HCUserAuthLevelSelectViewDelegate
+-(void)didSelectLevel:(NSInteger)level cellView:(HCUserAuthLevelSelectView *)cellView
+{
+    m_userLevel = level;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView textFieldCellForIndex:(NSIndexPath *)indexPath
@@ -275,11 +310,6 @@
     return cell;
 }
 
--(void)onClickSubmitButton
-{
-    NSLog(@"onClickSubmitButton");
-}
-
 #pragma mark - HCUserAuthTextInputCellViewDelegate
 -(BOOL)userAuthTextInputCellView:(HCUserAuthTextInputCellView *)cellView shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
@@ -304,6 +334,11 @@
     
     NSMutableDictionary *textFieldInfo = m_authInfos[attachIndex];
     [textFieldInfo safeSetObject:content forKey:@"inputValue"];
+}
+
+-(void)onClickSubmitButton
+{
+    NSLog(@"onClickSubmitButton");
 }
 
 - (void)didReceiveMemoryWarning {
