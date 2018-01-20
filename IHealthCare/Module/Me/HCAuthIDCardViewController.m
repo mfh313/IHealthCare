@@ -119,6 +119,11 @@
 
 -(void)onClickNextButton
 {
+    if ([MFStringUtil isBlankString:m_idImageUrl]) {
+        [self showTips:@"请先上传身份证"];
+        return;
+    }
+    
     HCUserAuthViewController *userAuthVC = [HCUserAuthViewController new];
     userAuthVC.IdImageUrl = m_idImageUrl;
     [self.navigationController pushViewController:userAuthVC animated:YES];
