@@ -371,10 +371,24 @@
         
         NSDictionary *tokenInfo = mfApi.responseNetworkData;
         [strongSelf showTips:@"提交成功"];
+        [strongSelf popToMeController];
         
     } failure:^(YTKBaseRequest * request) {
         
     }];
+}
+
+-(void)popToMeController
+{
+    NSArray *viewControllers = self.navigationController.viewControllers;
+    NSInteger meVCIndex = viewControllers.count - 3;
+    
+    if (viewControllers.count < 3) {
+        return;
+    }
+    
+    UIViewController *meVC = viewControllers[meVCIndex];
+    [self.navigationController popToViewController:meVC animated:YES];
 }
 
 -(BOOL)checkSubmitInfo
