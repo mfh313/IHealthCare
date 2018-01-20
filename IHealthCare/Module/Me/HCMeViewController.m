@@ -93,7 +93,7 @@
     contentTableView.tableHeaderView = tableHeaderView;
     
     HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
-    if ([MFStringUtil isBlankString:loginService.token])
+    if ([MFStringUtil isBlankString:loginService.token] || !m_useInfo)
     {
         HCMeProfileUnLoginCellView *profileView = [[HCMeProfileUnLoginCellView alloc] init];
         profileView.m_delegate = self;
@@ -145,6 +145,8 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:animated];
+    
+    [self getUserInfo];
 }
 
 #pragma mark - HCMeProfileCellViewDelegate

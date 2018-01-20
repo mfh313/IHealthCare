@@ -370,6 +370,7 @@
         }
         
         NSDictionary *tokenInfo = mfApi.responseNetworkData;
+        [strongSelf showTips:@"提交成功"];
         
     } failure:^(YTKBaseRequest * request) {
         
@@ -378,6 +379,14 @@
 
 -(BOOL)checkSubmitInfo
 {
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    
+    NSString *telephone = m_inputInfo[@"telephone"];
+    if (![MFStringUtil isBlankString:telephone] && ![loginService.userPhone isEqualToString:telephone]) {
+        [self showTips:@"请输入登录的手机号"];
+        return NO;
+    }
+    
     if ([MFStringUtil isBlankString:m_inputInfo[@"name"]])
     {
         [self showTips:@"请输入姓名"];
