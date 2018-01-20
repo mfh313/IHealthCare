@@ -177,7 +177,7 @@
 -(void)uploadImageToQNiu:(UIImage *)image
 {
     __weak typeof(self) weakSelf = self;
-    [self showMBCircleInViewController];
+    [self showMBStatusInViewController:@"正在上传身份证..."];
     
     HCQiniuFileService *qiniuService = [[MMServiceCenter defaultCenter] getService:[HCQiniuFileService class]];
     [qiniuService uploadImageToQNiu:image complete:^(NSString *url, NSString *name)

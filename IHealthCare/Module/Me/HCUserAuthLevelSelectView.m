@@ -64,6 +64,10 @@
 {
     NSInteger attchValue = itemView.attchValue;
     [self setCurrentLevel:attchValue];
+    
+    if ([self.m_delegate respondsToSelector:@selector(didSelectLevel:cellView:)]) {
+        [self.m_delegate didSelectLevel:attchValue cellView:self];
+    }
 }
 
 -(void)setCurrentLevel:(NSInteger)level
