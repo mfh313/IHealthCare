@@ -29,7 +29,7 @@
     requestArgument[@"city"] = self.city;
     requestArgument[@"bankCardId"] = self.bankCardId;
     requestArgument[@"company"] = self.company;
-    requestArgument[@"level"] = @(self.level);
+    requestArgument[@"level"] = self.level;
     return requestArgument;
 }
 

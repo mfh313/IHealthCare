@@ -17,6 +17,6 @@
 @property (nonatomic,strong) NSString *city;
 @property (nonatomic,strong) NSString *bankCardId;
 @property (nonatomic,strong) NSString *company;
-@property (nonatomic,assign) NSInteger level;
+@property (nonatomic,strong) NSNumber *level;
 
 @end

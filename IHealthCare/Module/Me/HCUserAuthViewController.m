@@ -10,6 +10,7 @@
 #import "HCUserAuthApi.h"
 #import "HCUserAuthTextInputCellView.h"
 #import "HCUserAuthLevelSelectView.h"
+#import "HCUserAuthApi.h"
 
 @interface HCUserAuthViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCUserAuthTextInputCellViewDelegate,HCUserAuthLevelSelectViewDelegate>
 {
@@ -18,6 +19,8 @@
     NSMutableArray *m_authInfos;
     
     NSInteger m_userLevel;
+    
+    NSMutableDictionary *m_inputInfo;
 }
 
 @end
@@ -39,10 +42,11 @@
     m_tableView.m_delegate = self;
     [self.view addSubview:m_tableView];
     
+    m_inputInfo = [NSMutableDictionary dictionary];
     [self initAuthInfos];
-    m_userLevel = 3;
     
     [self makeCellObjects];
+    
     [m_tableView reloadData];
 }
 
@@ -215,6 +219,8 @@
 -(void)didSelectLevel:(NSInteger)level cellView:(HCUserAuthLevelSelectView *)cellView
 {
     m_userLevel = level;
+    
+    [m_inputInfo safeSetObject:@(m_userLevel) forKey:@"level"];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView textFieldCellForIndex:(NSIndexPath *)indexPath
@@ -333,12 +339,77 @@
     NSInteger attachIndex = cellView.index;
     
     NSMutableDictionary *textFieldInfo = m_authInfos[attachIndex];
-    [textFieldInfo safeSetObject:content forKey:@"inputValue"];
+    NSString *inputKey = textFieldInfo[@"key"];
+    [m_inputInfo safeSetObject:content forKey:inputKey];
 }
 
 -(void)onClickSubmitButton
 {
-    NSLog(@"onClickSubmitButton");
+    if (![self checkSubmitInfo]) {
+        return;
+    }
+    
+    __weak typeof(self) weakSelf = self;
+    HCUserAuthApi *mfApi = [HCUserAuthApi new];
+    mfApi.telephone = m_inputInfo[@"telephone"];
+    mfApi.name = m_inputInfo[@"name"];
+    mfApi.idNumber = m_inputInfo[@"idNumber"];
+    mfApi.idImageUrl = self.IdImageUrl;
+    mfApi.city = m_inputInfo[@"city"];
+    mfApi.bankCardId = m_inputInfo[@"bankCardId"];
+    mfApi.company = m_inputInfo[@"company"];
+    mfApi.level = m_inputInfo[@"level"];
+    
+    mfApi.animatingText = @"提交中...";
+    mfApi.animatingView = MFAppWindow;
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            return;
+        }
+        
+        NSDictionary *tokenInfo = mfApi.responseNetworkData;
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+    }];
+}
+
+-(BOOL)checkSubmitInfo
+{
+    if ([MFStringUtil isBlankString:m_inputInfo[@"name"]])
+    {
+        [self showTips:@"请输入姓名"];
+        return NO;
+    }
+    else if ([MFStringUtil isBlankString:m_inputInfo[@"telephone"]])
+    {
+        [self showTips:@"请输入手机号"];
+        return NO;
+    }
+    else if ([MFStringUtil isBlankString:m_inputInfo[@"idNumber"]])
+    {
+        [self showTips:@"请输入身份证号码"];
+        return NO;
+    }
+    else if ([MFStringUtil isBlankString:m_inputInfo[@"bankCardId"]])
+    {
+        [self showTips:@"请输入银行卡号码"];
+        return NO;
+    }
+    else if ([MFStringUtil isBlankString:m_inputInfo[@"company"]])
+    {
+        [self showTips:@"请输入公司名"];
+        return NO;
+    }
+    else if (!m_inputInfo[@"level"])
+    {
+        [self showTips:@"请选择认证级别"];
+        return NO;
+    }
+    
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {
