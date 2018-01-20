@@ -371,8 +371,6 @@
             return;
         }
         
-        NSDictionary *tokenInfo = mfApi.responseNetworkData;
-        [strongSelf showTips:@"提交成功"];
         [strongSelf pushUserAuthSubmitSuccessVC];
         
     } failure:^(YTKBaseRequest * request) {
