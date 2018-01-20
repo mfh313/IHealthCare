@@ -21,6 +21,7 @@ extern NSInteger const HCUser_female; //女
 extern NSInteger const HCUserAuthStatus_UnAuthorized; //未认证
 extern NSInteger const HCUserAuthStatus_Authoring; //认证中
 extern NSInteger const HCUserAuthStatus_Authorized; //已认证
+extern NSInteger const HCUserAuthStatus_Fail; //认证失败
 
 @interface HCUserModel : NSObject
 

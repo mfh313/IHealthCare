@@ -15,8 +15,9 @@
 #import "HCGetUserInfoApi.h"
 #import "HCUserModel.h"
 #import "HCMyInfoViewController.h"
+#import "HCUserAuthStatusViewController.h"
 
-@interface HCMeViewController () <MMTableViewInfoDelegate,HCMeProfileCellViewDelegate>
+@interface HCMeViewController () <MMTableViewInfoDelegate,HCMeProfileCellViewDelegate,HCUserAuthStatusViewControllerDelegate>
 {
     MMTableViewInfo *m_tableViewInfo;
     
@@ -152,13 +153,27 @@
 #pragma mark - HCMeProfileCellViewDelegate
 -(void)onClickToAuth:(HCMeProfileCellView *)view
 {
-    HCAuthIDCardViewController *IDAuthVC = [HCAuthIDCardViewController new];
-    [self.navigationController pushViewController:IDAuthVC animated:YES];
+    [self showAuthIDCardVC];
 }
 
 -(void)onClickShowAuthStatus:(HCUserModel *)userInfo view:(HCMeProfileCellView *)view
 {
-    
+    HCUserAuthStatusViewController *authStatusVC = [HCUserAuthStatusViewController new];
+    authStatusVC.userInfo = m_useInfo;
+    authStatusVC.m_delegate = self;
+    [self.navigationController pushViewController:authStatusVC animated:YES];
+}
+
+#pragma mark - HCUserAuthStatusViewControllerDelegate
+-(void)onClickReUserAuth:(HCUserAuthStatusViewController *)controller
+{
+    [self showAuthIDCardVC];
+}
+
+-(void)showAuthIDCardVC
+{
+    HCAuthIDCardViewController *IDAuthVC = [HCAuthIDCardViewController new];
+    [self.navigationController pushViewController:IDAuthVC animated:YES];
 }
 
 -(void)onClickProfileCell:(HCMeProfileCellView *)view

@@ -21,6 +21,7 @@ NSInteger const HCUser_female = 1; //女
 NSInteger const HCUserAuthStatus_UnAuthorized = 1; //未认证
 NSInteger const HCUserAuthStatus_Authoring = 2; //认证中
 NSInteger const HCUserAuthStatus_Authorized = 3; //已认证
+NSInteger const HCUserAuthStatus_Fail = 4; //认证失败
 
 @implementation HCUserModel
 
