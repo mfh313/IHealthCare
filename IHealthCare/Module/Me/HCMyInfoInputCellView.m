@@ -26,6 +26,7 @@
         [self addSubview:m_contentLabel];
         
         m_textField = [[UITextField alloc] init];
+        m_textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         m_textField.textColor = [UIColor hx_colorWithHexString:000000];
         m_textField.font = [UIFont systemFontOfSize:14.0f];
         m_textField.delegate = self;
@@ -53,7 +54,6 @@
         case HCMyInfoInputType_citySelect:
         {
             [m_textField setHidden:YES];
-            [m_contentLabel setHidden:YES];
         }
             break;
             

@@ -60,6 +60,7 @@
                                                                userInfo:nil];
     
     [prePhone addUserInfoValue:@"prePhone" forKey:@"contentKey"];
+    [prePhone addUserInfoValue:@"prePhone" forKey:@"identifier"];
     
     [sectionInfo addCell:prePhone];
     
@@ -94,6 +95,7 @@
                                                                userInfo:nil];
     
     [nameInfo addUserInfoValue:@"name" forKey:@"contentKey"];
+    [nameInfo addUserInfoValue:@"name" forKey:@"identifier"];
     
     MMTableViewCellInfo *phoneInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeDetailInfoCell:cellInfo:)
                                                              makeTarget:self
@@ -103,6 +105,7 @@
                                                                userInfo:nil];
     
     [phoneInfo addUserInfoValue:@"phone" forKey:@"contentKey"];
+    [phoneInfo addUserInfoValue:@"phone" forKey:@"identifier"];
     
     MMTableViewCellInfo *cityInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeDetailInfoCell:cellInfo:)
                                                               makeTarget:self
@@ -112,6 +115,7 @@
                                                                 userInfo:nil];
     
     [cityInfo addUserInfoValue:@"city" forKey:@"contentKey"];
+    [cityInfo addUserInfoValue:@"city" forKey:@"identifier"];
     
     [sectionInfo addCell:nameInfo];
     [sectionInfo addCell:phoneInfo];
@@ -154,12 +158,13 @@
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         [cellView setContentViewType:HCMyInfoInputType_citySelect];
         [cellView setLeftTitle:@"城市" titleWidth:45];
+        [cellView setShowContent:self.userInfo.address];
     }
     else if ([contentKey isEqualToString:@"prePhone"])
     {
         [cellView setContentViewType:HCMyInfoInputType_textField];
         [cellView setLeftTitle:@"邀请人手机号" titleWidth:90];
-        [cellView setTextFieldContent:self.userInfo.name placeHolder:@"请输入邀请人手机号"];
+        [cellView setTextFieldContent:self.userInfo.preUserphone placeHolder:@"请输入邀请人手机号"];
     }
 }
 
@@ -176,6 +181,9 @@
             __strong typeof(weakSelf) strongSelf = weakSelf;
             
             NSString *value = cityArray[index];
+            strongSelf.userInfo.address = value;
+            
+            [self reloadTableView];
             
         } cancelHandler:^(LGAlertView * _Nonnull alertView) {
             
