@@ -11,6 +11,7 @@
 #import "HCUserAuthTextInputCellView.h"
 #import "HCUserAuthLevelSelectView.h"
 #import "HCUserAuthApi.h"
+#import "HCMeViewController.h"
 
 @interface HCUserAuthViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCUserAuthTextInputCellViewDelegate,HCUserAuthLevelSelectViewDelegate>
 {
@@ -381,10 +382,15 @@
 -(void)popToMeController
 {
     NSArray *viewControllers = self.navigationController.viewControllers;
-    NSInteger meVCIndex = viewControllers.count - 3;
     
-    if (viewControllers.count < 3) {
-        return;
+    NSInteger meVCIndex = 0;
+    for (int i = 0; i < viewControllers.count; i++)
+    {
+        UIViewController *controller = viewControllers[i];
+        if ([controller isKindOfClass:[HCMeViewController class]]) {
+            meVCIndex = i;
+            break;
+        }
     }
     
     UIViewController *meVC = viewControllers[meVCIndex];

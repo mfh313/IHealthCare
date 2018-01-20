@@ -75,9 +75,21 @@
 
 -(void)onClickAuthButton:(id)sender
 {
-    if ([self.m_delegate respondsToSelector:@selector(onClickToAuth:)]) {
-        [self.m_delegate onClickToAuth:self];
+    if (self.userInfo.status == HCUserAuthStatus_Authorized)
+    {
+        return;
     }
+    else if (self.userInfo.status == HCUserAuthStatus_UnAuthorized)
+    {
+        if ([self.m_delegate respondsToSelector:@selector(onClickToAuth:)]) {
+            [self.m_delegate onClickToAuth:self];
+        }
+    }
+    else if (self.userInfo.status == HCUserAuthStatus_Authoring)
+    {
+        
+    }
+    
 }
 
 -(void)initAccessoryImageView
