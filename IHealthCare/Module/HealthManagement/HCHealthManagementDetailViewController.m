@@ -11,6 +11,7 @@
 #import "HCHighProductDetailCustomNavbar.h"
 #import "HCHealthManageDetailHeaderTitleView.h"
 #import "HCHealthManagementDetailToolBar.h"
+#import "HCGetHealthControlDetailApi.h"
 
 @interface HCHealthManagementDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCHealthManageDetailHeaderTitleViewDelegate,HCHealthManagementDetailToolBarDelegate>
 {
@@ -59,7 +60,34 @@
         make.left.equalTo(self.view);
     }];
     
-    [self reloadTableView];
+    [self getHealthControlDetail];
+}
+
+-(void)getHealthControlDetail
+{
+    __weak typeof(self) weakSelf = self;
+    HCGetHealthControlDetailApi *mfApi = [HCGetHealthControlDetailApi new];
+    mfApi.hcid = self.detailModel.hcid;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSDictionary *product = mfApi.responseNetworkData;
+        HCManagementDetailModel *itemModel = [HCManagementDetailModel yy_modelWithDictionary:product];
+        strongSelf.detailModel = itemModel;
+        
+        [strongSelf reloadTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
 }
 
 -(void)viewWillAppear:(BOOL)animated

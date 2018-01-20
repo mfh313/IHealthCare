@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//查询健康管理详情
++ (NSString *)getHealthControlDetail:(NSInteger)hcid;
+
 //身份认证
 + (NSString *)userAuth;
 

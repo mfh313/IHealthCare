@@ -17,6 +17,13 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
 
 @implementation HealthCareApiManger
 
+//查询健康管理详情
++ (NSString *)getHealthControlDetail:(NSInteger)hcid
+{
+    NSString *parmUrl = [NSString stringWithFormat:@"api/healthControls/%@",@(hcid)];
+    return MFURLWithPara(parmUrl);
+}
+
 //身份认证
 + (NSString *)userAuth
 {
