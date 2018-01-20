@@ -156,6 +156,11 @@
     [self.navigationController pushViewController:IDAuthVC animated:YES];
 }
 
+-(void)onClickShowAuthStatus:(HCUserModel *)userInfo view:(HCMeProfileCellView *)view
+{
+    
+}
+
 -(void)onClickProfileCell:(HCMeProfileCellView *)view
 {
     HCMyInfoViewController *myInfoVC = [HCMyInfoViewController new];

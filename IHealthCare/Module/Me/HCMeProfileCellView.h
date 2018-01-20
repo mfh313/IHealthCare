@@ -13,6 +13,7 @@
 @protocol HCMeProfileCellViewDelegate <NSObject>
 @optional
 -(void)onClickToAuth:(HCMeProfileCellView *)view;
+-(void)onClickShowAuthStatus:(HCUserModel *)userInfo view:(HCMeProfileCellView *)view;
 -(void)onClickProfileCell:(HCMeProfileCellView *)view;
 
 @end
