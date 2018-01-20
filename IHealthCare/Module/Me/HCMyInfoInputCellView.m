@@ -36,32 +36,6 @@
     return self;
 }
 
--(void)setContentViewType:(HCMyInfoInputType)inputType
-{
-    switch (inputType) {
-        case HCMyInfoInputType_textField:
-        {
-            [m_contentLabel setHidden:YES];
-            [m_textField setHidden:NO];
-        }
-            break;
-        case HCMyInfoInputType_content:
-        {
-            [m_textField setHidden:YES];
-            [m_contentLabel setHidden:NO];
-        }
-            break;
-        case HCMyInfoInputType_citySelect:
-        {
-            [m_textField setHidden:YES];
-        }
-            break;
-            
-        default:
-            break;
-    }
-}
-
 -(void)setLeftTitle:(NSString *)title titleWidth:(CGFloat)titleWidth
 {
     m_titleLabel.text = title;

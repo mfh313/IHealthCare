@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//修改用户信息
++ (NSString *)putUserInfo;
+
 //查询健康管理详情
 + (NSString *)getHealthControlDetail:(NSInteger)hcid;
 
