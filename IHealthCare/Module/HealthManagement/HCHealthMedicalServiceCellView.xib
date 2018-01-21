@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -49,14 +49,14 @@
                             <rect key="frame" x="0.0" y="268" width="451" height="28"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_focus_nor" translatesAutoresizingMaskIntoConstraints="NO" id="ymE-vR-JSd">
-                                    <rect key="frame" x="325" y="7" width="14" height="14"/>
+                                    <rect key="frame" x="347" y="7" width="14" height="14"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="FY4-BT-bRs"/>
                                         <constraint firstAttribute="width" constant="14" id="WNT-fK-bG9"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="127" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T6o-O8-zSJ">
-                                    <rect key="frame" x="347" y="7" width="20" height="14.5"/>
+                                    <rect key="frame" x="369" y="7" width="20" height="14.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" id="C5G-2c-e20"/>
                                     </constraints>
@@ -65,14 +65,14 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_like_nor" translatesAutoresizingMaskIntoConstraints="NO" id="JbS-Zt-bF3">
-                                    <rect key="frame" x="377" y="7" width="14" height="14"/>
+                                    <rect key="frame" x="399" y="7" width="14" height="14"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="bUh-52-ual"/>
                                         <constraint firstAttribute="width" constant="14" id="pwD-vt-4cJ"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="67" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYB-hE-0PD">
-                                    <rect key="frame" x="399" y="7" width="30" height="14.5"/>
+                                    <rect key="frame" x="421" y="7" width="30" height="14.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="30" id="QrO-Ud-tsD"/>
                                     </constraints>
@@ -90,7 +90,7 @@
                                 <constraint firstItem="zYB-hE-0PD" firstAttribute="centerY" secondItem="hGd-Yo-TOY" secondAttribute="centerY" id="dQn-bd-Zs8"/>
                                 <constraint firstItem="JbS-Zt-bF3" firstAttribute="leading" secondItem="T6o-O8-zSJ" secondAttribute="trailing" constant="10" id="o0K-LX-UeJ"/>
                                 <constraint firstItem="T6o-O8-zSJ" firstAttribute="centerY" secondItem="hGd-Yo-TOY" secondAttribute="centerY" id="uTR-06-LFF"/>
-                                <constraint firstAttribute="trailing" secondItem="zYB-hE-0PD" secondAttribute="trailing" constant="22" id="vcn-1W-oP3"/>
+                                <constraint firstAttribute="trailing" secondItem="zYB-hE-0PD" secondAttribute="trailing" id="vcn-1W-oP3"/>
                                 <constraint firstItem="JbS-Zt-bF3" firstAttribute="centerY" secondItem="hGd-Yo-TOY" secondAttribute="centerY" id="yNz-wz-WiV"/>
                             </constraints>
                         </view>

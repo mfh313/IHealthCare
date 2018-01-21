@@ -49,14 +49,14 @@
                             <rect key="frame" x="0.0" y="268" width="451" height="28"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_focus_nor" translatesAutoresizingMaskIntoConstraints="NO" id="Z9L-nl-0ph">
-                                    <rect key="frame" x="325" y="7" width="14" height="14"/>
+                                    <rect key="frame" x="347" y="7" width="14" height="14"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="14" id="aMv-lQ-TAJ"/>
                                         <constraint firstAttribute="height" constant="14" id="fgx-Zc-O84"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="127" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVk-Bz-RXV">
-                                    <rect key="frame" x="347" y="7" width="20" height="14.5"/>
+                                    <rect key="frame" x="369" y="7" width="20" height="14.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" id="fYL-vO-apk"/>
                                     </constraints>
@@ -65,14 +65,14 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_like_nor" translatesAutoresizingMaskIntoConstraints="NO" id="aaC-AU-WcL">
-                                    <rect key="frame" x="377" y="7" width="14" height="14"/>
+                                    <rect key="frame" x="399" y="7" width="14" height="14"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="14" id="Kq7-w0-6R6"/>
                                         <constraint firstAttribute="height" constant="14" id="mnQ-AP-Zz2"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="67" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTj-MW-b9e">
-                                    <rect key="frame" x="399" y="7" width="30" height="14.5"/>
+                                    <rect key="frame" x="421" y="7" width="30" height="14.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="30" id="9NE-4D-ifl"/>
                                     </constraints>
@@ -88,7 +88,7 @@
                                 <constraint firstAttribute="height" constant="28" id="CSI-Ni-g3K"/>
                                 <constraint firstItem="HVk-Bz-RXV" firstAttribute="centerY" secondItem="C1I-3W-Tju" secondAttribute="centerY" id="UIm-p8-ZOB"/>
                                 <constraint firstItem="Z9L-nl-0ph" firstAttribute="centerY" secondItem="C1I-3W-Tju" secondAttribute="centerY" id="Zj1-be-12s"/>
-                                <constraint firstAttribute="trailing" secondItem="xTj-MW-b9e" secondAttribute="trailing" constant="22" id="h3g-ae-lDx"/>
+                                <constraint firstAttribute="trailing" secondItem="xTj-MW-b9e" secondAttribute="trailing" id="h3g-ae-lDx"/>
                                 <constraint firstItem="xTj-MW-b9e" firstAttribute="leading" secondItem="aaC-AU-WcL" secondAttribute="trailing" constant="8" id="hJ4-b8-xDg"/>
                                 <constraint firstItem="xTj-MW-b9e" firstAttribute="centerY" secondItem="C1I-3W-Tju" secondAttribute="centerY" id="tJH-YM-hcT"/>
                                 <constraint firstItem="HVk-Bz-RXV" firstAttribute="leading" secondItem="Z9L-nl-0ph" secondAttribute="trailing" constant="8" id="zAL-w6-asP"/>
