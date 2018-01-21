@@ -31,6 +31,10 @@
         m_textField.font = [UIFont systemFontOfSize:14.0f];
         m_textField.delegate = self;
         [self addSubview:m_textField];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFiledEditChanged:)
+                                                     name:UITextFieldTextDidChangeNotification
+                                                   object:m_textField];
     }
     
     return self;
@@ -76,15 +80,24 @@
     return m_textField;
 }
 
-#pragma mark - UITextFieldDelegate
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+- (void)textFiledEditChanged:(NSNotification *)notifi
 {
-    if ([string isEqualToString:@"\n"]) {
-        [textField resignFirstResponder];
+    UITextField *textField = (UITextField *)notifi.object;
+    NSString *text = textField.text;
+    
+    if ([self.m_delegate respondsToSelector:@selector(inputCellViewEditChanged:)]) {
+        [self.m_delegate inputCellViewEditChanged:self];
+    }
+}
+
+#pragma mark - UITextFieldDelegate
+-(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    if ([self.m_delegate respondsToSelector:@selector(inputCellView:shouldChangeCharactersInRange:replacementString:)]) {
+        return [self.m_delegate inputCellView:self shouldChangeCharactersInRange:range replacementString:string];
     }
     
     return YES;
 }
-
 
 @end

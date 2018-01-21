@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class HCMyInfoInputCellView;
+@protocol HCMyInfoInputCellViewDelegate <NSObject>
+@optional
+-(BOOL)inputCellView:(HCMyInfoInputCellView *)cellView shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string;
+-(void)inputCellViewEditChanged:(HCMyInfoInputCellView *)cellView;
+
+@end
+
 @interface HCMyInfoInputCellView : UIView <UITextFieldDelegate>
 {
     UILabel *m_titleLabel;
@@ -16,6 +24,8 @@
     
     CGFloat m_titleWidth;
 }
+@property (nonatomic,weak) id<HCMyInfoInputCellViewDelegate> m_delegate;
+@property (nonatomic,strong) NSString *contentKey;
 
 -(void)setLeftTitle:(NSString *)title titleWidth:(CGFloat)titleWidth;
 -(void)setShowContent:(NSString *)content;

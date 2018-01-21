@@ -12,11 +12,13 @@
 #import "HCGetUserInfoApi.h"
 #import "HCPutUserInfoApi.h"
 
-@interface HCMyInfoViewController () <MMTableViewInfoDelegate>
+@interface HCMyInfoViewController () <MMTableViewInfoDelegate,HCMyInfoInputCellViewDelegate>
 {
     MMTableViewInfo *m_tableViewInfo;
     
     BOOL m_canModifyPhone;
+    
+    NSString *m_imageUrl;
 }
 
 @end
@@ -165,9 +167,14 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
     HCMyInfoInputCellView *cellView = [[HCMyInfoInputCellView alloc] initWithFrame:cell.contentView.frame];
+    cellView.m_delegate = self;
     cell.m_subContentView = cellView;
     
     NSString *contentKey =  [cellInfo getUserInfoValueForKey:@"contentKey"];
+    
+    UITextField *contentTextField = [cellView contentTextField];
+    
+    cellView.contentKey = contentKey;
     if ([contentKey isEqualToString:@"name"])
     {
         [cellView setLeftTitle:@"姓名" titleWidth:45];
@@ -189,6 +196,7 @@
         [cellView setLeftTitle:@"邀请人手机号" titleWidth:90];
         if (m_canModifyPhone)
         {
+            contentTextField.keyboardType = UIKeyboardTypeNumberPad;
             [cellView setTextFieldContent:self.userInfo.preUserphone placeHolder:@"请输入邀请人手机号"];
         }
         else
@@ -260,12 +268,69 @@
 
 -(void)onClickRightButton:(id)sender
 {
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
     
+    __weak typeof(self) weakSelf = self;
+    HCPutUserInfoApi *mfApi = [HCPutUserInfoApi new];
+    mfApi.name = self.userInfo.name;
+    mfApi.telephone = self.userInfo.telephone;
+    mfApi.address = self.userInfo.address;
+    mfApi.imageUrl = m_imageUrl;
+    mfApi.preUserphone = self.userInfo.preUserphone;
+    
+    mfApi.animatingView = self.view;
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSDictionary *responseNetworkData = mfApi.responseNetworkData;
+        
+        strongSelf.userInfo = [HCUserModel yy_modelWithDictionary:responseNetworkData];
+        [strongSelf showTips:@"修改成功"];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
+}
+
+#pragma mark - HCMyInfoInputCellViewDelegate
+-(BOOL)inputCellView:(HCMyInfoInputCellView *)cellView shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    UITextField *contentTextField = [cellView contentTextField];
+    
+    NSString *content = contentTextField.text;
+    
+    if ([string isEqualToString:@"\n"]) {
+        [contentTextField resignFirstResponder];
+        return NO;
+    }
+    
+    return YES;
+}
+
+-(void)inputCellViewEditChanged:(HCMyInfoInputCellView *)cellView
+{
+    UITextField *contentTextField = [cellView contentTextField];
+    NSString *content = contentTextField.text;
+    
+    NSString *contentKey = cellView.contentKey;
+    if ([contentKey isEqualToString:@"name"]) {
+        self.userInfo.name = content;
+    }
+    else if ([contentKey isEqualToString:@"prePhone"])
+    {
+        self.userInfo.preUserphone = content;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 @end

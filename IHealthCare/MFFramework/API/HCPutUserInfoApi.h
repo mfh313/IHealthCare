@@ -16,8 +16,10 @@
 @property (nonatomic,strong) NSString *idNumber;
 @property (nonatomic,strong) NSString *bankCardId;
 @property (nonatomic,strong) NSString *company;
+@property (nonatomic,strong) NSString *city;
+@property (nonatomic,strong) NSString *preUserphone;
+@property (nonatomic,strong) NSNumber *sex;
+@property (nonatomic,strong) NSNumber *age;
 @property (nonatomic,strong) NSString *imageUrl;
-@property (nonatomic,assign) NSInteger sex;
-@property (nonatomic,assign) NSInteger age;
 
 @end
