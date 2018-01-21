@@ -10,4 +10,6 @@
 
 @interface HCMeFooterView : MMUIBridgeView
 
+@property (weak, nonatomic) IBOutlet UIImageView *microProgramImageView;
+
 @end

@@ -141,6 +141,8 @@
         make.left.mas_equalTo(@(0));
         make.top.mas_equalTo(@(0));
     }];
+    
+    [footerView.microProgramImageView sd_setImageWithURL:[NSURL URLWithString:@"http://p2ox6kz2c.bkt.clouddn.com/miniqr_1.png"]];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -260,60 +262,30 @@
 {
     m_tableSources = [NSMutableArray array];
     
-    NSMutableArray *section1 = [NSMutableArray array];
+    NSMutableArray *section = [NSMutableArray array];
+    
     NSMutableDictionary *records = [NSMutableDictionary dictionary];
     records[@"image"] = @"my_icon_health_records";
     records[@"title"] = @"我的课程";
     
     NSMutableDictionary *service = [NSMutableDictionary dictionary];
     service[@"image"] = @"my_icon_service";
-    service[@"title"] = @"我的服务";
-    //我的服务
+    service[@"title"] = @"我的订单";
     
-    [section1 addObject:records];
-    [section1 addObject:service];
+    [section addObject:records];
+    [section addObject:service];
     
-    NSMutableArray *section2 = [NSMutableArray array];
-    NSMutableDictionary *focus = [NSMutableDictionary dictionary];
-    focus[@"image"] = @"my_icon_focus";
-    focus[@"title"] = @"我的关注";
+    NSMutableArray *section_collection = [NSMutableArray array];
     
     NSMutableDictionary *collection = [NSMutableDictionary dictionary];
     collection[@"image"] = @"my_icon_collection";
     collection[@"title"] = @"我的收藏";
     collection[@"key"] = @"collection";
     
-//    [section2 addObject:focus];
-    [section2 addObject:collection];
+    [section_collection addObject:collection];
     
-    NSMutableArray *section3 = [NSMutableArray array];
-    NSMutableDictionary *circle = [NSMutableDictionary dictionary];
-    circle[@"image"] = @"my_icon_circle";
-    circle[@"title"] = @"我的圈子";
-    
-    NSMutableDictionary *invitation = [NSMutableDictionary dictionary];
-    invitation[@"image"] = @"my_icon_invitation";
-    invitation[@"title"] = @"邀请好友";
-    
-    NSMutableDictionary *program = [NSMutableDictionary dictionary];
-    program[@"image"] = @"my_icon_program";
-    program[@"title"] = @"我的小程序";
-    
-//    [section3 addObject:circle];
-    [section3 addObject:invitation];
-//    [section3 addObject:program];
-    
-    NSMutableArray *section4 = [NSMutableArray array];
-    NSMutableDictionary *setting = [NSMutableDictionary dictionary];
-    setting[@"image"] = @"my_icon_setting";
-    setting[@"title"] = @"设置";
-    setting[@"key"] = @"setting";
-    [section4 addObject:setting];
-    
-    [m_tableSources addObject:section1];
-    [m_tableSources addObject:section2];
-    [m_tableSources addObject:section3];
-//    [m_tableSources addObject:section4];
+    [m_tableSources addObject:section];
+    [m_tableSources addObject:section_collection];
 }
 
 - (void)didReceiveMemoryWarning {

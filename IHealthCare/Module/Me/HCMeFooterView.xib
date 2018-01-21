@@ -48,6 +48,9 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="microProgramImageView" destination="LXs-UG-LaI" id="3Qe-7q-IG2"/>
+            </connections>
             <point key="canvasLocation" x="37.5" y="215.5"/>
         </view>
     </objects>

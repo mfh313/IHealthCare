@@ -63,10 +63,10 @@
 {
     MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
     NSString *identifier = cellInfo.cellReuseIdentifier;
-//    if ([identifier isEqualToString:@"bestNews"])
-//    {
-//        return [self tableView:tableView bestNewsCellForIndexPath:indexPath];
-//    }
+    if ([identifier isEqualToString:@"favorites"])
+    {
+        return [self tableView:tableView favoritesCellForIndexPath:indexPath];
+    }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil)
@@ -77,6 +77,56 @@
     
     cell.textLabel.text = identifier;
     return cell;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView favoritesCellForIndexPath:(NSIndexPath *)indexPath
+{
+    MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    NSString *identifier = cellInfo.cellReuseIdentifier;
+    
+    MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+//        HCBestNewsCellView *cellView = [HCBestNewsCellView nibView];
+//        cellView.m_delegate = self;
+//        cell.m_subContentView = cellView;
+    }
+    
+//    NSInteger attachIndex = cellInfo.attachIndex;
+//    HCBestNewsDetailModel *itemModel = m_bestNews[attachIndex];
+//
+//    HCBestNewsCellView *cellView = (HCBestNewsCellView *)cell.m_subContentView;
+//    [cellView setNewsDetail:itemModel];
+    
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    return cellInfo.cellHeight;
+}
+
+-(void)reloadTableView
+{
+    [self makeCellObjects];
+    [m_tableView reloadData];
+}
+
+-(void)makeCellObjects
+{
+    [m_cellInfos removeAllObjects];
+    
+    for (int i = 0; i < m_favorites.count; i++) {
+//        HCBestNewsDetailModel *itemModel  = m_bestNews[i];
+//
+//        MFTableViewCellObject *highProducts = [MFTableViewCellObject new];
+//        highProducts.cellHeight = 202.0f;
+//        highProducts.cellReuseIdentifier = @"bestNews";
+//        highProducts.attachIndex = i;
+//        [m_cellInfos addObject:highProducts];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
