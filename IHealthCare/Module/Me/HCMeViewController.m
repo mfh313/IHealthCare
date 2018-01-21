@@ -129,7 +129,7 @@
 -(void)setFooterView:(UITableView *)contentTableView
 {
     UIView *tableFooterView = [UIView new];
-    tableFooterView.backgroundColor = [UIColor hx_colorWithHexString:@"FFFFFF"];
+    tableFooterView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
     tableFooterView.frame = CGRectMake(0, 0, CGRectGetWidth(contentTableView.frame), 260);
     contentTableView.tableFooterView = tableFooterView;
     
