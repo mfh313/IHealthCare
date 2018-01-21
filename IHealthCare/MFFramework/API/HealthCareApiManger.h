@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//查询我的收藏
++ (NSString *)favorites:(NSString *)tel page:(NSInteger)page;
+
 //点赞前沿资讯
 + (NSString *)thumbUpBestNews:(NSInteger)bid;
 

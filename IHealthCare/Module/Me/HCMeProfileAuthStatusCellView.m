@@ -69,6 +69,11 @@
         [m_authButton setHidden:NO];
         [m_authButton setTitle:@"认证中..." forState:UIControlStateNormal];
     }
+    else if (self.userInfo.status == HCUserAuthStatus_Fail)
+    {
+        [m_authButton setHidden:NO];
+        [m_authButton setTitle:@"认证失败" forState:UIControlStateNormal];
+    }
     
     [self makeSubViewsConstraints];
 }

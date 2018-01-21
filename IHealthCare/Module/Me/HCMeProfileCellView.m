@@ -87,7 +87,6 @@
             [self.m_delegate onClickShowAuthStatus:self.userInfo view:self];
         }
     }
-    
 }
 
 -(void)initAccessoryImageView
