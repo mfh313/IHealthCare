@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//点赞前沿资讯
++ (NSString *)thumbUpBestNews:(NSInteger)bid;
+
 //查询前沿资讯详情
 + (NSString *)getBestNewsDetail:(NSInteger)bid;
 

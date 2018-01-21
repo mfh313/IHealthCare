@@ -8,9 +8,8 @@
 
 #import "MMUIViewController.h"
 
-@class HCManagementDetailModel;
 @interface HCHealthManagementDetailViewController : MMUIViewController
 
-@property (nonatomic,strong) HCManagementDetailModel *detailModel;
+@property (nonatomic,assign) NSInteger hcid;
 
 @end

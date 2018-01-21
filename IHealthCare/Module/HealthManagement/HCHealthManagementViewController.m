@@ -169,7 +169,7 @@
 -(void)onClickShowManagementDetail:(HCManagementDetailModel *)itemModel
 {
     HCHealthManagementDetailViewController *detailVC = [HCHealthManagementDetailViewController new];
-    detailVC.detailModel = itemModel;
+    detailVC.hcid = itemModel.hcid;
     detailVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:detailVC animated:YES];
 }

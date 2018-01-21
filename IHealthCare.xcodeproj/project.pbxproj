@@ -247,6 +247,7 @@
 		A594B027200F9A6600D34EAD /* HCGetUserInfoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A594B026200F9A6600D34EAD /* HCGetUserInfoApi.m */; };
 		A5A659AD20142D540096F1EA /* HCAddFavoritesApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A659AC20142D540096F1EA /* HCAddFavoritesApi.m */; };
 		A5A659B02014348F0096F1EA /* HCGetBestNewsDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A659AF2014348F0096F1EA /* HCGetBestNewsDetailApi.m */; };
+		A5A659B320143BBB0096F1EA /* HCThumbUpBestNewsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A659B220143BBB0096F1EA /* HCThumbUpBestNewsApi.m */; };
 		A5BDB5051FE65B010052B51B /* HCBestNewsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */; };
 		A5BDB5081FE660700052B51B /* HCGetBestNewsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDB5071FE660700052B51B /* HCGetBestNewsApi.m */; };
 		A5CA4BD7200CF261004415F6 /* HCMeProfileCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CA4BD6200CF261004415F6 /* HCMeProfileCellView.m */; };
@@ -753,6 +754,8 @@
 		A5A659AC20142D540096F1EA /* HCAddFavoritesApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCAddFavoritesApi.m; sourceTree = "<group>"; };
 		A5A659AE2014348F0096F1EA /* HCGetBestNewsDetailApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetBestNewsDetailApi.h; sourceTree = "<group>"; };
 		A5A659AF2014348F0096F1EA /* HCGetBestNewsDetailApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetBestNewsDetailApi.m; sourceTree = "<group>"; };
+		A5A659B120143BBB0096F1EA /* HCThumbUpBestNewsApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCThumbUpBestNewsApi.h; sourceTree = "<group>"; };
+		A5A659B220143BBB0096F1EA /* HCThumbUpBestNewsApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCThumbUpBestNewsApi.m; sourceTree = "<group>"; };
 		A5BDB5031FE65B010052B51B /* HCBestNewsDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBestNewsDetailModel.h; sourceTree = "<group>"; };
 		A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailModel.m; sourceTree = "<group>"; };
 		A5BDB5061FE660700052B51B /* HCGetBestNewsApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetBestNewsApi.h; sourceTree = "<group>"; };
@@ -1749,6 +1752,8 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A5A659B120143BBB0096F1EA /* HCThumbUpBestNewsApi.h */,
+				A5A659B220143BBB0096F1EA /* HCThumbUpBestNewsApi.m */,
 				A5A659AE2014348F0096F1EA /* HCGetBestNewsDetailApi.h */,
 				A5A659AF2014348F0096F1EA /* HCGetBestNewsDetailApi.m */,
 				A5A659AB20142D540096F1EA /* HCAddFavoritesApi.h */,
@@ -2019,6 +2024,7 @@
 				A5190E7C1FFA655F00BBF049 /* HCTopCureMainTagView.m in Sources */,
 				A55388951FFE61D900D0DC27 /* WXApiResponseHandler.m in Sources */,
 				A5268DBA1FD3CB2600E2F93C /* HCHappinessManagementViewController.m in Sources */,
+				A5A659B320143BBB0096F1EA /* HCThumbUpBestNewsApi.m in Sources */,
 				A53695B01FD59769007CC67C /* SPTabController.m in Sources */,
 				A57B48321FCEF9190004C397 /* MMSelectButton.m in Sources */,
 				A5190E6B1FFA655F00BBF049 /* HCBestNewsDetailToolBar.m in Sources */,

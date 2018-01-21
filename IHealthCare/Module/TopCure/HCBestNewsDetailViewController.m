@@ -13,6 +13,7 @@
 #import "HCBestNewsDetailToolBar.h"
 #import "HCAddFavoritesApi.h"
 #import "HCGetBestNewsDetailApi.h"
+#import "HCThumbUpBestNewsApi.h"
 
 @interface HCBestNewsDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCBestNewsDetailToolBarDelegate>
 {
@@ -259,7 +260,25 @@
 
 -(void)onClickPraiseButton:(HCBestNewsDetailToolBar *)toolBar
 {
-    NSLog(@"onClickPraiseButton");
+    __weak typeof(self) weakSelf = self;
+    HCThumbUpBestNewsApi *mfApi = [HCThumbUpBestNewsApi new];
+    mfApi.bid = self.detailModel.bid;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        [strongSelf showTips:@"点赞成功"];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
 }
 
 -(void)onClickCollectionButton:(HCBestNewsDetailToolBar *)toolBar

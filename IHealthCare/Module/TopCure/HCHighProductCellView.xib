@@ -49,14 +49,14 @@
                             <rect key="frame" x="0.0" y="268" width="451" height="28"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_sales_nor" translatesAutoresizingMaskIntoConstraints="NO" id="bac-Dg-buI">
-                                    <rect key="frame" x="325" y="7" width="14" height="14"/>
+                                    <rect key="frame" x="347" y="7" width="14" height="14"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="tq1-IS-IuI"/>
                                         <constraint firstAttribute="width" constant="14" id="yAa-cl-ado"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="127" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a6x-CQ-T4B">
-                                    <rect key="frame" x="347" y="7" width="20" height="14.5"/>
+                                    <rect key="frame" x="369" y="7" width="20" height="14.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" id="UpS-Or-h4A"/>
                                     </constraints>
@@ -65,14 +65,14 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_discount_nor" translatesAutoresizingMaskIntoConstraints="NO" id="Jt9-1z-g5v">
-                                    <rect key="frame" x="377" y="7" width="14" height="14"/>
+                                    <rect key="frame" x="399" y="7" width="14" height="14"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="14" id="LoP-0t-XMU"/>
                                         <constraint firstAttribute="width" constant="14" id="r35-hB-GN9"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reY-PB-SxP">
-                                    <rect key="frame" x="399" y="7" width="30" height="14.5"/>
+                                    <rect key="frame" x="421" y="7" width="30" height="14.5"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="30" id="gFO-lw-WVW"/>
                                     </constraints>
@@ -91,7 +91,7 @@
                                 <constraint firstItem="Jt9-1z-g5v" firstAttribute="centerY" secondItem="7B4-oO-2Mp" secondAttribute="centerY" id="nNt-Ib-ke5"/>
                                 <constraint firstItem="a6x-CQ-T4B" firstAttribute="leading" secondItem="bac-Dg-buI" secondAttribute="trailing" constant="8" id="nRh-HY-D6l"/>
                                 <constraint firstAttribute="height" constant="28" id="wWg-lU-sfm"/>
-                                <constraint firstAttribute="trailing" secondItem="reY-PB-SxP" secondAttribute="trailing" constant="22" id="zHu-hl-Ssf"/>
+                                <constraint firstAttribute="trailing" secondItem="reY-PB-SxP" secondAttribute="trailing" id="zHu-hl-Ssf"/>
                             </constraints>
                         </view>
                     </subviews>

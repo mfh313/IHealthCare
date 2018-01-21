@@ -22,6 +22,8 @@
     NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
 }
 
+@property (nonatomic,strong) HCManagementDetailModel *detailModel;
+
 @end
 
 @implementation HCHealthManagementDetailViewController
@@ -67,7 +69,7 @@
 {
     __weak typeof(self) weakSelf = self;
     HCGetHealthControlDetailApi *mfApi = [HCGetHealthControlDetailApi new];
-    mfApi.hcid = self.detailModel.hcid;
+    mfApi.hcid = self.hcid;
     
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         

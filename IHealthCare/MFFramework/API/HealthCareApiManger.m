@@ -17,6 +17,13 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
 
 @implementation HealthCareApiManger
 
+//点赞前沿资讯
++ (NSString *)thumbUpBestNews:(NSInteger)bid
+{
+    NSString *parmUrl = [NSString stringWithFormat:@"api/bestNews/thumbUp/%@",@(bid)];
+    return MFURLWithPara(parmUrl);
+}
+
 //查询前沿资讯详情
 + (NSString *)getBestNewsDetail:(NSInteger)bid
 {
