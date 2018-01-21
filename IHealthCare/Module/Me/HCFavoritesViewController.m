@@ -8,6 +8,7 @@
 
 #import "HCFavoritesViewController.h"
 #import "HCGetFavoritesApi.h"
+#import "HCFavoriteModel.h"
 
 @interface HCFavoritesViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -46,7 +47,38 @@
 
 -(void)getFavorites
 {
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+
+    __weak typeof(self) weakSelf = self;
+    HCGetFavoritesApi *mfApi = [HCGetFavoritesApi new];
+    mfApi.tel = loginService.userPhone;
+    mfApi.page = 0;
     
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        [m_tableView.pullToRefreshView stopAnimating];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSArray *responseData = mfApi.responseNetworkData;
+        NSMutableArray *favorites = [NSMutableArray array];
+        for (int i = 0; i < responseData.count; i++) {
+            HCFavoriteModel *itemModel = [HCFavoriteModel yy_modelWithDictionary:responseData[i]];
+            [favorites addObject:itemModel];
+        }
+        m_favorites = favorites;
+        
+        [strongSelf reloadTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        [m_tableView.pullToRefreshView stopAnimating];
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -65,7 +97,7 @@
     NSString *identifier = cellInfo.cellReuseIdentifier;
     if ([identifier isEqualToString:@"favorites"])
     {
-        return [self tableView:tableView favoritesCellForIndexPath:indexPath];
+//        return [self tableView:tableView favoritesCellForIndexPath:indexPath];
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
@@ -119,13 +151,14 @@
     [m_cellInfos removeAllObjects];
     
     for (int i = 0; i < m_favorites.count; i++) {
-//        HCBestNewsDetailModel *itemModel  = m_bestNews[i];
-//
-//        MFTableViewCellObject *highProducts = [MFTableViewCellObject new];
-//        highProducts.cellHeight = 202.0f;
-//        highProducts.cellReuseIdentifier = @"bestNews";
-//        highProducts.attachIndex = i;
-//        [m_cellInfos addObject:highProducts];
+        
+        HCFavoriteModel *itemModel  = m_favorites[i];
+        
+        MFTableViewCellObject *favorite = [MFTableViewCellObject new];
+        favorite.cellHeight = 110.0f;
+        favorite.cellReuseIdentifier = @"favorite";
+        favorite.attachIndex = i;
+        [m_cellInfos addObject:favorite];
     }
 }
 
