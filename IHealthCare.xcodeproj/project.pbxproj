@@ -248,6 +248,7 @@
 		A5A659AD20142D540096F1EA /* HCAddFavoritesApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A659AC20142D540096F1EA /* HCAddFavoritesApi.m */; };
 		A5A659B02014348F0096F1EA /* HCGetBestNewsDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A659AF2014348F0096F1EA /* HCGetBestNewsDetailApi.m */; };
 		A5A659B320143BBB0096F1EA /* HCThumbUpBestNewsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A659B220143BBB0096F1EA /* HCThumbUpBestNewsApi.m */; };
+		A5A659B6201448120096F1EA /* HCFavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A659B5201448120096F1EA /* HCFavoritesViewController.m */; };
 		A5BDB5051FE65B010052B51B /* HCBestNewsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */; };
 		A5BDB5081FE660700052B51B /* HCGetBestNewsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDB5071FE660700052B51B /* HCGetBestNewsApi.m */; };
 		A5CA4BD7200CF261004415F6 /* HCMeProfileCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CA4BD6200CF261004415F6 /* HCMeProfileCellView.m */; };
@@ -756,6 +757,8 @@
 		A5A659AF2014348F0096F1EA /* HCGetBestNewsDetailApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetBestNewsDetailApi.m; sourceTree = "<group>"; };
 		A5A659B120143BBB0096F1EA /* HCThumbUpBestNewsApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCThumbUpBestNewsApi.h; sourceTree = "<group>"; };
 		A5A659B220143BBB0096F1EA /* HCThumbUpBestNewsApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCThumbUpBestNewsApi.m; sourceTree = "<group>"; };
+		A5A659B4201448120096F1EA /* HCFavoritesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCFavoritesViewController.h; sourceTree = "<group>"; };
+		A5A659B5201448120096F1EA /* HCFavoritesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCFavoritesViewController.m; sourceTree = "<group>"; };
 		A5BDB5031FE65B010052B51B /* HCBestNewsDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBestNewsDetailModel.h; sourceTree = "<group>"; };
 		A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailModel.m; sourceTree = "<group>"; };
 		A5BDB5061FE660700052B51B /* HCGetBestNewsApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetBestNewsApi.h; sourceTree = "<group>"; };
@@ -1076,6 +1079,8 @@
 				A55465091FEFAD3100A7E3C7 /* HCMeViewController.m */,
 				A563AECC20138E8C006EDC3C /* HCUserAuthStatusViewController.h */,
 				A563AECD20138E8C006EDC3C /* HCUserAuthStatusViewController.m */,
+				A5A659B4201448120096F1EA /* HCFavoritesViewController.h */,
+				A5A659B5201448120096F1EA /* HCFavoritesViewController.m */,
 				A5854A4B2010E0FC001F4A1F /* HCMyInfoViewController.h */,
 				A5854A4C2010E0FC001F4A1F /* HCMyInfoViewController.m */,
 				A5854A532010F376001F4A1F /* HCMyInfoInputCellView.h */,
@@ -2008,6 +2013,7 @@
 				A57B48001FCEF9190004C397 /* ExtensionRegistry.m in Sources */,
 				A57B47F41FCEF9190004C397 /* Main.pb.m in Sources */,
 				A57B47E61FCEF9190004C397 /* IQKeyboardManager.m in Sources */,
+				A5A659B6201448120096F1EA /* HCFavoritesViewController.m in Sources */,
 				A57B48091FCEF9190004C397 /* TextFormat.m in Sources */,
 				A57B48131FCEF9190004C397 /* SCLTextView.m in Sources */,
 				A57B48191FCEF9190004C397 /* NSCache+SafeInsert.m in Sources */,
