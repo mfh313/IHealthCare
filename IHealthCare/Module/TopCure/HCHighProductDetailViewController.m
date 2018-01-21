@@ -240,11 +240,6 @@
             return;
         }
         
-        NSDictionary *product = mfApi.responseNetworkData;
-        HCProductDetailModel *itemModel = [HCProductDetailModel yy_modelWithDictionary:product];
-        strongSelf.detailModel = itemModel;
-        
-        [strongSelf reloadTableView];
         
     } failure:^(YTKBaseRequest * request) {
         

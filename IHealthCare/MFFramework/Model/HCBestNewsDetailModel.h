@@ -21,5 +21,7 @@
 @property (nonatomic,assign) NSInteger look; //阅读量
 @property (nonatomic,assign) NSInteger thumbUp; //点赞量
 @property (nonatomic,strong) NSString *createTime; //创建时间
+@property (nonatomic,assign) NSInteger cid;
+@property (nonatomic,assign) NSInteger csid;
 
 @end

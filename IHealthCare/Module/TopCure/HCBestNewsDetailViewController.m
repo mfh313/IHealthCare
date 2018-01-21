@@ -11,6 +11,7 @@
 #import "HCHighProductDetailCustomNavbar.h"
 #import "HCBestNewsDetailTitleView.h"
 #import "HCBestNewsDetailToolBar.h"
+#import "HCAddFavoritesApi.h"
 
 @interface HCBestNewsDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCBestNewsDetailToolBarDelegate>
 {
@@ -20,6 +21,8 @@
     MFUITableView *m_tableView;
     NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
 }
+
+@property (nonatomic,strong) HCBestNewsDetailModel *detailModel;
 
 @end
 
@@ -61,6 +64,11 @@
     }];
     
     [self reloadTableView];
+}
+
+-(void)getBestNewsDetail
+{
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -233,7 +241,28 @@
 
 -(void)onClickCollectionButton:(HCBestNewsDetailToolBar *)toolBar
 {
-    NSLog(@"onClickCollectionButton");
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    
+    __weak typeof(self) weakSelf = self;
+    HCAddFavoritesApi *mfApi = [HCAddFavoritesApi new];
+    mfApi.favoriteId = self.detailModel.pid;
+    mfApi.userTel = loginService.userPhone;
+    mfApi.category = self.detailModel.cid;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
 }
 
 -(void)onClickWriteButton:(HCBestNewsDetailToolBar *)toolBar

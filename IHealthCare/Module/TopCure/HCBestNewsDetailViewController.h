@@ -11,6 +11,6 @@
 @class HCBestNewsDetailModel;
 @interface HCBestNewsDetailViewController : MMUIViewController
 
-@property (nonatomic,strong) HCBestNewsDetailModel *detailModel;
+@property (nonatomic,assign) NSInteger bid;
 
 @end

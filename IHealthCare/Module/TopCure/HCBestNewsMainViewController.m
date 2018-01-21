@@ -167,7 +167,7 @@
 -(void)onClickShowNewsDetail:(HCBestNewsDetailModel *)itemModel
 {
     HCBestNewsDetailViewController *detailVC = [HCBestNewsDetailViewController new];
-    detailVC.detailModel = itemModel;
+    detailVC.bid = itemModel.bid;
     detailVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:detailVC animated:YES];
 }
