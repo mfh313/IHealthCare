@@ -245,6 +245,7 @@
 		A58849111FFFD0D700FC93EE /* HCLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = A58849101FFFD0D700FC93EE /* HCLoginService.m */; };
 		A58849141FFFDA4700FC93EE /* HCPayOrderApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A58849131FFFDA4700FC93EE /* HCPayOrderApi.m */; };
 		A594B027200F9A6600D34EAD /* HCGetUserInfoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A594B026200F9A6600D34EAD /* HCGetUserInfoApi.m */; };
+		A5A659AD20142D540096F1EA /* HCAddFavoritesApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A659AC20142D540096F1EA /* HCAddFavoritesApi.m */; };
 		A5BDB5051FE65B010052B51B /* HCBestNewsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */; };
 		A5BDB5081FE660700052B51B /* HCGetBestNewsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5BDB5071FE660700052B51B /* HCGetBestNewsApi.m */; };
 		A5CA4BD7200CF261004415F6 /* HCMeProfileCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5CA4BD6200CF261004415F6 /* HCMeProfileCellView.m */; };
@@ -747,6 +748,8 @@
 		A58849131FFFDA4700FC93EE /* HCPayOrderApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPayOrderApi.m; sourceTree = "<group>"; };
 		A594B025200F9A6600D34EAD /* HCGetUserInfoApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetUserInfoApi.h; sourceTree = "<group>"; };
 		A594B026200F9A6600D34EAD /* HCGetUserInfoApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetUserInfoApi.m; sourceTree = "<group>"; };
+		A5A659AB20142D540096F1EA /* HCAddFavoritesApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAddFavoritesApi.h; sourceTree = "<group>"; };
+		A5A659AC20142D540096F1EA /* HCAddFavoritesApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCAddFavoritesApi.m; sourceTree = "<group>"; };
 		A5BDB5031FE65B010052B51B /* HCBestNewsDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBestNewsDetailModel.h; sourceTree = "<group>"; };
 		A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBestNewsDetailModel.m; sourceTree = "<group>"; };
 		A5BDB5061FE660700052B51B /* HCGetBestNewsApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetBestNewsApi.h; sourceTree = "<group>"; };
@@ -1743,6 +1746,8 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A5A659AB20142D540096F1EA /* HCAddFavoritesApi.h */,
+				A5A659AC20142D540096F1EA /* HCAddFavoritesApi.m */,
 				A563AECF2013A7BF006EDC3C /* HCPutUserInfoApi.h */,
 				A563AED02013A7BF006EDC3C /* HCPutUserInfoApi.m */,
 				AC476655201375F400B2DB6D /* HCGetHealthControlDetailApi.h */,
@@ -2098,6 +2103,7 @@
 				A57B47E71FCEF9190004C397 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				A53695AE1FD59769007CC67C /* SPCoverController.m in Sources */,
 				A57B48431FCEF9190004C397 /* MFStringUtil.m in Sources */,
+				A5A659AD20142D540096F1EA /* HCAddFavoritesApi.m in Sources */,
 				A5190E711FFA655F00BBF049 /* HCHighProductDetailBottomView.m in Sources */,
 				A5CA4C0D200CF567004415F6 /* HCOrderAddressCreateRegionCellView.m in Sources */,
 				A5D9AE341FDBB87B00B5D4C0 /* MMNetworkRequest.m in Sources */,

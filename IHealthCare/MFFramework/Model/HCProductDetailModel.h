@@ -26,6 +26,7 @@
 @property (nonatomic,assign) NSInteger sales;  //销量
 @property (nonatomic,assign) NSInteger isInSale;  //是否销售中
 @property (nonatomic,strong) NSString *creatTime;
+@property (nonatomic,assign) NSInteger cid;
 @property (nonatomic,assign) NSInteger csid;
 
 @end

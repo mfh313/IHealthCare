@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//添加收藏
++ (NSString *)favorites;
+
 //修改用户信息
 + (NSString *)putUserInfo;
 

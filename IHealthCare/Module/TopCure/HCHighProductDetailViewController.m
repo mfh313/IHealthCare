@@ -13,6 +13,7 @@
 #import "HCProductDetailHeaderTitleView.h"
 #import "HCCreateOrderViewController.h"
 #import "HCGetProductDetailApi.h"
+#import "HCAddFavoritesApi.h"
 
 @interface HCHighProductDetailViewController () <HCHighProductDetailCustomNavbarDelegate,HCHighProductDetailBottomViewDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -71,7 +72,6 @@
     
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
-        [m_tableView.pullToRefreshView stopAnimating];
         __strong typeof(weakSelf) strongSelf = weakSelf;
         if (!mfApi.messageSuccess) {
             [strongSelf showTips:mfApi.errorMessage];
@@ -86,7 +86,6 @@
         
     } failure:^(YTKBaseRequest * request) {
         
-        [m_tableView.pullToRefreshView stopAnimating];
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];
@@ -225,7 +224,33 @@
 
 -(void)onClickCollectionProduct
 {
-    NSLog(@"onClickCollectionProduct");
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    
+    __weak typeof(self) weakSelf = self;
+    HCAddFavoritesApi *mfApi = [HCAddFavoritesApi new];
+    mfApi.favoriteId = self.detailModel.pid;
+    mfApi.userTel = loginService.userPhone;
+    mfApi.category = self.detailModel.cid;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSDictionary *product = mfApi.responseNetworkData;
+        HCProductDetailModel *itemModel = [HCProductDetailModel yy_modelWithDictionary:product];
+        strongSelf.detailModel = itemModel;
+        
+        [strongSelf reloadTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
 }
 
 -(void)makeCellObjects

@@ -17,6 +17,12 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
 
 @implementation HealthCareApiManger
 
+//添加收藏
++ (NSString *)favorites
+{
+    return MFURLWithPara(@"api/favorites");
+}
+
 //修改用户信息
 + (NSString *)putUserInfo
 {
