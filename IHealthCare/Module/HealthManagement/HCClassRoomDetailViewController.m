@@ -19,6 +19,7 @@
 #import "SPPageController.h"
 #import "HCClassRoomCourseSelectionViewController.h"
 #import "HCClassRoomCreateOrderViewController.h"
+#import "HCAddFavoritesApi.h"
 
 @interface HCClassRoomDetailViewController () <ZFPlayerDelegate,HCHighProductDetailBottomViewDelegate,HCClassRoomCourseSelectionViewControllerDelegate>
 {
@@ -34,6 +35,7 @@
     HCClassRoomCourseSelectionViewController *m_courseVC;
 }
 
+@property (nonatomic,strong) HCClassRoomDetailModel *detailModel;
 @property (nonatomic, strong) ZFPlayerModel *playerModel;
 @property (nonatomic, strong) NSString *videoURLString;
 @property (nonatomic, strong) UIView *playerFatherView;
@@ -205,7 +207,7 @@
 {
     __weak typeof(self) weakSelf = self;
     HCGetClassDetailApi *mfApi = [HCGetClassDetailApi new];
-    mfApi.pid = self.detailModel.crid;
+    mfApi.pid = self.crid;
     
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
@@ -295,7 +297,29 @@
 
 -(void)onClickCollectionProduct
 {
-    NSLog(@"onClickCollectionProduct");
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    
+    __weak typeof(self) weakSelf = self;
+    HCAddFavoritesApi *mfApi = [HCAddFavoritesApi new];
+    mfApi.favoriteId = self.detailModel.crid;
+    mfApi.userTel = loginService.userPhone;
+    mfApi.category = self.detailModel.cid;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        [strongSelf showTips:@"收藏成功"];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
 }
 
 #pragma mark - HCClassRoomCourseSelectionViewControllerDelegate

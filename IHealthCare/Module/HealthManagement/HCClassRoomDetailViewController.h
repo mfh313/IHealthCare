@@ -8,9 +8,8 @@
 
 #import "SPCoverController.h"
 
-@class HCClassRoomDetailModel;
 @interface HCClassRoomDetailViewController : SPCoverController
 
-@property (nonatomic, strong) HCClassRoomDetailModel *detailModel;
+@property (nonatomic,assign) NSInteger crid;
 
 @end
