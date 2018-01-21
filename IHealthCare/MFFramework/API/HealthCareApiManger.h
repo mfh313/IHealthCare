@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//查询前沿资讯详情
++ (NSString *)getBestNewsDetail:(NSInteger)bid;
+
 //添加收藏
 + (NSString *)favorites;
 

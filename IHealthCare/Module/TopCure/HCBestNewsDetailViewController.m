@@ -12,6 +12,7 @@
 #import "HCBestNewsDetailTitleView.h"
 #import "HCBestNewsDetailToolBar.h"
 #import "HCAddFavoritesApi.h"
+#import "HCGetBestNewsDetailApi.h"
 
 @interface HCBestNewsDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCBestNewsDetailToolBarDelegate>
 {
@@ -63,12 +64,34 @@
         make.left.equalTo(self.view);
     }];
     
-    [self reloadTableView];
+    [self getBestNewsDetail];
 }
 
 -(void)getBestNewsDetail
 {
+    __weak typeof(self) weakSelf = self;
+    HCGetBestNewsDetailApi *mfApi = [HCGetBestNewsDetailApi new];
+    mfApi.bid = self.bid;
     
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSDictionary *newsInfo = mfApi.responseNetworkData;
+        HCBestNewsDetailModel *itemModel = [HCBestNewsDetailModel yy_modelWithDictionary:newsInfo];
+        strongSelf.detailModel = itemModel;
+        
+        [strongSelf reloadTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -245,7 +268,7 @@
     
     __weak typeof(self) weakSelf = self;
     HCAddFavoritesApi *mfApi = [HCAddFavoritesApi new];
-    mfApi.favoriteId = self.detailModel.pid;
+    mfApi.favoriteId = self.detailModel.bid;
     mfApi.userTel = loginService.userPhone;
     mfApi.category = self.detailModel.cid;
     
