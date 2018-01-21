@@ -16,6 +16,7 @@
 #import "HCUserModel.h"
 #import "HCMyInfoViewController.h"
 #import "HCUserAuthStatusViewController.h"
+#import "HCFavoritesViewController.h"
 
 @interface HCMeViewController () <MMTableViewInfoDelegate,HCMeProfileCellViewDelegate,HCUserAuthStatusViewControllerDelegate>
 {
@@ -239,9 +240,20 @@
 {
     NSMutableDictionary *itemInfo =  [cellInfo getUserInfoValueForKey:@"cellData"];
     NSString *key = itemInfo[@"key"];
-    if ([key isEqualToString:@"setting"]) {
+    if ([key isEqualToString:@"setting"])
+    {
         NSLog(@"setting");
     }
+    else if ([key isEqualToString:@"collection"])
+    {
+        [self onClickMyFavoritesVC];
+    }
+}
+
+-(void)onClickMyFavoritesVC
+{
+    HCFavoritesViewController *favoritesVC = [HCFavoritesViewController new];
+    [self.navigationController pushViewController:favoritesVC animated:YES];
 }
 
 -(void)addTableSources
@@ -269,6 +281,7 @@
     NSMutableDictionary *collection = [NSMutableDictionary dictionary];
     collection[@"image"] = @"my_icon_collection";
     collection[@"title"] = @"我的收藏";
+    collection[@"key"] = @"collection";
     
 //    [section2 addObject:focus];
     [section2 addObject:collection];
