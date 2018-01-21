@@ -10,13 +10,14 @@
 #import "HCManagementDetailModel.h"
 #import "HCHighProductDetailCustomNavbar.h"
 #import "HCHealthManageDetailHeaderTitleView.h"
-#import "HCHealthManagementDetailToolBar.h"
 #import "HCGetHealthControlDetailApi.h"
+#import "HCHighProductDetailBottomView.h"
+#import "HCAddFavoritesApi.h"
 
-@interface HCHealthManagementDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCHealthManageDetailHeaderTitleViewDelegate,HCHealthManagementDetailToolBarDelegate>
+@interface HCHealthManagementDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCHealthManageDetailHeaderTitleViewDelegate,HCHighProductDetailBottomViewDelegate>
 {
     HCHighProductDetailCustomNavbar *m_navBar;
-    HCHealthManagementDetailToolBar *m_toolBar;
+    HCHighProductDetailBottomView *m_bottomView;
     
     MFUITableView *m_tableView;
     NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
@@ -52,10 +53,10 @@
         make.left.equalTo(self.view);
     }];
     
-    m_toolBar = [HCHealthManagementDetailToolBar nibView];
-    m_toolBar.m_delegate = self;
-    [self.view addSubview:m_toolBar];
-    [m_toolBar mas_makeConstraints:^(MASConstraintMaker *make) {
+    m_bottomView = [HCHighProductDetailBottomView nibView];
+    m_bottomView.m_delegate = self;
+    [self.view addSubview:m_bottomView];
+    [m_bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(self.view);
         make.height.mas_equalTo(@(60));
         make.bottom.equalTo(self.view).offset(0);
@@ -218,20 +219,37 @@
     NSLog(@"onClickForwordButton");
 }
 
-#pragma mark - HCHealthManagementDetailToolBarDelegate
--(void)onClickMessageButton:(HCHealthManagementDetailToolBar *)toolBar
+#pragma mark - HCHighProductDetailBottomViewDelegate
+-(void)onClickBuyProduct
 {
-    NSLog(@"onClickMessageButton");
+    
 }
 
--(void)onClickPraiseButton:(HCHealthManagementDetailToolBar *)toolBar
+-(void)onClickCollectionProduct
 {
-    NSLog(@"onClickPraiseButton");
-}
-
--(void)onClickWriteButton:(HCHealthManagementDetailToolBar *)toolBar
-{
-    NSLog(@"onClickWriteButton");
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    
+    __weak typeof(self) weakSelf = self;
+    HCAddFavoritesApi *mfApi = [HCAddFavoritesApi new];
+    mfApi.favoriteId = self.detailModel.hcid;
+    mfApi.userTel = loginService.userPhone;
+    mfApi.category = self.detailModel.cid;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        [strongSelf showTips:@"收藏成功"];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
 }
 
 -(void)makeCellObjects

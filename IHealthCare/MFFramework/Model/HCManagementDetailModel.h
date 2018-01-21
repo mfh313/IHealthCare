@@ -24,6 +24,7 @@ extern NSInteger const CONTROL_HAPPINESS;
 @property (nonatomic,assign) NSInteger follow;  //关注量
 @property (nonatomic,assign) NSInteger thumbUp;  //点赞量
 @property (nonatomic,strong) NSString *createTime;
-
+@property (nonatomic,assign) NSInteger cid;
+@property (nonatomic,assign) NSInteger csid;
 
 @end
