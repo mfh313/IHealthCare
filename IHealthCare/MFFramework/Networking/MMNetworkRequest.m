@@ -87,7 +87,7 @@
     }
     
     NSDictionary *dict = self.responseJSONObject;
-    id string = dict[@"errorMessage"];
+    id string = dict[@"message"];
     if ([string isKindOfClass:[NSNull class]]) {
         string = @"服务器无错误描述";
     }

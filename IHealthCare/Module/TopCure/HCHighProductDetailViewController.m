@@ -240,6 +240,7 @@
             return;
         }
         
+        [strongSelf showTips:@"收藏成功"];
         
     } failure:^(YTKBaseRequest * request) {
         
