@@ -18,6 +18,7 @@
 #import "HCUserAuthStatusViewController.h"
 #import "HCFavoritesViewController.h"
 #import "HCMyClassesViewController.h"
+#import "HCOrderListViewController.h"
 
 @interface HCMeViewController () <MMTableViewInfoDelegate,HCMeProfileCellViewDelegate,HCUserAuthStatusViewControllerDelegate>
 {
@@ -255,6 +256,10 @@
     {
         [self showMyClassesVC];
     }
+    else if ([key isEqualToString:@"orderList"])
+    {
+        [self showMyOrderListVC];
+    }
 }
 
 -(void)onClickMyFavoritesVC
@@ -267,6 +272,12 @@
 {
     HCMyClassesViewController *classesVC = [HCMyClassesViewController new];
     [self.navigationController pushViewController:classesVC animated:YES];
+}
+
+-(void)showMyOrderListVC
+{
+    HCOrderListViewController *orderListVC = [HCOrderListViewController new];
+    [self.navigationController pushViewController:orderListVC animated:YES];
 }
 
 -(void)addTableSources
@@ -283,6 +294,7 @@
     NSMutableDictionary *service = [NSMutableDictionary dictionary];
     service[@"image"] = @"my_icon_service";
     service[@"title"] = @"我的订单";
+    service[@"key"] = @"orderList";
     
     [section addObject:records];
     [section addObject:service];
