@@ -76,6 +76,10 @@
     {
         return [self tableView:tableView orderInfoCellForIndexPath:indexPath];
     }
+    else if ([identifier isEqualToString:@"toPay"])
+    {
+        return [self tableView:tableView orderToPayCellForIndexPath:indexPath];
+    }
     else if ([identifier isEqualToString:@"divison"])
     {
         return [self tableView:tableView divisionCellForIndexPath:indexPath];
