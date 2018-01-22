@@ -14,11 +14,11 @@
 #import "HCGetOrderUserAddressApi.h"
 #import "HCCreateOrderNullAddressCellView.h"
 #import "HCCreateOrderAddressCellView.h"
-#import "HCClassCreateOrderItemCellView.h"
 #import "WXApiRequestHandler.h"
 #import "WXApiManager.h"
 #import "HCOrderAddressSelectViewController.h"
 #import "HCProductDetailModel.h"
+#import "HCHealthManageCreateOrderItemCellView.h"
 
 @interface HCHealthManageCreateOrderViewController ()<MMTableViewInfoDelegate,HCOrderAddressSelectViewControllerDelegate>
 {
@@ -260,7 +260,7 @@
 - (void)makeCartItemCell:(MFTableViewCell *)cell cellInfo:(MMTableViewCellInfo *)cellInfo
 {
     if (!cell.m_subContentView) {
-        HCClassCreateOrderItemCellView *cellView = [HCClassCreateOrderItemCellView nibView];
+        HCHealthManageCreateOrderItemCellView *cellView = [HCHealthManageCreateOrderItemCellView nibView];
         cell.m_subContentView = cellView;
     }
     else
@@ -268,7 +268,7 @@
         [cell.contentView addSubview:cell.m_subContentView];
     }
     
-    HCClassCreateOrderItemCellView *cellView = (HCClassCreateOrderItemCellView *)cell.m_subContentView;
+    HCHealthManageCreateOrderItemCellView *cellView = (HCHealthManageCreateOrderItemCellView *)cell.m_subContentView;
     cellView.frame = cell.contentView.bounds;
     
     HCOrderItemModel *orderItem =  [cellInfo getUserInfoValueForKey:@"cartItem"];

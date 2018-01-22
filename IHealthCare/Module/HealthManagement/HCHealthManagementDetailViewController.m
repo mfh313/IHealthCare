@@ -221,6 +221,7 @@
 }
 
 #pragma mark - HCHighProductDetailBottomViewDelegate
+
 -(void)onClickBuyProduct
 {
     HCHealthManageCreateOrderViewController *createOrderVC = [HCHealthManageCreateOrderViewController new];

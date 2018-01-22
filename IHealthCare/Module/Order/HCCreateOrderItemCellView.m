@@ -57,7 +57,7 @@
     _nameLabel.text = m_detailModel.pname;
     _salesLabel.text = [NSString stringWithFormat:@"销量：%@",@(m_detailModel.sales)];
     _promotionLabel.text = [NSString stringWithFormat:@"推广：%@",@(m_detailModel.promotionFee)];
-    _moneyLabel.text = [NSString stringWithFormat:@"%.2f",m_detailModel.shopPrice];
+    _moneyLabel.text = [NSString stringWithFormat:@"%.2f",m_detailModel.marketPrice];
 }
 
 #pragma mark - HCCountStepViewDelegate
