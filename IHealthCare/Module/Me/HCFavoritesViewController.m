@@ -9,6 +9,7 @@
 #import "HCFavoritesViewController.h"
 #import "HCGetFavoritesApi.h"
 #import "HCFavoriteModel.h"
+#import "HCFavoritesCellView.h"
 
 @interface HCFavoritesViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -95,9 +96,9 @@
 {
     MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
     NSString *identifier = cellInfo.cellReuseIdentifier;
-    if ([identifier isEqualToString:@"favorites"])
+    if ([identifier isEqualToString:@"favorite"])
     {
-//        return [self tableView:tableView favoritesCellForIndexPath:indexPath];
+        return [self tableView:tableView favoritesCellForIndexPath:indexPath];
     }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
@@ -120,16 +121,19 @@
     if (cell == nil) {
         cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         
-//        HCBestNewsCellView *cellView = [HCBestNewsCellView nibView];
-//        cellView.m_delegate = self;
-//        cell.m_subContentView = cellView;
+        HCFavoritesCellView *cellView = [HCFavoritesCellView nibView];
+        cell.m_subContentView = cellView;
     }
     
-//    NSInteger attachIndex = cellInfo.attachIndex;
-//    HCBestNewsDetailModel *itemModel = m_bestNews[attachIndex];
-//
-//    HCBestNewsCellView *cellView = (HCBestNewsCellView *)cell.m_subContentView;
-//    [cellView setNewsDetail:itemModel];
+    NSInteger attachIndex = cellInfo.attachIndex;
+    HCFavoriteModel *itemModel = m_favorites[attachIndex];
+
+    HCFavoritesCellView *cellView = (HCFavoritesCellView *)cell.m_subContentView;
+    
+    HCCmsCommonModel *favoriteData = itemModel.favoriteData;
+    
+    [cellView setImageUrl:favoriteData.imageUrl];
+    [cellView setTitle:favoriteData.name subTitle:favoriteData.cmsDescription];
     
     return cell;
 }

@@ -10,4 +10,7 @@
 
 @interface HCFavoritesCellView : MMUIBridgeView
 
+-(void)setImageUrl:(NSString *)imageUrl;
+-(void)setTitle:(NSString *)title subTitle:(NSString *)subTitle;
+
 @end
