@@ -13,6 +13,7 @@
 #import "HCBestNewsDetailViewController.h"
 #import "HCHighProductDetailViewController.h"
 #import "HCHealthManagementDetailViewController.h"
+#import "HCClassRoomDetailViewController.h"
 
 @interface HCFavoritesViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -133,6 +134,7 @@
     MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
         cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
         
         HCFavoritesCellView *cellView = [HCFavoritesCellView nibView];
         cell.m_subContentView = cellView;
@@ -219,13 +221,7 @@
     
     NSInteger favCategory = itemModel.category;
     
-    if (favCategory == HCFavorite_category_4) //资讯显示类
-    {
-        HCBestNewsDetailViewController *detailVC = [HCBestNewsDetailViewController new];
-        detailVC.bid = favoriteData.cmsId;
-        [self.navigationController pushViewController:detailVC animated:YES];
-    }
-    else if (favCategory == HCFavorite_category_1) //高品服务
+    if (favCategory == HCFavorite_category_1) //高品服务
     {
         HCHighProductDetailViewController *detailVC = [HCHighProductDetailViewController new];
         detailVC.pid = favoriteData.cmsId;
@@ -236,6 +232,18 @@
         HCHealthManagementDetailViewController *detailVC = [HCHealthManagementDetailViewController new];
         detailVC.hcid = favoriteData.cmsId;
         [self.navigationController pushViewController:detailVC animated:YES];
+    }
+    else if (favCategory == HCFavorite_category_4) //资讯显示类
+    {
+        HCBestNewsDetailViewController *detailVC = [HCBestNewsDetailViewController new];
+        detailVC.bid = favoriteData.cmsId;
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
+    else if (favCategory == HCFavorite_category_5) //大讲堂类
+    {
+        HCClassRoomDetailViewController *classRoomDetailVC = [HCClassRoomDetailViewController new];
+        classRoomDetailVC.crid = favoriteData.cmsId;
+        [self.navigationController pushViewController:classRoomDetailVC animated:YES];
     }
 }
 
