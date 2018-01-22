@@ -78,6 +78,26 @@
     
 }
 
+-(void)setDismissBackButton
+{
+    UIView *leftNavigationView = [UIView new];
+    leftNavigationView.frame = CGRectMake(0, 0, 62, 44);
+    MMBarButton *m_btn = [MMBarButton buttonWithType:UIButtonTypeCustom];
+    [m_btn addTarget:self action:@selector(onClickDismissBackButton:) forControlEvents:UIControlEventTouchUpInside];
+    m_btn.frame = CGRectMake(5, 0, 57, 44);
+    [m_btn setImage:MFImage(@"title_btn_shut_down_nor") forState:UIControlStateNormal];
+    [m_btn setImage:MFImage(@"title_btn_shut_down_press") forState:UIControlStateHighlighted];
+    [m_btn setContentEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 34)];
+    [leftNavigationView addSubview:m_btn];
+    m_leftBarBtnItem = [[UIBarButtonItem alloc] initWithCustomView:leftNavigationView];
+    [self.navigationItem setLeftBarButtonItem:m_leftBarBtnItem];
+}
+
+-(void)onClickDismissBackButton:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 -(UIStatusBarStyle)preferredStatusBarStyle
 {
     return UIStatusBarStyleDefault;

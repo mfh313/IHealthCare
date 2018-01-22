@@ -27,5 +27,7 @@
 -(void)setWantsFullScreen:(BOOL)wantsFullScreenLayout;
 -(void)setRightBarButtonTitle:(NSString *)title;
 -(void)onClickRightButton:(id)sender;
+-(void)setDismissBackButton;
+-(void)onClickDismissBackButton:(id)sender;
 
 @end
