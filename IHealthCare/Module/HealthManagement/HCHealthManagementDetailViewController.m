@@ -13,6 +13,7 @@
 #import "HCGetHealthControlDetailApi.h"
 #import "HCHighProductDetailBottomView.h"
 #import "HCAddFavoritesApi.h"
+#import "HCHealthManageCreateOrderViewController.h"
 
 @interface HCHealthManagementDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCHealthManageDetailHeaderTitleViewDelegate,HCHighProductDetailBottomViewDelegate>
 {
@@ -222,7 +223,9 @@
 #pragma mark - HCHighProductDetailBottomViewDelegate
 -(void)onClickBuyProduct
 {
-    
+    HCHealthManageCreateOrderViewController *createOrderVC = [HCHealthManageCreateOrderViewController new];
+    createOrderVC.detailModel = self.detailModel;
+    [self.navigationController pushViewController:createOrderVC animated:YES];
 }
 
 -(void)onClickCollectionProduct

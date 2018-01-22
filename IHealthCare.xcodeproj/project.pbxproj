@@ -63,6 +63,9 @@
 		A549A99020121A5F0095E557 /* HCQiniuFileService.m in Sources */ = {isa = PBXBuildFile; fileRef = A549A98F20121A5F0095E557 /* HCQiniuFileService.m */; };
 		A549A993201220FD0095E557 /* HCUserAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A549A992201220FD0095E557 /* HCUserAuthViewController.m */; };
 		A549A996201222D10095E557 /* HCUserAuthApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A549A995201222D10095E557 /* HCUserAuthApi.m */; };
+		A54C4678201622DC00EBDA07 /* HCHealthManageCreateOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C4677201622DC00EBDA07 /* HCHealthManageCreateOrderViewController.m */; };
+		A54C467B2016238600EBDA07 /* HCHealthManageCreateOrderItemCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C467A2016238600EBDA07 /* HCHealthManageCreateOrderItemCellView.m */; };
+		A54C467D2016239A00EBDA07 /* HCHealthManageCreateOrderItemCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54C467C2016239A00EBDA07 /* HCHealthManageCreateOrderItemCellView.xib */; };
 		A55388931FFE61D900D0DC27 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388861FFE61D900D0DC27 /* WXApiManager.m */; };
 		A55388941FFE61D900D0DC27 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388881FFE61D900D0DC27 /* WXApiRequestHandler.m */; };
 		A55388951FFE61D900D0DC27 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A553888A1FFE61D900D0DC27 /* WXApiResponseHandler.m */; };
@@ -406,6 +409,11 @@
 		A549A992201220FD0095E557 /* HCUserAuthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserAuthViewController.m; sourceTree = "<group>"; };
 		A549A994201222D10095E557 /* HCUserAuthApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCUserAuthApi.h; sourceTree = "<group>"; };
 		A549A995201222D10095E557 /* HCUserAuthApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserAuthApi.m; sourceTree = "<group>"; };
+		A54C4676201622DC00EBDA07 /* HCHealthManageCreateOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthManageCreateOrderViewController.h; sourceTree = "<group>"; };
+		A54C4677201622DC00EBDA07 /* HCHealthManageCreateOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManageCreateOrderViewController.m; sourceTree = "<group>"; };
+		A54C46792016238600EBDA07 /* HCHealthManageCreateOrderItemCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthManageCreateOrderItemCellView.h; sourceTree = "<group>"; };
+		A54C467A2016238600EBDA07 /* HCHealthManageCreateOrderItemCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManageCreateOrderItemCellView.m; sourceTree = "<group>"; };
+		A54C467C2016239A00EBDA07 /* HCHealthManageCreateOrderItemCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCHealthManageCreateOrderItemCellView.xib; sourceTree = "<group>"; };
 		A55388851FFE61D900D0DC27 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
 		A55388861FFE61D900D0DC27 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
 		A55388871FFE61D900D0DC27 /* WXApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiRequestHandler.h; sourceTree = "<group>"; };
@@ -1461,11 +1469,11 @@
 				A5190E321FFA655F00BBF049 /* TopCure */,
 				A5CA4BDE200CF567004415F6 /* Order */,
 				A58848DF1FFFC5C700FC93EE /* HealthManagement */,
-				A55388831FFE61D900D0DC27 /* WeiXin */,
 				A5268DA91FD3C7E500E2F93C /* WealthManagement */,
 				A5268DB71FD3CB0800E2F93C /* HappinessManagement */,
 				A55464FC1FEFAD3100A7E3C7 /* Me */,
 				A57B476B1FCEF9180004C397 /* Login */,
+				A55388831FFE61D900D0DC27 /* WeiXin */,
 				A511F34D1FD4188000AE5D57 /* CenterMenu */,
 				A5268DBC1FD3FB7300E2F93C /* TabBarController */,
 			);
@@ -1746,6 +1754,11 @@
 		A5CA4BDE200CF567004415F6 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				A54C4676201622DC00EBDA07 /* HCHealthManageCreateOrderViewController.h */,
+				A54C4677201622DC00EBDA07 /* HCHealthManageCreateOrderViewController.m */,
+				A54C46792016238600EBDA07 /* HCHealthManageCreateOrderItemCellView.h */,
+				A54C467A2016238600EBDA07 /* HCHealthManageCreateOrderItemCellView.m */,
+				A54C467C2016239A00EBDA07 /* HCHealthManageCreateOrderItemCellView.xib */,
 				A5CA4BDF200CF567004415F6 /* HCClassCreateOrderItemCellView.h */,
 				A5CA4BE0200CF567004415F6 /* HCClassCreateOrderItemCellView.m */,
 				A5CA4BE1200CF567004415F6 /* HCClassCreateOrderItemCellView.xib */,
@@ -1966,6 +1979,7 @@
 				A5CA4C05200CF567004415F6 /* HCCreateOrderAddressCellView.xib in Resources */,
 				A5854A522010EE30001F4A1F /* HCMyInfoAvtarCellView.xib in Resources */,
 				A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */,
+				A54C467D2016239A00EBDA07 /* HCHealthManageCreateOrderItemCellView.xib in Resources */,
 				A58848FC1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.xib in Resources */,
 				A56CD7841FD0306C00FFF504 /* LoginAssets.xcassets in Resources */,
 				A57B47EE1FCEF9190004C397 /* IQKeyboardManager.bundle in Resources */,
@@ -2218,6 +2232,7 @@
 				AC47665420134E3800B2DB6D /* HCUserAuthLevelSelectItemView.m in Sources */,
 				A57B47F21FCEF9190004C397 /* Chat.pb.m in Sources */,
 				A57B48251FCEF9190004C397 /* UIViewController+pregress.m in Sources */,
+				A54C4678201622DC00EBDA07 /* HCHealthManageCreateOrderViewController.m in Sources */,
 				A5DD8D082001F6A90079CD7D /* HCGetOrderUserAddressApi.m in Sources */,
 				A50FDCA7200B6A81007F091B /* HCGetSubClassDetailApi.m in Sources */,
 				A57B48341FCEF9190004C397 /* MMUINavigationBar.m in Sources */,
@@ -2245,6 +2260,7 @@
 				AC60B6202016176D00EC1645 /* HCMyClassesCellView.m in Sources */,
 				A549A99020121A5F0095E557 /* HCQiniuFileService.m in Sources */,
 				A5BDB5051FE65B010052B51B /* HCBestNewsDetailModel.m in Sources */,
+				A54C467B2016238600EBDA07 /* HCHealthManageCreateOrderItemCellView.m in Sources */,
 				A57B48461FCEF9190004C397 /* NSObject+YYModel.m in Sources */,
 				A58849081FFFC5C700FC93EE /* HCHealthManagementViewController.m in Sources */,
 				A57B47DF1FCEF9190004C397 /* HexColors.m in Sources */,

@@ -20,11 +20,20 @@ extern NSInteger const CONTROL_HAPPINESS;
 @property (nonatomic,strong) NSString *address;
 @property (nonatomic,strong) NSString *managerDescription; //简介
 @property (nonatomic,strong) NSString *detail;
-@property (nonatomic,assign) NSInteger type;   //CONTROL_HEALTH CONTROL_WEALTH CONTROL_HAPPINESS
+@property (nonatomic,assign) NSInteger cid;
+@property (nonatomic,assign) NSInteger csid;
+@property (nonatomic,assign) NSInteger look;
 @property (nonatomic,assign) NSInteger follow;  //关注量
 @property (nonatomic,assign) NSInteger thumbUp;  //点赞量
 @property (nonatomic,strong) NSString *createTime;
-@property (nonatomic,assign) NSInteger cid;
-@property (nonatomic,assign) NSInteger csid;
+@property (nonatomic,assign) NSInteger stock;  //库存量
+@property (nonatomic,assign) CGFloat marketPrice;  //市场价格
+@property (nonatomic,assign) CGFloat shopPrice;    //店内价格
+@property (nonatomic,assign) NSInteger isHot;  //是否热卖
+@property (nonatomic,assign) CGFloat discount;    //折扣
+@property (nonatomic,assign) CGFloat promotionFee;    //推广费
+@property (nonatomic,strong) NSString *privilegeTime; //优惠时间
+@property (nonatomic,assign) NSInteger sales;  //销量
+
 
 @end
