@@ -14,6 +14,7 @@
 #import "HCAddFavoritesApi.h"
 #import "HCGetBestNewsDetailApi.h"
 #import "HCThumbUpBestNewsApi.h"
+#import "HCAddCommentsViewController.h"
 
 @interface HCBestNewsDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCBestNewsDetailToolBarDelegate>
 {
@@ -310,7 +311,9 @@
 
 -(void)onClickWriteButton:(HCBestNewsDetailToolBar *)toolBar
 {
-    NSLog(@"onClickWriteButton");
+    HCAddCommentsViewController *addCommentsVC = [HCAddCommentsViewController new];
+    MMNavigationController *rootNav = [[MMNavigationController alloc] initWithRootViewController:addCommentsVC];
+    [self presentViewController:rootNav animated:YES completion:nil];
 }
 
 -(UIStatusBarStyle)preferredStatusBarStyle
