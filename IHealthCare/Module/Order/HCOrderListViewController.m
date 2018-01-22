@@ -12,7 +12,7 @@
 #import "HCOrderListOrderBottomCellView.h"
 #import "HCGetOrdersApi.h"
 #import "HCOrderListItemModel.h"
-#import "HCOrderListPayViewController.h"
+#import "HCPayOrderApi.h"
 
 @interface HCOrderListViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCOrderListOrderBottomCellViewDelegate>
 {
@@ -312,10 +312,52 @@
 -(void)onClickToPayOrderList:(NSInteger)attachIndex
 {
     HCOrderListItemModel *itemModel  = m_orderLists[attachIndex];
+    [self payOrderOid:itemModel.oid];
+}
+
+-(void)payOrderOid:(NSInteger)oid
+{
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
     
-    HCOrderListPayViewController *payVC = [HCOrderListPayViewController new];
-    payVC.oid = itemModel.oid;
-    [self.navigationController pushViewController:payVC animated:YES];
+    __weak typeof(self) weakSelf = self;
+    HCPayOrderApi *mfApi = [HCPayOrderApi new];
+    mfApi.userTel = loginService.userPhone;
+    mfApi.authCode = loginService.token;
+    mfApi.oid = oid;
+    
+    mfApi.animatingText = @"正在支付";
+    mfApi.animatingView = MFAppWindow;
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSDictionary *payInfo = mfApi.responseNetworkData;
+        [strongSelf bizPayOrder:payInfo];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
+}
+
+-(void)bizPayOrder:(NSDictionary *)dict
+{
+    NSMutableString *stamp  = [dict objectForKey:@"timeStamp"];
+    
+    //调起微信支付
+    PayReq* req             = [[PayReq alloc] init];
+    req.partnerId           = [dict objectForKey:@"partnerid"];
+    req.prepayId            = [dict objectForKey:@"prepayId"];
+    req.nonceStr            = [dict objectForKey:@"nonceStr"];
+    req.timeStamp           = stamp.intValue;
+    req.package             = [dict objectForKey:@"packAge"];
+    req.sign                = [dict objectForKey:@"paySign"];
+    [WXApi sendReq:req];
 }
 
 - (void)didReceiveMemoryWarning {

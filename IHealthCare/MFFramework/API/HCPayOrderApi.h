@@ -7,6 +7,8 @@
 //
 
 #import "MMNetworkRequest.h"
+#import "WXApiRequestHandler.h"
+#import "WXApiManager.h"
 
 @interface HCPayOrderApi : MMNetworkRequest
 
