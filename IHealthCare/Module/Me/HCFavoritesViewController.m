@@ -63,7 +63,7 @@
     __weak typeof(self) weakSelf = self;
     HCGetFavoritesApi *mfApi = [HCGetFavoritesApi new];
     mfApi.tel = loginService.userPhone;
-    mfApi.page = 0;
+    mfApi.page = 1;
     
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         

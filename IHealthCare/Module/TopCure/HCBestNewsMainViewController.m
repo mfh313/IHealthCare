@@ -113,7 +113,7 @@
     __weak typeof(self) weakSelf = self;
     HCGetBestNewsApi *mfApi = [HCGetBestNewsApi new];
     mfApi.type = BestNews_Type_Default;
-    mfApi.page = 0;
+    mfApi.page = 1;
     
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         

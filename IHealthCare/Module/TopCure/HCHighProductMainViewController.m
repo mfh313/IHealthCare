@@ -112,7 +112,7 @@
     __weak typeof(self) weakSelf = self;
     HCGetProductsApi *mfApi = [HCGetProductsApi new];
     mfApi.cid = PRODUCT_HIGHT_SERVICE;
-    mfApi.page = 0;
+    mfApi.page = 1;
     
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         

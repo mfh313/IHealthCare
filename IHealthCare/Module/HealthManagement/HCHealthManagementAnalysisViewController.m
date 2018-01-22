@@ -108,7 +108,7 @@
 {
     __weak typeof(self) weakSelf = self;
     HCGetHealthManagementAnalysisApi *mfApi = [HCGetHealthManagementAnalysisApi new];
-    mfApi.page = 0;
+    mfApi.page = 1;
     
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
