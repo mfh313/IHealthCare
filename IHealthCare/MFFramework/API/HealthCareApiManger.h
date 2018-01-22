@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//查询订单列表
++ (NSString *)orders:(NSString *)tel page:(NSInteger)page;
+
 //查询我的课程
 + (NSString *)myClasses:(NSString *)tel page:(NSInteger)page;
 

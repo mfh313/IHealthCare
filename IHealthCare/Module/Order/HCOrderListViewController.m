@@ -10,6 +10,7 @@
 #import "HCOrderListOrderCellView.h"
 #import "HCOrderListOrderInfoCellView.h"
 #import "HCOrderListOrderBottomCellView.h"
+#import "HCGetOrdersApi.h"
 
 @interface HCOrderListViewController ()
 {

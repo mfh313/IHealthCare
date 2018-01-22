@@ -27,6 +27,7 @@
 @property (nonatomic,strong) NSString *creatTime;
 @property (nonatomic,assign) NSInteger cid;
 @property (nonatomic,assign) NSInteger csid;
+@property (nonatomic,strong) NSString *address;
 
 @end
 
