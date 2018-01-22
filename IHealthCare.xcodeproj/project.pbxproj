@@ -75,6 +75,7 @@
 		A54C468F201633EC00EBDA07 /* HCOrderListOrderBottomCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54C468E201633EC00EBDA07 /* HCOrderListOrderBottomCellView.xib */; };
 		A54C46922016393A00EBDA07 /* HCGetOrdersApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C46912016393A00EBDA07 /* HCGetOrdersApi.m */; };
 		A54C469520163AA000EBDA07 /* HCOrderListItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C469420163AA000EBDA07 /* HCOrderListItemModel.m */; };
+		A54C469C2016536800EBDA07 /* HCAddCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C469B2016536800EBDA07 /* HCAddCommentsViewController.m */; };
 		A55388931FFE61D900D0DC27 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388861FFE61D900D0DC27 /* WXApiManager.m */; };
 		A55388941FFE61D900D0DC27 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388881FFE61D900D0DC27 /* WXApiRequestHandler.m */; };
 		A55388951FFE61D900D0DC27 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A553888A1FFE61D900D0DC27 /* WXApiResponseHandler.m */; };
@@ -438,6 +439,8 @@
 		A54C46912016393A00EBDA07 /* HCGetOrdersApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetOrdersApi.m; sourceTree = "<group>"; };
 		A54C469320163AA000EBDA07 /* HCOrderListItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderListItemModel.h; sourceTree = "<group>"; };
 		A54C469420163AA000EBDA07 /* HCOrderListItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderListItemModel.m; sourceTree = "<group>"; };
+		A54C469A2016536800EBDA07 /* HCAddCommentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAddCommentsViewController.h; sourceTree = "<group>"; };
+		A54C469B2016536800EBDA07 /* HCAddCommentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCAddCommentsViewController.m; sourceTree = "<group>"; };
 		A55388851FFE61D900D0DC27 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
 		A55388861FFE61D900D0DC27 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
 		A55388871FFE61D900D0DC27 /* WXApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiRequestHandler.h; sourceTree = "<group>"; };
@@ -1072,6 +1075,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A54C46992016533D00EBDA07 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				A54C469A2016536800EBDA07 /* HCAddCommentsViewController.h */,
+				A54C469B2016536800EBDA07 /* HCAddCommentsViewController.m */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
 		A55388831FFE61D900D0DC27 /* WeiXin */ = {
 			isa = PBXGroup;
 			children = (
@@ -1494,6 +1506,7 @@
 		A57B476A1FCEF9180004C397 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				A54C46992016533D00EBDA07 /* Comments */,
 				A5190E321FFA655F00BBF049 /* TopCure */,
 				A5CA4BDE200CF567004415F6 /* Order */,
 				A58848DF1FFFC5C700FC93EE /* HealthManagement */,
@@ -2342,6 +2355,7 @@
 				A57B48081FCEF9190004C397 /* RingBuffer.m in Sources */,
 				A53695B31FD59769007CC67C /* SPTagBarScrollView.m in Sources */,
 				A5190E731FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.m in Sources */,
+				A54C469C2016536800EBDA07 /* HCAddCommentsViewController.m in Sources */,
 				AC47665120133EEE00B2DB6D /* HCUserAuthLevelSelectView.m in Sources */,
 				A52A8E16200AE8CF0067E856 /* HCPlayerControlView.m in Sources */,
 				A57B48331FCEF9190004C397 /* MMUIBridgeView.m in Sources */,
