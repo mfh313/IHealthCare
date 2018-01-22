@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"发表评论";
 }
 
 - (void)didReceiveMemoryWarning {
