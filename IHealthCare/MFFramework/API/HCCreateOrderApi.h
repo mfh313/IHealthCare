@@ -7,7 +7,7 @@
 //
 
 #import "MMNetworkRequest.h"
-#import "HCProductDetailModel.h"
+#import "HCOrderItemModel.h"
 
 @interface HCCreateOrderApi : MMNetworkRequest
 

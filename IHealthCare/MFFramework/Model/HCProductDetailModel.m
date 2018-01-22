@@ -11,8 +11,3 @@
 @implementation HCProductDetailModel
 
 @end
-
-#pragma mark - HCOrderItemModel
-@implementation HCOrderItemModel
-
-@end

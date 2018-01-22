@@ -7,7 +7,7 @@
 //
 
 #import "HCClassCreateOrderItemCellView.h"
-#import "HCProductDetailModel.h"
+#import "HCOrderItemModel.h"
 #import "HCCountStepView.h"
 
 @interface HCClassCreateOrderItemCellView () <HCCountStepViewDelegate>

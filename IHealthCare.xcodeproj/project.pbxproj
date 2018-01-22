@@ -66,6 +66,7 @@
 		A54C4678201622DC00EBDA07 /* HCHealthManageCreateOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C4677201622DC00EBDA07 /* HCHealthManageCreateOrderViewController.m */; };
 		A54C467B2016238600EBDA07 /* HCHealthManageCreateOrderItemCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C467A2016238600EBDA07 /* HCHealthManageCreateOrderItemCellView.m */; };
 		A54C467D2016239A00EBDA07 /* HCHealthManageCreateOrderItemCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54C467C2016239A00EBDA07 /* HCHealthManageCreateOrderItemCellView.xib */; };
+		A54C4680201629C500EBDA07 /* HCOrderItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C467F201629C500EBDA07 /* HCOrderItemModel.m */; };
 		A55388931FFE61D900D0DC27 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388861FFE61D900D0DC27 /* WXApiManager.m */; };
 		A55388941FFE61D900D0DC27 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388881FFE61D900D0DC27 /* WXApiRequestHandler.m */; };
 		A55388951FFE61D900D0DC27 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A553888A1FFE61D900D0DC27 /* WXApiResponseHandler.m */; };
@@ -414,6 +415,8 @@
 		A54C46792016238600EBDA07 /* HCHealthManageCreateOrderItemCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHealthManageCreateOrderItemCellView.h; sourceTree = "<group>"; };
 		A54C467A2016238600EBDA07 /* HCHealthManageCreateOrderItemCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHealthManageCreateOrderItemCellView.m; sourceTree = "<group>"; };
 		A54C467C2016239A00EBDA07 /* HCHealthManageCreateOrderItemCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCHealthManageCreateOrderItemCellView.xib; sourceTree = "<group>"; };
+		A54C467E201629C500EBDA07 /* HCOrderItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderItemModel.h; sourceTree = "<group>"; };
+		A54C467F201629C500EBDA07 /* HCOrderItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderItemModel.m; sourceTree = "<group>"; };
 		A55388851FFE61D900D0DC27 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
 		A55388861FFE61D900D0DC27 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
 		A55388871FFE61D900D0DC27 /* WXApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiRequestHandler.h; sourceTree = "<group>"; };
@@ -1218,6 +1221,8 @@
 				A5BDB5041FE65B010052B51B /* HCBestNewsDetailModel.m */,
 				A575874F1FE52733000FC7CB /* HCProductDetailModel.h */,
 				A57587501FE52733000FC7CB /* HCProductDetailModel.m */,
+				A54C467E201629C500EBDA07 /* HCOrderItemModel.h */,
+				A54C467F201629C500EBDA07 /* HCOrderItemModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2309,6 +2314,7 @@
 				A526F41F1FF3EA1900092ADD /* HCGetHealthMedicalServiceApi.m in Sources */,
 				A566B4D31FD24BB7004F6843 /* MMBarButton.m in Sources */,
 				A566B4D91FD298B7004F6843 /* HCUserRegisterViewController.m in Sources */,
+				A54C4680201629C500EBDA07 /* HCOrderItemModel.m in Sources */,
 				A50FDCA4200B69DD007F091B /* HCGetSubClassesApi.m in Sources */,
 				A553E8BA2003944700BEFB14 /* HCClassRoomDetailViewController.m in Sources */,
 				A554650A1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.m in Sources */,

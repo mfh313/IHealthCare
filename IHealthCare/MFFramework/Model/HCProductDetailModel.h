@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HCClassRoomDetailModel.h"
-#import "HCManagementDetailModel.h"
 
 @interface HCProductDetailModel : NSObject
 
@@ -32,13 +30,3 @@
 
 @end
 
-#pragma mark - HCOrderItemModel
-@interface HCOrderItemModel : NSObject
-
-@property (nonatomic,assign) NSInteger pid;
-@property (nonatomic,assign) NSInteger count;
-@property (nonatomic,strong) HCProductDetailModel *detailModel;
-@property (nonatomic,strong) HCClassRoomDetailModel *classDetailModel;
-@property (nonatomic,strong) HCManagementDetailModel *manageDetailModel;
-
-@end

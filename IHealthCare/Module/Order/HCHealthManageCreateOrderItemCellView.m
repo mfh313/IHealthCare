@@ -8,7 +8,7 @@
 
 #import "HCHealthManageCreateOrderItemCellView.h"
 #import "HCCountStepView.h"
-#import "HCProductDetailModel.h"
+#import "HCOrderItemModel.h"
 
 @interface HCHealthManageCreateOrderItemCellView () <HCCountStepViewDelegate>
 {
