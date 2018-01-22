@@ -19,5 +19,22 @@
 
 @implementation HCOrderListOrderInfoCellView
 
+-(void)setOrderListModel:(HCOrderListItemModel *)itemModel
+{
+    HCOrderListOrderItemModel *orderItem = itemModel.orderItems.firstObject;
+    HCProductDetailModel *product = orderItem.product;
+    
+    _countLabel.text = [NSString stringWithFormat:@"共%@件商品",@(orderItem.count)];
+    if (itemModel.state == HCOrderList_state_1)
+    {
+        _methodLabel.text = @"需付款：";
+    }
+    else
+    {
+        _methodLabel.text = @"已付款：";
+    }
+    
+    _moneyLabel.text = [NSString stringWithFormat:@"%.2f",orderItem.subtotal];
+}
 
 @end

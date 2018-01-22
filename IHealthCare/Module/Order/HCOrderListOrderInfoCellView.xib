@@ -16,25 +16,25 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共1件商品" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neG-Yd-zMw">
-                    <rect key="frame" x="270.5" y="9.5" width="46" height="12"/>
+                    <rect key="frame" x="244.5" y="10" width="55" height="14.5"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" id="CXc-PH-9VY"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.058823529409999999" green="0.058823529409999999" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="需付款：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgE-fc-zQz">
-                    <rect key="frame" x="326.5" y="9.5" width="41" height="12"/>
+                    <rect key="frame" x="309.5" y="10" width="49.5" height="14.5"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" id="HN7-u0-eek"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <color key="textColor" red="0.058823529411764705" green="0.058823529411764705" blue="0.058823529411764705" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQO-Rg-PYg">
-                    <rect key="frame" x="367.5" y="8" width="8" height="14.5"/>
+                    <rect key="frame" x="359" y="9.5" width="8" height="14.5"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" id="ZVE-Cn-BQR"/>
                     </constraints>
@@ -43,11 +43,11 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="169700.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91Y-n2-dPZ">
-                    <rect key="frame" x="377.5" y="8" width="60.5" height="14.5"/>
+                    <rect key="frame" x="369" y="8" width="69" height="17"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" id="baF-ev-dmW"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>

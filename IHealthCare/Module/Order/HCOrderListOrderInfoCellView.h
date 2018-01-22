@@ -7,7 +7,10 @@
 //
 
 #import "MMUIBridgeView.h"
+#import "HCOrderListItemModel.h"
 
 @interface HCOrderListOrderInfoCellView : MMUIBridgeView
+
+-(void)setOrderListModel:(HCOrderListItemModel *)itemModel;
 
 @end

@@ -8,6 +8,15 @@
 
 #import "MMUIBridgeView.h"
 
+@protocol HCOrderListOrderBottomCellViewDelegate <NSObject>
+@optional
+-(void)onClickToPayOrderList:(NSInteger)attachIndex;
+
+@end
+
 @interface HCOrderListOrderBottomCellView : MMUIBridgeView
+
+@property (nonatomic,weak) id<HCOrderListOrderBottomCellViewDelegate> m_delegate;
+@property (nonatomic,assign) NSInteger attachIndex;
 
 @end

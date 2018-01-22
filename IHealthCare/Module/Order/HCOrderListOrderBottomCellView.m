@@ -28,8 +28,11 @@
     [m_payButton setBackgroundImage:MFImageStretchCenter(@"common_btn_login_dis") forState:UIControlStateDisabled];
 }
 
-- (IBAction)onClickToPay:(id)sender {
-    
+- (IBAction)onClickToPay:(id)sender
+{
+    if ([self.m_delegate respondsToSelector:@selector(onClickToPayOrderList:)]) {
+        [self.m_delegate onClickToPayOrderList:self.attachIndex];
+    }
 }
 
 @end

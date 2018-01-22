@@ -8,6 +8,8 @@
 
 #import "HCOrderListItemModel.h"
 
+NSInteger const HCOrderList_state_1 = 1;   //未付
+
 #pragma mark - HCOrderListOrderItemModel
 @implementation HCOrderListOrderItemModel
 
@@ -19,5 +21,9 @@
 
 #pragma mark - HCOrderListItemModel
 @implementation HCOrderListItemModel
+
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    return @{@"orderItems" : [HCOrderListOrderItemModel class]};
+}
 
 @end
