@@ -65,6 +65,7 @@
     mfApi.tel = loginService.userPhone;
     mfApi.page = 1;
     
+    mfApi.animatingView = self.view;
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
         [m_tableView.pullToRefreshView stopAnimating];

@@ -67,6 +67,12 @@
 		A54C467B2016238600EBDA07 /* HCHealthManageCreateOrderItemCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C467A2016238600EBDA07 /* HCHealthManageCreateOrderItemCellView.m */; };
 		A54C467D2016239A00EBDA07 /* HCHealthManageCreateOrderItemCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54C467C2016239A00EBDA07 /* HCHealthManageCreateOrderItemCellView.xib */; };
 		A54C4680201629C500EBDA07 /* HCOrderItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C467F201629C500EBDA07 /* HCOrderItemModel.m */; };
+		A54C468320162E4900EBDA07 /* HCOrderListOrderCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C468220162E4900EBDA07 /* HCOrderListOrderCellView.m */; };
+		A54C468520162EDB00EBDA07 /* HCOrderListOrderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54C468420162EDB00EBDA07 /* HCOrderListOrderCellView.xib */; };
+		A54C46882016301A00EBDA07 /* HCOrderListOrderInfoCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C46872016301A00EBDA07 /* HCOrderListOrderInfoCellView.m */; };
+		A54C468A2016305900EBDA07 /* HCOrderListOrderInfoCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54C46892016305900EBDA07 /* HCOrderListOrderInfoCellView.xib */; };
+		A54C468D2016330B00EBDA07 /* HCOrderListOrderBottomCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C468C2016330B00EBDA07 /* HCOrderListOrderBottomCellView.m */; };
+		A54C468F201633EC00EBDA07 /* HCOrderListOrderBottomCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54C468E201633EC00EBDA07 /* HCOrderListOrderBottomCellView.xib */; };
 		A55388931FFE61D900D0DC27 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388861FFE61D900D0DC27 /* WXApiManager.m */; };
 		A55388941FFE61D900D0DC27 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388881FFE61D900D0DC27 /* WXApiRequestHandler.m */; };
 		A55388951FFE61D900D0DC27 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A553888A1FFE61D900D0DC27 /* WXApiResponseHandler.m */; };
@@ -417,6 +423,15 @@
 		A54C467C2016239A00EBDA07 /* HCHealthManageCreateOrderItemCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCHealthManageCreateOrderItemCellView.xib; sourceTree = "<group>"; };
 		A54C467E201629C500EBDA07 /* HCOrderItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderItemModel.h; sourceTree = "<group>"; };
 		A54C467F201629C500EBDA07 /* HCOrderItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderItemModel.m; sourceTree = "<group>"; };
+		A54C468120162E4900EBDA07 /* HCOrderListOrderCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderListOrderCellView.h; sourceTree = "<group>"; };
+		A54C468220162E4900EBDA07 /* HCOrderListOrderCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderListOrderCellView.m; sourceTree = "<group>"; };
+		A54C468420162EDB00EBDA07 /* HCOrderListOrderCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCOrderListOrderCellView.xib; sourceTree = "<group>"; };
+		A54C46862016301A00EBDA07 /* HCOrderListOrderInfoCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderListOrderInfoCellView.h; sourceTree = "<group>"; };
+		A54C46872016301A00EBDA07 /* HCOrderListOrderInfoCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderListOrderInfoCellView.m; sourceTree = "<group>"; };
+		A54C46892016305900EBDA07 /* HCOrderListOrderInfoCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCOrderListOrderInfoCellView.xib; sourceTree = "<group>"; };
+		A54C468B2016330B00EBDA07 /* HCOrderListOrderBottomCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderListOrderBottomCellView.h; sourceTree = "<group>"; };
+		A54C468C2016330B00EBDA07 /* HCOrderListOrderBottomCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderListOrderBottomCellView.m; sourceTree = "<group>"; };
+		A54C468E201633EC00EBDA07 /* HCOrderListOrderBottomCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCOrderListOrderBottomCellView.xib; sourceTree = "<group>"; };
 		A55388851FFE61D900D0DC27 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
 		A55388861FFE61D900D0DC27 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
 		A55388871FFE61D900D0DC27 /* WXApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiRequestHandler.h; sourceTree = "<group>"; };
@@ -1798,6 +1813,15 @@
 				A5CA4BFE200CF567004415F6 /* HCOrderAddressSelectViewController.m */,
 				A5CA4BFF200CF567004415F6 /* HCOrderListViewController.h */,
 				A5CA4C00200CF567004415F6 /* HCOrderListViewController.m */,
+				A54C468120162E4900EBDA07 /* HCOrderListOrderCellView.h */,
+				A54C468220162E4900EBDA07 /* HCOrderListOrderCellView.m */,
+				A54C468420162EDB00EBDA07 /* HCOrderListOrderCellView.xib */,
+				A54C46862016301A00EBDA07 /* HCOrderListOrderInfoCellView.h */,
+				A54C46872016301A00EBDA07 /* HCOrderListOrderInfoCellView.m */,
+				A54C46892016305900EBDA07 /* HCOrderListOrderInfoCellView.xib */,
+				A54C468B2016330B00EBDA07 /* HCOrderListOrderBottomCellView.h */,
+				A54C468C2016330B00EBDA07 /* HCOrderListOrderBottomCellView.m */,
+				A54C468E201633EC00EBDA07 /* HCOrderListOrderBottomCellView.xib */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -1994,6 +2018,7 @@
 				A56CD7881FD0315000FFF504 /* MeAssets.xcassets in Resources */,
 				A511F35A1FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib in Resources */,
 				A511F3551FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib in Resources */,
+				A54C468A2016305900EBDA07 /* HCOrderListOrderInfoCellView.xib in Resources */,
 				A58848FF1FFFC5C700FC93EE /* HCHealthManagementCellView.xib in Resources */,
 				A553F3A420063417002A205B /* HCMedicalServiceDetailHeaderTitleView.xib in Resources */,
 				A56CD7861FD0312000FFF504 /* MainFrameAssets.xcassets in Resources */,
@@ -2004,6 +2029,8 @@
 				A5190E721FFA655F00BBF049 /* HCHighProductDetailBottomView.xib in Resources */,
 				AC60B6222016182B00EC1645 /* HCMyClassesCellView.xib in Resources */,
 				A588490A1FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.xib in Resources */,
+				A54C468F201633EC00EBDA07 /* HCOrderListOrderBottomCellView.xib in Resources */,
+				A54C468520162EDB00EBDA07 /* HCOrderListOrderCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2075,6 +2102,7 @@
 				A57B48121FCEF9190004C397 /* SCLSwitchView.m in Sources */,
 				A566B4DC1FD2AC70004F6843 /* MMTitleView.m in Sources */,
 				A57B48391FCEF9190004C397 /* MFModelHelper.m in Sources */,
+				A54C468320162E4900EBDA07 /* HCOrderListOrderCellView.m in Sources */,
 				A57B47FC1FCEF9190004C397 /* ConcreteExtensionField.m in Sources */,
 				A58849021FFFC5C700FC93EE /* HCHealthManagementClassRoomViewController.m in Sources */,
 				A57B48001FCEF9190004C397 /* ExtensionRegistry.m in Sources */,
@@ -2229,6 +2257,7 @@
 				A57B47EB1FCEF9190004C397 /* IQTitleBarButtonItem.m in Sources */,
 				A57B48311FCEF9190004C397 /* MMOnePixLayoutConstraint.m in Sources */,
 				AC476657201375F500B2DB6D /* HCGetHealthControlDetailApi.m in Sources */,
+				A54C468D2016330B00EBDA07 /* HCOrderListOrderBottomCellView.m in Sources */,
 				A511F3531FD425B700AE5D57 /* HealthCareCenterMenuMainView.m in Sources */,
 				A52A8E2A200AFB310067E856 /* HCUserModel.m in Sources */,
 				A57B47E21FCEF9190004C397 /* IQUITextFieldView+Additions.m in Sources */,
@@ -2306,6 +2335,7 @@
 				A57B48331FCEF9190004C397 /* MMUIBridgeView.m in Sources */,
 				A549A996201222D10095E557 /* HCUserAuthApi.m in Sources */,
 				A5854A552010F376001F4A1F /* HCMyInfoInputCellView.m in Sources */,
+				A54C46882016301A00EBDA07 /* HCOrderListOrderInfoCellView.m in Sources */,
 				A50FDCA1200B5709007F091B /* HCClassRoomCourseDescriptionViewController.m in Sources */,
 				A553F3A7200665A2002A205B /* HCCountStepView.m in Sources */,
 				A5D9AE2F1FDBB87B00B5D4C0 /* YTKAnimatingRequestAccessory.m in Sources */,

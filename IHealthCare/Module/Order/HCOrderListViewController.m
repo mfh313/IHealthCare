@@ -7,8 +7,14 @@
 //
 
 #import "HCOrderListViewController.h"
+#import "HCOrderListOrderCellView.h"
+#import "HCOrderListOrderInfoCellView.h"
+#import "HCOrderListOrderBottomCellView.h"
 
 @interface HCOrderListViewController ()
+{
+    
+}
 
 @end
 
@@ -24,6 +30,5 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 @end
