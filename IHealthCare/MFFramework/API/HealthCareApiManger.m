@@ -17,6 +17,13 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
 
 @implementation HealthCareApiManger
 
+//查询我的课程
++ (NSString *)myClasses:(NSString *)tel page:(NSInteger)page
+{
+    NSString *parmUrl = [NSString stringWithFormat:@"api/myClasses/%@/%@",tel,@(page)];
+    return MFURLWithPara(parmUrl);
+}
+
 //查询我的收藏
 + (NSString *)favorites:(NSString *)tel page:(NSInteger)page
 {

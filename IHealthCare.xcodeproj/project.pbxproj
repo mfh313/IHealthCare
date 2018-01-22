@@ -294,6 +294,10 @@
 		AC47665420134E3800B2DB6D /* HCUserAuthLevelSelectItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC47665320134E3800B2DB6D /* HCUserAuthLevelSelectItemView.m */; };
 		AC476657201375F500B2DB6D /* HCGetHealthControlDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = AC476656201375F500B2DB6D /* HCGetHealthControlDetailApi.m */; };
 		AC60B61720160F6600EC1645 /* HCMyClassesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC60B61620160F6600EC1645 /* HCMyClassesViewController.m */; };
+		AC60B61A201612D200EC1645 /* HCGetMyClassesApi.m in Sources */ = {isa = PBXBuildFile; fileRef = AC60B619201612D200EC1645 /* HCGetMyClassesApi.m */; };
+		AC60B61D2016143600EC1645 /* HCMyClassesListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC60B61C2016143600EC1645 /* HCMyClassesListModel.m */; };
+		AC60B6202016176D00EC1645 /* HCMyClassesCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC60B61F2016176D00EC1645 /* HCMyClassesCellView.m */; };
+		AC60B6222016182B00EC1645 /* HCMyClassesCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC60B6212016182B00EC1645 /* HCMyClassesCellView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -851,6 +855,13 @@
 		AC476656201375F500B2DB6D /* HCGetHealthControlDetailApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetHealthControlDetailApi.m; sourceTree = "<group>"; };
 		AC60B61520160F6600EC1645 /* HCMyClassesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyClassesViewController.h; sourceTree = "<group>"; };
 		AC60B61620160F6600EC1645 /* HCMyClassesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyClassesViewController.m; sourceTree = "<group>"; };
+		AC60B618201612D200EC1645 /* HCGetMyClassesApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetMyClassesApi.h; sourceTree = "<group>"; };
+		AC60B619201612D200EC1645 /* HCGetMyClassesApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetMyClassesApi.m; sourceTree = "<group>"; };
+		AC60B61B2016143600EC1645 /* HCMyClassesListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyClassesListModel.h; sourceTree = "<group>"; };
+		AC60B61C2016143600EC1645 /* HCMyClassesListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyClassesListModel.m; sourceTree = "<group>"; };
+		AC60B61E2016176D00EC1645 /* HCMyClassesCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyClassesCellView.h; sourceTree = "<group>"; };
+		AC60B61F2016176D00EC1645 /* HCMyClassesCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyClassesCellView.m; sourceTree = "<group>"; };
+		AC60B6212016182B00EC1645 /* HCMyClassesCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMyClassesCellView.xib; sourceTree = "<group>"; };
 		D46774D91909037E0185E2B2 /* Pods-IHealthCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.release.xcconfig"; sourceTree = "<group>"; };
 		E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IHealthCare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1110,6 +1121,9 @@
 				A5854A512010EE30001F4A1F /* HCMyInfoAvtarCellView.xib */,
 				AC60B61520160F6600EC1645 /* HCMyClassesViewController.h */,
 				AC60B61620160F6600EC1645 /* HCMyClassesViewController.m */,
+				AC60B61E2016176D00EC1645 /* HCMyClassesCellView.h */,
+				AC60B61F2016176D00EC1645 /* HCMyClassesCellView.m */,
+				AC60B6212016182B00EC1645 /* HCMyClassesCellView.xib */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -1174,6 +1188,8 @@
 		A575874E1FE526C1000FC7CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC60B61B2016143600EC1645 /* HCMyClassesListModel.h */,
+				AC60B61C2016143600EC1645 /* HCMyClassesListModel.m */,
 				A5A659BD20148BEA0096F1EA /* HCFavoriteModel.h */,
 				A5A659BE20148BEA0096F1EA /* HCFavoriteModel.m */,
 				A5A659BA20148AAB0096F1EA /* HCCmsCommonModel.h */,
@@ -1783,6 +1799,8 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				AC60B618201612D200EC1645 /* HCGetMyClassesApi.h */,
+				AC60B619201612D200EC1645 /* HCGetMyClassesApi.m */,
 				A5A659B7201465B30096F1EA /* HCGetFavoritesApi.h */,
 				A5A659B8201465B30096F1EA /* HCGetFavoritesApi.m */,
 				A5A659B120143BBB0096F1EA /* HCThumbUpBestNewsApi.h */,
@@ -1965,6 +1983,7 @@
 				A554650B1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */,
 				A5CA4C07200CF567004415F6 /* HCCreateOrderItemCellView.xib in Resources */,
 				A5190E721FFA655F00BBF049 /* HCHighProductDetailBottomView.xib in Resources */,
+				AC60B6222016182B00EC1645 /* HCMyClassesCellView.xib in Resources */,
 				A588490A1FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2048,6 +2067,7 @@
 				A57B48191FCEF9190004C397 /* NSCache+SafeInsert.m in Sources */,
 				A53695AF1FD59769007CC67C /* SPPageController.m in Sources */,
 				A5190E6E1FFA655F00BBF049 /* HCBestNewsMainViewController.m in Sources */,
+				AC60B61A201612D200EC1645 /* HCGetMyClassesApi.m in Sources */,
 				A554650D1FEFAD3100A7E3C7 /* HCMeFooterView.m in Sources */,
 				A57B480C1FCEF9190004C397 /* Utilities.m in Sources */,
 				A57B482C1FCEF9190004C397 /* MFUITableView.m in Sources */,
@@ -2136,6 +2156,7 @@
 				A57B48291FCEF9190004C397 /* MFTableViewCellObject.m in Sources */,
 				A57B48211FCEF9190004C397 /* UIView+threadHook.m in Sources */,
 				A55465181FEFAD5700A7E3C7 /* HCNormalGroupCellView.m in Sources */,
+				AC60B61D2016143600EC1645 /* HCMyClassesListModel.m in Sources */,
 				A5CA4C01200CF567004415F6 /* HCClassCreateOrderItemCellView.m in Sources */,
 				A57B48141FCEF9190004C397 /* SCLTimerDisplay.m in Sources */,
 				A57B47FE1FCEF9190004C397 /* ExtendableMessage.m in Sources */,
@@ -2221,6 +2242,7 @@
 				A57B481E1FCEF9190004C397 /* NSMutableString+SafeInsert.m in Sources */,
 				A5A659B02014348F0096F1EA /* HCGetBestNewsDetailApi.m in Sources */,
 				A5CA4C04200CF567004415F6 /* HCCreateOrderAddressCellView.m in Sources */,
+				AC60B6202016176D00EC1645 /* HCMyClassesCellView.m in Sources */,
 				A549A99020121A5F0095E557 /* HCQiniuFileService.m in Sources */,
 				A5BDB5051FE65B010052B51B /* HCBestNewsDetailModel.m in Sources */,
 				A57B48461FCEF9190004C397 /* NSObject+YYModel.m in Sources */,
