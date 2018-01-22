@@ -17,6 +17,7 @@
 #import "HCMyInfoViewController.h"
 #import "HCUserAuthStatusViewController.h"
 #import "HCFavoritesViewController.h"
+#import "HCMyClassesViewController.h"
 
 @interface HCMeViewController () <MMTableViewInfoDelegate,HCMeProfileCellViewDelegate,HCUserAuthStatusViewControllerDelegate>
 {
@@ -250,12 +251,22 @@
     {
         [self onClickMyFavoritesVC];
     }
+    else if ([key isEqualToString:@"myClasses"])
+    {
+        [self showMyClassesVC];
+    }
 }
 
 -(void)onClickMyFavoritesVC
 {
     HCFavoritesViewController *favoritesVC = [HCFavoritesViewController new];
     [self.navigationController pushViewController:favoritesVC animated:YES];
+}
+
+-(void)showMyClassesVC
+{
+    HCMyClassesViewController *classesVC = [HCMyClassesViewController new];
+    [self.navigationController pushViewController:classesVC animated:YES];
 }
 
 -(void)addTableSources
@@ -267,6 +278,7 @@
     NSMutableDictionary *records = [NSMutableDictionary dictionary];
     records[@"image"] = @"my_icon_health_records";
     records[@"title"] = @"我的课程";
+    records[@"key"] = @"myClasses";
     
     NSMutableDictionary *service = [NSMutableDictionary dictionary];
     service[@"image"] = @"my_icon_service";
