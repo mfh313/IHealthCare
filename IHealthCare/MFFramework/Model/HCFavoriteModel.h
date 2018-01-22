@@ -9,6 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "HCCmsCommonModel.h"
 
+extern NSInteger const HCFavorite_category_1;   //高品服务
+extern NSInteger const HCFavorite_category_2;   //健康管理交易类
+extern NSInteger const HCFavorite_category_3;   //服务显示类
+extern NSInteger const HCFavorite_category_4;   //资讯显示类
+extern NSInteger const HCFavorite_category_5;   //大讲堂类
+
 @interface HCFavoriteModel : NSObject
 
 @property (nonatomic,assign) NSInteger favoriteId;
@@ -18,3 +24,5 @@
 @property (nonatomic,strong) HCCmsCommonModel *favoriteData;
 
 @end
+
+

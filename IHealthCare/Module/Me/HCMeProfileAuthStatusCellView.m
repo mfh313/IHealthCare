@@ -33,11 +33,9 @@
 
 -(void)onClickContent:(id)sender
 {
-    
     if ([self.m_delegate respondsToSelector:@selector(onClickProfileCell:)]) {
         [self.m_delegate onClickProfileCell:self];
     }
-    
 }
 
 -(void)layoutProfileViews

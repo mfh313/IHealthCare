@@ -10,6 +10,9 @@
 #import "HCGetFavoritesApi.h"
 #import "HCFavoriteModel.h"
 #import "HCFavoritesCellView.h"
+#import "HCBestNewsDetailViewController.h"
+#import "HCHighProductDetailViewController.h"
+#import "HCHealthManagementDetailViewController.h"
 
 @interface HCFavoritesViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
@@ -44,6 +47,12 @@
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf getFavorites];
     }];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 -(void)getFavorites
@@ -100,6 +109,10 @@
     {
         return [self tableView:tableView favoritesCellForIndexPath:indexPath];
     }
+    else if ([identifier isEqualToString:@"separator"])
+    {
+        return [self tableView:tableView separatorCellForIndex:indexPath];
+    }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil)
@@ -138,10 +151,38 @@
     return cell;
 }
 
+-(UITableViewCell *)tableView:(UITableView *)tableView separatorCellForIndex:(NSIndexPath *)indexPath
+{
+    MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    NSString *identifier = cellInfo.cellReuseIdentifier;
+    
+    MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+        UIView *separator = [UIView new];
+        separator.frame = CGRectMake(0, 0, CGRectGetWidth(cell.contentView.frame), MFOnePixHeight);
+        separator.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        separator.backgroundColor = MFCustomLineColor;
+        [cell.contentView addSubview:separator];
+    }
+    return cell;
+}
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
     return cellInfo.cellHeight;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    HCFavoriteModel *itemModel = m_favorites[cellInfo.attachIndex];
+    
+    [self showFavoriteDetail:itemModel];
 }
 
 -(void)reloadTableView
@@ -163,6 +204,38 @@
         favorite.cellReuseIdentifier = @"favorite";
         favorite.attachIndex = i;
         [m_cellInfos addObject:favorite];
+        
+        MFTableViewCellObject *separator = [MFTableViewCellObject new];
+        separator.cellHeight = MFOnePixHeight;
+        separator.cellReuseIdentifier = @"separator";
+        separator.attachIndex = i;
+        [m_cellInfos addObject:separator];
+    }
+}
+
+-(void)showFavoriteDetail:(HCFavoriteModel *)itemModel
+{
+    HCCmsCommonModel *favoriteData = itemModel.favoriteData;
+    
+    NSInteger favCategory = itemModel.category;
+    
+    if (favCategory == HCFavorite_category_4) //资讯显示类
+    {
+        HCBestNewsDetailViewController *detailVC = [HCBestNewsDetailViewController new];
+        detailVC.bid = favoriteData.cmsId;
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
+    else if (favCategory == HCFavorite_category_1) //高品服务
+    {
+        HCHighProductDetailViewController *detailVC = [HCHighProductDetailViewController new];
+        detailVC.pid = favoriteData.cmsId;
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
+    else if (favCategory == HCFavorite_category_2) //健康管理交易类
+    {
+        HCHealthManagementDetailViewController *detailVC = [HCHealthManagementDetailViewController new];
+        detailVC.hcid = favoriteData.cmsId;
+        [self.navigationController pushViewController:detailVC animated:YES];
     }
 }
 
