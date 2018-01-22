@@ -17,6 +17,12 @@
 
 @implementation HCAddCommentsViewController
 
+-(void)onClickDismissBackButton:(id)sender
+{
+    [self.view endEditing:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
