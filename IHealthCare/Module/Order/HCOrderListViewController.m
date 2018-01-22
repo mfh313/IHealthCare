@@ -12,6 +12,7 @@
 #import "HCOrderListOrderBottomCellView.h"
 #import "HCGetOrdersApi.h"
 #import "HCOrderListItemModel.h"
+#import "HCOrderListPayViewController.h"
 
 @interface HCOrderListViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCOrderListOrderBottomCellViewDelegate>
 {
@@ -295,7 +296,6 @@
             toPay.attachIndex = i;
             [m_cellInfos addObject:toPay];
         }
-    
     }
 }
 
@@ -311,7 +311,11 @@
 #pragma mark - HCOrderListOrderBottomCellViewDelegate
 -(void)onClickToPayOrderList:(NSInteger)attachIndex
 {
+    HCOrderListItemModel *itemModel  = m_orderLists[attachIndex];
     
+    HCOrderListPayViewController *payVC = [HCOrderListPayViewController new];
+    payVC.oid = itemModel.oid;
+    [self.navigationController pushViewController:payVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

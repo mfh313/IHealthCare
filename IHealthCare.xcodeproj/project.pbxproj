@@ -75,6 +75,7 @@
 		A54C468F201633EC00EBDA07 /* HCOrderListOrderBottomCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A54C468E201633EC00EBDA07 /* HCOrderListOrderBottomCellView.xib */; };
 		A54C46922016393A00EBDA07 /* HCGetOrdersApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C46912016393A00EBDA07 /* HCGetOrdersApi.m */; };
 		A54C469520163AA000EBDA07 /* HCOrderListItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C469420163AA000EBDA07 /* HCOrderListItemModel.m */; };
+		A54C469820164BE400EBDA07 /* HCOrderListPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A54C469720164BE400EBDA07 /* HCOrderListPayViewController.m */; };
 		A55388931FFE61D900D0DC27 /* WXApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388861FFE61D900D0DC27 /* WXApiManager.m */; };
 		A55388941FFE61D900D0DC27 /* WXApiRequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A55388881FFE61D900D0DC27 /* WXApiRequestHandler.m */; };
 		A55388951FFE61D900D0DC27 /* WXApiResponseHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A553888A1FFE61D900D0DC27 /* WXApiResponseHandler.m */; };
@@ -438,6 +439,8 @@
 		A54C46912016393A00EBDA07 /* HCGetOrdersApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetOrdersApi.m; sourceTree = "<group>"; };
 		A54C469320163AA000EBDA07 /* HCOrderListItemModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderListItemModel.h; sourceTree = "<group>"; };
 		A54C469420163AA000EBDA07 /* HCOrderListItemModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderListItemModel.m; sourceTree = "<group>"; };
+		A54C469620164BE400EBDA07 /* HCOrderListPayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCOrderListPayViewController.h; sourceTree = "<group>"; };
+		A54C469720164BE400EBDA07 /* HCOrderListPayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCOrderListPayViewController.m; sourceTree = "<group>"; };
 		A55388851FFE61D900D0DC27 /* WXApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiManager.h; sourceTree = "<group>"; };
 		A55388861FFE61D900D0DC27 /* WXApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiManager.m; sourceTree = "<group>"; };
 		A55388871FFE61D900D0DC27 /* WXApiRequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiRequestHandler.h; sourceTree = "<group>"; };
@@ -1830,6 +1833,8 @@
 				A54C468B2016330B00EBDA07 /* HCOrderListOrderBottomCellView.h */,
 				A54C468C2016330B00EBDA07 /* HCOrderListOrderBottomCellView.m */,
 				A54C468E201633EC00EBDA07 /* HCOrderListOrderBottomCellView.xib */,
+				A54C469620164BE400EBDA07 /* HCOrderListPayViewController.h */,
+				A54C469720164BE400EBDA07 /* HCOrderListPayViewController.m */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -2318,6 +2323,7 @@
 				A58848FE1FFFC5C700FC93EE /* HCHealthManagementCellView.m in Sources */,
 				A57B48241FCEF9190004C397 /* UIViewController+FullScreen.m in Sources */,
 				A57B48421FCEF9190004C397 /* MFAppMacroUtil.m in Sources */,
+				A54C469820164BE400EBDA07 /* HCOrderListPayViewController.m in Sources */,
 				A5CA4C08200CF567004415F6 /* HCCreateOrderNullAddressCellView.m in Sources */,
 				A56CD78B1FD0330A00FFF504 /* HCLoginContentView.m in Sources */,
 				A58849031FFFC5C700FC93EE /* HCHealthManagementDetailToolBar.m in Sources */,
