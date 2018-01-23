@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//删除收藏
++ (NSString *)deleteFavorites:(NSInteger)fid;
+
 //查询订单列表
 + (NSString *)orders:(NSString *)tel page:(NSInteger)page;
 

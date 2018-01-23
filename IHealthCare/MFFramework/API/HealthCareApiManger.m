@@ -17,6 +17,13 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
 
 @implementation HealthCareApiManger
 
+//删除收藏
++ (NSString *)deleteFavorites:(NSInteger)fid
+{
+    NSString *parmUrl = [NSString stringWithFormat:@"api/favorites/%@",@(fid)];
+    return MFURLWithPara(parmUrl);
+}
+
 //查询订单列表
 + (NSString *)orders:(NSString *)tel page:(NSInteger)page
 {

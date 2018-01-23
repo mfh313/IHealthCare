@@ -14,6 +14,7 @@
 #import "HCHighProductDetailViewController.h"
 #import "HCHealthManagementDetailViewController.h"
 #import "HCClassRoomDetailViewController.h"
+#import "HCDeleteFavoriteApi.h"
 
 @interface HCFavoritesViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCFavoritesCellViewDelegate>
 {
@@ -253,7 +254,30 @@
 #pragma mark - HCFavoritesCellViewDelegate
 -(void)onClickDeleteFavoritesCell:(HCFavoritesCellView *)cellView dataIndex:(NSInteger)index
 {
+    HCFavoriteModel *itemModel = m_favorites[index];
     
+    __weak typeof(self) weakSelf = self;
+    HCDeleteFavoriteApi *mfApi = [HCDeleteFavoriteApi new];
+    mfApi.fid = itemModel.favoriteId;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        [m_tableView.pullToRefreshView stopAnimating];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        [strongSelf showTips:@"删除成功"];
+        [strongSelf getFavorites];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        [m_tableView.pullToRefreshView stopAnimating];
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
