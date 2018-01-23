@@ -69,10 +69,9 @@
         [strongSelf getComments];
     }];
     
-    __block NSInteger currentPage = m_currentPage;
     [m_tableView addInfiniteScrollingWithActionHandler:^{
-        currentPage++;
         
+        m_currentPage++;
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf getCommentsMore];
     }];
