@@ -11,6 +11,7 @@
 #import "HCCommentsAddToolBar.h"
 #import "HCAddCommentsViewController.h"
 #import "HCCommentsDetailModel.h"
+#import "HCCommentsCellView.h"
 
 @interface HCCommentsViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCCommentsAddToolBarDelegate,HCAddCommentsViewControllerDelegate>
 {
@@ -19,6 +20,8 @@
     MFUITableView *m_tableView;
     
     NSMutableArray *m_comments;
+    
+    NSInteger m_currentPage;
 }
 
 @end
@@ -31,6 +34,21 @@
     self.title = @"评论";
     [self setBackBarButton];
     
+    m_tableView = [[MFUITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+    m_tableView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
+    m_tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    m_tableView.dataSource = self;
+    m_tableView.delegate = self;
+    m_tableView.m_delegate = self;
+    [self.view addSubview:m_tableView];
+    
+    [m_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(self.view);
+        make.top.mas_equalTo(self.view);
+        make.bottom.equalTo(self.view).offset(-60);
+        make.left.equalTo(self.view);
+    }];
+    
     m_toolBar = [HCCommentsAddToolBar nibView];
     m_toolBar.m_delegate = self;
     [self.view addSubview:m_toolBar];
@@ -41,12 +59,22 @@
         make.left.equalTo(self.view);
     }];
 
+    m_currentPage = 1;
     [self getComments];
     
     __weak typeof(self) weakSelf = self;
     [m_tableView addPullToRefreshWithActionHandler:^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
+        m_currentPage = 1;
         [strongSelf getComments];
+    }];
+    
+    __block NSInteger currentPage = m_currentPage;
+    [m_tableView addInfiniteScrollingWithActionHandler:^{
+        currentPage++;
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf getCommentsMore];
     }];
 }
 
@@ -72,7 +100,7 @@
     NSString *identifier = cellInfo.cellReuseIdentifier;
     if ([identifier isEqualToString:@"comment"])
     {
-//        return [self tableView:tableView commentCellForIndexPath:indexPath];
+        return [self tableView:tableView commentCellForIndexPath:indexPath];
     }
     else if ([identifier isEqualToString:@"separator"])
     {
@@ -100,21 +128,16 @@
         cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         
-//        HCFavoritesCellView *cellView = [HCFavoritesCellView nibView];
-//        cellView.m_delegate = self;
-//        cell.m_subContentView = cellView;
+        HCCommentsCellView *cellView = [HCCommentsCellView nibView];
+        cell.m_subContentView = cellView;
     }
     
-//    NSInteger attachIndex = cellInfo.attachIndex;
-//    HCFavoriteModel *itemModel = m_favorites[attachIndex];
-//
-//    HCFavoritesCellView *cellView = (HCFavoritesCellView *)cell.m_subContentView;
-//    cellView.index = attachIndex;
-//
-//    HCCmsCommonModel *favoriteData = itemModel.favoriteData;
-//
-//    [cellView setImageUrl:favoriteData.imageUrl];
-//    [cellView setTitle:favoriteData.name subTitle:favoriteData.cmsDescription];
+    NSInteger attachIndex = cellInfo.attachIndex;
+    HCCommentsDetailModel *itemModel = m_comments[attachIndex];
+
+    HCCommentsCellView *cellView = (HCCommentsCellView *)cell.m_subContentView;
+
+    [cellView setCommentsDetailModel:itemModel];
     
     return cell;
 }
@@ -178,9 +201,8 @@
     HCGetCommentsCidApi *mfApi = [HCGetCommentsCidApi new];
     mfApi.cid = self.cid;
     mfApi.commentedId = self.commentedId;
-    mfApi.page = 1;
+    mfApi.page = m_currentPage;
     
-    mfApi.animatingView = self.view;
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
         [m_tableView.pullToRefreshView stopAnimating];
@@ -203,6 +225,42 @@
     } failure:^(YTKBaseRequest * request) {
         
         [m_tableView.pullToRefreshView stopAnimating];
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
+}
+
+-(void)getCommentsMore
+{
+    __weak typeof(self) weakSelf = self;
+    HCGetCommentsCidApi *mfApi = [HCGetCommentsCidApi new];
+    mfApi.cid = self.cid;
+    mfApi.commentedId = self.commentedId;
+    mfApi.page = m_currentPage;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        [m_tableView.infiniteScrollingView stopAnimating];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSArray *responseData = mfApi.responseNetworkData;
+        NSMutableArray *comments = [NSMutableArray array];
+        for (int i = 0; i < responseData.count; i++) {
+            HCCommentsDetailModel *itemModel = [HCCommentsDetailModel yy_modelWithDictionary:responseData[i]];
+            [comments addObject:itemModel];
+        }
+        
+        [m_comments addObjectsFromArray:comments];
+        
+        [strongSelf reloadTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        [m_tableView.infiniteScrollingView stopAnimating];
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];

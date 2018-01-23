@@ -318,6 +318,8 @@
 		AC7DAF3C20175F0C007B534F /* HCCommentsAddToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DAF3B20175F0C007B534F /* HCCommentsAddToolBar.m */; };
 		AC7DAF3E20175F9A007B534F /* HCCommentsAddToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7DAF3D20175F9A007B534F /* HCCommentsAddToolBar.xib */; };
 		AC7DAF41201764F0007B534F /* HCCommentsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DAF40201764F0007B534F /* HCCommentsDetailModel.m */; };
+		AC7DAF4420176AC6007B534F /* HCCommentsCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DAF4320176AC6007B534F /* HCCommentsCellView.m */; };
+		AC7DAF4620176B0B007B534F /* HCCommentsCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7DAF4520176B0B007B534F /* HCCommentsCellView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -917,6 +919,9 @@
 		AC7DAF3D20175F9A007B534F /* HCCommentsAddToolBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCCommentsAddToolBar.xib; sourceTree = "<group>"; };
 		AC7DAF3F201764F0007B534F /* HCCommentsDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCommentsDetailModel.h; sourceTree = "<group>"; };
 		AC7DAF40201764F0007B534F /* HCCommentsDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCommentsDetailModel.m; sourceTree = "<group>"; };
+		AC7DAF4220176AC6007B534F /* HCCommentsCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCommentsCellView.h; sourceTree = "<group>"; };
+		AC7DAF4320176AC6007B534F /* HCCommentsCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCommentsCellView.m; sourceTree = "<group>"; };
+		AC7DAF4520176B0B007B534F /* HCCommentsCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCCommentsCellView.xib; sourceTree = "<group>"; };
 		D46774D91909037E0185E2B2 /* Pods-IHealthCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.release.xcconfig"; sourceTree = "<group>"; };
 		E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IHealthCare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1102,6 +1107,9 @@
 				A54C469B2016536800EBDA07 /* HCAddCommentsViewController.m */,
 				AC7DAF3420175A6E007B534F /* HCCommentsViewController.h */,
 				AC7DAF3520175A6E007B534F /* HCCommentsViewController.m */,
+				AC7DAF4220176AC6007B534F /* HCCommentsCellView.h */,
+				AC7DAF4320176AC6007B534F /* HCCommentsCellView.m */,
+				AC7DAF4520176B0B007B534F /* HCCommentsCellView.xib */,
 				AC7DAF3A20175F0C007B534F /* HCCommentsAddToolBar.h */,
 				AC7DAF3B20175F0C007B534F /* HCCommentsAddToolBar.m */,
 				AC7DAF3D20175F9A007B534F /* HCCommentsAddToolBar.xib */,
@@ -2080,6 +2088,7 @@
 				A56CD7861FD0312000FFF504 /* MainFrameAssets.xcassets in Resources */,
 				AC7DAF3E20175F9A007B534F /* HCCommentsAddToolBar.xib in Resources */,
 				A5190E781FFA655F00BBF049 /* HCProductDetailHeaderTitleView.xib in Resources */,
+				AC7DAF4620176B0B007B534F /* HCCommentsCellView.xib in Resources */,
 				A553F3A92006661E002A205B /* HCCountStepView.xib in Resources */,
 				A554650B1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */,
 				A5CA4C07200CF567004415F6 /* HCCreateOrderItemCellView.xib in Resources */,
@@ -2335,6 +2344,7 @@
 				A57B481C1FCEF9190004C397 /* NSMutableDictionary+SafeInsert.m in Sources */,
 				A57B47F81FCEF9190004C397 /* AbstractMessage.m in Sources */,
 				A526F4131FF3DFFD00092ADD /* HCMedicalServiceDetailModel.m in Sources */,
+				AC7DAF4420176AC6007B534F /* HCCommentsCellView.m in Sources */,
 				A5190E6D1FFA655F00BBF049 /* HCBestNewsDetailViewController.m in Sources */,
 				A57B47E91FCEF9190004C397 /* IQBarButtonItem.m in Sources */,
 				A5CA4C0B200CF567004415F6 /* HCOrderAddressCreateCellView.m in Sources */,
