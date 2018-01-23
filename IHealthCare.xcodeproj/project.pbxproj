@@ -317,6 +317,7 @@
 		AC7DAF3920175CD1007B534F /* HCGetCommentsCidApi.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DAF3820175CD1007B534F /* HCGetCommentsCidApi.m */; };
 		AC7DAF3C20175F0C007B534F /* HCCommentsAddToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DAF3B20175F0C007B534F /* HCCommentsAddToolBar.m */; };
 		AC7DAF3E20175F9A007B534F /* HCCommentsAddToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7DAF3D20175F9A007B534F /* HCCommentsAddToolBar.xib */; };
+		AC7DAF41201764F0007B534F /* HCCommentsDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DAF40201764F0007B534F /* HCCommentsDetailModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -914,6 +915,8 @@
 		AC7DAF3A20175F0C007B534F /* HCCommentsAddToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCommentsAddToolBar.h; sourceTree = "<group>"; };
 		AC7DAF3B20175F0C007B534F /* HCCommentsAddToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCommentsAddToolBar.m; sourceTree = "<group>"; };
 		AC7DAF3D20175F9A007B534F /* HCCommentsAddToolBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCCommentsAddToolBar.xib; sourceTree = "<group>"; };
+		AC7DAF3F201764F0007B534F /* HCCommentsDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCommentsDetailModel.h; sourceTree = "<group>"; };
+		AC7DAF40201764F0007B534F /* HCCommentsDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCommentsDetailModel.m; sourceTree = "<group>"; };
 		D46774D91909037E0185E2B2 /* Pods-IHealthCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.release.xcconfig"; sourceTree = "<group>"; };
 		E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IHealthCare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1254,6 +1257,8 @@
 		A575874E1FE526C1000FC7CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC7DAF3F201764F0007B534F /* HCCommentsDetailModel.h */,
+				AC7DAF40201764F0007B534F /* HCCommentsDetailModel.m */,
 				A54C469320163AA000EBDA07 /* HCOrderListItemModel.h */,
 				A54C469420163AA000EBDA07 /* HCOrderListItemModel.m */,
 				AC60B61B2016143600EC1645 /* HCMyClassesListModel.h */,
@@ -2348,6 +2353,7 @@
 				A57B47E31FCEF9190004C397 /* IQUIView+Hierarchy.m in Sources */,
 				A57B481E1FCEF9190004C397 /* NSMutableString+SafeInsert.m in Sources */,
 				A5A659B02014348F0096F1EA /* HCGetBestNewsDetailApi.m in Sources */,
+				AC7DAF41201764F0007B534F /* HCCommentsDetailModel.m in Sources */,
 				A5CA4C04200CF567004415F6 /* HCCreateOrderAddressCellView.m in Sources */,
 				AC60B6202016176D00EC1645 /* HCMyClassesCellView.m in Sources */,
 				A54C46922016393A00EBDA07 /* HCGetOrdersApi.m in Sources */,
