@@ -15,7 +15,7 @@
 #import "HCHealthManagementDetailViewController.h"
 #import "HCClassRoomDetailViewController.h"
 
-@interface HCFavoritesViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface HCFavoritesViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCFavoritesCellViewDelegate>
 {
     MFUITableView *m_tableView;
     
@@ -138,6 +138,7 @@
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         
         HCFavoritesCellView *cellView = [HCFavoritesCellView nibView];
+        cellView.m_delegate = self;
         cell.m_subContentView = cellView;
     }
     
@@ -145,6 +146,7 @@
     HCFavoriteModel *itemModel = m_favorites[attachIndex];
 
     HCFavoritesCellView *cellView = (HCFavoritesCellView *)cell.m_subContentView;
+    cellView.index = attachIndex;
     
     HCCmsCommonModel *favoriteData = itemModel.favoriteData;
     
@@ -246,6 +248,12 @@
         classRoomDetailVC.crid = favoriteData.cmsId;
         [self.navigationController pushViewController:classRoomDetailVC animated:YES];
     }
+}
+
+#pragma mark - HCFavoritesCellViewDelegate
+-(void)onClickDeleteFavoritesCell:(HCFavoritesCellView *)cellView dataIndex:(NSInteger)index
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {

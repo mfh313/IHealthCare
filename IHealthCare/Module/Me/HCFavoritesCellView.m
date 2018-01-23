@@ -30,4 +30,10 @@
     m_subTitleLabel.text = subTitle;
 }
 
+- (IBAction)onClickDeleteButton:(id)sender {
+    if ([self.m_delegate respondsToSelector:@selector(onClickDeleteFavoritesCell:dataIndex:)]) {
+        [self.m_delegate onClickDeleteFavoritesCell:self dataIndex:self.index];
+    }
+}
+
 @end

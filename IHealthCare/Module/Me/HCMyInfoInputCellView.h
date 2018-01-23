@@ -24,6 +24,7 @@
     
     CGFloat m_titleWidth;
 }
+
 @property (nonatomic,weak) id<HCMyInfoInputCellViewDelegate> m_delegate;
 @property (nonatomic,strong) NSString *contentKey;
 

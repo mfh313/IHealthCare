@@ -35,17 +35,30 @@
                     <color key="textColor" red="0.6470588235294118" green="0.6470588235294118" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pTb-b5-6Hn">
+                    <rect key="frame" x="325" y="35" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="j5T-Va-kAD"/>
+                        <constraint firstAttribute="height" constant="40" id="lBc-us-xop"/>
+                    </constraints>
+                    <state key="normal" image="delete"/>
+                    <connections>
+                        <action selector="onClickDeleteButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="guG-zo-yjb"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="l66-k5-MWZ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="0Lb-kM-qkQ"/>
                 <constraint firstItem="Wfd-aE-AnF" firstAttribute="leading" secondItem="l66-k5-MWZ" secondAttribute="trailing" constant="12" id="8E9-Gy-K2s"/>
+                <constraint firstItem="pTb-b5-6Hn" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Bi1-EB-JOr"/>
                 <constraint firstItem="l66-k5-MWZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Jb8-Bi-YdZ"/>
+                <constraint firstAttribute="trailing" secondItem="pTb-b5-6Hn" secondAttribute="trailing" constant="10" id="Tbc-51-ekI"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Wfd-aE-AnF" secondAttribute="trailing" constant="20" id="VGA-a9-3Jm"/>
                 <constraint firstItem="Wfd-aE-AnF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="26" id="Zr4-Tn-4cp"/>
                 <constraint firstItem="PmX-Rx-p1P" firstAttribute="leading" secondItem="Wfd-aE-AnF" secondAttribute="leading" id="cbf-8W-cXr"/>
                 <constraint firstItem="PmX-Rx-p1P" firstAttribute="top" secondItem="Wfd-aE-AnF" secondAttribute="bottom" constant="10" id="ehc-bW-3yv"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="PmX-Rx-p1P" secondAttribute="trailing" constant="20" id="w8j-sf-ARH"/>
+                <constraint firstItem="pTb-b5-6Hn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="PmX-Rx-p1P" secondAttribute="trailing" id="xKm-ea-H7G"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
@@ -58,4 +71,7 @@
             <point key="canvasLocation" x="170.5" y="92"/>
         </view>
     </objects>
+    <resources>
+        <image name="delete" width="18" height="18"/>
+    </resources>
 </document>
