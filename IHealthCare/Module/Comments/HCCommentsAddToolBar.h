@@ -8,7 +8,7 @@
 
 #import "MMUIBridgeView.h"
 
-@class HCCommentsAddToolBarDelegate;
+@class HCCommentsAddToolBar;
 @protocol HCCommentsAddToolBarDelegate <NSObject>
 
 @optional
