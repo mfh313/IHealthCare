@@ -13,7 +13,6 @@
 #import "HCGetOrdersApi.h"
 #import "HCOrderListItemModel.h"
 #import "HCPayOrderApi.h"
-#import "HCBestNewsDetailViewController.h"
 #import "HCHighProductDetailViewController.h"
 #import "HCHealthManagementDetailViewController.h"
 #import "HCClassRoomDetailViewController.h"
@@ -221,41 +220,35 @@
         NSInteger attachIndex = cellInfo.attachIndex;
         HCOrderListItemModel *itemModel = m_orderLists[attachIndex];
         
-        HCOrderListOrderItemModel *orderItem = itemModel.orderItems.firstObject;
-        HCProductDetailModel *product = orderItem.product;
-        
-        [self showProductDetail:product];
+        [self showProductDetail:itemModel];
     }
 }
 
--(void)showProductDetail:(HCProductDetailModel *)itemModel
+-(void)showProductDetail:(HCOrderListItemModel *)itemModel
 {
-    NSInteger csid = itemModel.csid;
-    NSInteger cid = itemModel.cid;
+    HCOrderListOrderItemModel *orderItem = itemModel.orderItems.firstObject;
+    HCProductDetailModel *product = orderItem.product;
+    
+    NSInteger csid = product.csid;
+    NSInteger pid = product.pid;
     
     if (csid == 1) //高品服务
     {
         HCHighProductDetailViewController *detailVC = [HCHighProductDetailViewController new];
-        detailVC.pid = cid;
+        detailVC.pid = pid;
         [self.navigationController pushViewController:detailVC animated:YES];
     }
-    else if (csid == 2) //健康管理交易类
-    {
-        HCHealthManagementDetailViewController *detailVC = [HCHealthManagementDetailViewController new];
-        detailVC.hcid = cid;
-        [self.navigationController pushViewController:detailVC animated:YES];
-    }
-    else if (csid == 4) //资讯显示类
-    {
-        HCBestNewsDetailViewController *detailVC = [HCBestNewsDetailViewController new];
-        detailVC.bid = cid;
-        [self.navigationController pushViewController:detailVC animated:YES];
-    }
-    else if (cid == 5) //大讲堂类
+    else if (csid == 2) //大讲堂类
     {
         HCClassRoomDetailViewController *classRoomDetailVC = [HCClassRoomDetailViewController new];
-        classRoomDetailVC.crid = cid;
+        classRoomDetailVC.crid = pid;
         [self.navigationController pushViewController:classRoomDetailVC animated:YES];
+    }
+    else if (csid == 3) //健康管理交易类
+    {
+        HCHealthManagementDetailViewController *detailVC = [HCHealthManagementDetailViewController new];
+        detailVC.hcid = pid;
+        [self.navigationController pushViewController:detailVC animated:YES];
     }
 }
 
@@ -266,7 +259,7 @@
     __weak typeof(self) weakSelf = self;
     HCGetOrdersApi *mfApi = [HCGetOrdersApi new];
     mfApi.tel = loginService.userPhone;
-    mfApi.page = 0;
+    mfApi.page = 1;
     
     mfApi.animatingView = self.view;
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
