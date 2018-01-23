@@ -315,6 +315,8 @@
 		AC7DAF332017554A007B534F /* HCAddCommentApi.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DAF322017554A007B534F /* HCAddCommentApi.m */; };
 		AC7DAF3620175A6E007B534F /* HCCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DAF3520175A6E007B534F /* HCCommentsViewController.m */; };
 		AC7DAF3920175CD1007B534F /* HCGetCommentsCidApi.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DAF3820175CD1007B534F /* HCGetCommentsCidApi.m */; };
+		AC7DAF3C20175F0C007B534F /* HCCommentsAddToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DAF3B20175F0C007B534F /* HCCommentsAddToolBar.m */; };
+		AC7DAF3E20175F9A007B534F /* HCCommentsAddToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC7DAF3D20175F9A007B534F /* HCCommentsAddToolBar.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -909,6 +911,9 @@
 		AC7DAF3520175A6E007B534F /* HCCommentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCommentsViewController.m; sourceTree = "<group>"; };
 		AC7DAF3720175CD1007B534F /* HCGetCommentsCidApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetCommentsCidApi.h; sourceTree = "<group>"; };
 		AC7DAF3820175CD1007B534F /* HCGetCommentsCidApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetCommentsCidApi.m; sourceTree = "<group>"; };
+		AC7DAF3A20175F0C007B534F /* HCCommentsAddToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCommentsAddToolBar.h; sourceTree = "<group>"; };
+		AC7DAF3B20175F0C007B534F /* HCCommentsAddToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCommentsAddToolBar.m; sourceTree = "<group>"; };
+		AC7DAF3D20175F9A007B534F /* HCCommentsAddToolBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCCommentsAddToolBar.xib; sourceTree = "<group>"; };
 		D46774D91909037E0185E2B2 /* Pods-IHealthCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.release.xcconfig"; sourceTree = "<group>"; };
 		E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IHealthCare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1094,6 +1099,9 @@
 				A54C469B2016536800EBDA07 /* HCAddCommentsViewController.m */,
 				AC7DAF3420175A6E007B534F /* HCCommentsViewController.h */,
 				AC7DAF3520175A6E007B534F /* HCCommentsViewController.m */,
+				AC7DAF3A20175F0C007B534F /* HCCommentsAddToolBar.h */,
+				AC7DAF3B20175F0C007B534F /* HCCommentsAddToolBar.m */,
+				AC7DAF3D20175F9A007B534F /* HCCommentsAddToolBar.xib */,
 			);
 			path = Comments;
 			sourceTree = "<group>";
@@ -2065,6 +2073,7 @@
 				A58848FF1FFFC5C700FC93EE /* HCHealthManagementCellView.xib in Resources */,
 				A553F3A420063417002A205B /* HCMedicalServiceDetailHeaderTitleView.xib in Resources */,
 				A56CD7861FD0312000FFF504 /* MainFrameAssets.xcassets in Resources */,
+				AC7DAF3E20175F9A007B534F /* HCCommentsAddToolBar.xib in Resources */,
 				A5190E781FFA655F00BBF049 /* HCProductDetailHeaderTitleView.xib in Resources */,
 				A553F3A92006661E002A205B /* HCCountStepView.xib in Resources */,
 				A554650B1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */,
@@ -2184,6 +2193,7 @@
 				A58849051FFFC5C700FC93EE /* HCHealthManagementDetailViewController.m in Sources */,
 				A57B48161FCEF9190004C397 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				AC7DAF3920175CD1007B534F /* HCGetCommentsCidApi.m in Sources */,
+				AC7DAF3C20175F0C007B534F /* HCCommentsAddToolBar.m in Sources */,
 				A5D9AE321FDBB87B00B5D4C0 /* YTKChainRequest+AnimatingAccessory.m in Sources */,
 				A55388971FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
 				AC7DAF332017554A007B534F /* HCAddCommentApi.m in Sources */,

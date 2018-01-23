@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="HCCommentsAddToolBar">
+            <rect key="frame" x="0.0" y="0.0" width="401" height="60"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hbg-62-qbO">
+                    <rect key="frame" x="10" y="10" width="381" height="40"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_write_nor" translatesAutoresizingMaskIntoConstraints="NO" id="7Es-B4-QuD">
+                            <rect key="frame" x="20" y="13" width="14" height="14"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="14" id="COg-4p-QHD"/>
+                                <constraint firstAttribute="height" constant="14" id="dj0-5V-F4k"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我要写评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Htg-gQ-KjQ">
+                            <rect key="frame" x="51" y="11.5" width="71.5" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJj-Fg-Soi">
+                            <rect key="frame" x="0.0" y="0.0" width="381" height="40"/>
+                            <connections>
+                                <action selector="onClickWriteButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Z2i-0q-E6L"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="Htg-gQ-KjQ" firstAttribute="centerY" secondItem="7Es-B4-QuD" secondAttribute="centerY" id="0el-NW-Uij"/>
+                        <constraint firstAttribute="trailing" secondItem="dJj-Fg-Soi" secondAttribute="trailing" id="0tr-XA-3hi"/>
+                        <constraint firstItem="Htg-gQ-KjQ" firstAttribute="leading" secondItem="7Es-B4-QuD" secondAttribute="trailing" constant="17" id="O6h-1F-Gxv"/>
+                        <constraint firstItem="dJj-Fg-Soi" firstAttribute="leading" secondItem="Hbg-62-qbO" secondAttribute="leading" id="W5o-j1-G90"/>
+                        <constraint firstItem="7Es-B4-QuD" firstAttribute="leading" secondItem="Hbg-62-qbO" secondAttribute="leading" constant="20" id="cR6-hY-YNh"/>
+                        <constraint firstItem="dJj-Fg-Soi" firstAttribute="top" secondItem="Hbg-62-qbO" secondAttribute="top" id="gDM-8f-BZF"/>
+                        <constraint firstAttribute="bottom" secondItem="dJj-Fg-Soi" secondAttribute="bottom" id="odl-nb-82d"/>
+                        <constraint firstItem="7Es-B4-QuD" firstAttribute="centerY" secondItem="Hbg-62-qbO" secondAttribute="centerY" id="rfn-S4-u1e"/>
+                        <constraint firstAttribute="height" constant="40" id="syQ-TZ-8qy"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S1S-UZ-PaV" customClass="MMOnePixLine">
+                    <rect key="frame" x="0.0" y="0.0" width="401" height="1"/>
+                    <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="vBE-Qc-4mm"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="S1S-UZ-PaV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1Yd-VS-9dm"/>
+                <constraint firstItem="Hbg-62-qbO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="2gc-P5-8Pa"/>
+                <constraint firstItem="Hbg-62-qbO" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bOO-F2-SWF"/>
+                <constraint firstItem="Hbg-62-qbO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="c3k-ZN-1EX"/>
+                <constraint firstItem="S1S-UZ-PaV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="eWE-jY-h9d"/>
+                <constraint firstAttribute="trailing" secondItem="S1S-UZ-PaV" secondAttribute="trailing" id="xg4-A9-j5Z"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="m_writeBgView" destination="Hbg-62-qbO" id="ras-qj-oLG"/>
+            </connections>
+            <point key="canvasLocation" x="37.5" y="352.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="home_icon_write_nor" width="14" height="14"/>
+    </resources>
+</document>
