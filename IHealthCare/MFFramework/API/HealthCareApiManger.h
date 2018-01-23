@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//查询某个产品所有评论
++ (NSString *)comments:(NSInteger)cid commentedId:(NSInteger)commentedId page:(NSInteger)page;
+
 //发表评论
 + (NSString *)comments;
 

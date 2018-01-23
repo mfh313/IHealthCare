@@ -17,6 +17,13 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
 
 @implementation HealthCareApiManger
 
+//查询某个产品所有评论
++ (NSString *)comments:(NSInteger)cid commentedId:(NSInteger)commentedId page:(NSInteger)page
+{
+    NSString *parmUrl = [NSString stringWithFormat:@"api/comments/%@/%@/%@",@(cid),@(commentedId),@(page)];
+    return MFURLWithPara(parmUrl);
+}
+
 //发表评论
 + (NSString *)comments
 {

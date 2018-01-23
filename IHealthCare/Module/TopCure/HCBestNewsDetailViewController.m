@@ -15,6 +15,7 @@
 #import "HCGetBestNewsDetailApi.h"
 #import "HCThumbUpBestNewsApi.h"
 #import "HCAddCommentsViewController.h"
+#import "HCCommentsViewController.h"
 
 @interface HCBestNewsDetailViewController () <HCHighProductDetailCustomNavbarDelegate,tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCBestNewsDetailToolBarDelegate>
 {
@@ -256,7 +257,10 @@
 #pragma mark - HCBestNewsDetailToolBarDelegate
 -(void)onClickMessageButton:(HCBestNewsDetailToolBar *)toolBar
 {
-    NSLog(@"onClickMessageButton");
+    HCCommentsViewController *commentsVC = [HCCommentsViewController new];
+    commentsVC.commentedId = self.detailModel.bid;
+    commentsVC.cid = self.detailModel.cid;
+    [self.navigationController pushViewController:commentsVC animated:YES];
 }
 
 -(void)onClickPraiseButton:(HCBestNewsDetailToolBar *)toolBar
