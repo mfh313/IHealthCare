@@ -13,6 +13,10 @@
 #import "HCGetOrdersApi.h"
 #import "HCOrderListItemModel.h"
 #import "HCPayOrderApi.h"
+#import "HCBestNewsDetailViewController.h"
+#import "HCHighProductDetailViewController.h"
+#import "HCHealthManagementDetailViewController.h"
+#import "HCClassRoomDetailViewController.h"
 
 @interface HCOrderListViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCOrderListOrderBottomCellViewDelegate>
 {
@@ -212,7 +216,47 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    if ([cellInfo.cellReuseIdentifier isEqualToString:@"orderItem"])
+    {
+        NSInteger attachIndex = cellInfo.attachIndex;
+        HCOrderListItemModel *itemModel = m_orderLists[attachIndex];
+        
+        HCOrderListOrderItemModel *orderItem = itemModel.orderItems.firstObject;
+        HCProductDetailModel *product = orderItem.product;
+        
+        [self showProductDetail:product];
+    }
+}
 
+-(void)showProductDetail:(HCProductDetailModel *)itemModel
+{
+    NSInteger csid = itemModel.csid;
+    NSInteger cid = itemModel.cid;
+    
+    if (csid == 1) //高品服务
+    {
+        HCHighProductDetailViewController *detailVC = [HCHighProductDetailViewController new];
+        detailVC.pid = cid;
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
+    else if (csid == 2) //健康管理交易类
+    {
+        HCHealthManagementDetailViewController *detailVC = [HCHealthManagementDetailViewController new];
+        detailVC.hcid = cid;
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
+    else if (csid == 4) //资讯显示类
+    {
+        HCBestNewsDetailViewController *detailVC = [HCBestNewsDetailViewController new];
+        detailVC.bid = cid;
+        [self.navigationController pushViewController:detailVC animated:YES];
+    }
+    else if (cid == 5) //大讲堂类
+    {
+        HCClassRoomDetailViewController *classRoomDetailVC = [HCClassRoomDetailViewController new];
+        classRoomDetailVC.crid = cid;
+        [self.navigationController pushViewController:classRoomDetailVC animated:YES];
+    }
 }
 
 -(void)getOrderList
