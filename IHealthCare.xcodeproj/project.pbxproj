@@ -312,6 +312,7 @@
 		AC60B6202016176D00EC1645 /* HCMyClassesCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC60B61F2016176D00EC1645 /* HCMyClassesCellView.m */; };
 		AC60B6222016182B00EC1645 /* HCMyClassesCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC60B6212016182B00EC1645 /* HCMyClassesCellView.xib */; };
 		AC77FB9F201749B700B3E6AB /* HCDeleteFavoriteApi.m in Sources */ = {isa = PBXBuildFile; fileRef = AC77FB9E201749B700B3E6AB /* HCDeleteFavoriteApi.m */; };
+		AC7DAF332017554A007B534F /* HCAddCommentApi.m in Sources */ = {isa = PBXBuildFile; fileRef = AC7DAF322017554A007B534F /* HCAddCommentApi.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -900,6 +901,8 @@
 		AC60B6212016182B00EC1645 /* HCMyClassesCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMyClassesCellView.xib; sourceTree = "<group>"; };
 		AC77FB9D201749B700B3E6AB /* HCDeleteFavoriteApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCDeleteFavoriteApi.h; sourceTree = "<group>"; };
 		AC77FB9E201749B700B3E6AB /* HCDeleteFavoriteApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCDeleteFavoriteApi.m; sourceTree = "<group>"; };
+		AC7DAF312017554A007B534F /* HCAddCommentApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAddCommentApi.h; sourceTree = "<group>"; };
+		AC7DAF322017554A007B534F /* HCAddCommentApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCAddCommentApi.m; sourceTree = "<group>"; };
 		D46774D91909037E0185E2B2 /* Pods-IHealthCare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHealthCare.release.xcconfig"; path = "Pods/Target Support Files/Pods-IHealthCare/Pods-IHealthCare.release.xcconfig"; sourceTree = "<group>"; };
 		E3F413A8C0768DB6A5A98156 /* libPods-IHealthCare.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IHealthCare.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1865,6 +1868,8 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				AC7DAF312017554A007B534F /* HCAddCommentApi.h */,
+				AC7DAF322017554A007B534F /* HCAddCommentApi.m */,
 				AC77FB9D201749B700B3E6AB /* HCDeleteFavoriteApi.h */,
 				AC77FB9E201749B700B3E6AB /* HCDeleteFavoriteApi.m */,
 				A54C46902016393A00EBDA07 /* HCGetOrdersApi.h */,
@@ -2170,6 +2175,7 @@
 				A57B48161FCEF9190004C397 /* UIScrollView+SVInfiniteScrolling.m in Sources */,
 				A5D9AE321FDBB87B00B5D4C0 /* YTKChainRequest+AnimatingAccessory.m in Sources */,
 				A55388971FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
+				AC7DAF332017554A007B534F /* HCAddCommentApi.m in Sources */,
 				A5CA4C06200CF567004415F6 /* HCCreateOrderItemCellView.m in Sources */,
 				A57B483F1FCEF9190004C397 /* MMTabBarController.m in Sources */,
 				A563AED12013A7BF006EDC3C /* HCPutUserInfoApi.m in Sources */,

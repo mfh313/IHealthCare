@@ -7,6 +7,7 @@
 //
 
 #import "HCAddCommentsViewController.h"
+#import "HCAddCommentApi.h"
 
 @interface HCAddCommentsViewController () <UITextFieldDelegate>
 {
@@ -32,6 +33,8 @@
     self.view.backgroundColor = [UIColor hx_colorWithHexString:@"EDEDED"];
     
     m_textView = [[UITextView alloc] init];
+    m_textView.font = [UIFont systemFontOfSize:14.0f];
+    m_textView.textColor = [UIColor hx_colorWithHexString:@"595959"];
     [self.view addSubview:m_textView];
     
     [m_textView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -61,7 +64,47 @@
 
 -(void)onClickCommentButton
 {
+    NSString *commentContent = m_textView.text;
     
+    if ([MFStringUtil isBlankString:commentContent]) {
+        [self showTips:@"请输入评论内容"];
+        return;
+    }
+    
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    
+    __weak typeof(self) weakSelf = self;
+    HCAddCommentApi *mfApi = [HCAddCommentApi new];
+    mfApi.commentedId = self.commentedId;
+    mfApi.userTel = loginService.userPhone;
+    mfApi.category = self.category;
+    mfApi.title = self.commentTitle;
+    mfApi.content = commentContent;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        [strongSelf showTips:@"评论成功"];
+        [strongSelf onAddCommentSuccess];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
+}
+
+-(void)onAddCommentSuccess
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    if ([self.m_delegate respondsToSelector:@selector(onAddCommentsSuccess:)]) {
+        [self onAddCommentSuccess];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

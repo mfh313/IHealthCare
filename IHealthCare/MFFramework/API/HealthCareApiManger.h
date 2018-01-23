@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//发表评论
++ (NSString *)comments;
+
 //删除收藏
 + (NSString *)deleteFavorites:(NSInteger)fid;
 

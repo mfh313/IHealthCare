@@ -312,6 +312,10 @@
 -(void)onClickWriteButton:(HCBestNewsDetailToolBar *)toolBar
 {
     HCAddCommentsViewController *addCommentsVC = [HCAddCommentsViewController new];
+    addCommentsVC.commentedId = self.detailModel.bid;
+    addCommentsVC.category = self.detailModel.cid;  //category对应详情返回结构体中的cid字段
+    addCommentsVC.commentTitle = self.detailModel.name;
+    
     MMNavigationController *rootNav = [[MMNavigationController alloc] initWithRootViewController:addCommentsVC];
     [self presentViewController:rootNav animated:YES completion:nil];
 }

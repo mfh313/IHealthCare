@@ -8,6 +8,18 @@
 
 #import "MMUIViewController.h"
 
+@class HCAddCommentsViewController;
+@protocol HCAddCommentsViewControllerDelegate <NSObject>
+@optional
+-(void)onAddCommentsSuccess:(HCAddCommentsViewController *)controller;
+
+@end
+
 @interface HCAddCommentsViewController : MMUIViewController
+
+@property (nonatomic,weak) id<HCAddCommentsViewControllerDelegate> m_delegate;
+@property (nonatomic,assign) NSInteger commentedId;
+@property (nonatomic,assign) NSInteger category;
+@property (nonatomic,strong) NSString *commentTitle;
 
 @end
