@@ -105,7 +105,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     
     if ([self.m_delegate respondsToSelector:@selector(onAddCommentsSuccess:)]) {
-        [self onAddCommentSuccess];
+        [self.m_delegate onAddCommentsSuccess:self];
     }
 }
 
