@@ -60,6 +60,8 @@
         make.height.mas_equalTo(@(40));
         make.centerX.mas_equalTo(self.view.mas_centerX);
     }];
+    
+    [m_textView becomeFirstResponder];
 }
 
 -(void)onClickCommentButton
