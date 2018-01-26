@@ -10,4 +10,9 @@
 
 @implementation HCPullFreshCountLogic
 
+-(void)setCurrentPage:(NSInteger)page
+{
+    m_currentPage = page;
+}
+
 @end

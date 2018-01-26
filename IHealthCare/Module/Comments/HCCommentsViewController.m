@@ -23,7 +23,6 @@
     
     NSInteger m_currentPage;
 }
-
 @end
 
 @implementation HCCommentsViewController
@@ -59,19 +58,15 @@
         make.left.equalTo(self.view);
     }];
 
-    m_currentPage = 1;
     [self getComments];
     
     __weak typeof(self) weakSelf = self;
     [m_tableView addPullToRefreshWithActionHandler:^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        m_currentPage = 1;
         [strongSelf getComments];
     }];
-    
+
     [m_tableView addInfiniteScrollingWithActionHandler:^{
-        
-        m_currentPage++;
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf getCommentsMore];
     }];
@@ -196,6 +191,8 @@
 
 -(void)getComments
 {
+    m_currentPage = 1;
+    
     __weak typeof(self) weakSelf = self;
     HCGetCommentsCidApi *mfApi = [HCGetCommentsCidApi new];
     mfApi.cid = self.cid;
@@ -231,6 +228,8 @@
 
 -(void)getCommentsMore
 {
+    m_currentPage++;
+    
     __weak typeof(self) weakSelf = self;
     HCGetCommentsCidApi *mfApi = [HCGetCommentsCidApi new];
     mfApi.cid = self.cid;

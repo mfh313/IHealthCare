@@ -9,5 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface HCPullFreshCountLogic : NSObject
+{
+    NSInteger m_currentPage;
+    NSInteger m_freshingPage;
+}
+
+-(void)setCurrentPage:(NSInteger)page;
 
 @end

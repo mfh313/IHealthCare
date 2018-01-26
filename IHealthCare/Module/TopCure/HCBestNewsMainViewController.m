@@ -18,6 +18,8 @@
     NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
     
     NSMutableArray *m_bestNews;
+    
+    NSInteger m_currentPage;
 }
 
 @end
@@ -46,6 +48,12 @@
     [m_tableView addPullToRefreshWithActionHandler:^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf getBestNews];
+    }];
+    
+    [m_tableView addInfiniteScrollingWithActionHandler:^{
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf getBestNewsMore];
     }];
 }
 
@@ -110,10 +118,12 @@
 
 -(void)getBestNews
 {
+    m_currentPage = 1;
+    
     __weak typeof(self) weakSelf = self;
     HCGetBestNewsApi *mfApi = [HCGetBestNewsApi new];
     mfApi.type = BestNews_Type_Default;
-    mfApi.page = 1;
+    mfApi.page = m_currentPage;
     
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
@@ -137,6 +147,45 @@
     } failure:^(YTKBaseRequest * request) {
         
         [m_tableView.pullToRefreshView stopAnimating];
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
+}
+
+-(void)getBestNewsMore
+{
+    m_currentPage++;
+    
+    __weak typeof(self) weakSelf = self;
+    HCGetBestNewsApi *mfApi = [HCGetBestNewsApi new];
+    mfApi.type = BestNews_Type_Default;
+    mfApi.page = m_currentPage;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        [m_tableView.infiniteScrollingView stopAnimating];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            m_currentPage--;
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSArray *bestNews = mfApi.responseNetworkData;
+        NSMutableArray *news = [NSMutableArray array];
+        for (int i = 0; i < bestNews.count; i++) {
+            HCBestNewsDetailModel *itemModel = [HCBestNewsDetailModel yy_modelWithDictionary:bestNews[i]];
+            [news addObject:itemModel];
+        }
+        
+        [m_bestNews addObjectsFromArray:news];
+        
+        [strongSelf reloadTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        m_currentPage--;
+        [m_tableView.infiniteScrollingView stopAnimating];
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];
