@@ -97,6 +97,7 @@
 		A55465181FEFAD5700A7E3C7 /* HCNormalGroupCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465141FEFAD5700A7E3C7 /* HCNormalGroupCellView.m */; };
 		A55465191FEFAD5700A7E3C7 /* HCNormalGroupCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55465151FEFAD5700A7E3C7 /* HCNormalGroupCellView.xib */; };
 		A554651A1FEFAD5700A7E3C7 /* HCPullFreshCountLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = A55465171FEFAD5700A7E3C7 /* HCPullFreshCountLogic.m */; };
+		A55625E1201C103900D754E6 /* HCGetCustomersApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A55625E0201C103900D754E6 /* HCGetCustomersApi.m */; };
 		A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */; };
 		A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5623CA71FCDB851001A6B5D /* Assets.xcassets */; };
 		A5623CAE1FCDB851001A6B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623CAD1FCDB851001A6B5D /* main.m */; };
@@ -488,6 +489,8 @@
 		A55465151FEFAD5700A7E3C7 /* HCNormalGroupCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCNormalGroupCellView.xib; sourceTree = "<group>"; };
 		A55465161FEFAD5700A7E3C7 /* HCPullFreshCountLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCPullFreshCountLogic.h; sourceTree = "<group>"; };
 		A55465171FEFAD5700A7E3C7 /* HCPullFreshCountLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCPullFreshCountLogic.m; sourceTree = "<group>"; };
+		A55625DF201C103900D754E6 /* HCGetCustomersApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetCustomersApi.h; sourceTree = "<group>"; };
+		A55625E0201C103900D754E6 /* HCGetCustomersApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetCustomersApi.m; sourceTree = "<group>"; };
 		A5623C9B1FCDB851001A6B5D /* IHealthCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHealthCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5623C9E1FCDB851001A6B5D /* HealthCareAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthCareAppDelegate.h; sourceTree = "<group>"; };
 		A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthCareAppDelegate.m; sourceTree = "<group>"; };
@@ -1897,6 +1900,8 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A55625DF201C103900D754E6 /* HCGetCustomersApi.h */,
+				A55625E0201C103900D754E6 /* HCGetCustomersApi.m */,
 				AC7DAF3720175CD1007B534F /* HCGetCommentsCidApi.h */,
 				AC7DAF3820175CD1007B534F /* HCGetCommentsCidApi.m */,
 				AC7DAF312017554A007B534F /* HCAddCommentApi.h */,
@@ -2395,6 +2400,7 @@
 				A575874D1FE519A0000FC7CB /* HCGetProductsApi.m in Sources */,
 				A57B47E81FCEF9190004C397 /* IQTextView.m in Sources */,
 				A5CA4BD7200CF261004415F6 /* HCMeProfileCellView.m in Sources */,
+				A55625E1201C103900D754E6 /* HCGetCustomersApi.m in Sources */,
 				A57B480B1FCEF9190004C397 /* UnknownFieldSetBuilder.m in Sources */,
 				A53695B11FD59769007CC67C /* SPPageContentView.m in Sources */,
 				A58848FB1FFFC5C700FC93EE /* HCHealthManageDetailHeaderTitleView.m in Sources */,

@@ -244,11 +244,8 @@
 {
     NSMutableDictionary *itemInfo =  [cellInfo getUserInfoValueForKey:@"cellData"];
     NSString *key = itemInfo[@"key"];
-    if ([key isEqualToString:@"setting"])
-    {
-        NSLog(@"setting");
-    }
-    else if ([key isEqualToString:@"collection"])
+    
+    if ([key isEqualToString:@"collection"])
     {
         [self onClickMyFavoritesVC];
     }
@@ -260,6 +257,48 @@
     {
         [self showMyOrderListVC];
     }
+    else if ([key isEqualToString:@"circle"])
+    {
+        [self showMyCircleVC];
+    }
+}
+
+-(void)addTableSources
+{
+    m_tableSources = [NSMutableArray array];
+    
+    NSMutableArray *section = [NSMutableArray array];
+    
+    NSMutableDictionary *myClasses = [NSMutableDictionary dictionary];
+    myClasses[@"image"] = @"my_icon_health_records";
+    myClasses[@"title"] = @"我的课程";
+    myClasses[@"key"] = @"myClasses";
+    
+    NSMutableDictionary *service = [NSMutableDictionary dictionary];
+    service[@"image"] = @"my_icon_service";
+    service[@"title"] = @"我的订单";
+    service[@"key"] = @"orderList";
+    
+    NSMutableDictionary *circle = [NSMutableDictionary dictionary];
+    circle[@"image"] = @"my_icon_circle";
+    circle[@"title"] = @"我的圈子";
+    circle[@"key"] = @"circle";
+    
+    [section addObject:myClasses];
+    [section addObject:service];
+    [section addObject:circle];
+    
+    NSMutableArray *section_collection = [NSMutableArray array];
+    
+    NSMutableDictionary *collection = [NSMutableDictionary dictionary];
+    collection[@"image"] = @"my_icon_collection";
+    collection[@"title"] = @"我的收藏";
+    collection[@"key"] = @"collection";
+    
+    [section_collection addObject:collection];
+    
+    [m_tableSources addObject:section];
+    [m_tableSources addObject:section_collection];
 }
 
 -(void)onClickMyFavoritesVC
@@ -280,36 +319,9 @@
     [self.navigationController pushViewController:orderListVC animated:YES];
 }
 
--(void)addTableSources
+-(void)showMyCircleVC
 {
-    m_tableSources = [NSMutableArray array];
     
-    NSMutableArray *section = [NSMutableArray array];
-    
-    NSMutableDictionary *records = [NSMutableDictionary dictionary];
-    records[@"image"] = @"my_icon_health_records";
-    records[@"title"] = @"我的课程";
-    records[@"key"] = @"myClasses";
-    
-    NSMutableDictionary *service = [NSMutableDictionary dictionary];
-    service[@"image"] = @"my_icon_service";
-    service[@"title"] = @"我的订单";
-    service[@"key"] = @"orderList";
-    
-    [section addObject:records];
-    [section addObject:service];
-    
-    NSMutableArray *section_collection = [NSMutableArray array];
-    
-    NSMutableDictionary *collection = [NSMutableDictionary dictionary];
-    collection[@"image"] = @"my_icon_collection";
-    collection[@"title"] = @"我的收藏";
-    collection[@"key"] = @"collection";
-    
-    [section_collection addObject:collection];
-    
-    [m_tableSources addObject:section];
-    [m_tableSources addObject:section_collection];
 }
 
 - (void)didReceiveMemoryWarning {
