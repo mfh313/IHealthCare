@@ -17,6 +17,7 @@
     __weak IBOutlet UILabel *m_detailLabel;
     __weak IBOutlet UIImageView *m_contentImageView;
     __weak IBOutlet UIView *m_contentView;
+    __weak IBOutlet UILabel *m_moneyLabel;
     
     HCProductDetailModel *m_detailModel;
 }
@@ -49,6 +50,7 @@
     
     NSInteger discount = itemModel.discount * 100;
     m_discountLabel.text = [NSString stringWithFormat:@"%@%%",@(discount)];
+    m_moneyLabel.text = [NSString stringWithFormat:@"¥ %.2f",itemModel.shopPrice];
 }
 
 - (IBAction)onClickContentButton:(id)sender {

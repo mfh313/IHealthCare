@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -48,6 +48,16 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7B4-oO-2Mp">
                             <rect key="frame" x="0.0" y="268" width="451" height="28"/>
                             <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4Z-OU-EcT">
+                                    <rect key="frame" x="10" y="3" width="25" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="22" id="NeR-0t-9Zh"/>
+                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" id="rx2-OQ-FIb"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" red="1" green="0.42084741990000002" blue="0.42415021539999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_icon_sales_nor" translatesAutoresizingMaskIntoConstraints="NO" id="bac-Dg-buI">
                                     <rect key="frame" x="347" y="7" width="14" height="14"/>
                                     <constraints>
@@ -84,8 +94,10 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="bac-Dg-buI" firstAttribute="centerY" secondItem="7B4-oO-2Mp" secondAttribute="centerY" id="7mB-4e-8Xr"/>
+                                <constraint firstItem="b4Z-OU-EcT" firstAttribute="centerY" secondItem="7B4-oO-2Mp" secondAttribute="centerY" id="Cfk-TW-beQ"/>
                                 <constraint firstItem="reY-PB-SxP" firstAttribute="leading" secondItem="Jt9-1z-g5v" secondAttribute="trailing" constant="8" id="KWw-Th-7dX"/>
                                 <constraint firstItem="a6x-CQ-T4B" firstAttribute="centerY" secondItem="7B4-oO-2Mp" secondAttribute="centerY" id="O6H-Gk-sUq"/>
+                                <constraint firstItem="b4Z-OU-EcT" firstAttribute="leading" secondItem="7B4-oO-2Mp" secondAttribute="leading" constant="10" id="Q2y-RP-5dt"/>
                                 <constraint firstItem="reY-PB-SxP" firstAttribute="centerY" secondItem="7B4-oO-2Mp" secondAttribute="centerY" id="d18-PX-kif"/>
                                 <constraint firstItem="Jt9-1z-g5v" firstAttribute="leading" secondItem="a6x-CQ-T4B" secondAttribute="trailing" constant="10" id="nK0-yG-bHM"/>
                                 <constraint firstItem="Jt9-1z-g5v" firstAttribute="centerY" secondItem="7B4-oO-2Mp" secondAttribute="centerY" id="nNt-Ib-ke5"/>
@@ -132,6 +144,7 @@
                 <outlet property="m_contentView" destination="YIl-v2-KcC" id="ly3-S7-JNK"/>
                 <outlet property="m_detailLabel" destination="s3F-LN-Dnh" id="9TH-ci-ZWh"/>
                 <outlet property="m_discountLabel" destination="reY-PB-SxP" id="weW-1O-9s5"/>
+                <outlet property="m_moneyLabel" destination="b4Z-OU-EcT" id="sXy-Up-AzU"/>
                 <outlet property="m_nameLabel" destination="hiz-8N-pJx" id="DSP-h6-Kv0"/>
                 <outlet property="m_salesLabel" destination="a6x-CQ-T4B" id="tVd-CS-iYs"/>
             </connections>

@@ -14,6 +14,9 @@
     __weak IBOutlet UILabel *m_titleLabel;
     __weak IBOutlet UILabel *m_salesLabel;
     __weak IBOutlet UILabel *m_promotionFeeLabel;
+    __weak IBOutlet UILabel *m_discountLabel;
+    __weak IBOutlet UILabel *m_moneyLabel;
+    
 }
 
 @end
@@ -24,7 +27,12 @@
 {
     m_titleLabel.text = itemModel.pname;
     m_salesLabel.text = [NSString stringWithFormat:@"销量  %@",@(itemModel.sales)];
-    m_promotionFeeLabel.text = [NSString stringWithFormat:@"推广费  %.2f",itemModel.promotionFee];
+    m_promotionFeeLabel.text = [NSString stringWithFormat:@"推广费  ¥%.2f",itemModel.promotionFee];
+    
+    NSInteger discount = itemModel.discount * 100;
+    m_discountLabel.text = [NSString stringWithFormat:@"折扣 %@%%",@(discount)];
+    
+    m_moneyLabel.text = [NSString stringWithFormat:@"¥ %.2f",itemModel.shopPrice];
 }
 
 @end
