@@ -35,6 +35,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
+    
     m_cellInfos = [NSMutableArray array];
     
     m_tableView = [[MFUITableView alloc] initWithFrame:CGRectMake(0, -20, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame) + 20) style:UITableViewStylePlain];

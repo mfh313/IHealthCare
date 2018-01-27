@@ -51,7 +51,6 @@
     }];
     
     [m_tableView addInfiniteScrollingWithActionHandler:^{
-        
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf getBestNewsMore];
     }];

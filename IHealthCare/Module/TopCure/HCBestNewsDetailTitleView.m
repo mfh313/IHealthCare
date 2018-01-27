@@ -15,6 +15,7 @@
     __weak IBOutlet UILabel *m_authorLabel;
     __weak IBOutlet UILabel *m_organizationLabel;
     __weak IBOutlet UILabel *m_createTimeLabel;
+    __weak IBOutlet UILabel *m_lookLabel;
 }
 
 @end
@@ -27,6 +28,7 @@
     m_authorLabel.text = itemModel.author;
     m_organizationLabel.text = itemModel.organization;
     m_createTimeLabel.text = itemModel.publishTime;
+    m_lookLabel.text = [NSString stringWithFormat:@"阅读量：%@",@(itemModel.look)];
 }
 
 @end
