@@ -19,6 +19,7 @@
 #import "HCFavoritesViewController.h"
 #import "HCMyClassesViewController.h"
 #import "HCOrderListViewController.h"
+#import "HCMyCircleViewController.h"
 
 @interface HCMeViewController () <MMTableViewInfoDelegate,HCMeProfileCellViewDelegate,HCUserAuthStatusViewControllerDelegate>
 {
@@ -321,7 +322,8 @@
 
 -(void)showMyCircleVC
 {
-    
+    HCMyCircleViewController *myCircleVC = [HCMyCircleViewController new];
+    [self.navigationController pushViewController:myCircleVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
