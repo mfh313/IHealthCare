@@ -13,6 +13,7 @@
 #import "HCMyCustomerModel.h"
 #import "HCMyTeamCellView.h"
 #import "HCUserPromoteApi.h"
+#import "HCMyTeamColumnHeaderView.h"
 
 @interface HCMyTeamViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCMyTeamCellViewDelegate>
 {
@@ -78,6 +79,10 @@
     else if ([identifier isEqualToString:@"myCustomer"])
     {
         return [self tableView:tableView myCustomerCellForIndexPath:indexPath];
+    }
+    else if ([identifier isEqualToString:@"myCustomerColumnHeader"])
+    {
+        return [self tableView:tableView myCustomerColumnHeaderCellForIndexPath:indexPath];
     }
     else if ([identifier isEqualToString:@"divison"])
     {
@@ -145,6 +150,22 @@
     
     HCMyTeamHeaderView *cellView = (HCMyTeamHeaderView *)cell.m_subContentView;
     [cellView setSubTitle:[NSString stringWithFormat:@"团队人数：%@",@(m_myCustomersCount)]];
+    
+    return cell;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView myCustomerColumnHeaderCellForIndexPath:(NSIndexPath *)indexPath
+{
+    MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    NSString *identifier = cellInfo.cellReuseIdentifier;
+    
+    MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+        HCMyTeamColumnHeaderView *cellView = [HCMyTeamColumnHeaderView nibView];
+        cell.m_subContentView = cellView;
+    }
     
     return cell;
 }
@@ -285,6 +306,11 @@
     separator.cellHeight = MFOnePixHeight;
     separator.cellReuseIdentifier = @"separator";
     [m_cellInfos addObject:separator];
+    
+    MFTableViewCellObject *myCustomerColumnHeader = [MFTableViewCellObject new];
+    myCustomerColumnHeader.cellHeight = 43.0f;
+    myCustomerColumnHeader.cellReuseIdentifier = @"myCustomerColumnHeader";
+    [m_cellInfos addObject:myCustomerColumnHeader];
     
     for (int i = 0; i < m_myCustomers.count; i++) {
         

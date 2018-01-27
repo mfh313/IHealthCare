@@ -1,5 +1,5 @@
 //
-//  HCMyCustomerColumnHeaderView.h
+//  HCMyTeamColumnHeaderView.h
 //  IHealthCare
 //
 //  Created by mafanghua on 2018/1/27.
@@ -8,7 +8,6 @@
 
 #import "MMUIBridgeView.h"
 
-@interface HCMyCustomerColumnHeaderView : MMUIBridgeView
+@interface HCMyTeamColumnHeaderView : MMUIBridgeView
 
 @end
-
