@@ -18,6 +18,8 @@
     NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
     
     NSMutableArray *m_highProducts;
+    
+    NSInteger m_currentPage;
 }
 
 @end
@@ -46,6 +48,10 @@
         [strongSelf getHighProducts];
     }];
     
+    [m_tableView addInfiniteScrollingWithActionHandler:^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf getHighProductsMore];
+    }];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -109,10 +115,12 @@
 
 -(void)getHighProducts
 {
+    m_currentPage = 1;
+    
     __weak typeof(self) weakSelf = self;
     HCGetProductsApi *mfApi = [HCGetProductsApi new];
     mfApi.cid = PRODUCT_HIGHT_SERVICE;
-    mfApi.page = 1;
+    mfApi.page = m_currentPage;
     
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
@@ -136,6 +144,43 @@
     } failure:^(YTKBaseRequest * request) {
         
         [m_tableView.pullToRefreshView stopAnimating];
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
+}
+
+-(void)getHighProductsMore
+{
+    m_currentPage++;
+    
+    __weak typeof(self) weakSelf = self;
+    HCGetProductsApi *mfApi = [HCGetProductsApi new];
+    mfApi.cid = PRODUCT_HIGHT_SERVICE;
+    mfApi.page = m_currentPage;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        [m_tableView.infiniteScrollingView stopAnimating];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            m_currentPage--;
+            return;
+        }
+        
+        NSArray *highProducts = mfApi.responseNetworkData;
+        NSMutableArray *products = [NSMutableArray array];
+        for (int i = 0; i < highProducts.count; i++) {
+            HCProductDetailModel *itemModel = [HCProductDetailModel yy_modelWithDictionary:highProducts[i]];
+            [products addObject:itemModel];
+        }
+        [m_highProducts addObjectsFromArray:products];
+        
+        [strongSelf reloadTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        m_currentPage--;
+        [m_tableView.infiniteScrollingView stopAnimating];
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];
