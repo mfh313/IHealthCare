@@ -10,8 +10,7 @@
 
 @interface HCMyTeamHeaderView : MMUIBridgeView
 
--(void)setImageUrl:(NSString *)imageUrl;
--(void)setTitle:(NSString *)title subTitle:(NSString *)subTitle level:(NSString *)level;
+-(void)setSubTitle:(NSString *)subTitle;
 
 @end
 

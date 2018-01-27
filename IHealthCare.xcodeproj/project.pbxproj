@@ -110,6 +110,7 @@
 		A55625FC201C594400D754E6 /* HCMyCustomerCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55625FB201C594400D754E6 /* HCMyCustomerCellView.m */; };
 		A55625FE201C597F00D754E6 /* HCMyCustomerCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55625FD201C597F00D754E6 /* HCMyCustomerCellView.xib */; };
 		A5562601201C603A00D754E6 /* HCMyCustomerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5562600201C603A00D754E6 /* HCMyCustomerModel.m */; };
+		A5562604201C6D1800D754E6 /* HCUserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A5562603201C6D1800D754E6 /* HCUserHelper.m */; };
 		A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */; };
 		A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5623CA71FCDB851001A6B5D /* Assets.xcassets */; };
 		A5623CAE1FCDB851001A6B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623CAD1FCDB851001A6B5D /* main.m */; };
@@ -523,6 +524,8 @@
 		A55625FD201C597F00D754E6 /* HCMyCustomerCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMyCustomerCellView.xib; sourceTree = "<group>"; };
 		A55625FF201C603A00D754E6 /* HCMyCustomerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyCustomerModel.h; sourceTree = "<group>"; };
 		A5562600201C603A00D754E6 /* HCMyCustomerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyCustomerModel.m; sourceTree = "<group>"; };
+		A5562602201C6D1800D754E6 /* HCUserHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCUserHelper.h; sourceTree = "<group>"; };
+		A5562603201C6D1800D754E6 /* HCUserHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserHelper.m; sourceTree = "<group>"; };
 		A5623C9B1FCDB851001A6B5D /* IHealthCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHealthCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5623C9E1FCDB851001A6B5D /* HealthCareAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthCareAppDelegate.h; sourceTree = "<group>"; };
 		A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthCareAppDelegate.m; sourceTree = "<group>"; };
@@ -1258,6 +1261,8 @@
 		A55465121FEFAD5700A7E3C7 /* HCComponent */ = {
 			isa = PBXGroup;
 			children = (
+				A5562602201C6D1800D754E6 /* HCUserHelper.h */,
+				A5562603201C6D1800D754E6 /* HCUserHelper.m */,
 				A553F3A5200665A2002A205B /* HCCountStepView.h */,
 				A553F3A6200665A2002A205B /* HCCountStepView.m */,
 				A553F3A82006661E002A205B /* HCCountStepView.xib */,
@@ -2415,6 +2420,7 @@
 				AC7DAF4420176AC6007B534F /* HCCommentsCellView.m in Sources */,
 				A5190E6D1FFA655F00BBF049 /* HCBestNewsDetailViewController.m in Sources */,
 				A57B47E91FCEF9190004C397 /* IQBarButtonItem.m in Sources */,
+				A5562604201C6D1800D754E6 /* HCUserHelper.m in Sources */,
 				A5CA4C0B200CF567004415F6 /* HCOrderAddressCreateCellView.m in Sources */,
 				A5190E691FFA655F00BBF049 /* HCBestNewsDetailTitleView.m in Sources */,
 				A5CA4C03200CF567004415F6 /* HCClassRoomCreateOrderViewController.m in Sources */,

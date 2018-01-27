@@ -12,14 +12,16 @@
 #import "HCMyCustomerCellView.h"
 #import "HCGetCustomersApi.h"
 #import "HCMyCustomerModel.h"
+#import "HCUserHelper.h"
 
 @interface HCMyCustomerViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate>
 {
     MFUITableView *m_tableView;
     
-    NSInteger m_currentPage;
+    NSMutableArray<HCMyCustomerModel *> *m_myCustomers;
     
-    NSMutableArray *m_myCustomers;
+    NSInteger m_currentPage;
+    NSInteger m_myCustomersCount;
 }
 
 @end
@@ -126,7 +128,7 @@
     
     HCMyCustomerCellView *cellView = (HCMyCustomerCellView *)cell.m_subContentView;
     NSString *No = [NSString stringWithFormat:@"%@",@(itemModel.workId)];
-    NSString *level = [NSString stringWithFormat:@"%@",@(itemModel.level)];
+    NSString *level = [HCUserHelper userLevelDescription:itemModel.level];
     [cellView setName:itemModel.name No:No level:level];
     
     return cell;
@@ -166,6 +168,7 @@
     NSInteger attachIndex = cellInfo.attachIndex;
     
     HCMyTeamHeaderView *cellView = (HCMyTeamHeaderView *)cell.m_subContentView;
+    [cellView setSubTitle:[NSString stringWithFormat:@"团队人数：%@",@(m_myCustomersCount)]];
     
     return cell;
 }
@@ -229,6 +232,8 @@
             [myCustomers addObject:itemModel];
         }
         m_myCustomers = myCustomers;
+        
+        m_myCustomersCount = ((HCMyCustomerModel *)m_myCustomers.firstObject).count;
 
         [strongSelf reloadTableView];
         
@@ -299,6 +304,11 @@
     myCustomerHeader.cellHeight = 110.0f;
     myCustomerHeader.cellReuseIdentifier = @"myCustomerHeader";
     [m_cellInfos addObject:myCustomerHeader];
+    
+    MFTableViewCellObject *separator = [MFTableViewCellObject new];
+    separator.cellHeight = MFOnePixHeight;
+    separator.cellReuseIdentifier = @"separator";
+    [m_cellInfos addObject:separator];
     
     MFTableViewCellObject *myCustomerColumnHeader = [MFTableViewCellObject new];
     myCustomerColumnHeader.cellHeight = 43.0f;

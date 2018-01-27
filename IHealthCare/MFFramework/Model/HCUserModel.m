@@ -7,6 +7,7 @@
 //
 
 #import "HCUserModel.h"
+#import "HCUserHelper.h"
 
 NSInteger const HCUserLevel_1 = 1; //用户
 NSInteger const HCUserLevel_2 = 2; //VIP
@@ -27,31 +28,7 @@ NSInteger const HCUserAuthStatus_Fail = 4; //认证失败
 
 -(NSString *)userLevelDescription
 {
-    switch (self.level) {
-        case HCUserLevel_1:
-            return @"用户";
-            break;
-        case HCUserLevel_2:
-            return @"VIP";
-            break;
-        case HCUserLevel_3:
-            return @"大客户";
-            break;
-        case HCUserLevel_4:
-            return @"签约代理商";
-            break;
-        case HCUserLevel_5:
-            return @"直属代理商";
-            break;
-        case HCUserLevel_6:
-            return @"合伙人";
-            break;
-            
-        default:
-            break;
-    }
-    
-    return @"级别";
+    return [HCUserHelper userLevelDescription:self.level];
 }
 
 @end

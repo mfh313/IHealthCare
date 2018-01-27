@@ -7,6 +7,8 @@
 //
 
 #import "HCMyTeamHeaderView.h"
+#import "HCGetUserInfoApi.h"
+#import "HCUserModel.h"
 
 @interface HCMyTeamHeaderView ()
 {
@@ -14,6 +16,8 @@
     __weak IBOutlet UILabel *m_titleLabel;
     __weak IBOutlet UILabel *m_subTitleLabel;
     __weak IBOutlet UILabel *m_levelLabel;
+    
+    HCUserModel *m_useInfo;
 }
 
 @end
@@ -30,6 +34,41 @@
     maskLayer.frame = m_imageView.bounds;
     maskLayer.path = maskPath.CGPath;
     m_imageView.layer.mask = maskLayer;
+    
+    [self getUserInfo];
+}
+
+-(void)getUserInfo
+{
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    
+    __weak typeof(self) weakSelf = self;
+    HCGetUserInfoApi *mfApi = [HCGetUserInfoApi new];
+    mfApi.userTel = loginService.userPhone;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            return;
+        }
+        
+        NSDictionary *responseNetworkData = mfApi.responseNetworkData;
+        
+        m_useInfo = [HCUserModel yy_modelWithDictionary:responseNetworkData];
+        
+        [strongSelf setViewsInfo];
+        
+    } failure:^(YTKBaseRequest * request) {
+
+    }];
+}
+
+-(void)setViewsInfo
+{
+    [self setImageUrl:m_useInfo.imageUrl];
+    m_titleLabel.text = m_useInfo.name;
+    m_levelLabel.text = m_useInfo.userLevelDescription;
 }
 
 -(void)setImageUrl:(NSString *)imageUrl
@@ -37,11 +76,9 @@
     [m_imageView sd_setImageWithURL:[NSURL URLWithString:imageUrl]];
 }
 
--(void)setTitle:(NSString *)title subTitle:(NSString *)subTitle level:(NSString *)level
+-(void)setSubTitle:(NSString *)subTitle
 {
-    m_titleLabel.text = title;
     m_subTitleLabel.text = subTitle;
-    m_levelLabel.text = level;
 }
 
 @end
