@@ -72,7 +72,6 @@
             [m_updateButton setTitle:@"升级中" forState:UIControlStateNormal];
         }
     }
-    
 }
 
 -(void)onClickContentButton:(id)sender
