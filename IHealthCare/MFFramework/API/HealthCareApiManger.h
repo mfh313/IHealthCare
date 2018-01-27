@@ -10,6 +10,12 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//升级
++ (NSString *)promote:(NSString *)telephone;
+
+//查询我的团队
++ (NSString *)team:(NSString *)tel page:(NSInteger)page;
+
 //查询我的客户
 + (NSString *)customer:(NSString *)tel page:(NSInteger)page;
 

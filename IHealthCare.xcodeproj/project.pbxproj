@@ -111,6 +111,10 @@
 		A55625FE201C597F00D754E6 /* HCMyCustomerCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55625FD201C597F00D754E6 /* HCMyCustomerCellView.xib */; };
 		A5562601201C603A00D754E6 /* HCMyCustomerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5562600201C603A00D754E6 /* HCMyCustomerModel.m */; };
 		A5562604201C6D1800D754E6 /* HCUserHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A5562603201C6D1800D754E6 /* HCUserHelper.m */; };
+		A5562607201C745500D754E6 /* HCGetTeamCustomersApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5562606201C745500D754E6 /* HCGetTeamCustomersApi.m */; };
+		A556260A201C7DDD00D754E6 /* HCMyTeamCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5562609201C7DDD00D754E6 /* HCMyTeamCellView.m */; };
+		A556260C201C7E3800D754E6 /* HCMyTeamCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A556260B201C7E3800D754E6 /* HCMyTeamCellView.xib */; };
+		A556260F201C854000D754E6 /* HCUserPromoteApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A556260E201C854000D754E6 /* HCUserPromoteApi.m */; };
 		A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */; };
 		A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5623CA71FCDB851001A6B5D /* Assets.xcassets */; };
 		A5623CAE1FCDB851001A6B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623CAD1FCDB851001A6B5D /* main.m */; };
@@ -526,6 +530,13 @@
 		A5562600201C603A00D754E6 /* HCMyCustomerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyCustomerModel.m; sourceTree = "<group>"; };
 		A5562602201C6D1800D754E6 /* HCUserHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCUserHelper.h; sourceTree = "<group>"; };
 		A5562603201C6D1800D754E6 /* HCUserHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserHelper.m; sourceTree = "<group>"; };
+		A5562605201C745500D754E6 /* HCGetTeamCustomersApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetTeamCustomersApi.h; sourceTree = "<group>"; };
+		A5562606201C745500D754E6 /* HCGetTeamCustomersApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetTeamCustomersApi.m; sourceTree = "<group>"; };
+		A5562608201C7DDD00D754E6 /* HCMyTeamCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyTeamCellView.h; sourceTree = "<group>"; };
+		A5562609201C7DDD00D754E6 /* HCMyTeamCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyTeamCellView.m; sourceTree = "<group>"; };
+		A556260B201C7E3800D754E6 /* HCMyTeamCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMyTeamCellView.xib; sourceTree = "<group>"; };
+		A556260D201C854000D754E6 /* HCUserPromoteApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCUserPromoteApi.h; sourceTree = "<group>"; };
+		A556260E201C854000D754E6 /* HCUserPromoteApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserPromoteApi.m; sourceTree = "<group>"; };
 		A5623C9B1FCDB851001A6B5D /* IHealthCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHealthCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5623C9E1FCDB851001A6B5D /* HealthCareAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthCareAppDelegate.h; sourceTree = "<group>"; };
 		A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthCareAppDelegate.m; sourceTree = "<group>"; };
@@ -1245,6 +1256,9 @@
 				A55625EB201C2E5100D754E6 /* HCMyCustomerViewController.m */,
 				A55625ED201C2EC400D754E6 /* HCMyTeamViewController.h */,
 				A55625EE201C2EC400D754E6 /* HCMyTeamViewController.m */,
+				A5562608201C7DDD00D754E6 /* HCMyTeamCellView.h */,
+				A5562609201C7DDD00D754E6 /* HCMyTeamCellView.m */,
+				A556260B201C7E3800D754E6 /* HCMyTeamCellView.xib */,
 				A55625F5201C56C800D754E6 /* HCMyCustomerColumnHeaderView.h */,
 				A55625F6201C56C800D754E6 /* HCMyCustomerColumnHeaderView.m */,
 				A55625F8201C56E200D754E6 /* HCMyCustomerColumnHeaderView.xib */,
@@ -1957,6 +1971,10 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A556260D201C854000D754E6 /* HCUserPromoteApi.h */,
+				A556260E201C854000D754E6 /* HCUserPromoteApi.m */,
+				A5562605201C745500D754E6 /* HCGetTeamCustomersApi.h */,
+				A5562606201C745500D754E6 /* HCGetTeamCustomersApi.m */,
 				A55625DF201C103900D754E6 /* HCGetCustomersApi.h */,
 				A55625E0201C103900D754E6 /* HCGetCustomersApi.m */,
 				AC7DAF3720175CD1007B534F /* HCGetCommentsCidApi.h */,
@@ -2145,6 +2163,7 @@
 				A56CD7881FD0315000FFF504 /* MeAssets.xcassets in Resources */,
 				A511F35A1FD4403600AE5D57 /* HealthCareCenterMenuItemView.xib in Resources */,
 				A511F3551FD4276100AE5D57 /* HealthCareCenterMenuMainView.xib in Resources */,
+				A556260C201C7E3800D754E6 /* HCMyTeamCellView.xib in Resources */,
 				A54C468A2016305900EBDA07 /* HCOrderListOrderInfoCellView.xib in Resources */,
 				A58848FF1FFFC5C700FC93EE /* HCHealthManagementCellView.xib in Resources */,
 				A553F3A420063417002A205B /* HCMedicalServiceDetailHeaderTitleView.xib in Resources */,
@@ -2238,6 +2257,7 @@
 				A54C469520163AA000EBDA07 /* HCOrderListItemModel.m in Sources */,
 				A54C468320162E4900EBDA07 /* HCOrderListOrderCellView.m in Sources */,
 				A57B47FC1FCEF9190004C397 /* ConcreteExtensionField.m in Sources */,
+				A556260F201C854000D754E6 /* HCUserPromoteApi.m in Sources */,
 				A58849021FFFC5C700FC93EE /* HCHealthManagementClassRoomViewController.m in Sources */,
 				A57B48001FCEF9190004C397 /* ExtensionRegistry.m in Sources */,
 				A57B47F41FCEF9190004C397 /* Main.pb.m in Sources */,
@@ -2280,6 +2300,7 @@
 				A5D9AE321FDBB87B00B5D4C0 /* YTKChainRequest+AnimatingAccessory.m in Sources */,
 				A55388971FFE61D900D0DC27 /* SendMessageToWXReq+requestWithTextOrMediaMessage.m in Sources */,
 				AC7DAF332017554A007B534F /* HCAddCommentApi.m in Sources */,
+				A5562607201C745500D754E6 /* HCGetTeamCustomersApi.m in Sources */,
 				A5CA4C06200CF567004415F6 /* HCCreateOrderItemCellView.m in Sources */,
 				A57B483F1FCEF9190004C397 /* MMTabBarController.m in Sources */,
 				A563AED12013A7BF006EDC3C /* HCPutUserInfoApi.m in Sources */,
@@ -2320,6 +2341,7 @@
 				A57B48171FCEF9190004C397 /* UIScrollView+SVPullToRefresh.m in Sources */,
 				A57B48021FCEF9190004C397 /* GeneratedMessage.m in Sources */,
 				A57B481B1FCEF9190004C397 /* NSMutableArray+SafeInsert.m in Sources */,
+				A556260A201C7DDD00D754E6 /* HCMyTeamCellView.m in Sources */,
 				A511F3581FD43E6100AE5D57 /* HealthCareCenterMenuItemView.m in Sources */,
 				A57B47E51FCEF9190004C397 /* IQUIWindow+Hierarchy.m in Sources */,
 				A5190E771FFA655F00BBF049 /* HCProductDetailHeaderTitleView.m in Sources */,

@@ -1,5 +1,5 @@
 //
-//  HCGetCustomersApi.h
+//  HCUserPromoteApi.h
 //  IHealthCare
 //
 //  Created by mafanghua on 2018/1/27.
@@ -8,12 +8,8 @@
 
 #import "MMNetworkRequest.h"
 
-@interface HCGetCustomersApi : MMNetworkRequest
+@interface HCUserPromoteApi : MMNetworkRequest
 
 @property (nonatomic,strong) NSString *tel;
-@property (nonatomic,assign) NSInteger page;
 
 @end
-
-
-
