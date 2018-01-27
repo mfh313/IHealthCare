@@ -16,25 +16,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJe-1h-e9Q">
-                    <rect key="frame" x="0.0" y="11.5" width="150" height="17"/>
+                    <rect key="frame" x="0.0" y="11.5" width="120" height="17"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="150" id="2pc-PI-zwE"/>
+                        <constraint firstAttribute="width" constant="120" id="2pc-PI-zwE"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.6470588235294118" green="0.6470588235294118" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="编号" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Xk-Kj-3MH">
-                    <rect key="frame" x="150" y="11.5" width="150" height="17"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="150" id="fIM-yN-1j1"/>
-                    </constraints>
+                    <rect key="frame" x="130" y="11.5" width="254" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="级别" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pQ-t5-nxG">
-                    <rect key="frame" x="374" y="11.5" width="70" height="17"/>
+                    <rect key="frame" x="394" y="11.5" width="70" height="17"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="70" id="jhR-9z-OK9"/>
                     </constraints>
@@ -45,11 +42,12 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="0pQ-t5-nxG" secondAttribute="trailing" constant="30" id="B2J-yy-ouH"/>
+                <constraint firstAttribute="trailing" secondItem="0pQ-t5-nxG" secondAttribute="trailing" constant="10" id="B2J-yy-ouH"/>
                 <constraint firstItem="0pQ-t5-nxG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="JIc-co-PCh"/>
                 <constraint firstItem="9Xk-Kj-3MH" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Q02-aE-oCh"/>
+                <constraint firstItem="0pQ-t5-nxG" firstAttribute="leading" secondItem="9Xk-Kj-3MH" secondAttribute="trailing" constant="10" id="QXS-bq-aNm"/>
                 <constraint firstItem="NJe-1h-e9Q" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="R9w-MA-8J3"/>
-                <constraint firstItem="9Xk-Kj-3MH" firstAttribute="leading" secondItem="NJe-1h-e9Q" secondAttribute="trailing" id="x91-yh-Ole"/>
+                <constraint firstItem="9Xk-Kj-3MH" firstAttribute="leading" secondItem="NJe-1h-e9Q" secondAttribute="trailing" constant="10" id="x91-yh-Ole"/>
                 <constraint firstItem="NJe-1h-e9Q" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="zAV-iJ-wM0"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
