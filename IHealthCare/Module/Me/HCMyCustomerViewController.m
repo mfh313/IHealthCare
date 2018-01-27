@@ -117,7 +117,6 @@
     MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
         cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
         
         HCMyCustomerCellView *cellView = [HCMyCustomerCellView nibView];
         cell.m_subContentView = cellView;
@@ -142,7 +141,6 @@
     MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
         cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
         
         HCMyCustomerColumnHeaderView *cellView = [HCMyCustomerColumnHeaderView nibView];
         cell.m_subContentView = cellView;
@@ -159,7 +157,6 @@
     MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
         cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
         
         HCMyTeamHeaderView *cellView = [HCMyTeamHeaderView nibView];
         cell.m_subContentView = cellView;

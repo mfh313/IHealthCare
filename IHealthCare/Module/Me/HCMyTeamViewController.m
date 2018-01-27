@@ -9,6 +9,9 @@
 #import "HCMyTeamViewController.h"
 
 @interface HCMyTeamViewController ()
+{
+    
+}
 
 @end
 
