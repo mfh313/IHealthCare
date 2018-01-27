@@ -20,3 +20,4 @@
 @property (nonatomic,assign) NSInteger commentedId;
 
 @end
+

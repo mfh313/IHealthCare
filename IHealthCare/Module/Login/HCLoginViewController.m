@@ -58,8 +58,8 @@
     }];
     
     #ifdef DEBUG
-//    [m_loginContentView setInputPhone:@"18603071802"];
-    [m_loginContentView setInputPhone:@"13798228953"];
+    [m_loginContentView setInputPhone:@"18603071802"];
+//    [m_loginContentView setInputPhone:@"13798228953"];
     #else
     
     #endif

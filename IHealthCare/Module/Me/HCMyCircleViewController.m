@@ -8,6 +8,8 @@
 
 #import "HCMyCircleViewController.h"
 #import "HCNormalGroupTitleCellView.h"
+#import "HCMyCustomerViewController.h"
+#import "HCMyTeamViewController.h"
 
 @interface HCMyCircleViewController () <MMTableViewInfoDelegate>
 {
@@ -105,11 +107,6 @@
     {
         [self showMyTeamVC];
     }
-    else if ([key isEqualToString:@"teamManager"])
-    {
-        [self showTeamManagerVC];
-    }
-
 }
 
 -(void)addTableSources
@@ -129,36 +126,23 @@
     [section addObject:myCustomer];
     [section addObject:myTeam];
     
-    NSMutableArray *section_teamManager = [NSMutableArray array];
-    
-    NSMutableDictionary *teamManager = [NSMutableDictionary dictionary];
-    teamManager[@"title"] = @"团队管理";
-    teamManager[@"key"] = @"teamManager";
-    
-    [section_teamManager addObject:teamManager];
-    
     [m_tableSources addObject:section];
-//    [m_tableSources addObject:section_teamManager];
 }
 
 -(void)showMyCustomerVC
 {
-    NSLog(@"showMyCustomerVC");
+    HCMyCustomerViewController *pushVC = [HCMyCustomerViewController new];
+    [self.navigationController pushViewController:pushVC animated:YES];
 }
 
 -(void)showMyTeamVC
 {
-    NSLog(@"showMyTeamVC");
-}
-
--(void)showTeamManagerVC
-{
-    NSLog(@"showTeamManagerVC");
+    HCMyTeamViewController *pushVC = [HCMyTeamViewController new];
+    [self.navigationController pushViewController:pushVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 @end

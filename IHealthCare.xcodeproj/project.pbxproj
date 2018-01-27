@@ -101,6 +101,15 @@
 		A55625E4201C168800D754E6 /* HCNormalGroupTitleCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55625E3201C168800D754E6 /* HCNormalGroupTitleCellView.m */; };
 		A55625E6201C16A800D754E6 /* HCNormalGroupTitleCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55625E5201C16A800D754E6 /* HCNormalGroupTitleCellView.xib */; };
 		A55625E9201C17F100D754E6 /* HCMyCircleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55625E8201C17F100D754E6 /* HCMyCircleViewController.m */; };
+		A55625EC201C2E5100D754E6 /* HCMyCustomerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55625EB201C2E5100D754E6 /* HCMyCustomerViewController.m */; };
+		A55625EF201C2EC400D754E6 /* HCMyTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A55625EE201C2EC400D754E6 /* HCMyTeamViewController.m */; };
+		A55625F2201C4FD100D754E6 /* HCMyTeamHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55625F1201C4FD100D754E6 /* HCMyTeamHeaderView.m */; };
+		A55625F4201C537200D754E6 /* HCMyTeamHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55625F3201C537200D754E6 /* HCMyTeamHeaderView.xib */; };
+		A55625F7201C56C800D754E6 /* HCMyCustomerColumnHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55625F6201C56C800D754E6 /* HCMyCustomerColumnHeaderView.m */; };
+		A55625F9201C56E200D754E6 /* HCMyCustomerColumnHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55625F8201C56E200D754E6 /* HCMyCustomerColumnHeaderView.xib */; };
+		A55625FC201C594400D754E6 /* HCMyCustomerCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A55625FB201C594400D754E6 /* HCMyCustomerCellView.m */; };
+		A55625FE201C597F00D754E6 /* HCMyCustomerCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A55625FD201C597F00D754E6 /* HCMyCustomerCellView.xib */; };
+		A5562601201C603A00D754E6 /* HCMyCustomerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A5562600201C603A00D754E6 /* HCMyCustomerModel.m */; };
 		A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */; };
 		A5623CA81FCDB851001A6B5D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5623CA71FCDB851001A6B5D /* Assets.xcassets */; };
 		A5623CAE1FCDB851001A6B5D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5623CAD1FCDB851001A6B5D /* main.m */; };
@@ -499,6 +508,21 @@
 		A55625E5201C16A800D754E6 /* HCNormalGroupTitleCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCNormalGroupTitleCellView.xib; sourceTree = "<group>"; };
 		A55625E7201C17F100D754E6 /* HCMyCircleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyCircleViewController.h; sourceTree = "<group>"; };
 		A55625E8201C17F100D754E6 /* HCMyCircleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyCircleViewController.m; sourceTree = "<group>"; };
+		A55625EA201C2E5100D754E6 /* HCMyCustomerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyCustomerViewController.h; sourceTree = "<group>"; };
+		A55625EB201C2E5100D754E6 /* HCMyCustomerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyCustomerViewController.m; sourceTree = "<group>"; };
+		A55625ED201C2EC400D754E6 /* HCMyTeamViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyTeamViewController.h; sourceTree = "<group>"; };
+		A55625EE201C2EC400D754E6 /* HCMyTeamViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyTeamViewController.m; sourceTree = "<group>"; };
+		A55625F0201C4FD100D754E6 /* HCMyTeamHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyTeamHeaderView.h; sourceTree = "<group>"; };
+		A55625F1201C4FD100D754E6 /* HCMyTeamHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyTeamHeaderView.m; sourceTree = "<group>"; };
+		A55625F3201C537200D754E6 /* HCMyTeamHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMyTeamHeaderView.xib; sourceTree = "<group>"; };
+		A55625F5201C56C800D754E6 /* HCMyCustomerColumnHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyCustomerColumnHeaderView.h; sourceTree = "<group>"; };
+		A55625F6201C56C800D754E6 /* HCMyCustomerColumnHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyCustomerColumnHeaderView.m; sourceTree = "<group>"; };
+		A55625F8201C56E200D754E6 /* HCMyCustomerColumnHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMyCustomerColumnHeaderView.xib; sourceTree = "<group>"; };
+		A55625FA201C594400D754E6 /* HCMyCustomerCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyCustomerCellView.h; sourceTree = "<group>"; };
+		A55625FB201C594400D754E6 /* HCMyCustomerCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyCustomerCellView.m; sourceTree = "<group>"; };
+		A55625FD201C597F00D754E6 /* HCMyCustomerCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCMyCustomerCellView.xib; sourceTree = "<group>"; };
+		A55625FF201C603A00D754E6 /* HCMyCustomerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCMyCustomerModel.h; sourceTree = "<group>"; };
+		A5562600201C603A00D754E6 /* HCMyCustomerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCMyCustomerModel.m; sourceTree = "<group>"; };
 		A5623C9B1FCDB851001A6B5D /* IHealthCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHealthCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5623C9E1FCDB851001A6B5D /* HealthCareAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthCareAppDelegate.h; sourceTree = "<group>"; };
 		A5623C9F1FCDB851001A6B5D /* HealthCareAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthCareAppDelegate.m; sourceTree = "<group>"; };
@@ -1214,6 +1238,19 @@
 				AC60B6212016182B00EC1645 /* HCMyClassesCellView.xib */,
 				A55625E7201C17F100D754E6 /* HCMyCircleViewController.h */,
 				A55625E8201C17F100D754E6 /* HCMyCircleViewController.m */,
+				A55625EA201C2E5100D754E6 /* HCMyCustomerViewController.h */,
+				A55625EB201C2E5100D754E6 /* HCMyCustomerViewController.m */,
+				A55625ED201C2EC400D754E6 /* HCMyTeamViewController.h */,
+				A55625EE201C2EC400D754E6 /* HCMyTeamViewController.m */,
+				A55625F5201C56C800D754E6 /* HCMyCustomerColumnHeaderView.h */,
+				A55625F6201C56C800D754E6 /* HCMyCustomerColumnHeaderView.m */,
+				A55625F8201C56E200D754E6 /* HCMyCustomerColumnHeaderView.xib */,
+				A55625FA201C594400D754E6 /* HCMyCustomerCellView.h */,
+				A55625FB201C594400D754E6 /* HCMyCustomerCellView.m */,
+				A55625FD201C597F00D754E6 /* HCMyCustomerCellView.xib */,
+				A55625F0201C4FD100D754E6 /* HCMyTeamHeaderView.h */,
+				A55625F1201C4FD100D754E6 /* HCMyTeamHeaderView.m */,
+				A55625F3201C537200D754E6 /* HCMyTeamHeaderView.xib */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -1281,6 +1318,8 @@
 		A575874E1FE526C1000FC7CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A55625FF201C603A00D754E6 /* HCMyCustomerModel.h */,
+				A5562600201C603A00D754E6 /* HCMyCustomerModel.m */,
 				AC7DAF3F201764F0007B534F /* HCCommentsDetailModel.h */,
 				AC7DAF40201764F0007B534F /* HCCommentsDetailModel.m */,
 				A54C469320163AA000EBDA07 /* HCOrderListItemModel.h */,
@@ -2078,6 +2117,7 @@
 				A5CA4C09200CF567004415F6 /* HCCreateOrderNullAddressCellView.xib in Resources */,
 				A5A659C4201490500096F1EA /* HCFavoritesCellView.xib in Resources */,
 				A5190E741FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.xib in Resources */,
+				A55625FE201C597F00D754E6 /* HCMyCustomerCellView.xib in Resources */,
 				A56CD78F1FD0424100FFF504 /* commonAssets.xcassets in Resources */,
 				A5CA4C02200CF567004415F6 /* HCClassCreateOrderItemCellView.xib in Resources */,
 				A57B47F51FCEF9190004C397 /* main.proto in Resources */,
@@ -2105,11 +2145,13 @@
 				A553F3A420063417002A205B /* HCMedicalServiceDetailHeaderTitleView.xib in Resources */,
 				A56CD7861FD0312000FFF504 /* MainFrameAssets.xcassets in Resources */,
 				AC7DAF3E20175F9A007B534F /* HCCommentsAddToolBar.xib in Resources */,
+				A55625F9201C56E200D754E6 /* HCMyCustomerColumnHeaderView.xib in Resources */,
 				A5190E781FFA655F00BBF049 /* HCProductDetailHeaderTitleView.xib in Resources */,
 				AC7DAF4620176B0B007B534F /* HCCommentsCellView.xib in Resources */,
 				A553F3A92006661E002A205B /* HCCountStepView.xib in Resources */,
 				A554650B1FEFAD3100A7E3C7 /* HCAuthIDCardFacadeInputView.xib in Resources */,
 				A5CA4C07200CF567004415F6 /* HCCreateOrderItemCellView.xib in Resources */,
+				A55625F4201C537200D754E6 /* HCMyTeamHeaderView.xib in Resources */,
 				A5190E721FFA655F00BBF049 /* HCHighProductDetailBottomView.xib in Resources */,
 				AC60B6222016182B00EC1645 /* HCMyClassesCellView.xib in Resources */,
 				A55625E6201C16A800D754E6 /* HCNormalGroupTitleCellView.xib in Resources */,
@@ -2186,6 +2228,7 @@
 				A57B47EA1FCEF9190004C397 /* IQPreviousNextView.m in Sources */,
 				A57B48121FCEF9190004C397 /* SCLSwitchView.m in Sources */,
 				A566B4DC1FD2AC70004F6843 /* MMTitleView.m in Sources */,
+				A5562601201C603A00D754E6 /* HCMyCustomerModel.m in Sources */,
 				A57B48391FCEF9190004C397 /* MFModelHelper.m in Sources */,
 				A54C469520163AA000EBDA07 /* HCOrderListItemModel.m in Sources */,
 				A54C468320162E4900EBDA07 /* HCOrderListOrderCellView.m in Sources */,
@@ -2200,6 +2243,7 @@
 				A57B48191FCEF9190004C397 /* NSCache+SafeInsert.m in Sources */,
 				A53695AF1FD59769007CC67C /* SPPageController.m in Sources */,
 				A5190E6E1FFA655F00BBF049 /* HCBestNewsMainViewController.m in Sources */,
+				A55625EF201C2EC400D754E6 /* HCMyTeamViewController.m in Sources */,
 				AC60B61A201612D200EC1645 /* HCGetMyClassesApi.m in Sources */,
 				A554650D1FEFAD3100A7E3C7 /* HCMeFooterView.m in Sources */,
 				A57B480C1FCEF9190004C397 /* Utilities.m in Sources */,
@@ -2289,6 +2333,7 @@
 				A58849071FFFC5C700FC93EE /* HCHealthManagementMedicalServiceViewController.m in Sources */,
 				A57B482B1FCEF9190004C397 /* MFUICollectionView.m in Sources */,
 				A57B48101FCEF9190004C397 /* SCLAlertViewStyleKit.m in Sources */,
+				A55625FC201C594400D754E6 /* HCMyCustomerCellView.m in Sources */,
 				A57B47FF1FCEF9190004C397 /* ExtendableMessageBuilder.m in Sources */,
 				A5D9AE3D1FDBCADB00B5D4C0 /* HCUserLoginApi.m in Sources */,
 				A57B48291FCEF9190004C397 /* MFTableViewCellObject.m in Sources */,
@@ -2327,9 +2372,12 @@
 				A5190E7B1FFA655F00BBF049 /* HCTopCureMainTabView.m in Sources */,
 				A5CA4C10200CF567004415F6 /* HCOrderAddressModifyViewController.m in Sources */,
 				A5648D451FF2ACEE00EF956B /* HCGetClassRoomApi.m in Sources */,
+				A55625EC201C2E5100D754E6 /* HCMyCustomerViewController.m in Sources */,
 				A5623CA01FCDB851001A6B5D /* HealthCareAppDelegate.m in Sources */,
 				A57B482F1FCEF9190004C397 /* MMNavigationController.m in Sources */,
 				A57B47E41FCEF9190004C397 /* IQUIViewController+Additions.m in Sources */,
+				A55625F7201C56C800D754E6 /* HCMyCustomerColumnHeaderView.m in Sources */,
+				A55625F2201C4FD100D754E6 /* HCMyTeamHeaderView.m in Sources */,
 				A588490D1FFFC90E00FC93EE /* HCCreateOrderApi.m in Sources */,
 				A57B47F01FCEF9190004C397 /* MBProgressHUD.m in Sources */,
 				A58849111FFFD0D700FC93EE /* HCLoginService.m in Sources */,
