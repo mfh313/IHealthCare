@@ -37,7 +37,9 @@
     contentTableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     [self.view addSubview:contentTableView];
     
-    contentTableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, CGFLOAT_MIN)];
+    contentTableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 10.0f)];
+    
+    [self reloadTableView];
 }
 
 -(void)reloadTableView
@@ -136,7 +138,7 @@
     [section_teamManager addObject:teamManager];
     
     [m_tableSources addObject:section];
-    [m_tableSources addObject:section_teamManager];
+//    [m_tableSources addObject:section_teamManager];
 }
 
 -(void)showMyCustomerVC
