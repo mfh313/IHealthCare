@@ -12,9 +12,9 @@
 {
     __weak IBOutlet UIImageView *_imageView;
     __weak IBOutlet UILabel *_nameLabel;
+    __weak IBOutlet UILabel *m_priceLabel;
     __weak IBOutlet UILabel *_salesLabel;
     __weak IBOutlet UILabel *_promotionLabel;
-    
 }
 
 @end
@@ -28,6 +28,7 @@
     
     [_imageView sd_setImageWithURL:[NSURL URLWithString:product.image]];
     _nameLabel.text = product.pname;
+    m_priceLabel.text = [NSString stringWithFormat:@"单价：¥%@",@(product.shopPrice)];
     _salesLabel.text = [NSString stringWithFormat:@"销量：%@",@(product.sales)];
     _promotionLabel.text = [NSString stringWithFormat:@"推广：%@",@(product.promotionFee)];
 }
