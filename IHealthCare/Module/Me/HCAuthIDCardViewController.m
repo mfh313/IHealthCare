@@ -114,7 +114,7 @@
 #pragma mark - HCAuthIDCardFacadeInputViewDelegate
 -(void)onClickContenButton:(HCAuthIDCardFacadeInputView *)view
 {
-    [self gotoImageLibrary];
+    [self openCameraImagePickerController];
 }
 
 -(void)onClickNextButton
