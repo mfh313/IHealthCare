@@ -12,6 +12,7 @@
 @interface HCHighProductCellView ()
 {
     __weak IBOutlet UILabel *m_salesLabel;
+    __weak IBOutlet UILabel *m_promotionFeeLabel;
     __weak IBOutlet UILabel *m_discountLabel;
     __weak IBOutlet UILabel *m_nameLabel;
     __weak IBOutlet UILabel *m_detailLabel;
@@ -47,6 +48,7 @@
     m_nameLabel.text = itemModel.pname;
     m_detailLabel.text = itemModel.pdesc;
     m_salesLabel.text = [NSString stringWithFormat:@"%@",@(itemModel.sales)];
+    m_promotionFeeLabel.text = [NSString stringWithFormat:@"%@",@(itemModel.promotionFee)];
     
     NSInteger discount = itemModel.discount * 100;
     m_discountLabel.text = [NSString stringWithFormat:@"%@%%",@(discount)];
