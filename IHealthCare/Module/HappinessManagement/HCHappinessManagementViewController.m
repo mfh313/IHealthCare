@@ -18,6 +18,8 @@
     NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
     
     NSMutableArray<HCManagementDetailModel *> *m_healthControls;
+    
+    NSInteger m_currentPage;
 }
 
 @end
@@ -46,6 +48,11 @@
     [m_tableView addPullToRefreshWithActionHandler:^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf getHealthControls];
+    }];
+    
+    [m_tableView addInfiniteScrollingWithActionHandler:^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf getHealthControlsMore];
     }];
 }
 
@@ -115,10 +122,12 @@
 
 -(void)getHealthControls
 {
+    m_currentPage = 1;
+    
     __weak typeof(self) weakSelf = self;
     HCGetHealthControlsApi *mfApi = [HCGetHealthControlsApi new];
     mfApi.type = CONTROL_HAPPINESS;
-    mfApi.page = 1;
+    mfApi.page = m_currentPage;
     
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
@@ -142,6 +151,43 @@
     } failure:^(YTKBaseRequest * request) {
         
         [m_tableView.pullToRefreshView stopAnimating];
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
+}
+
+-(void)getHealthControlsMore
+{
+    m_currentPage++;
+    
+    __weak typeof(self) weakSelf = self;
+    HCGetHealthControlsApi *mfApi = [HCGetHealthControlsApi new];
+    mfApi.type = CONTROL_HAPPINESS;
+    mfApi.page = m_currentPage;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        [m_tableView.infiniteScrollingView stopAnimating];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            m_currentPage--;
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSMutableArray *healthControlArray = [NSMutableArray array];
+        NSArray *healthControls = mfApi.responseNetworkData;
+        for (int i = 0; i < healthControls.count; i++) {
+            HCManagementDetailModel *itemModel = [HCManagementDetailModel yy_modelWithDictionary:healthControls[i]];
+            [healthControlArray addObject:itemModel];
+        }
+        [m_healthControls addObjectsFromArray:healthControlArray];
+        
+        [strongSelf reloadTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        m_currentPage--;
+        [m_tableView.infiniteScrollingView stopAnimating];
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];
