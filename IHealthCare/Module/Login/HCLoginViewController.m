@@ -143,6 +143,15 @@
         return;
     }
     
+    NSString *regex = @"1[3|4|5|7|8][0-9]\\d{8}$";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    BOOL isMatch = [pred evaluateWithObject:telephone];
+    
+    if (!isMatch) {
+        [self showTips:@"请输入正确的手机号格式"];
+        return;
+    }
+    
     __weak typeof(self) weakSelf = self;
     
     HCGetVerifyCodeApi *mfApi = [HCGetVerifyCodeApi new];
