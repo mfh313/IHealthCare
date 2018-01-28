@@ -284,7 +284,6 @@
             return;
         }
         
-        [strongSelf showTips:@"点赞成功"];
         [strongSelf updatePraiseCount];
         
     } failure:^(YTKBaseRequest * request) {
