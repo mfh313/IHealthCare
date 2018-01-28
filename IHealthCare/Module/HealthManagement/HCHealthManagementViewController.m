@@ -39,6 +39,7 @@
     [self.view addSubview:m_tableView];
     
     [self getHealthControls];
+    
     __weak typeof(self) weakSelf = self;
     [m_tableView addPullToRefreshWithActionHandler:^{
         __strong typeof(weakSelf) strongSelf = weakSelf;

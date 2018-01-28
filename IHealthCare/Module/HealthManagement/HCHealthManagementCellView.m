@@ -11,8 +11,10 @@
 
 @interface HCHealthManagementCellView ()
 {
-    __weak IBOutlet UILabel *m_thumUpLabel;
-    __weak IBOutlet UILabel *m_eyeLabel;
+    __weak IBOutlet UILabel *m_moneyLabel;
+    __weak IBOutlet UILabel *m_salesLabel;
+    __weak IBOutlet UILabel *m_promotionFeeLabel;
+    __weak IBOutlet UILabel *m_discountLabel;
     __weak IBOutlet UILabel *m_nameLabel;
     __weak IBOutlet UILabel *m_detailLabel;
     __weak IBOutlet UIImageView *m_contentImageView;
@@ -45,8 +47,12 @@
     
     m_nameLabel.text = itemModel.name;
     m_detailLabel.text = itemModel.managerDescription;
-    m_eyeLabel.text = [NSString stringWithFormat:@"%@",@(itemModel.follow)];
-    m_thumUpLabel.text = [NSString stringWithFormat:@"%@",@(itemModel.thumbUp)];
+    
+    m_moneyLabel.text = [NSString stringWithFormat:@"¥ %.2f",itemModel.shopPrice];
+    m_salesLabel.text = [NSString stringWithFormat:@"%@",@(itemModel.sales)];
+    m_promotionFeeLabel.text = [NSString stringWithFormat:@"%@",@(itemModel.promotionFee)];
+    NSInteger discount = itemModel.discount * 100;
+    m_discountLabel.text = [NSString stringWithFormat:@"%@%%",@(discount)];
 }
 
 - (IBAction)onClickContentButton:(id)sender {
