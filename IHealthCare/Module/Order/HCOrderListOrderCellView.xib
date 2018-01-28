@@ -50,7 +50,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推广" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVx-Pt-qqN">
-                    <rect key="frame" x="241" y="47" width="25" height="22"/>
+                    <rect key="frame" x="171" y="69" width="25" height="22"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="22" id="mmQ-g0-9Mf"/>
                     </constraints>
@@ -61,10 +61,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="UVx-Pt-qqN" firstAttribute="leading" secondItem="qyJ-Dg-rBO" secondAttribute="trailing" constant="10" id="D33-90-W3U"/>
-                <constraint firstItem="UVx-Pt-qqN" firstAttribute="centerY" secondItem="qyJ-Dg-rBO" secondAttribute="centerY" id="Eng-nZ-mE9"/>
+                <constraint firstItem="UVx-Pt-qqN" firstAttribute="top" secondItem="hV6-W1-kP6" secondAttribute="bottom" id="7LB-Na-8DA"/>
                 <constraint firstItem="KIe-6L-LnZ" firstAttribute="leading" secondItem="TZ3-Km-ARl" secondAttribute="trailing" constant="10" id="Fhu-Rt-2Om"/>
                 <constraint firstItem="qyJ-Dg-rBO" firstAttribute="leading" secondItem="hV6-W1-kP6" secondAttribute="trailing" constant="10" id="Ldw-r0-KXX"/>
+                <constraint firstItem="UVx-Pt-qqN" firstAttribute="leading" secondItem="hV6-W1-kP6" secondAttribute="leading" id="NbR-la-haF"/>
                 <constraint firstItem="KIe-6L-LnZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="QvN-ZV-x1a"/>
                 <constraint firstItem="hV6-W1-kP6" firstAttribute="leading" secondItem="KIe-6L-LnZ" secondAttribute="leading" id="WBv-IG-2Dc"/>
                 <constraint firstItem="TZ3-Km-ARl" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="aOi-61-knM"/>
