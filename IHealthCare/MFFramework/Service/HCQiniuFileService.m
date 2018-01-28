@@ -79,7 +79,7 @@
         NSLog(@"info ===== %@", info);
         NSLog(@"resp ===== %@", resp);
         if (completion) {
-            NSString *url = [self.bucketUrl stringByAppendingPathComponent:resp[@"key"]];
+            NSString *url = [NSString stringWithFormat:@"%@/%@",self.bucketUrl,resp[@"key"]];
             completion(url,resp[@"key"]);
         }
     }
