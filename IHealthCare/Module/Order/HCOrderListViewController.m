@@ -251,7 +251,7 @@
         classRoomDetailVC.crid = pid;
         [self.navigationController pushViewController:classRoomDetailVC animated:YES];
     }
-    else if (csid == 3) //健康管理交易类
+    else if (csid == 3 || csid == 4 || csid == 5) //健康管理交易类
     {
         HCHealthManagementDetailViewController *detailVC = [HCHealthManagementDetailViewController new];
         detailVC.hcid = pid;
@@ -270,7 +270,6 @@
     mfApi.tel = loginService.userPhone;
     mfApi.page = m_currentPage;
     
-    mfApi.animatingView = self.view;
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
         [m_tableView.pullToRefreshView stopAnimating];
@@ -309,7 +308,6 @@
     mfApi.tel = loginService.userPhone;
     mfApi.page = m_currentPage;
     
-    mfApi.animatingView = self.view;
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
         [m_tableView.infiniteScrollingView stopAnimating];

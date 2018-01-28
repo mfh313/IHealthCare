@@ -21,6 +21,8 @@
     MFUITableView *m_tableView;
     
     NSMutableArray *m_favorites;
+    
+    NSInteger m_currentPage;
 }
 
 @end
@@ -49,6 +51,11 @@
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf getFavorites];
     }];
+    
+    [m_tableView addInfiniteScrollingWithActionHandler:^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf getFavoritesMore];
+    }];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -59,14 +66,15 @@
 
 -(void)getFavorites
 {
+    m_currentPage = 1;
+    
     HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
 
     __weak typeof(self) weakSelf = self;
     HCGetFavoritesApi *mfApi = [HCGetFavoritesApi new];
     mfApi.tel = loginService.userPhone;
-    mfApi.page = 1;
+    mfApi.page = m_currentPage;
     
-    mfApi.animatingView = self.view;
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
         [m_tableView.pullToRefreshView stopAnimating];
@@ -89,6 +97,46 @@
     } failure:^(YTKBaseRequest * request) {
         
         [m_tableView.pullToRefreshView stopAnimating];
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
+}
+
+-(void)getFavoritesMore
+{
+    m_currentPage++;
+    
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    
+    __weak typeof(self) weakSelf = self;
+    HCGetFavoritesApi *mfApi = [HCGetFavoritesApi new];
+    mfApi.tel = loginService.userPhone;
+    mfApi.page = m_currentPage;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        [m_tableView.infiniteScrollingView stopAnimating];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            m_currentPage--;
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSArray *responseData = mfApi.responseNetworkData;
+        NSMutableArray *favorites = [NSMutableArray array];
+        for (int i = 0; i < responseData.count; i++) {
+            HCFavoriteModel *itemModel = [HCFavoriteModel yy_modelWithDictionary:responseData[i]];
+            [favorites addObject:itemModel];
+        }
+        
+        [m_favorites addObjectsFromArray:favorites];
+        
+        [strongSelf reloadTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        m_currentPage--;
+        [m_tableView.infiniteScrollingView stopAnimating];
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];

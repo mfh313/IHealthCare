@@ -8,12 +8,16 @@
 
 #import "HCBestNewsDetailToolBar.h"
 
+
 @interface HCBestNewsDetailToolBar ()
 {
     __weak IBOutlet UIButton *m_collectionButton;
     __weak IBOutlet UIButton *m_praiseButton;
     __weak IBOutlet UIButton *m_messageButton;
     __weak IBOutlet UIView *m_writeBgView;
+    __weak IBOutlet UIView *m_praiseView;
+    
+    HCBadgeView *m_badgeView;
 }
 
 @end
@@ -36,6 +40,21 @@
     
     [m_collectionButton setImage:MFImage(@"home_btn_collection_nor") forState:UIControlStateNormal];
     [m_collectionButton setImage:MFImage(@"home_btn_collection_press") forState:UIControlStateHighlighted];
+    
+    m_badgeView = [[HCBadgeView alloc] initWithFrame:CGRectMake(0, 0, 18, 10)];
+    [self addSubview:m_badgeView];
+    
+    [m_badgeView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(m_praiseView.mas_right).offset(0);
+        make.top.mas_equalTo(m_praiseView.mas_top).offset(10);
+        make.width.mas_equalTo(18);
+        make.height.mas_equalTo(10);
+    }];
+}
+
+-(HCBadgeView *)praiseView
+{
+    return m_badgeView;
 }
 
 - (IBAction)onClickMessageButton:(id)sender {

@@ -42,5 +42,6 @@
 -(void)initAuthButton;
 -(void)initAccessoryImageView;
 -(void)layoutProfileViews;
+-(void)setAvtarImageUrl:(NSString *)url;
 
 @end

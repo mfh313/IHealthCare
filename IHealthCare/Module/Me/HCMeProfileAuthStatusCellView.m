@@ -40,6 +40,8 @@
 
 -(void)layoutProfileViews
 {
+    [self setAvtarImageUrl:self.userInfo.imageUrl];
+    
     if ([MFStringUtil isBlankString:self.userInfo.name])
     {
         m_nameLabel.textColor = [UIColor hx_colorWithHexString:@"A5A5A5"];

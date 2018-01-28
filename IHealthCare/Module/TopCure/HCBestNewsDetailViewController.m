@@ -24,6 +24,8 @@
     
     MFUITableView *m_tableView;
     NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
+    
+    NSInteger m_praiseCount;
 }
 
 @property (nonatomic,strong) HCBestNewsDetailModel *detailModel;
@@ -90,7 +92,10 @@
         HCBestNewsDetailModel *itemModel = [HCBestNewsDetailModel yy_modelWithDictionary:newsInfo];
         strongSelf.detailModel = itemModel;
         
+        m_praiseCount = self.detailModel.thumbUp;
+        
         [strongSelf reloadTableView];
+        [strongSelf setPraiseCount];
         
     } failure:^(YTKBaseRequest * request) {
         
@@ -280,12 +285,25 @@
         }
         
         [strongSelf showTips:@"点赞成功"];
+        [strongSelf updatePraiseCount];
         
     } failure:^(YTKBaseRequest * request) {
         
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];
+}
+
+-(void)updatePraiseCount
+{
+    m_praiseCount++;
+    [self setPraiseCount];
+}
+
+-(void)setPraiseCount
+{
+    HCBadgeView *badgeView = [m_toolBar praiseView];
+    [badgeView setBadgeCount:m_praiseCount];
 }
 
 -(void)onClickCollectionButton:(HCBestNewsDetailToolBar *)toolBar

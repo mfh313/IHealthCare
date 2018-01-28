@@ -43,6 +43,7 @@
 		A5190E7D1FFA655F00BBF049 /* HCTopCureMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E581FFA655F00BBF049 /* HCTopCureMainViewController.m */; };
 		A51F4351201D5F010017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A51F4350201D5F010017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.m */; };
 		A51F4353201D5F150017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51F4352201D5F150017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.xib */; };
+		A51F4356201D6B7C0017FDA6 /* HCBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A51F4355201D6B7C0017FDA6 /* HCBadgeView.m */; };
 		A520E5FC1FEE72AA00E4EFAD /* MMTableViewUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5FB1FEE72AA00E4EFAD /* MMTableViewUserInfo.m */; };
 		A520E5FF1FEE734F00E4EFAD /* MMTableViewCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5FE1FEE734F00E4EFAD /* MMTableViewCellInfo.m */; };
 		A520E6021FEE755A00E4EFAD /* MMTableViewSectionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E6011FEE755A00E4EFAD /* MMTableViewSectionInfo.m */; };
@@ -405,6 +406,8 @@
 		A51F434F201D5F010017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCClassRoomCourseDetailHeaderTitleView.h; sourceTree = "<group>"; };
 		A51F4350201D5F010017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCClassRoomCourseDetailHeaderTitleView.m; sourceTree = "<group>"; };
 		A51F4352201D5F150017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCClassRoomCourseDetailHeaderTitleView.xib; sourceTree = "<group>"; };
+		A51F4354201D6B7C0017FDA6 /* HCBadgeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCBadgeView.h; sourceTree = "<group>"; };
+		A51F4355201D6B7C0017FDA6 /* HCBadgeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCBadgeView.m; sourceTree = "<group>"; };
 		A520E5FA1FEE72AA00E4EFAD /* MMTableViewUserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTableViewUserInfo.h; sourceTree = "<group>"; };
 		A520E5FB1FEE72AA00E4EFAD /* MMTableViewUserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTableViewUserInfo.m; sourceTree = "<group>"; };
 		A520E5FD1FEE734F00E4EFAD /* MMTableViewCellInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTableViewCellInfo.h; sourceTree = "<group>"; };
@@ -1288,6 +1291,8 @@
 		A55465121FEFAD5700A7E3C7 /* HCComponent */ = {
 			isa = PBXGroup;
 			children = (
+				A51F4354201D6B7C0017FDA6 /* HCBadgeView.h */,
+				A51F4355201D6B7C0017FDA6 /* HCBadgeView.m */,
 				A5562602201C6D1800D754E6 /* HCUserHelper.h */,
 				A5562603201C6D1800D754E6 /* HCUserHelper.m */,
 				A553F3A5200665A2002A205B /* HCCountStepView.h */,
@@ -2458,6 +2463,7 @@
 				A57B481C1FCEF9190004C397 /* NSMutableDictionary+SafeInsert.m in Sources */,
 				A57B47F81FCEF9190004C397 /* AbstractMessage.m in Sources */,
 				A526F4131FF3DFFD00092ADD /* HCMedicalServiceDetailModel.m in Sources */,
+				A51F4356201D6B7C0017FDA6 /* HCBadgeView.m in Sources */,
 				AC7DAF4420176AC6007B534F /* HCCommentsCellView.m in Sources */,
 				A5190E6D1FFA655F00BBF049 /* HCBestNewsDetailViewController.m in Sources */,
 				A57B47E91FCEF9190004C397 /* IQBarButtonItem.m in Sources */,

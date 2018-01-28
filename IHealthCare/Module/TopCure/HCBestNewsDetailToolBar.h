@@ -7,6 +7,7 @@
 //
 
 #import "MMUIBridgeView.h"
+#import "HCBadgeView.h"
 
 @class HCBestNewsDetailToolBar;
 @protocol HCBestNewsDetailToolBarDelegate <NSObject>
@@ -21,5 +22,7 @@
 @interface HCBestNewsDetailToolBar : MMUIBridgeView
 
 @property (nonatomic,weak) id<HCBestNewsDetailToolBarDelegate> m_delegate;
+
+-(HCBadgeView *)praiseView;
 
 @end

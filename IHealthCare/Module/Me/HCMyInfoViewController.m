@@ -246,6 +246,8 @@
     
     HCMyInfoAvtarCellView *cellView = (HCMyInfoAvtarCellView *)cell.m_subContentView;
     cellView.frame = cell.contentView.bounds;
+    
+    [cellView setAvtarImageUrl:self.userInfo.imageUrl];
 }
 
 -(void)onClickAvtarImageCell:(MMTableViewCellInfo *)cellInfo

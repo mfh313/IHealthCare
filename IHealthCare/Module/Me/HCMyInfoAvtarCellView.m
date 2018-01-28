@@ -29,5 +29,9 @@
     m_avtarImageView.layer.mask = maskLayer;
 }
 
+-(void)setAvtarImageUrl:(NSString *)url
+{
+    [m_avtarImageView sd_setImageWithURL:[NSURL URLWithString:url]];
+}
 
 @end

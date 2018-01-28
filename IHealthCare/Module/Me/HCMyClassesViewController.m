@@ -17,6 +17,8 @@
     MFUITableView *m_tableView;
     
     NSMutableArray *m_myClasses;
+    
+    NSInteger m_currentPage;
 }
 
 @end
@@ -44,6 +46,11 @@
     [m_tableView addPullToRefreshWithActionHandler:^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf getMyClasses];
+    }];
+    
+    [m_tableView addInfiniteScrollingWithActionHandler:^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf getMyClassesMore];
     }];
 }
 
@@ -150,12 +157,14 @@
 
 -(void)getMyClasses
 {
+    m_currentPage = 1;
+    
     HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
     
     __weak typeof(self) weakSelf = self;
     HCGetMyClassesApi *mfApi = [HCGetMyClassesApi new];
     mfApi.tel = loginService.userPhone;
-    mfApi.page = 1;
+    mfApi.page = m_currentPage;
     
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
@@ -179,6 +188,46 @@
     } failure:^(YTKBaseRequest * request) {
         
         [m_tableView.pullToRefreshView stopAnimating];
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
+}
+
+-(void)getMyClassesMore
+{
+    m_currentPage++;
+    
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    
+    __weak typeof(self) weakSelf = self;
+    HCGetMyClassesApi *mfApi = [HCGetMyClassesApi new];
+    mfApi.tel = loginService.userPhone;
+    mfApi.page = m_currentPage;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        [m_tableView.infiniteScrollingView stopAnimating];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            m_currentPage--;
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSArray *responseData = mfApi.responseNetworkData;
+        NSMutableArray *classes = [NSMutableArray array];
+        for (int i = 0; i < responseData.count; i++) {
+            HCMyClassesListModel *itemModel = [HCMyClassesListModel yy_modelWithDictionary:responseData[i]];
+            [classes addObject:itemModel];
+        }
+        
+        [m_myClasses addObjectsFromArray:classes];
+        
+        [strongSelf reloadTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        m_currentPage--;
+        [m_tableView.infiniteScrollingView stopAnimating];
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];

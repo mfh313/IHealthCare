@@ -10,4 +10,6 @@
 
 @interface HCMyInfoAvtarCellView : MMUIBridgeView
 
+-(void)setAvtarImageUrl:(NSString *)url;
+
 @end

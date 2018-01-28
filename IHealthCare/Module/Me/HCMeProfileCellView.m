@@ -24,6 +24,19 @@
 {
     m_avtarImageView = [[UIImageView alloc] initWithImage:MFImage(@"my_img_default_head_nor")];
     [self addSubview:m_avtarImageView];
+    
+}
+
+-(void)setAvtarImageUrl:(NSString *)url
+{
+    UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:m_avtarImageView.bounds byRoundingCorners:UIRectCornerAllCorners cornerRadii:m_avtarImageView.bounds.size];
+    
+    CAShapeLayer *maskLayer = [[CAShapeLayer alloc]init];
+    maskLayer.frame = m_avtarImageView.bounds;
+    maskLayer.path = maskPath.CGPath;
+    m_avtarImageView.layer.mask = maskLayer;
+    
+    [m_avtarImageView sd_setImageWithURL:[NSURL URLWithString:url]];
 }
 
 -(void)initUnloginLabel
