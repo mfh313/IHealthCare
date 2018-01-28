@@ -129,13 +129,26 @@
     [self.navigationController pushViewController:userAuthVC animated:YES];
 }
 
-- (void)gotoImageLibrary {
-    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+-(void)openCameraImagePickerController
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    picker.allowsEditing = YES;
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)gotoImageLibrary
+{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
+    {
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         [self presentViewController:picker animated:YES completion:nil];
-    } else {
+    }
+    else
+    {
         UIAlertView *alert = [[UIAlertView alloc]
                               initWithTitle:@"访问图片库错误"
                               message:@""

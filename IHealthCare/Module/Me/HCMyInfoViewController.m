@@ -11,8 +11,9 @@
 #import "HCMyInfoInputCellView.h"
 #import "HCGetUserInfoApi.h"
 #import "HCPutUserInfoApi.h"
+#import "HCQiniuFileService.h"
 
-@interface HCMyInfoViewController () <MMTableViewInfoDelegate,HCMyInfoInputCellViewDelegate>
+@interface HCMyInfoViewController () <MMTableViewInfoDelegate,HCMyInfoInputCellViewDelegate,UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     MMTableViewInfo *m_tableViewInfo;
     
@@ -20,6 +21,8 @@
     
     NSString *m_imageUrl;
 }
+
+@property (nonatomic, strong) UIImage *pickImage;
 
 @end
 
@@ -258,8 +261,14 @@
     LGAlertView *alertView = [LGAlertView alertViewWithTitle:nil message:nil style:LGAlertViewStyleActionSheet buttonTitles:actionArray cancelButtonTitle:@"取消" destructiveButtonTitle:nil actionHandler:^(LGAlertView * _Nonnull alertView, NSUInteger index, NSString * _Nullable title) {
         
         __strong typeof(weakSelf) strongSelf = weakSelf;
-        
-        NSString *value = actionArray[index];
+        if (index == 0)
+        {
+            [strongSelf openCameraImagePickerController];
+        }
+        else if (index == 1)
+        {
+            [strongSelf openImageLibrary];
+        }
         
     } cancelHandler:^(LGAlertView * _Nonnull alertView) {
         
@@ -329,6 +338,83 @@
     {
         self.userInfo.preUserphone = content;
     }
+}
+
+-(void)openCameraImagePickerController
+{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    picker.allowsEditing = YES;
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
+- (void)openImageLibrary
+{
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary])
+    {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self presentViewController:picker animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"访问图片库错误"
+                              message:@""
+                              delegate:nil
+                              cancelButtonTitle:@"OK!"
+                              otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+//再调用以下委托：
+#pragma mark UIImagePickerControllerDelegate
+- (void)imagePickerController:(UIImagePickerController *)picker
+        didFinishPickingImage:(UIImage *)image
+                  editingInfo:(NSDictionary *)editingInfo
+{
+    self.pickImage = image;
+    [picker dismissViewControllerAnimated:YES completion:^{
+    }];
+    
+    if (self.pickImage == nil) {
+        UIAlertView *alert = [[UIAlertView alloc]
+                              initWithTitle:@"还未选择图片"
+                              message:@""
+                              delegate:nil
+                              cancelButtonTitle:@"OK!"
+                              otherButtonTitles:nil];
+        [alert show];
+    }
+    else
+    {
+        [self uploadImageToQNiu:self.pickImage];
+    }
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)uploadImageToQNiu:(UIImage *)image
+{
+    __weak typeof(self) weakSelf = self;
+    [self showMBStatusInViewController:@"正在更新头像..."];
+    
+    HCQiniuFileService *qiniuService = [[MMServiceCenter defaultCenter] getService:[HCQiniuFileService class]];
+    [qiniuService uploadImageToQNiu:image complete:^(NSString *url, NSString *name)
+     {
+         __strong typeof(weakSelf) strongSelf = weakSelf;
+         [strongSelf hiddenMBStatus];
+         
+         m_imageUrl = url;
+         strongSelf.userInfo.imageUrl = m_imageUrl;
+         [strongSelf reloadTableView];
+     }];
 }
 
 - (void)didReceiveMemoryWarning {
