@@ -66,6 +66,8 @@
 
 -(void)onClickCommentButton
 {
+    [m_textView resignFirstResponder];
+    
     NSString *commentContent = m_textView.text;
     
     if ([MFStringUtil isBlankString:commentContent]) {
