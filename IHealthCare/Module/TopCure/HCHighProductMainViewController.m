@@ -54,6 +54,13 @@
     }];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self getHighProducts];
+}
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;

@@ -58,6 +58,8 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:animated];
+    
+    [self getHealthControls];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView

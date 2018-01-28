@@ -56,6 +56,13 @@
     }];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self getBestNews];
+}
+
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
