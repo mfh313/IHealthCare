@@ -36,7 +36,7 @@
     maskLayer.path = maskPath.CGPath;
     m_avtarImageView.layer.mask = maskLayer;
     
-    [m_avtarImageView sd_setImageWithURL:[NSURL URLWithString:url]];
+    [m_avtarImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:MFImage(@"my_img_default_head_nor")];
 }
 
 -(void)initUnloginLabel

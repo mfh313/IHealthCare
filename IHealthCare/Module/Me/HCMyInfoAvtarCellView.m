@@ -31,7 +31,7 @@
 
 -(void)setAvtarImageUrl:(NSString *)url
 {
-    [m_avtarImageView sd_setImageWithURL:[NSURL URLWithString:url]];
+    [m_avtarImageView sd_setImageWithURL:[NSURL URLWithString:url] placeholderImage:MFImage(@"my_img_default_head_nor")];
 }
 
 @end
