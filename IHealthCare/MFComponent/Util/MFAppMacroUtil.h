@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString *const WXPay_Notification_Success;
+
 @interface MFAppMacroUtil : NSObject
 
 + (NSString *)getCFBundleVersion;

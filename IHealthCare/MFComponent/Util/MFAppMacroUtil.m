@@ -8,6 +8,8 @@
 
 #import "MFAppMacroUtil.h"
 
+NSString *const WXPay_Notification_Success = @"WXPay_Notification_Success";
+
 @implementation MFAppMacroUtil
 
 + (NSString *)getCFBundleVersion

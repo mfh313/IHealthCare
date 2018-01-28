@@ -57,6 +57,12 @@
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf getOrderListMore];
     }];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:WXPay_Notification_Success object:nil];
+}
+
+- (void)handleNotification:(NSNotification *)notification {
+    [self getOrderList];
 }
 
 -(void)viewWillAppear:(BOOL)animated

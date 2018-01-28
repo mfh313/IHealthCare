@@ -54,6 +54,12 @@
     [self getMyAddressInfo];
     
     [self setBottomView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:WXPay_Notification_Success object:nil];
+}
+
+- (void)handleNotification:(NSNotification *)notification {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)initCart
