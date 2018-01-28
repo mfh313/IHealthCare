@@ -22,6 +22,7 @@
 @property (nonatomic,strong) NSString *createTime; //发布时间
 @property (nonatomic,assign) NSInteger isFree;  //是否付费，0：免费,1:付费
 @property (nonatomic,assign) CGFloat price;  //价格
+@property (nonatomic,assign) CGFloat promotionFee;  //推广费
 @property (nonatomic,assign) CGFloat discount;  //折扣
 @property (nonatomic,strong) NSString *privilegeTime; //优惠时间
 @property (nonatomic,assign) NSInteger sales;  //销量，付费后加1

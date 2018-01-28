@@ -18,6 +18,8 @@
     NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
     
     NSMutableArray<HCClassRoomDetailModel *> *m_classRooms;
+    
+    NSInteger m_currentPage;
 }
 
 @end
@@ -39,10 +41,16 @@
     [self.view addSubview:m_tableView];
     
     [self getClassRoom];
+    
     __weak typeof(self) weakSelf = self;
     [m_tableView addPullToRefreshWithActionHandler:^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
         [strongSelf getClassRoom];
+    }];
+    
+    [m_tableView addInfiniteScrollingWithActionHandler:^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        [strongSelf getClassRoomMore];
     }];
 }
 
@@ -106,9 +114,11 @@
 
 -(void)getClassRoom
 {
+    m_currentPage = 1;
+    
     __weak typeof(self) weakSelf = self;
     HCGetClassRoomApi *mfApi = [HCGetClassRoomApi new];
-    mfApi.page = 1;
+    mfApi.page = m_currentPage;
     
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
@@ -132,6 +142,43 @@
     } failure:^(YTKBaseRequest * request) {
         
         [m_tableView.pullToRefreshView stopAnimating];
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
+}
+
+-(void)getClassRoomMore
+{
+    m_currentPage++;
+    
+    __weak typeof(self) weakSelf = self;
+    HCGetClassRoomApi *mfApi = [HCGetClassRoomApi new];
+    mfApi.page = m_currentPage;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        [m_tableView.infiniteScrollingView stopAnimating];
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            m_currentPage--;
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSMutableArray *classRoomsArray = [NSMutableArray array];
+        NSArray *classRooms = mfApi.responseNetworkData;
+        for (int i = 0; i < classRooms.count; i++) {
+            HCClassRoomDetailModel *itemModel = [HCClassRoomDetailModel yy_modelWithDictionary:classRooms[i]];
+            [classRoomsArray addObject:itemModel];
+        }
+        
+        [m_classRooms addObjectsFromArray:classRoomsArray];
+        
+        [strongSelf reloadTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        m_currentPage--;
+        [m_tableView.infiniteScrollingView stopAnimating];
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];

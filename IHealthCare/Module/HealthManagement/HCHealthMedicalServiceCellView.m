@@ -12,7 +12,7 @@
 @interface HCHealthMedicalServiceCellView ()
 {
     __weak IBOutlet UILabel *m_thumUpLabel;
-    __weak IBOutlet UILabel *m_eyeLabel;
+    __weak IBOutlet UILabel *m_lookLabel;
     __weak IBOutlet UILabel *m_nameLabel;
     __weak IBOutlet UILabel *m_detailLabel;
     __weak IBOutlet UIImageView *m_contentImageView;
@@ -45,7 +45,7 @@
     
     m_nameLabel.text = itemModel.name;
     m_detailLabel.text = itemModel.serviceDescription;
-    m_eyeLabel.text = [NSString stringWithFormat:@"%@",@(itemModel.follow)];
+    m_lookLabel.text = [NSString stringWithFormat:@"%@",@(itemModel.follow)];
     m_thumUpLabel.text = [NSString stringWithFormat:@"%@",@(itemModel.thumbUp)];
 }
 

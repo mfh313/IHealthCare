@@ -32,7 +32,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推广费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNv-jC-ab8">
-                    <rect key="frame" x="65" y="53" width="37" height="22"/>
+                    <rect key="frame" x="55" y="53" width="37" height="22"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="22" id="Rml-Cc-far"/>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" id="jsr-MK-PB5"/>
@@ -42,7 +42,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="折扣" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEm-JT-8YF">
-                    <rect key="frame" x="122" y="53" width="25" height="22"/>
+                    <rect key="frame" x="102" y="53" width="25" height="22"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="22" id="mpJ-ls-rbQ"/>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" id="vyZ-eb-UZU"/>
@@ -52,7 +52,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ez-Pf-Gz7">
-                    <rect key="frame" x="167" y="53" width="25" height="22"/>
+                    <rect key="frame" x="137" y="53" width="25" height="22"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" id="EZj-YO-lsY"/>
                         <constraint firstAttribute="height" constant="22" id="iUS-l3-Hts"/>
@@ -64,16 +64,16 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="cNv-jC-ab8" firstAttribute="leading" secondItem="k3x-Tz-kDq" secondAttribute="trailing" constant="20" id="3ZI-ga-3F5"/>
+                <constraint firstItem="cNv-jC-ab8" firstAttribute="leading" secondItem="k3x-Tz-kDq" secondAttribute="trailing" constant="10" id="3ZI-ga-3F5"/>
                 <constraint firstItem="cNv-jC-ab8" firstAttribute="centerY" secondItem="k3x-Tz-kDq" secondAttribute="centerY" id="9tz-bv-se2"/>
                 <constraint firstItem="k3x-Tz-kDq" firstAttribute="leading" secondItem="KWH-Wk-lwg" secondAttribute="leading" id="J0b-VC-EVu"/>
-                <constraint firstItem="zEm-JT-8YF" firstAttribute="leading" secondItem="cNv-jC-ab8" secondAttribute="trailing" constant="20" id="LN2-Rn-DOH"/>
+                <constraint firstItem="zEm-JT-8YF" firstAttribute="leading" secondItem="cNv-jC-ab8" secondAttribute="trailing" constant="10" id="LN2-Rn-DOH"/>
                 <constraint firstItem="KWH-Wk-lwg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="VcL-uY-Yfx"/>
                 <constraint firstItem="zEm-JT-8YF" firstAttribute="centerY" secondItem="cNv-jC-ab8" secondAttribute="centerY" id="YxF-9h-TD2"/>
                 <constraint firstItem="k3x-Tz-kDq" firstAttribute="top" secondItem="KWH-Wk-lwg" secondAttribute="bottom" constant="14" id="hoI-kK-2Jw"/>
                 <constraint firstItem="KWH-Wk-lwg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="jN0-u6-FQs"/>
                 <constraint firstItem="9Ez-Pf-Gz7" firstAttribute="centerY" secondItem="zEm-JT-8YF" secondAttribute="centerY" id="saH-Fz-Y6l"/>
-                <constraint firstItem="9Ez-Pf-Gz7" firstAttribute="leading" secondItem="zEm-JT-8YF" secondAttribute="trailing" constant="20" id="vNg-rt-k0l"/>
+                <constraint firstItem="9Ez-Pf-Gz7" firstAttribute="leading" secondItem="zEm-JT-8YF" secondAttribute="trailing" constant="10" id="vNg-rt-k0l"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

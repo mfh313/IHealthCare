@@ -8,6 +8,7 @@
 
 #import "HCClassRoomCourseDescriptionViewController.h"
 #import "HCClassRoomDetailModel.h"
+#import "HCClassRoomCourseDetailHeaderTitleView.h"
 
 @interface HCClassRoomCourseDescriptionViewController () <MMTableViewInfoDelegate>
 {
@@ -41,6 +42,15 @@
     
     MMTableViewSectionInfo *sectionInfo = [MMTableViewSectionInfo sectionInfoDefault];
     
+    MMTableViewCellInfo *headerTitle = [MMTableViewCellInfo cellForMakeSel:@selector(makeHeaderTitleCell:cellInfo:)
+                                                             makeTarget:self
+                                                              actionSel:nil
+                                                           actionTarget:self
+                                                                 height:50
+                                                               userInfo:nil];
+    
+    [sectionInfo addCell:headerTitle];
+    
     MMTableViewCellInfo *cellInfo = [MMTableViewCellInfo cellForMakeSel:@selector(makeDetailCell:cellInfo:)
                                                              makeTarget:self
                                                               actionSel:nil
@@ -51,6 +61,24 @@
     [sectionInfo addCell:cellInfo];
     
     [m_tableViewInfo addSection:sectionInfo];
+}
+
+- (void)makeHeaderTitleCell:(MFTableViewCell *)cell cellInfo:(MMTableViewCellInfo *)cellInfo
+{
+    if (!cell.m_subContentView) {
+        
+        
+        HCClassRoomCourseDetailHeaderTitleView *cellView = [HCClassRoomCourseDetailHeaderTitleView nibView];
+        cellView.backgroundColor = [UIColor hx_colorWithHexString:@"F4F4F4"];
+        cell.m_subContentView = cellView;
+    }
+    else
+    {
+        [cell.contentView addSubview:cell.m_subContentView];
+    }
+    
+    HCClassRoomCourseDetailHeaderTitleView *cellView = (HCClassRoomCourseDetailHeaderTitleView *)cell.m_subContentView;
+    [cellView setClassRoomDetailModel:self.detailModel];
 }
 
 - (void)makeDetailCell:(MFTableViewCell *)cell cellInfo:(MMTableViewCellInfo *)cellInfo
@@ -71,7 +99,7 @@
     }
     
     UITextView *cellView = (UITextView *)cell.m_subContentView;
-    cellView.frame = CGRectMake(20, 10, CGRectGetWidth(cell.contentView.frame) - 45, CGRectGetHeight(cell.contentView.frame) - 10);
+    cellView.frame = CGRectMake(20, 0, CGRectGetWidth(cell.contentView.frame) - 45, CGRectGetHeight(cell.contentView.frame));
     [cellView setText:self.detailModel.detail];
 }
 
@@ -88,5 +116,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
 
 @end

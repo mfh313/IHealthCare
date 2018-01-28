@@ -41,6 +41,8 @@
 		A5190E7B1FFA655F00BBF049 /* HCTopCureMainTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E541FFA655F00BBF049 /* HCTopCureMainTabView.m */; };
 		A5190E7C1FFA655F00BBF049 /* HCTopCureMainTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E561FFA655F00BBF049 /* HCTopCureMainTagView.m */; };
 		A5190E7D1FFA655F00BBF049 /* HCTopCureMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5190E581FFA655F00BBF049 /* HCTopCureMainViewController.m */; };
+		A51F4351201D5F010017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = A51F4350201D5F010017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.m */; };
+		A51F4353201D5F150017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51F4352201D5F150017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.xib */; };
 		A520E5FC1FEE72AA00E4EFAD /* MMTableViewUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5FB1FEE72AA00E4EFAD /* MMTableViewUserInfo.m */; };
 		A520E5FF1FEE734F00E4EFAD /* MMTableViewCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E5FE1FEE734F00E4EFAD /* MMTableViewCellInfo.m */; };
 		A520E6021FEE755A00E4EFAD /* MMTableViewSectionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A520E6011FEE755A00E4EFAD /* MMTableViewSectionInfo.m */; };
@@ -400,6 +402,9 @@
 		A5190E561FFA655F00BBF049 /* HCTopCureMainTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTopCureMainTagView.m; sourceTree = "<group>"; };
 		A5190E571FFA655F00BBF049 /* HCTopCureMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCTopCureMainViewController.h; sourceTree = "<group>"; };
 		A5190E581FFA655F00BBF049 /* HCTopCureMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCTopCureMainViewController.m; sourceTree = "<group>"; };
+		A51F434F201D5F010017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCClassRoomCourseDetailHeaderTitleView.h; sourceTree = "<group>"; };
+		A51F4350201D5F010017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCClassRoomCourseDetailHeaderTitleView.m; sourceTree = "<group>"; };
+		A51F4352201D5F150017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HCClassRoomCourseDetailHeaderTitleView.xib; sourceTree = "<group>"; };
 		A520E5FA1FEE72AA00E4EFAD /* MMTableViewUserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTableViewUserInfo.h; sourceTree = "<group>"; };
 		A520E5FB1FEE72AA00E4EFAD /* MMTableViewUserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTableViewUserInfo.m; sourceTree = "<group>"; };
 		A520E5FD1FEE734F00E4EFAD /* MMTableViewCellInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTableViewCellInfo.h; sourceTree = "<group>"; };
@@ -1871,6 +1876,9 @@
 				A553E8B92003944700BEFB14 /* HCClassRoomDetailViewController.m */,
 				A50FDC9F200B5708007F091B /* HCClassRoomCourseDescriptionViewController.h */,
 				A50FDCA0200B5709007F091B /* HCClassRoomCourseDescriptionViewController.m */,
+				A51F434F201D5F010017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.h */,
+				A51F4350201D5F010017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.m */,
+				A51F4352201D5F150017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.xib */,
 				A50FDCA8200B6C14007F091B /* HCClassRoomCourseSelectionViewController.h */,
 				A50FDCA9200B6C14007F091B /* HCClassRoomCourseSelectionViewController.m */,
 				A52A8E14200AE8CF0067E856 /* HCPlayerControlView.h */,
@@ -2150,6 +2158,7 @@
 				A5190E741FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.xib in Resources */,
 				A55625FE201C597F00D754E6 /* HCMyCustomerCellView.xib in Resources */,
 				A56CD78F1FD0424100FFF504 /* commonAssets.xcassets in Resources */,
+				A51F4353201D5F150017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.xib in Resources */,
 				A5CA4C02200CF567004415F6 /* HCClassCreateOrderItemCellView.xib in Resources */,
 				A57B47F51FCEF9190004C397 /* main.proto in Resources */,
 				A57B47F71FCEF9190004C397 /* messagepush.proto in Resources */,
@@ -2512,6 +2521,7 @@
 				A57B48351FCEF9190004C397 /* MMUITextField.m in Sources */,
 				A57B48081FCEF9190004C397 /* RingBuffer.m in Sources */,
 				A53695B31FD59769007CC67C /* SPTagBarScrollView.m in Sources */,
+				A51F4351201D5F010017FDA6 /* HCClassRoomCourseDetailHeaderTitleView.m in Sources */,
 				A5190E731FFA655F00BBF049 /* HCHighProductDetailCustomNavbar.m in Sources */,
 				A54C469C2016536800EBDA07 /* HCAddCommentsViewController.m in Sources */,
 				AC47665120133EEE00B2DB6D /* HCUserAuthLevelSelectView.m in Sources */,

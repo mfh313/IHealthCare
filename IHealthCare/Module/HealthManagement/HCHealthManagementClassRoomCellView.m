@@ -52,7 +52,7 @@
     
     NSInteger discount = itemModel.discount * 100;
     m_discountLabel.text = [NSString stringWithFormat:@"%@%%",@(discount)];
-    m_moneyLabel.text = [NSString stringWithFormat:@"¥ %.2f",itemModel.shopPrice];
+    m_moneyLabel.text = [NSString stringWithFormat:@"¥ %.2f",itemModel.price];
 }
 
 - (IBAction)onClickContentButton:(id)sender {
