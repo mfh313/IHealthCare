@@ -172,7 +172,7 @@
             [medicalServices addObject:itemModel];
         }
         
-        [m_service addObjectsFromArray:m_service];
+        [m_service addObjectsFromArray:medicalServices];
         
         [strongSelf reloadTableView];
         
