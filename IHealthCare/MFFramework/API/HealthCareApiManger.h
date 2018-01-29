@@ -10,6 +10,9 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//刷新用户token
++ (NSString *)refreshToken;
+
 //升级
 + (NSString *)promote:(NSString *)telephone;
 

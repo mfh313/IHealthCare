@@ -280,6 +280,7 @@
 		A588490D1FFFC90E00FC93EE /* HCCreateOrderApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A588490C1FFFC90E00FC93EE /* HCCreateOrderApi.m */; };
 		A58849111FFFD0D700FC93EE /* HCLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = A58849101FFFD0D700FC93EE /* HCLoginService.m */; };
 		A58849141FFFDA4700FC93EE /* HCPayOrderApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A58849131FFFDA4700FC93EE /* HCPayOrderApi.m */; };
+		A5892246201F4C100063D3B9 /* HCRefreshUserTokenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5892245201F4C100063D3B9 /* HCRefreshUserTokenApi.m */; };
 		A594B027200F9A6600D34EAD /* HCGetUserInfoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A594B026200F9A6600D34EAD /* HCGetUserInfoApi.m */; };
 		A5A659AD20142D540096F1EA /* HCAddFavoritesApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A659AC20142D540096F1EA /* HCAddFavoritesApi.m */; };
 		A5A659B02014348F0096F1EA /* HCGetBestNewsDetailApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5A659AF2014348F0096F1EA /* HCGetBestNewsDetailApi.m */; };
@@ -865,6 +866,8 @@
 		A58849101FFFD0D700FC93EE /* HCLoginService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCLoginService.m; sourceTree = "<group>"; };
 		A58849121FFFDA4700FC93EE /* HCPayOrderApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCPayOrderApi.h; sourceTree = "<group>"; };
 		A58849131FFFDA4700FC93EE /* HCPayOrderApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPayOrderApi.m; sourceTree = "<group>"; };
+		A5892244201F4C100063D3B9 /* HCRefreshUserTokenApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCRefreshUserTokenApi.h; sourceTree = "<group>"; };
+		A5892245201F4C100063D3B9 /* HCRefreshUserTokenApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCRefreshUserTokenApi.m; sourceTree = "<group>"; };
 		A594B025200F9A6600D34EAD /* HCGetUserInfoApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetUserInfoApi.h; sourceTree = "<group>"; };
 		A594B026200F9A6600D34EAD /* HCGetUserInfoApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetUserInfoApi.m; sourceTree = "<group>"; };
 		A5A659AB20142D540096F1EA /* HCAddFavoritesApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCAddFavoritesApi.h; sourceTree = "<group>"; };
@@ -1992,6 +1995,8 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A5892244201F4C100063D3B9 /* HCRefreshUserTokenApi.h */,
+				A5892245201F4C100063D3B9 /* HCRefreshUserTokenApi.m */,
 				A556260D201C854000D754E6 /* HCUserPromoteApi.h */,
 				A556260E201C854000D754E6 /* HCUserPromoteApi.m */,
 				A5562605201C745500D754E6 /* HCGetTeamCustomersApi.h */,
@@ -2395,6 +2400,7 @@
 				A57B47FE1FCEF9190004C397 /* ExtendableMessage.m in Sources */,
 				A57A90C11FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m in Sources */,
 				A5871AE020099CDE004238B6 /* HCGetProductDetailApi.m in Sources */,
+				A5892246201F4C100063D3B9 /* HCRefreshUserTokenApi.m in Sources */,
 				A57B48271FCEF9190004C397 /* MFMultiMenuTableViewCell.m in Sources */,
 				A5CA4C0C200CF567004415F6 /* HCOrderAddressCreateDefaultSetCellView.m in Sources */,
 				A57B48221FCEF9190004C397 /* UIView+viewController.m in Sources */,

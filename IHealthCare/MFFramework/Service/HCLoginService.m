@@ -7,7 +7,39 @@
 //
 
 #import "HCLoginService.h"
+#import "HCRefreshUserTokenApi.h"
 
 @implementation HCLoginService
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    if (![MFStringUtil isBlankString:self.userPhone]
+        && ![MFStringUtil isBlankString:self.token])
+    {
+        [self refreshToken];
+    }
+}
+
+-(void)refreshToken
+{
+    __weak typeof(self) weakSelf = self;
+    HCRefreshUserTokenApi *mfApi = [HCRefreshUserTokenApi new];
+    mfApi.userTel = self.userPhone;
+    mfApi.authCode = self.token;
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            return;
+        }
+        
+        NSDictionary *tokenInfo = mfApi.responseNetworkData;
+        
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+    }];
+}
 
 @end

@@ -17,6 +17,12 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
 
 @implementation HealthCareApiManger
 
+//刷新用户token
++ (NSString *)refreshToken
+{
+    return MFURLWithPara(@"api/users/refreshToken");
+}
+
 //升级
 + (NSString *)promote:(NSString *)telephone
 {

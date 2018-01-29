@@ -13,5 +13,7 @@
 @property (nonatomic,strong) NSString *userPhone;
 @property (nonatomic,strong) NSString *token;
 
+- (void)applicationDidBecomeActive:(UIApplication *)application;
+
 @end
 
