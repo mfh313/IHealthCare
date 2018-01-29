@@ -24,6 +24,10 @@
     NSMutableDictionary *requestArgument = [NSMutableDictionary dictionary];
     requestArgument[@"telephone"] = self.telephone;
     requestArgument[@"verifyCode"] = self.verifyCode;
+    
+    NSString *identifierForVendor = [[UIDevice currentDevice].identifierForVendor UUIDString];
+    requestArgument[@"nodeId"] = identifierForVendor;
+    
     return requestArgument;
 }
 
