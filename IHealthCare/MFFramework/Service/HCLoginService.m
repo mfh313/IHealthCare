@@ -35,7 +35,9 @@
         }
         
         NSDictionary *tokenInfo = mfApi.responseNetworkData;
+        strongSelf.token = tokenInfo[@"accessToken"];
         
+        NSLog(@"refreshToken=%@",strongSelf.token);
         
     } failure:^(YTKBaseRequest * request) {
         
