@@ -30,19 +30,39 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公司客服电话：4009001191" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dcD-hE-2Mq">
-                    <rect key="frame" x="122" y="192" width="156" height="14.5"/>
+                    <rect key="frame" x="121.5" y="192" width="156" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="dsk-EF-olz"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <color key="textColor" red="0.6470588235294118" green="0.6470588235294118" blue="0.6470588235294118" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="textColor" red="1" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EO3-xB-pzo">
+                    <rect key="frame" x="121.5" y="192" width="156" height="20"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2LK-9g-btD">
+                    <rect key="frame" x="122" y="212" width="156" height="1"/>
+                    <color key="backgroundColor" red="1" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="iHR-0U-GHh"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="EO3-xB-pzo" firstAttribute="bottom" secondItem="dcD-hE-2Mq" secondAttribute="bottom" id="9aL-zR-AAW"/>
+                <constraint firstItem="2LK-9g-btD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Af0-8h-giH"/>
                 <constraint firstItem="dcD-hE-2Mq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Bnh-78-JSY"/>
+                <constraint firstItem="EO3-xB-pzo" firstAttribute="leading" secondItem="dcD-hE-2Mq" secondAttribute="leading" id="DVp-sH-QZg"/>
                 <constraint firstItem="hd6-rJ-jdz" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="YsW-It-5PP"/>
+                <constraint firstItem="EO3-xB-pzo" firstAttribute="trailing" secondItem="dcD-hE-2Mq" secondAttribute="trailing" id="aSW-62-41c"/>
                 <constraint firstItem="dcD-hE-2Mq" firstAttribute="top" secondItem="hd6-rJ-jdz" secondAttribute="bottom" constant="10" id="j5B-Ha-tOc"/>
                 <constraint firstItem="hd6-rJ-jdz" firstAttribute="top" secondItem="LXs-UG-LaI" secondAttribute="bottom" constant="13" id="jzq-Ku-A7Y"/>
+                <constraint firstItem="2LK-9g-btD" firstAttribute="top" secondItem="dcD-hE-2Mq" secondAttribute="bottom" id="pbN-aT-XdB"/>
+                <constraint firstItem="EO3-xB-pzo" firstAttribute="top" secondItem="dcD-hE-2Mq" secondAttribute="top" id="qZw-jt-txq"/>
                 <constraint firstItem="LXs-UG-LaI" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="u3D-bd-kdZ"/>
+                <constraint firstItem="2LK-9g-btD" firstAttribute="width" secondItem="dcD-hE-2Mq" secondAttribute="width" id="xhL-3f-EFZ"/>
                 <constraint firstItem="LXs-UG-LaI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="52" id="yfB-CT-9Bb"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
@@ -50,6 +70,8 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="microProgramImageView" destination="LXs-UG-LaI" id="3Qe-7q-IG2"/>
+                <outlet property="phoneButton" destination="EO3-xB-pzo" id="O2p-xn-lSj"/>
+                <outlet property="phoneLabel" destination="dcD-hE-2Mq" id="nH2-Fy-cqj"/>
             </connections>
             <point key="canvasLocation" x="37.5" y="215.5"/>
         </view>

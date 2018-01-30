@@ -11,5 +11,7 @@
 @interface HCMeFooterView : MMUIBridgeView
 
 @property (weak, nonatomic) IBOutlet UIImageView *microProgramImageView;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
+@property (weak, nonatomic) IBOutlet UIButton *phoneButton;
 
 @end

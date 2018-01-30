@@ -28,6 +28,8 @@
     NSMutableArray<NSMutableArray *> *m_tableSources;
     
     HCUserModel *m_useInfo;
+    
+    NSString *m_companyPhone;
 }
 
 @end
@@ -41,6 +43,8 @@
     [self setBackBarButton];
     
     [self addTableSources];
+    
+    m_companyPhone = @"4009001191";
     
     m_tableViewInfo = [[MMTableViewInfo alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     m_tableViewInfo.delegate = self;
@@ -58,6 +62,7 @@
     [self getUserInfo];
     
     [self reloadMeView];
+    
 }
 
 -(void)getUserInfo
@@ -146,6 +151,16 @@
     }];
     
     [footerView.microProgramImageView sd_setImageWithURL:[NSURL URLWithString:@"http://p2ox6kz2c.bkt.clouddn.com/miniqr_1.png"]];
+    footerView.phoneLabel.text = [NSString stringWithFormat:@"公司客服电话：%@",m_companyPhone];
+    [footerView.phoneButton addTarget:self action:@selector(onClickPhoneButton) forControlEvents:UIControlEventTouchUpInside];
+}
+
+-(void)onClickPhoneButton
+{
+    NSMutableString *str = [[NSMutableString alloc] initWithFormat:@"tel:%@",m_companyPhone];
+    UIWebView *callWebview = [[UIWebView alloc] init];
+    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+    [self.view addSubview:callWebview];
 }
 
 -(void)viewWillAppear:(BOOL)animated
