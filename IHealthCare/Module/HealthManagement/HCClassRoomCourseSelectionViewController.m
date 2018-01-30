@@ -153,8 +153,11 @@
             NSString *errorCode = [mfApi errorCode];
             if ([errorCode isEqualToString:@"200002"])
             {
-                [strongSelf showTips:@"请购买此课程"];
+                [strongSelf showErrorMessage:@"请购买此课程"];
+                return;
             }
+            
+            [strongSelf showErrorMessage:mfApi.errorMessage];
             return;
         }
         
@@ -167,6 +170,19 @@
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];
+}
+
+-(void)showErrorMessage:(NSString *)message
+{
+    __weak typeof(self) weakSelf = self;
+    LGAlertView *alertView = [LGAlertView alertViewWithTitle:@"课程观看提示" message:message style:LGAlertViewStyleAlert buttonTitles:@[@"确定"] cancelButtonTitle:nil destructiveButtonTitle:nil actionHandler:^(LGAlertView * _Nonnull alertView, NSUInteger index, NSString * _Nullable title) {
+        
+        
+    } cancelHandler:^(LGAlertView * _Nonnull alertView) {
+        
+    } destructiveHandler:nil];
+    
+    [alertView showAnimated:YES completionHandler:nil];
 }
 
 -(void)onSelectItemClass:(HCSubClassDetailModel *)subDetail
