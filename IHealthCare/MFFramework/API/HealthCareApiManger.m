@@ -12,7 +12,7 @@
 
 #define MFURLWithPara(para) [MFURL stringByAppendingPathComponent:para]
 
-NSString *const ServerUrl = @"http://120.78.79.10:8080/";
+NSString *const ServerUrl = @"https://www.51lwb.com/";
 NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
 
 @implementation HealthCareApiManger
@@ -251,7 +251,7 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
 
 + (NSString *)hostUrl
 {
-    return test_ServerUrl;
+    return ServerUrl;
 }
 
 @end
