@@ -168,7 +168,12 @@
         
         NSString *telephone = mfApi.responseNetworkData[@"telephone"];
         NSString *verifyCode = mfApi.responseNetworkData[@"verifyCode"];
+#ifdef DEBUG
         [m_loginContentView setVerifyCode:verifyCode];
+#else
+        
+#endif
+        
         
     } failure:^(YTKBaseRequest * request) {
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
