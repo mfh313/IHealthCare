@@ -27,8 +27,6 @@
     
     [[UITextField appearance] setTintColor:[UIColor hx_colorWithHexString:@"F9C255"]];
     
-    [[MZFormSheetPresentationController appearance] setBackgroundColor:[UIColor hx_colorWithHexString:@"000000" alpha:0.53]];
-    
     [LGAlertView appearance].tintColor = [UIColor hx_colorWithHexString:@"f5f5f5"];
     [LGAlertView appearance].titleFont = [UIFont systemFontOfSize:18.0];
     [LGAlertView appearance].messageFont = [UIFont systemFontOfSize:15.0];
@@ -38,7 +36,7 @@
     [LGAlertView appearance].buttonsFont = [UIFont systemFontOfSize:15.0];
     [LGAlertView appearance].buttonsTitleColor = [UIColor hx_colorWithHexString:@"242834"];
     [LGAlertView appearance].buttonsTitleColorHighlighted = [UIColor hx_colorWithHexString:@"305b6a"];
-
+    
 }
 
 @end

@@ -146,6 +146,8 @@
 		A56CD78F1FD0424100FFF504 /* commonAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A56CD78E1FD0424100FFF504 /* commonAssets.xcassets */; };
 		A575874D1FE519A0000FC7CB /* HCGetProductsApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A575874C1FE519A0000FC7CB /* HCGetProductsApi.m */; };
 		A57587511FE52733000FC7CB /* HCProductDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A57587501FE52733000FC7CB /* HCProductDetailModel.m */; };
+		A577013C202DC5700037D5DB /* HCUserLoginTable.m in Sources */ = {isa = PBXBuildFile; fileRef = A577013B202DC5700037D5DB /* HCUserLoginTable.m */; };
+		A577013F202DC5CA0037D5DB /* HCUserLoginTable+WCDB.mm in Sources */ = {isa = PBXBuildFile; fileRef = A577013E202DC5CA0037D5DB /* HCUserLoginTable+WCDB.mm */; };
 		A57A90C11FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A57A90C01FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m */; };
 		A57B47DF1FCEF9190004C397 /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B46E41FCEF9180004C397 /* HexColors.m */; };
 		A57B47E01FCEF9190004C397 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B46E81FCEF9180004C397 /* IQNSArray+Sort.m */; };
@@ -597,6 +599,10 @@
 		A575874C1FE519A0000FC7CB /* HCGetProductsApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetProductsApi.m; sourceTree = "<group>"; };
 		A575874F1FE52733000FC7CB /* HCProductDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCProductDetailModel.h; sourceTree = "<group>"; };
 		A57587501FE52733000FC7CB /* HCProductDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCProductDetailModel.m; sourceTree = "<group>"; };
+		A577013A202DC5700037D5DB /* HCUserLoginTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCUserLoginTable.h; sourceTree = "<group>"; };
+		A577013B202DC5700037D5DB /* HCUserLoginTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserLoginTable.m; sourceTree = "<group>"; };
+		A577013D202DC5C90037D5DB /* HCUserLoginTable+WCDB.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; path = "HCUserLoginTable+WCDB.h"; sourceTree = "<group>"; };
+		A577013E202DC5CA0037D5DB /* HCUserLoginTable+WCDB.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = "HCUserLoginTable+WCDB.mm"; sourceTree = "<group>"; };
 		A57A90BF1FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetQiniuUpImageTokenApi.h; sourceTree = "<group>"; };
 		A57A90C01FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetQiniuUpImageTokenApi.m; sourceTree = "<group>"; };
 		A57B46E31FCEF9180004C397 /* HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColors.h; sourceTree = "<group>"; };
@@ -1358,6 +1364,10 @@
 		A575874E1FE526C1000FC7CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A577013A202DC5700037D5DB /* HCUserLoginTable.h */,
+				A577013B202DC5700037D5DB /* HCUserLoginTable.m */,
+				A577013D202DC5C90037D5DB /* HCUserLoginTable+WCDB.h */,
+				A577013E202DC5CA0037D5DB /* HCUserLoginTable+WCDB.mm */,
 				A55625FF201C603A00D754E6 /* HCMyCustomerModel.h */,
 				A5562600201C603A00D754E6 /* HCMyCustomerModel.m */,
 				AC7DAF3F201764F0007B534F /* HCCommentsDetailModel.h */,
@@ -2402,6 +2412,7 @@
 				A5871AE020099CDE004238B6 /* HCGetProductDetailApi.m in Sources */,
 				A5892246201F4C100063D3B9 /* HCRefreshUserTokenApi.m in Sources */,
 				A57B48271FCEF9190004C397 /* MFMultiMenuTableViewCell.m in Sources */,
+				A577013C202DC5700037D5DB /* HCUserLoginTable.m in Sources */,
 				A5CA4C0C200CF567004415F6 /* HCOrderAddressCreateDefaultSetCellView.m in Sources */,
 				A57B48221FCEF9190004C397 /* UIView+viewController.m in Sources */,
 				A5A659BC20148AAB0096F1EA /* HCCmsCommonModel.m in Sources */,
@@ -2475,6 +2486,7 @@
 				A57B47E91FCEF9190004C397 /* IQBarButtonItem.m in Sources */,
 				A5562604201C6D1800D754E6 /* HCUserHelper.m in Sources */,
 				A5CA4C0B200CF567004415F6 /* HCOrderAddressCreateCellView.m in Sources */,
+				A577013F202DC5CA0037D5DB /* HCUserLoginTable+WCDB.mm in Sources */,
 				A5190E691FFA655F00BBF049 /* HCBestNewsDetailTitleView.m in Sources */,
 				A5CA4C03200CF567004415F6 /* HCClassRoomCreateOrderViewController.m in Sources */,
 				AC7DAF3620175A6E007B534F /* HCCommentsViewController.m in Sources */,
