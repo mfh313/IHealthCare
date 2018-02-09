@@ -12,6 +12,7 @@
 #import "MFThemeHelper.h"
 #import "IQKeyboardManager.h"
 #import "WXApiManager.h"
+#import "HCLoginService.h"
 
 #define WXKey @"wxfddaeb6d71257dc9"
 
@@ -35,7 +36,8 @@
     m_appViewControllerMgr = [HealthCareViewControllerManager getAppViewControllerManager];
     [m_appViewControllerMgr setRootMainWindow:self.window];
     
-    [m_appViewControllerMgr launchLoginViewController];
+    HCLoginService *loginService = [[MMServiceCenter defaultCenter] getService:[HCLoginService class]];
+    [loginService autoLogin];
     
     [MFThemeHelper setDefaultThemeColor];
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO;

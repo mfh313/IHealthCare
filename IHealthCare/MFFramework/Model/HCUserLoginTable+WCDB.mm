@@ -11,6 +11,7 @@
 @implementation HCUserLoginTable (WCDB)
 
 WCDB_IMPLEMENTATION(HCUserLoginTable)
+
 WCDB_SYNTHESIZE(HCUserLoginTable, userPhone)
 WCDB_SYNTHESIZE(HCUserLoginTable, token)
 

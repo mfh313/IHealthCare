@@ -13,6 +13,9 @@
 @property (nonatomic,strong) NSString *userPhone;
 @property (nonatomic,strong) NSString *token;
 
+- (void)autoLogin;
+- (void)updateLastLoginInfoInDB:(NSString *)userPhone token:(NSString *)token;
+- (void)deleteLastLoginInfoInDB;
 - (void)applicationDidBecomeActive:(UIApplication *)application;
 
 @end

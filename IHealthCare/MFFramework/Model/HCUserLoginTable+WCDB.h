@@ -9,7 +9,7 @@
 #import "HCUserLoginTable.h"
 #import <WCDB/WCDB.h>
 
-@interface HCUserLoginTable (WCDB)
+@interface HCUserLoginTable (WCDB) <WCTTableCoding>
 
 WCDB_PROPERTY(userPhone)
 WCDB_PROPERTY(token)

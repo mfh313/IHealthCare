@@ -280,7 +280,7 @@
 		A58849091FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A58848F91FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.m */; };
 		A588490A1FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58848FA1FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.xib */; };
 		A588490D1FFFC90E00FC93EE /* HCCreateOrderApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A588490C1FFFC90E00FC93EE /* HCCreateOrderApi.m */; };
-		A58849111FFFD0D700FC93EE /* HCLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = A58849101FFFD0D700FC93EE /* HCLoginService.m */; };
+		A58849111FFFD0D700FC93EE /* HCLoginService.mm in Sources */ = {isa = PBXBuildFile; fileRef = A58849101FFFD0D700FC93EE /* HCLoginService.mm */; };
 		A58849141FFFDA4700FC93EE /* HCPayOrderApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A58849131FFFDA4700FC93EE /* HCPayOrderApi.m */; };
 		A5892246201F4C100063D3B9 /* HCRefreshUserTokenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5892245201F4C100063D3B9 /* HCRefreshUserTokenApi.m */; };
 		A594B027200F9A6600D34EAD /* HCGetUserInfoApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A594B026200F9A6600D34EAD /* HCGetUserInfoApi.m */; };
@@ -868,8 +868,8 @@
 		A58848FA1FFFC5C700FC93EE /* HCHealthMedicalServiceCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCHealthMedicalServiceCellView.xib; sourceTree = "<group>"; };
 		A588490B1FFFC90E00FC93EE /* HCCreateOrderApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCCreateOrderApi.h; sourceTree = "<group>"; };
 		A588490C1FFFC90E00FC93EE /* HCCreateOrderApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCCreateOrderApi.m; sourceTree = "<group>"; };
-		A588490F1FFFD0D700FC93EE /* HCLoginService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCLoginService.h; sourceTree = "<group>"; };
-		A58849101FFFD0D700FC93EE /* HCLoginService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCLoginService.m; sourceTree = "<group>"; };
+		A588490F1FFFD0D700FC93EE /* HCLoginService.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; path = HCLoginService.h; sourceTree = "<group>"; };
+		A58849101FFFD0D700FC93EE /* HCLoginService.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = HCLoginService.mm; sourceTree = "<group>"; };
 		A58849121FFFDA4700FC93EE /* HCPayOrderApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCPayOrderApi.h; sourceTree = "<group>"; };
 		A58849131FFFDA4700FC93EE /* HCPayOrderApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCPayOrderApi.m; sourceTree = "<group>"; };
 		A5892244201F4C100063D3B9 /* HCRefreshUserTokenApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCRefreshUserTokenApi.h; sourceTree = "<group>"; };
@@ -1930,7 +1930,7 @@
 				A549A98E20121A5F0095E557 /* HCQiniuFileService.h */,
 				A549A98F20121A5F0095E557 /* HCQiniuFileService.m */,
 				A588490F1FFFD0D700FC93EE /* HCLoginService.h */,
-				A58849101FFFD0D700FC93EE /* HCLoginService.m */,
+				A58849101FFFD0D700FC93EE /* HCLoginService.mm */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -2447,7 +2447,7 @@
 				A55625F2201C4FD100D754E6 /* HCMyTeamHeaderView.m in Sources */,
 				A588490D1FFFC90E00FC93EE /* HCCreateOrderApi.m in Sources */,
 				A57B47F01FCEF9190004C397 /* MBProgressHUD.m in Sources */,
-				A58849111FFFD0D700FC93EE /* HCLoginService.m in Sources */,
+				A58849111FFFD0D700FC93EE /* HCLoginService.mm in Sources */,
 				A5871AFE200A5A6F004238B6 /* HCModifyOrderAddressApi.m in Sources */,
 				A5871AF5200A22B8004238B6 /* HCAddOrderAddressApi.m in Sources */,
 				A55388961FFE61D900D0DC27 /* GetMessageFromWXResp+responseWithTextOrMediaMessage.m in Sources */,

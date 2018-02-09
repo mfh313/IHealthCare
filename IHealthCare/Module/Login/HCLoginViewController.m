@@ -104,6 +104,8 @@
         NSDictionary *info = mfApi.responseNetworkData;
         loginService.token = info[@"accessToken"];
         
+        [loginService updateLastLoginInfoInDB:loginService.userPhone token:loginService.token];
+        
         [[HealthCareViewControllerManager getAppViewControllerManager] launchMainTabViewController];
         
         [strongSelf onLoginSucess];
