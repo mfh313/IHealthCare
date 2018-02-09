@@ -116,7 +116,6 @@
         cell.m_subContentView = cellView;
     }
 
-    
     HCScrollBannerCellView *cellView = (HCScrollBannerCellView *)cell.m_subContentView;
     [cellView reloadBanner];
     

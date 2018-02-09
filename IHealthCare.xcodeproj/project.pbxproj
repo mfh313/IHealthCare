@@ -150,6 +150,8 @@
 		A577013F202DC5CA0037D5DB /* HCUserLoginTable+WCDB.mm in Sources */ = {isa = PBXBuildFile; fileRef = A577013E202DC5CA0037D5DB /* HCUserLoginTable+WCDB.mm */; };
 		A5770142202DD9320037D5DB /* HCGetBestNewsBannersApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5770141202DD9320037D5DB /* HCGetBestNewsBannersApi.m */; };
 		A5770145202DDD0B0037D5DB /* HCScrollBannerCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5770144202DDD0B0037D5DB /* HCScrollBannerCellView.m */; };
+		A5770148202DE3A20037D5DB /* HCGetHealthControlBannersApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5770147202DE3A20037D5DB /* HCGetHealthControlBannersApi.m */; };
+		A577014B202DE4310037D5DB /* HCGetClassesBannerApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A577014A202DE4310037D5DB /* HCGetClassesBannerApi.m */; };
 		A57A90C11FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A57A90C01FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m */; };
 		A57B47DF1FCEF9190004C397 /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B46E41FCEF9180004C397 /* HexColors.m */; };
 		A57B47E01FCEF9190004C397 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B46E81FCEF9180004C397 /* IQNSArray+Sort.m */; };
@@ -609,6 +611,10 @@
 		A5770141202DD9320037D5DB /* HCGetBestNewsBannersApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetBestNewsBannersApi.m; sourceTree = "<group>"; };
 		A5770143202DDD0B0037D5DB /* HCScrollBannerCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCScrollBannerCellView.h; sourceTree = "<group>"; };
 		A5770144202DDD0B0037D5DB /* HCScrollBannerCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCScrollBannerCellView.m; sourceTree = "<group>"; };
+		A5770146202DE3A20037D5DB /* HCGetHealthControlBannersApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetHealthControlBannersApi.h; sourceTree = "<group>"; };
+		A5770147202DE3A20037D5DB /* HCGetHealthControlBannersApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetHealthControlBannersApi.m; sourceTree = "<group>"; };
+		A5770149202DE4310037D5DB /* HCGetClassesBannerApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetClassesBannerApi.h; sourceTree = "<group>"; };
+		A577014A202DE4310037D5DB /* HCGetClassesBannerApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetClassesBannerApi.m; sourceTree = "<group>"; };
 		A57A90BF1FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetQiniuUpImageTokenApi.h; sourceTree = "<group>"; };
 		A57A90C01FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetQiniuUpImageTokenApi.m; sourceTree = "<group>"; };
 		A57B46E31FCEF9180004C397 /* HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColors.h; sourceTree = "<group>"; };
@@ -2015,6 +2021,10 @@
 			children = (
 				A5770140202DD9320037D5DB /* HCGetBestNewsBannersApi.h */,
 				A5770141202DD9320037D5DB /* HCGetBestNewsBannersApi.m */,
+				A5770146202DE3A20037D5DB /* HCGetHealthControlBannersApi.h */,
+				A5770147202DE3A20037D5DB /* HCGetHealthControlBannersApi.m */,
+				A5770149202DE4310037D5DB /* HCGetClassesBannerApi.h */,
+				A577014A202DE4310037D5DB /* HCGetClassesBannerApi.m */,
 				A5892244201F4C100063D3B9 /* HCRefreshUserTokenApi.h */,
 				A5892245201F4C100063D3B9 /* HCRefreshUserTokenApi.m */,
 				A556260D201C854000D754E6 /* HCUserPromoteApi.h */,
@@ -2456,6 +2466,7 @@
 				A57B482F1FCEF9190004C397 /* MMNavigationController.m in Sources */,
 				A57B47E41FCEF9190004C397 /* IQUIViewController+Additions.m in Sources */,
 				A55625F7201C56C800D754E6 /* HCMyCustomerColumnHeaderView.m in Sources */,
+				A5770148202DE3A20037D5DB /* HCGetHealthControlBannersApi.m in Sources */,
 				A55625F2201C4FD100D754E6 /* HCMyTeamHeaderView.m in Sources */,
 				A588490D1FFFC90E00FC93EE /* HCCreateOrderApi.m in Sources */,
 				A57B47F01FCEF9190004C397 /* MBProgressHUD.m in Sources */,
@@ -2510,6 +2521,7 @@
 				A57B481A1FCEF9190004C397 /* NSDictionary+Unicode.m in Sources */,
 				A5CA4C0F200CF567004415F6 /* HCOrderAddressCreateViewController.m in Sources */,
 				A566B4D61FD297FE004F6843 /* UINavigationItem+margin.m in Sources */,
+				A577014B202DE4310037D5DB /* HCGetClassesBannerApi.m in Sources */,
 				A57B480A1FCEF9190004C397 /* UnknownFieldSet.m in Sources */,
 				A57B47E31FCEF9190004C397 /* IQUIView+Hierarchy.m in Sources */,
 				A57B481E1FCEF9190004C397 /* NSMutableString+SafeInsert.m in Sources */,
