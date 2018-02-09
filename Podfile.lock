@@ -19,13 +19,15 @@ PODS:
   - Masonry (1.1.0)
   - Qiniu (7.2.3):
     - HappyDNS (~> 0.3)
-  - SDWebImage (3.7.6):
-    - SDWebImage/Core (= 3.7.6)
-  - SDWebImage/Core (3.7.6)
+  - SDCycleScrollView (1.75):
+    - SDWebImage (>= 4.0.0)
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
   - SMPageControl (1.2)
   - WCDB (1.0.5)
-  - WechatOpenSDK (1.8.0)
-  - WeexSDK (0.16.2)
+  - WechatOpenSDK (1.8.1)
+  - WeexSDK (0.17.0)
   - YTKNetwork (2.0.4):
     - AFNetworking (~> 3.0)
   - ZFPlayer (2.1.5):
@@ -35,7 +37,8 @@ DEPENDENCIES:
   - LGAlertView
   - Masonry
   - Qiniu (~> 7.2)
-  - SDWebImage (~> 3.7.3)
+  - SDCycleScrollView (~> 1.75)
+  - SDWebImage
   - SMPageControl (~> 1.2)
   - WCDB
   - WechatOpenSDK
@@ -49,14 +52,15 @@ SPEC CHECKSUMS:
   LGAlertView: 2f5e83dd5cc2537de57d98727650609e86197d1a
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   Qiniu: ae0fea1cc379fae1560d8748ac537e0fbeb8626e
-  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SDCycleScrollView: 884b88f0266dd4708a0e1934975c69cb971707b1
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   SMPageControl: 922892813001cfaf059e86e6801f46a967e9ee29
   WCDB: 535e8d9b6513dd8cc647d9fdde84695a1fde290c
-  WechatOpenSDK: 0ee07a8d492299d3e47372a33da5af26524a7576
-  WeexSDK: 854ef66c9a90d609ad60e87c8b76affe2b772224
+  WechatOpenSDK: 491d965d79335070328571d3e79f714549e79a5e
+  WeexSDK: ad8443f4290ef7cb241bbd4c03b02d9dfc9fdca2
   YTKNetwork: df8a7a5597bda1664a4efaa7ef871a818a887fe0
   ZFPlayer: 8a80bf8eb4638b97fbceaefcd3ca9978e9f17c9d
 
-PODFILE CHECKSUM: d3f6d7e6dab2a6b2d0048203cd88be86403da0af
+PODFILE CHECKSUM: e65bf8c98c5cb4565ac3aafa5790cbf3c0100be8
 
 COCOAPODS: 1.3.1

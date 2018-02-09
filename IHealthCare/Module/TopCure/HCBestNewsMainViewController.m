@@ -11,13 +11,17 @@
 #import "HCGetBestNewsApi.h"
 #import "HCBestNewsCellView.h"
 #import "HCBestNewsDetailViewController.h"
+#import "HCScrollBannerCellView.h"
+#import "HCGetBestNewsBannersApi.h"
 
-@interface HCBestNewsMainViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCBestNewsCellViewDelegate>
+@interface HCBestNewsMainViewController () <tableViewDelegate,UITableViewDataSource,UITableViewDelegate,HCBestNewsCellViewDelegate,HCScrollBannerCellViewDataSource,HCScrollBannerCellViewDelegate>
 {
     MFUITableView *m_tableView;
     NSMutableArray<MFTableViewCellObject *> *m_cellInfos;
     
     NSMutableArray *m_bestNews;
+    
+    NSMutableArray *m_bestNewsBanner;
     
     NSInteger m_currentPage;
 }
@@ -81,6 +85,10 @@
     {
         return [self tableView:tableView bestNewsCellForIndexPath:indexPath];
     }
+    else if ([identifier isEqualToString:@"banner"])
+    {
+        return [self tableView:tableView bannerCellForIndexPath:indexPath];
+    }
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil)
@@ -90,6 +98,28 @@
     }
     
     cell.textLabel.text = identifier;
+    return cell;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView bannerCellForIndexPath:(NSIndexPath *)indexPath
+{
+    MFTableViewCellObject *cellInfo = m_cellInfos[indexPath.row];
+    NSString *identifier = cellInfo.cellReuseIdentifier;
+    
+    MFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    if (cell == nil) {
+        cell = [[MFTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        
+        HCScrollBannerCellView *cellView = [[HCScrollBannerCellView alloc] initWithFrame:cell.contentView.frame];
+        cellView.m_dataSource = self;
+        cellView.m_delegate = self;
+        cell.m_subContentView = cellView;
+    }
+
+    
+    HCScrollBannerCellView *cellView = (HCScrollBannerCellView *)cell.m_subContentView;
+    [cellView reloadBanner];
+    
     return cell;
 }
 
@@ -156,6 +186,8 @@
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];
+    
+    [self getBannerData];
 }
 
 -(void)getBestNewsMore
@@ -195,6 +227,38 @@
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];
+    
+    [self getBannerData];
+}
+
+-(void)getBannerData
+{
+    __weak typeof(self) weakSelf = self;
+    HCGetBestNewsBannersApi *mfApi = [HCGetBestNewsBannersApi new];
+    
+    [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
+        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        if (!mfApi.messageSuccess) {
+            [strongSelf showTips:mfApi.errorMessage];
+            return;
+        }
+        
+        NSArray *bestNews = mfApi.responseNetworkData;
+        NSMutableArray *news = [NSMutableArray array];
+        for (int i = 0; i < bestNews.count; i++) {
+            HCBestNewsDetailModel *itemModel = [HCBestNewsDetailModel yy_modelWithDictionary:bestNews[i]];
+            [news addObject:itemModel];
+        }
+        m_bestNewsBanner = news;
+        
+        [strongSelf reloadTableView];
+        
+    } failure:^(YTKBaseRequest * request) {
+        
+        NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
+        [self showTips:errorDesc];
+    }];
 }
 
 -(void)reloadTableView
@@ -206,6 +270,11 @@
 -(void)makeCellObjects
 {
     [m_cellInfos removeAllObjects];
+    
+    MFTableViewCellObject *banner = [MFTableViewCellObject new];
+    banner.cellHeight = 202.0f;
+    banner.cellReuseIdentifier = @"banner";
+    [m_cellInfos addObject:banner];
     
     for (int i = 0; i < m_bestNews.count; i++) {
         HCBestNewsDetailModel *itemModel  = m_bestNews[i];
@@ -225,6 +294,25 @@
     detailVC.bid = itemModel.bid;
     detailVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:detailVC animated:YES];
+}
+
+#pragma mark - HCScrollBannerCellViewDataSource
+-(NSArray *)imagesURLStringsScrollView:(HCScrollBannerCellView *)cycleScrollView
+{
+    NSMutableArray *imagesURLStrings = [NSMutableArray array];
+    for (int i = 0; i < m_bestNewsBanner.count; i++) {
+        HCBestNewsDetailModel *itemModel = m_bestNewsBanner[i];
+        [imagesURLStrings safeAddObject:itemModel.imageUrl];
+    }
+    
+    return imagesURLStrings;
+}
+
+#pragma mark - HCScrollBannerCellViewDelegate
+-(void)onClickScrollView:(HCScrollBannerCellView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
+{
+    HCBestNewsDetailModel *itemModel = m_bestNewsBanner[index];
+    [self onClickShowNewsDetail:itemModel];
 }
 
 - (void)didReceiveMemoryWarning {
