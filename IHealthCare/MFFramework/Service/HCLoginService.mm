@@ -44,6 +44,9 @@
         
         NSLog(@"refreshToken=%@",strongSelf.token);
         
+        [strongSelf deleteLastLoginInfoInDB];
+        [strongSelf updateLastLoginInfoInDB:strongSelf.userPhone token:strongSelf.token];
+        
     } failure:^(YTKBaseRequest * request) {
         
     }];
