@@ -148,6 +148,7 @@
 		A57587511FE52733000FC7CB /* HCProductDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A57587501FE52733000FC7CB /* HCProductDetailModel.m */; };
 		A577013C202DC5700037D5DB /* HCUserLoginTable.m in Sources */ = {isa = PBXBuildFile; fileRef = A577013B202DC5700037D5DB /* HCUserLoginTable.m */; };
 		A577013F202DC5CA0037D5DB /* HCUserLoginTable+WCDB.mm in Sources */ = {isa = PBXBuildFile; fileRef = A577013E202DC5CA0037D5DB /* HCUserLoginTable+WCDB.mm */; };
+		A5770142202DD9320037D5DB /* HCGetBestNewsBannersApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A5770141202DD9320037D5DB /* HCGetBestNewsBannersApi.m */; };
 		A57A90C11FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m in Sources */ = {isa = PBXBuildFile; fileRef = A57A90C01FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m */; };
 		A57B47DF1FCEF9190004C397 /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B46E41FCEF9180004C397 /* HexColors.m */; };
 		A57B47E01FCEF9190004C397 /* IQNSArray+Sort.m in Sources */ = {isa = PBXBuildFile; fileRef = A57B46E81FCEF9180004C397 /* IQNSArray+Sort.m */; };
@@ -603,6 +604,8 @@
 		A577013B202DC5700037D5DB /* HCUserLoginTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCUserLoginTable.m; sourceTree = "<group>"; };
 		A577013D202DC5C90037D5DB /* HCUserLoginTable+WCDB.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; path = "HCUserLoginTable+WCDB.h"; sourceTree = "<group>"; };
 		A577013E202DC5CA0037D5DB /* HCUserLoginTable+WCDB.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = "HCUserLoginTable+WCDB.mm"; sourceTree = "<group>"; };
+		A5770140202DD9320037D5DB /* HCGetBestNewsBannersApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetBestNewsBannersApi.h; sourceTree = "<group>"; };
+		A5770141202DD9320037D5DB /* HCGetBestNewsBannersApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetBestNewsBannersApi.m; sourceTree = "<group>"; };
 		A57A90BF1FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCGetQiniuUpImageTokenApi.h; sourceTree = "<group>"; };
 		A57A90C01FF1501D0096F063 /* HCGetQiniuUpImageTokenApi.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCGetQiniuUpImageTokenApi.m; sourceTree = "<group>"; };
 		A57B46E31FCEF9180004C397 /* HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColors.h; sourceTree = "<group>"; };
@@ -2005,6 +2008,8 @@
 		A5D9AE161FDBB87B00B5D4C0 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				A5770140202DD9320037D5DB /* HCGetBestNewsBannersApi.h */,
+				A5770141202DD9320037D5DB /* HCGetBestNewsBannersApi.m */,
 				A5892244201F4C100063D3B9 /* HCRefreshUserTokenApi.h */,
 				A5892245201F4C100063D3B9 /* HCRefreshUserTokenApi.m */,
 				A556260D201C854000D754E6 /* HCUserPromoteApi.h */,
@@ -2350,6 +2355,7 @@
 				AC77FB9F201749B700B3E6AB /* HCDeleteFavoriteApi.m in Sources */,
 				A56CD77F1FD028AD00FFF504 /* HealthCareViewControllerManager.m in Sources */,
 				A5648D2E1FF2684F00EF956B /* HCGetHealthControlsApi.m in Sources */,
+				A5770142202DD9320037D5DB /* HCGetBestNewsBannersApi.m in Sources */,
 				A57B47E01FCEF9190004C397 /* IQNSArray+Sort.m in Sources */,
 				A57B48411FCEF9190004C397 /* MMServiceCenter.m in Sources */,
 				A554650C1FEFAD3100A7E3C7 /* HCAuthIDCardViewController.m in Sources */,

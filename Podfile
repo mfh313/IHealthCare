@@ -3,6 +3,7 @@
 
 target 'IHealthCare' do
 
+pod 'SDCycleScrollView','~> 1.75'
 pod 'LGAlertView'
 pod 'ZFPlayer'
 pod 'Qiniu', '~> 7.2'

@@ -17,6 +17,26 @@ NSString *const test_ServerUrl = @"http://120.78.79.10:8080/";
 
 @implementation HealthCareApiManger
 
+//查询滚动课程列表
++ (NSString *)classesBanner:(NSInteger)csid
+{
+    NSString *parmUrl = [NSString stringWithFormat:@"api/classes/scroll/%@",@(csid)];
+    return MFURLWithPara(parmUrl);
+}
+
+//查询滚动健康管理
++ (NSString *)healthControlsBanner:(NSInteger)csid
+{
+    NSString *parmUrl = [NSString stringWithFormat:@"api/healthControls/scroll/%@",@(csid)];
+    return MFURLWithPara(parmUrl);
+}
+
+//查询滚动前沿资讯列表
++ (NSString *)bestNewsBanner
+{
+    return MFURLWithPara(@"api/bestNews/scroll/1");
+}
+
 //刷新用户token
 + (NSString *)refreshToken
 {

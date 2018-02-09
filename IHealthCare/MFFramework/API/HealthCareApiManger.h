@@ -10,6 +10,15 @@
 
 @interface HealthCareApiManger : MMNetworkRequest
 
+//查询滚动课程列表
++ (NSString *)classesBanner:(NSInteger)csid;
+
+//查询滚动健康管理
++ (NSString *)healthControlsBanner:(NSInteger)csid;
+
+//查询滚动前沿资讯列表
++ (NSString *)bestNewsBanner;
+
 //刷新用户token
 + (NSString *)refreshToken;
 
