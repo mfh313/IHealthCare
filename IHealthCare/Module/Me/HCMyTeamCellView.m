@@ -56,11 +56,16 @@
     NSInteger status = m_customer.status;
     if (m_customer.level == 6)
     {
+        [m_updateButton setHidden:YES];
+        
         [m_updateButton setEnabled:NO];
         [m_updateButton setTitle:@"升级" forState:UIControlStateNormal];
+        
     }
     else
     {
+        [m_updateButton setHidden:NO];
+        
         if (m_customer.status == 0)
         {
             [m_updateButton setEnabled:YES];
