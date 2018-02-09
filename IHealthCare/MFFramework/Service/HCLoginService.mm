@@ -62,6 +62,7 @@
         [qiniuService getImageToken];
         
         [self readDBLoginUserInfo];
+        [self refreshToken];
         
         [[HealthCareViewControllerManager getAppViewControllerManager] launchMainTabViewController];
     }
