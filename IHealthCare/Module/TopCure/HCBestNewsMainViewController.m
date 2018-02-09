@@ -227,8 +227,6 @@
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];
-    
-    [self getBannerData];
 }
 
 -(void)getBannerData
