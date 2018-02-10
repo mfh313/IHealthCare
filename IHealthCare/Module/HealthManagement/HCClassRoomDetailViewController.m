@@ -223,11 +223,24 @@
         
         [strongSelf reloadSubController];
         
+        [self resetPlayerConfig];
+        
     } failure:^(YTKBaseRequest * request) {
         
         NSString *errorDesc = [NSString stringWithFormat:@"错误状态码=%@\n错误原因=%@",@(request.error.code),[request.error localizedDescription]];
         [self showTips:errorDesc];
     }];
+}
+
+-(void)resetPlayerConfig
+{
+    self.videoURLString = self.detailModel.videoUrl;
+    
+    _playerModel.title            = self.detailModel.name;
+    _playerModel.videoURL         = [NSURL URLWithString:self.videoURLString];
+    _playerModel.placeholderImageURLString = self.detailModel.imageUrl;
+    
+    [_playerView playerControlView:m_playControlView playerModel:self.playerModel];
 }
 
 -(void)reloadSubController
