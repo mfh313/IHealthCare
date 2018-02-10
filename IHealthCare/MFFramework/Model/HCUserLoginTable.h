@@ -12,5 +12,6 @@
 
 @property (nonatomic,strong) NSString *userPhone;
 @property (nonatomic,strong) NSString *token;
+@property (nonatomic,strong) NSString *tokenModifyTime;
 
 @end

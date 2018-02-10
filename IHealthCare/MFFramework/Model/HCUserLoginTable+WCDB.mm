@@ -14,5 +14,6 @@ WCDB_IMPLEMENTATION(HCUserLoginTable)
 
 WCDB_SYNTHESIZE(HCUserLoginTable, userPhone)
 WCDB_SYNTHESIZE(HCUserLoginTable, token)
+WCDB_SYNTHESIZE(HCUserLoginTable, tokenModifyTime)
 
 @end

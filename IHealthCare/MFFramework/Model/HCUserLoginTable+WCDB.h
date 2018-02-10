@@ -13,6 +13,6 @@
 
 WCDB_PROPERTY(userPhone)
 WCDB_PROPERTY(token)
-
+WCDB_PROPERTY(tokenModifyTime)
 
 @end

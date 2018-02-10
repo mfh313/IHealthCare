@@ -12,6 +12,7 @@
 
 @property (nonatomic,strong) NSString *userTel;
 @property (nonatomic,strong) NSString *authCode;
+@property (nonatomic,strong) NSString *modifyTime;
 
 @end
 

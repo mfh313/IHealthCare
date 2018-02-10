@@ -24,6 +24,7 @@
     NSMutableDictionary *requestArgument = [NSMutableDictionary dictionary];
     requestArgument[@"userTel"] = self.userTel;
     requestArgument[@"authCode"] = self.authCode;
+    requestArgument[@"modifyTime"] = self.modifyTime;
     return requestArgument;
 }
 

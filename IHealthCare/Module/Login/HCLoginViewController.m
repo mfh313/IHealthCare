@@ -103,8 +103,11 @@
         
         NSDictionary *info = mfApi.responseNetworkData;
         loginService.token = info[@"accessToken"];
+        loginService.tokenModifyTime = info[@"modifyTime"];
         
-        [loginService updateLastLoginInfoInDB:loginService.userPhone token:loginService.token];
+        [loginService updateLastLoginInfoInDB:loginService.userPhone
+                                        token:loginService.token
+                              tokenModifyTime:loginService.tokenModifyTime];
         
         [[HealthCareViewControllerManager getAppViewControllerManager] launchMainTabViewController];
         

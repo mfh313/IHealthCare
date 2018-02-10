@@ -31,6 +31,7 @@
     HCRefreshUserTokenApi *mfApi = [HCRefreshUserTokenApi new];
     mfApi.userTel = self.userPhone;
     mfApi.authCode = self.token;
+    mfApi.modifyTime = self.tokenModifyTime;
     
     [mfApi startWithCompletionBlockWithSuccess:^(YTKBaseRequest * request) {
         
@@ -41,11 +42,10 @@
         
         NSDictionary *tokenInfo = mfApi.responseNetworkData;
         strongSelf.token = tokenInfo[@"accessToken"];
-        
-        NSLog(@"refreshToken=%@",strongSelf.token);
+        strongSelf.tokenModifyTime = tokenInfo[@"modifyTime"];
         
         [strongSelf deleteLastLoginInfoInDB];
-        [strongSelf updateLastLoginInfoInDB:strongSelf.userPhone token:strongSelf.token];
+        [strongSelf updateLastLoginInfoInDB:strongSelf.userPhone token:strongSelf.token tokenModifyTime:strongSelf.tokenModifyTime];
         
     } failure:^(YTKBaseRequest * request) {
         
@@ -102,7 +102,7 @@
     return loginInfo.token;
 }
 
--(void)updateLastLoginInfoInDB:(NSString *)userPhone token:(NSString *)token
+- (void)updateLastLoginInfoInDB:(NSString *)userPhone token:(NSString *)token tokenModifyTime:(NSString *)tokenModifyTime
 {
     NSString *className = NSStringFromClass(HCUserLoginTable.class);
     NSString *path = [MFDocumentDirectory stringByAppendingPathComponent:className];
@@ -123,6 +123,7 @@
     HCUserLoginTable *object = [[HCUserLoginTable alloc] init];
     object.token = token;
     object.userPhone = userPhone;
+    object.tokenModifyTime = tokenModifyTime;
     [table insertObject:object];
 }
 
