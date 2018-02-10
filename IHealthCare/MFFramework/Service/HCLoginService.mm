@@ -86,6 +86,7 @@
     
     self.userPhone = loginInfo.userPhone;
     self.token = loginInfo.token;
+    self.tokenModifyTime = loginInfo.tokenModifyTime;
 }
 
 
