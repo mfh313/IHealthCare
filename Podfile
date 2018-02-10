@@ -13,7 +13,7 @@ pod 'WeexSDK'
 pod 'YTKNetwork'
 pod 'SMPageControl', '~> 1.2'
 pod 'Masonry'
-pod 'SDWebImage'
+pod 'SDWebImage', '~> 4.0'
 
 end
 
