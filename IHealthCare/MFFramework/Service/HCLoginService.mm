@@ -44,6 +44,11 @@
         strongSelf.token = tokenInfo[@"accessToken"];
         strongSelf.tokenModifyTime = tokenInfo[@"modifyTime"];
         
+        if ([strongSelf.token isKindOfClass:[NSNull class]]
+            || [strongSelf.tokenModifyTime isKindOfClass:[NSNull class]]) {
+            return;
+        }
+        
         [strongSelf deleteLastLoginInfoInDB];
         [strongSelf updateLastLoginInfoInDB:strongSelf.userPhone token:strongSelf.token tokenModifyTime:strongSelf.tokenModifyTime];
         

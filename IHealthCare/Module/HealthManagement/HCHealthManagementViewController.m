@@ -268,7 +268,7 @@
     [m_cellInfos removeAllObjects];
     
     MFTableViewCellObject *banner = [MFTableViewCellObject new];
-    banner.cellHeight = 202.0f;
+    banner.cellHeight = 164.0f;
     banner.cellReuseIdentifier = @"banner";
     [m_cellInfos addObject:banner];
     
