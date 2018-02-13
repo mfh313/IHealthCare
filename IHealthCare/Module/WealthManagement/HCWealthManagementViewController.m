@@ -209,7 +209,7 @@
         HCManagementDetailModel *itemModel  = m_healthControls[i];
         
         MFTableViewCellObject *healthControl = [MFTableViewCellObject new];
-        healthControl.cellHeight = [self imageHeight];
+        healthControl.cellHeight = [self imageHeight] + 38;
         healthControl.cellReuseIdentifier = @"healthControls";
         healthControl.attachIndex = i;
         [m_cellInfos addObject:healthControl];

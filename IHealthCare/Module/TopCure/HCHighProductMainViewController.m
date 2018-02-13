@@ -207,7 +207,7 @@
         HCProductDetailModel *itemModel  = m_highProducts[i];
         
         MFTableViewCellObject *highProducts = [MFTableViewCellObject new];
-        highProducts.cellHeight = [self imageHeight];
+        highProducts.cellHeight = [self imageHeight] + 38;
         highProducts.cellReuseIdentifier = @"highProducts";
         highProducts.attachIndex = i;
         [m_cellInfos addObject:highProducts];
