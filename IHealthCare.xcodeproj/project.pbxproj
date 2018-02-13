@@ -1660,8 +1660,8 @@
 		A57B476A1FCEF9180004C397 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				A54C46992016533D00EBDA07 /* Comments */,
 				A5190E321FFA655F00BBF049 /* TopCure */,
+				A54C46992016533D00EBDA07 /* Comments */,
 				A5CA4BDE200CF567004415F6 /* Order */,
 				A58848DF1FFFC5C700FC93EE /* HealthManagement */,
 				A5268DA91FD3C7E500E2F93C /* WealthManagement */,
