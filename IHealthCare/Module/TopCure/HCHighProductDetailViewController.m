@@ -254,7 +254,7 @@
     [m_cellInfos removeAllObjects];
     
     MFTableViewCellObject *productImage = [MFTableViewCellObject new];
-    productImage.cellHeight = 200.0f;
+    productImage.cellHeight = [self imageHeight];
     productImage.cellReuseIdentifier = @"productImage";
     [m_cellInfos addObject:productImage];
     
@@ -267,6 +267,13 @@
     productDetail.cellHeight = [self textHeightForNewsDetail:self.detailModel.detail];
     productDetail.cellReuseIdentifier = @"productDetail";
     [m_cellInfos addObject:productDetail];
+}
+
+-(CGFloat)imageHeight
+{
+    CGFloat widthPix = CGRectGetWidth(self.view.frame) - 20;
+    CGFloat imageHeight = widthPix * 519.0 / 980.0;
+    return imageHeight;
 }
 
 -(CGFloat)textHeightForNewsDetail:(NSString *)detail

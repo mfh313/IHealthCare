@@ -269,7 +269,7 @@
     [m_cellInfos removeAllObjects];
     
     MFTableViewCellObject *banner = [MFTableViewCellObject new];
-    banner.cellHeight = 164.0f;
+    banner.cellHeight = [self imageHeight];
     banner.cellReuseIdentifier = @"banner";
     [m_cellInfos addObject:banner];
     
@@ -277,11 +277,18 @@
         HCBestNewsDetailModel *itemModel  = m_bestNews[i];
         
         MFTableViewCellObject *highProducts = [MFTableViewCellObject new];
-        highProducts.cellHeight = 202.0f;
+        highProducts.cellHeight = [self imageHeight] + 38;
         highProducts.cellReuseIdentifier = @"bestNews";
         highProducts.attachIndex = i;
         [m_cellInfos addObject:highProducts];
     }
+}
+
+-(CGFloat)imageHeight
+{
+    CGFloat widthPix = CGRectGetWidth(self.view.frame) - 20;
+    CGFloat imageHeight = widthPix * 519.0 / 980.0;
+    return imageHeight;
 }
 
 #pragma mark - HCBestNewsCellViewDelegate

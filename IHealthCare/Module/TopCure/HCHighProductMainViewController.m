@@ -207,11 +207,18 @@
         HCProductDetailModel *itemModel  = m_highProducts[i];
         
         MFTableViewCellObject *highProducts = [MFTableViewCellObject new];
-        highProducts.cellHeight = 202.0f;
+        highProducts.cellHeight = [self imageHeight];
         highProducts.cellReuseIdentifier = @"highProducts";
         highProducts.attachIndex = i;
         [m_cellInfos addObject:highProducts];
     }
+}
+
+-(CGFloat)imageHeight
+{
+    CGFloat widthPix = CGRectGetWidth(self.view.frame) - 20;
+    CGFloat imageHeight = widthPix * 519.0 / 980.0;
+    return imageHeight;
 }
 
 #pragma mark - HCHighProductCellViewDelegate
