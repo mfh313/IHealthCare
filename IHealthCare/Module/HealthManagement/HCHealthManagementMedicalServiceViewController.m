@@ -198,7 +198,7 @@
         HCMedicalServiceDetailModel *itemModel  = m_service[i];
         
         MFTableViewCellObject *medicalService = [MFTableViewCellObject new];
-        medicalService.cellHeight = [self imageHeight];
+        medicalService.cellHeight = [self imageHeight] + 38;
         medicalService.cellReuseIdentifier = @"medicalService";
         medicalService.attachIndex = i;
         [m_cellInfos addObject:medicalService];
