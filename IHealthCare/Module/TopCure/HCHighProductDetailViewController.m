@@ -271,7 +271,7 @@
 
 -(CGFloat)imageHeight
 {
-    CGFloat widthPix = CGRectGetWidth(self.view.frame) - 20;
+    CGFloat widthPix = CGRectGetWidth(self.view.frame);
     CGFloat imageHeight = widthPix * 519.0 / 980.0;
     return imageHeight;
 }
