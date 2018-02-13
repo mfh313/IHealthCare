@@ -209,11 +209,18 @@
         HCManagementDetailModel *itemModel  = m_healthControls[i];
         
         MFTableViewCellObject *healthControl = [MFTableViewCellObject new];
-        healthControl.cellHeight = 202.0f;
+        healthControl.cellHeight = [self imageHeight];
         healthControl.cellReuseIdentifier = @"healthControls";
         healthControl.attachIndex = i;
         [m_cellInfos addObject:healthControl];
     }
+}
+
+-(CGFloat)imageHeight
+{
+    CGFloat widthPix = CGRectGetWidth(self.view.frame) - 20;
+    CGFloat imageHeight = widthPix * 519.0 / 980.0;
+    return imageHeight;
 }
 
 #pragma mark - HCHealthManagementCellViewDelegate

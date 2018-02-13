@@ -265,7 +265,7 @@
     [m_cellInfos removeAllObjects];
     
     MFTableViewCellObject *banner = [MFTableViewCellObject new];
-    banner.cellHeight = 164.0f;
+    banner.cellHeight = [self imageHeight];
     banner.cellReuseIdentifier = @"banner";
     [m_cellInfos addObject:banner];
     
@@ -273,11 +273,18 @@
         HCClassRoomDetailModel *itemModel  = m_classRooms[i];
         
         MFTableViewCellObject *classRoom = [MFTableViewCellObject new];
-        classRoom.cellHeight = 202.0f;
+        classRoom.cellHeight = [self imageHeight] + 38;
         classRoom.cellReuseIdentifier = @"classRoom";
         classRoom.attachIndex = i;
         [m_cellInfos addObject:classRoom];
     }
+}
+
+-(CGFloat)imageHeight
+{
+    CGFloat widthPix = CGRectGetWidth(self.view.frame) - 20;
+    CGFloat imageHeight = widthPix * 519.0 / 980.0;
+    return imageHeight;
 }
 
 #pragma mark - HCHealthManagementClassRoomCellViewDelegate

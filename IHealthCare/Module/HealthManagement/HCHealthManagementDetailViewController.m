@@ -261,7 +261,7 @@
     [m_cellInfos removeAllObjects];
     
     MFTableViewCellObject *HealthImage = [MFTableViewCellObject new];
-    HealthImage.cellHeight = 200.0f;
+    HealthImage.cellHeight = [self imageHeight];
     HealthImage.cellReuseIdentifier = @"healthImage";
     [m_cellInfos addObject:HealthImage];
     
@@ -274,6 +274,13 @@
     healthDetail.cellHeight = [self textHeightForNewsDetail:self.detailModel.detail];
     healthDetail.cellReuseIdentifier = @"healthDetail";
     [m_cellInfos addObject:healthDetail];
+}
+
+-(CGFloat)imageHeight
+{
+    CGFloat widthPix = CGRectGetWidth(self.view.frame);
+    CGFloat imageHeight = widthPix * 519.0 / 980.0;
+    return imageHeight;
 }
 
 -(CGFloat)textHeightForNewsDetail:(NSString *)detail

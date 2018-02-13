@@ -198,11 +198,18 @@
         HCMedicalServiceDetailModel *itemModel  = m_service[i];
         
         MFTableViewCellObject *medicalService = [MFTableViewCellObject new];
-        medicalService.cellHeight = 202.0f;
+        medicalService.cellHeight = [self imageHeight];
         medicalService.cellReuseIdentifier = @"medicalService";
         medicalService.attachIndex = i;
         [m_cellInfos addObject:medicalService];
     }
+}
+
+-(CGFloat)imageHeight
+{
+    CGFloat widthPix = CGRectGetWidth(self.view.frame) - 20;
+    CGFloat imageHeight = widthPix * 519.0 / 980.0;
+    return imageHeight;
 }
 
 #pragma mark - HCHealthMedicalServiceCellViewDelegate

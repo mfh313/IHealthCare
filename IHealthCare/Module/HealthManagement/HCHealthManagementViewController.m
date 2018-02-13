@@ -268,7 +268,7 @@
     [m_cellInfos removeAllObjects];
     
     MFTableViewCellObject *banner = [MFTableViewCellObject new];
-    banner.cellHeight = 164.0f;
+    banner.cellHeight = [self imageHeight];
     banner.cellReuseIdentifier = @"banner";
     [m_cellInfos addObject:banner];
     
@@ -276,11 +276,18 @@
         HCManagementDetailModel *itemModel  = m_healthControls[i];
         
         MFTableViewCellObject *healthControl = [MFTableViewCellObject new];
-        healthControl.cellHeight = 202.0f;
+        healthControl.cellHeight = [self imageHeight] + 38;
         healthControl.cellReuseIdentifier = @"healthControls";
         healthControl.attachIndex = i;
         [m_cellInfos addObject:healthControl];
     }
+}
+
+-(CGFloat)imageHeight
+{
+    CGFloat widthPix = CGRectGetWidth(self.view.frame) - 20;
+    CGFloat imageHeight = widthPix * 519.0 / 980.0;
+    return imageHeight;
 }
 
 #pragma mark - HCHealthManagementCellViewDelegate
